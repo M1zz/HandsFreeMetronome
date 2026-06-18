@@ -25,7 +25,7 @@ final class VoiceController: ObservableObject {
         case start, stop, faster, slower, up, down, double, half
         case setTempo(Int)
         case setSubdivision(Int) // 1 quarter, 2 eighth, 3 triplet, 4 sixteenth
-        case help, tuner, dismiss
+        case help, tuner, dismiss, scrollUp, scrollDown
     }
 
     /// Mic buffers, broadcast so features like the tuner can share the input
@@ -220,6 +220,11 @@ final class VoiceController: ObservableObject {
     private func command(in text: String) -> Command? {
         if contains(text, ["help", "헬프", "도움말"]) { return .help }
         if contains(text, ["tune", "tuner", "튜너", "튜닝"]) { return .tuner }
+        // Scroll the help list by voice — checked before up/down (tempo) and
+        // before close words so "scroll down" doesn't change tempo or close.
+        if contains(text, ["scroll", "스크롤"]) {
+            return contains(text, ["up", "위", "업"]) ? .scrollUp : .scrollDown
+        }
         // Closes whichever panel is open. "done" is easily misheard as "down",
         // so offer clearer alternatives too.
         if contains(text, ["done", "close", "okay", "exit", "dismiss",

@@ -16,6 +16,8 @@ struct ContentView: View {
     @State private var didAutoStart = false    // auto-enable listening once on launch
     @State private var muteProgress: CGFloat = 1   // Listen-button countdown ring (1→0)
     @State private var lastCommandText = ""     // last recognized voice command
+    @State private var helpIndex = 0            // voice-driven scroll position in Help
+    private let helpSections = ["howto", "playback", "tempo", "subdivision", "tuner", "scrolling"]
 
     // Dynamic Type: scale the big fixed-size displays with the user's text setting.
     @ScaledMetric(relativeTo: .largeTitle) private var bpmFontSize: CGFloat = 52
@@ -318,33 +320,45 @@ struct ContentView: View {
 
     private var commandsSheet: some View {
         NavigationStack {
-            List {
-                Section("How to use") {
-                    usageRow("mic.fill", "Open", "Say \u{201C}help\u{201D} or tap the ? button.")
-                    usageRow("xmark.circle", "Close", "Say \u{201C}close\u{201D} / \u{201C}done\u{201D}, or tap Done.")
-                    usageRow("hand.draw", "Scroll", "Swipe up and down to see every command.")
+            ScrollViewReader { proxy in
+                List {
+                    Section("How to use") {
+                        usageRow("mic.fill", "Open", "Say \u{201C}help\u{201D} or tap the ? button.")
+                        usageRow("xmark.circle", "Close", "Say \u{201C}close\u{201D} / \u{201C}done\u{201D}, or tap Done.")
+                        usageRow("hand.draw", "Scroll", "Say \u{201C}scroll down\u{201D} / \u{201C}scroll up\u{201D}, or swipe.")
+                    }
+                    .id(helpSections[0])
+                    Section("Playback") {
+                        commandRow("\"start\" / \"stop\"", "play / pause")
+                    }
+                    .id(helpSections[1])
+                    Section("Tempo") {
+                        commandRow("\"faster\" / \"slower\"", "±5 BPM")
+                        commandRow("\"up\" / \"down\"", "±1 BPM")
+                        commandRow("\"tempo 120\"", "set value")
+                        commandRow("\"double\" / \"half\"", "×2 / ÷2")
+                    }
+                    .id(helpSections[2])
+                    Section("Subdivision") {
+                        commandRow("\"quarter\"", "1/4 notes")
+                        commandRow("\"eighth\"", "1/8 notes")
+                        commandRow("\"triplet\"", "triplets")
+                        commandRow("\"sixteenth\"", "1/16 notes")
+                    }
+                    .id(helpSections[3])
+                    Section("Tuner") {
+                        commandRow("\"tune\"", "open the tuner")
+                    }
+                    .id(helpSections[4])
+                    Section("Scrolling") {
+                        commandRow("\"scroll down\" / \"scroll up\"", "move this list")
+                        commandRow("\"help\"", "show this list")
+                        commandRow("\"done\" / \"close\"", "close a panel")
+                    }
+                    .id(helpSections[5])
                 }
-                Section("Playback") {
-                    commandRow("\"start\" / \"stop\"", "play / pause")
-                }
-                Section("Tempo") {
-                    commandRow("\"faster\" / \"slower\"", "±5 BPM")
-                    commandRow("\"up\" / \"down\"", "±1 BPM")
-                    commandRow("\"tempo 120\"", "set value")
-                    commandRow("\"double\" / \"half\"", "×2 / ÷2")
-                }
-                Section("Subdivision") {
-                    commandRow("\"quarter\"", "1/4 notes")
-                    commandRow("\"eighth\"", "1/8 notes")
-                    commandRow("\"triplet\"", "triplets")
-                    commandRow("\"sixteenth\"", "1/16 notes")
-                }
-                Section("Tuner") {
-                    commandRow("\"tune\"", "open the tuner")
-                }
-                Section("Help") {
-                    commandRow("\"help\"", "show this list")
-                    commandRow("\"done\" / \"close\"", "close a panel")
+                .onChange(of: helpIndex) { idx in
+                    withAnimation { proxy.scrollTo(helpSections[idx], anchor: .top) }
                 }
             }
             .navigationTitle("Voice Commands")
@@ -528,10 +542,7 @@ struct ContentView: View {
         case .faster: metronome.nudge(5)
         case .slower: metronome.nudge(-5)
         case .up: metronome.nudge(1)
-        case .down:
-            // "done"/"close" is commonly misheard as "down". While a panel is open,
-            // treat it as close; otherwise nudge the tempo.
-            if showCommands || showTuner { closePanels() } else { metronome.nudge(-1) }
+        case .down: metronome.nudge(-1)   // never closes panels (was too easy to trigger by noise)
         case .double: metronome.doubleTempo()
         case .half: metronome.halfTempo()
         case .setTempo(let v): metronome.setTempo(v)
@@ -539,10 +550,13 @@ struct ContentView: View {
         case .help: showHelp()
         case .tuner: openTuner()
         case .dismiss: closePanels()
+        case .scrollUp: helpIndex = max(0, helpIndex - 1)
+        case .scrollDown: helpIndex = min(helpSections.count - 1, helpIndex + 1)
         }
     }
 
     private func showHelp() {
+        helpIndex = 0
         showCommands = true
         HelpVoiceTip().invalidate(reason: .actionPerformed)
     }
@@ -554,7 +568,7 @@ struct ContentView: View {
         case .faster: return "Faster +5"
         case .slower: return "Slower −5"
         case .up: return "Up +1"
-        case .down: return showCommands || showTuner ? "Close" : "Down −1"
+        case .down: return "Down −1"
         case .double: return "Double ×2"
         case .half: return "Half ÷2"
         case .setTempo(let v): return "Tempo \(v)"
@@ -562,6 +576,8 @@ struct ContentView: View {
         case .help: return "Help"
         case .tuner: return "Tuner"
         case .dismiss: return "Close"
+        case .scrollUp: return "Scroll up"
+        case .scrollDown: return "Scroll down"
         }
     }
 
