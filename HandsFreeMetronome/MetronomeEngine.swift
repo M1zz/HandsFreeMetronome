@@ -195,3 +195,63 @@ final class MetronomeEngine: ObservableObject {
         }
     }
 }
+
+/// A short two-note chime ("뾰롱") played to confirm a recognized voice command.
+/// The sound is generated in memory (no audio file) and played via AVAudioPlayer,
+/// which mixes over the click and the mic without touching the metronome engine.
+final class FeedbackSound {
+    static let shared = FeedbackSound()
+    private let player: AVAudioPlayer?
+
+    private init() {
+        if let data = FeedbackSound.makeChime() {
+            player = try? AVAudioPlayer(data: data)
+            player?.volume = 0.55
+            player?.prepareToPlay()
+        } else {
+            player = nil
+        }
+    }
+
+    func play() {
+        guard let player else { return }
+        player.currentTime = 0
+        player.play()
+    }
+
+    /// Two quick ascending sine notes with a fast decay → a light "ploong".
+    private static func makeChime() -> Data? {
+        let sr = 44_100.0
+        let notes: [(freq: Double, dur: Double, decay: Double)] = [
+            (987.77, 0.07, 26),   // B5
+            (1318.51, 0.16, 12)   // E6
+        ]
+        var samples: [Int16] = []
+        for note in notes {
+            let count = Int(note.dur * sr)
+            for k in 0..<count {
+                let t = Double(k) / sr
+                let env = exp(-t * note.decay)
+                let value = sin(2 * .pi * note.freq * t) * env * 0.5
+                samples.append(Int16(max(-1, min(1, value)) * 32_767))
+            }
+        }
+        return wav(samples: samples, sampleRate: Int(sr))
+    }
+
+    private static func wav(samples: [Int16], sampleRate: Int) -> Data {
+        let channels = 1, bits = 16
+        let dataSize = samples.count * bits / 8
+        var d = Data()
+        func str(_ s: String) { d.append(s.data(using: .ascii)!) }
+        func u32(_ v: UInt32) { var x = v.littleEndian; d.append(Data(bytes: &x, count: 4)) }
+        func u16(_ v: UInt16) { var x = v.littleEndian; d.append(Data(bytes: &x, count: 2)) }
+        str("RIFF"); u32(UInt32(36 + dataSize)); str("WAVE")
+        str("fmt "); u32(16); u16(1); u16(UInt16(channels))
+        u32(UInt32(sampleRate)); u32(UInt32(sampleRate * channels * bits / 8))
+        u16(UInt16(channels * bits / 8)); u16(UInt16(bits))
+        str("data"); u32(UInt32(dataSize))
+        samples.withUnsafeBufferPointer { d.append(Data(buffer: $0)) }
+        return d
+    }
+}

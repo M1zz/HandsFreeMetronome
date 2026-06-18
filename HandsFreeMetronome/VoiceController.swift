@@ -127,7 +127,7 @@ final class VoiceController: ObservableObject {
 
         let request = SFSpeechAudioBufferRecognitionRequest()
         request.shouldReportPartialResults = true
-        if #available(iOS 13, *) { request.requiresOnDeviceRecognition = true }
+        request.requiresOnDeviceRecognition = true
         self.request = request
         awaitingRestart = false
 

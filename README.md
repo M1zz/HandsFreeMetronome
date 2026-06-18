@@ -5,7 +5,7 @@ taps, and **no need to enable iOS system Voice Control or any Accessibility sett
 The app listens through its own microphone using on-device speech recognition.
 
 ## Open & run
-1. Unzip, then open `HandsFreeMetronome.xcodeproj` in Xcode 15+.
+1. Unzip, then open `HandsFreeMetronome.xcodeproj` in Xcode 16+.
 2. Select your team under Signing & Capabilities (Automatic signing).
 3. Run on a real device (the simulator's mic/speech support is limited).
 4. Tap **Listen** once and grant Microphone + Speech permission.
@@ -51,7 +51,7 @@ hear where the beat is while playing all sixteen notes per measure.
 - Audio session uses `.playAndRecord` + `.mixWithOthers` so the click and the mic
   coexist. Use earphones to keep the click out of the mic for best accuracy.
 
-Deployment target: iOS 16.0.
+Deployment target: iOS 18.0.
 
 ## Support & Privacy
 - **Support:** https://m1zz.github.io/HandsFreeMetronome/

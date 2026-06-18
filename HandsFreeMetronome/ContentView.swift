@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import TipKit
 
 struct ContentView: View {
     @StateObject private var metronome = MetronomeEngine()
@@ -43,7 +44,7 @@ struct ContentView: View {
         }
         // Support Dynamic Type, but cap growth so the single-screen layout holds.
         .dynamicTypeSize(...DynamicTypeSize.accessibility2)
-        .sheet(isPresented: $showCommands) { commandsSheet }
+        .fullScreenCover(isPresented: $showCommands) { commandsSheet }
         .sheet(isPresented: $showTuner, onDismiss: { tuner.stop() }) { tunerSheet }
         .onChange(of: detector.state) { newState in
             if case .result(let bpm) = newState { metronome.setTempo(bpm) }
@@ -243,13 +244,14 @@ struct ContentView: View {
             }
             Spacer(minLength: 0)
             Button {
-                showCommands = true
+                showHelp()
             } label: {
                 Image(systemName: "questionmark.circle.fill")
                     .font(.title2)
                     .foregroundStyle(.secondary)
             }
             .accessibilityLabel("Voice commands")
+            .popoverTip(HelpVoiceTip())
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -317,6 +319,11 @@ struct ContentView: View {
     private var commandsSheet: some View {
         NavigationStack {
             List {
+                Section("How to use") {
+                    usageRow("mic.fill", "Open", "Say \u{201C}help\u{201D} or tap the ? button.")
+                    usageRow("xmark.circle", "Close", "Say \u{201C}close\u{201D} / \u{201C}done\u{201D}, or tap Done.")
+                    usageRow("hand.draw", "Scroll", "Swipe up and down to see every command.")
+                }
                 Section("Playback") {
                     commandRow("\"start\" / \"stop\"", "play / pause")
                 }
@@ -348,7 +355,18 @@ struct ContentView: View {
                 }
             }
         }
-        .presentationDetents([.medium, .large])
+    }
+
+    private func usageRow(_ icon: String, _ title: String, _ detail: String) -> some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: icon)
+                .foregroundStyle(brass)
+                .frame(width: 22)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title).font(.subheadline.weight(.semibold))
+                Text(detail).font(.footnote).foregroundStyle(.secondary)
+            }
+        }
     }
 
     // MARK: Tuner sheet
@@ -503,6 +521,7 @@ struct ContentView: View {
 
     private func handle(_ cmd: VoiceController.Command) {
         lastCommandText = commandLabel(cmd)
+        FeedbackSound.shared.play()   // brief chime confirming the command landed
         switch cmd {
         case .start: metronome.start()
         case .stop: metronome.stop()
@@ -517,10 +536,15 @@ struct ContentView: View {
         case .half: metronome.halfTempo()
         case .setTempo(let v): metronome.setTempo(v)
         case .setSubdivision(let v): metronome.setSubdivision(v)
-        case .help: showCommands = true
+        case .help: showHelp()
         case .tuner: openTuner()
         case .dismiss: closePanels()
         }
+    }
+
+    private func showHelp() {
+        showCommands = true
+        HelpVoiceTip().invalidate(reason: .actionPerformed)
     }
 
     private func commandLabel(_ cmd: VoiceController.Command) -> String {
@@ -549,6 +573,13 @@ struct ContentView: View {
             withAnimation(.easeIn(duration: 0.1)) { beatScale = 1.0 }
         }
     }
+}
+
+/// One-time hint that the voice "help" command exists.
+struct HelpVoiceTip: Tip {
+    var title: Text { Text("See every command") }
+    var message: Text? { Text("Say \u{201C}help\u{201D} anytime — or tap here — to view all voice commands.") }
+    var image: Image? { Image(systemName: "questionmark.circle.fill") }
 }
 
 /// A circle drawn as `segments` equal arcs — visualizes how a beat is divided.

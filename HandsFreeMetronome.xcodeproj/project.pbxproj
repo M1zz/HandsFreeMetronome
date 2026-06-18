@@ -231,7 +231,7 @@
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This metronome listens for your voice commands (like \"start\" and \"faster\") and can detect the tempo of music you play nearby, so you can control it without touching the screen.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition is used to understand hands-free voice commands. Recognition runs on-device.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -263,7 +263,7 @@
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This metronome listens for your voice commands (like \"start\" and \"faster\") and can detect the tempo of music you play nearby, so you can control it without touching the screen.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition is used to understand hands-free voice commands. Recognition runs on-device.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
