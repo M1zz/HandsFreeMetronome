@@ -16,6 +16,11 @@ struct ContentView: View {
     @State private var muteProgress: CGFloat = 1   // Listen-button countdown ring (1→0)
     @State private var lastCommandText = ""     // last recognized voice command
 
+    // Dynamic Type: scale the big fixed-size displays with the user's text setting.
+    @ScaledMetric(relativeTo: .largeTitle) private var bpmFontSize: CGFloat = 52
+    @ScaledMetric(relativeTo: .largeTitle) private var noteFontSize: CGFloat = 96
+    @ScaledMetric(relativeTo: .title) private var stepIconSize: CGFloat = 30
+
     private let brass = Color(red: 0.80, green: 0.62, blue: 0.24)
     private let haptic = UIImpactFeedbackGenerator(style: .light)
     private let maxBeats = 8
@@ -36,6 +41,8 @@ struct ContentView: View {
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
         }
+        // Support Dynamic Type, but cap growth so the single-screen layout holds.
+        .dynamicTypeSize(...DynamicTypeSize.accessibility2)
         .sheet(isPresented: $showCommands) { commandsSheet }
         .sheet(isPresented: $showTuner, onDismiss: { tuner.stop() }) { tunerSheet }
         .onChange(of: detector.state) { newState in
@@ -130,12 +137,16 @@ struct ContentView: View {
     private var tempoCard: some View {
         VStack(spacing: 10) {
             Text("\(metronome.bpm)")
-                .font(.system(size: 52, weight: .bold, design: .rounded))
+                .font(.system(size: bpmFontSize, weight: .bold, design: .rounded))
                 .monospacedDigit()
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
                 .foregroundStyle(beatScale > 1.0 ? brass : Color.primary)
                 .scaleEffect(beatScale)
             Text(tempoSubtitle)
                 .font(.subheadline)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
                 .foregroundStyle(detector.isRunning ? brass : .secondary)
             HStack(spacing: 16) {
                 stepButton(systemName: "minus.circle.fill", delta: -1)
@@ -221,6 +232,7 @@ struct ContentView: View {
                             .font(.subheadline.weight(lastCommandText.isEmpty ? .regular : .semibold))
                             .foregroundStyle(lastCommandText.isEmpty ? .secondary : brass)
                             .lineLimit(1)
+                            .minimumScaleFactor(0.7)
                     }
                 } else {
                     Text(micMessage)
@@ -346,7 +358,9 @@ struct ContentView: View {
             VStack(spacing: 28) {
                 Spacer()
                 Text(tuner.noteName)
-                    .font(.system(size: 96, weight: .bold, design: .rounded))
+                    .font(.system(size: noteFontSize, weight: .bold, design: .rounded))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
                     .foregroundStyle(inTune ? Color.green : .primary)
                 centsMeter
                 Text(tuner.frequency > 0 ? String(format: "%.1f Hz", tuner.frequency) : "Play a note…")
@@ -422,7 +436,7 @@ struct ContentView: View {
             metronome.nudge(delta)
         } label: {
             Image(systemName: systemName)
-                .font(.system(size: 30))
+                .font(.system(size: stepIconSize))
                 .foregroundStyle(brass)
         }
         .buttonStyle(.plain)
