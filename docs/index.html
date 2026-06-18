@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not My Tempo — Support</title>
+  <style>
+    :root { --brass:#cda03e; --bg:#100e0c; --card:#1b1714; --text:#f1ece4; --muted:#a89f92; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text);
+           font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+           line-height:1.6; }
+    .wrap { max-width:720px; margin:0 auto; padding:40px 22px 80px; }
+    header { text-align:center; margin-bottom:36px; }
+    .dots { font-size:0; margin-bottom:14px; }
+    .dot { display:inline-block; width:16px; height:16px; border-radius:50%;
+           background:var(--brass); margin:0 5px; }
+    .dot.first { background:#db5450; }
+    h1 { font-size:30px; margin:6px 0 4px; }
+    h2 { color:var(--brass); font-size:19px; margin:34px 0 10px; }
+    .sub { color:var(--muted); }
+    .card { background:var(--card); border-radius:16px; padding:18px 20px; margin-top:14px; }
+    table { width:100%; border-collapse:collapse; }
+    td { padding:7px 0; border-bottom:1px solid #2a241f; vertical-align:top; }
+    td.cmd { color:var(--brass); font-weight:600; white-space:nowrap; padding-right:16px; }
+    a { color:var(--brass); }
+    footer { margin-top:48px; text-align:center; color:var(--muted); font-size:14px; }
+    code { background:#2a241f; padding:1px 6px; border-radius:5px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <h1>Not My Tempo</h1>
+      <div class="sub">Hands-free metronome &amp; tuner — Support</div>
+    </header>
+
+    <h2>What it is</h2>
+    <p>Not My Tempo is a metronome you control entirely by voice while you play —
+       no screen taps, and no need to enable any iOS system Voice Control or
+       Accessibility setting. It also includes a built-in chromatic tuner.</p>
+
+    <h2>Getting started</h2>
+    <div class="card">
+      <p>1. Open the app — it starts <strong>listening</strong> automatically.<br>
+         2. Grant Microphone &amp; Speech permission the first time.<br>
+         3. Just say a command, or tap the controls.</p>
+      <p class="sub">Tip: use earphones so the click doesn't leak into the mic — it
+         keeps voice recognition and the tuner accurate.</p>
+    </div>
+
+    <h2>Voice commands</h2>
+    <div class="card">
+      <table>
+        <tr><td class="cmd">"start" / "stop"</td><td>play / pause</td></tr>
+        <tr><td class="cmd">"faster" / "slower"</td><td>±5 BPM</td></tr>
+        <tr><td class="cmd">"up" / "down"</td><td>±1 BPM</td></tr>
+        <tr><td class="cmd">"tempo 120"</td><td>set an exact value</td></tr>
+        <tr><td class="cmd">"double" / "half"</td><td>×2 / ÷2</td></tr>
+        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>subdivision</td></tr>
+        <tr><td class="cmd">"tune"</td><td>open the tuner</td></tr>
+        <tr><td class="cmd">"help"</td><td>show the command list</td></tr>
+        <tr><td class="cmd">"close" / "done"</td><td>close a panel</td></tr>
+      </table>
+      <p class="sub">Some Korean words also work: 시작, 정지, 빠르게, 느리게, 16분, 튜너, 닫아.</p>
+    </div>
+
+    <h2>Tuner</h2>
+    <p>Say <code>tune</code> (or tap the waveform button on the tempo card). Play a
+       note — when the indicator lands inside the green zone, you're in tune. Say
+       <code>close</code> to exit.</p>
+
+    <h2>Battery</h2>
+    <p>To save power, listening automatically turns off after a few minutes with no
+       commands. Tap <strong>Listen</strong> to turn it back on.</p>
+
+    <h2>Troubleshooting</h2>
+    <div class="card">
+      <p><strong>It isn't hearing me.</strong> Check the Microphone status reads
+         "Listening". If it's off, tap Listen. In noisy rooms or on loudspeakers,
+         use earphones.</p>
+      <p><strong>Tempo detection is off by half/double.</strong> Say "double" or
+         "half" to correct it.</p>
+    </div>
+
+    <h2>Contact</h2>
+    <p>Questions or feedback: <a href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a></p>
+
+    <footer>
+      <a href="privacy.html">Privacy Policy</a> · © 2026 Not My Tempo
+    </footer>
+  </div>
+</body>
+</html>
