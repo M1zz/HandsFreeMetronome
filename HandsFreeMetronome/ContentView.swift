@@ -19,6 +19,12 @@ struct ContentView: View {
     @State private var helpIndex = 0            // voice-driven scroll position in Help
     private let helpSections = ["howto", "playback", "tempo", "subdivision", "tuner", "scrolling"]
 
+    // Landscape on iPhone reports a compact height → switch to a two-column layout.
+    @Environment(\.verticalSizeClass) private var vSizeClass
+    // Accessibility preferences we honour throughout the UI.
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.accessibilityDifferentiateWithoutColor) private var differentiateWithoutColor
+
     // Dynamic Type: scale the big fixed-size displays with the user's text setting.
     @ScaledMetric(relativeTo: .largeTitle) private var bpmFontSize: CGFloat = 52
     @ScaledMetric(relativeTo: .largeTitle) private var noteFontSize: CGFloat = 96
@@ -33,16 +39,11 @@ struct ContentView: View {
         ZStack {
             Color(.systemGroupedBackground).ignoresSafeArea()
 
-            VStack(spacing: 12) {
-                beatDots                 // tap to set time signature
-                tempoCard
-                subdivisionCard
-                voiceCard
-                Spacer(minLength: 0)
-                transportBar
+            if vSizeClass == .compact {
+                landscapeLayout
+            } else {
+                portraitLayout
             }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 12)
         }
         // Support Dynamic Type, but cap growth so the single-screen layout holds.
         .dynamicTypeSize(...DynamicTypeSize.accessibility2)
@@ -52,7 +53,7 @@ struct ContentView: View {
             if case .result(let bpm) = newState { metronome.setTempo(bpm) }
         }
         .onChange(of: metronome.isPlaying) { playing in
-            if playing { hintDismissed = true }
+            if playing { withAnimation(.easeInOut(duration: 0.4)) { hintDismissed = true } }
         }
         .onChange(of: voice.activityToken) { _ in restartMuteCountdown() }
         .onChange(of: voice.isListening) { listening in
@@ -66,6 +67,50 @@ struct ContentView: View {
                 if !voice.isListening { voice.toggle() }
             }
         }
+        // Let the "tap dots" hint fade away on its own if the user never touches it.
+        .task {
+            try? await Task.sleep(nanoseconds: 6_000_000_000)
+            if !hintDismissed {
+                withAnimation(.easeInOut(duration: 0.8)) { hintDismissed = true }
+            }
+        }
+    }
+
+    // MARK: Layouts
+
+    /// Portrait: a single vertical stack, transport pinned to the bottom.
+    private var portraitLayout: some View {
+        VStack(spacing: 12) {
+            beatDots                 // tap to set time signature
+            tempoCard
+            subdivisionCard
+            voiceCard
+            Spacer(minLength: 0)
+            transportBar
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+    }
+
+    /// Landscape (compact height): two columns so everything stays on one screen.
+    /// Left holds the beats + tempo; right holds subdivision, voice status, transport.
+    private var landscapeLayout: some View {
+        HStack(alignment: .top, spacing: 12) {
+            VStack(spacing: 10) {
+                beatDots             // tap to set time signature
+                tempoCard
+            }
+            .frame(maxWidth: .infinity)
+            VStack(spacing: 10) {
+                subdivisionCard
+                voiceCard
+                Spacer(minLength: 0)
+                transportBar
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 10)
     }
 
     // MARK: Beat dots — tap to set the time signature; light up on each beat
@@ -77,26 +122,30 @@ struct ContentView: View {
         // full set of slots so the time signature can be edited again.
         let shown = playing ? beats : maxBeats
         let rows = dotRows(total: shown)
-        return VStack(spacing: 8) {
-            VStack(spacing: 12) {
-                ForEach(rows.indices, id: \.self) { r in
-                    HStack(spacing: 12) {
-                        ForEach(rows[r], id: \.self) { i in
-                            beatDot(i, active: i < beats)
-                        }
+        return VStack(spacing: 12) {       // the dots themselves — centered in the card
+            ForEach(rows.indices, id: \.self) { r in
+                HStack(spacing: 12) {
+                    ForEach(rows[r], id: \.self) { i in
+                        beatDot(i, active: i < beats)
                     }
                 }
             }
-            .frame(height: 64)             // fixed area → card height never changes;
-            .animation(.easeInOut(duration: 0.25), value: shown)  // dots stay vertically centered
+        }
+        .frame(height: 64)                 // fixed area → card height never changes;
+        .animation(.easeInOut(duration: 0.25), value: shown)  // dots stay vertically centered
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 16)
+        .background(card)
+        // Hint sits at the bottom edge as an overlay so it never nudges the dots
+        // off the card's vertical centre.
+        .overlay(alignment: .bottom) {
             Text("\(beats)/4  ·  tap dots to set beats")
                 .font(.caption2)
                 .foregroundStyle(.secondary)
-                .opacity(!hintDismissed && !playing ? 1 : 0)   // reserve the line → constant height
+                .opacity(!hintDismissed && !playing ? 1 : 0)
+                .accessibilityHidden(hintDismissed || playing)   // don't read the invisible hint
+                .padding(.bottom, 6)
         }
-        .padding(.vertical, 16)
-        .frame(maxWidth: .infinity)
-        .background(card)
     }
 
     /// One row up to 6 dots; 7+ split into two balanced rows (8 → 4 + 4).
@@ -113,17 +162,23 @@ struct ContentView: View {
             .fill(active ? dotFill(i) : Color.clear)
             .overlay(Circle().strokeBorder(active ? .clear : Color(.systemGray3), lineWidth: 1.5))
             .frame(width: 24, height: 24)
-            .scaleEffect(sounding ? 1.4 : 1.0)
+            .scaleEffect(sounding && !reduceMotion ? 1.4 : 1.0)   // Reduce Motion: no grow, brightness still marks the beat
             .shadow(color: sounding ? dotFill(i).opacity(0.6) : .clear, radius: sounding ? 9 : 0)
             .animation(.easeOut(duration: 0.12), value: currentBeat)
             .animation(.easeOut(duration: 0.2), value: metronome.beatsPerMeasure)
             .contentShape(Circle())
-            .transition(.scale.combined(with: .opacity))
+            .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
             .onTapGesture {
                 metronome.setBeatsPerMeasure(i + 1)
                 haptic.impactOccurred(intensity: 0.5)
-                hintDismissed = true
+                withAnimation(.easeInOut(duration: 0.4)) { hintDismissed = true }
             }
+            // Voice Control: say "Tap N beats" to set the time signature.
+            .accessibilityLabel("\(i + 1) \(i == 0 ? "beat" : "beats")")
+            .accessibilityInputLabels(["\(i + 1) beats", "Beat \(i + 1)", "\(i + 1)"])
+            // VoiceOver: announce as a button, mark the current time signature selected.
+            .accessibilityAddTraits(i + 1 == metronome.beatsPerMeasure ? [.isButton, .isSelected] : .isButton)
+            .accessibilityHint("Sets \(i + 1)/4 time")
     }
 
     private func isActive(_ i: Int) -> Bool { metronome.isPlaying && i == currentBeat }
@@ -146,6 +201,8 @@ struct ContentView: View {
                 .minimumScaleFactor(0.6)
                 .foregroundStyle(beatScale > 1.0 ? brass : Color.primary)
                 .scaleEffect(beatScale)
+                .accessibilityLabel("Tempo")
+                .accessibilityValue("\(metronome.bpm) beats per minute")
             Text(tempoSubtitle)
                 .font(.subheadline)
                 .lineLimit(1)
@@ -155,6 +212,9 @@ struct ContentView: View {
                 stepButton(systemName: "minus.circle.fill", delta: -1)
                 Slider(value: bpmBinding, in: 30...260, step: 1)
                     .tint(brass)
+                    .accessibilityLabel("Tempo")
+                    .accessibilityValue("\(metronome.bpm) BPM")
+                    .accessibilityInputLabels(["Tempo", "Tempo slider", "BPM"])
                 stepButton(systemName: "plus.circle.fill", delta: 1)
             }
         }
@@ -173,6 +233,9 @@ struct ContentView: View {
                 .foregroundStyle(detector.isRunning ? .red : brass)
         }
         .accessibilityLabel(detector.isRunning ? "Stop tempo detection" : "Detect tempo from music")
+        .accessibilityInputLabels(detector.isRunning
+            ? ["Stop detection", "Stop detecting"]
+            : ["Detect tempo", "Detect", "Detect tempo from music"])
     }
 
     private var tempoSubtitle: String {
@@ -188,8 +251,9 @@ struct ContentView: View {
     // MARK: Subdivision — tap a ring that shows how the beat is divided
 
     private var subdivisionCard: some View {
-        let options: [(seg: Int, value: Int, label: String)] =
-            [(1, 1, "1/4"), (2, 2, "1/8"), (3, 3, "Trip"), (4, 4, "1/16")]
+        let options: [(seg: Int, value: Int, label: String, voice: String)] =
+            [(1, 1, "1/4", "Quarter"), (2, 2, "1/8", "Eighth"),
+             (3, 3, "Trip", "Triplet"), (4, 4, "1/16", "Sixteenth")]
         return HStack(spacing: 8) {
             ForEach(options, id: \.value) { opt in
                 let selected = metronome.subdivision == opt.value
@@ -211,6 +275,9 @@ struct ContentView: View {
                         .fill(selected ? brass.opacity(0.14) : .clear))
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("\(opt.voice) notes")
+                .accessibilityInputLabels(["\(opt.voice) notes", opt.voice, opt.label])
+                .accessibilityAddTraits(selected ? [.isButton, .isSelected] : .isButton)
             }
         }
         .padding(10)
@@ -253,6 +320,7 @@ struct ContentView: View {
                     .foregroundStyle(.secondary)
             }
             .accessibilityLabel("Voice commands")
+            .accessibilityInputLabels(["Voice commands", "Help", "Commands"])
             .popoverTip(HelpVoiceTip())
         }
         .padding(16)
@@ -271,6 +339,7 @@ struct ContentView: View {
             }
         }
         .animation(.easeOut(duration: 0.08), value: voice.audioLevel)
+        .accessibilityHidden(true)   // purely decorative level meter
     }
 
     // MARK: Transport
@@ -293,6 +362,10 @@ struct ContentView: View {
                     }
             }
             .buttonStyle(.plain)
+            .accessibilityLabel(voice.isListening ? "Mute voice control" : "Listen for voice")
+            .accessibilityInputLabels(voice.isListening
+                ? ["Mute", "Stop listening"]
+                : ["Listen", "Start listening"])
 
             Button { metronome.toggle() } label: {
                 transportLabel(metronome.isPlaying ? "Stop" : "Start",
@@ -301,6 +374,10 @@ struct ContentView: View {
                                filled: true)
             }
             .buttonStyle(.plain)
+            .accessibilityLabel(metronome.isPlaying ? "Stop metronome" : "Start metronome")
+            .accessibilityInputLabels(metronome.isPlaying
+                ? ["Stop", "Stop metronome", "Pause"]
+                : ["Start", "Start metronome", "Play"])
         }
     }
 
@@ -381,6 +458,7 @@ struct ContentView: View {
                 Text(detail).font(.footnote).foregroundStyle(.secondary)
             }
         }
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: Tuner sheet
@@ -394,7 +472,18 @@ struct ContentView: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
                     .foregroundStyle(inTune ? Color.green : .primary)
+                    .accessibilityLabel("Note")
+                    .accessibilityValue(tunerAccessibilityValue)
                 centsMeter
+                    .accessibilityHidden(true)   // visual meter; pitch is announced on the note above
+                // Differentiate Without Color: a shape cue so "in tune" doesn't rely on green alone.
+                if differentiateWithoutColor, tuner.frequency > 0 {
+                    Image(systemName: inTune ? "checkmark.circle.fill"
+                                             : (tuner.cents > 0 ? "arrow.up.circle.fill" : "arrow.down.circle.fill"))
+                        .font(.title)
+                        .foregroundStyle(inTune ? Color.green : brass)
+                        .accessibilityHidden(true)   // pitch already announced on the note
+                }
                 Text(tuner.frequency > 0 ? String(format: "%.1f Hz", tuner.frequency) : "Play a note…")
                     .font(.headline)
                     .foregroundStyle(.secondary)
@@ -417,6 +506,14 @@ struct ContentView: View {
     }
 
     private var inTune: Bool { tuner.frequency > 0 && abs(tuner.cents) <= tuneTolerance }
+
+    /// Spoken pitch summary for VoiceOver, replacing the visual cents meter.
+    private var tunerAccessibilityValue: String {
+        guard tuner.frequency > 0 else { return "No note detected, play a note" }
+        if inTune { return "\(tuner.noteName), in tune" }
+        let cents = Int(tuner.cents.rounded())
+        return "\(tuner.noteName), \(abs(cents)) cents \(cents > 0 ? "sharp" : "flat")"
+    }
 
     private var centsMeter: some View {
         let cents = max(-50, min(50, tuner.cents))
@@ -459,6 +556,7 @@ struct ContentView: View {
             Spacer()
             Text(effect).foregroundStyle(.secondary)
         }
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: Small pieces
@@ -472,6 +570,10 @@ struct ContentView: View {
                 .foregroundStyle(brass)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel(delta < 0 ? "Decrease tempo" : "Increase tempo")
+        .accessibilityInputLabels(delta < 0
+            ? ["Decrease tempo", "Slower", "Minus"]
+            : ["Increase tempo", "Faster", "Plus"])
     }
 
     private var card: some View {
@@ -584,6 +686,8 @@ struct ContentView: View {
     private func pulseBeat(_ beat: Int) {
         currentBeat = beat
         haptic.impactOccurred(intensity: beat == 0 ? 1.0 : 0.6)
+        // Reduce Motion: skip the bounce — the lit dot still marks the beat.
+        guard !reduceMotion else { return }
         withAnimation(.easeOut(duration: 0.06)) { beatScale = 1.1 }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.07) {
             withAnimation(.easeIn(duration: 0.1)) { beatScale = 1.0 }
