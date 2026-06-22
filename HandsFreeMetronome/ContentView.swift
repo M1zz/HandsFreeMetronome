@@ -19,6 +19,9 @@ struct ContentView: View {
     @State private var helpIndex = 0            // voice-driven scroll position in Help
     private let helpSections = ["howto", "playback", "tempo", "subdivision", "tuner", "scrolling"]
 
+    // Spoken once, the first time a VoiceOver user opens the app.
+    @AppStorage("didIntroduceVoiceOver") private var didIntroduceVoiceOver = false
+
     // Landscape on iPhone reports a compact height → switch to a two-column layout.
     @Environment(\.verticalSizeClass) private var vSizeClass
     // Accessibility preferences we honour throughout the UI.
@@ -74,6 +77,38 @@ struct ContentView: View {
                 withAnimation(.easeInOut(duration: 0.8)) { hintDismissed = true }
             }
         }
+        // First time a VoiceOver user opens the app, spell out how it works.
+        // Delayed so it follows VoiceOver's own initial reading of the screen.
+        .task {
+            try? await Task.sleep(nanoseconds: 1_500_000_000)
+            introduceVoiceOverIfNeeded()
+        }
+        // Also cover the case where VoiceOver is switched on right after launch.
+        .onReceive(NotificationCenter.default.publisher(
+            for: UIAccessibility.voiceOverStatusDidChangeNotification)) { _ in
+            introduceVoiceOverIfNeeded()
+        }
+    }
+
+    /// One-time spoken orientation for VoiceOver users: this is a voice-driven
+    /// metronome whose mic is already listening, plus the key commands and the
+    /// reassurance that every control also works with VoiceOver gestures.
+    private func introduceVoiceOverIfNeeded() {
+        guard UIAccessibility.isVoiceOverRunning, !didIntroduceVoiceOver else { return }
+        didIntroduceVoiceOver = true
+        let text = """
+        Not My Tempo, a hands-free metronome and tuner. \
+        The microphone is already listening, so you can control it by voice. \
+        Say start or stop to play, faster or slower to change the tempo, \
+        tune to open the tuner, or help to hear every command. \
+        Every control also works with VoiceOver gestures.
+        """
+        // High priority so VoiceOver doesn't drop it while reading the screen.
+        let announcement = NSAttributedString(
+            string: text,
+            attributes: [.accessibilitySpeechAnnouncementPriority: UIAccessibilityPriority.high]
+        )
+        UIAccessibility.post(notification: .announcement, argument: announcement)
     }
 
     // MARK: Layouts
