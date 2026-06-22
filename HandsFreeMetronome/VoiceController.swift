@@ -127,7 +127,10 @@ final class VoiceController: ObservableObject {
 
         let request = SFSpeechAudioBufferRecognitionRequest()
         request.shouldReportPartialResults = true
-        request.requiresOnDeviceRecognition = true
+        // Only force on-device recognition when the en-US model is actually present.
+        // On devices without it, forcing it makes recognition return no result and
+        // no error — the mic appears dead. Fall back to server recognition instead.
+        request.requiresOnDeviceRecognition = recognizer.supportsOnDeviceRecognition
         self.request = request
         awaitingRestart = false
 
@@ -218,29 +221,28 @@ final class VoiceController: ObservableObject {
     /// Match a command anywhere in the current transcription. Longer/compound
     /// phrases ("speed up") are checked before short ones ("up").
     private func command(in text: String) -> Command? {
-        if contains(text, ["help", "헬프", "도움말"]) { return .help }
-        if contains(text, ["tune", "tuner", "튜너", "튜닝"]) { return .tuner }
+        if contains(text, ["help"]) { return .help }
+        if contains(text, ["tune", "tuner"]) { return .tuner }
         // Scroll the help list by voice — checked before up/down (tempo) and
         // before close words so "scroll down" doesn't change tempo or close.
-        if contains(text, ["scroll", "스크롤"]) {
-            return contains(text, ["up", "위", "업"]) ? .scrollUp : .scrollDown
+        if contains(text, ["scroll"]) {
+            return contains(text, ["up"]) ? .scrollUp : .scrollDown
         }
         // Closes whichever panel is open. "done" is easily misheard as "down",
         // so offer clearer alternatives too.
-        if contains(text, ["done", "close", "okay", "exit", "dismiss",
-                           "닫아", "닫기", "완료", "그만"]) { return .dismiss }
-        if contains(text, ["double", "두배"]) { return .double }
-        if contains(text, ["half", "절반"]) { return .half }
-        if contains(text, ["faster", "speed up", "빠르게", "빨리"]) { return .faster }
-        if contains(text, ["slower", "slow down", "느리게", "천천히"]) { return .slower }
-        if contains(text, ["sixteenth", "16th", "십육분", "16분"]) { return .setSubdivision(4) }
-        if contains(text, ["triplet", "셋잇단", "삼연음"]) { return .setSubdivision(3) }
-        if contains(text, ["eighth", "8th", "팔분", "8분"]) { return .setSubdivision(2) }
-        if contains(text, ["quarter", "사분", "4분"]) { return .setSubdivision(1) }
-        if contains(text, ["start", "play", "go", "begin", "시작"]) { return .start }
-        if contains(text, ["stop", "pause", "halt", "정지", "멈춰"]) { return .stop }
-        if contains(text, ["up", "higher", "위로"]) { return .up }
-        if contains(text, ["down", "lower", "아래로"]) { return .down }
+        if contains(text, ["done", "close", "okay", "exit", "dismiss"]) { return .dismiss }
+        if contains(text, ["double"]) { return .double }
+        if contains(text, ["half"]) { return .half }
+        if contains(text, ["faster", "speed up"]) { return .faster }
+        if contains(text, ["slower", "slow down"]) { return .slower }
+        if contains(text, ["sixteenth", "16th"]) { return .setSubdivision(4) }
+        if contains(text, ["triplet"]) { return .setSubdivision(3) }
+        if contains(text, ["eighth", "8th"]) { return .setSubdivision(2) }
+        if contains(text, ["quarter"]) { return .setSubdivision(1) }
+        if contains(text, ["start", "play", "go", "begin"]) { return .start }
+        if contains(text, ["stop", "pause", "halt"]) { return .stop }
+        if contains(text, ["up", "higher"]) { return .up }
+        if contains(text, ["down", "lower"]) { return .down }
         if let n = firstNumber(in: text) { return .setTempo(n) }
         return nil
     }
