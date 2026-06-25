@@ -27,6 +27,9 @@ struct ContentView: View {
     // Accessibility preferences we honour throughout the UI.
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.accessibilityDifferentiateWithoutColor) private var differentiateWithoutColor
+    // Assistive Access (iOS 18+): when the app runs inside the simplified system
+    // experience for people with cognitive disabilities, we show a distilled UI.
+    @Environment(\.accessibilityAssistiveAccessEnabled) private var assistiveAccess
 
     // Dynamic Type: scale the big fixed-size displays with the user's text setting.
     @ScaledMetric(relativeTo: .largeTitle) private var bpmFontSize: CGFloat = 52
@@ -42,7 +45,9 @@ struct ContentView: View {
         ZStack {
             Color(.systemGroupedBackground).ignoresSafeArea()
 
-            if vSizeClass == .compact {
+            if assistiveAccess {
+                assistiveAccessLayout
+            } else if vSizeClass == .compact {
                 landscapeLayout
             } else {
                 portraitLayout
@@ -146,6 +151,63 @@ struct ContentView: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 10)
+    }
+
+    /// Assistive Access: distilled to the essentials — see the tempo, change it,
+    /// and start or stop. Apple's guidance is to reduce complexity and use large,
+    /// clear controls; standard SwiftUI buttons here automatically pick up
+    /// Assistive Access's prominent styling. Voice control still runs in the
+    /// background, so the whole app remains hands-free in this mode too.
+    private var assistiveAccessLayout: some View {
+        VStack(spacing: 22) {
+            beatDots                     // shared beat indicator — already accessible
+
+            VStack(spacing: 2) {
+                Text("\(metronome.bpm)")
+                    .font(.system(size: bpmFontSize * 1.5, weight: .bold, design: .rounded))
+                    .monospacedDigit()
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                    .foregroundStyle(beatScale > 1.0 ? brass : Color.primary)
+                    .accessibilityLabel("Tempo")
+                    .accessibilityValue("\(metronome.bpm) beats per minute")
+                Text("BPM")
+                    .font(.title3.weight(.semibold))
+                    .foregroundStyle(.secondary)
+                    .accessibilityHidden(true)
+            }
+
+            HStack(spacing: 14) {
+                aaButton("Slower", icon: "minus", tint: brass) { metronome.nudge(-5) }
+                aaButton("Faster", icon: "plus", tint: brass) { metronome.nudge(5) }
+            }
+
+            aaButton(metronome.isPlaying ? "Stop" : "Start",
+                     icon: metronome.isPlaying ? "stop.fill" : "play.fill",
+                     tint: metronome.isPlaying ? .red : brass) { metronome.toggle() }
+
+            Spacer(minLength: 0)
+        }
+        .padding(20)
+    }
+
+    /// A large, full-width button for the Assistive Access layout.
+    private func aaButton(_ title: String, icon: String, tint: Color,
+                          action: @escaping () -> Void) -> some View {
+        Button {
+            action()
+            haptic.impactOccurred(intensity: 0.6)
+        } label: {
+            Label(title, systemImage: icon)
+                .font(.title2.weight(.semibold))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+        }
+        .buttonStyle(.borderedProminent)
+        .controlSize(.large)
+        .tint(tint)
+        .accessibilityLabel(title == "Start" ? "Start metronome"
+                            : title == "Stop" ? "Stop metronome" : title)
     }
 
     // MARK: Beat dots — tap to set the time signature; light up on each beat

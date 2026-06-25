@@ -8,5 +8,10 @@
 	</array>
 	<key>UILaunchScreen</key>
 	<dict/>
+	<!-- Assistive Access: fill the whole screen instead of the default reduced
+	     frame. Our UI uses adaptive SwiftUI containers (VStack/HStack/Spacer),
+	     so it expands to use all available space at any size. -->
+	<key>UISupportsFullScreenInAssistiveAccess</key>
+	<true/>
 </dict>
 </plist>
