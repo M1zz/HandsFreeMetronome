@@ -12,11 +12,20 @@ struct ContentView: View {
     @State private var currentBeat = -1   // which beat (0-based) is sounding now
     @State private var showCommands = false
     @State private var showTuner = false
+    @State private var showTrainer = false   // practice-mode modal
+    @State private var showHelpMarks = false   // "help" → quick "what can I say" list
     @State private var hintDismissed = false   // hide "tap dots" after first tap/start
     @State private var didAutoStart = false    // auto-enable listening once on launch
     @State private var muteProgress: CGFloat = 1   // Listen-button countdown ring (1→0)
     @State private var lastCommandText = ""     // last recognized voice command
+    @State private var flashingCommand = false  // briefly show the command on the Mute button
+    @State private var flashToken = 0           // invalidates stale flash timers
     @State private var helpIndex = 0            // voice-driven scroll position in Help
+    @State private var tapTimes: [TimeInterval] = []   // recent taps for tap-tempo
+    @AppStorage("tempoAsNumber") private var tempoAsNumber = false   // big display: term vs. BPM
+    @State private var beatAnchor = Date()   // wall-clock moment the current beat fired
+    // Which beat visualization is showing. Persisted so it survives relaunch.
+    @AppStorage("beatVizMode") private var vizModeRaw = BeatVizMode.bounce.rawValue
     private let helpSections = ["howto", "playback", "tempo", "subdivision", "tuner", "scrolling"]
 
     // Spoken once, the first time a VoiceOver user opens the app.
@@ -42,9 +51,13 @@ struct ContentView: View {
     @ScaledMetric(relativeTo: .largeTitle) private var noteFontSize: CGFloat = 96
     @ScaledMetric(relativeTo: .title) private var stepIconSize: CGFloat = 30
 
-    private let brass = Color(red: 0.80, green: 0.62, blue: 0.24)
+    // A rich, saturated gold — clearer than the old muted brass but not glaring, so
+    // small gold text still reads on white and it doesn't wash out in light mode.
+    private let brass = Color(red: 0.84, green: 0.56, blue: 0.09)
+    // A punchy red for the downbeat, more vivid than the system red on grey cards.
+    private let beatRed = Color(red: 0.90, green: 0.22, blue: 0.20)
     private let haptic = UIImpactFeedbackGenerator(style: .light)
-    private let maxBeats = 8
+    private let maxBeats = MetronomeEngine.maxBeatsPerMeasure
     private let tuneTolerance: Double = 10   // ± cents counted as "in tune"
 
     var body: some View {
@@ -59,16 +72,30 @@ struct ContentView: View {
                 portraitLayout
             }
         }
+        // "help" highlights every on-screen control at once, each tagged with the
+        // voice command that drives it — read from the controls' captured bounds.
+        .overlayPreferenceValue(CoachAnchorKey.self) { anchors in
+            GeometryReader { proxy in
+                if showHelpMarks { helpMarksOverlay(anchors, proxy).transition(.opacity) }
+            }
+            .ignoresSafeArea()
+        }
         // Support Dynamic Type, but cap growth so the single-screen layout holds.
         .dynamicTypeSize(...DynamicTypeSize.accessibility2)
         .fullScreenCover(isPresented: $showCommands) { commandsSheet }
         .sheet(isPresented: $showTuner, onDismiss: { tuner.stop() }) { tunerSheet }
+        .sheet(isPresented: $showTrainer) { trainerSheet }
         .onChange(of: detector.state) { newState in
             if case .result(let bpm) = newState { metronome.setTempo(bpm) }
         }
         .onChange(of: metronome.isPlaying) { playing in
             if playing { withAnimation(.easeInOut(duration: 0.4)) { hintDismissed = true } }
+            else { currentBeat = -1 }   // reset so the next start floats at centre first
+            // Don't let the screen auto-lock mid-practice — a running metronome you
+            // can't see (or that pauses when the display sleeps) is useless.
+            UIApplication.shared.isIdleTimerDisabled = playing
         }
+        .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
         .onChange(of: voice.activityToken) { _ in restartMuteCountdown() }
         .onChange(of: voice.isListening) { listening in
             if !listening { muteProgress = 1 }
@@ -151,18 +178,35 @@ struct ContentView: View {
 
     // MARK: Layouts
 
-    /// Portrait: a single vertical stack, transport pinned to the bottom.
+    /// Portrait: the cards scroll if they don't all fit (small phones / large type),
+    /// with the transport bar pinned to the bottom so Start/Stop is always reachable.
+    /// Once playing, the setup cards fade away so only the beat + tempo remain.
     private var portraitLayout: some View {
-        VStack(spacing: 10) {
-            beatDots                 // tap to set time signature; dots bounce on the beat
-            tempoCard
-            subdivisionCard
-            voiceCard
-            Spacer(minLength: 0)
+        VStack(spacing: 8) {
+            ScrollView {
+                VStack(spacing: 8) {
+                    beatDots         // tap to set time signature; circles wave on the beat
+                    tempoCard
+                    if !metronome.isPlaying {
+                        subdivisionCard.transition(.opacity)
+                    }
+                }
+                .padding(.horizontal, 16)
+                .padding(.top, 2)
+            }
+            .scrollBounceBehavior(.basedOnSize)   // don't bounce when it already fits
+            // Voice status is pinned just above the transport so "Listening" and the
+            // last heard command are always in view — never buried below the scroll.
+            if !metronome.isPlaying {
+                voiceCard
+                    .padding(.horizontal, 16)
+                    .transition(.opacity)
+            }
             transportBar
+                .padding(.horizontal, 16)
+                .padding(.bottom, 12)
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 12)
+        .animation(.easeInOut(duration: 0.35), value: metronome.isPlaying)
     }
 
     /// Landscape (compact height): two columns so everything stays on one screen.
@@ -175,12 +219,15 @@ struct ContentView: View {
             }
             .frame(maxWidth: .infinity)
             VStack(spacing: 10) {
-                subdivisionCard
-                voiceCard
+                if !metronome.isPlaying {
+                    subdivisionCard.transition(.opacity)
+                    voiceCard.transition(.opacity)
+                }
                 Spacer(minLength: 0)
                 transportBar
             }
             .frame(maxWidth: .infinity)
+            .animation(.easeInOut(duration: 0.35), value: metronome.isPlaying)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 10)
@@ -243,39 +290,231 @@ struct ContentView: View {
                             : title == "Stop" ? "Stop metronome" : title)
     }
 
-    // MARK: Beat dots — tap to set the time signature; light up on each beat
+    // MARK: Beat visualization — two selectable modes.
+    //  • bounce: a ball rides up/down at constant speed, hitting the top on every
+    //    (sub)beat — subdivisions just make it bounce more often.
+    //  • orbit:  a dot circles a ring of beat markers (4/4 → 0/90/180/270°),
+    //    landing on each marker on the beat at constant angular velocity.
+    // While stopped, both fall back to the editable dot grid so the time signature
+    // can still be tapped in.
+
+    private var vizMode: BeatVizMode { BeatVizMode(rawValue: vizModeRaw) ?? .bounce }
 
     private var beatDots: some View {
-        let beats = metronome.beatsPerMeasure
         let playing = metronome.isPlaying
-        // While playing, collapse to just the active beats; when stopped, show the
-        // full set of slots so the time signature can be edited again.
-        let shown = playing ? beats : maxBeats
-        let rows = dotRows(total: shown)
-        return VStack(spacing: 12) {       // the dots themselves — centered in the card
-            ForEach(rows.indices, id: \.self) { r in
-                HStack(spacing: 12) {
-                    ForEach(rows[r], id: \.self) { i in
-                        beatDot(i, active: i < beats)
-                    }
+        return ZStack {
+            if playing {
+                switch vizMode {
+                case .bounce: bounceViz.transition(.opacity)
+                case .orbit:  orbitViz.transition(.opacity)
                 }
+            } else {
+                editableBeatGrid.transition(.opacity)
             }
         }
-        .frame(height: 80)                 // fixed area (with headroom for the bounce)
-        .animation(.easeInOut(duration: 0.25), value: shown)  // dots stay vertically centered
+        // Cross-fade between the editable grid, bounce and orbit rather than snapping.
+        .animation(.easeInOut(duration: 0.35), value: playing)
+        .animation(.easeInOut(duration: 0.3), value: vizModeRaw)
+        // Once playing, the setup cards fade out and the pendulum grows to fill the
+        // screen — a clear switch to a focused "performance" view.
+        .frame(height: playing ? 340 : 200)
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 16)
+        .padding(.vertical, 6)
         .background(card)
-        // Hint sits at the bottom edge as an overlay so it never nudges the dots
-        // off the card's vertical centre.
+        .overlay(alignment: .topTrailing) { vizModeButton.padding(12) }
+        // Hint sits at the bottom edge as an overlay so it never nudges the content.
         .overlay(alignment: .bottom) {
-            Text("\(beats)/4  ·  tap dots to set beats")
+            Text("\(metronome.beatsPerMeasure)/4  ·  tap dots to set beats")
                 .font(.caption2)
                 .foregroundStyle(.secondary)
                 .opacity(!hintDismissed && !playing ? 1 : 0)
                 .accessibilityHidden(hintDismissed || playing)   // don't read the invisible hint
                 .padding(.bottom, 6)
         }
+        .coachAnchor("beat")
+    }
+
+    /// Small toggle that flips between the bounce and orbit visualizations.
+    private var vizModeButton: some View {
+        Button {
+            vizModeRaw = (vizMode == .bounce ? BeatVizMode.orbit : .bounce).rawValue
+            haptic.impactOccurred(intensity: 0.5)
+        } label: {
+            Image(systemName: vizMode == .bounce ? "circle.circle" : "arrow.up.arrow.down")
+                .font(.title3)
+                .foregroundStyle(.secondary)
+        }
+        .accessibilityLabel(vizMode == .bounce ? "Switch to orbit view" : "Switch to bounce view")
+        .accessibilityInputLabels(["Change view", "Metronome mode", "Switch view"])
+    }
+
+    /// The editable dot grid shown while stopped — tap a dot to set the meter.
+    private var editableBeatGrid: some View {
+        let rows = dotRows(total: maxBeats)
+        return VStack(spacing: 12) {
+            ForEach(rows.indices, id: \.self) { r in
+                HStack(spacing: 12) {
+                    ForEach(rows[r], id: \.self) { i in
+                        beatDot(i, active: i < metronome.beatsPerMeasure)
+                    }
+                }
+            }
+        }
+    }
+
+    /// Continuous phase (beats since the measure's beat 0) interpolated between the
+    /// audio-accurate beat callbacks, so motion stays glued to the click.
+    private func beatPhase(now: Date) -> Double {
+        guard metronome.isPlaying, currentBeat >= 0 else { return 0 }
+        let beatDuration = 60.0 / Double(metronome.bpm)
+        let progress = min(1, max(0, now.timeIntervalSince(beatAnchor) / beatDuration))
+        return Double(currentBeat) + progress
+    }
+
+    // MARK: Bounce visualization — a row of circles (one per beat) that rise and
+    // fall separately, so a crest travels across them like a stadium wave (파도타기).
+
+    private var bounceViz: some View {
+        let beats = metronome.beatsPerMeasure
+        let amp: CGFloat = 110          // bounce only shows while playing (roomy view)
+        let sub = max(1, metronome.subdivision)
+        return TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
+            let phase = beatPhase(now: timeline.date)
+            let started = currentBeat >= 0
+            let f = started ? phase - Double(currentBeat) : 0     // 0…1 progress in the beat
+            // Where the striking ball is right now, to light the marker it hits.
+            let ballY = (started && !reduceMotion) ? bounceHeight(f, sub: sub, amp: amp) : -amp
+            ZStack {
+                // Fixed hit markers: the top line is the beat; a bottom line appears
+                // once subdivided, and a middle line for the triplet's centre strike.
+                // Each flashes as the ball reaches it.
+                hitMarker(y: -amp, struck: started && ballY < -amp * 0.55)
+                if sub == 3 {
+                    hitMarker(y: 0, struck: started && abs(ballY) < amp * 0.22)
+                }
+                if sub >= 2 {
+                    hitMarker(y: amp, struck: started && ballY > amp * 0.55)
+                }
+                HStack(spacing: 8) {
+                    ForEach(0..<beats, id: \.self) { i in
+                        let base = i == 0 ? beatRed : brass          // downbeat is red
+                        let active = started && i == currentBeat
+                        // The active beat's ball swings down and up at constant speed,
+                        // striking a fixed marker on each subdivision (top on the beat,
+                        // bottom on the off-beat…). Idle circles WAIT on the top line —
+                        // where every swing begins and ends — so the hand-off from one
+                        // beat to the next never jumps; only brightness/scale cross-fade.
+                        let y = (active && !reduceMotion) ? bounceHeight(f, sub: sub, amp: amp) : -amp
+                        Circle()
+                            .fill(base.opacity(active ? 1.0 : 0.4))
+                            .frame(width: 34, height: 34)
+                            .scaleEffect(active && !reduceMotion ? 1.3 : 1.0)
+                            .offset(y: y)
+                            .shadow(color: active ? base.opacity(0.6) : .clear, radius: active ? 12 : 0)
+                            .animation(.easeInOut(duration: 0.16), value: currentBeat)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+            }
+        }
+        .accessibilityElement()
+        .accessibilityLabel("Beat \(max(1, currentBeat + 1)) of \(beats), \(MetronomeEngine.subdivisionName(for: sub))")
+    }
+
+    /// A fixed horizontal hit-line the ball strikes; brightens on contact.
+    private func hitMarker(y: CGFloat, struck: Bool) -> some View {
+        Capsule()
+            .fill(struck ? brass.opacity(0.9) : Color(.systemGray4))
+            .frame(height: struck ? 3 : 2)
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 24)
+            .offset(y: y)
+            .animation(.easeOut(duration: 0.08), value: struck)
+    }
+
+    /// Ball height for progress `f` (0…1) through the beat.
+    private func bounceHeight(_ f: Double, sub: Int, amp: CGFloat) -> CGFloat {
+        let x = min(0.99999, max(0, f))
+        // Triplet strikes three evenly-spaced marks — top → middle → bottom over the
+        // first two thirds — then swings back up to the top for the next beat.
+        if sub == 3 {
+            return x < 2.0 / 3.0
+                ? -amp + CGFloat(x / (2.0 / 3.0)) * (2 * amp)          // top → middle → bottom
+                : amp - CGFloat((x - 2.0 / 3.0) / (1.0 / 3.0)) * (2 * amp)  // bottom → top
+        }
+        // Even subdivisions alternate top/bottom cleanly (1/8 = top·bottom, 1/16 =
+        // two round-trips); 1/4 does one full top→bottom→top swing.
+        let segs = sub == 1 ? 2 : sub
+        let seg = x * Double(segs)
+        let j = Int(seg)
+        let frac = CGFloat(seg - Double(j))
+        let start: CGFloat = (j % 2 == 0) ? -amp : amp                    // even hit = top
+        let end: CGFloat = (j == segs - 1) ? -amp                         // return to top by beat end
+                          : (((j + 1) % 2 == 0) ? -amp : amp)
+        return start + (end - start) * frac
+    }
+
+    // MARK: Orbit visualization
+
+    private var orbitViz: some View {
+        let beats = metronome.beatsPerMeasure
+        let sub = max(1, metronome.subdivision)
+        return TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
+            let phase = beatPhase(now: timeline.date)
+            GeometryReader { geo in
+                let side = min(geo.size.width, geo.size.height)
+                let radius = side / 2 - 10
+                let center = CGPoint(x: geo.size.width / 2, y: geo.size.height / 2)
+                ZStack {
+                    Circle()                              // the track
+                        .stroke(Color(.systemGray4), lineWidth: 2.5)
+                        .frame(width: radius * 2, height: radius * 2)
+                        .position(center)
+                    // Subdivision minor ticks between the beats — one extra dot per
+                    // click, so 1/8 shows a midpoint, 1/16 shows three per beat.
+                    if sub > 1 {
+                        ForEach(0..<(beats * sub), id: \.self) { m in
+                            if m % sub != 0 {
+                                let pp = orbitPoint(beat: Double(m) / Double(sub), beats: beats, radius: radius, center: center)
+                                Circle().fill(Color(.systemGray2))
+                                    .frame(width: 7, height: 7).position(pp)
+                            }
+                        }
+                    }
+                    // Fixed beat markers at equal angles, beat 1 at the top.
+                    ForEach(0..<beats, id: \.self) { i in
+                        let p = orbitPoint(beat: Double(i), beats: beats, radius: radius, center: center)
+                        let lit = i == currentBeat
+                        Circle()
+                            .fill(lit ? (i == 0 ? beatRed : brass)
+                                      : (i == 0 ? beatRed.opacity(0.45) : brass.opacity(0.4)))
+                            .frame(width: 20, height: 20)
+                            .scaleEffect(lit ? 1.5 : 1.0)     // grow via scale so it eases cleanly
+                            .position(p)
+                            .animation(reduceMotion ? nil : .easeInOut(duration: 0.15), value: currentBeat)
+                    }
+                    // The travelling dot.
+                    let p = orbitPoint(beat: reduceMotion ? Double(max(0, currentBeat)) : phase,
+                                       beats: beats, radius: radius, center: center)
+                    let dotColor = currentBeat == 0 ? beatRed : brass
+                    Circle()
+                        .fill(dotColor)
+                        .frame(width: 24, height: 24)
+                        .shadow(color: dotColor.opacity(0.6), radius: 10)
+                        .position(p)
+                }
+            }
+        }
+        .accessibilityElement()
+        .accessibilityLabel("Beat \(max(1, currentBeat + 1)) of \(beats), \(MetronomeEngine.subdivisionName(for: sub))")
+    }
+
+    /// Position on the orbit ring for a (possibly fractional) beat index, with beat 0
+    /// at 12 o'clock and advancing clockwise.
+    private func orbitPoint(beat: Double, beats: Int, radius: CGFloat, center: CGPoint) -> CGPoint {
+        let angle = -Double.pi / 2 + (beat / Double(max(1, beats))) * 2 * .pi
+        return CGPoint(x: center.x + radius * CGFloat(cos(angle)),
+                       y: center.y + radius * CGFloat(sin(angle)))
     }
 
     /// One row up to 6 dots; 7+ split into two balanced rows (8 → 4 + 4).
@@ -290,12 +529,13 @@ struct ContentView: View {
         let sounding = isActive(i)
         // While playing, the resting dots sit low and the sounding one rises to the
         // top — so the wave swings through the full height (top ↔ bottom), not just
-        // upward. Idle (or Reduce Motion): centred, no motion.
-        let lift: CGFloat = (reduceMotion || !metronome.isPlaying) ? 0 : (sounding ? -20 : 20)
+        // upward. A wide ±34 travel makes the swing read clearly across the room.
+        // Idle (or Reduce Motion): centred, no motion.
+        let lift: CGFloat = (reduceMotion || !metronome.isPlaying) ? 0 : (sounding ? -34 : 34)
         return Circle()
             .fill(active ? dotFill(i) : Color.clear)
             .overlay(Circle().strokeBorder(active ? .clear : Color(.systemGray3), lineWidth: 1.5))
-            .frame(width: 24, height: 24)
+            .frame(width: 30, height: 30)
             // As the beat advances the crest travels across the row → stadium wave (파도타기).
             .offset(y: lift)
             .scaleEffect(sounding && !reduceMotion ? 1.3 : 1.0)   // Reduce Motion: no grow, brightness still marks the beat
@@ -324,25 +564,32 @@ struct ContentView: View {
     private func isActive(_ i: Int) -> Bool { metronome.isPlaying && i == currentBeat }
 
     /// Fill for an active beat: the currently sounding one is bright
-    /// (downbeat red, others brass); the rest are a dim brass.
+    /// (downbeat red, others brass); the rest keep their hue but dimmed, so the
+    /// downbeat "1" still reads as red even while stopped.
     private func dotFill(_ i: Int) -> Color {
-        guard isActive(i) else { return brass.opacity(0.35) }
-        return i == 0 ? .red : brass
+        let hue = i == 0 ? beatRed : brass
+        return isActive(i) ? hue : hue.opacity(0.5)
     }
 
     // MARK: Tempo
 
     private var tempoCard: some View {
         VStack(spacing: 10) {
-            Text("\(metronome.bpm)")
+            // The big display shows the Italian tempo term (Largo, Moderato…) by
+            // default; tap to flip it to the raw BPM number and back.
+            Text(tempoAsNumber ? "\(metronome.bpm)" : MetronomeEngine.tempoName(for: metronome.bpm))
                 .font(.system(size: bpmFontSize, weight: .bold, design: .rounded))
-                .monospacedDigit()
                 .lineLimit(1)
-                .minimumScaleFactor(0.6)
+                .minimumScaleFactor(0.5)
                 .foregroundStyle(beatScale > 1.0 ? brass : Color.primary)
                 .scaleEffect(beatScale)
+                .contentShape(Rectangle())
+                .onTapGesture { withAnimation(.easeInOut(duration: 0.2)) { tempoAsNumber.toggle() } }
                 .accessibilityLabel("Tempo")
-                .accessibilityValue("\(metronome.bpm) beats per minute")
+                .accessibilityValue("\(metronome.bpm) BPM, \(MetronomeEngine.tempoName(for: metronome.bpm))")
+                .accessibilityHint("Tap to switch between the tempo name and BPM")
+                .accessibilityInputLabels(["Tempo"])
+                .accessibilityAction(named: "Tap tempo") { tapTempo() }   // VoiceOver keeps tap-tempo
             Text(tempoSubtitle)
                 .font(.subheadline)
                 .lineLimit(1)
@@ -362,23 +609,7 @@ struct ContentView: View {
         .frame(maxWidth: .infinity)
         .background(card)
         .overlay(alignment: .topTrailing) { detectButton.padding(12) }
-        .overlay(alignment: .topLeading) { trainerButton.padding(12) }
-    }
-
-    /// Toggle the speed trainer (auto tempo climb). Configured in the Help sheet.
-    private var trainerButton: some View {
-        Button {
-            metronome.toggleSpeedTrainer()
-            haptic.impactOccurred(intensity: 0.5)
-        } label: {
-            Image(systemName: metronome.speedTrainerOn
-                  ? "chart.line.uptrend.xyaxis.circle.fill"
-                  : "chart.line.uptrend.xyaxis.circle")
-                .font(.title3)
-                .foregroundStyle(metronome.speedTrainerOn ? brass : .secondary)
-        }
-        .accessibilityLabel(metronome.speedTrainerOn ? "Stop speed trainer" : "Start speed trainer")
-        .accessibilityInputLabels(["Speed trainer", "Trainer"])
+        .coachAnchor("tempo")
     }
 
     private var detectButton: some View {
@@ -406,7 +637,11 @@ struct ContentView: View {
         case .result(let b): return "Detected \(b) BPM"
         case .failed: return "Couldn't detect — try again"
         case .denied: return "Mic blocked — enable in Settings"
-        case .idle: return "\(MetronomeEngine.tempoName(for: metronome.bpm)) · BPM"
+        // Show whichever representation the big display isn't showing, so the BPM
+        // number is always visible somewhere.
+        case .idle: return tempoAsNumber
+            ? MetronomeEngine.tempoName(for: metronome.bpm)
+            : "\(metronome.bpm) BPM"
         }
     }
 
@@ -423,18 +658,13 @@ struct ContentView: View {
                     metronome.setSubdivision(opt.value)
                     haptic.impactOccurred(intensity: 0.5)
                 } label: {
-                    VStack(spacing: 6) {
-                        SegmentedRing(segments: opt.seg,
-                                      color: selected ? brass : Color(.systemGray3))
-                            .frame(width: 34, height: 34)
-                        Text(opt.label)
-                            .font(.caption2.weight(selected ? .bold : .regular))
-                            .foregroundStyle(selected ? Color.primary : .secondary)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 10)
-                    .background(RoundedRectangle(cornerRadius: 12)
-                        .fill(selected ? brass.opacity(0.14) : .clear))
+                    SegmentedRing(segments: opt.seg,
+                                  color: selected ? brass : Color(.systemGray3))
+                        .frame(width: 40, height: 40)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 12)
+                        .background(RoundedRectangle(cornerRadius: 12)
+                            .fill(selected ? brass.opacity(0.14) : .clear))
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("\(opt.voice) notes")
@@ -445,49 +675,47 @@ struct ContentView: View {
         .padding(10)
         .frame(maxWidth: .infinity)
         .background(card)
+        .coachAnchor("sub")
     }
 
     // MARK: Voice status + help
 
+    /// A slim, elegant voice strip: a small live waveform + one line that reads
+    /// "Listening…" (or the last command in gold), with the help button trailing.
     private var voiceCard: some View {
-        HStack(spacing: 12) {
-            VStack(alignment: .leading, spacing: 6) {
-                Text(voice.isListening ? "Listening" : "Voice control off")
-                    .font(.title3.weight(.bold))
-                    .foregroundStyle(voice.isListening ? brass : .primary)
-                if voice.isListening {
-                    // Always-on live feedback (waveform reacts to your voice) +
-                    // the command that was recognized.
-                    HStack(spacing: 12) {
-                        voiceWaveform.frame(width: 64, height: 20)
-                        Text(lastCommandText.isEmpty ? "Say a command…" : lastCommandText)
-                            .font(.subheadline.weight(lastCommandText.isEmpty ? .regular : .semibold))
-                            .foregroundStyle(lastCommandText.isEmpty ? .secondary : brass)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.7)
-                    }
-                } else {
-                    Text(micMessage)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(2)
-                }
+        HStack(spacing: 10) {
+            if voice.isListening {
+                voiceWaveform.frame(width: 40, height: 16)
+            } else {
+                Image(systemName: "mic.slash.fill")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .accessibilityHidden(true)
             }
+            Text(voice.isListening
+                 ? (lastCommandText.isEmpty ? "Listening…" : lastCommandText)
+                 : micMessage)
+                .font(.subheadline.weight(voice.isListening && !lastCommandText.isEmpty ? .semibold : .regular))
+                .foregroundStyle(voice.isListening
+                                 ? (lastCommandText.isEmpty ? Color.secondary : brass)
+                                 : .secondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
             Spacer(minLength: 0)
-            Button {
-                showHelp()
-            } label: {
+            Button { showHelp() } label: {
                 Image(systemName: "questionmark.circle.fill")
-                    .font(.title2)
+                    .font(.title3)
                     .foregroundStyle(.secondary)
             }
-            .accessibilityLabel("Voice commands")
-            .accessibilityInputLabels(["Voice commands", "Help", "Commands"])
+            .accessibilityLabel("Help")
+            .accessibilityInputLabels(["Help", "Tips", "Voice commands"])
             .popoverTip(HelpVoiceTip())
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(card)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 11)
+        .frame(maxWidth: .infinity)
+        .background(card)          // same rounded-rectangle shape as the other cards
+        .coachAnchor("voice")
     }
 
     private var voiceWaveform: some View {
@@ -509,8 +737,13 @@ struct ContentView: View {
     private var transportBar: some View {
         HStack(spacing: 12) {
             Button { voice.toggle() } label: {
-                transportLabel(voice.isListening ? "Mute" : "Listen",
-                               icon: voice.isListening ? "mic.fill" : "mic",
+                // When listening, this is the Mute control (speaker symbol). As each
+                // command lands, its name flashes here for a moment, then it settles
+                // back to "Mute" — press again to toggle listening.
+                let flashing = flashingCommand && voice.isListening && !lastCommandText.isEmpty
+                transportLabel(flashing ? lastCommandText : (voice.isListening ? "Mute" : "Listen"),
+                               icon: flashing ? "checkmark.circle.fill"
+                                     : (voice.isListening ? "speaker.wave.2.fill" : "mic"),
                                color: voice.isListening ? brass : .secondary,
                                filled: false)
                     .overlay {
@@ -542,12 +775,15 @@ struct ContentView: View {
                 ? ["Stop", "Stop metronome", "Pause"]
                 : ["Start", "Start metronome", "Play"])
             .popoverTip(VoiceControlTip())   // first-run guidance for Voice Control users
+            .coachAnchor("start")
         }
     }
 
     private func transportLabel(_ title: String, icon: String, color: Color, filled: Bool) -> some View {
         Label(title, systemImage: icon)
             .font(.headline)
+            .lineLimit(1)
+            .minimumScaleFactor(0.7)   // a flashed command name may be a touch longer
             .foregroundStyle(filled ? Color.white : color)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 15)
@@ -555,6 +791,83 @@ struct ContentView: View {
                 .fill(filled ? color : color.opacity(0.15)))
             .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .stroke(color.opacity(filled ? 0 : 0.35), lineWidth: 1.5))
+    }
+
+    // MARK: Help marks ("help" → highlight every on-screen control + its command)
+
+    /// The voice phrase shown beside each highlighted control. Only controls that are
+    /// actually on screen (have a captured anchor) get a mark, so it always matches
+    /// the current screen.
+    private func helpPhrase(for id: String) -> String {
+        switch id {
+        case "beat":  return "\u{201C}bounce\u{201D} / \u{201C}orbit\u{201D}"
+        case "tempo": return "\u{201C}faster\u{201D} · \u{201C}tempo 120\u{201D}"
+        case "sub":   return "\u{201C}quarter\u{201D} · \u{201C}eighth\u{201D} · \u{201C}triplet\u{201D} · \u{201C}sixteenth\u{201D}"
+        case "voice": return "\u{201C}help\u{201D} · \u{201C}close\u{201D}"
+        case "start": return metronome.isPlaying ? "\u{201C}stop\u{201D}" : "\u{201C}start\u{201D}"
+        default:      return ""
+        }
+    }
+
+    private func helpMarksOverlay(_ anchors: [String: Anchor<CGRect>], _ proxy: GeometryProxy) -> some View {
+        let ids = ["beat", "tempo", "sub", "voice", "start"].filter { anchors[$0] != nil }
+        return ZStack(alignment: .topLeading) {
+            Color.black.opacity(0.6).ignoresSafeArea()
+                .contentShape(Rectangle())
+                .onTapGesture { dismissHelpMarks() }
+                .accessibilityLabel("Dismiss help")
+                .accessibilityAction { dismissHelpMarks() }
+            // A ring + a "say …" pill on every visible control. The pill sits at the
+            // centre of its own control, so pills never overlap each other (each stays
+            // within its control's bounds).
+            ForEach(ids, id: \.self) { id in
+                let rect = proxy[anchors[id]!]
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .stroke(brass, lineWidth: 2.5)
+                    .frame(width: rect.width, height: rect.height)
+                    .position(x: rect.midX, y: rect.midY)
+                    .allowsHitTesting(false)
+                helpPill(helpPhrase(for: id))
+                    .frame(maxWidth: max(140, rect.width - 24))
+                    .fixedSize(horizontal: false, vertical: true)
+                    .position(x: rect.midX, y: rect.midY)
+            }
+            // Persistent instructions + escape hatches, pinned near the TOP edge.
+            VStack {
+                HStack(spacing: 12) {
+                    Label("Say \u{201C}close\u{201D} or tap to dismiss", systemImage: "xmark.circle")
+                        .font(.footnote.weight(.medium)).foregroundStyle(.white)
+                        .lineLimit(1).minimumScaleFactor(0.8)
+                    Spacer(minLength: 8)
+                    Button { dismissHelpMarks(); showCommands = true } label: {
+                        Text("All commands")
+                            .font(.footnote.weight(.bold))
+                            .foregroundStyle(.black)
+                            .padding(.horizontal, 12).padding(.vertical, 7)
+                            .background(Capsule().fill(brass))
+                    }
+                }
+                .padding(.horizontal, 16).padding(.vertical, 10)
+                .background(RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .fill(Color.black.opacity(0.45)))
+                .padding(.horizontal, 16)
+                .padding(.top, 52)   // clear the status bar / notch
+                Spacer()
+            }
+        }
+    }
+
+    /// A small "say …" callout tag placed next to a highlighted control.
+    private func helpPill(_ phrase: String) -> some View {
+        VStack(alignment: .leading, spacing: 1) {
+            Text("say").font(.caption2.weight(.bold)).foregroundStyle(brass)
+            Text(phrase).font(.footnote.weight(.semibold)).foregroundStyle(.primary)
+        }
+        .padding(.horizontal, 12).padding(.vertical, 8)
+        .background(RoundedRectangle(cornerRadius: 12, style: .continuous)
+            .fill(Color(.systemBackground))
+            .shadow(color: .black.opacity(0.3), radius: 8, y: 2))
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: Commands sheet
@@ -576,12 +889,28 @@ struct ContentView: View {
                     } header: {
                         Text("Accessibility")
                     }
-                    Section("How to use") {
-                        usageRow("mic.fill", "Open", "Say \u{201C}help\u{201D} or tap the ? button.")
+                    Section {
+                        usageRow("circle.grid.3x3", "Set beats", "Tap the dots to choose the time signature.")
+                        usageRow("hand.tap", "Tap tempo", "Tap the big BPM number in rhythm to set the tempo.")
+                        usageRow("slider.horizontal.3", "Tempo", "Drag the tempo slider, or tap the − / + buttons.")
+                        usageRow("speaker.wave.2.fill", "Volume", "Say \u{201C}louder\u{201D} / \u{201C}quieter\u{201D} / \u{201C}mute\u{201D}, or \u{201C}volume 60\u{201D}.")
+                        usageRow("music.note", "Subdivision", "Tap 1/4, 1/8, Trip, or 1/16.")
+                        usageRow("circle.circle", "Switch view", "Tap the view icon (top-right of the beat card) — bounce ↔ orbit.")
+                        usageRow("waveform.badge.magnifyingglass", "Detect tempo", "Tap the wave icon (top-right of the tempo card) to detect from music.")
+                        usageRow("chart.line.uptrend.xyaxis", "Practice mode", "Open it from Beat view below, or say \u{201C}practice\u{201D}.")
+                        usageRow("play.fill", "Play", "Tap Start / Stop at the bottom.")
+                        usageRow("mic.fill", "Voice", "Tap Listen to turn voice control on or off.")
+                    } header: {
+                        Text("On-screen")
+                    } footer: {
+                        Text("Everything here also works by voice — see the commands below.")
+                    }
+                    .id(helpSections[0])
+                    Section("Help navigation") {
+                        usageRow("questionmark.circle", "Open", "Say \u{201C}help\u{201D} or tap the ? button.")
                         usageRow("xmark.circle", "Close", "Say \u{201C}close\u{201D} / \u{201C}done\u{201D}, or tap Done.")
                         usageRow("hand.draw", "Scroll", "Say \u{201C}scroll down\u{201D} / \u{201C}scroll up\u{201D}, or swipe.")
                     }
-                    .id(helpSections[0])
                     Section("Playback") {
                         commandRow("\"start\" / \"stop\"", "play / pause")
                     }
@@ -591,21 +920,25 @@ struct ContentView: View {
                         commandRow("\"up\" / \"down\"", "±1 BPM")
                         commandRow("\"tempo 120\"", "set value")
                         commandRow("\"double\" / \"half\"", "×2 / ÷2")
-                        commandRow("\"trainer\"", "auto speed-up on/off")
+                        commandRow("\"three beats\"", "set time signature")
                     }
                     .id(helpSections[2])
-                    Section {
-                        Toggle("Speed trainer", isOn: Binding(
-                            get: { metronome.speedTrainerOn },
-                            set: { metronome.setSpeedTrainer($0) }))
-                            .tint(brass)
-                        Stepper("Add \(metronome.trainerStep) BPM", value: $metronome.trainerStep, in: 1...20)
-                        Stepper("Every \(metronome.trainerBars) bars", value: $metronome.trainerBars, in: 1...16)
-                        Stepper("Up to \(metronome.trainerTarget) BPM", value: $metronome.trainerTarget, in: 40...260, step: 5)
-                    } header: {
-                        Text("Speed trainer")
-                    } footer: {
-                        Text("Raises the tempo automatically every few bars while you play — for gradually pushing a passage faster. Stops at the target.")
+                    Section("Volume") {
+                        commandRow("\"louder\" / \"quieter\"", "±10%")
+                        commandRow("\"volume 60\"", "set percent")
+                        commandRow("\"mute\"", "silence the click")
+                    }
+                    Section("Beat view") {
+                        commandRow("\"bounce\" / \"orbit\"", "switch visualization")
+                        commandRow("\"practice\"", "open practice mode")
+                        Button {
+                            openPractice()
+                        } label: {
+                            Label("Open practice mode", systemImage: "chart.line.uptrend.xyaxis")
+                                .font(.subheadline.weight(.semibold))
+                                .foregroundStyle(brass)
+                        }
+                        .accessibilityInputLabels(["Practice mode", "Open practice"])
                     }
                     Section("Subdivision") {
                         commandRow("\"quarter\"", "1/4 notes")
@@ -620,7 +953,7 @@ struct ContentView: View {
                     .id(helpSections[4])
                     Section("Scrolling") {
                         commandRow("\"scroll down\" / \"scroll up\"", "move this list")
-                        commandRow("\"help\"", "show this list")
+                        commandRow("\"help\"", "list the commands you can say")
                         commandRow("\"done\" / \"close\"", "close a panel")
                     }
                     .id(helpSections[5])
@@ -650,6 +983,37 @@ struct ContentView: View {
             }
         }
         .accessibilityElement(children: .combine)
+    }
+
+    // MARK: Practice mode (speed trainer) modal
+
+    /// Practice mode as its own modal (opened by the "practice" command or a Help
+    /// launcher) — replaces the old always-on tempo-card button.
+    private var trainerSheet: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    Toggle("Practice mode", isOn: Binding(
+                        get: { metronome.speedTrainerOn },
+                        set: { metronome.setSpeedTrainer($0) }))
+                        .tint(brass)
+                        .accessibilityInputLabels(["Practice mode", "Practice", "Trainer"])
+                    Stepper("Add \(metronome.trainerStep) BPM", value: $metronome.trainerStep, in: 1...20)
+                    Stepper("Every \(metronome.trainerBars) bars", value: $metronome.trainerBars, in: 1...16)
+                    Stepper("Up to \(metronome.trainerTarget) BPM", value: $metronome.trainerTarget, in: 40...260, step: 5)
+                } footer: {
+                    Text("Raises the tempo automatically every few bars while you play — for gradually pushing a passage faster. Stops at the target. Say \u{201C}practice\u{201D} anytime to open this.")
+                }
+            }
+            .navigationTitle("Practice")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { showTrainer = false }
+                }
+            }
+        }
+        .presentationDetents([.medium])
     }
 
     // MARK: Tuner sheet
@@ -777,6 +1141,22 @@ struct ContentView: View {
                 set: { metronome.bpm = Int($0) })
     }
 
+    /// Tap-tempo: tapping the big BPM number in rhythm sets the tempo from the
+    /// average gap between taps. A long pause (>2s) starts a fresh measurement.
+    /// Uses the monotonic uptime clock so it's immune to wall-clock changes.
+    private func tapTempo() {
+        let now = ProcessInfo.processInfo.systemUptime
+        if let last = tapTimes.last, now - last > 2.0 { tapTimes.removeAll() }
+        tapTimes.append(now)
+        if tapTimes.count > 6 { tapTimes.removeFirst(tapTimes.count - 6) }
+        haptic.impactOccurred(intensity: 0.5)
+        guard tapTimes.count >= 2 else { return }
+        let gaps = zip(tapTimes.dropFirst(), tapTimes).map { $0 - $1 }
+        let avg = gaps.reduce(0, +) / Double(gaps.count)
+        guard avg > 0 else { return }
+        metronome.setTempo(Int((60.0 / avg).rounded()))
+    }
+
     // MARK: Logic
 
     private var micMessage: String {
@@ -815,6 +1195,8 @@ struct ContentView: View {
     private func closePanels() {
         showCommands = false
         showTuner = false       // the sheet's onDismiss stops the tuner
+        showTrainer = false
+        if showHelpMarks { dismissHelpMarks() }
     }
 
     private func restartMuteCountdown() {
@@ -826,9 +1208,22 @@ struct ContentView: View {
         }
     }
 
+    /// Flash the just-recognized command on the Mute button, then settle back.
+    private func flashCommandBriefly() {
+        flashToken += 1
+        let token = flashToken
+        withAnimation(.easeOut(duration: 0.15)) { flashingCommand = true }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
+            guard flashToken == token else { return }   // a newer command took over
+            withAnimation(.easeInOut(duration: 0.25)) { flashingCommand = false }
+        }
+    }
+
     private func handle(_ cmd: VoiceController.Command) {
         lastCommandText = commandLabel(cmd)
-        FeedbackSound.shared.play()   // brief chime confirming the command landed
+        flashCommandBriefly()         // show it on the Mute button for a moment
+        // "help" just opens the overlay — no confirmation chime (it was stacking up).
+        if cmd != .help { FeedbackSound.shared.play() }
         switch cmd {
         case .start: metronome.start()
         case .stop: metronome.stop()
@@ -840,19 +1235,39 @@ struct ContentView: View {
         case .half: metronome.halfTempo()
         case .setTempo(let v): metronome.setTempo(v)
         case .setSubdivision(let v): metronome.setSubdivision(v)
+        case .setBeats(let n): metronome.setBeatsPerMeasure(n)
+        case .volumeUp: metronome.setVolume(metronome.volume + 0.1)
+        case .volumeDown: metronome.setVolume(metronome.volume - 0.1)
+        case .mute: metronome.setVolume(0)
+        case .setVolume(let p): metronome.setVolume(Float(p) / 100)
+        case .toggleView: vizModeRaw = (vizMode == .bounce ? BeatVizMode.orbit : .bounce).rawValue
+        case .bounceView: vizModeRaw = BeatVizMode.bounce.rawValue
+        case .orbitView: vizModeRaw = BeatVizMode.orbit.rawValue
         case .help: showHelp()
         case .tuner: openTuner()
         case .dismiss: closePanels()
         case .scrollUp: helpIndex = max(0, helpIndex - 1)
         case .scrollDown: helpIndex = min(helpSections.count - 1, helpIndex + 1)
-        case .speedTrainer: metronome.toggleSpeedTrainer()
+        case .practice: openPractice()
         }
     }
 
+    private func openPractice() {
+        showCommands = false
+        showTuner = false
+        showTrainer = true
+    }
+
+    /// "help" pops up the list of commands you can say right now.
     private func showHelp() {
-        helpIndex = 0
-        showCommands = true
+        showTuner = false
+        showTrainer = false
+        withAnimation(.easeOut(duration: 0.2)) { showHelpMarks = true }
         HelpVoiceTip().invalidate(reason: .actionPerformed)
+    }
+
+    private func dismissHelpMarks() {
+        withAnimation(.easeInOut(duration: 0.2)) { showHelpMarks = false }
     }
 
     private func commandLabel(_ cmd: VoiceController.Command) -> String {
@@ -867,17 +1282,26 @@ struct ContentView: View {
         case .half: return "Half ÷2"
         case .setTempo(let v): return "Tempo \(v)"
         case .setSubdivision(let v): return MetronomeEngine.subdivisionName(for: v)
+        case .setBeats(let n): return "\(n) beats"
+        case .volumeUp: return "Volume up"
+        case .volumeDown: return "Volume down"
+        case .mute: return "Mute"
+        case .setVolume(let p): return "Volume \(p)%"
+        case .toggleView: return "Switch view"
+        case .bounceView: return "Bounce view"
+        case .orbitView: return "Orbit view"
         case .help: return "Help"
         case .tuner: return "Tuner"
         case .dismiss: return "Close"
         case .scrollUp: return "Scroll up"
         case .scrollDown: return "Scroll down"
-        case .speedTrainer: return "Speed trainer"
+        case .practice: return "Practice"
         }
     }
 
     private func pulseBeat(_ beat: Int) {
         currentBeat = beat
+        beatAnchor = Date()          // anchor the smooth viz interpolation to this beat
         haptic.impactOccurred(intensity: beat == 0 ? 1.0 : 0.6)
         // Reduce Motion: skip the bounce — the lit dot still marks the beat.
         guard !reduceMotion else { return }
@@ -888,10 +1312,31 @@ struct ContentView: View {
     }
 }
 
+/// The two beat-visualization styles the user can switch between.
+enum BeatVizMode: String {
+    case bounce   // a ball riding up/down at constant speed
+    case orbit    // a dot circling a ring of beat markers
+}
+
+/// Captures the bounds of every control tagged with `.coachAnchor(id)` so the "help"
+/// overlay can ring it and label it with a voice command — all at once.
+struct CoachAnchorKey: PreferenceKey {
+    static var defaultValue: [String: Anchor<CGRect>] = [:]
+    static func reduce(value: inout [String: Anchor<CGRect>], nextValue: () -> [String: Anchor<CGRect>]) {
+        value.merge(nextValue()) { $1 }
+    }
+}
+
+extension View {
+    func coachAnchor(_ id: String) -> some View {
+        anchorPreference(key: CoachAnchorKey.self, value: .bounds) { [id: $0] }
+    }
+}
+
 /// One-time hint that the voice "help" command exists.
 struct HelpVoiceTip: Tip {
-    var title: Text { Text("See every command") }
-    var message: Text? { Text("Say \u{201C}help\u{201D} anytime — or tap here — to view all voice commands.") }
+    var title: Text { Text("Forget a command?") }
+    var message: Text? { Text("Say \u{201C}help\u{201D} anytime — or tap here — to see every command you can say, then \u{201C}close\u{201D} to dismiss.") }
     var image: Image? { Image(systemName: "questionmark.circle.fill") }
 }
 

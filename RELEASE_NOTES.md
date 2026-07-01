@@ -1,5 +1,55 @@
 # Release Notes — Not My Tempo
 
+## 1.0.2
+
+이번 업데이트는 **비트 시각화와 핸즈프리 조작**을 대폭 개선했습니다. 진자를 두 가지
+모드로 새로 만들고, 거의 모든 기능을 음성으로 제어할 수 있게 했습니다.
+
+This update reimagines the **beat visualization and hands-free control** — two new
+pendulum modes, plus voice control for nearly everything.
+
+### App Store (한국어)
+
+- 두 가지 진자 모드: 위아래로 등속 왕복하는 **진자(파형)** 와 원을 도는 **오빗(원형)**. 탭 또는 음성으로 전환합니다.
+- 분할(1/8·트리플렛·1/16)을 진자가 위·아래 지점을 등속으로 왕복하며 타격해 시각적으로 보여줍니다.
+- 재생을 시작하면 화면이 **진자와 템포만 남는 집중(퍼포먼스) 모드**로 전환되고, 진자가 커집니다.
+- 음성 명령을 대폭 확장했습니다 — 볼륨("louder"/"quieter"/"mute"), 박자수("three beats"), 화면 전환("bounce"/"orbit"), 연습 모드("practice").
+- "help"라고 하면 지금 화면에서 조작할 수 있는 **모든 컨트롤이 한 번에 강조**되고, 각 옆에 말할 명령이 표시됩니다.
+- 템포를 이탈리아어 빠르기말(Largo·Moderato…)로 표시하고, 탭하면 BPM 숫자로 바뀝니다.
+- 명령을 인식하면 버튼에 인식된 명령이 잠깐 표시됩니다.
+- 연습 중 화면이 꺼지지 않도록 했고, 색상을 더 또렷하게 다듬었습니다.
+
+### App Store (English)
+
+- Two pendulum modes: a constant-speed **bounce (waveform)** and an **orbit (circular)** dot. Switch by tap or voice.
+- Subdivisions (1/8, triplets, 1/16) are shown by the ball striking fixed top/bottom marks at a steady pace.
+- Starting playback switches to a **focused performance view — just the pendulum and tempo** — and the pendulum grows.
+- Greatly expanded voice control — volume ("louder"/"quieter"/"mute"), time signature ("three beats"), view ("bounce"/"orbit"), and practice mode ("practice").
+- Say "help" to **highlight every control on screen at once**, each tagged with the command that drives it.
+- Tempo shows as an Italian term (Largo, Moderato…); tap to flip to the BPM number.
+- Recognized commands flash on the button for a moment.
+- The screen no longer sleeps while playing, and colors are crisper.
+
+### Details
+
+**Beat visualization**
+- New **bounce** and **orbit** modes (choice persisted), driven by a continuous phase interpolated from the audio-accurate beat callbacks for smooth, constant-velocity motion.
+- Subdivision is visualized by the active beat's ball swinging to strike fixed top/bottom hit-markers (1/8 = top & bottom, 1/16 = two round-trips); each marker flashes on contact. Orbit shows subdivision minor ticks.
+- Smoother beat hand-off (idle circles wait on the top line — no position jump; brightness/scale cross-fade), larger pendulum, and a more saturated gold / vivid downbeat red.
+
+**Performance view**
+- On play, the setup cards fade out and the beat area grows so only the pendulum and tempo remain; stopping restores the full layout.
+
+**Voice & help**
+- New commands: `louder` / `quieter` / `mute` / `volume 60`, `three beats`, `bounce` / `orbit`, and `practice`.
+- Help redesigned as **all-at-once coach marks** — every on-screen control is ringed and tagged with its voice command (via anchor preferences); the full command & settings sheet sits behind an "All commands" button.
+- Listen/Mute button shows a speaker symbol and briefly flashes the recognized command; the voice status is now a slim strip.
+
+**Other**
+- Practice (speed trainer) moved into its own modal.
+- Tempo term ↔ BPM tap toggle; screen stays awake while playing; the volume slider was removed (control it by voice).
+- The app is now English-only.
+
 ## 1.0.1
 
 이번 업데이트는 **접근성**에 집중했습니다. 눈이 보이지 않거나 손을 쓰기 어려운

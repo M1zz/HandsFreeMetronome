@@ -1,5 +1,8 @@
 import Foundation
 import AVFoundation
+import os
+
+private let engineLog = Logger(subsystem: "com.handsfree.metronome", category: "engine")
 
 /// Sample-accurate metronome driven by AVAudioEngine.
 /// Generates a short click programmatically — no audio assets required.
@@ -33,6 +36,20 @@ final class MetronomeEngine: ObservableObject {
         }
     }
 
+    /// Output level for the click, 0…1. Bound to the volume slider; applied straight
+    /// to the engine's main mixer so it takes effect immediately, even mid-play.
+    /// Do not re-assign inside didSet (it is bound to a Slider) — clamp in the setter.
+    @Published var volume: Float = 1.0 {
+        didSet {
+            UserDefaults.standard.set(volume, forKey: Self.volumeKey)
+            engine.mainMixerNode.outputVolume = volume
+        }
+    }
+
+    /// The largest time-signature numerator the app supports. Kept here so the UI and
+    /// the engine agree on the same ceiling (the dot grid lays out up to this many).
+    static let maxBeatsPerMeasure = 8
+
     // MARK: Speed trainer — automatically climb the tempo as you practise, so you
     // can drill a passage a little faster every few bars without touching anything.
     @Published private(set) var speedTrainerOn = false
@@ -51,6 +68,7 @@ final class MetronomeEngine: ObservableObject {
     private static let bpmKey = "metronome.bpm"
     private static let subdivisionKey = "metronome.subdivision"
     private static let beatsKey = "metronome.beatsPerMeasure"
+    private static let volumeKey = "metronome.volume"
     private static let trainerStepKey = "metronome.trainerStep"
     private static let trainerBarsKey = "metronome.trainerBars"
     private static let trainerTargetKey = "metronome.trainerTarget"
@@ -82,7 +100,10 @@ final class MetronomeEngine: ObservableObject {
             subdivision = min(4, max(1, defaults.integer(forKey: Self.subdivisionKey)))
         }
         if defaults.object(forKey: Self.beatsKey) != nil {
-            beatsPerMeasure = min(12, max(1, defaults.integer(forKey: Self.beatsKey)))
+            beatsPerMeasure = min(Self.maxBeatsPerMeasure, max(1, defaults.integer(forKey: Self.beatsKey)))
+        }
+        if defaults.object(forKey: Self.volumeKey) != nil {
+            volume = min(1, max(0, defaults.float(forKey: Self.volumeKey)))
         }
         if defaults.object(forKey: Self.trainerStepKey) != nil {
             trainerStep = min(20, max(1, defaults.integer(forKey: Self.trainerStepKey)))
@@ -100,16 +121,22 @@ final class MetronomeEngine: ObservableObject {
         subClick = makeClick(freq: 1000, volume: 0.7)
         engine.attach(player)
         engine.connect(player, to: engine.mainMixerNode, format: accentClick?.format)
-        engine.mainMixerNode.outputVolume = 1.0   // drive the output at full level
+        engine.mainMixerNode.outputVolume = volume   // honour the saved level
     }
 
     private func configureSession() {
         let session = AVAudioSession.sharedInstance()
         // .playAndRecord lets the click coexist with speech recognition.
-        try? session.setCategory(.playAndRecord,
-                                 mode: .default,
-                                 options: [.mixWithOthers, .defaultToSpeaker, .allowBluetooth])
-        try? session.setActive(true)
+        do {
+            try session.setCategory(.playAndRecord,
+                                    mode: .default,
+                                    options: [.mixWithOthers, .defaultToSpeaker, .allowBluetooth])
+            try session.setActive(true)
+        } catch {
+            // Non-fatal: the click may be quieter or route oddly, but the app still
+            // runs. Surface it in the log so a silent-metronome report is diagnosable.
+            engineLog.error("Audio session setup failed: \(error.localizedDescription, privacy: .public)")
+        }
     }
 
     /// A clean pitched click: a pure sine with a smooth attack and a decay that
@@ -140,7 +167,16 @@ final class MetronomeEngine: ObservableObject {
 
     func start() {
         guard !isPlaying else { return }
-        if !engine.isRunning { try? engine.start() }
+        if !engine.isRunning {
+            do {
+                try engine.start()
+            } catch {
+                // The graph couldn't start (e.g. an interruption is in flight).
+                // Bail cleanly rather than flipping to a "playing" state with no sound.
+                engineLog.error("Audio engine start failed: \(error.localizedDescription, privacy: .public)")
+                return
+            }
+        }
         player.play()
         isPlaying = true
         tick = 0
@@ -234,7 +270,8 @@ final class MetronomeEngine: ObservableObject {
     func doubleTempo() { bpm = clampBPM(bpm * 2) }
     func halfTempo() { bpm = clampBPM(bpm / 2) }
     func setSubdivision(_ value: Int) { subdivision = min(4, max(1, value)) }
-    func setBeatsPerMeasure(_ n: Int) { beatsPerMeasure = min(12, max(1, n)) }
+    func setBeatsPerMeasure(_ n: Int) { beatsPerMeasure = min(Self.maxBeatsPerMeasure, max(1, n)) }
+    func setVolume(_ value: Float) { volume = min(1, max(0, value)) }
 
     private func clampBPM(_ value: Int) -> Int { min(260, max(30, value)) }
 

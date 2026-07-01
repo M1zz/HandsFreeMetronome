@@ -25,7 +25,11 @@ final class VoiceController: ObservableObject {
         case start, stop, faster, slower, up, down, double, half
         case setTempo(Int)
         case setSubdivision(Int) // 1 quarter, 2 eighth, 3 triplet, 4 sixteenth
-        case help, tuner, dismiss, scrollUp, scrollDown, speedTrainer
+        case setBeats(Int)       // time-signature numerator, 1…8
+        case volumeUp, volumeDown, mute
+        case setVolume(Int)      // 0…100 percent
+        case toggleView, bounceView, orbitView   // beat visualization
+        case help, tuner, dismiss, scrollUp, scrollDown, practice
     }
 
     /// Mic buffers, broadcast so features like the tuner can share the input
@@ -223,8 +227,22 @@ final class VoiceController: ObservableObject {
     private func command(in text: String) -> Command? {
         if contains(text, ["help"]) { return .help }
         if contains(text, ["tune", "tuner"]) { return .tuner }
-        // Toggle the speed trainer (auto tempo climb). Checked before "up"/numbers.
-        if contains(text, ["trainer", "increase"]) { return .speedTrainer }
+        // Open the practice-mode modal (auto tempo climb). Checked before "up"/numbers.
+        if contains(text, ["practice", "trainer"]) { return .practice }
+        // Beat visualization. Specific styles before the generic "view" toggle.
+        if contains(text, ["orbit", "circle", "circular"]) { return .orbitView }
+        if contains(text, ["bounce", "vertical"]) { return .bounceView }
+        if contains(text, ["switch view", "change view", "view", "visual"]) { return .toggleView }
+        // Volume. "volume 60" sets a percent; louder/quieter nudge; mute silences.
+        if contains(text, ["mute", "silent", "silence"]) { return .mute }
+        if contains(text, ["volume", "louder", "quieter", "softer"]) {
+            if contains(text, ["volume"]), let n = firstNumber(in: text) { return .setVolume(n) }
+            if contains(text, ["louder"]) || (contains(text, ["volume"]) && contains(text, ["up"])) { return .volumeUp }
+            if contains(text, ["quieter", "softer"]) || (contains(text, ["volume"]) && contains(text, ["down"])) { return .volumeDown }
+        }
+        // Time signature — "three beats", "4 beats". Requires the word "beat" so it
+        // never collides with tempo numbers or subdivisions.
+        if contains(text, ["beat"]), let n = beatsCount(in: text) { return .setBeats(n) }
         // Scroll the help list by voice — checked before up/down (tempo) and
         // before close words so "scroll down" doesn't change tempo or close.
         if contains(text, ["scroll"]) {
@@ -246,6 +264,15 @@ final class VoiceController: ObservableObject {
         if contains(text, ["up", "higher"]) { return .up }
         if contains(text, ["down", "lower"]) { return .down }
         if let n = firstNumber(in: text) { return .setTempo(n) }
+        return nil
+    }
+
+    /// A time-signature count (1…8) as a digit or a spelled-out word.
+    private func beatsCount(in text: String) -> Int? {
+        let words: [(String, Int)] = [("one", 1), ("two", 2), ("three", 3), ("four", 4),
+                                      ("five", 5), ("six", 6), ("seven", 7), ("eight", 8)]
+        for (w, n) in words where text.contains(w) { return n }
+        if let r = text.range(of: "[1-8]", options: .regularExpression) { return Int(text[r]) }
         return nil
     }
 
