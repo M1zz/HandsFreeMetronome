@@ -25,7 +25,7 @@ final class VoiceController: ObservableObject {
         case start, stop, faster, slower, up, down, double, half
         case setTempo(Int)
         case setSubdivision(Int) // 1 quarter, 2 eighth, 3 triplet, 4 sixteenth
-        case help, tuner, dismiss, scrollUp, scrollDown
+        case help, tuner, dismiss, scrollUp, scrollDown, speedTrainer
     }
 
     /// Mic buffers, broadcast so features like the tuner can share the input
@@ -223,6 +223,8 @@ final class VoiceController: ObservableObject {
     private func command(in text: String) -> Command? {
         if contains(text, ["help"]) { return .help }
         if contains(text, ["tune", "tuner"]) { return .tuner }
+        // Toggle the speed trainer (auto tempo climb). Checked before "up"/numbers.
+        if contains(text, ["trainer", "increase"]) { return .speedTrainer }
         // Scroll the help list by voice — checked before up/down (tempo) and
         // before close words so "scroll down" doesn't change tempo or close.
         if contains(text, ["scroll"]) {

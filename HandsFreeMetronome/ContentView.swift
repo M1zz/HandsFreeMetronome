@@ -22,6 +22,12 @@ struct ContentView: View {
     // Spoken once, the first time a VoiceOver user opens the app.
     @AppStorage("didIntroduceVoiceOver") private var didIntroduceVoiceOver = false
 
+    // The user relies on iOS system Voice Control. There is no public API to detect
+    // this, so it is a user-declared setting (toggled in the Voice Commands sheet).
+    // When on, we keep our OWN mic off to avoid two speech recognizers fighting over
+    // the input — the user drives every control by its name ("Tap Start", "Tap Faster").
+    @AppStorage("usesVoiceControl") private var usesVoiceControl = false
+
     // Landscape on iPhone reports a compact height → switch to a two-column layout.
     @Environment(\.verticalSizeClass) private var vSizeClass
     // Accessibility preferences we honour throughout the UI.
@@ -69,10 +75,22 @@ struct ContentView: View {
         }
         .onAppear {
             wireUp()
-            // Listen by default; the transport button mutes it.
+            syncTipState()
+            // Listen by default — UNLESS the user relies on iOS Voice Control, in
+            // which case our own mic would fight the system recognizer. They drive
+            // the app by control name ("Tap Start") instead.
             if !didAutoStart {
                 didAutoStart = true
-                if !voice.isListening { voice.toggle() }
+                if !usesVoiceControl && !voice.isListening { voice.toggle() }
+            }
+        }
+        // Turning Voice Control mode on/off flips whether we hold the mic.
+        .onChange(of: usesVoiceControl) { on in
+            AppTips.usesVoiceControl = on
+            if on {
+                voice.stop()                     // release the mic for the system recognizer
+            } else if !voice.isListening {
+                voice.toggle()                   // resume our own listening
             }
         }
         // Let the "tap dots" hint fade away on its own if the user never touches it.
@@ -91,8 +109,16 @@ struct ContentView: View {
         // Also cover the case where VoiceOver is switched on right after launch.
         .onReceive(NotificationCenter.default.publisher(
             for: UIAccessibility.voiceOverStatusDidChangeNotification)) { _ in
+            syncTipState()
             introduceVoiceOverIfNeeded()
         }
+    }
+
+    /// Feed the current accessibility + mode state into TipKit's rule parameters so
+    /// the right first-run tip (mic vs. Voice Control) is eligible.
+    private func syncTipState() {
+        AppTips.usesVoiceControl = usesVoiceControl
+        AppTips.voiceOverRunning = UIAccessibility.isVoiceOverRunning
     }
 
     /// One-time spoken orientation for VoiceOver users: this is a voice-driven
@@ -101,7 +127,14 @@ struct ContentView: View {
     private func introduceVoiceOverIfNeeded() {
         guard UIAccessibility.isVoiceOverRunning, !didIntroduceVoiceOver else { return }
         didIntroduceVoiceOver = true
-        let text = """
+        // In Voice Control mode our own mic is off, so orient the user toward the
+        // "Tap …" command names rather than the app's spoken words.
+        let text = usesVoiceControl ? """
+        Not My Tempo, a hands-free metronome and tuner. \
+        The app's own microphone is off so it doesn't clash with Voice Control. \
+        Say Tap Start or Tap Stop to play, Tap Faster or Tap Slower to change the tempo, \
+        or Tap Tuner to check pitch. Every control also works with VoiceOver gestures.
+        """ : """
         Not My Tempo, a hands-free metronome and tuner. \
         The microphone is already listening, so you can control it by voice. \
         Say start or stop to play, faster or slower to change the tempo, \
@@ -120,8 +153,8 @@ struct ContentView: View {
 
     /// Portrait: a single vertical stack, transport pinned to the bottom.
     private var portraitLayout: some View {
-        VStack(spacing: 12) {
-            beatDots                 // tap to set time signature
+        VStack(spacing: 10) {
+            beatDots                 // tap to set time signature; dots bounce on the beat
             tempoCard
             subdivisionCard
             voiceCard
@@ -137,7 +170,7 @@ struct ContentView: View {
     private var landscapeLayout: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(spacing: 10) {
-                beatDots             // tap to set time signature
+                beatDots             // tap to set time signature; dots bounce on the beat
                 tempoCard
             }
             .frame(maxWidth: .infinity)
@@ -228,7 +261,7 @@ struct ContentView: View {
                 }
             }
         }
-        .frame(height: 64)                 // fixed area → card height never changes;
+        .frame(height: 80)                 // fixed area (with headroom for the bounce)
         .animation(.easeInOut(duration: 0.25), value: shown)  // dots stay vertically centered
         .frame(maxWidth: .infinity)
         .padding(.vertical, 16)
@@ -255,14 +288,24 @@ struct ContentView: View {
 
     private func beatDot(_ i: Int, active: Bool) -> some View {
         let sounding = isActive(i)
+        // While playing, the resting dots sit low and the sounding one rises to the
+        // top — so the wave swings through the full height (top ↔ bottom), not just
+        // upward. Idle (or Reduce Motion): centred, no motion.
+        let lift: CGFloat = (reduceMotion || !metronome.isPlaying) ? 0 : (sounding ? -20 : 20)
         return Circle()
             .fill(active ? dotFill(i) : Color.clear)
             .overlay(Circle().strokeBorder(active ? .clear : Color(.systemGray3), lineWidth: 1.5))
             .frame(width: 24, height: 24)
-            .scaleEffect(sounding && !reduceMotion ? 1.4 : 1.0)   // Reduce Motion: no grow, brightness still marks the beat
+            // As the beat advances the crest travels across the row → stadium wave (파도타기).
+            .offset(y: lift)
+            .scaleEffect(sounding && !reduceMotion ? 1.3 : 1.0)   // Reduce Motion: no grow, brightness still marks the beat
             .shadow(color: sounding ? dotFill(i).opacity(0.6) : .clear, radius: sounding ? 9 : 0)
-            .animation(.easeOut(duration: 0.12), value: currentBeat)
+            // Linear over exactly one beat → constant speed, no spring accel/bounce.
+            // Each beat one dot rises while its predecessor falls, so the crest
+            // glides across at a steady pace (a constant-velocity 파도타기).
+            .animation(.linear(duration: 60.0 / Double(metronome.bpm)), value: currentBeat)
             .animation(.easeOut(duration: 0.2), value: metronome.beatsPerMeasure)
+            .animation(.easeInOut(duration: 0.25), value: metronome.isPlaying)  // settle on start/stop
             .contentShape(Circle())
             .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
             .onTapGesture {
@@ -304,7 +347,7 @@ struct ContentView: View {
                 .font(.subheadline)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
-                .foregroundStyle(detector.isRunning ? brass : .secondary)
+                .foregroundStyle(detector.isRunning || metronome.speedTrainerOn ? brass : .secondary)
             HStack(spacing: 16) {
                 stepButton(systemName: "minus.circle.fill", delta: -1)
                 Slider(value: bpmBinding, in: 30...260, step: 1)
@@ -319,6 +362,23 @@ struct ContentView: View {
         .frame(maxWidth: .infinity)
         .background(card)
         .overlay(alignment: .topTrailing) { detectButton.padding(12) }
+        .overlay(alignment: .topLeading) { trainerButton.padding(12) }
+    }
+
+    /// Toggle the speed trainer (auto tempo climb). Configured in the Help sheet.
+    private var trainerButton: some View {
+        Button {
+            metronome.toggleSpeedTrainer()
+            haptic.impactOccurred(intensity: 0.5)
+        } label: {
+            Image(systemName: metronome.speedTrainerOn
+                  ? "chart.line.uptrend.xyaxis.circle.fill"
+                  : "chart.line.uptrend.xyaxis.circle")
+                .font(.title3)
+                .foregroundStyle(metronome.speedTrainerOn ? brass : .secondary)
+        }
+        .accessibilityLabel(metronome.speedTrainerOn ? "Stop speed trainer" : "Start speed trainer")
+        .accessibilityInputLabels(["Speed trainer", "Trainer"])
     }
 
     private var detectButton: some View {
@@ -336,6 +396,11 @@ struct ContentView: View {
     }
 
     private var tempoSubtitle: String {
+        // Trainer status takes over the subtitle when it's running (and we're not
+        // mid tempo-detection).
+        if metronome.speedTrainerOn, case .idle = detector.state {
+            return "Speed trainer · +\(metronome.trainerStep) every \(metronome.trainerBars) bars → \(metronome.trainerTarget)"
+        }
         switch detector.state {
         case .listening: return "Listening to music… \(Int(detector.progress * 100))%"
         case .result(let b): return "Detected \(b) BPM"
@@ -463,6 +528,7 @@ struct ContentView: View {
             .accessibilityInputLabels(voice.isListening
                 ? ["Mute", "Stop listening"]
                 : ["Listen", "Start listening"])
+            .popoverTip(MicListeningTip())   // first-run guidance for plain mic users
 
             Button { metronome.toggle() } label: {
                 transportLabel(metronome.isPlaying ? "Stop" : "Start",
@@ -475,6 +541,7 @@ struct ContentView: View {
             .accessibilityInputLabels(metronome.isPlaying
                 ? ["Stop", "Stop metronome", "Pause"]
                 : ["Start", "Start metronome", "Play"])
+            .popoverTip(VoiceControlTip())   // first-run guidance for Voice Control users
         }
     }
 
@@ -496,6 +563,19 @@ struct ContentView: View {
         NavigationStack {
             ScrollViewReader { proxy in
                 List {
+                    Section {
+                        Toggle(isOn: $usesVoiceControl) {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("I use iOS Voice Control").font(.subheadline.weight(.semibold))
+                                Text("Turns off this app\u{2019}s mic so the two don\u{2019}t clash. Control it by saying \u{201C}Tap Start\u{201D}, \u{201C}Tap Faster\u{201D}, \u{201C}Tap 3 beats\u{201D}.")
+                                    .font(.footnote).foregroundStyle(.secondary)
+                            }
+                        }
+                        .tint(brass)
+                        .accessibilityHint("Turns off the app's own microphone and drives controls by name")
+                    } header: {
+                        Text("Accessibility")
+                    }
                     Section("How to use") {
                         usageRow("mic.fill", "Open", "Say \u{201C}help\u{201D} or tap the ? button.")
                         usageRow("xmark.circle", "Close", "Say \u{201C}close\u{201D} / \u{201C}done\u{201D}, or tap Done.")
@@ -511,8 +591,22 @@ struct ContentView: View {
                         commandRow("\"up\" / \"down\"", "±1 BPM")
                         commandRow("\"tempo 120\"", "set value")
                         commandRow("\"double\" / \"half\"", "×2 / ÷2")
+                        commandRow("\"trainer\"", "auto speed-up on/off")
                     }
                     .id(helpSections[2])
+                    Section {
+                        Toggle("Speed trainer", isOn: Binding(
+                            get: { metronome.speedTrainerOn },
+                            set: { metronome.setSpeedTrainer($0) }))
+                            .tint(brass)
+                        Stepper("Add \(metronome.trainerStep) BPM", value: $metronome.trainerStep, in: 1...20)
+                        Stepper("Every \(metronome.trainerBars) bars", value: $metronome.trainerBars, in: 1...16)
+                        Stepper("Up to \(metronome.trainerTarget) BPM", value: $metronome.trainerTarget, in: 40...260, step: 5)
+                    } header: {
+                        Text("Speed trainer")
+                    } footer: {
+                        Text("Raises the tempo automatically every few bars while you play — for gradually pushing a passage faster. Stops at the target.")
+                    }
                     Section("Subdivision") {
                         commandRow("\"quarter\"", "1/4 notes")
                         commandRow("\"eighth\"", "1/8 notes")
@@ -751,6 +845,7 @@ struct ContentView: View {
         case .dismiss: closePanels()
         case .scrollUp: helpIndex = max(0, helpIndex - 1)
         case .scrollDown: helpIndex = min(helpSections.count - 1, helpIndex + 1)
+        case .speedTrainer: metronome.toggleSpeedTrainer()
         }
     }
 
@@ -777,6 +872,7 @@ struct ContentView: View {
         case .dismiss: return "Close"
         case .scrollUp: return "Scroll up"
         case .scrollDown: return "Scroll down"
+        case .speedTrainer: return "Speed trainer"
         }
     }
 
@@ -797,6 +893,39 @@ struct HelpVoiceTip: Tip {
     var title: Text { Text("See every command") }
     var message: Text? { Text("Say \u{201C}help\u{201D} anytime — or tap here — to view all voice commands.") }
     var image: Image? { Image(systemName: "questionmark.circle.fill") }
+}
+
+/// Shared TipKit rule inputs. iOS exposes no API to detect system Voice Control,
+/// so `usesVoiceControl` is user-declared (toggle in the Voice Commands sheet);
+/// `voiceOverRunning` mirrors UIAccessibility so tips can defer to VoiceOver.
+enum AppTips {
+    @Parameter static var usesVoiceControl: Bool = false
+    @Parameter static var voiceOverRunning: Bool = false
+}
+
+/// First-run, plain mic users: the app is already listening — just talk to it.
+struct MicListeningTip: Tip {
+    var title: Text { Text("Control it by voice") }
+    var message: Text? {
+        Text("The mic is already listening — say \u{201C}start\u{201D}, \u{201C}faster\u{201D}, or \u{201C}help\u{201D}. Use iOS Voice Control? Open Voice Commands to switch.")
+    }
+    var image: Image? { Image(systemName: "mic.fill") }
+    var rules: [Rule] {
+        #Rule(AppTips.$usesVoiceControl) { $0 == false }
+        #Rule(AppTips.$voiceOverRunning) { $0 == false }
+    }
+}
+
+/// First-run, Voice Control users: our mic is off; drive the app by control name.
+struct VoiceControlTip: Tip {
+    var title: Text { Text("Made for Voice Control") }
+    var message: Text? {
+        Text("The app\u{2019}s own mic is off so it won\u{2019}t clash with Voice Control. Say \u{201C}Tap Start\u{201D}, \u{201C}Tap Faster\u{201D}, or \u{201C}Tap 3 beats\u{201D}.")
+    }
+    var image: Image? { Image(systemName: "waveform") }
+    var rules: [Rule] {
+        #Rule(AppTips.$usesVoiceControl) { $0 == true }
+    }
 }
 
 /// A circle drawn as `segments` equal arcs — visualizes how a beat is divided.

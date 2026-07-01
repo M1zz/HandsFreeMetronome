@@ -33,9 +33,27 @@ final class MetronomeEngine: ObservableObject {
         }
     }
 
+    // MARK: Speed trainer — automatically climb the tempo as you practise, so you
+    // can drill a passage a little faster every few bars without touching anything.
+    @Published private(set) var speedTrainerOn = false
+    @Published var trainerStep = 5 {  // BPM added at each step
+        didSet { UserDefaults.standard.set(trainerStep, forKey: Self.trainerStepKey) }
+    }
+    @Published var trainerBars = 4 {  // measures played between steps
+        didSet { UserDefaults.standard.set(trainerBars, forKey: Self.trainerBarsKey) }
+    }
+    @Published var trainerTarget = 160 {  // stop climbing once we reach this BPM
+        didSet { UserDefaults.standard.set(trainerTarget, forKey: Self.trainerTargetKey) }
+    }
+    /// Measures completed since the last automatic step. Only touched on `timerQueue`.
+    private var measuresSinceStep = 0
+
     private static let bpmKey = "metronome.bpm"
     private static let subdivisionKey = "metronome.subdivision"
     private static let beatsKey = "metronome.beatsPerMeasure"
+    private static let trainerStepKey = "metronome.trainerStep"
+    private static let trainerBarsKey = "metronome.trainerBars"
+    private static let trainerTargetKey = "metronome.trainerTarget"
 
     /// Fires on the main thread on each beat (quarter note), passing the beat's
     /// index within the measure (0 = downbeat). Used to animate the UI.
@@ -66,12 +84,23 @@ final class MetronomeEngine: ObservableObject {
         if defaults.object(forKey: Self.beatsKey) != nil {
             beatsPerMeasure = min(12, max(1, defaults.integer(forKey: Self.beatsKey)))
         }
+        if defaults.object(forKey: Self.trainerStepKey) != nil {
+            trainerStep = min(20, max(1, defaults.integer(forKey: Self.trainerStepKey)))
+        }
+        if defaults.object(forKey: Self.trainerBarsKey) != nil {
+            trainerBars = min(16, max(1, defaults.integer(forKey: Self.trainerBarsKey)))
+        }
+        if defaults.object(forKey: Self.trainerTargetKey) != nil {
+            trainerTarget = clampBPM(defaults.integer(forKey: Self.trainerTargetKey))
+        }
         configureSession()
+        // Clean, pure-tone clicks. Distinct pitches mark accent / beat / subdivision.
         accentClick = makeClick(freq: 2000, volume: 1.0)
-        beatClick = makeClick(freq: 1500, volume: 0.8)
-        subClick = makeClick(freq: 1000, volume: 0.55)
+        beatClick = makeClick(freq: 1500, volume: 0.9)
+        subClick = makeClick(freq: 1000, volume: 0.7)
         engine.attach(player)
         engine.connect(player, to: engine.mainMixerNode, format: accentClick?.format)
+        engine.mainMixerNode.outputVolume = 1.0   // drive the output at full level
     }
 
     private func configureSession() {
@@ -83,17 +112,26 @@ final class MetronomeEngine: ObservableObject {
         try? session.setActive(true)
     }
 
-    /// A short pitched click. Higher freq + louder = stronger accent.
+    /// A clean pitched click: a pure sine with a smooth attack and a decay that
+    /// fully settles to silence inside the buffer. The soft edges are what keep it
+    /// "clean" — an abrupt onset or a tone cut off mid-swing adds an audible pop.
     private func makeClick(freq: Double, volume: Float) -> AVAudioPCMBuffer? {
-        let frames = AVAudioFrameCount(sampleRate * 0.028) // 28 ms click — crisp even for fast 1/16
+        let duration = 0.040                         // 40 ms — room for the tone to die away
+        let frames = AVAudioFrameCount(sampleRate * duration)
         guard let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1),
               let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: frames) else { return nil }
         buffer.frameLength = frames
         let ptr = buffer.floatChannelData![0]
-        for i in 0..<Int(frames) {
+        let n = Int(frames)
+        let attack = 0.0015 * sampleRate             // 1.5 ms fade-in kills the onset click
+        let release = 0.004 * sampleRate             // 4 ms fade-out guarantees a silent tail
+        for i in 0..<n {
             let t = Double(i) / sampleRate
-            let envelope = exp(-t * 70.0)            // fast decay so clicks don't blur together
-            ptr[i] = Float(sin(2 * .pi * freq * t) * envelope) * volume
+            let atk = min(1.0, Double(i) / attack)                 // ramp up
+            let rel = min(1.0, Double(n - i) / release)            // ramp down at the very end
+            let decay = exp(-t * 150.0)                            // near-zero (~0.01) by ~30 ms
+            let sample = sin(2 * .pi * freq * t) * atk * decay * rel
+            ptr[i] = Float(sample) * volume
         }
         return buffer
     }
@@ -159,8 +197,36 @@ final class MetronomeEngine: ObservableObject {
             let beatIndex = pos / sub   // 0..<beatsPerMeasure
             DispatchQueue.main.async { [weak self] in self?.onBeat?(beatIndex) }
         }
+        // Speed trainer: once a whole measure completes, count it; step the tempo
+        // when enough bars have gone by. `tick != 0` skips the very first downbeat.
+        if speedTrainerOn && isDownbeat && tick != 0 {
+            measuresSinceStep += 1
+            if measuresSinceStep >= max(1, trainerBars) {
+                measuresSinceStep = 0
+                DispatchQueue.main.async { [weak self] in self?.applyTrainerStep() }
+            }
+        }
         tick += 1
     }
+
+    /// Raise (or lower) the tempo by one trainer step, stopping at the target.
+    private func applyTrainerStep() {
+        guard speedTrainerOn else { return }
+        let next = clampBPM(bpm + trainerStep)
+        let reached = trainerStep >= 0 ? next >= trainerTarget : next <= trainerTarget
+        if reached {
+            setTempo(trainerTarget)   // land exactly on the goal…
+            speedTrainerOn = false    // …then stop climbing
+        } else {
+            setTempo(next)
+        }
+    }
+
+    func setSpeedTrainer(_ on: Bool) {
+        speedTrainerOn = on
+        timerQueue.async { [weak self] in self?.measuresSinceStep = 0 }
+    }
+    func toggleSpeedTrainer() { setSpeedTrainer(!speedTrainerOn) }
 
     // MARK: Tempo helpers — clamp here so the @Published setters never re-assign.
     func nudge(_ delta: Int) { bpm = clampBPM(bpm + delta) }
