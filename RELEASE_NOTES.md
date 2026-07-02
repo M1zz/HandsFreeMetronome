@@ -1,5 +1,90 @@
 # Release Notes — Not My Tempo
 
+## 1.0.3
+
+이번 업데이트의 핵심은 **마디 전체 악센트 커스터마이징**과 **새로운 비트
+시각화·타이밍 연습**입니다. 마디 안의 모든 클릭을 한 칸씩 설계하고, 새 진자·링
+스윕 뷰로 박을 보고, 클릭에 맞춰 탭하며 타이밍을 연습할 수 있습니다. 보조접근
+(Assistive Access) 지원과 iOS 음성 제어(Voice Control) 공존 모드도 함께
+들어갔습니다.
+
+The headline of this update: **full-measure accent customization** plus **new beat
+visualizations and timing practice** — design every click in the measure, watch the
+beat in the new pendulum and ring-sweep views, and tap along to train your timing.
+Also: Assistive Access support and an iOS Voice Control coexistence mode.
+
+### App Store (한국어)
+
+- 악센트 커스터마이징: 분할 카드를 더블탭하면 마디 전체가 그리드로 펼쳐집니다. 4/4에 1/16이면 16칸 — 칸을 탭할 때마다 고음 → 저음 → 무음(쉼표)으로 순환합니다(예: 삑·비·비·삑, 쉼표 넣기도 가능).
+- 패턴을 이름 붙여 프리셋으로 저장하고 곡마다 불러올 수 있습니다 — 불러오면 박자와 분할도 함께 복원됩니다.
+- 패턴은 박자수×분할 조합별로 자동 저장되어 설정을 바꿔도 유지되고, Reset으로 기본 패턴에 돌아갑니다.
+- 궤도(orbit) 화면의 분할 점이 고음 클릭에서 금색으로 커지고 무음은 흐려져, 듣는 패턴이 눈에도 보입니다.
+- 보조접근(Assistive Access)을 완벽 지원합니다 — 큰 버튼과 핵심 기능만 남긴 단순 화면.
+- iOS 음성 제어를 쓰신다면 앱 마이크를 끄고 "Tap Start"처럼 이름으로 조작하는 공존 모드를 켤 수 있습니다.
+- 타이밍 연습: 궤도 화면에서 클릭에 맞춰 탭해 보세요 — Perfect / Good / Bad 판정과 함께, 돌던 점이 탭한 순간의 자리에 잔상을 남겨 얼마나 빠르거나 늦었는지 눈에 보입니다. 초록·금·빨강 원 카운터가 횟수를 세고, 1/8·1/16에서는 서브클릭 하나하나가 판정 대상입니다.
+- 진자 뷰가 새로워졌습니다: 공이 던져 올린 듯한 중력 곡선으로 움직이고, 소리가 나는 접점의 점선 타깃을 통과하는 순간 팝 하고 터집니다. 빠른 분할에서도 스윙은 눈으로 따라가기 좋은 속도를 유지합니다.
+- 새 링 스윕 뷰: 시계처럼 링이 한 박마다 12시부터 차오르고 박이 울리는 순간 12시에서 터지며, 중앙의 큰 숫자가 박을 카운트합니다. 뷰 버튼(또는 "switch view")으로 진자 → 궤도 → 링 스윕 순환.
+- 박마다 화면 전체가 은은하게 번쩍입니다(다운비트 빨강, 나머지 금색) — 악보를 보면서도 곁눈으로 박이 들어옵니다.
+- 가로모드가 한 화면에 매끄럽게 들어갑니다.
+- 첫 실행 온보딩 팁이 사용 환경(마이크/음성 제어)에 맞춰 표시되고, 숨은 기능들(악센트·빠르기말 전환·뷰 전환·스피드 트레이너·튜너)을 팁 투어가 하나씩 차례로 소개합니다.
+- 템포 감지(음악 듣고 BPM 찾기) 기능은 제거했습니다 — 화면이 더 단순해졌습니다.
+
+### App Store (English)
+
+- Accent customization: double-tap the subdivision card to open the whole measure as a grid. 4/4 with sixteenths → 16 cells; each tap cycles a cell high → low → silent (rests welcome).
+- Save patterns as named presets and recall them per song — a preset restores its meter and subdivision too.
+- Patterns are auto-saved per meter × subdivision combination, and Reset restores the stock pattern.
+- The orbit view now shows the pattern — high clicks appear as larger gold dots, silent ones fade out.
+- Full Assistive Access support — a distilled layout with big, clear controls.
+- Use iOS Voice Control? A coexistence mode turns the app's own mic off so the two recognizers never clash.
+- Timing practice: tap along in orbit view — a Perfect / Good / Bad call flashes, and the travelling dot freezes a ghost right where it was, so you can see how early or late you landed. Green / gold / red bubbles keep count, and with subdivisions every click is a target.
+- The pendulum view is new: the ball arcs like a thrown ball under gravity and pops through a dashed target ring at the exact instant of the click. At fast subdivisions the swing stays at a readable one arc per beat.
+- New ring-sweep view: clock-style — the ring fills once per beat, bursts at 12 o'clock as the click lands, and a big centre number counts the beats. Cycle views with the button or "switch view".
+- A subtle whole-screen flash marks every beat (red on the downbeat, gold elsewhere) — easy to catch in peripheral vision while reading a score.
+- Landscape now fits everything on one screen.
+- First-run tips adapt to how you control the app (mic vs. Voice Control), and a guided tip tour introduces the hidden gems one by one — accents, tempo terms, beat views, the speed trainer, and the tuner.
+- Removed the listen-and-detect-BPM feature for a simpler screen.
+
+### Details
+
+**Accents**
+- The engine keeps a measure-wide level array per (beats × subdivision) combination
+  (up to 8×4 = 32 clicks); every tick is high (1500 Hz), low (1000 Hz), or a silent
+  rest, and the downbeat's extra-high chime (2000 Hz) follows its own cell —
+  nothing is hard-wired.
+- Editor: a step-sequencer grid (one row per beat, one cell per click; tall bar =
+  high, short = low, dashed empty = rest) presented as a sheet; opened by
+  double-tapping the subdivision card, from Help, or via a VoiceOver "Edit
+  accents" action. Reset restores the default; a first-run TipKit tip points out
+  the double-tap.
+- Presets: name and save the current pattern (meter + subdivision + levels,
+  JSON in UserDefaults); applying one switches the metronome to match; delete
+  in place.
+- Patterns persist across launches and are reflected live while playing; the orbit
+  view's minor ticks render the pattern in place (silent rests fade out).
+
+**Accessibility**
+- Assistive Access: full-screen opt-in plus a simplified layout (tempo, Slower /
+  Faster, Start/Stop) when running inside the simplified system experience.
+- Voice Control coexistence: a user toggle releases the app's mic and leans on
+  control names; VoiceOver intro and first-run TipKit tips branch accordingly.
+
+**Beat views & timing**
+- Pendulum: gravity-curve (parabolic) arcs crossing the centre exactly on each
+  click; a dashed target ring at the contact point pops (burst ring + ball scale)
+  on contact, all phase-derived so it never drifts from the audio. Above 1/8 the
+  swing caps at one arc per beat to stay readable; the amplitude adapts to the
+  card height (landscape).
+- Ring sweep: a radial progress ring fills over each beat, bursts at 12 o'clock,
+  and shows a numeric centre count — third stop in the view cycle
+  (bounce → orbit → sweep).
+- Play-along timing: taps are judged against the click grid (within 10% of the
+  click interval = Perfect, 25% = Good); the orbit dot drops a fading ghost at
+  its tap-time position, and per-verdict bubbles tally the run (reset on start).
+  VoiceOver announces each verdict and reads the running score.
+- Whole-screen beat flash (subtle, skipped with Reduce Motion); the landscape
+  layout now flexes so both columns always fit one screen.
+
 ## 1.0.2
 
 이번 업데이트는 **비트 시각화와 핸즈프리 조작**을 대폭 개선했습니다. 진자를 두 가지

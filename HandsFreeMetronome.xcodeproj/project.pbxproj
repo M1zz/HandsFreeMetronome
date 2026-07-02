@@ -13,7 +13,6 @@
 		A1000014 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004 /* VoiceController.swift */; };
 		A1000015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000005 /* Assets.xcassets */; };
 		A1000016 /* Preview Content/Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000006 /* Preview Content/Preview Assets.xcassets */; };
-		A1000098 /* TempoDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000099 /* TempoDetector.swift */; };
 		A1000103 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000102 /* InfoPlist.strings */; };
 		A1000104 /* TunerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000105 /* TunerEngine.swift */; };
 		A1000200 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A1000201 /* Localizable.xcstrings */; };
@@ -28,7 +27,6 @@
 		A1000006 /* Preview Content/Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1000010 /* HandsFreeMetronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsFreeMetronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1000099 /* TempoDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoDetector.swift; sourceTree = "<group>"; };
 		A1000100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1000105 /* TunerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerEngine.swift; sourceTree = "<group>"; };
 		A1000201 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 				A1000002 /* ContentView.swift */,
 				A1000003 /* MetronomeEngine.swift */,
 				A1000004 /* VoiceController.swift */,
-				A1000099 /* TempoDetector.swift */,
 				A1000105 /* TunerEngine.swift */,
 				A1000005 /* Assets.xcassets */,
 				A1000006 /* Preview Content/Preview Assets.xcassets */,
@@ -155,7 +152,6 @@
 				A1000012 /* ContentView.swift in Sources */,
 				A1000013 /* MetronomeEngine.swift in Sources */,
 				A1000014 /* VoiceController.swift in Sources */,
-				A1000098 /* TempoDetector.swift in Sources */,
 				A1000104 /* TunerEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,7 +233,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -269,7 +265,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

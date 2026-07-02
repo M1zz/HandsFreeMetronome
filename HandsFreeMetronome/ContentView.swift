@@ -5,7 +5,6 @@ import TipKit
 struct ContentView: View {
     @StateObject private var metronome = MetronomeEngine()
     @StateObject private var voice = VoiceController()
-    @StateObject private var detector = TempoDetector()
     @StateObject private var tuner = TunerEngine()
 
     @State private var beatScale: CGFloat = 1.0
@@ -13,6 +12,9 @@ struct ContentView: View {
     @State private var showCommands = false
     @State private var showTuner = false
     @State private var showTrainer = false   // practice-mode modal
+    @State private var showAccents = false   // accent-pattern grid modal
+    @State private var showSavePreset = false     // name prompt for a new accent preset
+    @State private var presetNameDraft = ""       // text field backing the prompt
     @State private var showHelpMarks = false   // "help" → quick "what can I say" list
     @State private var hintDismissed = false   // hide "tap dots" after first tap/start
     @State private var didAutoStart = false    // auto-enable listening once on launch
@@ -22,11 +24,28 @@ struct ContentView: View {
     @State private var flashToken = 0           // invalidates stale flash timers
     @State private var helpIndex = 0            // voice-driven scroll position in Help
     @State private var tapTimes: [TimeInterval] = []   // recent taps for tap-tempo
+    @State private var timingVerdict: TimingVerdict?   // orbit tap-accuracy readout
+    @State private var timingToken = 0                 // invalidates stale fade-outs
+    @State private var timingStats = TimingStats()     // running tally of play-along taps
+    @State private var tapGhosts: [TapGhost] = []      // fading rings where taps landed
+    @State private var flashOpacity: Double = 0        // whole-screen beat flash (0…~0.2)
+    @State private var flashIsDownbeat = false         // red flash on beat 1, brass otherwise
     @AppStorage("tempoAsNumber") private var tempoAsNumber = false   // big display: term vs. BPM
     @State private var beatAnchor = Date()   // wall-clock moment the current beat fired
     // Which beat visualization is showing. Persisted so it survives relaunch.
     @AppStorage("beatVizMode") private var vizModeRaw = BeatVizMode.bounce.rawValue
     private let helpSections = ["howto", "playback", "tempo", "subdivision", "tuner", "scrolling"]
+
+    // Feature-discovery tips, surfaced one at a time in a guided order (TipGroup)
+    // so popovers never pile up. Each is dismissed for good once its feature is
+    // used, which advances the tour to the next stop.
+    @State private var featureTips = TipGroup(.ordered) {
+        AccentGridTip()
+        TempoDisplayTip()
+        VizModeTip()
+        PracticeTip()
+        TunerTip()
+    }
 
     // Spoken once, the first time a VoiceOver user opens the app.
     @AppStorage("didIntroduceVoiceOver") private var didIntroduceVoiceOver = false
@@ -63,6 +82,15 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color(.systemGroupedBackground).ignoresSafeArea()
+            // Whole-screen beat flash: peripheral vision is far more sensitive to
+            // brightness than to position, so a faint full-bleed pulse keeps the
+            // beat readable while the eyes are on sheet music. Kept subtle (≤0.2
+            // opacity) to stay comfortable at high tempos.
+            (flashIsDownbeat ? beatRed : brass)
+                .opacity(flashOpacity)
+                .ignoresSafeArea()
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
 
             if assistiveAccess {
                 assistiveAccessLayout
@@ -85,12 +113,12 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $showCommands) { commandsSheet }
         .sheet(isPresented: $showTuner, onDismiss: { tuner.stop() }) { tunerSheet }
         .sheet(isPresented: $showTrainer) { trainerSheet }
-        .onChange(of: detector.state) { newState in
-            if case .result(let bpm) = newState { metronome.setTempo(bpm) }
-        }
+        .sheet(isPresented: $showAccents) { accentsSheet }
         .onChange(of: metronome.isPlaying) { playing in
-            if playing { withAnimation(.easeInOut(duration: 0.4)) { hintDismissed = true } }
-            else { currentBeat = -1 }   // reset so the next start floats at centre first
+            if playing {
+                withAnimation(.easeInOut(duration: 0.4)) { hintDismissed = true }
+                timingStats = TimingStats()   // fresh tap-accuracy tally for each run
+            } else { currentBeat = -1 }   // reset so the next start floats at centre first
             // Don't let the screen auto-lock mid-practice — a running metronome you
             // can't see (or that pauses when the display sleeps) is useless.
             UIApplication.shared.isIdleTimerDisabled = playing
@@ -291,8 +319,9 @@ struct ContentView: View {
     }
 
     // MARK: Beat visualization — two selectable modes.
-    //  • bounce: a ball rides up/down at constant speed, hitting the top on every
-    //    (sub)beat — subdivisions just make it bounce more often.
+    //  • bounce: a pendulum ball arcs up/down and meets a dashed target ring at
+    //    its centre resting point on every click — the contact "pops" (burst ring
+    //    + scale) exactly as the sound fires.
     //  • orbit:  a dot circles a ring of beat markers (4/4 → 0/90/180/270°),
     //    landing on each marker on the beat at constant angular velocity.
     // While stopped, both fall back to the editable dot grid so the time signature
@@ -307,6 +336,7 @@ struct ContentView: View {
                 switch vizMode {
                 case .bounce: bounceViz.transition(.opacity)
                 case .orbit:  orbitViz.transition(.opacity)
+                case .sweep:  sweepViz.transition(.opacity)
                 }
             } else {
                 editableBeatGrid.transition(.opacity)
@@ -316,8 +346,11 @@ struct ContentView: View {
         .animation(.easeInOut(duration: 0.35), value: playing)
         .animation(.easeInOut(duration: 0.3), value: vizModeRaw)
         // Once playing, the setup cards fade out and the pendulum grows to fill the
-        // screen — a clear switch to a focused "performance" view.
-        .frame(height: playing ? 340 : 200)
+        // screen — a clear switch to a focused "performance" view. In landscape
+        // (compact height) the card flexes to whatever the column has left instead,
+        // so the tempo card below it is never pushed off screen.
+        .frame(height: vSizeClass == .compact ? nil : (playing ? 340 : 200))
+        .frame(maxHeight: vSizeClass == .compact ? .infinity : nil)
         .frame(maxWidth: .infinity)
         .padding(.vertical, 6)
         .background(card)
@@ -334,17 +367,23 @@ struct ContentView: View {
         .coachAnchor("beat")
     }
 
-    /// Small toggle that flips between the bounce and orbit visualizations.
+    /// Small toggle that cycles bounce → orbit → sweep; its icon previews the NEXT view.
     private var vizModeButton: some View {
         Button {
-            vizModeRaw = (vizMode == .bounce ? BeatVizMode.orbit : .bounce).rawValue
+            vizModeRaw = vizMode.next.rawValue
             haptic.impactOccurred(intensity: 0.5)
+            VizModeTip().invalidate(reason: .actionPerformed)
         } label: {
-            Image(systemName: vizMode == .bounce ? "circle.circle" : "arrow.up.arrow.down")
+            Image(systemName: vizMode.next == .orbit ? "circle.circle"
+                            : vizMode.next == .sweep ? "clock"
+                            : "arrow.up.arrow.down")
                 .font(.title3)
                 .foregroundStyle(.secondary)
         }
-        .accessibilityLabel(vizMode == .bounce ? "Switch to orbit view" : "Switch to bounce view")
+        .popoverTip(featureTips.currentTip as? VizModeTip)
+        .accessibilityLabel(vizMode.next == .orbit ? "Switch to orbit view"
+                          : vizMode.next == .sweep ? "Switch to ring sweep view"
+                          : "Switch to bounce view")
         .accessibilityInputLabels(["Change view", "Metronome mode", "Switch view"])
     }
 
@@ -376,82 +415,87 @@ struct ContentView: View {
 
     private var bounceViz: some View {
         let beats = metronome.beatsPerMeasure
-        let amp: CGFloat = 110          // bounce only shows while playing (roomy view)
         let sub = max(1, metronome.subdivision)
-        return TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
-            let phase = beatPhase(now: timeline.date)
-            let started = currentBeat >= 0
-            let f = started ? phase - Double(currentBeat) : 0     // 0…1 progress in the beat
-            // Where the striking ball is right now, to light the marker it hits.
-            let ballY = (started && !reduceMotion) ? bounceHeight(f, sub: sub, amp: amp) : -amp
-            ZStack {
-                // Fixed hit markers: the top line is the beat; a bottom line appears
-                // once subdivided, and a middle line for the triplet's centre strike.
-                // Each flashes as the ball reaches it.
-                hitMarker(y: -amp, struck: started && ballY < -amp * 0.55)
-                if sub == 3 {
-                    hitMarker(y: 0, struck: started && abs(ballY) < amp * 0.22)
-                }
-                if sub >= 2 {
-                    hitMarker(y: amp, struck: started && ballY > amp * 0.55)
-                }
-                HStack(spacing: 8) {
-                    ForEach(0..<beats, id: \.self) { i in
-                        let base = i == 0 ? beatRed : brass          // downbeat is red
-                        let active = started && i == currentBeat
-                        // The active beat's ball swings down and up at constant speed,
-                        // striking a fixed marker on each subdivision (top on the beat,
-                        // bottom on the off-beat…). Idle circles WAIT on the top line —
-                        // where every swing begins and ends — so the hand-off from one
-                        // beat to the next never jumps; only brightness/scale cross-fade.
-                        let y = (active && !reduceMotion) ? bounceHeight(f, sub: sub, amp: amp) : -amp
-                        Circle()
-                            .fill(base.opacity(active ? 1.0 : 0.4))
-                            .frame(width: 34, height: 34)
-                            .scaleEffect(active && !reduceMotion ? 1.3 : 1.0)
-                            .offset(y: y)
-                            .shadow(color: active ? base.opacity(0.6) : .clear, radius: active ? 12 : 0)
+        // Beyond 1/8 a per-click swing blurs into jitter, so cap the pendulum at
+        // one swing per beat — the ear still gets every click.
+        let swings = sub <= 2 ? sub : 1
+        return GeometryReader { geo in
+            // Swing as wide as the card allows — the full ±110 in portrait, tighter in
+            // landscape — keeping the popped ball (~55pt) inside the card's bounds.
+            let amp = min(110, max(36, geo.size.height / 2 - 34))
+            TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
+                let phase = beatPhase(now: timeline.date)
+                let started = currentBeat >= 0
+                let f = started ? phase - Double(currentBeat) : 0     // 0…1 progress in the beat
+                ZStack {
+                    HStack(spacing: 8) {
+                        ForEach(0..<beats, id: \.self) { i in
+                            let base = i == 0 ? beatRed : brass          // downbeat is red
+                            let active = started && i == currentBeat
+                            // The active beat's ball crosses the centre ON each click and
+                            // arcs out to an alternating extreme in between. Idle circles
+                            // WAIT at the centre — where every swing begins and ends — so
+                            // the hand-off from one beat to the next never jumps; only
+                            // brightness/scale cross-fade.
+                            let y = (active && !reduceMotion)
+                                ? pendulumY(f, sub: swings, beat: i, amp: amp) : 0
+                            // Progress within the current swing; 1 → 0 right after contact
+                            // drives the "pop" — phase-derived, so it stays glued to the audio.
+                            let g = (f * Double(swings)).truncatingRemainder(dividingBy: 1)
+                            let pop = (active && !reduceMotion && g < 0.3)
+                                ? CGFloat(1 - g / 0.3) : 0
+                            ZStack {
+                                if active && !reduceMotion {
+                                    // Dashed target where the sound lives: the ball meeting
+                                    // this ring IS the click, made visible.
+                                    Circle()
+                                        .strokeBorder(base.opacity(0.55),
+                                                      style: StrokeStyle(lineWidth: 2, dash: [5, 4]))
+                                        .frame(width: 46, height: 46)
+                                    // The pop: a ring bursts outward at the contact instant.
+                                    if pop > 0 {
+                                        Circle()
+                                            .stroke(base, lineWidth: 2.5)
+                                            .frame(width: 46, height: 46)
+                                            .scaleEffect(1 + (1 - pop) * 1.2)
+                                            .opacity(Double(pop))
+                                    }
+                                }
+                                Circle()
+                                    .fill(base.opacity(active ? 1.0 : 0.4))
+                                    .frame(width: 34, height: 34)
+                                    // The ball itself pops too — a burst of scale on contact.
+                                    .scaleEffect(active && !reduceMotion ? 1.3 + 0.25 * pop : 1.0)
+                                    .offset(y: y)
+                                    .shadow(color: active ? base.opacity(0.6) : .clear, radius: active ? 12 : 0)
+                            }
+                            .frame(width: 34, height: 34)   // ring overflow shouldn't widen the row
                             .animation(.easeInOut(duration: 0.16), value: currentBeat)
+                        }
                     }
+                    .frame(maxWidth: .infinity)
                 }
-                .frame(maxWidth: .infinity)
+                .frame(width: geo.size.width, height: geo.size.height)   // centre in the card
             }
         }
         .accessibilityElement()
         .accessibilityLabel("Beat \(max(1, currentBeat + 1)) of \(beats), \(MetronomeEngine.subdivisionName(for: sub))")
     }
 
-    /// A fixed horizontal hit-line the ball strikes; brightens on contact.
-    private func hitMarker(y: CGFloat, struck: Bool) -> some View {
-        Capsule()
-            .fill(struck ? brass.opacity(0.9) : Color(.systemGray4))
-            .frame(height: struck ? 3 : 2)
-            .frame(maxWidth: .infinity)
-            .padding(.horizontal, 24)
-            .offset(y: y)
-            .animation(.easeOut(duration: 0.08), value: struck)
-    }
-
-    /// Ball height for progress `f` (0…1) through the beat.
-    private func bounceHeight(_ f: Double, sub: Int, amp: CGFloat) -> CGFloat {
+    /// Ball height for progress `f` (0…1) through beat `beat`: a thrown-ball arc.
+    /// The ball leaves the centre at full speed, decelerates under "gravity" to
+    /// float at the apex, then accelerates back to cross the centre exactly ON the
+    /// next click — so the contact moment is the fastest, sharpest point of the
+    /// motion and easy to anticipate. Extremes alternate top/bottom per click.
+    private func pendulumY(_ f: Double, sub: Int, beat: Int, amp: CGFloat) -> CGFloat {
         let x = min(0.99999, max(0, f))
-        // Triplet strikes three evenly-spaced marks — top → middle → bottom over the
-        // first two thirds — then swings back up to the top for the next beat.
-        if sub == 3 {
-            return x < 2.0 / 3.0
-                ? -amp + CGFloat(x / (2.0 / 3.0)) * (2 * amp)          // top → middle → bottom
-                : amp - CGFloat((x - 2.0 / 3.0) / (1.0 / 3.0)) * (2 * amp)  // bottom → top
-        }
-        // Even subdivisions alternate top/bottom cleanly (1/8 = top·bottom, 1/16 =
-        // two round-trips); 1/4 does one full top→bottom→top swing.
-        let segs = sub == 1 ? 2 : sub
-        let seg = x * Double(segs)
-        let j = Int(seg)
-        let frac = CGFloat(seg - Double(j))
-        let start: CGFloat = (j % 2 == 0) ? -amp : amp                    // even hit = top
-        let end: CGFloat = (j == segs - 1) ? -amp                         // return to top by beat end
-                          : (((j + 1) % 2 == 0) ? -amp : amp)
-        return start + (end - start) * frac
+        let seg = x * Double(sub)
+        let j = Int(seg)                            // which click within the beat
+        let g = seg - Double(j)                     // 0…1 progress within the click
+        let up = (beat * sub + j) % 2 == 0          // alternate extremes click by click
+        let t = 2 * g - 1                           // -1 → 1 across the click
+        let reach = CGFloat(1 - t * t)              // parabola: gravity ease in/out
+        return (up ? -amp : amp) * reach
     }
 
     // MARK: Orbit visualization
@@ -472,12 +516,18 @@ struct ContentView: View {
                         .position(center)
                     // Subdivision minor ticks between the beats — one extra dot per
                     // click, so 1/8 shows a midpoint, 1/16 shows three per beat.
+                    // Each tick mirrors its click level: high = brass and larger,
+                    // low = grey, a silent rest = barely-there.
                     if sub > 1 {
                         ForEach(0..<(beats * sub), id: \.self) { m in
                             if m % sub != 0 {
+                                let level = metronome.clickLevel(at: m)
                                 let pp = orbitPoint(beat: Double(m) / Double(sub), beats: beats, radius: radius, center: center)
-                                Circle().fill(Color(.systemGray2))
-                                    .frame(width: 7, height: 7).position(pp)
+                                Circle().fill(level == .high ? brass : Color(.systemGray2))
+                                    .frame(width: level == .high ? 11 : 7,
+                                           height: level == .high ? 11 : 7)
+                                    .opacity(level == .mute ? 0.25 : 1)
+                                    .position(pp)
                             }
                         }
                     }
@@ -502,11 +552,147 @@ struct ContentView: View {
                         .frame(width: 24, height: 24)
                         .shadow(color: dotColor.opacity(0.6), radius: 10)
                         .position(p)
+                    // Timing verdict from tapping along — flashes in the ring's
+                    // empty centre, then fades.
+                    if let verdict = timingVerdict {
+                        Text(verdict.label)
+                            .font(.system(size: 36, weight: .heavy, design: .rounded))
+                            .foregroundStyle(verdict.color(brass: brass, red: beatRed))
+                            .position(center)
+                            .transition(reduceMotion ? .opacity
+                                        : .scale(scale: 0.6).combined(with: .opacity))
+                    }
+                    // Running tally of this run's taps, resting below the flash.
+                    if timingStats.total > 0 {
+                        timingStatsReadout
+                            .position(x: center.x, y: center.y + 52)
+                            .transition(.opacity)
+                    }
+                    // Afterimages: each tap freezes a ghost of the travelling dot
+                    // where it was at that instant — how far it sits from a beat
+                    // marker is your timing error, made visible on the ring.
+                    ForEach(tapGhosts) { ghost in
+                        GhostCircle(color: ghost.verdict.color(brass: brass, red: beatRed),
+                                    reduceMotion: reduceMotion)
+                            .position(orbitPoint(beat: ghost.phase, beats: beats,
+                                                 radius: radius, center: center))
+                    }
+                }
+            }
+        }
+        .contentShape(Rectangle())
+        // Tap along with the click: the gap to the nearest click becomes a verdict.
+        .onTapGesture { judgeTimingTap() }
+        .accessibilityElement()
+        .accessibilityLabel("Beat \(max(1, currentBeat + 1)) of \(beats), \(MetronomeEngine.subdivisionName(for: sub))")
+        .accessibilityValue(timingStats.total == 0 ? ""
+            : "\(timingStats.perfect) perfect, \(timingStats.good) good, \(timingStats.bad) bad")
+        .accessibilityHint("Tap in rhythm to check your timing")
+        .accessibilityAction(named: "Check timing") { judgeTimingTap() }
+    }
+
+    /// Wordless tally: one bubble per verdict colour with its tap count inside.
+    private var timingStatsReadout: some View {
+        HStack(spacing: 10) {
+            statBubble(timingStats.perfect, color: .green)
+            statBubble(timingStats.good, color: brass)
+            statBubble(timingStats.bad, color: beatRed)
+        }
+        .accessibilityHidden(true)   // spoken via the orbit view's accessibilityValue
+    }
+
+    private func statBubble(_ count: Int, color: Color) -> some View {
+        Text("\(count)")
+            .font(.system(.headline, design: .rounded).weight(.bold))
+            .monospacedDigit()
+            .minimumScaleFactor(0.5)   // three-digit counts shrink to stay inside
+            .foregroundStyle(.white)
+            .frame(width: 34, height: 34)
+            .background(Circle().fill(color))
+    }
+
+    /// Grade a tap by its distance to the nearest CLICK — the subdivision grid, so
+    /// at 1/8 a full orbit offers 8 chances at a Perfect, at 1/16 sixteen. Within
+    /// 10% of the click interval = Perfect, 25% = Good, anything worse = Bad. The
+    /// travelling dot drops a fading ghost at the spot it held when the tap landed.
+    private func judgeTimingTap() {
+        guard metronome.isPlaying, currentBeat >= 0 else { return }
+        let clickDuration = 60.0 / Double(metronome.bpm) / Double(max(1, metronome.subdivision))
+        let offset = Date().timeIntervalSince(beatAnchor)
+            .truncatingRemainder(dividingBy: clickDuration)
+        let error = min(offset, clickDuration - offset) / clickDuration
+        let verdict: TimingVerdict = error <= 0.10 ? .perfect
+                                   : error <= 0.25 ? .good
+                                   : .bad
+        timingToken += 1
+        let token = timingToken
+        withAnimation(.spring(duration: 0.25)) {
+            timingVerdict = verdict
+            timingStats.record(verdict)
+        }
+        let ghost = TapGhost(phase: beatPhase(now: Date()), verdict: verdict)
+        tapGhosts.append(ghost)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
+            tapGhosts.removeAll { $0.id == ghost.id }
+        }
+        haptic.impactOccurred(intensity: verdict == .perfect ? 1.0 : 0.5)
+        UIAccessibility.post(notification: .announcement, argument: verdict.label)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+            guard timingToken == token else { return }   // a newer tap took over
+            withAnimation(.easeOut(duration: 0.3)) { timingVerdict = nil }
+        }
+    }
+
+    // MARK: Sweep visualization — a radial progress ring that fills over exactly
+    // one beat (clock metaphor: zero learning curve) and "bursts" at 12 o'clock as
+    // the click lands, with the beat number counting in the centre.
+
+    private var sweepViz: some View {
+        let beats = metronome.beatsPerMeasure
+        return TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
+            let phase = beatPhase(now: timeline.date)
+            let started = currentBeat >= 0
+            let f = started ? phase - Double(currentBeat) : 0     // 0…1 through the beat
+            let color = currentBeat == 0 ? beatRed : brass        // downbeat sweeps red
+            GeometryReader { geo in
+                let side = min(geo.size.width, geo.size.height)
+                let radius = side / 2 - 16
+                let center = CGPoint(x: geo.size.width / 2, y: geo.size.height / 2)
+                ZStack {
+                    Circle()                                      // the track
+                        .stroke(Color(.systemGray5), lineWidth: 10)
+                        .frame(width: radius * 2, height: radius * 2)
+                        .position(center)
+                    Circle()                                      // this beat's fill
+                        .trim(from: 0, to: reduceMotion ? 1 : CGFloat(f))
+                        .stroke(color, style: StrokeStyle(lineWidth: 10, lineCap: .round))
+                        .rotationEffect(.degrees(-90))            // start/burst at 12 o'clock
+                        .frame(width: radius * 2, height: radius * 2)
+                        .position(center)
+                    // The burst: right after the click a dot at 12 o'clock swells and
+                    // fades — driven purely by the beat phase, so it stays glued to
+                    // the audio with no extra state.
+                    if started && !reduceMotion && f < 0.25 {
+                        let b = CGFloat(f / 0.25)                 // 0…1 through the burst
+                        Circle()
+                            .fill(color)
+                            .frame(width: 18, height: 18)
+                            .scaleEffect(1 + b * 2.4)
+                            .opacity(Double(1 - b))
+                            .position(x: center.x, y: center.y - radius)
+                    }
+                    // Centre count-off, big enough to read from across the room.
+                    Text("\(max(1, currentBeat + 1))")
+                        .font(.system(size: 88, weight: .bold, design: .rounded))
+                        .monospacedDigit()
+                        .foregroundStyle(color)
+                        .contentTransition(.numericText())
+                        .position(center)
                 }
             }
         }
         .accessibilityElement()
-        .accessibilityLabel("Beat \(max(1, currentBeat + 1)) of \(beats), \(MetronomeEngine.subdivisionName(for: sub))")
+        .accessibilityLabel("Beat \(max(1, currentBeat + 1)) of \(beats)")
     }
 
     /// Position on the orbit ring for a (possibly fractional) beat index, with beat 0
@@ -584,7 +770,11 @@ struct ContentView: View {
                 .foregroundStyle(beatScale > 1.0 ? brass : Color.primary)
                 .scaleEffect(beatScale)
                 .contentShape(Rectangle())
-                .onTapGesture { withAnimation(.easeInOut(duration: 0.2)) { tempoAsNumber.toggle() } }
+                .onTapGesture {
+                    withAnimation(.easeInOut(duration: 0.2)) { tempoAsNumber.toggle() }
+                    TempoDisplayTip().invalidate(reason: .actionPerformed)
+                }
+                .popoverTip(featureTips.currentTip as? TempoDisplayTip)
                 .accessibilityLabel("Tempo")
                 .accessibilityValue("\(metronome.bpm) BPM, \(MetronomeEngine.tempoName(for: metronome.bpm))")
                 .accessibilityHint("Tap to switch between the tempo name and BPM")
@@ -594,7 +784,7 @@ struct ContentView: View {
                 .font(.subheadline)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
-                .foregroundStyle(detector.isRunning || metronome.speedTrainerOn ? brass : .secondary)
+                .foregroundStyle(metronome.speedTrainerOn ? brass : .secondary)
             HStack(spacing: 16) {
                 stepButton(systemName: "minus.circle.fill", delta: -1)
                 Slider(value: bpmBinding, in: 30...260, step: 1)
@@ -608,41 +798,22 @@ struct ContentView: View {
         .padding(16)
         .frame(maxWidth: .infinity)
         .background(card)
-        .overlay(alignment: .topTrailing) { detectButton.padding(12) }
+        // The speed trainer has no button of its own (voice / Help launcher only),
+        // so its tip anchors to the tempo card whose subtitle shows its status.
+        .popoverTip(featureTips.currentTip as? PracticeTip)
         .coachAnchor("tempo")
     }
 
-    private var detectButton: some View {
-        Button {
-            toggleDetect()
-        } label: {
-            Image(systemName: detector.isRunning ? "stop.circle.fill" : "waveform.badge.magnifyingglass")
-                .font(.title3)
-                .foregroundStyle(detector.isRunning ? .red : brass)
-        }
-        .accessibilityLabel(detector.isRunning ? "Stop tempo detection" : "Detect tempo from music")
-        .accessibilityInputLabels(detector.isRunning
-            ? ["Stop detection", "Stop detecting"]
-            : ["Detect tempo", "Detect", "Detect tempo from music"])
-    }
-
     private var tempoSubtitle: String {
-        // Trainer status takes over the subtitle when it's running (and we're not
-        // mid tempo-detection).
-        if metronome.speedTrainerOn, case .idle = detector.state {
+        // Trainer status takes over the subtitle when it's running.
+        if metronome.speedTrainerOn {
             return "Speed trainer · +\(metronome.trainerStep) every \(metronome.trainerBars) bars → \(metronome.trainerTarget)"
         }
-        switch detector.state {
-        case .listening: return "Listening to music… \(Int(detector.progress * 100))%"
-        case .result(let b): return "Detected \(b) BPM"
-        case .failed: return "Couldn't detect — try again"
-        case .denied: return "Mic blocked — enable in Settings"
         // Show whichever representation the big display isn't showing, so the BPM
         // number is always visible somewhere.
-        case .idle: return tempoAsNumber
+        return tempoAsNumber
             ? MetronomeEngine.tempoName(for: metronome.bpm)
             : "\(metronome.bpm) BPM"
-        }
     }
 
     // MARK: Subdivision — tap a ring that shows how the beat is divided
@@ -670,12 +841,192 @@ struct ContentView: View {
                 .accessibilityLabel("\(opt.voice) notes")
                 .accessibilityInputLabels(["\(opt.voice) notes", opt.voice, opt.label])
                 .accessibilityAddTraits(selected ? [.isButton, .isSelected] : .isButton)
+                // No on-screen Accents button — VoiceOver reaches the editor here.
+                .accessibilityAction(named: "Edit accents") { openAccents() }
             }
         }
         .padding(10)
         .frame(maxWidth: .infinity)
         .background(card)
+        // Double-tap the card to open the accent grid (documented in Help — there is
+        // no separate button). Simultaneous, so the first tap still selects normally.
+        // Quarters are editable too: each beat of the measure is its own cell.
+        .simultaneousGesture(TapGesture(count: 2).onEnded {
+            haptic.impactOccurred(intensity: 0.6)
+            openAccents()
+        })
+        // First-run hint — the double-tap is otherwise invisible.
+        .popoverTip(featureTips.currentTip as? AccentGridTip)
         .coachAnchor("sub")
+    }
+
+    // MARK: Accent grid modal — the WHOLE measure as a step-sequencer grid: one row
+    // per beat, one cell per click, so 4/4 with sixteenths shows all 16 clicks as
+    // individually tappable cells cycling high → low → silent.
+
+    private var accentsSheet: some View {
+        let sub = max(1, metronome.subdivision)
+        let beats = metronome.beatsPerMeasure
+        return NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("Every click of the measure is its own cell — \(beats) beats of \(MetronomeEngine.subdivisionName(for: sub).lowercased()) → \(beats * sub) clicks. Tap a cell to cycle it: high → low → silent.")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                    if sub == 1 {
+                        // Undivided: a single row, one cell per beat, numbered below.
+                        HStack(spacing: 6) {
+                            ForEach(0..<beats, id: \.self) { b in
+                                VStack(spacing: 4) {
+                                    accentCell(tick: b, sub: sub)
+                                    Text("\(b + 1)")
+                                        .font(.caption2.weight(.semibold))
+                                        .monospacedDigit()
+                                        .foregroundStyle(b == 0 ? beatRed : .secondary)
+                                }
+                            }
+                        }
+                    } else {
+                        VStack(spacing: 8) {
+                            ForEach(0..<beats, id: \.self) { b in
+                                HStack(spacing: 12) {
+                                    Text("\(b + 1)")
+                                        .font(.subheadline.weight(.semibold))
+                                        .monospacedDigit()
+                                        .foregroundStyle(b == 0 ? beatRed : .secondary)
+                                        .frame(width: 22, alignment: .center)
+                                    HStack(spacing: 6) {
+                                        ForEach(0..<sub, id: \.self) { i in
+                                            accentCell(tick: b * sub + i, sub: sub)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    presetsSection
+                }
+                .padding(20)
+                .animation(.easeInOut(duration: 0.15), value: metronome.accentLevels)
+            }
+            .navigationTitle("Accents")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Reset") { metronome.resetAccents() }
+                        .accessibilityHint("Restores the default pattern for this meter")
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { showAccents = false }
+                }
+            }
+            .alert("Save preset", isPresented: $showSavePreset) {
+                TextField("Name (e.g. Bossa intro)", text: $presetNameDraft)
+                Button("Save") {
+                    metronome.saveAccentPreset(named: presetNameDraft)
+                    presetNameDraft = ""
+                }
+                Button("Cancel", role: .cancel) { presetNameDraft = "" }
+            } message: {
+                Text("Saves this pattern with its meter and subdivision, so you can recall it per song.")
+            }
+        }
+        .presentationDetents([.medium, .large])
+    }
+
+    /// One cell of the accent grid. Each tap cycles high → low → silent. A tall bar
+    /// marks a high click, a short one low, none a rest — reads at a glance,
+    /// colorblind-safe.
+    private func accentCell(tick: Int, sub: Int) -> some View {
+        let level = metronome.clickLevel(at: tick)
+        return Button {
+            metronome.cycleClickLevel(at: tick)
+            haptic.impactOccurred(intensity: 0.4)
+        } label: {
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .fill(level == .high ? brass
+                    : level == .low ? Color(.systemGray5)
+                    : Color(.systemGray6))
+                .frame(height: 44)
+                .frame(maxWidth: .infinity)
+                .overlay {
+                    if level == .mute {
+                        // A rest: an empty, dashed cell.
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .strokeBorder(Color(.systemGray3),
+                                          style: StrokeStyle(lineWidth: 1.2, dash: [4, 3]))
+                    } else {
+                        Capsule()
+                            .fill(level == .high ? Color.white : Color(.systemGray2))
+                            .frame(width: 4, height: level == .high ? 22 : 10)
+                    }
+                }
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Beat \(tick / sub + 1), click \(tick % sub + 1)")
+        .accessibilityValue(level == .high ? "High tone" : level == .low ? "Low tone" : "Silent")
+        .accessibilityHint("Cycles between high, low, and silent")
+        .accessibilityInputLabels(["Beat \(tick / sub + 1) click \(tick % sub + 1)"])
+    }
+
+    /// Saved patterns: recall one per song (it restores its meter + subdivision too),
+    /// or snapshot the pattern on screen under a new name.
+    private var presetsSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Presets")
+                .font(.subheadline.weight(.semibold))
+            if metronome.accentPresets.isEmpty {
+                Text("Save a pattern per song — recalling it also restores its meter and subdivision.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            }
+            ForEach(metronome.accentPresets) { preset in
+                HStack(spacing: 10) {
+                    Button {
+                        metronome.applyAccentPreset(preset)
+                        haptic.impactOccurred(intensity: 0.5)
+                    } label: {
+                        VStack(alignment: .leading, spacing: 1) {
+                            Text(preset.name)
+                                .font(.subheadline.weight(.semibold))
+                                .foregroundStyle(.primary)
+                            Text("\(preset.beats)/4 · \(MetronomeEngine.subdivisionName(for: preset.sub))")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Preset \(preset.name)")
+                    .accessibilityHint("Applies this pattern, meter, and subdivision")
+                    .accessibilityInputLabels([preset.name])
+                    Button {
+                        metronome.deleteAccentPreset(preset)
+                        haptic.impactOccurred(intensity: 0.4)
+                    } label: {
+                        Image(systemName: "trash")
+                            .font(.subheadline)
+                            .foregroundStyle(.red)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Delete preset \(preset.name)")
+                }
+                .padding(.horizontal, 12)
+                .padding(.vertical, 8)
+                .background(RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(Color(.tertiarySystemGroupedBackground)))
+            }
+            Button {
+                showSavePreset = true
+            } label: {
+                Label("Save current pattern…", systemImage: "plus.circle.fill")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(brass)
+            }
+            .accessibilityInputLabels(["Save pattern", "Save preset"])
+        }
+        .padding(.top, 4)
     }
 
     // MARK: Voice status + help
@@ -714,7 +1065,13 @@ struct ContentView: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 11)
         .frame(maxWidth: .infinity)
-        .background(card)          // same rounded-rectangle shape as the other cards
+        // This strip is far shorter than the other cards, where the shared 16pt
+        // radius reads as a capsule; a tighter radius keeps the same rectangular
+        // look as every other box on screen.
+        .background(RoundedRectangle(cornerRadius: 12, style: .continuous)
+            .fill(Color(.secondarySystemGroupedBackground)))
+        // The tuner is voice-first ("tune"), so its tip sits on the voice strip.
+        .popoverTip(featureTips.currentTip as? TunerTip)
         .coachAnchor("voice")
     }
 
@@ -894,9 +1251,9 @@ struct ContentView: View {
                         usageRow("hand.tap", "Tap tempo", "Tap the big BPM number in rhythm to set the tempo.")
                         usageRow("slider.horizontal.3", "Tempo", "Drag the tempo slider, or tap the − / + buttons.")
                         usageRow("speaker.wave.2.fill", "Volume", "Say \u{201C}louder\u{201D} / \u{201C}quieter\u{201D} / \u{201C}mute\u{201D}, or \u{201C}volume 60\u{201D}.")
-                        usageRow("music.note", "Subdivision", "Tap 1/4, 1/8, Trip, or 1/16.")
-                        usageRow("circle.circle", "Switch view", "Tap the view icon (top-right of the beat card) — bounce ↔ orbit.")
-                        usageRow("waveform.badge.magnifyingglass", "Detect tempo", "Tap the wave icon (top-right of the tempo card) to detect from music.")
+                        usageRow("music.note", "Subdivision", "Tap 1/4, 1/8, Trip, or 1/16. Double-tap the card to open Accents and set every click of the measure high, low, or silent.")
+                        usageRow("circle.circle", "Switch view", "Tap the view icon (top-right of the beat card) — bounce → orbit → ring sweep.")
+                        usageRow("target", "Timing check", "In orbit view, tap the ring while playing — every click (including subdivisions) is a target. The moving dot leaves a ghost where your tap landed, and coloured counters tally Perfect / Good / Bad until you stop.")
                         usageRow("chart.line.uptrend.xyaxis", "Practice mode", "Open it from Beat view below, or say \u{201C}practice\u{201D}.")
                         usageRow("play.fill", "Play", "Tap Start / Stop at the bottom.")
                         usageRow("mic.fill", "Voice", "Tap Listen to turn voice control on or off.")
@@ -945,6 +1302,16 @@ struct ContentView: View {
                         commandRow("\"eighth\"", "1/8 notes")
                         commandRow("\"triplet\"", "triplets")
                         commandRow("\"sixteenth\"", "1/16 notes")
+                        usageRow("hand.tap", "Double-tap to open Accents",
+                                 "Double-tap the subdivision card to edit the full measure — each cell cycles high → low → silent, and patterns can be saved as named presets.")
+                        Button {
+                            openAccents()
+                        } label: {
+                            Label("Open accent editor", systemImage: "waveform.path")
+                                .font(.subheadline.weight(.semibold))
+                                .foregroundStyle(brass)
+                        }
+                        .accessibilityInputLabels(["Accent editor", "Open accents", "Accents"])
                     }
                     .id(helpSections[3])
                     Section("Tuner") {
@@ -1171,13 +1538,6 @@ struct ContentView: View {
         }
     }
 
-    private func toggleDetect() {
-        if detector.isRunning { detector.cancel(); return }
-        metronome.stop()   // our own clicks would pollute the recording
-        voice.stop()       // free the mic from speech recognition
-        detector.start()
-    }
-
     private func wireUp() {
         metronome.onBeat = { beat in pulseBeat(beat) }
         voice.onCommand = { handle($0) }
@@ -1188,14 +1548,17 @@ struct ContentView: View {
     private func openTuner() {
         metronome.stop()        // clicks would corrupt pitch detection
         showCommands = false
+        showAccents = false
         tuner.start()
         showTuner = true
+        TunerTip().invalidate(reason: .actionPerformed)
     }
 
     private func closePanels() {
         showCommands = false
         showTuner = false       // the sheet's onDismiss stops the tuner
         showTrainer = false
+        showAccents = false
         if showHelpMarks { dismissHelpMarks() }
     }
 
@@ -1240,9 +1603,15 @@ struct ContentView: View {
         case .volumeDown: metronome.setVolume(metronome.volume - 0.1)
         case .mute: metronome.setVolume(0)
         case .setVolume(let p): metronome.setVolume(Float(p) / 100)
-        case .toggleView: vizModeRaw = (vizMode == .bounce ? BeatVizMode.orbit : .bounce).rawValue
-        case .bounceView: vizModeRaw = BeatVizMode.bounce.rawValue
-        case .orbitView: vizModeRaw = BeatVizMode.orbit.rawValue
+        case .toggleView:
+            vizModeRaw = vizMode.next.rawValue
+            VizModeTip().invalidate(reason: .actionPerformed)
+        case .bounceView:
+            vizModeRaw = BeatVizMode.bounce.rawValue
+            VizModeTip().invalidate(reason: .actionPerformed)
+        case .orbitView:
+            vizModeRaw = BeatVizMode.orbit.rawValue
+            VizModeTip().invalidate(reason: .actionPerformed)
         case .help: showHelp()
         case .tuner: openTuner()
         case .dismiss: closePanels()
@@ -1255,7 +1624,17 @@ struct ContentView: View {
     private func openPractice() {
         showCommands = false
         showTuner = false
+        showAccents = false
         showTrainer = true
+        PracticeTip().invalidate(reason: .actionPerformed)
+    }
+
+    private func openAccents() {
+        showCommands = false
+        showTuner = false
+        showTrainer = false
+        showAccents = true
+        AccentGridTip().invalidate(reason: .actionPerformed)
     }
 
     /// "help" pops up the list of commands you can say right now.
@@ -1303,8 +1682,11 @@ struct ContentView: View {
         currentBeat = beat
         beatAnchor = Date()          // anchor the smooth viz interpolation to this beat
         haptic.impactOccurred(intensity: beat == 0 ? 1.0 : 0.6)
-        // Reduce Motion: skip the bounce — the lit dot still marks the beat.
+        // Reduce Motion: skip the bounce AND the flash — the lit dot still marks the beat.
         guard !reduceMotion else { return }
+        flashIsDownbeat = beat == 0
+        flashOpacity = beat == 0 ? 0.18 : 0.08     // downbeat pops, the rest whisper
+        withAnimation(.easeOut(duration: 0.30)) { flashOpacity = 0 }
         withAnimation(.easeOut(duration: 0.06)) { beatScale = 1.1 }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.07) {
             withAnimation(.easeIn(duration: 0.1)) { beatScale = 1.0 }
@@ -1312,10 +1694,87 @@ struct ContentView: View {
     }
 }
 
-/// The two beat-visualization styles the user can switch between.
+/// The beat-visualization styles the user can cycle through.
 enum BeatVizMode: String {
-    case bounce   // a ball riding up/down at constant speed
+    case bounce   // a pendulum ball crossing the centre on every click
     case orbit    // a dot circling a ring of beat markers
+    case sweep    // a radial progress ring filling once per beat, bursting at 12
+
+    var next: BeatVizMode {
+        switch self {
+        case .bounce: return .orbit
+        case .orbit: return .sweep
+        case .sweep: return .bounce
+        }
+    }
+}
+
+/// Running tally of play-along taps for one run of the metronome (orbit view).
+struct TimingStats: Equatable {
+    var perfect = 0
+    var good = 0
+    var bad = 0
+
+    var total: Int { perfect + good + bad }
+
+    mutating func record(_ verdict: TimingVerdict) {
+        switch verdict {
+        case .perfect: perfect += 1
+        case .good: good += 1
+        case .bad: bad += 1
+        }
+    }
+}
+
+/// A fading afterimage of the orbit's travelling dot, frozen at the position it
+/// held when a play-along tap landed — its distance from the nearest marker IS
+/// the timing error, made visible.
+struct TapGhost: Identifiable {
+    let id = UUID()
+    let phase: Double            // beats-units position on the ring at tap time
+    let verdict: TimingVerdict
+}
+
+/// The ghost itself: a verdict-coloured ring that swells and fades on arrival.
+/// With Reduce Motion it skips the swell and only fades.
+private struct GhostCircle: View {
+    let color: Color
+    let reduceMotion: Bool
+    @State private var faded = false
+
+    var body: some View {
+        Circle()
+            .fill(color.opacity(0.3))
+            .overlay(Circle().strokeBorder(color, lineWidth: 2))
+            .frame(width: 30, height: 30)
+            // A gentle swell only — the ghost's POSITION is the information, so it
+            // must stay put and readable while it fades.
+            .scaleEffect(faded && !reduceMotion ? 1.3 : 1.0)
+            .opacity(faded ? 0 : 0.9)
+            .onAppear { withAnimation(.easeOut(duration: 1.3)) { faded = true } }
+            .allowsHitTesting(false)   // never steal the next tap
+    }
+}
+
+/// How close a play-along tap landed to the beat (orbit view's timing check).
+enum TimingVerdict {
+    case perfect, good, bad
+
+    var label: String {
+        switch self {
+        case .perfect: return "Perfect!"
+        case .good: return "Good"
+        case .bad: return "Bad"
+        }
+    }
+
+    func color(brass: Color, red: Color) -> Color {
+        switch self {
+        case .perfect: return .green
+        case .good: return brass
+        case .bad: return red
+        }
+    }
 }
 
 /// Captures the bounds of every control tagged with `.coachAnchor(id)` so the "help"
@@ -1331,6 +1790,42 @@ extension View {
     func coachAnchor(_ id: String) -> some View {
         anchorPreference(key: CoachAnchorKey.self, value: .bounds) { [id: $0] }
     }
+}
+
+/// One-time hint that the accent grid hides behind a double-tap on the
+/// subdivision card — the gesture leaves no visible trace, so point it out once.
+struct AccentGridTip: Tip {
+    var title: Text { Text("Customize accents") }
+    var message: Text? { Text("Double-tap here to open the accent grid — set every click of the measure high, low, or silent, and save patterns as presets.") }
+    var image: Image? { Image(systemName: "hand.tap") }
+}
+
+/// Guided-tour stop: the big display shows the tempo as a classical term.
+struct TempoDisplayTip: Tip {
+    var title: Text { Text("Largo? Moderato?") }
+    var message: Text? { Text("That\u{2019}s your tempo as a classical term. Tap it to flip to the BPM number and back.") }
+    var image: Image? { Image(systemName: "metronome") }
+}
+
+/// Guided-tour stop: two beat visualizations to choose from.
+struct VizModeTip: Tip {
+    var title: Text { Text("Two beat views") }
+    var message: Text? { Text("Tap to switch between the bouncing ball and the orbit ring — or say \u{201C}bounce\u{201D} / \u{201C}orbit\u{201D}.") }
+    var image: Image? { Image(systemName: "circle.circle") }
+}
+
+/// Guided-tour stop: the speed trainer, which is voice-first and easy to miss.
+struct PracticeTip: Tip {
+    var title: Text { Text("Speed trainer") }
+    var message: Text? { Text("Say \u{201C}practice\u{201D} to raise the tempo automatically every few bars while you play — great for speed drills.") }
+    var image: Image? { Image(systemName: "chart.line.uptrend.xyaxis") }
+}
+
+/// Guided-tour stop: there's a chromatic tuner behind a voice command.
+struct TunerTip: Tip {
+    var title: Text { Text("There\u{2019}s a tuner too") }
+    var message: Text? { Text("Say \u{201C}tune\u{201D} to open the chromatic tuner, and \u{201C}close\u{201D} when you\u{2019}re done.") }
+    var image: Image? { Image(systemName: "tuningfork") }
 }
 
 /// One-time hint that the voice "help" command exists.

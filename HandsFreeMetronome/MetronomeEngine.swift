@@ -50,6 +50,24 @@ final class MetronomeEngine: ObservableObject {
     /// the engine agree on the same ceiling (the dot grid lays out up to this many).
     static let maxBeatsPerMeasure = 8
 
+    /// The loudness level of one click of the measure.
+    enum ClickLevel: Int {
+        case mute = 0   // a rest — no click at all
+        case low = 1    // the soft 1000 Hz click
+        case high = 2   // the bright 1500 Hz click (2000 Hz on the downbeat)
+    }
+
+    /// Level of every click across the WHOLE measure, keyed by
+    /// `beatsPerMeasure * 10 + subdivision` — one entry per click, so 4/4 with
+    /// sixteenths gives 16 independently settable cells (max 8×4 = 32).
+    /// Default: the first click of every beat high, the rest low.
+    /// Kept per (beats, subdivision) combination so patterns survive switching.
+    @Published private(set) var accentLevels: [Int: [Int]] = [:]
+
+    /// Named, user-saved accent patterns (per song). Each remembers its own meter
+    /// and subdivision, and applying one switches the metronome to match.
+    @Published private(set) var accentPresets: [AccentPreset] = []
+
     // MARK: Speed trainer — automatically climb the tempo as you practise, so you
     // can drill a passage a little faster every few bars without touching anything.
     @Published private(set) var speedTrainerOn = false
@@ -72,6 +90,10 @@ final class MetronomeEngine: ObservableObject {
     private static let trainerStepKey = "metronome.trainerStep"
     private static let trainerBarsKey = "metronome.trainerBars"
     private static let trainerTargetKey = "metronome.trainerTarget"
+    private static func accentKey(beats: Int, sub: Int) -> String {
+        "metronome.accentLevels.\(beats)x\(sub)"
+    }
+    private static let presetsKey = "metronome.accentPresets"
 
     /// Fires on the main thread on each beat (quarter note), passing the beat's
     /// index within the measure (0 = downbeat). Used to animate the UI.
@@ -113,6 +135,18 @@ final class MetronomeEngine: ObservableObject {
         }
         if defaults.object(forKey: Self.trainerTargetKey) != nil {
             trainerTarget = clampBPM(defaults.integer(forKey: Self.trainerTargetKey))
+        }
+        for beats in 1...Self.maxBeatsPerMeasure {
+            for sub in 1...4 {
+                if let stored = defaults.array(forKey: Self.accentKey(beats: beats, sub: sub)) as? [Int],
+                   stored.count == beats * sub {
+                    accentLevels[beats * 10 + sub] = stored.map { min(2, max(0, $0)) }
+                }
+            }
+        }
+        if let data = defaults.data(forKey: Self.presetsKey),
+           let decoded = try? JSONDecoder().decode([AccentPreset].self, from: data) {
+            accentPresets = decoded
         }
         configureSession()
         // Clean, pure-tone clicks. Distinct pitches mark accent / beat / subdivision.
@@ -223,9 +257,15 @@ final class MetronomeEngine: ObservableObject {
         let pos = tick % ticksPerMeasure
         let isBeat = pos % sub == 0          // a quarter-note pulse
         let isDownbeat = pos == 0            // beat 1 of the measure
-        let buffer = isDownbeat ? accentClick
-                   : isBeat     ? beatClick
-                   :              subClick
+        // Every click of the measure carries its own level — high, low, or a silent
+        // rest — so all 4×4 = 16 sixteenth cells in 4/4 are fully customizable. The
+        // downbeat keeps its extra-high chime only while its cell is high.
+        let buffer: AVAudioPCMBuffer?
+        switch clickLevel(at: pos) {
+        case .high: buffer = isDownbeat ? accentClick : beatClick
+        case .low:  buffer = subClick
+        case .mute: buffer = nil   // a rest — the beat still animates, just no sound
+        }
         if let buffer {
             player.scheduleBuffer(buffer, at: nil, options: [], completionHandler: nil)
         }
@@ -270,6 +310,87 @@ final class MetronomeEngine: ObservableObject {
     func doubleTempo() { bpm = clampBPM(bpm * 2) }
     func halfTempo() { bpm = clampBPM(bpm / 2) }
     func setSubdivision(_ value: Int) { subdivision = min(4, max(1, value)) }
+
+    /// The stock pattern for a (beats, subdivision) layout: the first click of every
+    /// beat high, the rest low — with an undivided beat every beat is high.
+    static func defaultAccentLevels(beats: Int, sub: Int) -> [Int] {
+        let s = max(1, sub)
+        return (0..<(beats * s)).map { $0 % s == 0 ? ClickLevel.high.rawValue
+                                                   : ClickLevel.low.rawValue }
+    }
+
+    /// The click levels for the measure layout currently in use.
+    var currentAccentLevels: [Int] {
+        let sub = max(1, subdivision)
+        return accentLevels[beatsPerMeasure * 10 + sub]
+            ?? Self.defaultAccentLevels(beats: beatsPerMeasure, sub: sub)
+    }
+
+    /// Level of click `tick` (0 = the measure's downbeat) in the current layout.
+    func clickLevel(at tick: Int) -> ClickLevel {
+        let levels = currentAccentLevels
+        guard (0..<levels.count).contains(tick) else { return .low }
+        return ClickLevel(rawValue: levels[tick]) ?? .low
+    }
+
+    /// Step click `tick` to its next level: high → low → mute (rest) → high…
+    func cycleClickLevel(at tick: Int) {
+        var levels = currentAccentLevels
+        guard (0..<levels.count).contains(tick) else { return }
+        levels[tick] = (levels[tick] + 2) % 3   // 2→1→0→2
+        storeCurrentLevels(levels)
+    }
+
+    /// Restore the stock pattern for the current measure layout.
+    func resetAccents() {
+        let sub = max(1, subdivision)
+        let beats = beatsPerMeasure
+        accentLevels[beats * 10 + sub] = Self.defaultAccentLevels(beats: beats, sub: sub)
+        UserDefaults.standard.removeObject(forKey: Self.accentKey(beats: beats, sub: sub))
+    }
+
+    private func storeCurrentLevels(_ levels: [Int]) {
+        let sub = max(1, subdivision)
+        let beats = beatsPerMeasure
+        accentLevels[beats * 10 + sub] = levels
+        UserDefaults.standard.set(levels, forKey: Self.accentKey(beats: beats, sub: sub))
+    }
+
+    // MARK: Accent presets — named per-song patterns
+
+    /// Snapshot the current pattern (meter + subdivision + levels) under a name.
+    func saveAccentPreset(named name: String) {
+        let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        let preset = AccentPreset(name: trimmed,
+                                  beats: beatsPerMeasure,
+                                  sub: max(1, subdivision),
+                                  levels: currentAccentLevels)
+        accentPresets.append(preset)
+        persistPresets()
+    }
+
+    /// Recall a preset: switches the meter and subdivision to match, then loads
+    /// its pattern as the working one for that layout.
+    func applyAccentPreset(_ preset: AccentPreset) {
+        guard preset.levels.count == preset.beats * preset.sub else { return }
+        setBeatsPerMeasure(preset.beats)
+        setSubdivision(preset.sub)
+        let levels = preset.levels.map { min(2, max(0, $0)) }
+        accentLevels[preset.beats * 10 + preset.sub] = levels
+        UserDefaults.standard.set(levels, forKey: Self.accentKey(beats: preset.beats, sub: preset.sub))
+    }
+
+    func deleteAccentPreset(_ preset: AccentPreset) {
+        accentPresets.removeAll { $0.id == preset.id }
+        persistPresets()
+    }
+
+    private func persistPresets() {
+        if let data = try? JSONEncoder().encode(accentPresets) {
+            UserDefaults.standard.set(data, forKey: Self.presetsKey)
+        }
+    }
     func setBeatsPerMeasure(_ n: Int) { beatsPerMeasure = min(Self.maxBeatsPerMeasure, max(1, n)) }
     func setVolume(_ value: Float) { volume = min(1, max(0, value)) }
 
@@ -297,6 +418,16 @@ final class MetronomeEngine: ObservableObject {
         default: return "Prestissimo"
         }
     }
+}
+
+/// A named, user-saved accent pattern. Remembers its own meter and subdivision so
+/// recalling it restores the whole rhythmic setup for a song.
+struct AccentPreset: Codable, Identifiable, Equatable {
+    var id = UUID()
+    var name: String
+    var beats: Int
+    var sub: Int
+    var levels: [Int]   // one ClickLevel rawValue per click of the measure
 }
 
 /// A short two-note chime ("뾰롱") played to confirm a recognized voice command.
