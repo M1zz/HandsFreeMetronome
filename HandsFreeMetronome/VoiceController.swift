@@ -78,12 +78,28 @@ final class VoiceController: ObservableObject {
             status = .unavailable
             return
         }
+        // Re-assert a record-capable session HERE, not only at metronome-engine
+        // init: on a first launch that init runs before the mic permission exists,
+        // and its early setActive can fail — leaving recording illegal even after
+        // the user grants both permissions.
+        let session = AVAudioSession.sharedInstance()
+        try? session.setCategory(.playAndRecord, mode: .default,
+                                 options: [.mixWithOthers, .defaultToSpeaker, .allowBluetooth])
+        try? session.setActive(true)
         // Set up the mic + tap ONCE and keep them running for the whole listening
         // session. Only the lightweight recognition request/task is recycled after
         // this (see refresh). Repeatedly stopping/starting the audio engine while
         // the metronome's engine also runs is what made recognition die over time.
         let input = audioEngine.inputNode
         let format = input.outputFormat(forBus: 0)
+        // A dead input reports 0 Hz / 0 channels, and installTap raises an
+        // uncatchable Objective-C exception on such a format — the app dies on the
+        // spot. Bail to a visible "unavailable" state instead; the metronome
+        // itself keeps working without the mic.
+        guard format.sampleRate > 0, format.channelCount > 0 else {
+            status = .unavailable
+            return
+        }
         input.removeTap(onBus: 0)
         input.installTap(onBus: 0, bufferSize: 1024, format: format) { [weak self] buffer, _ in
             self?.request?.append(buffer)

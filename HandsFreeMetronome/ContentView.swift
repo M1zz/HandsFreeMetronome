@@ -439,26 +439,42 @@ struct ContentView: View {
                             // brightness/scale cross-fade.
                             let y = (active && !reduceMotion)
                                 ? pendulumY(f, sub: swings, beat: i, amp: amp) : 0
-                            // Progress within the current swing; 1 → 0 right after contact
-                            // drives the "pop" — phase-derived, so it stays glued to the audio.
-                            let g = (f * Double(swings)).truncatingRemainder(dividingBy: 1)
+                            // Pop on every CLICK: progress within the current click,
+                            // 1 → 0 right after it fires — phase-derived, so it stays
+                            // glued to the audio even when one swing spans four clicks.
+                            let g = (f * Double(sub)).truncatingRemainder(dividingBy: 1)
                             let pop = (active && !reduceMotion && g < 0.3)
                                 ? CGFloat(1 - g / 0.3) : 0
+                            // Where the ball sits at the moment of each click — the
+                            // sounding spots along the swing. Several clicks can share
+                            // a spot (at 1/16 the ¾ point is struck on the way up AND
+                            // down), so dedupe to one crisp dashed ring per height.
+                            let clickYs = (0..<sub).map { k in
+                                pendulumY(Double(k) / Double(sub), sub: swings, beat: i, amp: amp)
+                            }
+                            let targetYs = Array(Set(clickYs.map { ($0 * 2).rounded() / 2 })).sorted()
                             ZStack {
                                 if active && !reduceMotion {
-                                    // Dashed target where the sound lives: the ball meeting
-                                    // this ring IS the click, made visible.
-                                    Circle()
-                                        .strokeBorder(base.opacity(0.55),
-                                                      style: StrokeStyle(lineWidth: 2, dash: [5, 4]))
-                                        .frame(width: 46, height: 46)
-                                    // The pop: a ring bursts outward at the contact instant.
+                                    // Dashed targets where the sound lives: the ball
+                                    // meeting a ring IS a click, made visible — at 1/16
+                                    // that's the centre, the ¾ point and the apex.
+                                    ForEach(targetYs, id: \.self) { ty in
+                                        Circle()
+                                            .strokeBorder(base.opacity(0.55),
+                                                          style: StrokeStyle(lineWidth: 2, dash: [5, 4]))
+                                            .frame(width: 46, height: 46)
+                                            .offset(y: ty)
+                                    }
+                                    // The pop: a ring bursts outward from whichever
+                                    // target the ball is passing as its click fires.
                                     if pop > 0 {
+                                        let k = min(sub - 1, Int(f * Double(sub)))
                                         Circle()
                                             .stroke(base, lineWidth: 2.5)
                                             .frame(width: 46, height: 46)
                                             .scaleEffect(1 + (1 - pop) * 1.2)
                                             .opacity(Double(pop))
+                                            .offset(y: clickYs[k])
                                     }
                                 }
                                 Circle()

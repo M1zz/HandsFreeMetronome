@@ -26,6 +26,7 @@ Also: Assistive Access support and an iOS Voice Control coexistence mode.
 - 새 링 스윕 뷰: 시계처럼 링이 한 박마다 12시부터 차오르고 박이 울리는 순간 12시에서 터지며, 중앙의 큰 숫자가 박을 카운트합니다. 뷰 버튼(또는 "switch view")으로 진자 → 궤도 → 링 스윕 순환.
 - 박마다 화면 전체가 은은하게 번쩍입니다(다운비트 빨강, 나머지 금색) — 악보를 보면서도 곁눈으로 박이 들어옵니다.
 - 가로모드가 한 화면에 매끄럽게 들어갑니다.
+- 첫 실행 직후 마이크 권한을 허용하면 앱이 종료될 수 있던 문제를 수정했습니다.
 - 첫 실행 온보딩 팁이 사용 환경(마이크/음성 제어)에 맞춰 표시되고, 숨은 기능들(악센트·빠르기말 전환·뷰 전환·스피드 트레이너·튜너)을 팁 투어가 하나씩 차례로 소개합니다.
 - 템포 감지(음악 듣고 BPM 찾기) 기능은 제거했습니다 — 화면이 더 단순해졌습니다.
 
@@ -42,6 +43,7 @@ Also: Assistive Access support and an iOS Voice Control coexistence mode.
 - New ring-sweep view: clock-style — the ring fills once per beat, bursts at 12 o'clock as the click lands, and a big centre number counts the beats. Cycle views with the button or "switch view".
 - A subtle whole-screen flash marks every beat (red on the downbeat, gold elsewhere) — easy to catch in peripheral vision while reading a score.
 - Landscape now fits everything on one screen.
+- Fixed a crash that could occur right after granting the microphone permission on first launch.
 - First-run tips adapt to how you control the app (mic vs. Voice Control), and a guided tip tour introduces the hidden gems one by one — accents, tempo terms, beat views, the speed trainer, and the tuner.
 - Removed the listen-and-detect-BPM feature for a simpler screen.
 
