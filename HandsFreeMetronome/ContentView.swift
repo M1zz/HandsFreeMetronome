@@ -425,8 +425,12 @@ struct ContentView: View {
             let amp = min(110, max(36, geo.size.height / 2 - 34))
             TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
                 let phase = beatPhase(now: timeline.date)
-                let started = currentBeat >= 0
-                let f = started ? phase - Double(currentBeat) : 0     // 0…1 progress in the beat
+                // Gate on isPlaying too: right after a stop this view lingers for its
+                // fade-out while `currentBeat` still holds the last beat but the phase
+                // has already collapsed to 0 — without the gate `f` goes negative and
+                // the click index below would subscript clickYs out of bounds (crash).
+                let started = metronome.isPlaying && currentBeat >= 0
+                let f = started ? min(1, max(0, phase - Double(currentBeat))) : 0   // 0…1 progress in the beat
                 ZStack {
                     HStack(spacing: 8) {
                         ForEach(0..<beats, id: \.self) { i in
@@ -468,7 +472,7 @@ struct ContentView: View {
                                     // The pop: a ring bursts outward from whichever
                                     // target the ball is passing as its click fires.
                                     if pop > 0 {
-                                        let k = min(sub - 1, Int(f * Double(sub)))
+                                        let k = max(0, min(sub - 1, Int(f * Double(sub))))
                                         Circle()
                                             .stroke(base, lineWidth: 2.5)
                                             .frame(width: 46, height: 46)
@@ -667,8 +671,11 @@ struct ContentView: View {
         let beats = metronome.beatsPerMeasure
         return TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
             let phase = beatPhase(now: timeline.date)
-            let started = currentBeat >= 0
-            let f = started ? phase - Double(currentBeat) : 0     // 0…1 through the beat
+            // Same guard as the bounce view: while fading out after a stop the phase
+            // is already 0 but `currentBeat` isn't reset yet, so an unclamped `f`
+            // would go negative for a frame (negative trim/scale glitches).
+            let started = metronome.isPlaying && currentBeat >= 0
+            let f = started ? min(1, max(0, phase - Double(currentBeat))) : 0   // 0…1 through the beat
             let color = currentBeat == 0 ? beatRed : brass        // downbeat sweeps red
             GeometryReader { geo in
                 let side = min(geo.size.width, geo.size.height)
@@ -1194,16 +1201,20 @@ struct ContentView: View {
             // centre of its own control, so pills never overlap each other (each stays
             // within its control's bounds).
             ForEach(ids, id: \.self) { id in
-                let rect = proxy[anchors[id]!]
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .stroke(brass, lineWidth: 2.5)
-                    .frame(width: rect.width, height: rect.height)
-                    .position(x: rect.midX, y: rect.midY)
-                    .allowsHitTesting(false)
-                helpPill(helpPhrase(for: id))
-                    .frame(maxWidth: max(140, rect.width - 24))
-                    .fixedSize(horizontal: false, vertical: true)
-                    .position(x: rect.midX, y: rect.midY)
+                // `ids` is filtered on this dictionary, but never force-unwrap in
+                // a view body — a stale re-evaluation must degrade, not crash.
+                if let anchor = anchors[id] {
+                    let rect = proxy[anchor]
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .stroke(brass, lineWidth: 2.5)
+                        .frame(width: rect.width, height: rect.height)
+                        .position(x: rect.midX, y: rect.midY)
+                        .allowsHitTesting(false)
+                    helpPill(helpPhrase(for: id))
+                        .frame(maxWidth: max(140, rect.width - 24))
+                        .fixedSize(horizontal: false, vertical: true)
+                        .position(x: rect.midX, y: rect.midY)
+                }
             }
             // Persistent instructions + escape hatches, pinned near the TOP edge.
             VStack {
@@ -1342,6 +1353,7 @@ struct ContentView: View {
                     .id(helpSections[5])
                 }
                 .onChange(of: helpIndex) { idx in
+                    guard helpSections.indices.contains(idx) else { return }
                     withAnimation { proxy.scrollTo(helpSections[idx], anchor: .top) }
                 }
             }
@@ -1520,8 +1532,10 @@ struct ContentView: View {
     }
 
     private var bpmBinding: Binding<Double> {
+        // Int(Double) traps on NaN/infinity, so gate the conversion and go
+        // through setTempo, which clamps to the supported BPM range.
         Binding(get: { Double(metronome.bpm) },
-                set: { metronome.bpm = Int($0) })
+                set: { if $0.isFinite { metronome.setTempo(Int($0)) } })
     }
 
     /// Tap-tempo: tapping the big BPM number in rhythm sets the tempo from the
@@ -1536,8 +1550,9 @@ struct ContentView: View {
         guard tapTimes.count >= 2 else { return }
         let gaps = zip(tapTimes.dropFirst(), tapTimes).map { $0 - $1 }
         let avg = gaps.reduce(0, +) / Double(gaps.count)
-        guard avg > 0 else { return }
-        metronome.setTempo(Int((60.0 / avg).rounded()))
+        let bpm = 60.0 / max(avg, 0.001)          // ≥1 ms gap — Int() must never see inf/NaN
+        guard bpm.isFinite else { return }
+        metronome.setTempo(Int(bpm.rounded()))
     }
 
     // MARK: Logic

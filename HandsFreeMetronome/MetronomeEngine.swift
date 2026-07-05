@@ -23,6 +23,7 @@ final class MetronomeEngine: ObservableObject {
     @Published var subdivision: Int = 1 {
         didSet {
             UserDefaults.standard.set(subdivision, forKey: Self.subdivisionKey)
+            syncPlaybackLevels()
             if isPlaying { reschedule() }
         }
     }
@@ -32,6 +33,7 @@ final class MetronomeEngine: ObservableObject {
     @Published var beatsPerMeasure = 4 {
         didSet {
             UserDefaults.standard.set(beatsPerMeasure, forKey: Self.beatsKey)
+            syncPlaybackLevels()
             if isPlaying { reschedule() }
         }
     }
@@ -112,6 +114,14 @@ final class MetronomeEngine: ObservableObject {
                                            qos: .userInteractive)
     private var tick = 0 // position counter — only touched on timerQueue
 
+    /// Snapshot of the current measure's click levels for the audio tick.
+    /// `fireTick` runs on `timerQueue` while the accent editor mutates
+    /// `accentLevels` on the main thread — reading a Dictionary that is being
+    /// written corrupts memory, so playback only ever reads this lock-guarded
+    /// copy, refreshed on every mutation.
+    private let levelsLock = NSLock()
+    private var playbackLevels: [Int] = []
+
     init() {
         // Restore the last-used settings (default 100 BPM, 4/4, quarters on first run).
         let defaults = UserDefaults.standard
@@ -156,6 +166,18 @@ final class MetronomeEngine: ObservableObject {
         engine.attach(player)
         engine.connect(player, to: engine.mainMixerNode, format: accentClick?.format)
         engine.mainMixerNode.outputVolume = volume   // honour the saved level
+        syncPlaybackLevels()
+        // A call / Siri / alarm taking the audio hardware stops the engine out
+        // from under us. Fold that into a clean user-visible stop instead of
+        // leaving a running timer scheduling into a dead engine.
+        NotificationCenter.default.addObserver(
+            forName: AVAudioSession.interruptionNotification,
+            object: nil, queue: .main
+        ) { [weak self] note in
+            guard let raw = note.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt,
+                  AVAudioSession.InterruptionType(rawValue: raw) == .began else { return }
+            self?.stop()
+        }
     }
 
     private func configureSession() {
@@ -182,7 +204,8 @@ final class MetronomeEngine: ObservableObject {
         guard let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1),
               let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: frames) else { return nil }
         buffer.frameLength = frames
-        let ptr = buffer.floatChannelData![0]
+        guard let channels = buffer.floatChannelData else { return nil }
+        let ptr = channels[0]
         let n = Int(frames)
         let attack = 0.0015 * sampleRate             // 1.5 ms fade-in kills the onset click
         let release = 0.004 * sampleRate             // 4 ms fade-out guarantees a silent tail
@@ -211,6 +234,12 @@ final class MetronomeEngine: ObservableObject {
                 return
             }
         }
+        // Re-check: an interruption can kill the engine between start() succeeding
+        // and here, and play() on a dead engine is an uncatchable ObjC exception.
+        guard engine.isRunning else {
+            engineLog.error("Audio engine not running after start — aborting play")
+            return
+        }
         player.play()
         isPlaying = true
         tick = 0
@@ -222,6 +251,11 @@ final class MetronomeEngine: ObservableObject {
         isPlaying = false
         beatTimer?.cancel()
         beatTimer = nil
+        // Barrier: wait for any in-flight fireTick to finish before tearing the
+        // audio down. Stopping the player while another thread is inside
+        // scheduleBuffer raises an uncatchable ObjC exception (instant crash).
+        // Safe to sync here: fireTick never blocks back on the main thread.
+        timerQueue.sync {}
         player.stop()
         // Release the audio render pipeline while paused so an idle metronome
         // doesn't keep the audio thread (and CPU) spinning. start() restarts it.
@@ -261,12 +295,14 @@ final class MetronomeEngine: ObservableObject {
         // rest — so all 4×4 = 16 sixteenth cells in 4/4 are fully customizable. The
         // downbeat keeps its extra-high chime only while its cell is high.
         let buffer: AVAudioPCMBuffer?
-        switch clickLevel(at: pos) {
+        switch playbackLevel(at: pos) {
         case .high: buffer = isDownbeat ? accentClick : beatClick
         case .low:  buffer = subClick
         case .mute: buffer = nil   // a rest — the beat still animates, just no sound
         }
-        if let buffer {
+        // Skip scheduling if an interruption stopped the engine under us — the
+        // interruption observer will stop() cleanly a moment later.
+        if let buffer, engine.isRunning {
             player.scheduleBuffer(buffer, at: nil, options: [], completionHandler: nil)
         }
         if isBeat {
@@ -327,10 +363,29 @@ final class MetronomeEngine: ObservableObject {
     }
 
     /// Level of click `tick` (0 = the measure's downbeat) in the current layout.
+    /// Main-thread/UI use only — the audio tick reads `playbackLevel(at:)`.
     func clickLevel(at tick: Int) -> ClickLevel {
         let levels = currentAccentLevels
         guard (0..<levels.count).contains(tick) else { return .low }
         return ClickLevel(rawValue: levels[tick]) ?? .low
+    }
+
+    /// Same lookup for `fireTick` on `timerQueue`, via the lock-guarded snapshot.
+    private func playbackLevel(at tick: Int) -> ClickLevel {
+        levelsLock.lock()
+        let levels = playbackLevels
+        levelsLock.unlock()
+        guard (0..<levels.count).contains(tick) else { return .low }
+        return ClickLevel(rawValue: levels[tick]) ?? .low
+    }
+
+    /// Refresh the audio tick's snapshot. Call after ANY change to the measure
+    /// layout or its levels (meter, subdivision, accent edits, presets, reset).
+    private func syncPlaybackLevels() {
+        let levels = currentAccentLevels
+        levelsLock.lock()
+        playbackLevels = levels
+        levelsLock.unlock()
     }
 
     /// Step click `tick` to its next level: high → low → mute (rest) → high…
@@ -347,6 +402,7 @@ final class MetronomeEngine: ObservableObject {
         let beats = beatsPerMeasure
         accentLevels[beats * 10 + sub] = Self.defaultAccentLevels(beats: beats, sub: sub)
         UserDefaults.standard.removeObject(forKey: Self.accentKey(beats: beats, sub: sub))
+        syncPlaybackLevels()
     }
 
     private func storeCurrentLevels(_ levels: [Int]) {
@@ -354,6 +410,7 @@ final class MetronomeEngine: ObservableObject {
         let beats = beatsPerMeasure
         accentLevels[beats * 10 + sub] = levels
         UserDefaults.standard.set(levels, forKey: Self.accentKey(beats: beats, sub: sub))
+        syncPlaybackLevels()
     }
 
     // MARK: Accent presets — named per-song patterns
@@ -379,6 +436,7 @@ final class MetronomeEngine: ObservableObject {
         let levels = preset.levels.map { min(2, max(0, $0)) }
         accentLevels[preset.beats * 10 + preset.sub] = levels
         UserDefaults.standard.set(levels, forKey: Self.accentKey(beats: preset.beats, sub: preset.sub))
+        syncPlaybackLevels()
     }
 
     func deleteAccentPreset(_ preset: AccentPreset) {
