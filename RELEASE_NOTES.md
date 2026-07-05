@@ -22,7 +22,21 @@ remaining path that could terminate the app.
 - A phone call, Siri, or an alarm now stops the metronome cleanly.
 - Audited and fixed the remaining rare conditions that could terminate the app.
 
-### Details
+### Details (한국어)
+
+- 정지 순간 크래시: 정지 직후 프레임에서 진자/링 스윕 뷰가 페이드아웃으로 아직
+  화면에 남아 있는 동안 박 위상이 음수가 되어, 클릭 타깃 배열을 범위 밖
+  인덱스로 접근했습니다. 애니메이션을 재생 상태로 게이트하고 위상을 0…1로
+  클램프했습니다(진자·링 스윕 뷰).
+- 동시성: 오디오 정리가 진행 중인 틱이 끝나길 기다립니다(버퍼 스케줄링과의
+  경합 제거). 틱 스레드는 락으로 보호된 악센트 스냅샷을 읽고, 음성 인식
+  request는 오디오 탭 스레드와의 경합을 락으로 차단합니다.
+- 오디오 세션 인터럽션(전화·Siri·알람)은 깨끗한 정지로 처리하고, 모든
+  play/schedule 호출 전에 엔진 상태를 확인합니다.
+- 강제 언래핑을 제거하고 모든 Int(Double) 변환(BPM 슬라이더, 탭 템포, 튜너
+  노트 매핑)에 NaN/무한대 가드를 넣었습니다.
+
+### Details (English)
 
 - Stop-time crash: on the frame after stopping, the beat phase could go negative
   while the pendulum/ring views were still fading out, indexing a click-target
@@ -31,8 +45,8 @@ remaining path that could terminate the app.
 - Concurrency: audio teardown now waits for any in-flight tick (no race with
   buffer scheduling); the tick thread reads a lock-guarded accent snapshot; the
   speech-recognition request is lock-guarded against the audio-tap thread.
-- Audio-session interruptions fold into a clean stop; the engine is checked
-  before every play/schedule call.
+- Audio-session interruptions (call/Siri/alarm) fold into a clean stop; the
+  engine is checked before every play/schedule call.
 - Removed force unwraps and guarded all Int(Double) conversions (BPM slider,
   tap tempo, tuner note mapping) against NaN/infinity.
 
