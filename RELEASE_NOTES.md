@@ -1,5 +1,41 @@
 # Release Notes — Not My Tempo
 
+## 1.0.4
+
+안정성 업데이트입니다. 재생을 멈추는 순간 앱이 종료될 수 있던 문제를 비롯해,
+드물게 앱을 종료시킬 수 있는 내부 원인들을 전수 점검해 수정했습니다.
+
+A stability update: fixed a crash when stopping playback, and audited every
+remaining path that could terminate the app.
+
+### App Store (한국어)
+
+- 재생을 멈추는 순간(특히 6/8·셋잇단처럼 느린 템포에서 음성으로 멈출 때) 앱이 종료되던 문제를 수정했습니다.
+- 재생 중 악센트를 편집하거나 정지/시작을 빠르게 반복해도 안전하도록 오디오 내부 동작을 안정화했습니다.
+- 전화·Siri·알람이 끼어들면 메트로놈이 깨끗하게 멈추도록 했습니다.
+- 그 밖에 드물게 앱을 종료시킬 수 있는 원인들을 전수 점검해 수정했습니다.
+
+### App Store (English)
+
+- Fixed a crash when stopping playback — most likely at slow tempos with subdivisions (e.g. 6/8 triplets) and when stopping by voice.
+- Hardened the audio internals so rapid start/stop and editing accents during playback are safe.
+- A phone call, Siri, or an alarm now stops the metronome cleanly.
+- Audited and fixed the remaining rare conditions that could terminate the app.
+
+### Details
+
+- Stop-time crash: on the frame after stopping, the beat phase could go negative
+  while the pendulum/ring views were still fading out, indexing a click-target
+  array out of bounds. The animation is now gated on the playing state and the
+  phase clamped (pendulum and ring-sweep views).
+- Concurrency: audio teardown now waits for any in-flight tick (no race with
+  buffer scheduling); the tick thread reads a lock-guarded accent snapshot; the
+  speech-recognition request is lock-guarded against the audio-tap thread.
+- Audio-session interruptions fold into a clean stop; the engine is checked
+  before every play/schedule call.
+- Removed force unwraps and guarded all Int(Double) conversions (BPM slider,
+  tap tempo, tuner note mapping) against NaN/infinity.
+
 ## 1.0.3
 
 이번 업데이트의 핵심은 **마디 전체 악센트 커스터마이징**과 **새로운 비트
