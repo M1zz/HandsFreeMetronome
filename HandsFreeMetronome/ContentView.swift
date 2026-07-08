@@ -1340,6 +1340,7 @@ struct ContentView: View {
                         commandRow("\"done\" / \"close\"", "close a panel")
                     }
                     .id(helpSections[5])
+                    DeveloperContactSection(accent: brass)
                 }
                 .onChange(of: helpIndex) { idx in
                     withAnimation { proxy.scrollTo(helpSections[idx], anchor: .top) }
@@ -1904,6 +1905,35 @@ struct SegmentedRing: View {
             }
         }
         .padding(2)
+    }
+}
+
+// MARK: - Developer contact
+
+/// Contact links for the developer, shown at the bottom of the Voice Commands
+/// (help) sheet — the app's only settings-like screen.
+struct DeveloperContactSection: View {
+    let accent: Color
+
+    var body: some View {
+        Section {
+            Link(destination: URL(string: "mailto:leeo@kakao.com")!) {
+                Label("Email the developer", systemImage: "envelope")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(accent)
+            }
+            .accessibilityInputLabels(["Email", "Email the developer"])
+            Link(destination: URL(string: "https://instagram.com/lee25_ios")!) {
+                Label("Instagram DM (@lee25_ios)", systemImage: "paperplane")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(accent)
+            }
+            .accessibilityInputLabels(["Instagram", "Instagram DM"])
+        } header: {
+            Text("Contact the Developer")
+        } footer: {
+            Text("Bug reports and feature requests are welcome.")
+        }
     }
 }
 
