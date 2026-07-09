@@ -1,5 +1,78 @@
 # Release Notes — Not My Tempo
 
+## 1.0.5
+
+**Not My Tempo Pro**가 생겼습니다. 메트로놈 본체 — 모든 템포·박자·분할, 비트
+시각화 3종, 탭 템포, 타이밍 체크, 그리고 핸즈프리 음성 제어 전부 — 는 지금처럼
+계속 무료입니다. 연습을 업그레이드하는 세 가지 도구(연습 모드, 악센트 에디터·
+프리셋, 크로매틱 튜너)가 Pro로 묶여 연간 구독(무료 체험 포함) 또는 한 번 결제로
+평생 소장할 수 있습니다.
+
+Introducing **Not My Tempo Pro**. The metronome itself — every tempo, meter, and
+subdivision, all three beat views, tap tempo, timing check, and complete
+hands-free voice control — stays free, exactly as before. Three practice
+power-tools (practice mode, the accent editor with presets, and the chromatic
+tuner) now unlock with Pro: a yearly subscription with a free trial, or a
+one-time lifetime purchase.
+
+### App Store (한국어)
+
+- Not My Tempo Pro 출시 — 연습 모드(스피드 트레이너), 악센트 에디터·프리셋, 크로매틱 튜너를 하나로 묶었습니다. 연간 구독(무료 체험 포함) 또는 한 번 결제로 평생 소장.
+- **이미 앱을 구매하셨던 분은 모든 Pro 기능이 그대로 무료입니다** — 추가 결제 없이 자동 적용됩니다.
+- 메트로놈의 모든 핵심 기능과 음성 제어·접근성 기능은 지금처럼 계속 무료입니다.
+- 튜너가 아래에서 올라오는 시트 대신, 화면이 왼쪽으로 밀리며 전용 페이지로 전환됩니다. Back 버튼이나 오른쪽 스와이프, "close"로 돌아옵니다.
+- 구매 복원은 Pro 화면 우상단 Restore 버튼으로 언제든 가능합니다.
+
+### App Store (English)
+
+- Introducing Not My Tempo Pro — practice mode (speed trainer), the accent editor with presets, and the chromatic tuner, in one unlock: a yearly subscription with a free trial, or a one-time lifetime purchase.
+- **If you already bought this app, every Pro feature stays free for you** — applied automatically, nothing to pay again.
+- Everything else — the full metronome, voice control, and every accessibility feature — stays free.
+- The tuner now slides in as its own full-screen page (the screen pushes left) instead of a bottom sheet. Go back with the Back button, a rightward swipe, or "close".
+- Restore a previous purchase anytime from the Restore button on the Pro screen.
+
+### Details (한국어)
+
+- StoreKit 2 기반: 검증된 현재 권리(currentEntitlements)로 Pro 여부를 판정하고,
+  갱신·환불·가족 공유·다른 기기 구매를 Transaction.updates로 상시 반영합니다.
+  권리는 로컬에 캐시되어 오프라인에서도 Pro 기능이 즉시 동작합니다.
+- 게이트는 requirePro() 한 곳 — 버튼·음성 명령("practice"/"tune")·분할 카드
+  더블탭·VoiceOver 액션 어느 경로든 같은 페이월로 이어지고, 방금 누른 기능이
+  페이월의 헤드라인이 됩니다. "close" 음성으로 페이월도 닫힙니다.
+- 도움말 시트에 Pro 섹션(잠금 상태 표시·구매 진입)과 잠긴 런처의 PRO 배지 추가.
+- 로컬 StoreKit 구성 파일(Products.storekit)로 시뮬레이터에서 구매 흐름을
+  끝까지 테스트할 수 있습니다.
+- 기존 유료 구매자 보호: 이 앱은 1.0.4까지 유료 판매(빌드 1·2)였으므로,
+  AppTransaction의 최초 다운로드 빌드가 3(1.0.5) 미만이면 Pro를 영구
+  부여합니다. 판정은 성공 시 캐시되며, Restore가 영수증 동기화 후 재판정합니다.
+- 튜너·페이월은 시트가 아닌 ZStack 오버레이 페이지입니다 — TipKit 팝오버가
+  떠 있는 동안 시트 프레젠테이션이 조용히 실패하는 충돌을 구조적으로 회피하고,
+  튜너는 iOS 내비게이션 푸시처럼 메인 화면이 왼쪽으로 밀리며(패럴랙스 −80pt)
+  오른쪽에서 들어옵니다. Reduce Motion에서는 페이드로 대체됩니다.
+
+### Details (English)
+
+- Built on StoreKit 2: entitlement derives from verified currentEntitlements,
+  with Transaction.updates observed for renewals, refunds, family sharing, and
+  purchases on other devices; cached locally so Pro works offline and at launch.
+- One gate — requirePro(): every entry point (buttons, the "practice"/"tune"
+  voice commands, the subdivision-card double-tap, VoiceOver actions) funnels to
+  the same paywall, headlined by the feature that was just reached for. Saying
+  "close" dismisses the paywall too.
+- The Help sheet gains a Pro section (status + upgrade) and PRO badges on locked
+  launchers.
+- A local StoreKit configuration file (Products.storekit) enables end-to-end
+  purchase testing in the simulator.
+- Paid-era grandfathering: the app was paid up front through 1.0.4 (builds 1
+  and 2), so if AppTransaction reports an original download build below 3
+  (1.0.5), Pro is granted permanently. A positive verdict is cached; Restore
+  re-checks after syncing the receipt.
+- The tuner and the paywall are ZStack overlay pages, not sheets — sidestepping
+  a conflict where an active TipKit popover silently swallows sheet
+  presentations. The tuner enters like a navigation push: the main screen
+  slides left (−80pt parallax) as the page arrives from the right; Reduce
+  Motion falls back to a cross-fade.
+
 ## 1.0.4
 
 안정성 업데이트입니다. 재생을 멈추는 순간 앱이 종료될 수 있던 문제를 비롯해,

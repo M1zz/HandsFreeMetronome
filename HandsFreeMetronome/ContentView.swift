@@ -6,6 +6,10 @@ struct ContentView: View {
     @StateObject private var metronome = MetronomeEngine()
     @StateObject private var voice = VoiceController()
     @StateObject private var tuner = TunerEngine()
+    @StateObject private var pro = ProStore()
+
+    // A locked Pro feature was reached — which one shapes the paywall's pitch.
+    @State private var paywallFeature: ProFeature?
 
     @State private var beatScale: CGFloat = 1.0
     @State private var currentBeat = -1   // which beat (0-based) is sounding now
@@ -92,12 +96,37 @@ struct ContentView: View {
                 .allowsHitTesting(false)
                 .accessibilityHidden(true)
 
-            if assistiveAccess {
-                assistiveAccessLayout
-            } else if vSizeClass == .compact {
-                landscapeLayout
-            } else {
-                portraitLayout
+            Group {
+                if assistiveAccess {
+                    assistiveAccessLayout
+                } else if vSizeClass == .compact {
+                    landscapeLayout
+                } else {
+                    portraitLayout
+                }
+            }
+            // Nav-push parallax: while the tuner covers the screen, the main
+            // layout sits shifted a little to the LEFT (like iOS's own push).
+            .offset(x: showTuner && !reduceMotion ? -80 : 0)
+
+            // The tuner is a full-screen page that slides in from the right —
+            // the whole screen "turns left" into it — not a bottom sheet.
+            if showTuner {
+                tunerScreen
+                    .transition(reduceMotion ? .opacity : .move(edge: .trailing))
+                    .zIndex(2)
+            }
+
+            // The paywall rides in the same ZStack instead of a sheet: a TipKit
+            // popover (almost always up for new users — exactly the ones who hit
+            // gates) silently swallows sheet presentations, and revenue UI must
+            // never lose that race. Slides up like a sheet, above everything.
+            if let feature = paywallFeature {
+                PaywallView(store: pro, feature: feature) {
+                    withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = nil }
+                }
+                .transition(reduceMotion ? .opacity : .move(edge: .bottom))
+                .zIndex(3)
             }
         }
         // "help" highlights every on-screen control at once, each tagged with the
@@ -111,7 +140,11 @@ struct ContentView: View {
         // Support Dynamic Type, but cap growth so the single-screen layout holds.
         .dynamicTypeSize(...DynamicTypeSize.accessibility2)
         .fullScreenCover(isPresented: $showCommands) { commandsSheet }
-        .sheet(isPresented: $showTuner, onDismiss: { tuner.stop() }) { tunerSheet }
+        // The tuner engine follows the page's visibility (it used to be the
+        // sheet's onDismiss) — stopped on ANY path that closes it.
+        .onChange(of: showTuner) { open in
+            if !open { tuner.stop() }
+        }
         .sheet(isPresented: $showTrainer) { trainerSheet }
         .sheet(isPresented: $showAccents) { accentsSheet }
         .onChange(of: metronome.isPlaying) { playing in
@@ -131,6 +164,24 @@ struct ContentView: View {
         .onAppear {
             wireUp()
             syncTipState()
+            #if DEBUG
+            // Simulator-test hooks: the tuner (and its paywall gate) open by
+            // voice only, which automation can't drive — these launch arguments
+            // stand in for saying "tune". -uitest-tuner bypasses the gate to
+            // exercise the slide-in page; -uitest-paywall goes through it.
+            let uitestArgs = ProcessInfo.processInfo.arguments
+            if uitestArgs.contains("-uitest-tuner") || uitestArgs.contains("-uitest-paywall") {
+                Tips.hideAllTipsForTesting()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    if uitestArgs.contains("-uitest-tuner") {
+                        tuner.start()
+                        withAnimation(.easeInOut(duration: 0.35)) { showTuner = true }
+                    } else {
+                        openTuner()
+                    }
+                }
+            }
+            #endif
             // Listen by default — UNLESS the user relies on iOS Voice Control, in
             // which case our own mic would fight the system recognizer. They drive
             // the app by control name ("Tap Start") instead.
@@ -1274,6 +1325,39 @@ struct ContentView: View {
                         Text("Accessibility")
                     }
                     Section {
+                        if pro.isPro {
+                            HStack(spacing: 12) {
+                                Image(systemName: "checkmark.seal.fill")
+                                    .foregroundStyle(brass)
+                                    .frame(width: 22)
+                                Text("Pro unlocked — thank you!")
+                                    .font(.subheadline.weight(.semibold))
+                            }
+                            .accessibilityElement(children: .combine)
+                        } else {
+                            Button {
+                                showCommands = false
+                                withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = .practice }
+                            } label: {
+                                HStack(spacing: 12) {
+                                    Image(systemName: "crown.fill")
+                                        .foregroundStyle(brass)
+                                        .frame(width: 22)
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text("Unlock Pro")
+                                            .font(.subheadline.weight(.semibold))
+                                            .foregroundStyle(.primary)
+                                        Text("Practice mode · accent editor & presets · tuner")
+                                            .font(.footnote).foregroundStyle(.secondary)
+                                    }
+                                }
+                            }
+                            .accessibilityInputLabels(["Unlock Pro", "Pro", "Upgrade"])
+                        }
+                    } header: {
+                        Text("Not My Tempo Pro")
+                    }
+                    Section {
                         usageRow("circle.grid.3x3", "Set beats", "Tap the dots to choose the time signature.")
                         usageRow("hand.tap", "Tap tempo", "Tap the big BPM number in rhythm to set the tempo.")
                         usageRow("slider.horizontal.3", "Tempo", "Drag the tempo slider, or tap the − / + buttons.")
@@ -1318,9 +1402,12 @@ struct ContentView: View {
                         Button {
                             openPractice()
                         } label: {
-                            Label("Open practice mode", systemImage: "chart.line.uptrend.xyaxis")
-                                .font(.subheadline.weight(.semibold))
-                                .foregroundStyle(brass)
+                            HStack {
+                                Label("Open practice mode", systemImage: "chart.line.uptrend.xyaxis")
+                                    .font(.subheadline.weight(.semibold))
+                                    .foregroundStyle(brass)
+                                if !pro.isPro { proLockBadge }
+                            }
                         }
                         .accessibilityInputLabels(["Practice mode", "Open practice"])
                     }
@@ -1334,9 +1421,12 @@ struct ContentView: View {
                         Button {
                             openAccents()
                         } label: {
-                            Label("Open accent editor", systemImage: "waveform.path")
-                                .font(.subheadline.weight(.semibold))
-                                .foregroundStyle(brass)
+                            HStack {
+                                Label("Open accent editor", systemImage: "waveform.path")
+                                    .font(.subheadline.weight(.semibold))
+                                    .foregroundStyle(brass)
+                                if !pro.isPro { proLockBadge }
+                            }
                         }
                         .accessibilityInputLabels(["Accent editor", "Open accents", "Accents"])
                     }
@@ -1365,6 +1455,17 @@ struct ContentView: View {
                 }
             }
         }
+    }
+
+    /// Small "PRO" tag shown beside launchers for still-locked features.
+    private var proLockBadge: some View {
+        Text("PRO")
+            .font(.caption2.weight(.heavy))
+            .foregroundStyle(brass)
+            .padding(.horizontal, 6)
+            .padding(.vertical, 2)
+            .background(Capsule().fill(brass.opacity(0.15)))
+            .accessibilityLabel("Requires Pro")
     }
 
     private func usageRow(_ icon: String, _ title: String, _ detail: String) -> some View {
@@ -1411,10 +1512,30 @@ struct ContentView: View {
         .presentationDetents([.medium])
     }
 
-    // MARK: Tuner sheet
+    // MARK: Tuner page — slides in from the right, covering the whole screen
 
-    private var tunerSheet: some View {
-        NavigationStack {
+    /// Deliberately NOT a NavigationStack: inserted mid-animation, a nav stack
+    /// paints an empty white surface until its bar resolves, so the slide-in
+    /// would flash blank. A plain VStack with a hand-rolled header renders its
+    /// content on the very first frame of the transition.
+    private var tunerScreen: some View {
+        VStack(spacing: 0) {
+            ZStack {
+                Text("Tuner").font(.headline)
+                HStack {
+                    Button { closeTuner() } label: {
+                        Label("Back", systemImage: "chevron.left")
+                            .font(.body.weight(.semibold))
+                            .labelStyle(.titleAndIcon)
+                    }
+                    .accessibilityLabel("Back to metronome")
+                    .accessibilityInputLabels(["Back", "Close", "Done"])
+                    Spacer()
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+
             VStack(spacing: 28) {
                 Spacer()
                 Text(tuner.noteName)
@@ -1443,16 +1564,18 @@ struct ContentView: View {
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
-            .frame(maxWidth: .infinity)
-            .navigationTitle("Tuner")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { showTuner = false }
-                }
-            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .presentationDetents([.medium, .large])
+        .background(Color(.systemGroupedBackground).ignoresSafeArea())
+        // Mirror the system back-swipe: a rightward drag slides the page away.
+        .gesture(DragGesture(minimumDistance: 25).onEnded { value in
+            if value.translation.width > 80 { closeTuner() }
+        })
+    }
+
+    /// Slide the tuner page back out to the right (the inverse of its entry).
+    private func closeTuner() {
+        withAnimation(.easeInOut(duration: 0.35)) { showTuner = false }
     }
 
     private var inTune: Bool { tuner.frequency > 0 && abs(tuner.cents) <= tuneTolerance }
@@ -1577,19 +1700,33 @@ struct ContentView: View {
     }
 
     private func openTuner() {
+        guard requirePro(.tuner) else { return }
         metronome.stop()        // clicks would corrupt pitch detection
         showCommands = false
         showAccents = false
         tuner.start()
-        showTuner = true
+        withAnimation(.easeInOut(duration: 0.35)) { showTuner = true }
         TunerTip().invalidate(reason: .actionPerformed)
+    }
+
+    /// The freemium gate. Pro features funnel through here from every entry
+    /// point — buttons, voice commands, double-taps, VoiceOver actions — so the
+    /// check lives in exactly one place. Locked → swap whatever was opening for
+    /// the paywall, led by the feature that was just reached for.
+    private func requirePro(_ feature: ProFeature) -> Bool {
+        if pro.isPro { return true }
+        closePanels()
+        withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = feature }
+        return false
     }
 
     private func closePanels() {
         showCommands = false
-        showTuner = false       // the sheet's onDismiss stops the tuner
+        closeTuner()            // slides the page out; onChange stops the engine
         showTrainer = false
         showAccents = false
+        // "close" backs out of the paywall too
+        withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = nil }
         if showHelpMarks { dismissHelpMarks() }
     }
 
@@ -1653,6 +1790,7 @@ struct ContentView: View {
     }
 
     private func openPractice() {
+        guard requirePro(.practice) else { return }
         showCommands = false
         showTuner = false
         showAccents = false
@@ -1661,6 +1799,7 @@ struct ContentView: View {
     }
 
     private func openAccents() {
+        guard requirePro(.accents) else { return }
         showCommands = false
         showTuner = false
         showTrainer = false

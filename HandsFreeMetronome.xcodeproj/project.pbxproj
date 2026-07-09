@@ -16,6 +16,8 @@
 		A1000103 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000102 /* InfoPlist.strings */; };
 		A1000104 /* TunerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000105 /* TunerEngine.swift */; };
 		A1000200 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A1000201 /* Localizable.xcstrings */; };
+		A1000310 /* ProStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000300 /* ProStore.swift */; };
+		A1000311 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000301 /* PaywallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,9 @@
 		A1000100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1000105 /* TunerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerEngine.swift; sourceTree = "<group>"; };
 		A1000201 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		A1000300 /* ProStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProStore.swift; sourceTree = "<group>"; };
+		A1000301 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		A1000302 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,9 @@
 				A1000003 /* MetronomeEngine.swift */,
 				A1000004 /* VoiceController.swift */,
 				A1000105 /* TunerEngine.swift */,
+				A1000300 /* ProStore.swift */,
+				A1000301 /* PaywallView.swift */,
+				A1000302 /* Products.storekit */,
 				A1000005 /* Assets.xcassets */,
 				A1000006 /* Preview Content/Preview Assets.xcassets */,
 				A1000007 /* Info.plist */,
@@ -153,6 +161,8 @@
 				A1000013 /* MetronomeEngine.swift in Sources */,
 				A1000014 /* VoiceController.swift in Sources */,
 				A1000104 /* TunerEngine.swift in Sources */,
+				A1000310 /* ProStore.swift in Sources */,
+				A1000311 /* PaywallView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +228,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"HandsFreeMetronome/Preview Content\"";
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
@@ -233,7 +243,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -250,7 +260,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"HandsFreeMetronome/Preview Content\"";
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
@@ -265,7 +275,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
