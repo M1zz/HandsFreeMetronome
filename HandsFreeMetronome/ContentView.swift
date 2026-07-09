@@ -113,6 +113,7 @@ struct ContentView: View {
                               axis: (x: 0, y: 1, z: 0),
                               anchor: .trailing, perspective: cubePerspective)
             .offset(x: showTuner && !reduceMotion ? -UIScreen.main.bounds.width : 0)
+            .brightness(showTuner && !reduceMotion ? -0.18 : 0)
 
             // The tuner is a full-screen page that rolls in from the right —
             // the whole screen "turns" into it like a box face — not a sheet.
@@ -180,7 +181,7 @@ struct ContentView: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     if uitestArgs.contains("-uitest-tuner") {
                         tuner.start()
-                        withAnimation(.easeInOut(duration: 0.35)) { showTuner = true }
+                        withAnimation(tunerPageAnimation) { showTuner = true }
                     } else {
                         openTuner()
                     }
@@ -1581,7 +1582,7 @@ struct ContentView: View {
 
     /// Slide the tuner page back out to the right (the inverse of its entry).
     private func closeTuner() {
-        withAnimation(.easeInOut(duration: 0.35)) { showTuner = false }
+        withAnimation(tunerPageAnimation) { showTuner = false }
     }
 
     private var inTune: Bool { tuner.frequency > 0 && abs(tuner.cents) <= tuneTolerance }
@@ -1711,7 +1712,7 @@ struct ContentView: View {
         showCommands = false
         showAccents = false
         tuner.start()
-        withAnimation(.easeInOut(duration: 0.35)) { showTuner = true }
+        withAnimation(tunerPageAnimation) { showTuner = true }
         TunerTip().invalidate(reason: .actionPerformed)
     }
 
@@ -1798,7 +1799,7 @@ struct ContentView: View {
     private func openPractice() {
         guard requirePro(.practice) else { return }
         showCommands = false
-        showTuner = false
+        withAnimation(tunerPageAnimation) { showTuner = false }
         showAccents = false
         showTrainer = true
         PracticeTip().invalidate(reason: .actionPerformed)
@@ -1807,7 +1808,7 @@ struct ContentView: View {
     private func openAccents() {
         guard requirePro(.accents) else { return }
         showCommands = false
-        showTuner = false
+        withAnimation(tunerPageAnimation) { showTuner = false }
         showTrainer = false
         showAccents = true
         AccentGridTip().invalidate(reason: .actionPerformed)
@@ -1815,7 +1816,7 @@ struct ContentView: View {
 
     /// "help" pops up the list of commands you can say right now.
     private func showHelp() {
-        showTuner = false
+        withAnimation(tunerPageAnimation) { showTuner = false }
         showTrainer = false
         withAnimation(.easeOut(duration: 0.2)) { showHelpMarks = true }
         HelpVoiceTip().invalidate(reason: .actionPerformed)
@@ -2097,18 +2098,34 @@ struct DeveloperContactSection: View {
 }
 
 /// Shared by both faces of the tuner page-turn — mismatched perspectives would
-/// split the cuboid's shared edge mid-roll.
-let cubePerspective: CGFloat = 0.4
+/// split the cuboid's shared edge mid-roll. Kept subtle: strong perspective
+/// reads as warp, not depth, once the faces are in motion.
+let cubePerspective: CGFloat = 0.28
+
+/// One spring for every path that opens or closes the tuner page — mixed
+/// curves (or an unanimated snap) would make the same roll feel like two
+/// different gestures depending on how it was triggered.
+let tunerPageAnimation = Animation.smooth(duration: 0.5)
 
 /// One face of the rolling-box page turn: swings about the vertical edge it
-/// shares with the neighbouring face.
-struct CubeFace: ViewModifier {
-    let angle: Double
+/// shares with the neighbouring face. Animatable so the shading below tracks
+/// the interpolated angle frame by frame, not just the endpoints.
+struct CubeFace: ViewModifier, Animatable {
+    var angle: Double
     let edge: UnitPoint   // .leading for the incoming face, .trailing for the outgoing
 
+    var animatableData: Double {
+        get { angle }
+        set { angle = newValue }
+    }
+
     func body(content: Content) -> some View {
-        content.rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0),
-                                 anchor: edge, perspective: cubePerspective)
+        content
+            .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0),
+                              anchor: edge, perspective: cubePerspective)
+            // Faces darken as they turn away — the shading carries the depth
+            // cue, which lets the geometry stay gentle.
+            .brightness(-abs(angle) / 90 * 0.18)
     }
 }
 
