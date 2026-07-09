@@ -49,7 +49,7 @@ struct PaywallView: View {
         // chance if the launch-time load came up empty (offline, propagation).
         .onAppear {
             store.lastError = nil
-            if store.products.isEmpty { Task { await store.loadProducts() } }
+            Task { await store.loadProducts() }   // no-op once the set is complete
         }
         // A successful purchase (or restore) closes the paywall by itself,
         // dropping the user straight into the feature they reached for.

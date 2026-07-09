@@ -100,7 +100,11 @@ final class ProStore: ObservableObject {
     deinit { updatesTask?.cancel() }
 
     func loadProducts() async {
-        guard products.isEmpty else { return }
+        // Refetch while the set is incomplete, not just while it's empty:
+        // products propagate through App Store Connect one at a time, and an
+        // app that cached the partial set would hide the late arrivals until
+        // the next cold launch.
+        guard products.count < Self.allProductIDs.count else { return }
         do {
             let loaded = try await Product.products(for: Self.allProductIDs)
             // An empty result is NOT an error to StoreKit, but it is to us —
