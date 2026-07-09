@@ -163,8 +163,10 @@ final class ProStore: ObservableObject {
     }
 
     /// True when the user's first download was a paid-era build (< 3).
-    /// Sandbox caveat: TestFlight/sandbox reports originalAppVersion as "1.0",
-    /// so testers read as grandfathered there; production values are real.
+    /// Applies only in the production App Store: sandbox/TestFlight report
+    /// originalAppVersion as "1.0", so the environment check below skips the
+    /// clause there (otherwise every reviewer would be grandfathered into Pro and
+    /// never see the paywall — the App Review 2.1(b) rejection this guards against).
     private func isGrandfathered() async -> Bool {
         #if DEBUG
         // Dev builds have no App Store receipt, so AppTransaction.shared throws
@@ -180,6 +182,12 @@ final class ProStore: ObservableObject {
         grandfatherChecked = true
         guard let result = try? await AppTransaction.shared,
               case .verified(let appTransaction) = result else { return false }
+        // Only the production App Store reports a real originalAppVersion. Sandbox
+        // and TestFlight report "1.0", which would grandfather EVERY reviewer and
+        // auto-unlock Pro — so the paywall (where the IAPs live) never appears and
+        // App Review, which runs in the sandbox, files a 2.1(b) "can't locate the
+        // In-App Purchases" rejection. Gate the clause to production.
+        guard appTransaction.environment == .production else { return false }
         guard let firstComponent = appTransaction.originalAppVersion
             .split(separator: ".").first,
               let build = Int(firstComponent) else { return false }
