@@ -73,13 +73,27 @@ final class ProStore: ObservableObject {
     private var updatesTask: Task<Void, Never>?
     private static let cacheKey = "proEntitlementCached"
     private static let grandfatherKey = "proGrandfathered"
+
+    #if DEBUG
+    /// Dev builds run unlocked — the developer dogfoods Pro features daily and
+    /// the paywall must never block that. Launch with -paywall (or the
+    /// -uitest-paywall hook) to put the real gate back for testing purchases.
+    private static var debugUnlocked: Bool {
+        let args = ProcessInfo.processInfo.arguments
+        return !args.contains("-paywall") && !args.contains("-uitest-paywall")
+    }
+    #endif
     // AppTransaction.shared can raise a system App Store sign-in prompt when no
     // receipt is on disk, so attempt the grandfather check at most once per
     // launch (a positive result is cached in defaults and never re-asked).
     private var grandfatherChecked = false
 
     init() {
+        #if DEBUG
+        isPro = Self.debugUnlocked || UserDefaults.standard.bool(forKey: Self.cacheKey)
+        #else
         isPro = UserDefaults.standard.bool(forKey: Self.cacheKey)
+        #endif
         // Transactions can arrive outside a purchase flow (renewal, refund,
         // family sharing, purchase on another device) — keep listening for the
         // app's whole lifetime and re-derive the entitlement on every event.
@@ -127,6 +141,14 @@ final class ProStore: ObservableObject {
     /// Re-derive `isPro` from the verified current entitlements (or the paid-era
     /// grandfather clause) and cache it.
     func refreshEntitlement() async {
+        #if DEBUG
+        // Keep the dev override out of the UserDefaults cache: a cached `true`
+        // would leak Pro into a later -paywall test run.
+        if Self.debugUnlocked {
+            isPro = true
+            return
+        }
+        #endif
         var entitled = false
         for await entitlement in Transaction.currentEntitlements {
             if case .verified(let transaction) = entitlement,
