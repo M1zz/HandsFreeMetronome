@@ -25,7 +25,11 @@ final class VoiceController: ObservableObject {
         case start, stop, faster, slower, up, down, double, half
         case setTempo(Int)
         case setSubdivision(Int) // 1 quarter, 2 eighth, 3 triplet, 4 sixteenth
-        case help, tuner, dismiss, scrollUp, scrollDown, speedTrainer
+        case setBeats(Int)       // time-signature numerator, 1…8
+        case volumeUp, volumeDown, mute
+        case setVolume(Int)      // 0…100 percent
+        case toggleView, bounceView, orbitView   // beat visualization
+        case help, tuner, dismiss, scrollUp, scrollDown, practice
     }
 
     /// Mic buffers, broadcast so features like the tuner can share the input
@@ -41,7 +45,12 @@ final class VoiceController: ObservableObject {
 
     private let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
     private let audioEngine = AVAudioEngine()
+    /// The live recognition request. Swapped on the main thread (refresh) while
+    /// the mic tap reads it on the audio thread — an unguarded strong-property
+    /// race there can over-release and crash, so ALL access goes through
+    /// `requestLock` (see `currentRequest`/`setRequest`).
     private var request: SFSpeechAudioBufferRecognitionRequest?
+    private let requestLock = NSLock()
     private var task: SFSpeechRecognitionTask?
     private var awaitingRestart = false   // ignore late results after a command fires
     private var sessionGeneration = 0     // invalidates stale auto-refresh timers
@@ -52,6 +61,19 @@ final class VoiceController: ObservableObject {
     private var levelTick = 0
 
     var isListening: Bool { status == .listening }
+
+    /// Thread-safe access to `request` — read on the audio (tap) thread,
+    /// swapped on the main thread.
+    private var currentRequest: SFSpeechAudioBufferRecognitionRequest? {
+        requestLock.lock(); defer { requestLock.unlock() }
+        return request
+    }
+
+    private func setRequest(_ newValue: SFSpeechAudioBufferRecognitionRequest?) {
+        requestLock.lock()
+        request = newValue
+        requestLock.unlock()
+    }
 
     func toggle() { isListening ? stop() : requestAndStart() }
 
@@ -74,15 +96,31 @@ final class VoiceController: ObservableObject {
             status = .unavailable
             return
         }
+        // Re-assert a record-capable session HERE, not only at metronome-engine
+        // init: on a first launch that init runs before the mic permission exists,
+        // and its early setActive can fail — leaving recording illegal even after
+        // the user grants both permissions.
+        let session = AVAudioSession.sharedInstance()
+        try? session.setCategory(.playAndRecord, mode: .default,
+                                 options: [.mixWithOthers, .defaultToSpeaker, .allowBluetooth])
+        try? session.setActive(true)
         // Set up the mic + tap ONCE and keep them running for the whole listening
         // session. Only the lightweight recognition request/task is recycled after
         // this (see refresh). Repeatedly stopping/starting the audio engine while
         // the metronome's engine also runs is what made recognition die over time.
         let input = audioEngine.inputNode
         let format = input.outputFormat(forBus: 0)
+        // A dead input reports 0 Hz / 0 channels, and installTap raises an
+        // uncatchable Objective-C exception on such a format — the app dies on the
+        // spot. Bail to a visible "unavailable" state instead; the metronome
+        // itself keeps working without the mic.
+        guard format.sampleRate > 0, format.channelCount > 0 else {
+            status = .unavailable
+            return
+        }
         input.removeTap(onBus: 0)
         input.installTap(onBus: 0, bufferSize: 1024, format: format) { [weak self] buffer, _ in
-            self?.request?.append(buffer)
+            self?.currentRequest?.append(buffer)
             self?.onAudioBuffer?(buffer)
             self?.updateLevel(buffer)
         }
@@ -115,7 +153,7 @@ final class VoiceController: ObservableObject {
     /// new request immediately, so recognition is swapped without touching the engine.
     private func beginRecognition() {
         guard status == .listening, let recognizer else { return }
-        request?.endAudio()
+        currentRequest?.endAudio()
         task?.cancel()
 
         // Bump the generation BEFORE creating the new task. Callbacks from the task
@@ -131,7 +169,7 @@ final class VoiceController: ObservableObject {
         // On devices without it, forcing it makes recognition return no result and
         // no error — the mic appears dead. Fall back to server recognition instead.
         request.requiresOnDeviceRecognition = recognizer.supportsOnDeviceRecognition
-        self.request = request
+        setRequest(request)
         awaitingRestart = false
 
         task = recognizer.recognitionTask(with: request) { [weak self] result, error in
@@ -169,10 +207,10 @@ final class VoiceController: ObservableObject {
             audioEngine.stop()
             audioEngine.inputNode.removeTap(onBus: 0)
         }
-        request?.endAudio()
+        currentRequest?.endAudio()
         task?.cancel()
         task = nil
-        request = nil
+        setRequest(nil)
         smoothedLevel = 0
         lastPublishedLevel = -1
         audioLevel = 0
@@ -223,8 +261,22 @@ final class VoiceController: ObservableObject {
     private func command(in text: String) -> Command? {
         if contains(text, ["help"]) { return .help }
         if contains(text, ["tune", "tuner"]) { return .tuner }
-        // Toggle the speed trainer (auto tempo climb). Checked before "up"/numbers.
-        if contains(text, ["trainer", "increase"]) { return .speedTrainer }
+        // Open the practice-mode modal (auto tempo climb). Checked before "up"/numbers.
+        if contains(text, ["practice", "trainer"]) { return .practice }
+        // Beat visualization. Specific styles before the generic "view" toggle.
+        if contains(text, ["orbit", "circle", "circular"]) { return .orbitView }
+        if contains(text, ["bounce", "vertical"]) { return .bounceView }
+        if contains(text, ["switch view", "change view", "view", "visual"]) { return .toggleView }
+        // Volume. "volume 60" sets a percent; louder/quieter nudge; mute silences.
+        if contains(text, ["mute", "silent", "silence"]) { return .mute }
+        if contains(text, ["volume", "louder", "quieter", "softer"]) {
+            if contains(text, ["volume"]), let n = firstNumber(in: text) { return .setVolume(n) }
+            if contains(text, ["louder"]) || (contains(text, ["volume"]) && contains(text, ["up"])) { return .volumeUp }
+            if contains(text, ["quieter", "softer"]) || (contains(text, ["volume"]) && contains(text, ["down"])) { return .volumeDown }
+        }
+        // Time signature — "three beats", "4 beats". Requires the word "beat" so it
+        // never collides with tempo numbers or subdivisions.
+        if contains(text, ["beat"]), let n = beatsCount(in: text) { return .setBeats(n) }
         // Scroll the help list by voice — checked before up/down (tempo) and
         // before close words so "scroll down" doesn't change tempo or close.
         if contains(text, ["scroll"]) {
@@ -246,6 +298,15 @@ final class VoiceController: ObservableObject {
         if contains(text, ["up", "higher"]) { return .up }
         if contains(text, ["down", "lower"]) { return .down }
         if let n = firstNumber(in: text) { return .setTempo(n) }
+        return nil
+    }
+
+    /// A time-signature count (1…8) as a digit or a spelled-out word.
+    private func beatsCount(in text: String) -> Int? {
+        let words: [(String, Int)] = [("one", 1), ("two", 2), ("three", 3), ("four", 4),
+                                      ("five", 5), ("six", 6), ("seven", 7), ("eight", 8)]
+        for (w, n) in words where text.contains(w) { return n }
+        if let r = text.range(of: "[1-8]", options: .regularExpression) { return Int(text[r]) }
         return nil
     }
 

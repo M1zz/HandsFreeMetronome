@@ -129,8 +129,12 @@ final class TunerEngine: ObservableObject {
     }
 
     static func noteInfo(_ freq: Double) -> (String, Double) {
+        // log2 of a non-positive frequency is NaN/-inf, and Int(NaN) below would
+        // trap. detectPitch already filters, but never trust the input here.
+        guard freq.isFinite, freq > 0 else { return ("—", 0) }
         let names = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"]
         let midi = 69 + 12 * log2(freq / 440)
+        guard midi.isFinite else { return ("—", 0) }
         let nearest = midi.rounded()
         let cents = (midi - nearest) * 100
         let idx = ((Int(nearest) % 12) + 12) % 12

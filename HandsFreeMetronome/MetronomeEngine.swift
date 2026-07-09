@@ -1,5 +1,8 @@
 import Foundation
 import AVFoundation
+import os
+
+private let engineLog = Logger(subsystem: "com.handsfree.metronome", category: "engine")
 
 /// Sample-accurate metronome driven by AVAudioEngine.
 /// Generates a short click programmatically — no audio assets required.
@@ -20,6 +23,7 @@ final class MetronomeEngine: ObservableObject {
     @Published var subdivision: Int = 1 {
         didSet {
             UserDefaults.standard.set(subdivision, forKey: Self.subdivisionKey)
+            syncPlaybackLevels()
             if isPlaying { reschedule() }
         }
     }
@@ -29,9 +33,42 @@ final class MetronomeEngine: ObservableObject {
     @Published var beatsPerMeasure = 4 {
         didSet {
             UserDefaults.standard.set(beatsPerMeasure, forKey: Self.beatsKey)
+            syncPlaybackLevels()
             if isPlaying { reschedule() }
         }
     }
+
+    /// Output level for the click, 0…1. Bound to the volume slider; applied straight
+    /// to the engine's main mixer so it takes effect immediately, even mid-play.
+    /// Do not re-assign inside didSet (it is bound to a Slider) — clamp in the setter.
+    @Published var volume: Float = 1.0 {
+        didSet {
+            UserDefaults.standard.set(volume, forKey: Self.volumeKey)
+            engine.mainMixerNode.outputVolume = volume
+        }
+    }
+
+    /// The largest time-signature numerator the app supports. Kept here so the UI and
+    /// the engine agree on the same ceiling (the dot grid lays out up to this many).
+    static let maxBeatsPerMeasure = 8
+
+    /// The loudness level of one click of the measure.
+    enum ClickLevel: Int {
+        case mute = 0   // a rest — no click at all
+        case low = 1    // the soft 1000 Hz click
+        case high = 2   // the bright 1500 Hz click (2000 Hz on the downbeat)
+    }
+
+    /// Level of every click across the WHOLE measure, keyed by
+    /// `beatsPerMeasure * 10 + subdivision` — one entry per click, so 4/4 with
+    /// sixteenths gives 16 independently settable cells (max 8×4 = 32).
+    /// Default: the first click of every beat high, the rest low.
+    /// Kept per (beats, subdivision) combination so patterns survive switching.
+    @Published private(set) var accentLevels: [Int: [Int]] = [:]
+
+    /// Named, user-saved accent patterns (per song). Each remembers its own meter
+    /// and subdivision, and applying one switches the metronome to match.
+    @Published private(set) var accentPresets: [AccentPreset] = []
 
     // MARK: Speed trainer — automatically climb the tempo as you practise, so you
     // can drill a passage a little faster every few bars without touching anything.
@@ -51,9 +88,14 @@ final class MetronomeEngine: ObservableObject {
     private static let bpmKey = "metronome.bpm"
     private static let subdivisionKey = "metronome.subdivision"
     private static let beatsKey = "metronome.beatsPerMeasure"
+    private static let volumeKey = "metronome.volume"
     private static let trainerStepKey = "metronome.trainerStep"
     private static let trainerBarsKey = "metronome.trainerBars"
     private static let trainerTargetKey = "metronome.trainerTarget"
+    private static func accentKey(beats: Int, sub: Int) -> String {
+        "metronome.accentLevels.\(beats)x\(sub)"
+    }
+    private static let presetsKey = "metronome.accentPresets"
 
     /// Fires on the main thread on each beat (quarter note), passing the beat's
     /// index within the measure (0 = downbeat). Used to animate the UI.
@@ -72,6 +114,14 @@ final class MetronomeEngine: ObservableObject {
                                            qos: .userInteractive)
     private var tick = 0 // position counter — only touched on timerQueue
 
+    /// Snapshot of the current measure's click levels for the audio tick.
+    /// `fireTick` runs on `timerQueue` while the accent editor mutates
+    /// `accentLevels` on the main thread — reading a Dictionary that is being
+    /// written corrupts memory, so playback only ever reads this lock-guarded
+    /// copy, refreshed on every mutation.
+    private let levelsLock = NSLock()
+    private var playbackLevels: [Int] = []
+
     init() {
         // Restore the last-used settings (default 100 BPM, 4/4, quarters on first run).
         let defaults = UserDefaults.standard
@@ -82,7 +132,10 @@ final class MetronomeEngine: ObservableObject {
             subdivision = min(4, max(1, defaults.integer(forKey: Self.subdivisionKey)))
         }
         if defaults.object(forKey: Self.beatsKey) != nil {
-            beatsPerMeasure = min(12, max(1, defaults.integer(forKey: Self.beatsKey)))
+            beatsPerMeasure = min(Self.maxBeatsPerMeasure, max(1, defaults.integer(forKey: Self.beatsKey)))
+        }
+        if defaults.object(forKey: Self.volumeKey) != nil {
+            volume = min(1, max(0, defaults.float(forKey: Self.volumeKey)))
         }
         if defaults.object(forKey: Self.trainerStepKey) != nil {
             trainerStep = min(20, max(1, defaults.integer(forKey: Self.trainerStepKey)))
@@ -93,6 +146,18 @@ final class MetronomeEngine: ObservableObject {
         if defaults.object(forKey: Self.trainerTargetKey) != nil {
             trainerTarget = clampBPM(defaults.integer(forKey: Self.trainerTargetKey))
         }
+        for beats in 1...Self.maxBeatsPerMeasure {
+            for sub in 1...4 {
+                if let stored = defaults.array(forKey: Self.accentKey(beats: beats, sub: sub)) as? [Int],
+                   stored.count == beats * sub {
+                    accentLevels[beats * 10 + sub] = stored.map { min(2, max(0, $0)) }
+                }
+            }
+        }
+        if let data = defaults.data(forKey: Self.presetsKey),
+           let decoded = try? JSONDecoder().decode([AccentPreset].self, from: data) {
+            accentPresets = decoded
+        }
         configureSession()
         // Clean, pure-tone clicks. Distinct pitches mark accent / beat / subdivision.
         accentClick = makeClick(freq: 2000, volume: 1.0)
@@ -100,16 +165,34 @@ final class MetronomeEngine: ObservableObject {
         subClick = makeClick(freq: 1000, volume: 0.7)
         engine.attach(player)
         engine.connect(player, to: engine.mainMixerNode, format: accentClick?.format)
-        engine.mainMixerNode.outputVolume = 1.0   // drive the output at full level
+        engine.mainMixerNode.outputVolume = volume   // honour the saved level
+        syncPlaybackLevels()
+        // A call / Siri / alarm taking the audio hardware stops the engine out
+        // from under us. Fold that into a clean user-visible stop instead of
+        // leaving a running timer scheduling into a dead engine.
+        NotificationCenter.default.addObserver(
+            forName: AVAudioSession.interruptionNotification,
+            object: nil, queue: .main
+        ) { [weak self] note in
+            guard let raw = note.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt,
+                  AVAudioSession.InterruptionType(rawValue: raw) == .began else { return }
+            self?.stop()
+        }
     }
 
     private func configureSession() {
         let session = AVAudioSession.sharedInstance()
         // .playAndRecord lets the click coexist with speech recognition.
-        try? session.setCategory(.playAndRecord,
-                                 mode: .default,
-                                 options: [.mixWithOthers, .defaultToSpeaker, .allowBluetooth])
-        try? session.setActive(true)
+        do {
+            try session.setCategory(.playAndRecord,
+                                    mode: .default,
+                                    options: [.mixWithOthers, .defaultToSpeaker, .allowBluetooth])
+            try session.setActive(true)
+        } catch {
+            // Non-fatal: the click may be quieter or route oddly, but the app still
+            // runs. Surface it in the log so a silent-metronome report is diagnosable.
+            engineLog.error("Audio session setup failed: \(error.localizedDescription, privacy: .public)")
+        }
     }
 
     /// A clean pitched click: a pure sine with a smooth attack and a decay that
@@ -121,7 +204,8 @@ final class MetronomeEngine: ObservableObject {
         guard let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1),
               let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: frames) else { return nil }
         buffer.frameLength = frames
-        let ptr = buffer.floatChannelData![0]
+        guard let channels = buffer.floatChannelData else { return nil }
+        let ptr = channels[0]
         let n = Int(frames)
         let attack = 0.0015 * sampleRate             // 1.5 ms fade-in kills the onset click
         let release = 0.004 * sampleRate             // 4 ms fade-out guarantees a silent tail
@@ -140,7 +224,22 @@ final class MetronomeEngine: ObservableObject {
 
     func start() {
         guard !isPlaying else { return }
-        if !engine.isRunning { try? engine.start() }
+        if !engine.isRunning {
+            do {
+                try engine.start()
+            } catch {
+                // The graph couldn't start (e.g. an interruption is in flight).
+                // Bail cleanly rather than flipping to a "playing" state with no sound.
+                engineLog.error("Audio engine start failed: \(error.localizedDescription, privacy: .public)")
+                return
+            }
+        }
+        // Re-check: an interruption can kill the engine between start() succeeding
+        // and here, and play() on a dead engine is an uncatchable ObjC exception.
+        guard engine.isRunning else {
+            engineLog.error("Audio engine not running after start — aborting play")
+            return
+        }
         player.play()
         isPlaying = true
         tick = 0
@@ -152,6 +251,11 @@ final class MetronomeEngine: ObservableObject {
         isPlaying = false
         beatTimer?.cancel()
         beatTimer = nil
+        // Barrier: wait for any in-flight fireTick to finish before tearing the
+        // audio down. Stopping the player while another thread is inside
+        // scheduleBuffer raises an uncatchable ObjC exception (instant crash).
+        // Safe to sync here: fireTick never blocks back on the main thread.
+        timerQueue.sync {}
         player.stop()
         // Release the audio render pipeline while paused so an idle metronome
         // doesn't keep the audio thread (and CPU) spinning. start() restarts it.
@@ -187,10 +291,18 @@ final class MetronomeEngine: ObservableObject {
         let pos = tick % ticksPerMeasure
         let isBeat = pos % sub == 0          // a quarter-note pulse
         let isDownbeat = pos == 0            // beat 1 of the measure
-        let buffer = isDownbeat ? accentClick
-                   : isBeat     ? beatClick
-                   :              subClick
-        if let buffer {
+        // Every click of the measure carries its own level — high, low, or a silent
+        // rest — so all 4×4 = 16 sixteenth cells in 4/4 are fully customizable. The
+        // downbeat keeps its extra-high chime only while its cell is high.
+        let buffer: AVAudioPCMBuffer?
+        switch playbackLevel(at: pos) {
+        case .high: buffer = isDownbeat ? accentClick : beatClick
+        case .low:  buffer = subClick
+        case .mute: buffer = nil   // a rest — the beat still animates, just no sound
+        }
+        // Skip scheduling if an interruption stopped the engine under us — the
+        // interruption observer will stop() cleanly a moment later.
+        if let buffer, engine.isRunning {
             player.scheduleBuffer(buffer, at: nil, options: [], completionHandler: nil)
         }
         if isBeat {
@@ -234,7 +346,111 @@ final class MetronomeEngine: ObservableObject {
     func doubleTempo() { bpm = clampBPM(bpm * 2) }
     func halfTempo() { bpm = clampBPM(bpm / 2) }
     func setSubdivision(_ value: Int) { subdivision = min(4, max(1, value)) }
-    func setBeatsPerMeasure(_ n: Int) { beatsPerMeasure = min(12, max(1, n)) }
+
+    /// The stock pattern for a (beats, subdivision) layout: the first click of every
+    /// beat high, the rest low — with an undivided beat every beat is high.
+    static func defaultAccentLevels(beats: Int, sub: Int) -> [Int] {
+        let s = max(1, sub)
+        return (0..<(beats * s)).map { $0 % s == 0 ? ClickLevel.high.rawValue
+                                                   : ClickLevel.low.rawValue }
+    }
+
+    /// The click levels for the measure layout currently in use.
+    var currentAccentLevels: [Int] {
+        let sub = max(1, subdivision)
+        return accentLevels[beatsPerMeasure * 10 + sub]
+            ?? Self.defaultAccentLevels(beats: beatsPerMeasure, sub: sub)
+    }
+
+    /// Level of click `tick` (0 = the measure's downbeat) in the current layout.
+    /// Main-thread/UI use only — the audio tick reads `playbackLevel(at:)`.
+    func clickLevel(at tick: Int) -> ClickLevel {
+        let levels = currentAccentLevels
+        guard (0..<levels.count).contains(tick) else { return .low }
+        return ClickLevel(rawValue: levels[tick]) ?? .low
+    }
+
+    /// Same lookup for `fireTick` on `timerQueue`, via the lock-guarded snapshot.
+    private func playbackLevel(at tick: Int) -> ClickLevel {
+        levelsLock.lock()
+        let levels = playbackLevels
+        levelsLock.unlock()
+        guard (0..<levels.count).contains(tick) else { return .low }
+        return ClickLevel(rawValue: levels[tick]) ?? .low
+    }
+
+    /// Refresh the audio tick's snapshot. Call after ANY change to the measure
+    /// layout or its levels (meter, subdivision, accent edits, presets, reset).
+    private func syncPlaybackLevels() {
+        let levels = currentAccentLevels
+        levelsLock.lock()
+        playbackLevels = levels
+        levelsLock.unlock()
+    }
+
+    /// Step click `tick` to its next level: high → low → mute (rest) → high…
+    func cycleClickLevel(at tick: Int) {
+        var levels = currentAccentLevels
+        guard (0..<levels.count).contains(tick) else { return }
+        levels[tick] = (levels[tick] + 2) % 3   // 2→1→0→2
+        storeCurrentLevels(levels)
+    }
+
+    /// Restore the stock pattern for the current measure layout.
+    func resetAccents() {
+        let sub = max(1, subdivision)
+        let beats = beatsPerMeasure
+        accentLevels[beats * 10 + sub] = Self.defaultAccentLevels(beats: beats, sub: sub)
+        UserDefaults.standard.removeObject(forKey: Self.accentKey(beats: beats, sub: sub))
+        syncPlaybackLevels()
+    }
+
+    private func storeCurrentLevels(_ levels: [Int]) {
+        let sub = max(1, subdivision)
+        let beats = beatsPerMeasure
+        accentLevels[beats * 10 + sub] = levels
+        UserDefaults.standard.set(levels, forKey: Self.accentKey(beats: beats, sub: sub))
+        syncPlaybackLevels()
+    }
+
+    // MARK: Accent presets — named per-song patterns
+
+    /// Snapshot the current pattern (meter + subdivision + levels) under a name.
+    func saveAccentPreset(named name: String) {
+        let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        let preset = AccentPreset(name: trimmed,
+                                  beats: beatsPerMeasure,
+                                  sub: max(1, subdivision),
+                                  levels: currentAccentLevels)
+        accentPresets.append(preset)
+        persistPresets()
+    }
+
+    /// Recall a preset: switches the meter and subdivision to match, then loads
+    /// its pattern as the working one for that layout.
+    func applyAccentPreset(_ preset: AccentPreset) {
+        guard preset.levels.count == preset.beats * preset.sub else { return }
+        setBeatsPerMeasure(preset.beats)
+        setSubdivision(preset.sub)
+        let levels = preset.levels.map { min(2, max(0, $0)) }
+        accentLevels[preset.beats * 10 + preset.sub] = levels
+        UserDefaults.standard.set(levels, forKey: Self.accentKey(beats: preset.beats, sub: preset.sub))
+        syncPlaybackLevels()
+    }
+
+    func deleteAccentPreset(_ preset: AccentPreset) {
+        accentPresets.removeAll { $0.id == preset.id }
+        persistPresets()
+    }
+
+    private func persistPresets() {
+        if let data = try? JSONEncoder().encode(accentPresets) {
+            UserDefaults.standard.set(data, forKey: Self.presetsKey)
+        }
+    }
+    func setBeatsPerMeasure(_ n: Int) { beatsPerMeasure = min(Self.maxBeatsPerMeasure, max(1, n)) }
+    func setVolume(_ value: Float) { volume = min(1, max(0, value)) }
 
     private func clampBPM(_ value: Int) -> Int { min(260, max(30, value)) }
 
@@ -260,6 +476,16 @@ final class MetronomeEngine: ObservableObject {
         default: return "Prestissimo"
         }
     }
+}
+
+/// A named, user-saved accent pattern. Remembers its own meter and subdivision so
+/// recalling it restores the whole rhythmic setup for a song.
+struct AccentPreset: Codable, Identifiable, Equatable {
+    var id = UUID()
+    var name: String
+    var beats: Int
+    var sub: Int
+    var levels: [Int]   // one ClickLevel rawValue per click of the measure
 }
 
 /// A short two-note chime ("뾰롱") played to confirm a recognized voice command.

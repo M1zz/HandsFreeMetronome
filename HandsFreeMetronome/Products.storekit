@@ -1,0 +1,80 @@
+{
+  "identifier" : "3A6D2F40-1B7E-4C2A-9E5D-8F0A1B2C3D4E",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "6.99",
+      "familyShareable" : false,
+      "internalID" : "5C8E4A62-3D9F-4E1B-A7C0-2B4D6F8A0C1E",
+      "localizations" : [
+        {
+          "description" : "Practice mode, accent editor with presets, and the chromatic tuner — pay once, yours forever.",
+          "displayName" : "Pro Lifetime",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "연습 모드, 악센트 에디터·프리셋, 크로매틱 튜너 — 한 번 결제로 평생 소장.",
+          "displayName" : "Pro 평생 소장",
+          "locale" : "ko"
+        }
+      ],
+      "productID" : "com.leeo.HandsFreeMetronome.pro.lifetime",
+      "referenceName" : "Pro Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "7E2B9C14-6A5D-4F3E-B8A1-0D2C4E6F8A9B",
+      "localizations" : [
+
+      ],
+      "name" : "Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "2.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "9F4C1E83-2B6A-4D5F-8E0C-3A7B5D9F1C2E",
+          "introductoryOffer" : {
+            "internalID" : "1D8A3F52-4C7E-4B9A-A6E2-5F0B8D2C4A6E",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Practice mode, accent editor with presets, and the chromatic tuner.",
+              "displayName" : "Pro Yearly",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "연습 모드, 악센트 에디터·프리셋, 크로매틱 튜너.",
+              "displayName" : "Pro 연간",
+              "locale" : "ko"
+            }
+          ],
+          "productID" : "com.leeo.HandsFreeMetronome.pro.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro Yearly",
+          "subscriptionGroupID" : "7E2B9C14-6A5D-4F3E-B8A1-0D2C4E6F8A9B",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
