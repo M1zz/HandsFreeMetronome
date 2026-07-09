@@ -20,16 +20,16 @@ one-time lifetime purchase.
 - Not My Tempo Pro 출시 — 연습 모드(스피드 트레이너), 악센트 에디터·프리셋, 크로매틱 튜너를 하나로 묶었습니다. 연간 구독(무료 체험 포함) 또는 한 번 결제로 평생 소장.
 - **이미 앱을 구매하셨던 분은 모든 Pro 기능이 그대로 무료입니다** — 추가 결제 없이 자동 적용됩니다.
 - 메트로놈의 모든 핵심 기능과 음성 제어·접근성 기능은 지금처럼 계속 무료입니다.
-- 튜너가 아래에서 올라오는 시트 대신, 화면이 왼쪽으로 밀리며 전용 페이지로 전환됩니다. Back 버튼이나 오른쪽 스와이프, "close"로 돌아옵니다.
-- 구매 복원은 Pro 화면 우상단 Restore 버튼으로 언제든 가능합니다.
+- 튜너가 전용 페이지가 되었습니다 — 상자가 옆으로 구르듯 화면이 입체적으로 넘어갑니다. Back 버튼이나 오른쪽 스와이프, "close"로 돌아옵니다.
+- 구매 화면을 다듬었습니다: 가격이 안 뜨면 재시도할 수 있고, 자동 갱신 조건과 개인정보처리방침·이용약관이 명확히 표시되며, 구매 복원은 하단 Restore Purchases로 언제든 가능합니다.
 
 ### App Store (English)
 
 - Introducing Not My Tempo Pro — practice mode (speed trainer), the accent editor with presets, and the chromatic tuner, in one unlock: a yearly subscription with a free trial, or a one-time lifetime purchase.
 - **If you already bought this app, every Pro feature stays free for you** — applied automatically, nothing to pay again.
 - Everything else — the full metronome, voice control, and every accessibility feature — stays free.
-- The tuner now slides in as its own full-screen page (the screen pushes left) instead of a bottom sheet. Go back with the Back button, a rightward swipe, or "close".
-- Restore a previous purchase anytime from the Restore button on the Pro screen.
+- The tuner is now its own full-screen page — the screen rolls over to it like the side of a box turning to face you. Go back with the Back button, a rightward swipe, or "close".
+- A more polished purchase screen: prices retry when they fail to load, renewal terms and Privacy Policy / Terms of Use are spelled out, and Restore Purchases sits at the bottom whenever you need it.
 
 ### Details (한국어)
 
@@ -46,9 +46,15 @@ one-time lifetime purchase.
   AppTransaction의 최초 다운로드 빌드가 3(1.0.5) 미만이면 Pro를 영구
   부여합니다. 판정은 성공 시 캐시되며, Restore가 영수증 동기화 후 재판정합니다.
 - 튜너·페이월은 시트가 아닌 ZStack 오버레이 페이지입니다 — TipKit 팝오버가
-  떠 있는 동안 시트 프레젠테이션이 조용히 실패하는 충돌을 구조적으로 회피하고,
-  튜너는 iOS 내비게이션 푸시처럼 메인 화면이 왼쪽으로 밀리며(패럴랙스 −80pt)
-  오른쪽에서 들어옵니다. Reduce Motion에서는 페이드로 대체됩니다.
+  떠 있는 동안 시트 프레젠테이션이 조용히 실패하는 충돌을 구조적으로 회피합니다.
+- 튜너 전환은 3D 큐브 롤: 메인 화면과 튜너가 한 상자의 두 면처럼 공유 모서리를
+  맞대고 굴러갑니다(스프링 곡선 0.5s, 원근 0.28, 돌아간 면은 최대 18% 음영).
+  "practice"·"accents"·"help" 등 어떤 경로로 닫혀도 같은 스프링으로 굴러
+  돌아가며, Reduce Motion에서는 페이드로 대체됩니다.
+- 페이월 신뢰성: 상품 조회가 빈 결과로 와도(전파 지연 등) 재시도 버튼이 뜨고,
+  상품 세트가 불완전하면 페이월을 열 때마다 다시 받아옵니다. 복원은 진행
+  스피너와 "결과 없음" 피드백을 표시하고, 연간 상품에는 자동 갱신 고지(3.1.2)가
+  가격과 함께 표기됩니다.
 
 ### Details (English)
 
@@ -69,9 +75,17 @@ one-time lifetime purchase.
   re-checks after syncing the receipt.
 - The tuner and the paywall are ZStack overlay pages, not sheets — sidestepping
   a conflict where an active TipKit popover silently swallows sheet
-  presentations. The tuner enters like a navigation push: the main screen
-  slides left (−80pt parallax) as the page arrives from the right; Reduce
-  Motion falls back to a cross-fade.
+  presentations.
+- The tuner transition is a 3D cube roll: the main layout and the tuner behave
+  as two faces of one box sharing an edge (smooth spring 0.5s, perspective
+  0.28, faces shade up to 18% as they turn away). Every close path —
+  "practice", "accents", "help", swipe, "close" — rolls back with the same
+  spring; Reduce Motion falls back to a cross-fade.
+- Paywall reliability: an empty product response (e.g. App Store Connect still
+  propagating) degrades to a visible retry, and an incomplete product set is
+  refetched every time the paywall opens. Restore shows a progress spinner and
+  a "nothing found" message, and the yearly plan carries the 3.1.2
+  auto-renewal disclosure next to its price.
 
 ## 1.0.4
 
