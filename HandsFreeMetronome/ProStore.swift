@@ -67,6 +67,7 @@ final class ProStore: ObservableObject {
     @Published private(set) var products: [Product] = []
 
     @Published private(set) var isPurchasing = false
+    @Published private(set) var isRestoring = false
     @Published var lastError: String?
 
     private var updatesTask: Task<Void, Never>?
@@ -102,8 +103,18 @@ final class ProStore: ObservableObject {
         guard products.isEmpty else { return }
         do {
             let loaded = try await Product.products(for: Self.allProductIDs)
+            // An empty result is NOT an error to StoreKit, but it is to us —
+            // without a message the paywall would sit on "Loading prices…"
+            // forever (typical causes: products still propagating in App Store
+            // Connect, missing metadata, or no StoreKit configuration when
+            // running in the simulator).
+            guard !loaded.isEmpty else {
+                lastError = "Prices aren\u{2019}t available right now."
+                return
+            }
             // Yearly first: the subscription is the lead offer, lifetime the anchor.
             products = loaded.sorted { a, _ in a.id == Self.yearlyID }
+            lastError = nil
         } catch {
             lastError = error.localizedDescription
         }
@@ -129,6 +140,15 @@ final class ProStore: ObservableObject {
     /// Sandbox caveat: TestFlight/sandbox reports originalAppVersion as "1.0",
     /// so testers read as grandfathered there; production values are real.
     private func isGrandfathered() async -> Bool {
+        #if DEBUG
+        // Dev builds have no App Store receipt, so AppTransaction.shared throws
+        // up a system Apple-Account sign-in sheet — right on top of the paywall.
+        // Sandbox receipts also report originalAppVersion as "1.0", which would
+        // mark every tester as grandfathered and make the paywall untestable.
+        // Production (App Store) installs always carry a receipt, so the real
+        // check below runs silently there.
+        return false
+        #else
         if UserDefaults.standard.bool(forKey: Self.grandfatherKey) { return true }
         guard !grandfatherChecked else { return false }
         grandfatherChecked = true
@@ -142,6 +162,7 @@ final class ProStore: ObservableObject {
             UserDefaults.standard.set(true, forKey: Self.grandfatherKey)
         }
         return grandfathered
+        #endif
     }
 
     func purchase(_ product: Product) async {
@@ -168,6 +189,9 @@ final class ProStore: ObservableObject {
 
     /// Restore for users on a new device (also an App Review requirement).
     func restore() async {
+        guard !isRestoring else { return }
+        isRestoring = true
+        defer { isRestoring = false }
         do {
             try await AppStore.sync()
         } catch {
@@ -175,5 +199,8 @@ final class ProStore: ObservableObject {
         }
         grandfatherChecked = false   // sync refreshed the receipt — check anew
         await refreshEntitlement()
+        // Restoring must never end in silence: either the paywall closes
+        // (isPro flipped true) or the user learns nothing was found.
+        if !isPro { lastError = "No previous purchase was found." }
     }
 }

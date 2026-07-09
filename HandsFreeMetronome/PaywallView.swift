@@ -26,25 +26,16 @@ struct PaywallView: View {
         // its bar resolves — the slide-up would flash blank. The hand-rolled
         // header renders on the transition's very first frame.
         VStack(spacing: 0) {
-            ZStack {
-                Text("Not My Tempo Pro").font(.headline)
-                HStack {
-                    Button("Not now") { onClose() }
-                        .accessibilityInputLabels(["Not now", "Close", "Dismiss"])
-                    Spacer()
-                    Button("Restore") { Task { await store.restore() } }
-                        .accessibilityHint("Restores a previous Pro purchase")
-                        .accessibilityInputLabels(["Restore", "Restore purchases"])
-                }
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 12)
+            Text("Not My Tempo Pro")
+                .font(.headline)
+                .padding(.vertical, 12)
 
             ScrollView {
                 VStack(spacing: 22) {
                     header
                     featureList
                     purchaseButtons
+                    notNowButton
                     freeReassurance
                     footerLinks
                 }
@@ -53,6 +44,13 @@ struct PaywallView: View {
             .scrollBounceBehavior(.basedOnSize)
         }
         .background(Color(.systemGroupedBackground).ignoresSafeArea())
+        // Stale messages from a previous visit would read as answers to
+        // questions the user hasn't asked yet — reset, and give prices another
+        // chance if the launch-time load came up empty (offline, propagation).
+        .onAppear {
+            store.lastError = nil
+            if store.products.isEmpty { Task { await store.loadProducts() } }
+        }
         // A successful purchase (or restore) closes the paywall by itself,
         // dropping the user straight into the feature they reached for.
         .onChange(of: store.isPro) { unlocked in
@@ -109,14 +107,22 @@ struct PaywallView: View {
             // Store unreachable (offline / products not yet approved): degrade
             // to a retry, never a dead end.
             VStack(spacing: 10) {
-                Text(store.lastError == nil
-                     ? "Loading prices…"
-                     : "Couldn\u{2019}t reach the App Store.")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                Button("Try again") { Task { await store.loadProducts() } }
+                if store.lastError == nil {
+                    ProgressView()
+                    Text("Loading prices…")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                } else {
+                    Text("Couldn\u{2019}t load prices from the App Store.")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                    Button("Try again") {
+                        store.lastError = nil
+                        Task { await store.loadProducts() }
+                    }
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(brass)
+                }
             }
             .padding(.vertical, 8)
         } else {
@@ -124,12 +130,26 @@ struct PaywallView: View {
                 ForEach(store.products, id: \.id) { product in
                     purchaseButton(product)
                 }
-                if store.products.contains(where: { $0.subscription?.introductoryOffer != nil }) {
-                    Text("Cancel anytime in Settings. The trial converts unless cancelled.")
-                        .font(.caption2)
+                if let error = store.lastError {
+                    Text(error)
+                        .font(.footnote)
                         .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                        .accessibilityLabel(error)
                 }
+                renewalDisclosure
             }
+        }
+    }
+
+    /// App Review 3.1.2: auto-renew terms must be stated next to the price.
+    @ViewBuilder
+    private var renewalDisclosure: some View {
+        if let yearly = store.products.first(where: { $0.id == ProStore.yearlyID }) {
+            Text("The yearly plan auto-renews at \(yearly.displayPrice)/year until cancelled at least 24 hours before renewal, in Settings > Apple Account > Subscriptions. Lifetime is a single one-time charge.")
+                .font(.caption2)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
         }
     }
 
@@ -178,6 +198,17 @@ struct PaywallView: View {
         return "Try free for a \(unit)"
     }
 
+    /// The escape hatch, right under the offer it declines — quiet on purpose,
+    /// present on principle: leaving must never require hunting for the exit.
+    private var notNowButton: some View {
+        Button("Not now") { onClose() }
+            .font(.subheadline.weight(.medium))
+            .foregroundStyle(.secondary)
+            .frame(maxWidth: .infinity)
+            .disabled(store.isPurchasing || store.isRestoring)
+            .accessibilityInputLabels(["Not now", "Close", "Dismiss"])
+    }
+
     /// What stays free — spelled out so the gate never reads as a shakedown.
     private var freeReassurance: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -194,8 +225,17 @@ struct PaywallView: View {
 
     private var footerLinks: some View {
         HStack(spacing: 16) {
-            Link("Privacy", destination: URL(string: "https://m1zz.github.io/HandsFreeMetronome/privacy.html")!)
-            Link("Terms", destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!)
+            if store.isRestoring {
+                ProgressView()
+                    .controlSize(.small)
+            } else {
+                Button("Restore Purchases") { Task { await store.restore() } }
+                    .disabled(store.isPurchasing)
+                    .accessibilityHint("Restores a previous Pro purchase")
+                    .accessibilityInputLabels(["Restore", "Restore purchases"])
+            }
+            Link("Privacy Policy", destination: URL(string: "https://m1zz.github.io/HandsFreeMetronome/privacy.html")!)
+            Link("Terms of Use (EULA)", destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!)
         }
         .font(.caption)
         .foregroundStyle(.secondary)

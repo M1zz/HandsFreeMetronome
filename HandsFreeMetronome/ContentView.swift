@@ -105,15 +105,20 @@ struct ContentView: View {
                     portraitLayout
                 }
             }
-            // Nav-push parallax: while the tuner covers the screen, the main
-            // layout sits shifted a little to the LEFT (like iOS's own push).
-            .offset(x: showTuner && !reduceMotion ? -80 : 0)
+            // Cube page-turn, outgoing face: main + tuner are two sides of one
+            // box rolling left. The main layout swings 90° about its trailing
+            // edge while that edge travels to the screen's left — mirrored by
+            // the tuner's entry below, the shared edge lines up throughout.
+            .rotation3DEffect(.degrees(showTuner && !reduceMotion ? -90 : 0),
+                              axis: (x: 0, y: 1, z: 0),
+                              anchor: .trailing, perspective: cubePerspective)
+            .offset(x: showTuner && !reduceMotion ? -UIScreen.main.bounds.width : 0)
 
-            // The tuner is a full-screen page that slides in from the right —
-            // the whole screen "turns left" into it — not a bottom sheet.
+            // The tuner is a full-screen page that rolls in from the right —
+            // the whole screen "turns" into it like a box face — not a sheet.
             if showTuner {
                 tunerScreen
-                    .transition(reduceMotion ? .opacity : .move(edge: .trailing))
+                    .transition(reduceMotion ? .opacity : .cubeFromTrailing)
                     .zIndex(2)
             }
 
@@ -2088,6 +2093,33 @@ struct DeveloperContactSection: View {
         } footer: {
             Text("Bug reports and feature requests are welcome.")
         }
+    }
+}
+
+/// Shared by both faces of the tuner page-turn — mismatched perspectives would
+/// split the cuboid's shared edge mid-roll.
+let cubePerspective: CGFloat = 0.4
+
+/// One face of the rolling-box page turn: swings about the vertical edge it
+/// shares with the neighbouring face.
+struct CubeFace: ViewModifier {
+    let angle: Double
+    let edge: UnitPoint   // .leading for the incoming face, .trailing for the outgoing
+
+    func body(content: Content) -> some View {
+        content.rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0),
+                                 anchor: edge, perspective: cubePerspective)
+    }
+}
+
+extension AnyTransition {
+    /// Roll in from the right like the side of a box turning to face front:
+    /// slide from the trailing edge while unfolding 90° about the leading edge.
+    /// Pair with the mirror-image rotation on the outgoing view.
+    static var cubeFromTrailing: AnyTransition {
+        .move(edge: .trailing).combined(with:
+            .modifier(active: CubeFace(angle: 90, edge: .leading),
+                      identity: CubeFace(angle: 0, edge: .leading)))
     }
 }
 
