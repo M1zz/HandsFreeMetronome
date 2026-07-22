@@ -1,0 +1,481 @@
+[
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "B5BCB2DA-787A-4F0C-B5B7-75D1F7E2C137",
+    "priority" : "high",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 1,
+    "tags" : [
+      "Bug",
+      "iOS"
+    ],
+    "title" : "재생 중 화면 자동 잠금 방지 (isIdleTimerDisabled)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "92BA87AF-F706-4188-A18C-3FE1A43E2652",
+    "priority" : "high",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "백로그",
+    "storyPoints" : 8,
+    "tags" : [
+      "Core",
+      "Performance"
+    ],
+    "title" : "메트로놈 타이밍 정밀도 개선: DispatchSourceTimer → 샘플 정확 스케줄링(AVAudioTime)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "82171BD0-AFB4-45F5-93C6-41BC19B2123A",
+    "priority" : "high",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 3,
+    "tags" : [
+      "Feature",
+      "Core"
+    ],
+    "title" : "클릭 볼륨 슬라이더 추가 (사용자 볼륨 조절 + 강한 클릭음 옵션)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "8A1BC3AD-123F-4F9A-A424-31C9A59ABD50",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "백로그",
+    "storyPoints" : 5,
+    "tags" : [
+      "Feature",
+      "Core"
+    ],
+    "title" : "박자별 강세 패턴 커스터마이징 (5/4, 7/8 등 비대칭 박자 강세 지정)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "52D8BB10-6020-4C02-A5AF-9A953DC87417",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "백로그",
+    "storyPoints" : 3,
+    "tags" : [
+      "UI",
+      "Feature"
+    ],
+    "title" : "튜너 인튠 시각 피드백 강화 (TonalEnergy 스타일 색상/스마일 피드백)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "BAE3BB7E-FB1A-43EA-B16B-4B4DB499E3A0",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "백로그",
+    "storyPoints" : 5,
+    "tags" : [
+      "Feature",
+      "Core"
+    ],
+    "title" : "구간 반복 연습 모드 (Speed Trainer 확장: 마디 수 기반 자동 템포 상승)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "99647C86-BC9B-4B6E-8539-BCD14CB5D1C4",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "백로그",
+    "storyPoints" : 3,
+    "tags" : [
+      "Feature",
+      "UI"
+    ],
+    "title" : "클릭 음색 선택 옵션 (우드블록/비프/클릭 등 다중 사운드)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "EC3956F2-CFA8-48E2-B1FF-D5AC97A8450C",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 2,
+    "tags" : [
+      "Feature",
+      "UI"
+    ],
+    "title" : "탭 템포(Tap Tempo) 버튼 추가 — 손으로 두드려 BPM 설정"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "3C3137B6-ABA5-4758-89C2-0EE9CFA8405B",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "백로그",
+    "storyPoints" : 5,
+    "tags" : [
+      "Feature",
+      "Core"
+    ],
+    "title" : "프리셋 저장/불러오기 (BPM·박자·subdivision 조합 저장)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "17564915-89CB-4029-B4BD-C5591D475D12",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "백로그",
+    "storyPoints" : 2,
+    "tags" : [
+      "Design",
+      "UI"
+    ],
+    "title" : "핸즈프리 음성 제어를 온보딩/스토어 차별점으로 전면 강조"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "E2C1DA5F-AD52-47CC-A0BC-EE3FA022C625",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "백로그",
+    "storyPoints" : 3,
+    "tags" : [
+      "Feature",
+      "iOS"
+    ],
+    "title" : "무음/진동 전용 모드 (햅틱으로 박자 전달, 소리 없이 연습)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "A631E299-3A40-46D3-9D2A-CF6737005E11",
+    "priority" : "low",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 2,
+    "tags" : [
+      "Bug",
+      "Refactor"
+    ],
+    "title" : "박자 수 상한 불일치 정리 (UI maxBeats=8 vs 엔진 clamp=12)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "8D1E1696-EB30-4C7A-B00A-D279CA88E2CE",
+    "priority" : "low",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 2,
+    "tags" : [
+      "Refactor",
+      "Core"
+    ],
+    "title" : "MetronomeEngine try? 남용 정리 (오디오 세션/엔진 시작 실패 시 로깅·복구)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "C6489B99-223A-4232-8A2D-7F7CEF040B3B",
+    "priority" : "low",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "백로그",
+    "storyPoints" : 1,
+    "tags" : [
+      "iOS",
+      "UI"
+    ],
+    "title" : "신규 기능(볼륨·음색·프리셋) 접근성 라벨 및 Voice Control 입력 라벨 추가"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "5B36B14A-ECEB-4EA5-A517-A74DFD590295",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 5,
+    "tags" : [
+      "Feature",
+      "UI"
+    ],
+    "title" : "박자 시각화 2종 + 모드 전환 (등속 바운스 / 원형 오빗, subdivision 반영)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "333AC4F6-52F3-45FB-9804-D137872A47E7",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 3,
+    "tags" : [
+      "Feature",
+      "Core"
+    ],
+    "title" : "모든 기능 음성 명령 지원 (볼륨·박자수·뷰 전환·연습모드 커맨드 추가)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "9FE15B9A-AF4D-4F15-9124-F8927BFD872C",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 2,
+    "tags" : [
+      "UI",
+      "Refactor"
+    ],
+    "title" : "연습모드 버튼 제거 → 모달 시트로 전환 (음성 practice 명령/Help 런처로 오픈)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "20F8F637-1164-48B4-BB76-5CEEDC9705AF",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "tags" : [
+      "UI",
+      "Design"
+    ],
+    "storyPoints" : 3,
+    "title" : "파형 양방향(중심 기준 ±y) + 메인 화면 스크롤 + Help TipKit 카드 표시"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "88470E88-5D4C-4CF6-BD3F-C974AFDFCB52",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 3,
+    "tags" : [
+      "UI",
+      "Design"
+    ],
+    "title" : "Help 리디자인: 헬프뷰 대신 홈 화면 위로 팁 카드 솨라락 오버레이(재실행 가능)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "C00AB009-B1DA-4470-B84B-4051E2BAF9E9",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 3,
+    "tags" : [
+      "UI",
+      "Feature"
+    ],
+    "title" : "subdivision 시각화: 고정 top/bottom hit 마커를 원이 등속 왕복하며 타격(1/8=위·아래, 1/16=2왕복), 오빗은 미세 틱"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "66931747-507D-4595-B306-8783BC744656",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 5,
+    "tags" : [
+      "UI",
+      "Design"
+    ],
+    "title" : "Help = 지금 말할 수 있는 명령어 리스트 오버레이(주루룩) + \"close로 닫기\" 안내 + 상세설명은 별도 버튼(코치마크 제거)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "6AF5F52B-C536-422D-985E-3776B543F81A",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 2,
+    "tags" : [
+      "UI",
+      "Design"
+    ],
+    "title" : "진자 부드러움 개선: 박 전환 위치 점프 제거(비활성 원 top 대기)+밝기 크로스페이드, 뷰/재생 전환 페이드, 오빗 마커 이징"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "3D400672-6831-462E-BAD3-9DE149B41FED",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 2,
+    "tags" : [
+      "UI",
+      "Design"
+    ],
+    "title" : "재생 중 포커스 모드: subdivision·볼륨·음성 카드 페이드아웃, 비트+템포+트랜스포트만 유지(코치마크 단계도 연동)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "C23B3D2D-CB10-4B46-9E35-29B949A1755F",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "tags" : [
+      "UI",
+      "Design"
+    ],
+    "storyPoints" : 2,
+    "title" : "색상 또렷하게: brass 골드·다운비트 red 채도 상향, 활성 비트 발광·대비 강화(바운스·오빗·그리드)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "14A45B5E-B10D-4737-A221-470096FB684E",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "tags" : [
+      "UI",
+      "Design"
+    ],
+    "storyPoints" : 2,
+    "title" : "진자 크게(원 34pt·swing 50·영역 150)·subdivision 1/4~1/16 글자 제거, 음성 카드를 스크롤 밖 트랜스포트 위에 고정"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "6329C72B-D7FA-4269-91A5-80041D593FEE",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 2,
+    "tags" : [
+      "UI",
+      "Feature"
+    ],
+    "title" : "Listen/Mute 버튼 재설계: Mute에 스피커 심볼, 명령 인식 시 버튼에 명령명 잠시 플래시 후 복귀"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "4B1ADDD5-7A78-4663-9965-314C6FBA585A",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 5,
+    "tags" : [
+      "Feature",
+      "iOS"
+    ],
+    "title" : "다국어 지원: String Catalog(Localizable.xcstrings) 추가·pbxproj 연결, 영어 base+한국어 24개 번역, 전체 문자열 자동 추출"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "19E17A9F-D1B9-432A-B66A-D3C2E02801AA",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 1,
+    "tags" : [
+      "Design"
+    ],
+    "title" : "App Store용 개인정보 처리방침·지원 페이지(영어) 최신화: 신규 음성명령 반영, 저장 항목·날짜 갱신 (GitHub Pages)"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "8A04CA46-7505-46AF-A7C0-E44B5896F5F2",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 2,
+    "tags" : [
+      "UI",
+      "Design"
+    ],
+    "title" : "템포 표시: 기본을 이탈리아어 용어(Largo/Moderato)로, 탭하면 BPM 숫자 토글(서브타이틀에 반대값). 볼륨 슬라이더 제거·진자 영역 여백 축소"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "2D389985-C439-452A-A313-D71BEA6548FE",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 1,
+    "tags" : [
+      "iOS",
+      "Refactor"
+    ],
+    "title" : "영어 전용화: String Catalog 한국어 제거, ko.lproj 삭제·knownRegions에서 ko 제거, 앱 이름 영어로 통일"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "BD3D7360-F792-439A-A217-7415482526DE",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 5,
+    "tags" : [
+      "UI",
+      "Design"
+    ],
+    "title" : "Help = 현재 화면 컨트롤 전체 동시 하이라이트+음성명령 라벨(코치마크 all-at-once, anchorPreference). 전체 명령 시트는 별도 버튼"
+  },
+  {
+    "assignee" : "ME",
+    "assigneeColorHex" : "4FACFE",
+    "id" : "ADC06CAD-8BDE-4DD7-AA5D-80CD00F50584",
+    "priority" : "medium",
+    "projectId" : "07540A91-FF5C-4C08-B1CC-B93214FDE796",
+    "sprint" : "",
+    "status" : "완료",
+    "storyPoints" : 2,
+    "tags" : [
+      "UI",
+      "Design"
+    ],
+    "title" : "재생 시 퍼포먼스 화면 전환: 설정 카드 페이드아웃 + 진자 영역 200→340 확대(진자+속도만), 정지 시 전체 정보 복귀"
+  }
+]

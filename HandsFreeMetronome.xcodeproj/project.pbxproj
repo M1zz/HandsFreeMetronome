@@ -7,24 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B46691652DB191AF2814F19 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5DC4F4254C36A8399E4CD6B4 /* LeeoKit */; };
 		A1000011 /* HandsFreeMetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001 /* HandsFreeMetronomeApp.swift */; };
 		A1000012 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002 /* ContentView.swift */; };
 		A1000013 /* MetronomeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000003 /* MetronomeEngine.swift */; };
 		A1000014 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004 /* VoiceController.swift */; };
 		A1000015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000005 /* Assets.xcassets */; };
-		A1000016 /* Preview Content/Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000006 /* Preview Content/Preview Assets.xcassets */; };
+		A1000016 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000006 /* Preview Assets.xcassets */; };
 		A1000103 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000102 /* InfoPlist.strings */; };
 		A1000104 /* TunerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000105 /* TunerEngine.swift */; };
 		A1000200 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A1000201 /* Localizable.xcstrings */; };
+		C352BAB885FF815EE36552E5 /* HandsFreeMetronomeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09C933F0F690DABE629FB4D /* HandsFreeMetronomeSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A09C933F0F690DABE629FB4D /* HandsFreeMetronomeSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeSpec.swift; sourceTree = "<group>"; };
 		A1000001 /* HandsFreeMetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeApp.swift; sourceTree = "<group>"; };
 		A1000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1000003 /* MetronomeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeEngine.swift; sourceTree = "<group>"; };
 		A1000004 /* VoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceController.swift; sourceTree = "<group>"; };
 		A1000005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A1000006 /* Preview Content/Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1000006 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1000010 /* HandsFreeMetronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsFreeMetronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1000100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B46691652DB191AF2814F19 /* LeeoKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,10 +72,11 @@
 				A1000004 /* VoiceController.swift */,
 				A1000105 /* TunerEngine.swift */,
 				A1000005 /* Assets.xcassets */,
-				A1000006 /* Preview Content/Preview Assets.xcassets */,
+				A1000006 /* Preview Assets.xcassets */,
 				A1000007 /* Info.plist */,
 				A1000102 /* InfoPlist.strings */,
 				A1000201 /* Localizable.xcstrings */,
+				A09C933F0F690DABE629FB4D /* HandsFreeMetronomeSpec.swift */,
 			);
 			path = HandsFreeMetronome;
 			sourceTree = "<group>";
@@ -92,6 +97,9 @@
 			dependencies = (
 			);
 			name = HandsFreeMetronome;
+			packageProductDependencies = (
+				5DC4F4254C36A8399E4CD6B4 /* LeeoKit */,
+			);
 			productName = HandsFreeMetronome;
 			productReference = A1000010 /* HandsFreeMetronome.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +128,9 @@
 				Base,
 			);
 			mainGroup = A1000030;
+			packageReferences = (
+				F957046E56B9CE1CF9B77F14 /* XCLocalSwiftPackageReference "LeeoKit" */,
+			);
 			productRefGroup = A1000031 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,7 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1000015 /* Assets.xcassets in Resources */,
-				A1000016 /* Preview Content/Preview Assets.xcassets in Resources */,
+				A1000016 /* Preview Assets.xcassets in Resources */,
 				A1000103 /* InfoPlist.strings in Resources */,
 				A1000200 /* Localizable.xcstrings in Resources */,
 			);
@@ -153,6 +164,7 @@
 				A1000013 /* MetronomeEngine.swift in Sources */,
 				A1000014 /* VoiceController.swift in Sources */,
 				A1000104 /* TunerEngine.swift in Sources */,
+				C352BAB885FF815EE36552E5 /* HandsFreeMetronomeSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +310,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		F957046E56B9CE1CF9B77F14 /* XCLocalSwiftPackageReference "LeeoKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../LeeoKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DC4F4254C36A8399E4CD6B4 /* LeeoKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F957046E56B9CE1CF9B77F14 /* XCLocalSwiftPackageReference "LeeoKit" */;
+			productName = LeeoKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1000070 /* Project object */;
 }

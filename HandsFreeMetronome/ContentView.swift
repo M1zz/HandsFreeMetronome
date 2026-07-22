@@ -1,6 +1,7 @@
 import SwiftUI
 import UIKit
 import TipKit
+import LeeoKit
 
 struct ContentView: View {
     @StateObject private var metronome = MetronomeEngine()
@@ -1340,6 +1341,11 @@ struct ContentView: View {
                         commandRow("\"done\" / \"close\"", "close a panel")
                     }
                     .id(helpSections[5])
+                    Section {
+                        LeeoSupportSection<HandsFreeMetronomeSpec>()
+                    } header: {
+                        Text("Support")
+                    }
                     DeveloperContactSection(accent: brass)
                 }
                 .onChange(of: helpIndex) { idx in
