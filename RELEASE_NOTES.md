@@ -1,5 +1,142 @@
 # Release Notes — Not My Tempo
 
+## 1.0.5
+
+**Not My Tempo Pro**가 생겼습니다. 메트로놈 본체 — 모든 템포·박자·분할, 비트
+시각화 3종, 탭 템포, 타이밍 체크, 그리고 핸즈프리 음성 제어 전부 — 는 지금처럼
+계속 무료입니다. 연습을 업그레이드하는 세 가지 도구(연습 모드, 악센트 에디터·
+프리셋, 크로매틱 튜너)가 Pro로 묶여 연간 구독(무료 체험 포함) 또는 한 번 결제로
+평생 소장할 수 있습니다.
+
+Introducing **Not My Tempo Pro**. The metronome itself — every tempo, meter, and
+subdivision, all three beat views, tap tempo, timing check, and complete
+hands-free voice control — stays free, exactly as before. Three practice
+power-tools (practice mode, the accent editor with presets, and the chromatic
+tuner) now unlock with Pro: a yearly subscription with a free trial, or a
+one-time lifetime purchase.
+
+### App Store (한국어)
+
+- Not My Tempo Pro 출시 — 연습 모드(스피드 트레이너), 악센트 에디터·프리셋, 크로매틱 튜너를 하나로 묶었습니다. 연간 구독(무료 체험 포함) 또는 한 번 결제로 평생 소장.
+- **이미 앱을 구매하셨던 분은 모든 Pro 기능이 그대로 무료입니다** — 추가 결제 없이 자동 적용됩니다.
+- 메트로놈의 모든 핵심 기능과 음성 제어·접근성 기능은 지금처럼 계속 무료입니다.
+- 튜너가 전용 페이지가 되었습니다 — 상자가 옆으로 구르듯 화면이 입체적으로 넘어갑니다. Back 버튼이나 오른쪽 스와이프, "close"로 돌아옵니다.
+- 구매 화면을 다듬었습니다: 가격이 안 뜨면 재시도할 수 있고, 자동 갱신 조건과 개인정보처리방침·이용약관이 명확히 표시되며, 구매 복원은 하단 Restore Purchases로 언제든 가능합니다.
+
+### App Store (English)
+
+- Introducing Not My Tempo Pro — practice mode (speed trainer), the accent editor with presets, and the chromatic tuner, in one unlock: a yearly subscription with a free trial, or a one-time lifetime purchase.
+- **If you already bought this app, every Pro feature stays free for you** — applied automatically, nothing to pay again.
+- Everything else — the full metronome, voice control, and every accessibility feature — stays free.
+- The tuner is now its own full-screen page — the screen rolls over to it like the side of a box turning to face you. Go back with the Back button, a rightward swipe, or "close".
+- A more polished purchase screen: prices retry when they fail to load, renewal terms and Privacy Policy / Terms of Use are spelled out, and Restore Purchases sits at the bottom whenever you need it.
+
+### Details (한국어)
+
+- StoreKit 2 기반: 검증된 현재 권리(currentEntitlements)로 Pro 여부를 판정하고,
+  갱신·환불·가족 공유·다른 기기 구매를 Transaction.updates로 상시 반영합니다.
+  권리는 로컬에 캐시되어 오프라인에서도 Pro 기능이 즉시 동작합니다.
+- 게이트는 requirePro() 한 곳 — 버튼·음성 명령("practice"/"tune")·분할 카드
+  더블탭·VoiceOver 액션 어느 경로든 같은 페이월로 이어지고, 방금 누른 기능이
+  페이월의 헤드라인이 됩니다. "close" 음성으로 페이월도 닫힙니다.
+- 도움말 시트에 Pro 섹션(잠금 상태 표시·구매 진입)과 잠긴 런처의 PRO 배지 추가.
+- 로컬 StoreKit 구성 파일(Products.storekit)로 시뮬레이터에서 구매 흐름을
+  끝까지 테스트할 수 있습니다.
+- 기존 유료 구매자 보호: 이 앱은 1.0.4까지 유료 판매(빌드 1·2)였으므로,
+  AppTransaction의 최초 다운로드 빌드가 3(1.0.5) 미만이면 Pro를 영구
+  부여합니다. 판정은 성공 시 캐시되며, Restore가 영수증 동기화 후 재판정합니다.
+- 튜너·페이월은 시트가 아닌 ZStack 오버레이 페이지입니다 — TipKit 팝오버가
+  떠 있는 동안 시트 프레젠테이션이 조용히 실패하는 충돌을 구조적으로 회피합니다.
+- 튜너 전환은 3D 큐브 롤: 메인 화면과 튜너가 한 상자의 두 면처럼 공유 모서리를
+  맞대고 굴러갑니다(스프링 곡선 0.5s, 원근 0.28, 돌아간 면은 최대 18% 음영).
+  "practice"·"accents"·"help" 등 어떤 경로로 닫혀도 같은 스프링으로 굴러
+  돌아가며, Reduce Motion에서는 페이드로 대체됩니다.
+- 페이월 신뢰성: 상품 조회가 빈 결과로 와도(전파 지연 등) 재시도 버튼이 뜨고,
+  상품 세트가 불완전하면 페이월을 열 때마다 다시 받아옵니다. 복원은 진행
+  스피너와 "결과 없음" 피드백을 표시하고, 연간 상품에는 자동 갱신 고지(3.1.2)가
+  가격과 함께 표기됩니다.
+
+### Details (English)
+
+- Built on StoreKit 2: entitlement derives from verified currentEntitlements,
+  with Transaction.updates observed for renewals, refunds, family sharing, and
+  purchases on other devices; cached locally so Pro works offline and at launch.
+- One gate — requirePro(): every entry point (buttons, the "practice"/"tune"
+  voice commands, the subdivision-card double-tap, VoiceOver actions) funnels to
+  the same paywall, headlined by the feature that was just reached for. Saying
+  "close" dismisses the paywall too.
+- The Help sheet gains a Pro section (status + upgrade) and PRO badges on locked
+  launchers.
+- A local StoreKit configuration file (Products.storekit) enables end-to-end
+  purchase testing in the simulator.
+- Paid-era grandfathering: the app was paid up front through 1.0.4 (builds 1
+  and 2), so if AppTransaction reports an original download build below 3
+  (1.0.5), Pro is granted permanently. A positive verdict is cached; Restore
+  re-checks after syncing the receipt.
+- The tuner and the paywall are ZStack overlay pages, not sheets — sidestepping
+  a conflict where an active TipKit popover silently swallows sheet
+  presentations.
+- The tuner transition is a 3D cube roll: the main layout and the tuner behave
+  as two faces of one box sharing an edge (smooth spring 0.5s, perspective
+  0.28, faces shade up to 18% as they turn away). Every close path —
+  "practice", "accents", "help", swipe, "close" — rolls back with the same
+  spring; Reduce Motion falls back to a cross-fade.
+- Paywall reliability: an empty product response (e.g. App Store Connect still
+  propagating) degrades to a visible retry, and an incomplete product set is
+  refetched every time the paywall opens. Restore shows a progress spinner and
+  a "nothing found" message, and the yearly plan carries the 3.1.2
+  auto-renewal disclosure next to its price.
+
+## 1.0.4
+
+안정성 업데이트입니다. 재생을 멈추는 순간 앱이 종료될 수 있던 문제를 비롯해,
+드물게 앱을 종료시킬 수 있는 내부 원인들을 전수 점검해 수정했습니다.
+
+A stability update: fixed a crash when stopping playback, and audited every
+remaining path that could terminate the app.
+
+### App Store (한국어)
+
+- 재생을 멈추는 순간(특히 6/8·셋잇단처럼 느린 템포에서 음성으로 멈출 때) 앱이 종료되던 문제를 수정했습니다.
+- 재생 중 악센트를 편집하거나 정지/시작을 빠르게 반복해도 안전하도록 오디오 내부 동작을 안정화했습니다.
+- 전화·Siri·알람이 끼어들면 메트로놈이 깨끗하게 멈추도록 했습니다.
+- 그 밖에 드물게 앱을 종료시킬 수 있는 원인들을 전수 점검해 수정했습니다.
+
+### App Store (English)
+
+- Fixed a crash when stopping playback — most likely at slow tempos with subdivisions (e.g. 6/8 triplets) and when stopping by voice.
+- Hardened the audio internals so rapid start/stop and editing accents during playback are safe.
+- A phone call, Siri, or an alarm now stops the metronome cleanly.
+- Audited and fixed the remaining rare conditions that could terminate the app.
+
+### Details (한국어)
+
+- 정지 순간 크래시: 정지 직후 프레임에서 진자/링 스윕 뷰가 페이드아웃으로 아직
+  화면에 남아 있는 동안 박 위상이 음수가 되어, 클릭 타깃 배열을 범위 밖
+  인덱스로 접근했습니다. 애니메이션을 재생 상태로 게이트하고 위상을 0…1로
+  클램프했습니다(진자·링 스윕 뷰).
+- 동시성: 오디오 정리가 진행 중인 틱이 끝나길 기다립니다(버퍼 스케줄링과의
+  경합 제거). 틱 스레드는 락으로 보호된 악센트 스냅샷을 읽고, 음성 인식
+  request는 오디오 탭 스레드와의 경합을 락으로 차단합니다.
+- 오디오 세션 인터럽션(전화·Siri·알람)은 깨끗한 정지로 처리하고, 모든
+  play/schedule 호출 전에 엔진 상태를 확인합니다.
+- 강제 언래핑을 제거하고 모든 Int(Double) 변환(BPM 슬라이더, 탭 템포, 튜너
+  노트 매핑)에 NaN/무한대 가드를 넣었습니다.
+
+### Details (English)
+
+- Stop-time crash: on the frame after stopping, the beat phase could go negative
+  while the pendulum/ring views were still fading out, indexing a click-target
+  array out of bounds. The animation is now gated on the playing state and the
+  phase clamped (pendulum and ring-sweep views).
+- Concurrency: audio teardown now waits for any in-flight tick (no race with
+  buffer scheduling); the tick thread reads a lock-guarded accent snapshot; the
+  speech-recognition request is lock-guarded against the audio-tap thread.
+- Audio-session interruptions (call/Siri/alarm) fold into a clean stop; the
+  engine is checked before every play/schedule call.
+- Removed force unwraps and guarded all Int(Double) conversions (BPM slider,
+  tap tempo, tuner note mapping) against NaN/infinity.
+
 ## 1.0.3
 
 이번 업데이트의 핵심은 **마디 전체 악센트 커스터마이징**과 **새로운 비트

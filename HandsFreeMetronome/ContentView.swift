@@ -7,6 +7,10 @@ struct ContentView: View {
     @StateObject private var metronome = MetronomeEngine()
     @StateObject private var voice = VoiceController()
     @StateObject private var tuner = TunerEngine()
+    @StateObject private var pro = ProStore()
+
+    // A locked Pro feature was reached — which one shapes the paywall's pitch.
+    @State private var paywallFeature: ProFeature?
 
     @State private var beatScale: CGFloat = 1.0
     @State private var currentBeat = -1   // which beat (0-based) is sounding now
@@ -93,12 +97,43 @@ struct ContentView: View {
                 .allowsHitTesting(false)
                 .accessibilityHidden(true)
 
-            if assistiveAccess {
-                assistiveAccessLayout
-            } else if vSizeClass == .compact {
-                landscapeLayout
-            } else {
-                portraitLayout
+            Group {
+                if assistiveAccess {
+                    assistiveAccessLayout
+                } else if vSizeClass == .compact {
+                    landscapeLayout
+                } else {
+                    portraitLayout
+                }
+            }
+            // Cube page-turn, outgoing face: main + tuner are two sides of one
+            // box rolling left. The main layout swings 90° about its trailing
+            // edge while that edge travels to the screen's left — mirrored by
+            // the tuner's entry below, the shared edge lines up throughout.
+            .rotation3DEffect(.degrees(showTuner && !reduceMotion ? -90 : 0),
+                              axis: (x: 0, y: 1, z: 0),
+                              anchor: .trailing, perspective: cubePerspective)
+            .offset(x: showTuner && !reduceMotion ? -UIScreen.main.bounds.width : 0)
+            .brightness(showTuner && !reduceMotion ? -0.18 : 0)
+
+            // The tuner is a full-screen page that rolls in from the right —
+            // the whole screen "turns" into it like a box face — not a sheet.
+            if showTuner {
+                tunerScreen
+                    .transition(reduceMotion ? .opacity : .cubeFromTrailing)
+                    .zIndex(2)
+            }
+
+            // The paywall rides in the same ZStack instead of a sheet: a TipKit
+            // popover (almost always up for new users — exactly the ones who hit
+            // gates) silently swallows sheet presentations, and revenue UI must
+            // never lose that race. Slides up like a sheet, above everything.
+            if let feature = paywallFeature {
+                PaywallView(store: pro, feature: feature) {
+                    withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = nil }
+                }
+                .transition(reduceMotion ? .opacity : .move(edge: .bottom))
+                .zIndex(3)
             }
         }
         // "help" highlights every on-screen control at once, each tagged with the
@@ -112,7 +147,11 @@ struct ContentView: View {
         // Support Dynamic Type, but cap growth so the single-screen layout holds.
         .dynamicTypeSize(...DynamicTypeSize.accessibility2)
         .fullScreenCover(isPresented: $showCommands) { commandsSheet }
-        .sheet(isPresented: $showTuner, onDismiss: { tuner.stop() }) { tunerSheet }
+        // The tuner engine follows the page's visibility (it used to be the
+        // sheet's onDismiss) — stopped on ANY path that closes it.
+        .onChange(of: showTuner) { open in
+            if !open { tuner.stop() }
+        }
         .sheet(isPresented: $showTrainer) { trainerSheet }
         .sheet(isPresented: $showAccents) { accentsSheet }
         .onChange(of: metronome.isPlaying) { playing in
@@ -132,6 +171,24 @@ struct ContentView: View {
         .onAppear {
             wireUp()
             syncTipState()
+            #if DEBUG
+            // Simulator-test hooks: the tuner (and its paywall gate) open by
+            // voice only, which automation can't drive — these launch arguments
+            // stand in for saying "tune". -uitest-tuner bypasses the gate to
+            // exercise the slide-in page; -uitest-paywall goes through it.
+            let uitestArgs = ProcessInfo.processInfo.arguments
+            if uitestArgs.contains("-uitest-tuner") || uitestArgs.contains("-uitest-paywall") {
+                Tips.hideAllTipsForTesting()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    if uitestArgs.contains("-uitest-tuner") {
+                        tuner.start()
+                        withAnimation(tunerPageAnimation) { showTuner = true }
+                    } else {
+                        openTuner()
+                    }
+                }
+            }
+            #endif
             // Listen by default — UNLESS the user relies on iOS Voice Control, in
             // which case our own mic would fight the system recognizer. They drive
             // the app by control name ("Tap Start") instead.
@@ -426,8 +483,12 @@ struct ContentView: View {
             let amp = min(110, max(36, geo.size.height / 2 - 34))
             TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
                 let phase = beatPhase(now: timeline.date)
-                let started = currentBeat >= 0
-                let f = started ? phase - Double(currentBeat) : 0     // 0…1 progress in the beat
+                // Gate on isPlaying too: right after a stop this view lingers for its
+                // fade-out while `currentBeat` still holds the last beat but the phase
+                // has already collapsed to 0 — without the gate `f` goes negative and
+                // the click index below would subscript clickYs out of bounds (crash).
+                let started = metronome.isPlaying && currentBeat >= 0
+                let f = started ? min(1, max(0, phase - Double(currentBeat))) : 0   // 0…1 progress in the beat
                 ZStack {
                     HStack(spacing: 8) {
                         ForEach(0..<beats, id: \.self) { i in
@@ -469,7 +530,7 @@ struct ContentView: View {
                                     // The pop: a ring bursts outward from whichever
                                     // target the ball is passing as its click fires.
                                     if pop > 0 {
-                                        let k = min(sub - 1, Int(f * Double(sub)))
+                                        let k = max(0, min(sub - 1, Int(f * Double(sub))))
                                         Circle()
                                             .stroke(base, lineWidth: 2.5)
                                             .frame(width: 46, height: 46)
@@ -668,8 +729,11 @@ struct ContentView: View {
         let beats = metronome.beatsPerMeasure
         return TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
             let phase = beatPhase(now: timeline.date)
-            let started = currentBeat >= 0
-            let f = started ? phase - Double(currentBeat) : 0     // 0…1 through the beat
+            // Same guard as the bounce view: while fading out after a stop the phase
+            // is already 0 but `currentBeat` isn't reset yet, so an unclamped `f`
+            // would go negative for a frame (negative trim/scale glitches).
+            let started = metronome.isPlaying && currentBeat >= 0
+            let f = started ? min(1, max(0, phase - Double(currentBeat))) : 0   // 0…1 through the beat
             let color = currentBeat == 0 ? beatRed : brass        // downbeat sweeps red
             GeometryReader { geo in
                 let side = min(geo.size.width, geo.size.height)
@@ -1195,16 +1259,20 @@ struct ContentView: View {
             // centre of its own control, so pills never overlap each other (each stays
             // within its control's bounds).
             ForEach(ids, id: \.self) { id in
-                let rect = proxy[anchors[id]!]
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .stroke(brass, lineWidth: 2.5)
-                    .frame(width: rect.width, height: rect.height)
-                    .position(x: rect.midX, y: rect.midY)
-                    .allowsHitTesting(false)
-                helpPill(helpPhrase(for: id))
-                    .frame(maxWidth: max(140, rect.width - 24))
-                    .fixedSize(horizontal: false, vertical: true)
-                    .position(x: rect.midX, y: rect.midY)
+                // `ids` is filtered on this dictionary, but never force-unwrap in
+                // a view body — a stale re-evaluation must degrade, not crash.
+                if let anchor = anchors[id] {
+                    let rect = proxy[anchor]
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .stroke(brass, lineWidth: 2.5)
+                        .frame(width: rect.width, height: rect.height)
+                        .position(x: rect.midX, y: rect.midY)
+                        .allowsHitTesting(false)
+                    helpPill(helpPhrase(for: id))
+                        .frame(maxWidth: max(140, rect.width - 24))
+                        .fixedSize(horizontal: false, vertical: true)
+                        .position(x: rect.midX, y: rect.midY)
+                }
             }
             // Persistent instructions + escape hatches, pinned near the TOP edge.
             VStack {
@@ -1264,6 +1332,39 @@ struct ContentView: View {
                         Text("Accessibility")
                     }
                     Section {
+                        if pro.isPro {
+                            HStack(spacing: 12) {
+                                Image(systemName: "checkmark.seal.fill")
+                                    .foregroundStyle(brass)
+                                    .frame(width: 22)
+                                Text("Pro unlocked — thank you!")
+                                    .font(.subheadline.weight(.semibold))
+                            }
+                            .accessibilityElement(children: .combine)
+                        } else {
+                            Button {
+                                showCommands = false
+                                withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = .practice }
+                            } label: {
+                                HStack(spacing: 12) {
+                                    Image(systemName: "crown.fill")
+                                        .foregroundStyle(brass)
+                                        .frame(width: 22)
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text("Unlock Pro")
+                                            .font(.subheadline.weight(.semibold))
+                                            .foregroundStyle(.primary)
+                                        Text("Practice mode · accent editor & presets · tuner")
+                                            .font(.footnote).foregroundStyle(.secondary)
+                                    }
+                                }
+                            }
+                            .accessibilityInputLabels(["Unlock Pro", "Pro", "Upgrade"])
+                        }
+                    } header: {
+                        Text("Not My Tempo Pro")
+                    }
+                    Section {
                         usageRow("circle.grid.3x3", "Set beats", "Tap the dots to choose the time signature.")
                         usageRow("hand.tap", "Tap tempo", "Tap the big BPM number in rhythm to set the tempo.")
                         usageRow("slider.horizontal.3", "Tempo", "Drag the tempo slider, or tap the − / + buttons.")
@@ -1308,9 +1409,12 @@ struct ContentView: View {
                         Button {
                             openPractice()
                         } label: {
-                            Label("Open practice mode", systemImage: "chart.line.uptrend.xyaxis")
-                                .font(.subheadline.weight(.semibold))
-                                .foregroundStyle(brass)
+                            HStack {
+                                Label("Open practice mode", systemImage: "chart.line.uptrend.xyaxis")
+                                    .font(.subheadline.weight(.semibold))
+                                    .foregroundStyle(brass)
+                                if !pro.isPro { proLockBadge }
+                            }
                         }
                         .accessibilityInputLabels(["Practice mode", "Open practice"])
                     }
@@ -1324,9 +1428,12 @@ struct ContentView: View {
                         Button {
                             openAccents()
                         } label: {
-                            Label("Open accent editor", systemImage: "waveform.path")
-                                .font(.subheadline.weight(.semibold))
-                                .foregroundStyle(brass)
+                            HStack {
+                                Label("Open accent editor", systemImage: "waveform.path")
+                                    .font(.subheadline.weight(.semibold))
+                                    .foregroundStyle(brass)
+                                if !pro.isPro { proLockBadge }
+                            }
                         }
                         .accessibilityInputLabels(["Accent editor", "Open accents", "Accents"])
                     }
@@ -1349,6 +1456,7 @@ struct ContentView: View {
                     DeveloperContactSection(accent: brass)
                 }
                 .onChange(of: helpIndex) { idx in
+                    guard helpSections.indices.contains(idx) else { return }
                     withAnimation { proxy.scrollTo(helpSections[idx], anchor: .top) }
                 }
             }
@@ -1360,6 +1468,17 @@ struct ContentView: View {
                 }
             }
         }
+    }
+
+    /// Small "PRO" tag shown beside launchers for still-locked features.
+    private var proLockBadge: some View {
+        Text("PRO")
+            .font(.caption2.weight(.heavy))
+            .foregroundStyle(brass)
+            .padding(.horizontal, 6)
+            .padding(.vertical, 2)
+            .background(Capsule().fill(brass.opacity(0.15)))
+            .accessibilityLabel("Requires Pro")
     }
 
     private func usageRow(_ icon: String, _ title: String, _ detail: String) -> some View {
@@ -1406,10 +1525,30 @@ struct ContentView: View {
         .presentationDetents([.medium])
     }
 
-    // MARK: Tuner sheet
+    // MARK: Tuner page — slides in from the right, covering the whole screen
 
-    private var tunerSheet: some View {
-        NavigationStack {
+    /// Deliberately NOT a NavigationStack: inserted mid-animation, a nav stack
+    /// paints an empty white surface until its bar resolves, so the slide-in
+    /// would flash blank. A plain VStack with a hand-rolled header renders its
+    /// content on the very first frame of the transition.
+    private var tunerScreen: some View {
+        VStack(spacing: 0) {
+            ZStack {
+                Text("Tuner").font(.headline)
+                HStack {
+                    Button { closeTuner() } label: {
+                        Label("Back", systemImage: "chevron.left")
+                            .font(.body.weight(.semibold))
+                            .labelStyle(.titleAndIcon)
+                    }
+                    .accessibilityLabel("Back to metronome")
+                    .accessibilityInputLabels(["Back", "Close", "Done"])
+                    Spacer()
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+
             VStack(spacing: 28) {
                 Spacer()
                 Text(tuner.noteName)
@@ -1438,16 +1577,18 @@ struct ContentView: View {
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
-            .frame(maxWidth: .infinity)
-            .navigationTitle("Tuner")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { showTuner = false }
-                }
-            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .presentationDetents([.medium, .large])
+        .background(Color(.systemGroupedBackground).ignoresSafeArea())
+        // Mirror the system back-swipe: a rightward drag slides the page away.
+        .gesture(DragGesture(minimumDistance: 25).onEnded { value in
+            if value.translation.width > 80 { closeTuner() }
+        })
+    }
+
+    /// Slide the tuner page back out to the right (the inverse of its entry).
+    private func closeTuner() {
+        withAnimation(tunerPageAnimation) { showTuner = false }
     }
 
     private var inTune: Bool { tuner.frequency > 0 && abs(tuner.cents) <= tuneTolerance }
@@ -1527,8 +1668,10 @@ struct ContentView: View {
     }
 
     private var bpmBinding: Binding<Double> {
+        // Int(Double) traps on NaN/infinity, so gate the conversion and go
+        // through setTempo, which clamps to the supported BPM range.
         Binding(get: { Double(metronome.bpm) },
-                set: { metronome.bpm = Int($0) })
+                set: { if $0.isFinite { metronome.setTempo(Int($0)) } })
     }
 
     /// Tap-tempo: tapping the big BPM number in rhythm sets the tempo from the
@@ -1543,8 +1686,9 @@ struct ContentView: View {
         guard tapTimes.count >= 2 else { return }
         let gaps = zip(tapTimes.dropFirst(), tapTimes).map { $0 - $1 }
         let avg = gaps.reduce(0, +) / Double(gaps.count)
-        guard avg > 0 else { return }
-        metronome.setTempo(Int((60.0 / avg).rounded()))
+        let bpm = 60.0 / max(avg, 0.001)          // ≥1 ms gap — Int() must never see inf/NaN
+        guard bpm.isFinite else { return }
+        metronome.setTempo(Int(bpm.rounded()))
     }
 
     // MARK: Logic
@@ -1569,19 +1713,33 @@ struct ContentView: View {
     }
 
     private func openTuner() {
+        guard requirePro(.tuner) else { return }
         metronome.stop()        // clicks would corrupt pitch detection
         showCommands = false
         showAccents = false
         tuner.start()
-        showTuner = true
+        withAnimation(tunerPageAnimation) { showTuner = true }
         TunerTip().invalidate(reason: .actionPerformed)
+    }
+
+    /// The freemium gate. Pro features funnel through here from every entry
+    /// point — buttons, voice commands, double-taps, VoiceOver actions — so the
+    /// check lives in exactly one place. Locked → swap whatever was opening for
+    /// the paywall, led by the feature that was just reached for.
+    private func requirePro(_ feature: ProFeature) -> Bool {
+        if pro.isPro { return true }
+        closePanels()
+        withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = feature }
+        return false
     }
 
     private func closePanels() {
         showCommands = false
-        showTuner = false       // the sheet's onDismiss stops the tuner
+        closeTuner()            // slides the page out; onChange stops the engine
         showTrainer = false
         showAccents = false
+        // "close" backs out of the paywall too
+        withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = nil }
         if showHelpMarks { dismissHelpMarks() }
     }
 
@@ -1645,16 +1803,18 @@ struct ContentView: View {
     }
 
     private func openPractice() {
+        guard requirePro(.practice) else { return }
         showCommands = false
-        showTuner = false
+        withAnimation(tunerPageAnimation) { showTuner = false }
         showAccents = false
         showTrainer = true
         PracticeTip().invalidate(reason: .actionPerformed)
     }
 
     private func openAccents() {
+        guard requirePro(.accents) else { return }
         showCommands = false
-        showTuner = false
+        withAnimation(tunerPageAnimation) { showTuner = false }
         showTrainer = false
         showAccents = true
         AccentGridTip().invalidate(reason: .actionPerformed)
@@ -1662,7 +1822,7 @@ struct ContentView: View {
 
     /// "help" pops up the list of commands you can say right now.
     private func showHelp() {
-        showTuner = false
+        withAnimation(tunerPageAnimation) { showTuner = false }
         showTrainer = false
         withAnimation(.easeOut(duration: 0.2)) { showHelpMarks = true }
         HelpVoiceTip().invalidate(reason: .actionPerformed)
@@ -1940,6 +2100,49 @@ struct DeveloperContactSection: View {
         } footer: {
             Text("Bug reports and feature requests are welcome.")
         }
+    }
+}
+
+/// Shared by both faces of the tuner page-turn — mismatched perspectives would
+/// split the cuboid's shared edge mid-roll. Kept subtle: strong perspective
+/// reads as warp, not depth, once the faces are in motion.
+let cubePerspective: CGFloat = 0.28
+
+/// One spring for every path that opens or closes the tuner page — mixed
+/// curves (or an unanimated snap) would make the same roll feel like two
+/// different gestures depending on how it was triggered.
+let tunerPageAnimation = Animation.smooth(duration: 0.5)
+
+/// One face of the rolling-box page turn: swings about the vertical edge it
+/// shares with the neighbouring face. Animatable so the shading below tracks
+/// the interpolated angle frame by frame, not just the endpoints.
+struct CubeFace: ViewModifier, Animatable {
+    var angle: Double
+    let edge: UnitPoint   // .leading for the incoming face, .trailing for the outgoing
+
+    var animatableData: Double {
+        get { angle }
+        set { angle = newValue }
+    }
+
+    func body(content: Content) -> some View {
+        content
+            .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0),
+                              anchor: edge, perspective: cubePerspective)
+            // Faces darken as they turn away — the shading carries the depth
+            // cue, which lets the geometry stay gentle.
+            .brightness(-abs(angle) / 90 * 0.18)
+    }
+}
+
+extension AnyTransition {
+    /// Roll in from the right like the side of a box turning to face front:
+    /// slide from the trailing edge while unfolding 90° about the leading edge.
+    /// Pair with the mirror-image rotation on the outgoing view.
+    static var cubeFromTrailing: AnyTransition {
+        .move(edge: .trailing).combined(with:
+            .modifier(active: CubeFace(angle: 90, edge: .leading),
+                      identity: CubeFace(angle: 0, edge: .leading)))
     }
 }
 

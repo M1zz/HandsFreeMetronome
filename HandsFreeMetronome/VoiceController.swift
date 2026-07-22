@@ -45,7 +45,12 @@ final class VoiceController: ObservableObject {
 
     private let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
     private let audioEngine = AVAudioEngine()
+    /// The live recognition request. Swapped on the main thread (refresh) while
+    /// the mic tap reads it on the audio thread — an unguarded strong-property
+    /// race there can over-release and crash, so ALL access goes through
+    /// `requestLock` (see `currentRequest`/`setRequest`).
     private var request: SFSpeechAudioBufferRecognitionRequest?
+    private let requestLock = NSLock()
     private var task: SFSpeechRecognitionTask?
     private var awaitingRestart = false   // ignore late results after a command fires
     private var sessionGeneration = 0     // invalidates stale auto-refresh timers
@@ -56,6 +61,19 @@ final class VoiceController: ObservableObject {
     private var levelTick = 0
 
     var isListening: Bool { status == .listening }
+
+    /// Thread-safe access to `request` — read on the audio (tap) thread,
+    /// swapped on the main thread.
+    private var currentRequest: SFSpeechAudioBufferRecognitionRequest? {
+        requestLock.lock(); defer { requestLock.unlock() }
+        return request
+    }
+
+    private func setRequest(_ newValue: SFSpeechAudioBufferRecognitionRequest?) {
+        requestLock.lock()
+        request = newValue
+        requestLock.unlock()
+    }
 
     func toggle() { isListening ? stop() : requestAndStart() }
 
@@ -102,7 +120,7 @@ final class VoiceController: ObservableObject {
         }
         input.removeTap(onBus: 0)
         input.installTap(onBus: 0, bufferSize: 1024, format: format) { [weak self] buffer, _ in
-            self?.request?.append(buffer)
+            self?.currentRequest?.append(buffer)
             self?.onAudioBuffer?(buffer)
             self?.updateLevel(buffer)
         }
@@ -135,7 +153,7 @@ final class VoiceController: ObservableObject {
     /// new request immediately, so recognition is swapped without touching the engine.
     private func beginRecognition() {
         guard status == .listening, let recognizer else { return }
-        request?.endAudio()
+        currentRequest?.endAudio()
         task?.cancel()
 
         // Bump the generation BEFORE creating the new task. Callbacks from the task
@@ -151,7 +169,7 @@ final class VoiceController: ObservableObject {
         // On devices without it, forcing it makes recognition return no result and
         // no error — the mic appears dead. Fall back to server recognition instead.
         request.requiresOnDeviceRecognition = recognizer.supportsOnDeviceRecognition
-        self.request = request
+        setRequest(request)
         awaitingRestart = false
 
         task = recognizer.recognitionTask(with: request) { [weak self] result, error in
@@ -189,10 +207,10 @@ final class VoiceController: ObservableObject {
             audioEngine.stop()
             audioEngine.inputNode.removeTap(onBus: 0)
         }
-        request?.endAudio()
+        currentRequest?.endAudio()
         task?.cancel()
         task = nil
-        request = nil
+        setRequest(nil)
         smoothedLevel = 0
         lastPublishedLevel = -1
         audioLevel = 0

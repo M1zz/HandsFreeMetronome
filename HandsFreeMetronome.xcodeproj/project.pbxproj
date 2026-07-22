@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B46691652DB191AF2814F19 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5DC4F4254C36A8399E4CD6B4 /* LeeoKit */; };
+		4B3561E38821E3618B5B3D74 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5C792597780977588B1FF8A5 /* LeeoKit */; };
 		A1000011 /* HandsFreeMetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001 /* HandsFreeMetronomeApp.swift */; };
 		A1000012 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002 /* ContentView.swift */; };
 		A1000013 /* MetronomeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000003 /* MetronomeEngine.swift */; };
@@ -17,11 +17,13 @@
 		A1000103 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000102 /* InfoPlist.strings */; };
 		A1000104 /* TunerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000105 /* TunerEngine.swift */; };
 		A1000200 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A1000201 /* Localizable.xcstrings */; };
-		C352BAB885FF815EE36552E5 /* HandsFreeMetronomeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09C933F0F690DABE629FB4D /* HandsFreeMetronomeSpec.swift */; };
+		A1000310 /* ProStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000300 /* ProStore.swift */; };
+		A1000311 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000301 /* PaywallView.swift */; };
+		CC22D8B983C92CE776DDB015 /* HandsFreeMetronomeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A09C933F0F690DABE629FB4D /* HandsFreeMetronomeSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeSpec.swift; sourceTree = "<group>"; };
+		256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeSpec.swift; sourceTree = "<group>"; };
 		A1000001 /* HandsFreeMetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeApp.swift; sourceTree = "<group>"; };
 		A1000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1000003 /* MetronomeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeEngine.swift; sourceTree = "<group>"; };
@@ -33,6 +35,9 @@
 		A1000100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1000105 /* TunerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerEngine.swift; sourceTree = "<group>"; };
 		A1000201 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		A1000300 /* ProStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProStore.swift; sourceTree = "<group>"; };
+		A1000301 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		A1000302 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B46691652DB191AF2814F19 /* LeeoKit in Frameworks */,
+				4B3561E38821E3618B5B3D74 /* LeeoKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,12 +76,15 @@
 				A1000003 /* MetronomeEngine.swift */,
 				A1000004 /* VoiceController.swift */,
 				A1000105 /* TunerEngine.swift */,
+				A1000300 /* ProStore.swift */,
+				A1000301 /* PaywallView.swift */,
+				A1000302 /* Products.storekit */,
 				A1000005 /* Assets.xcassets */,
 				A1000006 /* Preview Assets.xcassets */,
 				A1000007 /* Info.plist */,
 				A1000102 /* InfoPlist.strings */,
 				A1000201 /* Localizable.xcstrings */,
-				A09C933F0F690DABE629FB4D /* HandsFreeMetronomeSpec.swift */,
+				256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */,
 			);
 			path = HandsFreeMetronome;
 			sourceTree = "<group>";
@@ -98,7 +106,7 @@
 			);
 			name = HandsFreeMetronome;
 			packageProductDependencies = (
-				5DC4F4254C36A8399E4CD6B4 /* LeeoKit */,
+				5C792597780977588B1FF8A5 /* LeeoKit */,
 			);
 			productName = HandsFreeMetronome;
 			productReference = A1000010 /* HandsFreeMetronome.app */;
@@ -129,7 +137,7 @@
 			);
 			mainGroup = A1000030;
 			packageReferences = (
-				F957046E56B9CE1CF9B77F14 /* XCLocalSwiftPackageReference "LeeoKit" */,
+				7A4E782448356F7026931A51 /* XCLocalSwiftPackageReference "LeeoKit" */,
 			);
 			productRefGroup = A1000031 /* Products */;
 			projectDirPath = "";
@@ -164,7 +172,9 @@
 				A1000013 /* MetronomeEngine.swift in Sources */,
 				A1000014 /* VoiceController.swift in Sources */,
 				A1000104 /* TunerEngine.swift in Sources */,
-				C352BAB885FF815EE36552E5 /* HandsFreeMetronomeSpec.swift in Sources */,
+				A1000310 /* ProStore.swift in Sources */,
+				A1000311 /* PaywallView.swift in Sources */,
+				CC22D8B983C92CE776DDB015 /* HandsFreeMetronomeSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +240,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"HandsFreeMetronome/Preview Content\"";
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
@@ -245,7 +255,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -262,7 +272,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"HandsFreeMetronome/Preview Content\"";
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
@@ -277,7 +287,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -312,16 +322,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		F957046E56B9CE1CF9B77F14 /* XCLocalSwiftPackageReference "LeeoKit" */ = {
+		7A4E782448356F7026931A51 /* XCLocalSwiftPackageReference "LeeoKit" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../LeeoKit;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5DC4F4254C36A8399E4CD6B4 /* LeeoKit */ = {
+		5C792597780977588B1FF8A5 /* LeeoKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F957046E56B9CE1CF9B77F14 /* XCLocalSwiftPackageReference "LeeoKit" */;
+			package = 7A4E782448356F7026931A51 /* XCLocalSwiftPackageReference "LeeoKit" */;
 			productName = LeeoKit;
 		};
 /* End XCSwiftPackageProductDependency section */
