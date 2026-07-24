@@ -1,5 +1,7 @@
 import Foundation
+import Combine
 import StoreKit
+import LeeoKit
 
 /// Which locked feature the user bumped into — the paywall leads with it, so the
 /// pitch is always "unlock the thing you just reached for", never a generic ad.
@@ -35,14 +37,22 @@ enum ProFeature: String, Identifiable, CaseIterable {
     }
 }
 
-/// StoreKit 2 storefront for the single "Pro" entitlement.
+/// StoreKit 2 storefront for the single "Pro" entitlement — now a thin façade.
+///
+/// The raw StoreKit 2 plumbing (product loading, purchase/restore, the lifetime
+/// transaction listener, verification, entitlement tracking, and the offline
+/// cache) is shared infrastructure that lives in LeeoKit's `LeeoStore`. This
+/// type keeps its exact public API so `ContentView` and `PaywallView` keep
+/// working unchanged, and layers the two things that are genuinely
+/// app-specific on top of the shared engine:
+///   - the paid-era **grandfather** clause (AppTransaction) → `grandfather:`
+///   - the **DEBUG dev unlock** (unlocked unless `-paywall`) → `unlockOverride:`
 ///
 /// Business model (see docs/business-strategy.md): the core metronome and every
-/// voice/accessibility feature stay free forever — they are the app's identity
-/// and its acquisition engine. The three "serious practice" tools (speed
-/// trainer, accent editor + presets, tuner) unlock with Pro, sold as either a
-/// yearly subscription (with a free trial, configured in App Store Connect) or
-/// a one-time lifetime purchase.
+/// voice/accessibility feature stay free forever. The three "serious practice"
+/// tools (speed trainer, accent editor + presets, tuner) unlock with Pro, sold
+/// as either a yearly subscription (with a free trial, configured in App Store
+/// Connect) or a one-time lifetime purchase.
 @MainActor
 final class ProStore: ObservableObject {
     static let yearlyID = "com.leeo.HandsFreeMetronome.pro.yearly"
@@ -57,21 +67,8 @@ final class ProStore: ObservableObject {
     /// CFBundleVersion (build number) of the user's first download.
     static let firstFreemiumBuild = 3
 
-    /// True while a verified entitlement (either product) is active. Seeded from
-    /// a cached flag so Pro features work instantly on launch and offline; the
-    /// live entitlement check corrects it as soon as StoreKit answers.
-    @Published private(set) var isPro: Bool
-
-    /// Store products, ordered yearly-first for the paywall. Empty until loaded
-    /// (or when the store is unreachable — the paywall shows a retry state).
-    @Published private(set) var products: [Product] = []
-
-    @Published private(set) var isPurchasing = false
-    @Published private(set) var isRestoring = false
-    @Published var lastError: String?
-
-    private var updatesTask: Task<Void, Never>?
-    private static let cacheKey = "proEntitlementCached"
+    /// Cached grandfather flag. A positive grandfather result is written here so
+    /// the (potentially prompt-raising) AppTransaction check is never re-asked.
     private static let grandfatherKey = "proGrandfathered"
 
     #if DEBUG
@@ -83,158 +80,101 @@ final class ProStore: ObservableObject {
         return !args.contains("-paywall") && !args.contains("-uitest-paywall")
     }
     #endif
-    // AppTransaction.shared can raise a system App Store sign-in prompt when no
-    // receipt is on disk, so attempt the grandfather check at most once per
-    // launch (a positive result is cached in defaults and never re-asked).
-    private var grandfatherChecked = false
+
+    /// The shared StoreKit engine. Owned privately — the app only ever touches
+    /// it through this façade's forwarding API below.
+    private let store: LeeoStore
+    private var cancellable: AnyCancellable?
 
     init() {
-        #if DEBUG
-        isPro = Self.debugUnlocked || UserDefaults.standard.bool(forKey: Self.cacheKey)
-        #else
-        isPro = UserDefaults.standard.bool(forKey: Self.cacheKey)
-        #endif
-        // Transactions can arrive outside a purchase flow (renewal, refund,
-        // family sharing, purchase on another device) — keep listening for the
-        // app's whole lifetime and re-derive the entitlement on every event.
-        updatesTask = Task { [weak self] in
-            for await update in Transaction.updates {
-                if case .verified(let transaction) = update {
-                    await transaction.finish()
+        store = LeeoStore(
+            config: HandsFreeMetronomeSpec.paywall!,
+            unlockOverride: {
+                // Dev override lives here, NOT in the persisted cache — a cached
+                // `true` would leak Pro into a later -paywall test run. LeeoStore
+                // re-evaluates this on every entitlement read and never caches it.
+                #if DEBUG
+                return Self.debugUnlocked ? true : nil
+                #else
+                return nil
+                #endif
+            },
+            grandfather: {
+                // Only the production App Store reports a real originalAppVersion.
+                // Sandbox and TestFlight report "1.0", which would grandfather
+                // EVERY reviewer and auto-unlock Pro — so the paywall (where the
+                // IAPs live) never appears and App Review, which runs in the
+                // sandbox, files a 2.1(b) "can't locate the In-App Purchases"
+                // rejection. Gate the clause to production.
+                #if DEBUG
+                // Dev builds have no App Store receipt, so AppTransaction.shared
+                // throws up a system Apple-Account sign-in sheet — right on top
+                // of the paywall. Sandbox receipts also report originalAppVersion
+                // as "1.0", which would mark every tester as grandfathered and
+                // make the paywall untestable. Production installs always carry a
+                // receipt, so the real check below runs silently there.
+                return false
+                #else
+                if UserDefaults.standard.bool(forKey: Self.grandfatherKey) { return true }
+                guard let result = try? await AppTransaction.shared,
+                      case .verified(let appTransaction) = result else { return false }
+                guard appTransaction.environment == .production else { return false }
+                guard let firstComponent = appTransaction.originalAppVersion
+                    .split(separator: ".").first,
+                      let build = Int(firstComponent) else { return false }
+                let grandfathered = build < Self.firstFreemiumBuild
+                if grandfathered {
+                    UserDefaults.standard.set(true, forKey: Self.grandfatherKey)
                 }
-                await self?.refreshEntitlement()
+                return grandfathered
+                #endif
             }
-        }
-        Task {
-            await loadProducts()
-            await refreshEntitlement()
+        )
+        // Forward the shared store's state changes to this façade's observers so
+        // existing @ObservedObject/@StateObject bindings refresh unchanged.
+        cancellable = store.objectWillChange.sink { [weak self] in
+            self?.objectWillChange.send()
         }
     }
 
-    deinit { updatesTask?.cancel() }
+    // MARK: - Public state (unchanged API, forwarded to LeeoStore)
+
+    /// True while a verified entitlement (either product), the paid-era
+    /// grandfather clause, or the DEBUG dev unlock is active.
+    var isPro: Bool { store.hasPro }
+
+    /// Store products, ordered yearly-first for the paywall (config order).
+    var products: [Product] { store.products }
+
+    var isPurchasing: Bool { store.purchasingProductID != nil }
+    var isRestoring: Bool { store.isRestoring }
+
+    /// Last user-facing error. Settable so the paywall can clear stale messages.
+    var lastError: String? {
+        get { store.lastError }
+        set { store.lastError = newValue }
+    }
+
+    // MARK: - Actions (delegated to LeeoStore)
 
     func loadProducts() async {
-        // Refetch while the set is incomplete, not just while it's empty:
-        // products propagate through App Store Connect one at a time, and an
-        // app that cached the partial set would hide the late arrivals until
-        // the next cold launch.
-        guard products.count < Self.allProductIDs.count else { return }
-        do {
-            let loaded = try await Product.products(for: Self.allProductIDs)
-            // An empty result is NOT an error to StoreKit, but it is to us —
-            // without a message the paywall would sit on "Loading prices…"
-            // forever (typical causes: products still propagating in App Store
-            // Connect, missing metadata, or no StoreKit configuration when
-            // running in the simulator).
-            guard !loaded.isEmpty else {
-                lastError = "Prices aren\u{2019}t available right now."
-                return
-            }
-            // Yearly first: the subscription is the lead offer, lifetime the anchor.
-            products = loaded.sorted { a, _ in a.id == Self.yearlyID }
-            lastError = nil
-        } catch {
-            lastError = error.localizedDescription
-        }
-    }
-
-    /// Re-derive `isPro` from the verified current entitlements (or the paid-era
-    /// grandfather clause) and cache it.
-    func refreshEntitlement() async {
-        #if DEBUG
-        // Keep the dev override out of the UserDefaults cache: a cached `true`
-        // would leak Pro into a later -paywall test run.
-        if Self.debugUnlocked {
-            isPro = true
-            return
-        }
-        #endif
-        var entitled = false
-        for await entitlement in Transaction.currentEntitlements {
-            if case .verified(let transaction) = entitlement,
-               Self.allProductIDs.contains(transaction.productID),
-               transaction.revocationDate == nil {
-                entitled = true
-            }
-        }
-        if !entitled { entitled = await isGrandfathered() }
-        isPro = entitled
-        UserDefaults.standard.set(entitled, forKey: Self.cacheKey)
-    }
-
-    /// True when the user's first download was a paid-era build (< 3).
-    /// Applies only in the production App Store: sandbox/TestFlight report
-    /// originalAppVersion as "1.0", so the environment check below skips the
-    /// clause there (otherwise every reviewer would be grandfathered into Pro and
-    /// never see the paywall — the App Review 2.1(b) rejection this guards against).
-    private func isGrandfathered() async -> Bool {
-        #if DEBUG
-        // Dev builds have no App Store receipt, so AppTransaction.shared throws
-        // up a system Apple-Account sign-in sheet — right on top of the paywall.
-        // Sandbox receipts also report originalAppVersion as "1.0", which would
-        // mark every tester as grandfathered and make the paywall untestable.
-        // Production (App Store) installs always carry a receipt, so the real
-        // check below runs silently there.
-        return false
-        #else
-        if UserDefaults.standard.bool(forKey: Self.grandfatherKey) { return true }
-        guard !grandfatherChecked else { return false }
-        grandfatherChecked = true
-        guard let result = try? await AppTransaction.shared,
-              case .verified(let appTransaction) = result else { return false }
-        // Only the production App Store reports a real originalAppVersion. Sandbox
-        // and TestFlight report "1.0", which would grandfather EVERY reviewer and
-        // auto-unlock Pro — so the paywall (where the IAPs live) never appears and
-        // App Review, which runs in the sandbox, files a 2.1(b) "can't locate the
-        // In-App Purchases" rejection. Gate the clause to production.
-        guard appTransaction.environment == .production else { return false }
-        guard let firstComponent = appTransaction.originalAppVersion
-            .split(separator: ".").first,
-              let build = Int(firstComponent) else { return false }
-        let grandfathered = build < Self.firstFreemiumBuild
-        if grandfathered {
-            UserDefaults.standard.set(true, forKey: Self.grandfatherKey)
-        }
-        return grandfathered
-        #endif
+        await store.loadProducts()
     }
 
     func purchase(_ product: Product) async {
-        guard !isPurchasing else { return }
-        isPurchasing = true
-        defer { isPurchasing = false }
-        do {
-            let result = try await product.purchase()
-            switch result {
-            case .success(let verification):
-                if case .verified(let transaction) = verification {
-                    await transaction.finish()
-                }
-                await refreshEntitlement()
-            case .userCancelled, .pending:
-                break   // no error banner — the user chose to stop, or Ask to Buy is pending
-            @unknown default:
-                break
-            }
-        } catch {
-            lastError = error.localizedDescription
-        }
+        await store.purchase(product)
     }
 
     /// Restore for users on a new device (also an App Review requirement).
     func restore() async {
-        guard !isRestoring else { return }
-        isRestoring = true
-        defer { isRestoring = false }
-        do {
-            try await AppStore.sync()
-        } catch {
-            // Sync can throw on cancellation; entitlements below still refresh.
-        }
-        grandfatherChecked = false   // sync refreshed the receipt — check anew
-        await refreshEntitlement()
+        await store.restore()
         // Restoring must never end in silence: either the paywall closes
         // (isPro flipped true) or the user learns nothing was found.
         if !isPro { lastError = "No previous purchase was found." }
+    }
+
+    /// Re-derive entitlements from the shared engine.
+    func refreshEntitlement() async {
+        await store.refreshEntitlements()
     }
 }
