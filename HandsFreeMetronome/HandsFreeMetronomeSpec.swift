@@ -3,7 +3,7 @@ import LeeoKit
 
 enum HandsFreeMetronomeSpec: LeeoAppSpec {
     static let appName = "Not My Tempo"
-    static let developerEmail = "mizzking75@gmail.com"
+    static let developerEmail = "leeo@kakao.com"
     static let feedback = LeeoFeedbackConfig(containerIdentifier: "iCloud.com.Ysoup.FeedbackHub", appIdentifier: "com.leeo.HandsFreeMetronome")
 
     // 인앱 결제(프로 잠금해제). StoreKit 엔진은 LeeoKit 의 LeeoStore 가 담당하고,
