@@ -13,5 +13,7 @@
 	     so it expands to use all available space at any size. -->
 	<key>UISupportsFullScreenInAssistiveAccess</key>
 	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>
