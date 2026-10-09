@@ -1,5 +1,19 @@
 # Release Notes — Not My Tempo
 
+## 1.0.6
+
+### 앱스토어 (한국어)
+
+도움말에서 지원 페이지와 개인정보 안내를 엽니다.
+문의 메일 주소를 하나로 정리했습니다.
+앱이 더 안정적으로 동작하도록 다듬었습니다.
+
+### App Store (English)
+
+Open support and privacy from Help.
+One contact address for every question.
+Polished for steadier everyday use.
+
 ## 1.0.5
 
 **Not My Tempo Pro**가 생겼습니다. 메트로놈 본체 — 모든 템포·박자·분할, 비트

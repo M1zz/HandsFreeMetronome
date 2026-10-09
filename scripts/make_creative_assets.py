@@ -35,9 +35,9 @@ SPEC = {
 }
 
 # 검색 결과: 눈썹글은 그 나라 사람이 검색창에 치는 말. 앱의 약속은 "손 대지 않고 말로 템포를 바꾼다".
-# 한국어 음성 명령(시작 · 빠르게)은 README 의 인식 단어 그대로다.
+# 음성 명령은 영어만 알아듣는다(VoiceController 의 en-US 인식기) — 한국어 글에도 영어 명령을 그대로 적는다.
 SEARCH = {
-    "ko": ("메트로놈", "템포는<br>말로 바꾸세요", "“시작”, “빠르게” 한마디면 돼요"),
+    "ko": ("메트로놈", "템포는<br>말로 바꾸세요", "영어로 “start”, “faster” 한마디면 돼요"),
     "en": ("Metronome", "Change tempo<br>with your voice", "Say “start” or “faster” as you play"),
 }
 
