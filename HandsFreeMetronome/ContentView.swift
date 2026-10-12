@@ -7,6 +7,7 @@ struct ContentView: View {
     @StateObject private var metronome = MetronomeEngine()
     @StateObject private var voice = VoiceController()
     @StateObject private var tuner = TunerEngine()
+    @StateObject private var noteSignal = NoteSignalDetector()
     @StateObject private var pro = ProStore()
 
     // A locked Pro feature was reached — which one shapes the paywall's pitch.
@@ -34,7 +35,7 @@ struct ContentView: View {
     @State private var timingStats = TimingStats()     // running tally of play-along taps
     @State private var tapGhosts: [TapGhost] = []      // fading rings where taps landed
     @State private var flashOpacity: Double = 0        // whole-screen beat flash (0…~0.2)
-    @State private var flashIsDownbeat = false         // red flash on beat 1, brass otherwise
+    @State private var flashIsDownbeat = false         // red flash on beat 1, cue otherwise
     @AppStorage("tempoAsNumber") private var tempoAsNumber = false   // big display: term vs. BPM
     @State private var beatAnchor = Date()   // wall-clock moment the current beat fired
     // Which beat visualization is showing. Persisted so it survives relaunch.
@@ -75,12 +76,11 @@ struct ContentView: View {
     @ScaledMetric(relativeTo: .largeTitle) private var noteFontSize: CGFloat = 96
     @ScaledMetric(relativeTo: .title) private var stepIconSize: CGFloat = 30
 
-    // A rich, saturated gold — clearer than the old muted brass but not glaring, so
-    // small gold text still reads on white and it doesn't wash out in light mode.
-    private let brass = Color(red: 0.84, green: 0.56, blue: 0.09)
-    // A punchy red for the downbeat, more vivid than the system red on grey cards.
-    private let beatRed = Color(red: 0.90, green: 0.22, blue: 0.20)
+    // Key colour and downbeat red — see Palette.swift for why these two.
+    private let cue = Color.cue
+    private let beatRed = Color.beatRed
     private let haptic = UIImpactFeedbackGenerator(style: .light)
+    private let sliderHaptic = UISelectionFeedbackGenerator()   // per-BPM detent on the tempo slider
     private let maxBeats = MetronomeEngine.maxBeatsPerMeasure
     private let tuneTolerance: Double = 10   // ± cents counted as "in tune"
 
@@ -91,7 +91,7 @@ struct ContentView: View {
             // brightness than to position, so a faint full-bleed pulse keeps the
             // beat readable while the eyes are on sheet music. Kept subtle (≤0.2
             // opacity) to stay comfortable at high tempos.
-            (flashIsDownbeat ? beatRed : brass)
+            (flashIsDownbeat ? beatRed : cue)
                 .opacity(flashOpacity)
                 .ignoresSafeArea()
                 .allowsHitTesting(false)
@@ -151,6 +151,7 @@ struct ContentView: View {
         // sheet's onDismiss) — stopped on ANY path that closes it.
         .onChange(of: showTuner) { open in
             if !open { tuner.stop() }
+            noteSignal.setSuspended(open)   // tuning a string must not fire the signal
         }
         .sheet(isPresented: $showTrainer) { trainerSheet }
         .sheet(isPresented: $showAccents) { accentsSheet }
@@ -187,6 +188,11 @@ struct ContentView: View {
                         openTuner()
                     }
                 }
+            }
+            // -uitest-close stands in for saying "close" a few seconds after launch,
+            // so tip dismissal by voice can be checked on the simulator.
+            if uitestArgs.contains("-uitest-close") {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 8.0) { handle(.dismiss) }
             }
             #endif
             // Listen by default — UNLESS the user relies on iOS Voice Control, in
@@ -334,7 +340,7 @@ struct ContentView: View {
                     .monospacedDigit()
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
-                    .foregroundStyle(beatScale > 1.0 ? brass : Color.primary)
+                    .foregroundStyle(beatScale > 1.0 ? cue : Color.primary)
                     .accessibilityLabel("Tempo")
                     .accessibilityValue("\(metronome.bpm) beats per minute")
                 Text("BPM")
@@ -344,13 +350,13 @@ struct ContentView: View {
             }
 
             HStack(spacing: 14) {
-                aaButton("Slower", icon: "minus", tint: brass) { metronome.nudge(-5) }
-                aaButton("Faster", icon: "plus", tint: brass) { metronome.nudge(5) }
+                aaButton("Slower", icon: "minus", tint: cue) { metronome.nudge(-5) }
+                aaButton("Faster", icon: "plus", tint: cue) { metronome.nudge(5) }
             }
 
             aaButton(metronome.isPlaying ? "Stop" : "Start",
                      icon: metronome.isPlaying ? "stop.fill" : "play.fill",
-                     tint: metronome.isPlaying ? .red : brass) { metronome.toggle() }
+                     tint: metronome.isPlaying ? .red : cue) { metronome.toggle() }
 
             Spacer(minLength: 0)
         }
@@ -366,6 +372,7 @@ struct ContentView: View {
         } label: {
             Label(title, systemImage: icon)
                 .font(.title2.weight(.semibold))
+                .foregroundStyle(ink(on: tint))
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 14)
         }
@@ -492,7 +499,7 @@ struct ContentView: View {
                 ZStack {
                     HStack(spacing: 8) {
                         ForEach(0..<beats, id: \.self) { i in
-                            let base = i == 0 ? beatRed : brass          // downbeat is red
+                            let base = i == 0 ? beatRed : cue          // downbeat is red
                             let active = started && i == currentBeat
                             // The active beat's ball crosses the centre ON each click and
                             // arcs out to an alternating extreme in between. Idle circles
@@ -594,14 +601,14 @@ struct ContentView: View {
                         .position(center)
                     // Subdivision minor ticks between the beats — one extra dot per
                     // click, so 1/8 shows a midpoint, 1/16 shows three per beat.
-                    // Each tick mirrors its click level: high = brass and larger,
+                    // Each tick mirrors its click level: high = cue and larger,
                     // low = grey, a silent rest = barely-there.
                     if sub > 1 {
                         ForEach(0..<(beats * sub), id: \.self) { m in
                             if m % sub != 0 {
                                 let level = metronome.clickLevel(at: m)
                                 let pp = orbitPoint(beat: Double(m) / Double(sub), beats: beats, radius: radius, center: center)
-                                Circle().fill(level == .high ? brass : Color(.systemGray2))
+                                Circle().fill(level == .high ? cue : Color(.systemGray2))
                                     .frame(width: level == .high ? 11 : 7,
                                            height: level == .high ? 11 : 7)
                                     .opacity(level == .mute ? 0.25 : 1)
@@ -614,8 +621,8 @@ struct ContentView: View {
                         let p = orbitPoint(beat: Double(i), beats: beats, radius: radius, center: center)
                         let lit = i == currentBeat
                         Circle()
-                            .fill(lit ? (i == 0 ? beatRed : brass)
-                                      : (i == 0 ? beatRed.opacity(0.45) : brass.opacity(0.4)))
+                            .fill(lit ? (i == 0 ? beatRed : cue)
+                                      : (i == 0 ? beatRed.opacity(0.45) : cue.opacity(0.4)))
                             .frame(width: 20, height: 20)
                             .scaleEffect(lit ? 1.5 : 1.0)     // grow via scale so it eases cleanly
                             .position(p)
@@ -624,7 +631,7 @@ struct ContentView: View {
                     // The travelling dot.
                     let p = orbitPoint(beat: reduceMotion ? Double(max(0, currentBeat)) : phase,
                                        beats: beats, radius: radius, center: center)
-                    let dotColor = currentBeat == 0 ? beatRed : brass
+                    let dotColor = currentBeat == 0 ? beatRed : cue
                     Circle()
                         .fill(dotColor)
                         .frame(width: 24, height: 24)
@@ -635,7 +642,7 @@ struct ContentView: View {
                     if let verdict = timingVerdict {
                         Text(verdict.label)
                             .font(.system(size: 36, weight: .heavy, design: .rounded))
-                            .foregroundStyle(verdict.color(brass: brass, red: beatRed))
+                            .foregroundStyle(verdict.color(cue: cue, red: beatRed))
                             .position(center)
                             .transition(reduceMotion ? .opacity
                                         : .scale(scale: 0.6).combined(with: .opacity))
@@ -650,7 +657,7 @@ struct ContentView: View {
                     // where it was at that instant — how far it sits from a beat
                     // marker is your timing error, made visible on the ring.
                     ForEach(tapGhosts) { ghost in
-                        GhostCircle(color: ghost.verdict.color(brass: brass, red: beatRed),
+                        GhostCircle(color: ghost.verdict.color(cue: cue, red: beatRed),
                                     reduceMotion: reduceMotion)
                             .position(orbitPoint(beat: ghost.phase, beats: beats,
                                                  radius: radius, center: center))
@@ -673,10 +680,15 @@ struct ContentView: View {
     private var timingStatsReadout: some View {
         HStack(spacing: 10) {
             statBubble(timingStats.perfect, color: .green)
-            statBubble(timingStats.good, color: brass)
+            statBubble(timingStats.good, color: cue)
             statBubble(timingStats.bad, color: beatRed)
         }
         .accessibilityHidden(true)   // spoken via the orbit view's accessibilityValue
+    }
+
+    /// Text on a solid fill: bright cyan in dark mode needs black, everything else white.
+    private func ink(on fill: Color) -> Color {
+        fill == cue ? .onCue : .white
     }
 
     private func statBubble(_ count: Int, color: Color) -> some View {
@@ -684,7 +696,7 @@ struct ContentView: View {
             .font(.system(.headline, design: .rounded).weight(.bold))
             .monospacedDigit()
             .minimumScaleFactor(0.5)   // three-digit counts shrink to stay inside
-            .foregroundStyle(.white)
+            .foregroundStyle(ink(on: color))
             .frame(width: 34, height: 34)
             .background(Circle().fill(color))
     }
@@ -734,7 +746,7 @@ struct ContentView: View {
             // would go negative for a frame (negative trim/scale glitches).
             let started = metronome.isPlaying && currentBeat >= 0
             let f = started ? min(1, max(0, phase - Double(currentBeat))) : 0   // 0…1 through the beat
-            let color = currentBeat == 0 ? beatRed : brass        // downbeat sweeps red
+            let color = currentBeat == 0 ? beatRed : cue        // downbeat sweeps red
             GeometryReader { geo in
                 let side = min(geo.size.width, geo.size.height)
                 let radius = side / 2 - 16
@@ -831,10 +843,10 @@ struct ContentView: View {
     private func isActive(_ i: Int) -> Bool { metronome.isPlaying && i == currentBeat }
 
     /// Fill for an active beat: the currently sounding one is bright
-    /// (downbeat red, others brass); the rest keep their hue but dimmed, so the
+    /// (downbeat red, others cue); the rest keep their hue but dimmed, so the
     /// downbeat "1" still reads as red even while stopped.
     private func dotFill(_ i: Int) -> Color {
-        let hue = i == 0 ? beatRed : brass
+        let hue = i == 0 ? beatRed : cue
         return isActive(i) ? hue : hue.opacity(0.5)
     }
 
@@ -848,7 +860,7 @@ struct ContentView: View {
                 .font(.system(size: bpmFontSize, weight: .bold, design: .rounded))
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
-                .foregroundStyle(beatScale > 1.0 ? brass : Color.primary)
+                .foregroundStyle(beatScale > 1.0 ? cue : Color.primary)
                 .scaleEffect(beatScale)
                 .contentShape(Rectangle())
                 .onTapGesture {
@@ -865,11 +877,11 @@ struct ContentView: View {
                 .font(.subheadline)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
-                .foregroundStyle(metronome.speedTrainerOn ? brass : .secondary)
+                .foregroundStyle(metronome.speedTrainerOn ? cue : .secondary)
             HStack(spacing: 16) {
                 stepButton(systemName: "minus.circle.fill", delta: -1)
                 Slider(value: bpmBinding, in: 30...260, step: 1)
-                    .tint(brass)
+                    .tint(cue)
                     .accessibilityLabel("Tempo")
                     .accessibilityValue("\(metronome.bpm) BPM")
                     .accessibilityInputLabels(["Tempo", "Tempo slider", "BPM"])
@@ -911,12 +923,12 @@ struct ContentView: View {
                     haptic.impactOccurred(intensity: 0.5)
                 } label: {
                     SegmentedRing(segments: opt.seg,
-                                  color: selected ? brass : Color(.systemGray3))
+                                  color: selected ? cue : Color(.systemGray3))
                         .frame(width: 40, height: 40)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 12)
                         .background(RoundedRectangle(cornerRadius: 12)
-                            .fill(selected ? brass.opacity(0.14) : .clear))
+                            .fill(selected ? cue.opacity(0.14) : .clear))
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("\(opt.voice) notes")
@@ -1025,7 +1037,7 @@ struct ContentView: View {
             haptic.impactOccurred(intensity: 0.4)
         } label: {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(level == .high ? brass
+                .fill(level == .high ? cue
                     : level == .low ? Color(.systemGray5)
                     : Color(.systemGray6))
                 .frame(height: 44)
@@ -1103,7 +1115,7 @@ struct ContentView: View {
             } label: {
                 Label("Save current pattern…", systemImage: "plus.circle.fill")
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(brass)
+                    .foregroundStyle(cue)
             }
             .accessibilityInputLabels(["Save pattern", "Save preset"])
         }
@@ -1129,7 +1141,7 @@ struct ContentView: View {
                  : micMessage)
                 .font(.subheadline.weight(voice.isListening && !lastCommandText.isEmpty ? .semibold : .regular))
                 .foregroundStyle(voice.isListening
-                                 ? (lastCommandText.isEmpty ? Color.secondary : brass)
+                                 ? (lastCommandText.isEmpty ? Color.secondary : cue)
                                  : .secondary)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
@@ -1162,7 +1174,7 @@ struct ContentView: View {
         return HStack(alignment: .center, spacing: 4) {
             ForEach(factors.indices, id: \.self) { i in
                 Capsule()
-                    .fill(brass)
+                    .fill(cue)
                     .frame(width: 4, height: max(4, 4 + level * 26 * factors[i]))
             }
         }
@@ -1182,14 +1194,14 @@ struct ContentView: View {
                 transportLabel(flashing ? lastCommandText : (voice.isListening ? "Mute" : "Listen"),
                                icon: flashing ? "checkmark.circle.fill"
                                      : (voice.isListening ? "speaker.wave.2.fill" : "mic"),
-                               color: voice.isListening ? brass : .secondary,
+                               color: voice.isListening ? cue : .secondary,
                                filled: false)
                     .overlay {
                         // Border countdown: drains toward the auto-mute moment.
                         if voice.isListening {
                             RoundedRectangle(cornerRadius: 16, style: .continuous)
                                 .trim(from: 0, to: muteProgress)
-                                .stroke(brass, style: StrokeStyle(lineWidth: 3.5, lineCap: .round))
+                                .stroke(cue, style: StrokeStyle(lineWidth: 3.5, lineCap: .round))
                                 .allowsHitTesting(false)
                         }
                     }
@@ -1204,7 +1216,7 @@ struct ContentView: View {
             Button { metronome.toggle() } label: {
                 transportLabel(metronome.isPlaying ? "Stop" : "Start",
                                icon: metronome.isPlaying ? "stop.fill" : "play.fill",
-                               color: metronome.isPlaying ? .red : brass,
+                               color: metronome.isPlaying ? .red : cue,
                                filled: true)
             }
             .buttonStyle(.plain)
@@ -1222,7 +1234,7 @@ struct ContentView: View {
             .font(.headline)
             .lineLimit(1)
             .minimumScaleFactor(0.7)   // a flashed command name may be a touch longer
-            .foregroundStyle(filled ? Color.white : color)
+            .foregroundStyle(filled ? ink(on: color) : color)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 15)
             .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
@@ -1264,7 +1276,7 @@ struct ContentView: View {
                 if let anchor = anchors[id] {
                     let rect = proxy[anchor]
                     RoundedRectangle(cornerRadius: 16, style: .continuous)
-                        .stroke(brass, lineWidth: 2.5)
+                        .stroke(cue, lineWidth: 2.5)
                         .frame(width: rect.width, height: rect.height)
                         .position(x: rect.midX, y: rect.midY)
                         .allowsHitTesting(false)
@@ -1284,9 +1296,9 @@ struct ContentView: View {
                     Button { dismissHelpMarks(); showCommands = true } label: {
                         Text("All commands")
                             .font(.footnote.weight(.bold))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(Color.onCue)
                             .padding(.horizontal, 12).padding(.vertical, 7)
-                            .background(Capsule().fill(brass))
+                            .background(Capsule().fill(cue))
                     }
                 }
                 .padding(.horizontal, 16).padding(.vertical, 10)
@@ -1302,7 +1314,7 @@ struct ContentView: View {
     /// A small "say …" callout tag placed next to a highlighted control.
     private func helpPill(_ phrase: String) -> some View {
         VStack(alignment: .leading, spacing: 1) {
-            Text("say").font(.caption2.weight(.bold)).foregroundStyle(brass)
+            Text("say").font(.caption2.weight(.bold)).foregroundStyle(cue)
             Text(phrase).font(.footnote.weight(.semibold)).foregroundStyle(.primary)
         }
         .padding(.horizontal, 12).padding(.vertical, 8)
@@ -1326,16 +1338,17 @@ struct ContentView: View {
                                     .font(.footnote).foregroundStyle(.secondary)
                             }
                         }
-                        .tint(brass)
+                        .tint(cue)
                         .accessibilityHint("Turns off the app's own microphone and drives controls by name")
                     } header: {
                         Text("Accessibility")
                     }
+                    noteSignalSection
                     Section {
                         if pro.isPro {
                             HStack(spacing: 12) {
                                 Image(systemName: "checkmark.seal.fill")
-                                    .foregroundStyle(brass)
+                                    .foregroundStyle(cue)
                                     .frame(width: 22)
                                 Text("Pro unlocked — thank you!")
                                     .font(.subheadline.weight(.semibold))
@@ -1348,7 +1361,7 @@ struct ContentView: View {
                             } label: {
                                 HStack(spacing: 12) {
                                     Image(systemName: "crown.fill")
-                                        .foregroundStyle(brass)
+                                        .foregroundStyle(cue)
                                         .frame(width: 22)
                                     VStack(alignment: .leading, spacing: 2) {
                                         Text("Unlock Pro")
@@ -1412,7 +1425,7 @@ struct ContentView: View {
                             HStack {
                                 Label("Open practice mode", systemImage: "chart.line.uptrend.xyaxis")
                                     .font(.subheadline.weight(.semibold))
-                                    .foregroundStyle(brass)
+                                    .foregroundStyle(cue)
                                 if !pro.isPro { proLockBadge }
                             }
                         }
@@ -1431,7 +1444,7 @@ struct ContentView: View {
                             HStack {
                                 Label("Open accent editor", systemImage: "waveform.path")
                                     .font(.subheadline.weight(.semibold))
-                                    .foregroundStyle(brass)
+                                    .foregroundStyle(cue)
                                 if !pro.isPro { proLockBadge }
                             }
                         }
@@ -1445,7 +1458,7 @@ struct ContentView: View {
                     Section("Scrolling") {
                         commandRow("\"scroll down\" / \"scroll up\"", "move this list")
                         commandRow("\"help\"", "list the commands you can say")
-                        commandRow("\"done\" / \"close\"", "close a panel")
+                        commandRow("\"done\" / \"close\"", "close a panel or tip")
                     }
                     .id(helpSections[5])
                     Section {
@@ -1453,7 +1466,7 @@ struct ContentView: View {
                     } header: {
                         Text("Support")
                     }
-                    DeveloperContactSection(accent: brass)
+                    DeveloperContactSection(accent: cue)
                 }
                 .onChange(of: helpIndex) { idx in
                     guard helpSections.indices.contains(idx) else { return }
@@ -1470,21 +1483,78 @@ struct ContentView: View {
         }
     }
 
+    // MARK: Instrument signal
+
+    private var noteSignalSection: some View {
+        Section {
+            Toggle(isOn: $noteSignal.enabled) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Start / stop with my instrument").font(.subheadline.weight(.semibold))
+                    Text(noteSignal.pattern.isEmpty
+                         ? "Record a short phrase first."
+                         : "Signal: \(NoteSignalDetector.phrase(noteSignal.pattern))")
+                        .font(.footnote).foregroundStyle(.secondary)
+                }
+            }
+            .tint(cue)
+            .disabled(noteSignal.pattern.isEmpty || usesVoiceControl)
+            if noteSignal.mode == .recording {
+                VStack(alignment: .leading, spacing: 6) {
+                    Label("Listening… hold each note", systemImage: "waveform")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(cue)
+                    Text(noteSignal.recorded.isEmpty
+                         ? "Play 2–5 notes, about half a second each."
+                         : NoteSignalDetector.phrase(noteSignal.recorded))
+                        .font(.footnote.monospaced())
+                        .foregroundStyle(.secondary)
+                    HStack {
+                        Button("Cancel", role: .cancel) { noteSignal.cancelRecording() }
+                        Spacer()
+                        Button("Save") { noteSignal.finishRecording() }
+                            .disabled(noteSignal.recorded.count < NoteSignalDetector.minNotes)
+                    }
+                    .buttonStyle(.borderless)
+                }
+                .accessibilityElement(children: .contain)
+            } else {
+                Button {
+                    if !voice.isListening { voice.toggle() }   // the signal rides on the app's mic
+                    metronome.stop()   // clicks would be recorded as notes
+                    noteSignal.startRecording()
+                } label: {
+                    Label(noteSignal.pattern.isEmpty ? "Record signal" : "Record again",
+                          systemImage: "record.circle")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(cue)
+                }
+                .disabled(usesVoiceControl)
+                .accessibilityInputLabels(["Record signal", "Record again"])
+            }
+        } header: {
+            Text("Instrument signal")
+        } footer: {
+            Text(usesVoiceControl
+                 ? "Needs this app\u{2019}s mic — turn off \u{201C}I use iOS Voice Control\u{201D} to use it."
+                 : "Play your phrase to start or stop the click, even mid-song. Hold each note about half a second so quick notes in your playing don\u{2019}t set it off. Works while Listen is on.")
+        }
+    }
+
     /// Small "PRO" tag shown beside launchers for still-locked features.
     private var proLockBadge: some View {
         Text("PRO")
             .font(.caption2.weight(.heavy))
-            .foregroundStyle(brass)
+            .foregroundStyle(cue)
             .padding(.horizontal, 6)
             .padding(.vertical, 2)
-            .background(Capsule().fill(brass.opacity(0.15)))
+            .background(Capsule().fill(cue.opacity(0.15)))
             .accessibilityLabel("Requires Pro")
     }
 
     private func usageRow(_ icon: String, _ title: String, _ detail: String) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: icon)
-                .foregroundStyle(brass)
+                .foregroundStyle(cue)
                 .frame(width: 22)
             VStack(alignment: .leading, spacing: 2) {
                 Text(title).font(.subheadline.weight(.semibold))
@@ -1505,7 +1575,7 @@ struct ContentView: View {
                     Toggle("Practice mode", isOn: Binding(
                         get: { metronome.speedTrainerOn },
                         set: { metronome.setSpeedTrainer($0) }))
-                        .tint(brass)
+                        .tint(cue)
                         .accessibilityInputLabels(["Practice mode", "Practice", "Trainer"])
                     Stepper("Add \(metronome.trainerStep) BPM", value: $metronome.trainerStep, in: 1...20)
                     Stepper("Every \(metronome.trainerBars) bars", value: $metronome.trainerBars, in: 1...16)
@@ -1565,7 +1635,7 @@ struct ContentView: View {
                     Image(systemName: inTune ? "checkmark.circle.fill"
                                              : (tuner.cents > 0 ? "arrow.up.circle.fill" : "arrow.down.circle.fill"))
                         .font(.title)
-                        .foregroundStyle(inTune ? Color.green : brass)
+                        .foregroundStyle(inTune ? Color.green : cue)
                         .accessibilityHidden(true)   // pitch already announced on the note
                 }
                 Text(tuner.frequency > 0 ? String(format: "%.1f Hz", tuner.frequency) : "Play a note…")
@@ -1625,7 +1695,7 @@ struct ContentView: View {
                     .position(x: w / 2, y: cy)
                 // Moving indicator.
                 if tuner.frequency > 0 {
-                    Circle().fill(inTune ? Color.green : brass)
+                    Circle().fill(inTune ? Color.green : cue)
                         .frame(width: 22, height: 22)
                         .position(x: w / 2 + CGFloat(cents / 50) * half, y: cy)
                         .animation(.easeOut(duration: 0.22), value: tuner.cents)
@@ -1653,7 +1723,7 @@ struct ContentView: View {
         } label: {
             Image(systemName: systemName)
                 .font(.system(size: stepIconSize))
-                .foregroundStyle(brass)
+                .foregroundStyle(cue)
         }
         .buttonStyle(.plain)
         .accessibilityLabel(delta < 0 ? "Decrease tempo" : "Increase tempo")
@@ -1670,8 +1740,21 @@ struct ContentView: View {
     private var bpmBinding: Binding<Double> {
         // Int(Double) traps on NaN/infinity, so gate the conversion and go
         // through setTempo, which clamps to the supported BPM range.
+        // Each BPM step ticks under the finger; round tens land a firmer bump,
+        // so the slider can be set by feel without looking.
         Binding(get: { Double(metronome.bpm) },
-                set: { if $0.isFinite { metronome.setTempo(Int($0)) } })
+                set: {
+                    guard $0.isFinite else { return }
+                    let old = metronome.bpm
+                    metronome.setTempo(Int($0))
+                    let new = metronome.bpm
+                    guard new != old else { return }
+                    if new % 10 == 0 {
+                        haptic.impactOccurred(intensity: 0.8)
+                    } else {
+                        sliderHaptic.selectionChanged()
+                    }
+                })
     }
 
     /// Tap-tempo: tapping the big BPM number in rhythm sets the tempo from the
@@ -1708,7 +1791,14 @@ struct ContentView: View {
     private func wireUp() {
         metronome.onBeat = { beat in pulseBeat(beat) }
         voice.onCommand = { handle($0) }
-        voice.onAudioBuffer = { buffer in tuner.process(buffer) }
+        voice.onAudioBuffer = { buffer in
+            tuner.process(buffer)
+            noteSignal.process(buffer)
+        }
+        noteSignal.onTrigger = {
+            handle(metronome.isPlaying ? .stop : .start)
+            voice.keepAlive()   // playing the signal counts as activity for auto-mute
+        }
         haptic.prepare()
     }
 
@@ -1731,6 +1821,21 @@ struct ContentView: View {
         closePanels()
         withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = feature }
         return false
+    }
+
+    /// "close" also dismisses the tip on screen — a hands-free app can't make you
+    /// reach for a tip's ✕. Only one popover shows at a time and the tour is set to
+    /// show the next stop immediately, so closing one used to pop the next right
+    /// back up in the same spot (it looked like "close" did nothing). Now the tip
+    /// that's up is retired for good, and the rest wait until the next launch.
+    private func dismissVisibleTips() {
+        // The tour's current stop wins the screen when it's eligible; otherwise
+        // it's one of the standalone first-run tips. Retire just that one, so a
+        // tip that was only queued is never lost unseen.
+        let candidates: [any Tip] = [featureTips.currentTip, MicListeningTip(), VoiceControlTip(), HelpVoiceTip()]
+            .compactMap { $0 }
+        candidates.first { $0.shouldDisplay }?.invalidate(reason: .tipClosed)
+        AppTips.snoozed = true
     }
 
     private func closePanels() {
@@ -1795,7 +1900,9 @@ struct ContentView: View {
             VizModeTip().invalidate(reason: .actionPerformed)
         case .help: showHelp()
         case .tuner: openTuner()
-        case .dismiss: closePanels()
+        case .dismiss:
+            dismissVisibleTips()
+            closePanels()
         case .scrollUp: helpIndex = max(0, helpIndex - 1)
         case .scrollDown: helpIndex = min(helpSections.count - 1, helpIndex + 1)
         case .practice: openPractice()
@@ -1951,10 +2058,10 @@ enum TimingVerdict {
         }
     }
 
-    func color(brass: Color, red: Color) -> Color {
+    func color(cue: Color, red: Color) -> Color {
         switch self {
         case .perfect: return .green
-        case .good: return brass
+        case .good: return cue
         case .bad: return red
         }
     }
@@ -1981,6 +2088,7 @@ struct AccentGridTip: Tip {
     var title: Text { Text("Customize accents") }
     var message: Text? { Text("Double-tap here to open the accent grid — set every click of the measure high, low, or silent, and save patterns as presets.") }
     var image: Image? { Image(systemName: "hand.tap") }
+    var rules: [Rule] { #Rule(AppTips.$snoozed) { $0 == false } }
 }
 
 /// Guided-tour stop: the big display shows the tempo as a classical term.
@@ -1988,6 +2096,7 @@ struct TempoDisplayTip: Tip {
     var title: Text { Text("Largo? Moderato?") }
     var message: Text? { Text("That\u{2019}s your tempo as a classical term. Tap it to flip to the BPM number and back.") }
     var image: Image? { Image(systemName: "metronome") }
+    var rules: [Rule] { #Rule(AppTips.$snoozed) { $0 == false } }
 }
 
 /// Guided-tour stop: two beat visualizations to choose from.
@@ -1995,6 +2104,7 @@ struct VizModeTip: Tip {
     var title: Text { Text("Two beat views") }
     var message: Text? { Text("Tap to switch between the bouncing ball and the orbit ring — or say \u{201C}bounce\u{201D} / \u{201C}orbit\u{201D}.") }
     var image: Image? { Image(systemName: "circle.circle") }
+    var rules: [Rule] { #Rule(AppTips.$snoozed) { $0 == false } }
 }
 
 /// Guided-tour stop: the speed trainer, which is voice-first and easy to miss.
@@ -2002,6 +2112,7 @@ struct PracticeTip: Tip {
     var title: Text { Text("Speed trainer") }
     var message: Text? { Text("Say \u{201C}practice\u{201D} to raise the tempo automatically every few bars while you play — great for speed drills.") }
     var image: Image? { Image(systemName: "chart.line.uptrend.xyaxis") }
+    var rules: [Rule] { #Rule(AppTips.$snoozed) { $0 == false } }
 }
 
 /// Guided-tour stop: there's a chromatic tuner behind a voice command.
@@ -2009,6 +2120,7 @@ struct TunerTip: Tip {
     var title: Text { Text("There\u{2019}s a tuner too") }
     var message: Text? { Text("Say \u{201C}tune\u{201D} to open the chromatic tuner, and \u{201C}close\u{201D} when you\u{2019}re done.") }
     var image: Image? { Image(systemName: "tuningfork") }
+    var rules: [Rule] { #Rule(AppTips.$snoozed) { $0 == false } }
 }
 
 /// One-time hint that the voice "help" command exists.
@@ -2016,6 +2128,7 @@ struct HelpVoiceTip: Tip {
     var title: Text { Text("Forget a command?") }
     var message: Text? { Text("Say \u{201C}help\u{201D} anytime — or tap here — to see every command you can say, then \u{201C}close\u{201D} to dismiss.") }
     var image: Image? { Image(systemName: "questionmark.circle.fill") }
+    var rules: [Rule] { #Rule(AppTips.$snoozed) { $0 == false } }
 }
 
 /// Shared TipKit rule inputs. iOS exposes no API to detect system Voice Control,
@@ -2024,6 +2137,8 @@ struct HelpVoiceTip: Tip {
 enum AppTips {
     @Parameter static var usesVoiceControl: Bool = false
     @Parameter static var voiceOverRunning: Bool = false
+    /// Set when tips are closed by voice: no more tips this launch (not persisted).
+    @Parameter(.transient) static var snoozed: Bool = false
 }
 
 /// First-run, plain mic users: the app is already listening — just talk to it.
@@ -2036,6 +2151,7 @@ struct MicListeningTip: Tip {
     var rules: [Rule] {
         #Rule(AppTips.$usesVoiceControl) { $0 == false }
         #Rule(AppTips.$voiceOverRunning) { $0 == false }
+        #Rule(AppTips.$snoozed) { $0 == false }
     }
 }
 
@@ -2048,6 +2164,7 @@ struct VoiceControlTip: Tip {
     var image: Image? { Image(systemName: "waveform") }
     var rules: [Rule] {
         #Rule(AppTips.$usesVoiceControl) { $0 == true }
+        #Rule(AppTips.$snoozed) { $0 == false }
     }
 }
 

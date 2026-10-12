@@ -134,6 +134,13 @@ final class VoiceController: ObservableObject {
         bumpInactivityTimer()
     }
 
+    /// Something other than speech (the instrument signal) used the mic — treat
+    /// it as activity so listening doesn't auto-mute in the middle of practice.
+    func keepAlive() {
+        guard status == .listening else { return }
+        bumpInactivityTimer()
+    }
+
     /// Auto-mute after a stretch with no commands, to save battery. Reset on each
     /// command; listening resumes when the user taps Listen again.
     private func bumpInactivityTimer() {

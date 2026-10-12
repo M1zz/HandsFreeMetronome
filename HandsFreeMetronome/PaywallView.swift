@@ -13,7 +13,7 @@ struct PaywallView: View {
     /// silently swallows UIKit sheet presentations), so closing is the owner's job.
     let onClose: () -> Void
 
-    private let brass = Color(red: 0.84, green: 0.56, blue: 0.09)
+    private let cue = Color.cue   // see Palette.swift
 
     /// The tapped feature first, then the other Pro features.
     private var orderedFeatures: [ProFeature] {
@@ -62,7 +62,7 @@ struct PaywallView: View {
         VStack(spacing: 10) {
             Image(systemName: feature.icon)
                 .font(.system(size: 44, weight: .semibold))
-                .foregroundStyle(brass)
+                .foregroundStyle(cue)
                 .accessibilityHidden(true)
             Text(feature.title)
                 .font(.title2.weight(.bold))
@@ -82,7 +82,7 @@ struct PaywallView: View {
                 HStack(alignment: .top, spacing: 14) {
                     Image(systemName: f.icon)
                         .font(.title3)
-                        .foregroundStyle(brass)
+                        .foregroundStyle(cue)
                         .frame(width: 28)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(f.title).font(.subheadline.weight(.semibold))
@@ -121,7 +121,7 @@ struct PaywallView: View {
                         Task { await store.loadProducts() }
                     }
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(brass)
+                    .foregroundStyle(cue)
                 }
             }
             .padding(.vertical, 8)
@@ -170,11 +170,11 @@ struct PaywallView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 13)
-            .foregroundStyle(isLifetime ? brass : Color.white)
+            .foregroundStyle(isLifetime ? cue : Color.onCue)
             .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(isLifetime ? brass.opacity(0.15) : brass))
+                .fill(isLifetime ? cue.opacity(0.15) : cue))
             .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .stroke(brass.opacity(isLifetime ? 0.4 : 0), lineWidth: 1.5))
+                .stroke(cue.opacity(isLifetime ? 0.4 : 0), lineWidth: 1.5))
         }
         .buttonStyle(.plain)
         .disabled(store.isPurchasing)

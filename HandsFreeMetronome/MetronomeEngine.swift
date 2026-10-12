@@ -15,7 +15,7 @@ final class MetronomeEngine: ObservableObject {
     @Published var bpm: Int = 100 {
         didSet {
             UserDefaults.standard.set(bpm, forKey: Self.bpmKey)
-            if isPlaying { reschedule() }
+            if isPlaying { reschedule(realign: false) }
         }
     }
 
@@ -24,7 +24,7 @@ final class MetronomeEngine: ObservableObject {
         didSet {
             UserDefaults.standard.set(subdivision, forKey: Self.subdivisionKey)
             syncPlaybackLevels()
-            if isPlaying { reschedule() }
+            if isPlaying { reschedule(realign: true) }
         }
     }
 
@@ -34,7 +34,7 @@ final class MetronomeEngine: ObservableObject {
         didSet {
             UserDefaults.standard.set(beatsPerMeasure, forKey: Self.beatsKey)
             syncPlaybackLevels()
-            if isPlaying { reschedule() }
+            if isPlaying { reschedule(realign: true) }
         }
     }
 
@@ -113,6 +113,7 @@ final class MetronomeEngine: ObservableObject {
     private let timerQueue = DispatchQueue(label: "com.handsfree.metronome.timer",
                                            qos: .userInteractive)
     private var tick = 0 // position counter — only touched on timerQueue
+    private var lastTickTime = DispatchTime.now() // when the last click fired — timerQueue only
 
     /// Snapshot of the current measure's click levels for the audio tick.
     /// `fireTick` runs on `timerQueue` while the accent editor mutates
@@ -195,11 +196,16 @@ final class MetronomeEngine: ObservableObject {
         }
     }
 
-    /// A clean pitched click: a pure sine with a smooth attack and a decay that
-    /// fully settles to silence inside the buffer. The soft edges are what keep it
-    /// "clean" — an abrupt onset or a tone cut off mid-swing adds an audible pop.
+    /// A loud pitched click: a sine with a smooth attack and a decay that fully
+    /// settles to silence inside the buffer. The soft edges are what keep it free
+    /// of pops — an abrupt onset or a tone cut off mid-swing adds an audible pop.
+    /// The body is held longer and soft-saturated so the click carries over a band:
+    /// ~7.5 dB more energy than a bare 150/s sine decay, and the odd harmonics the
+    /// saturation adds land where the ear is most sensitive.
     private func makeClick(freq: Double, volume: Float) -> AVAudioPCMBuffer? {
-        let duration = 0.040                         // 40 ms — room for the tone to die away
+        // 55 ms: must stay under the shortest tick (260 BPM sixteenths = 57.7 ms) —
+        // buffers are queued back to back, so a longer one would drag the beat late.
+        let duration = 0.055
         let frames = AVAudioFrameCount(sampleRate * duration)
         guard let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1),
               let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: frames) else { return nil }
@@ -209,12 +215,14 @@ final class MetronomeEngine: ObservableObject {
         let n = Int(frames)
         let attack = 0.0015 * sampleRate             // 1.5 ms fade-in kills the onset click
         let release = 0.004 * sampleRate             // 4 ms fade-out guarantees a silent tail
+        let drive = 3.0                              // tanh drive; peak stays at full scale
         for i in 0..<n {
             let t = Double(i) / sampleRate
             let atk = min(1.0, Double(i) / attack)                 // ramp up
             let rel = min(1.0, Double(n - i) / release)            // ramp down at the very end
-            let decay = exp(-t * 150.0)                            // near-zero (~0.01) by ~30 ms
-            let sample = sin(2 * .pi * freq * t) * atk * decay * rel
+            let decay = exp(-t * 50.0)                             // ~0.06 by 55 ms, then the release
+            let tone = tanh(drive * sin(2 * .pi * freq * t)) / tanh(drive)
+            let sample = tone * atk * decay * rel
             ptr[i] = Float(sample) * volume
         }
         return buffer
@@ -265,10 +273,23 @@ final class MetronomeEngine: ObservableObject {
     /// Tempo/subdivision changed mid-play: just retune the ONE running timer.
     /// We never create a second timer, so the audio player is only ever driven
     /// from a single serialized place — no concurrent access, no crash/freeze.
-    private func reschedule() {
+    ///
+    /// The next click lands one NEW interval after the last one, not "now": a
+    /// dragged tempo slider changes bpm dozens of times a second, and firing on
+    /// every change machine-gunned clicks into the player queue (a broken
+    /// "brrrr"). A tempo change also keeps the bar position (`realign: false`);
+    /// only a new meter or subdivision restarts from the downbeat.
+    private func reschedule(realign: Bool) {
         guard let timer = beatTimer else { return }
-        timer.schedule(deadline: .now(), repeating: currentInterval())
-        timerQueue.async { [weak self] in self?.tick = 0 } // realign to a downbeat
+        let interval = currentInterval()
+        timerQueue.async { [weak self] in
+            guard let self else { return }
+            if realign { self.tick = 0 }
+            let now = DispatchTime.now()
+            var next = self.lastTickTime + interval
+            if next < now { next = now }
+            timer.schedule(deadline: next, repeating: interval)
+        }
     }
 
     private func currentInterval() -> Double {
@@ -286,6 +307,7 @@ final class MetronomeEngine: ObservableObject {
     /// Always runs on `timerQueue`.
     private func fireTick() {
         guard isPlaying else { return }
+        lastTickTime = .now()
         let sub = max(1, subdivision)
         let ticksPerMeasure = beatsPerMeasure * sub
         let pos = tick % ticksPerMeasure
