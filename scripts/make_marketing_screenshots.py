@@ -6,7 +6,7 @@
 원본   docs/screenshots/raw/en/0N-….png         시뮬레이터 캡처 (앱 화면은 영어 한 벌)
 제출본 docs/screenshots/marketing/<로케일>/0N-….png   1242×2688, 이 폴더를 DeployBar 가 올린다
 
-바탕·글자색은 제품 페이지 헤더(make_creative_assets.py)와 같다: 검정 바탕 + 놋쇠색(brass).
+바탕·글자색은 제품 페이지 헤더(make_creative_assets.py)와 같다: 검정 바탕 + 앱의 키 색 청록(cue, HandsFreeMetronome/Palette.swift).
 """
 import subprocess, sys, pathlib
 
@@ -38,12 +38,12 @@ SHOTS = {
 BASE_CSS = f"""
 * {{ margin:0; padding:0; box-sizing:border-box; }}
 html,body {{ width:{W}px; height:{H}px; overflow:hidden; }}
-body {{ background:#0e0d0c; position:relative;
+body {{ background:#0a0d0f; position:relative;
   font-family:-apple-system, "SF Pro Display", "Apple SD Gothic Neo", sans-serif; }}
 .glow {{ position:absolute; width:1200px; height:1200px; border-radius:50%; filter:blur(200px);
-  background:rgba(225,154,31,.28); }}
-.headline {{ font-size:104px; font-weight:800; color:#f4f1ec; letter-spacing:-3px; line-height:1.14; }}
-.sub {{ font-size:50px; font-weight:500; color:#a49f97; letter-spacing:-1px; line-height:1.3; }}
+  background:rgba(34,211,238,.22); }}
+.headline {{ font-size:104px; font-weight:800; color:#eef3f5; letter-spacing:-3px; line-height:1.14; }}
+.sub {{ font-size:50px; font-weight:500; color:#9aa6ac; letter-spacing:-1px; line-height:1.3; }}
 :lang(ko) .headline, :lang(ko) .sub {{ word-break:keep-all; }}
 .phone {{ position:absolute; background:#17171a; border-radius:112px; border:4px solid #3a3a3e; padding:24px;
   box-shadow: 0 60px 140px rgba(0,0,0,.6); }}

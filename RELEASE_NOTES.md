@@ -4,15 +4,19 @@
 
 ### 앱스토어 (한국어)
 
-도움말에서 지원 페이지와 개인정보 안내를 엽니다.
-문의 메일 주소를 하나로 정리했습니다.
-앱이 더 안정적으로 동작하도록 다듬었습니다.
+악기로 짧은 음을 연주해 시작하고 멈출 수 있어요
+클릭 소리가 더 커져 합주 중에도 잘 들려요
+재생 중에 템포를 바꿔도 소리가 깨끗해요
+템포를 움직이면 손끝에 가벼운 진동이 와요
+새 색과 아이콘으로 박이 한눈에 들어와요
 
 ### App Store (English)
 
-Open support and privacy from Help.
-One contact address for every question.
-Polished for steadier everyday use.
+Start and stop by playing a short phrase
+A louder click that cuts through a band
+Clean sound when you change tempo mid play
+Feel a light tick as you drag the tempo
+A new color and icon that make every beat pop
 
 ## 1.0.5
 

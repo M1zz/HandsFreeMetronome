@@ -189,6 +189,12 @@ struct ContentView: View {
                     }
                 }
             }
+            // -shot <scene> sets up an App Store screenshot by itself, so the raw
+            // captures (docs/screenshots/raw) can be retaken the same way every
+            // release. Appearance is set from outside with `simctl ui appearance`.
+            if let i = uitestArgs.firstIndex(of: "-shot"), i + 1 < uitestArgs.count {
+                prepareScreenshot(uitestArgs[i + 1])
+            }
             // -uitest-close stands in for saying "close" a few seconds after launch,
             // so tip dismissal by voice can be checked on the simulator.
             if uitestArgs.contains("-uitest-close") {
@@ -1801,6 +1807,41 @@ struct ContentView: View {
         }
         haptic.prepare()
     }
+
+    #if DEBUG
+    private func prepareScreenshot(_ scene: String) {
+        Tips.hideAllTipsForTesting()
+        hintDismissed = true
+        metronome.setBeatsPerMeasure(4)
+        metronome.setTempo(120)
+        metronome.setSubdivision(1)
+        tempoAsNumber = false
+        vizModeRaw = BeatVizMode.bounce.rawValue
+        switch scene {
+        case "orbit": vizModeRaw = BeatVizMode.orbit.rawValue
+        case "count": vizModeRaw = BeatVizMode.sweep.rawValue
+        case "accents": metronome.setSubdivision(4)
+        case "main":
+            metronome.setTempo(132)
+            metronome.setSubdivision(2)
+        case "number":
+            metronome.setTempo(88)
+            metronome.setSubdivision(4)
+            tempoAsNumber = true
+        default: break
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            switch scene {
+            case "playing", "orbit", "count": metronome.start()
+            case "voice": showHelp()
+            case "accents":
+                metronome.setLevelsForScreenshot([2, 1, 2, 1,  2, 0, 1, 1,  2, 1, 2, 1,  2, 0, 1, 2])
+                showAccents = true
+            default: break
+            }
+        }
+    }
+    #endif
 
     private func openTuner() {
         guard requirePro(.tuner) else { return }

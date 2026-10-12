@@ -427,6 +427,14 @@ final class MetronomeEngine: ObservableObject {
         syncPlaybackLevels()
     }
 
+    #if DEBUG
+    /// Screenshot scenes (-shot accents) set a whole measure at once.
+    func setLevelsForScreenshot(_ levels: [Int]) {
+        guard levels.count == currentAccentLevels.count else { return }
+        storeCurrentLevels(levels)
+    }
+    #endif
+
     private func storeCurrentLevels(_ levels: [Int]) {
         let sub = max(1, subdivision)
         let beats = beatsPerMeasure

@@ -47,18 +47,18 @@ HEADER = {
     "en": ("Hands-free metronome", "Keep both hands playing.<br>Just say “faster.”"),
 }
 
-# 바탕 · 글자색은 앱의 색이다: 다크 모드 화면(검정) + 메트로놈 놋쇠색(brass, ContentView 의
-# Color(red: 0.84, green: 0.56, blue: 0.09)) + 첫 박 빨강(beatRed).
+# 바탕 · 글자색은 앱의 색이다: 다크 모드 화면(검정) + 키 색 청록(cue #22D3EE, Palette.swift 의
+# 다크 모드 값) + 첫 박 빨강(beatRed).
 BASE_CSS = """
 * { margin:0; padding:0; box-sizing:border-box; }
 html,body { width:%(W)dpx; height:%(H)dpx; overflow:hidden; }
-body { background:#0e0d0c; position:relative;
+body { background:#0a0d0f; position:relative;
   font-family:-apple-system, "SF Pro Display", "Apple SD Gothic Neo", sans-serif; }
 .glow { position:absolute; border-radius:50%%; filter:blur(160px); pointer-events:none; }
 .text { position:absolute; display:flex; flex-direction:column; justify-content:center; }
-.eyebrow { font-weight:700; color:#E19A1F; letter-spacing:-0.01em; line-height:1.15; }
-.headline { font-weight:800; color:#f4f1ec; letter-spacing:-0.03em; line-height:1.12; text-wrap:balance; }
-.sub { font-weight:500; color:#9a958e; letter-spacing:-0.01em; line-height:1.35; text-wrap:balance; }
+.eyebrow { font-weight:700; color:#22D3EE; letter-spacing:-0.01em; line-height:1.15; }
+.headline { font-weight:800; color:#eef3f5; letter-spacing:-0.03em; line-height:1.12; text-wrap:balance; }
+.sub { font-weight:500; color:#93a0a6; letter-spacing:-0.01em; line-height:1.35; text-wrap:balance; }
 /* 한국어는 낱말 중간에서 끊지 않는다. */
 :lang(ko) .headline, :lang(ko) .sub, :lang(ko) .eyebrow { word-break:keep-all; }
 .phone { position:absolute; background:#17171a; border:6px solid #3a3a3e; padding:40px; border-radius:190px;
@@ -102,10 +102,10 @@ def phone(img, left, top, width, rotate=0):
 
 
 def beat_dots(x, y, size, gap, n, opacity):
-    """앱의 박자 점(첫 박 빨강 + 놋쇠색)을 장식으로. 안전 영역 바깥에만 둔다."""
+    """앱의 박자 점(첫 박 빨강 + 청록 cue)을 장식으로. 안전 영역 바깥에만 둔다."""
     out = []
     for i in range(n):
-        color = "#C9352F" if i == 0 else "#D68F17"
+        color = "#E63833" if i == 0 else "#22D3EE"
         out.append(f'<div class="dot" style="left:{x + i * (size + gap)}px;top:{y}px;width:{size}px;'
                    f'height:{size}px;background:{color};opacity:{opacity}"></div>')
     return "".join(out)
@@ -123,8 +123,8 @@ def search_html(lang):
     ph_w = 1040
     ph_left = l + col + int(sw * 0.04)
     return f"""
-<div class="glow" style="left:{ph_left - 300}px;top:500px;width:1700px;height:1700px;background:rgba(214,143,23,.20)"></div>
-<div class="glow" style="left:{l - 700}px;top:{t - 500}px;width:1400px;height:1000px;background:rgba(214,143,23,.07)"></div>
+<div class="glow" style="left:{ph_left - 300}px;top:500px;width:1700px;height:1700px;background:rgba(34,211,238,.20)"></div>
+<div class="glow" style="left:{l - 700}px;top:{t - 500}px;width:1400px;height:1000px;background:rgba(34,211,238,.07)"></div>
 {phone(shot(lang, "01-main.png"), ph_left, t - 360, ph_w, 0)}
 <div class="text" style="left:{l}px;top:{t}px;width:{col}px;height:{sh}px">
   <div class="eyebrow" style="font-size:96px">{eyebrow}</div>
@@ -139,7 +139,7 @@ def header_html(lang):
     sw, sh = r - l, b - t
     dots = (beat_dots(1180, 250, 70, 46, 4, .55) + beat_dots(2330, 1330, 70, 46, 4, .35))
     return f"""
-<div class="glow" style="left:{l - 200}px;top:{t - 400}px;width:{sw + 400}px;height:{sh + 800}px;background:rgba(214,143,23,.15)"></div>
+<div class="glow" style="left:{l - 200}px;top:{t - 400}px;width:{sw + 400}px;height:{sh + 800}px;background:rgba(34,211,238,.15)"></div>
 {dots}
 {phone(shot(lang, "02-number.png"), 300, 360, 640, -9)}
 {phone(shot(lang, "01-main.png"), 2900, 360, 640, 9)}
