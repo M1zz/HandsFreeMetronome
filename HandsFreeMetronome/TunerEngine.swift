@@ -11,10 +11,32 @@ final class TunerEngine: ObservableObject {
     @Published private(set) var cents = 0.0
     @Published private(set) var frequency = 0.0
 
+    /// Concert-pitch reference for A4 (440 standard; 442 for many orchestras,
+    /// 432 for some players). Persisted; the analysis queue reads its own copy.
+    static let referenceRange = 430...450
+    private static let referenceKey = "tunerReferenceA"
+    @Published var referenceA: Int {
+        didSet {
+            let clamped = min(max(referenceA, Self.referenceRange.lowerBound), Self.referenceRange.upperBound)
+            if clamped != referenceA { referenceA = clamped; return }
+            UserDefaults.standard.set(referenceA, forKey: Self.referenceKey)
+            let ref = Double(referenceA)
+            analysisQueue.async { [weak self] in self?.analysisRef = ref }
+        }
+    }
+    private var analysisRef: Double       // touched only on analysisQueue
+
     private let analysisQueue = DispatchQueue(label: "com.handsfree.tuner", qos: .userInitiated)
     private var window: [Float] = []
     private let windowSize = 4096        // larger window = steadier pitch, calmer readout
     private var smoothedFreq: Double = 0 // touched only on analysisQueue
+
+    init() {
+        let saved = UserDefaults.standard.integer(forKey: Self.referenceKey)
+        let ref = Self.referenceRange.contains(saved) ? saved : 440
+        referenceA = ref
+        analysisRef = Double(ref)
+    }
 
     func start() {
         active = true
@@ -57,7 +79,7 @@ final class TunerEngine: ObservableObject {
                 self.smoothedFreq += 0.18 * (f - self.smoothedFreq)
             }
             let sf = self.smoothedFreq
-            let (name, cents) = TunerEngine.noteInfo(sf)
+            let (name, cents) = TunerEngine.noteInfo(sf, referenceA: self.analysisRef)
             DispatchQueue.main.async {
                 guard self.active else { return }
                 self.frequency = sf; self.noteName = name; self.cents = cents
@@ -128,12 +150,12 @@ final class TunerEngine: ObservableObject {
         return (freq.isFinite && freq > minF && freq < maxF) ? freq : nil
     }
 
-    static func noteInfo(_ freq: Double) -> (String, Double) {
+    static func noteInfo(_ freq: Double, referenceA: Double = 440) -> (String, Double) {
         // log2 of a non-positive frequency is NaN/-inf, and Int(NaN) below would
         // trap. detectPitch already filters, but never trust the input here.
-        guard freq.isFinite, freq > 0 else { return ("—", 0) }
+        guard freq.isFinite, freq > 0, referenceA > 0 else { return ("—", 0) }
         let names = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"]
-        let midi = 69 + 12 * log2(freq / 440)
+        let midi = 69 + 12 * log2(freq / referenceA)
         guard midi.isFinite else { return ("—", 0) }
         let nearest = midi.rounded()
         let cents = (midi - nearest) * 100

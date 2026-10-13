@@ -1648,6 +1648,7 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundStyle(.secondary)
                     .monospacedDigit()
+                referenceControl
                 Spacer()
                 Text("Say \"close\" to exit")
                     .font(.footnote)
@@ -1660,6 +1661,40 @@ struct ContentView: View {
         .gesture(DragGesture(minimumDistance: 25).onEnded { value in
             if value.translation.width > 80 { closeTuner() }
         })
+    }
+
+    /// A4 calibration: 440 Hz by default, nudged 1 Hz at a time (430–450) for
+    /// orchestras at 442 or players who tune to 432.
+    private var referenceControl: some View {
+        let range = TunerEngine.referenceRange
+        return HStack(spacing: 16) {
+            Button { tuner.referenceA -= 1 } label: {
+                Image(systemName: "minus.circle.fill").font(.title2)
+            }
+            .disabled(tuner.referenceA <= range.lowerBound)
+            .accessibilityHidden(true)
+            Text("A4 = \(tuner.referenceA) Hz")
+                .font(.body.weight(.semibold))
+                .monospacedDigit()
+                .frame(minWidth: 120)
+                .onTapGesture(count: 2) { tuner.referenceA = 440 }
+            Button { tuner.referenceA += 1 } label: {
+                Image(systemName: "plus.circle.fill").font(.title2)
+            }
+            .disabled(tuner.referenceA >= range.upperBound)
+            .accessibilityHidden(true)
+        }
+        .tint(cue)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Reference pitch")
+        .accessibilityValue("A4 = \(tuner.referenceA) Hz")
+        .accessibilityAdjustableAction { direction in
+            switch direction {
+            case .increment: tuner.referenceA += 1
+            case .decrement: tuner.referenceA -= 1
+            @unknown default: break
+            }
+        }
     }
 
     /// Slide the tuner page back out to the right (the inverse of its entry).
