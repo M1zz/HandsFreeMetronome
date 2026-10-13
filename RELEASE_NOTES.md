@@ -1,5 +1,21 @@
 # Release Notes — Not My Tempo
 
+## 1.0.7
+
+### 앱스토어 (한국어)
+
+튜너의 기준음을 430Hz부터 450Hz까지 1Hz 단위로 바꿀 수 있어요
+오케스트라의 442Hz나 432Hz 튜닝도 이제 바로 맞출 수 있어요
+기준음 표시를 두 번 탭하면 표준 440Hz로 돌아가요
+설정한 기준음은 앱을 다시 열어도 그대로 유지돼요
+
+### App Store (English)
+
+Set the tuner reference pitch anywhere from 430 to 450 Hz in 1 Hz steps
+Tune to 442 Hz for orchestra or 432 Hz with ease
+Double tap the reference to return to standard 440 Hz
+Your reference pitch is remembered between sessions
+
 ## 1.0.6
 
 ### 앱스토어 (한국어)
