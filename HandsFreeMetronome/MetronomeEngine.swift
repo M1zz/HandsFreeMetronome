@@ -486,10 +486,10 @@ final class MetronomeEngine: ObservableObject {
 
     static func subdivisionName(for value: Int) -> String {
         switch value {
-        case 2: return "Eighths"
-        case 3: return "Triplets"
-        case 4: return "Sixteenths"
-        default: return "Quarters"
+        case 2: return String(localized: "Eighths")
+        case 3: return String(localized: "Triplets")
+        case 4: return String(localized: "Sixteenths")
+        default: return String(localized: "Quarters")
         }
     }
 

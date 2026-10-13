@@ -35,6 +35,12 @@
 		A1000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1000010 /* HandsFreeMetronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsFreeMetronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1000100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1000110 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1000111 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1000112 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1000113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1000114 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh-Hans; path = zh-Hans.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1000115 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt-BR; path = pt-BR.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1000105 /* TunerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerEngine.swift; sourceTree = "<group>"; };
 		A1000F02 /* NoteSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSignal.swift; sourceTree = "<group>"; };
 		A1000F04 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
@@ -140,6 +146,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
+				de,
+				es,
+				fr,
+				"zh-Hans",
+				"pt-BR",
 			);
 			mainGroup = A1000030;
 			packageReferences = (
@@ -193,6 +205,12 @@
 			isa = PBXVariantGroup;
 			children = (
 				A1000100 /* en */,
+				A1000110 /* ja */,
+				A1000111 /* de */,
+				A1000112 /* es */,
+				A1000113 /* fr */,
+				A1000114 /* zh-Hans */,
+				A1000115 /* pt-BR */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

@@ -16,6 +16,55 @@ Tune to 442 Hz for orchestra or 432 Hz with ease
 Double tap the reference to return to standard 440 Hz
 Your reference pitch is remembered between sessions
 
+### 앱스토어 (ja)
+
+チューナーの基準音を430から450Hzまで1Hz単位で変えられます
+オーケストラの442Hzや432Hzにもすぐ合わせられます
+基準音の表示をダブルタップすると標準の440Hzに戻ります
+設定した基準音はアプリを開き直してもそのまま残ります
+
+### 앱스토어 (de-DE)
+
+Kammerton 430 bis 450 Hz, auf 1 Hz genau
+Stimm im Nu auf 442 Hz oder 432 Hz
+Doppeltippen stellt 440 Hz wieder her
+Dein Kammerton bleibt gespeichert
+
+### 앱스토어 (es-ES)
+
+Elige el La de 430 a 450 Hz, de 1 en 1
+Afina a 442 Hz para orquesta o a 432 Hz
+Doble toque en el La y vuelves a 440 Hz
+Tu La se guarda aunque cierres la app
+
+### 앱스토어 (es-MX)
+
+Ajusta el La de 430 a 450 Hz, de 1 en 1
+Afina a 442 Hz con orquesta o a 432 Hz
+Toca dos veces el La y regresa a 440 Hz
+Tu La se queda guardado al cerrar la app
+
+### 앱스토어 (fr-FR)
+
+Diapason de 430 à 450 Hz, au hertz près
+Accorde-toi facilement en 442 ou 432 Hz
+Touche deux fois pour revenir à 440 Hz
+Ton diapason reste en mémoire
+
+### 앱스토어 (zh-Hans)
+
+调音器基准音可在 430 到 450 Hz 间按 1 Hz 微调
+乐团常用的 442 Hz 和 432 Hz 现在也能直接调准
+连按两下基准音即可恢复标准 440 Hz
+设置好的基准音下次打开 App 依然保留
+
+### 앱스토어 (pt-BR)
+
+Ajuste o Lá do afinador de 430 a 450 Hz
+Afine em 442 Hz de orquestra ou 432 Hz
+Toque duas vezes para voltar aos 440 Hz
+O app guarda o Lá que você escolheu
+
 ## 1.0.6
 
 ### 앱스토어 (한국어)

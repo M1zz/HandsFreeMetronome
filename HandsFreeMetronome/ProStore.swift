@@ -14,17 +14,17 @@ enum ProFeature: String, Identifiable, CaseIterable {
 
     var title: String {
         switch self {
-        case .practice: return "Practice mode"
-        case .accents:  return "Accent editor & presets"
-        case .tuner:    return "Chromatic tuner"
+        case .practice: return String(localized: "Practice mode")
+        case .accents:  return String(localized: "Accent editor & presets")
+        case .tuner:    return String(localized: "Chromatic tuner")
         }
     }
 
     var detail: String {
         switch self {
-        case .practice: return "Raise the tempo automatically every few bars — push a passage faster, hands-free."
-        case .accents:  return "Design every click of the measure — high, low, or silent — and save patterns per song."
-        case .tuner:    return "Say \u{201C}tune\u{201D} and play — note, cents, and an in-tune zone."
+        case .practice: return String(localized: "Raise the tempo automatically every few bars — push a passage faster, hands-free.")
+        case .accents:  return String(localized: "Design every click of the measure — high, low, or silent — and save patterns per song.")
+        case .tuner:    return String(localized: "Say \u{201C}tune\u{201D} and play — note, cents, and an in-tune zone.")
         }
     }
 
@@ -170,7 +170,7 @@ final class ProStore: ObservableObject {
         await store.restore()
         // Restoring must never end in silence: either the paywall closes
         // (isPro flipped true) or the user learns nothing was found.
-        if !isPro { lastError = "No previous purchase was found." }
+        if !isPro { lastError = String(localized: "No previous purchase was found.") }
     }
 
     /// Re-derive entitlements from the shared engine.

@@ -362,7 +362,8 @@ struct ContentView: View {
 
             aaButton(metronome.isPlaying ? "Stop" : "Start",
                      icon: metronome.isPlaying ? "stop.fill" : "play.fill",
-                     tint: metronome.isPlaying ? .red : cue) { metronome.toggle() }
+                     tint: metronome.isPlaying ? .red : cue,
+                     spoken: metronome.isPlaying ? "Stop metronome" : "Start metronome") { metronome.toggle() }
 
             Spacer(minLength: 0)
         }
@@ -370,7 +371,8 @@ struct ContentView: View {
     }
 
     /// A large, full-width button for the Assistive Access layout.
-    private func aaButton(_ title: String, icon: String, tint: Color,
+    private func aaButton(_ title: LocalizedStringKey, icon: String, tint: Color,
+                          spoken: LocalizedStringKey? = nil,
                           action: @escaping () -> Void) -> some View {
         Button {
             action()
@@ -385,8 +387,7 @@ struct ContentView: View {
         .buttonStyle(.borderedProminent)
         .controlSize(.large)
         .tint(tint)
-        .accessibilityLabel(title == "Start" ? "Start metronome"
-                            : title == "Stop" ? "Stop metronome" : title)
+        .accessibilityLabel(spoken ?? title)
     }
 
     // MARK: Beat visualization — two selectable modes.
@@ -839,7 +840,7 @@ struct ContentView: View {
                 withAnimation(.easeInOut(duration: 0.4)) { hintDismissed = true }
             }
             // Voice Control: say "Tap N beats" to set the time signature.
-            .accessibilityLabel("\(i + 1) \(i == 0 ? "beat" : "beats")")
+            .accessibilityLabel(Text("\(i + 1) beats"))
             .accessibilityInputLabels(["\(i + 1) beats", "Beat \(i + 1)", "\(i + 1)"])
             // VoiceOver: announce as a button, mark the current time signature selected.
             .accessibilityAddTraits(i + 1 == metronome.beatsPerMeasure ? [.isButton, .isSelected] : .isButton)
@@ -906,21 +907,21 @@ struct ContentView: View {
     private var tempoSubtitle: String {
         // Trainer status takes over the subtitle when it's running.
         if metronome.speedTrainerOn {
-            return "Speed trainer · +\(metronome.trainerStep) every \(metronome.trainerBars) bars → \(metronome.trainerTarget)"
+            return String(localized: "Speed trainer · +\(metronome.trainerStep) every \(metronome.trainerBars) bars → \(metronome.trainerTarget)")
         }
         // Show whichever representation the big display isn't showing, so the BPM
         // number is always visible somewhere.
         return tempoAsNumber
             ? MetronomeEngine.tempoName(for: metronome.bpm)
-            : "\(metronome.bpm) BPM"
+            : String(localized: "\(metronome.bpm) BPM")
     }
 
     // MARK: Subdivision — tap a ring that shows how the beat is divided
 
     private var subdivisionCard: some View {
-        let options: [(seg: Int, value: Int, label: String, voice: String)] =
-            [(1, 1, "1/4", "Quarter"), (2, 2, "1/8", "Eighth"),
-             (3, 3, "Trip", "Triplet"), (4, 4, "1/16", "Sixteenth")]
+        let options: [(seg: Int, value: Int, label: String, name: String)] =
+            [(1, 1, "1/4", String(localized: "Quarter notes")), (2, 2, "1/8", String(localized: "Eighth notes")),
+             (3, 3, "Trip", String(localized: "Triplets")), (4, 4, "1/16", String(localized: "Sixteenth notes"))]
         return HStack(spacing: 8) {
             ForEach(options, id: \.value) { opt in
                 let selected = metronome.subdivision == opt.value
@@ -937,8 +938,8 @@ struct ContentView: View {
                             .fill(selected ? cue.opacity(0.14) : .clear))
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel("\(opt.voice) notes")
-                .accessibilityInputLabels(["\(opt.voice) notes", opt.voice, opt.label])
+                .accessibilityLabel(opt.name)
+                .accessibilityInputLabels([opt.name, opt.label])
                 .accessibilityAddTraits(selected ? [.isButton, .isSelected] : .isButton)
                 // No on-screen Accents button — VoiceOver reaches the editor here.
                 .accessibilityAction(named: "Edit accents") { openAccents() }
@@ -969,7 +970,7 @@ struct ContentView: View {
         return NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Every click of the measure is its own cell — \(beats) beats of \(MetronomeEngine.subdivisionName(for: sub).lowercased()) → \(beats * sub) clicks. Tap a cell to cycle it: high → low → silent.")
+                    Text("Every click of the measure is its own cell — \(beats * sub) clicks in all. Tap a cell to cycle it: high → low → silent.")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                     if sub == 1 {
@@ -1143,7 +1144,7 @@ struct ContentView: View {
                     .accessibilityHidden(true)
             }
             Text(voice.isListening
-                 ? (lastCommandText.isEmpty ? "Listening…" : lastCommandText)
+                 ? (lastCommandText.isEmpty ? String(localized: "Listening…") : lastCommandText)
                  : micMessage)
                 .font(.subheadline.weight(voice.isListening && !lastCommandText.isEmpty ? .semibold : .regular))
                 .foregroundStyle(voice.isListening
@@ -1197,7 +1198,8 @@ struct ContentView: View {
                 // command lands, its name flashes here for a moment, then it settles
                 // back to "Mute" — press again to toggle listening.
                 let flashing = flashingCommand && voice.isListening && !lastCommandText.isEmpty
-                transportLabel(flashing ? lastCommandText : (voice.isListening ? "Mute" : "Listen"),
+                transportLabel(flashing ? lastCommandText
+                                        : (voice.isListening ? String(localized: "Mute") : String(localized: "Listen")),
                                icon: flashing ? "checkmark.circle.fill"
                                      : (voice.isListening ? "speaker.wave.2.fill" : "mic"),
                                color: voice.isListening ? cue : .secondary,
@@ -1220,7 +1222,7 @@ struct ContentView: View {
             .popoverTip(MicListeningTip())   // first-run guidance for plain mic users
 
             Button { metronome.toggle() } label: {
-                transportLabel(metronome.isPlaying ? "Stop" : "Start",
+                transportLabel(metronome.isPlaying ? String(localized: "Stop") : String(localized: "Start"),
                                icon: metronome.isPlaying ? "stop.fill" : "play.fill",
                                color: metronome.isPlaying ? .red : cue,
                                filled: true)
@@ -1510,7 +1512,7 @@ struct ContentView: View {
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(cue)
                     Text(noteSignal.recorded.isEmpty
-                         ? "Play 2–5 notes, about half a second each."
+                         ? String(localized: "Play 2–5 notes, about half a second each.")
                          : NoteSignalDetector.phrase(noteSignal.recorded))
                         .font(.footnote.monospaced())
                         .foregroundStyle(.secondary)
@@ -1557,7 +1559,7 @@ struct ContentView: View {
             .accessibilityLabel("Requires Pro")
     }
 
-    private func usageRow(_ icon: String, _ title: String, _ detail: String) -> some View {
+    private func usageRow(_ icon: String, _ title: LocalizedStringKey, _ detail: LocalizedStringKey) -> some View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: icon)
                 .foregroundStyle(cue)
@@ -1644,7 +1646,7 @@ struct ContentView: View {
                         .foregroundStyle(inTune ? Color.green : cue)
                         .accessibilityHidden(true)   // pitch already announced on the note
                 }
-                Text(tuner.frequency > 0 ? String(format: "%.1f Hz", tuner.frequency) : "Play a note…")
+                Text(tuner.frequency > 0 ? String(format: "%.1f Hz", tuner.frequency) : String(localized: "Play a note…"))
                     .font(.headline)
                     .foregroundStyle(.secondary)
                     .monospacedDigit()
@@ -1706,10 +1708,12 @@ struct ContentView: View {
 
     /// Spoken pitch summary for VoiceOver, replacing the visual cents meter.
     private var tunerAccessibilityValue: String {
-        guard tuner.frequency > 0 else { return "No note detected, play a note" }
-        if inTune { return "\(tuner.noteName), in tune" }
+        guard tuner.frequency > 0 else { return String(localized: "No note detected, play a note") }
+        if inTune { return String(localized: "\(tuner.noteName), in tune") }
         let cents = Int(tuner.cents.rounded())
-        return "\(tuner.noteName), \(abs(cents)) cents \(cents > 0 ? "sharp" : "flat")"
+        return cents > 0
+            ? String(localized: "\(tuner.noteName), \(abs(cents)) cents sharp")
+            : String(localized: "\(tuner.noteName), \(abs(cents)) cents flat")
     }
 
     private var centsMeter: some View {
@@ -1747,7 +1751,9 @@ struct ContentView: View {
         .padding(.horizontal, 36)
     }
 
-    private func commandRow(_ phrase: String, _ effect: String) -> some View {
+    /// `phrase` is what the user says to the app's English recognizer, so it is
+    /// shown verbatim in every language; only the effect is translated.
+    private func commandRow(_ phrase: String, _ effect: LocalizedStringKey) -> some View {
         HStack {
             Text(phrase).fontWeight(.medium)
             Spacer()
@@ -1819,13 +1825,13 @@ struct ContentView: View {
 
     private var micMessage: String {
         switch voice.status {
-        case .idle: return "Tap Listen to control by voice"
+        case .idle: return String(localized: "Tap Listen to control by voice")
         case .listening:
             return voice.lastHeard.isEmpty
-                ? "Say \"start\", \"faster\", or \"help\""
-                : "Heard: \(voice.lastHeard)"
-        case .denied: return "Mic/Speech blocked — enable in Settings"
-        case .unavailable: return "Speech recognition unavailable here"
+                ? String(localized: "Say \"start\", \"faster\", or \"help\"")
+                : String(localized: "Heard: \(voice.lastHeard)")
+        case .denied: return String(localized: "Mic/Speech blocked — enable in Settings")
+        case .unavailable: return String(localized: "Speech recognition unavailable here")
         }
     }
 
@@ -2017,30 +2023,30 @@ struct ContentView: View {
 
     private func commandLabel(_ cmd: VoiceController.Command) -> String {
         switch cmd {
-        case .start: return "▶ Start"
-        case .stop: return "■ Stop"
-        case .faster: return "Faster +5"
-        case .slower: return "Slower −5"
-        case .up: return "Up +1"
-        case .down: return "Down −1"
-        case .double: return "Double ×2"
-        case .half: return "Half ÷2"
-        case .setTempo(let v): return "Tempo \(v)"
+        case .start: return String(localized: "▶ Start")
+        case .stop: return String(localized: "■ Stop")
+        case .faster: return String(localized: "Faster +5")
+        case .slower: return String(localized: "Slower −5")
+        case .up: return String(localized: "Up +1")
+        case .down: return String(localized: "Down −1")
+        case .double: return String(localized: "Double ×2")
+        case .half: return String(localized: "Half ÷2")
+        case .setTempo(let v): return String(localized: "Tempo \(v)")
         case .setSubdivision(let v): return MetronomeEngine.subdivisionName(for: v)
-        case .setBeats(let n): return "\(n) beats"
-        case .volumeUp: return "Volume up"
-        case .volumeDown: return "Volume down"
-        case .mute: return "Mute"
-        case .setVolume(let p): return "Volume \(p)%"
-        case .toggleView: return "Switch view"
-        case .bounceView: return "Bounce view"
-        case .orbitView: return "Orbit view"
-        case .help: return "Help"
-        case .tuner: return "Tuner"
-        case .dismiss: return "Close"
-        case .scrollUp: return "Scroll up"
-        case .scrollDown: return "Scroll down"
-        case .practice: return "Practice"
+        case .setBeats(let n): return String(localized: "\(n) beats")
+        case .volumeUp: return String(localized: "Volume up")
+        case .volumeDown: return String(localized: "Volume down")
+        case .mute: return String(localized: "Mute")
+        case .setVolume(let p): return String(localized: "Volume \(p)%")
+        case .toggleView: return String(localized: "Switch view")
+        case .bounceView: return String(localized: "Bounce view")
+        case .orbitView: return String(localized: "Orbit view")
+        case .help: return String(localized: "Help")
+        case .tuner: return String(localized: "Tuner")
+        case .dismiss: return String(localized: "Close")
+        case .scrollUp: return String(localized: "Scroll up")
+        case .scrollDown: return String(localized: "Scroll down")
+        case .practice: return String(localized: "Practice")
         }
     }
 
@@ -2128,9 +2134,9 @@ enum TimingVerdict {
 
     var label: String {
         switch self {
-        case .perfect: return "Perfect!"
-        case .good: return "Good"
-        case .bad: return "Bad"
+        case .perfect: return String(localized: "Perfect!")
+        case .good: return String(localized: "Good")
+        case .bad: return String(localized: "Bad")
         }
     }
 

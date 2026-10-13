@@ -7,8 +7,8 @@
   docs/screenshots/creative/<스토어 로케일>/header.png   3840x1646  제품 페이지 맨 위
   docs/screenshots/creative/<스토어 로케일>/search.png   3840x2560  검색 결과 (없으면 스크린샷이 대신 보인다)
 
-기기 화면은 docs/screenshots/raw/creative/en/ 의 시뮬레이터 캡처다. 앱 화면이 영어 한 벌뿐이라
-(Localizable.xcstrings 가 en 만 있다) 모든 언어가 같은 화면을 쓴다.
+기기 화면은 docs/screenshots/raw/creative/<앱언어>/ 의 시뮬레이터 캡처다(scripts/capture_raw_screenshots.sh).
+한국어는 앱 번역이 없어 영어 화면을 쓰고, 스페인어 화면 한 벌이 es-ES · es-MX 를 맡는다.
 
 ⚠️ 안전 영역 밖은 기기에 따라 잘린다. 글은 **반드시** 안전 영역 안에 둔다(배경 · 기기 그림은 넘쳐도 된다).
    수치는 Apple 공식 PSD 템플릿에서 잰 값이다(https://developer.apple.com/app-store/asset-best-practices/).
@@ -24,9 +24,10 @@ OUT = ROOT / "docs" / "screenshots" / "creative"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 # 문구 언어 → App Store Connect 로케일
-STORE = {"en": "en-US"}
+STORE = {"en": "en-US", "de": "de-DE", "es": "es-ES", "es-MX": "es-MX", "fr": "fr-FR"}
 # 문구 언어 → 기기 화면 캡처 폴더 (앱이 영어 한 벌)
-SCREEN = {"ko": "en", "en": "en"}
+SCREEN = {"ko": "en", "en": "en", "ja": "ja", "de": "de", "es": "es", "es-MX": "es",
+          "fr": "fr", "zh-Hans": "zh-Hans", "pt-BR": "pt-BR"}
 
 # (가로, 세로, 안전 영역 left, top, right, bottom)
 SPEC = {
@@ -39,12 +40,26 @@ SPEC = {
 SEARCH = {
     "ko": ("메트로놈", "템포는<br>말로 바꾸세요", "영어로 “start”, “faster” 한마디면 돼요"),
     "en": ("Metronome", "Change tempo<br>with your voice", "Say “start” or “faster” as you play"),
+    "ja": ("メトロノーム", "テンポは<br>声で変えよう", "英語で「start」「faster」と言うだけ"),
+    "de": ("Metronom", "Tempo ändern<br>per Stimme", "Sag beim Spielen „start“ oder „faster“"),
+    "es": ("Metrónomo", "Cambia el tempo<br>con tu voz", "Di “start” o “faster” mientras tocas"),
+    "es-MX": ("Metrónomo", "Cambia el tempo<br>con tu voz", "Di “start” o “faster” mientras tocas"),
+    "fr": ("Métronome", "Change de tempo<br>à la voix", "Dis « start » ou « faster » en jouant"),
+    "zh-Hans": ("节拍器", "速度<br>开口就能改", "用英文说“start”“faster”就行"),
+    "pt-BR": ("Metrônomo", "Mude o andamento<br>com a voz", "Diga “start” ou “faster” enquanto toca"),
 }
 
 # 헤더: 처음 온 사람에게 한 가지 약속. 연주하는 손을 떼지 않는다.
 HEADER = {
     "ko": ("핸즈프리 메트로놈", "두 손은 악기에,<br>템포는 말로"),
     "en": ("Hands-free metronome", "Keep both hands playing.<br>Just say “faster.”"),
+    "ja": ("ハンズフリーメトロノーム", "両手は楽器に、<br>テンポは声で"),
+    "de": ("Freihändiges Metronom", "Beide Hände am Instrument.<br>Sag einfach „faster“."),
+    "es": ("Metrónomo manos libres", "No sueltes el instrumento.<br>Solo di “faster”."),
+    "es-MX": ("Metrónomo manos libres", "No sueltes el instrumento.<br>Solo di “faster”."),
+    "fr": ("Métronome mains libres", "Joue des deux mains.<br>Dis juste « faster »."),
+    "zh-Hans": ("免手动节拍器", "双手留在乐器上<br>速度开口就改"),
+    "pt-BR": ("Metrônomo sem usar as mãos", "Mãos no instrumento.<br>É só dizer “faster”."),
 }
 
 # 바탕 · 글자색은 앱의 색이다: 다크 모드 화면(검정) + 키 색 청록(cue #22D3EE, Palette.swift 의
@@ -53,7 +68,7 @@ BASE_CSS = """
 * { margin:0; padding:0; box-sizing:border-box; }
 html,body { width:%(W)dpx; height:%(H)dpx; overflow:hidden; }
 body { background:#0a0d0f; position:relative;
-  font-family:-apple-system, "SF Pro Display", "Apple SD Gothic Neo", sans-serif; }
+  font-family:-apple-system, "SF Pro Display", "Apple SD Gothic Neo", "Hiragino Sans", "PingFang SC", sans-serif; }
 .glow { position:absolute; border-radius:50%%; filter:blur(160px); pointer-events:none; }
 .text { position:absolute; display:flex; flex-direction:column; justify-content:center; }
 .eyebrow { font-weight:700; color:#22D3EE; letter-spacing:-0.01em; line-height:1.15; }
@@ -152,7 +167,7 @@ def header_html(lang):
 def render(lang, kind):
     W, H, _ = SPEC[kind]
     body = search_html(lang) if kind == "search" else header_html(lang)
-    page = (f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><style>'
+    page = (f'<!doctype html><html lang="{lang.split("-")[0] if lang == "es-MX" else lang}"><head><meta charset="utf-8"><style>'
             f'{BASE_CSS % {"W": W, "H": H}}</style></head><body>{body}{FIT_JS}</body></html>')
     html_path = pathlib.Path(tempfile.gettempdir()) / f"notmytempo-creative-{lang}-{kind}.html"
     html_path.write_text(page, encoding="utf-8")

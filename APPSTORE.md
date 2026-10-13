@@ -1,7 +1,8 @@
 # 낫마템포 App Store 문구
 
 DeployBar 가 이 파일을 읽어 App Store Connect 의 스토어 페이지를 채운다.
-앱 화면과 음성 명령은 영어 한 벌이다(Localizable.xcstrings 의 en). 한국어 페이지 문구도 그 사실에 맞춰 쓴다.
+앱 화면은 en · ja · de · es · fr · zh-Hans · pt-BR 로 번역돼 있고(Localizable.xcstrings), 한국어 페이지는 영어 화면을 보여 준다.
+음성 명령은 모든 언어에서 영어 단어다(VoiceController 의 en-US 인식기) — 어느 언어 문구든 그 사실을 숨기지 않는다.
 
 ## ko
 
@@ -138,3 +139,512 @@ https://m1zz.github.io/HandsFreeMetronome/privacy.html
 ### 마케팅 URL
 
 https://m1zz.github.io/HandsFreeMetronome/
+
+## ja
+
+### 이름
+
+Not My Tempo: 声で操作するメトロノーム
+
+### 부제
+
+両手は楽器に、テンポは言葉で
+
+### 키워드
+
+BPM,リズム,練習,ドラム,ギター,ピアノ,ベース,チューナー,クリック,拍子,音声認識,ハンズフリー,アクセント,吹奏楽,バイオリン,チェロ,ウクレレ,バンド,合奏,レッスン,タイミング,カウント
+
+### 프로모션 텍스트
+
+楽器から手を離さずに。「start」「faster」「tempo 120」と英語で話すだけで、クリックがついてきます。メトロノームの基本機能と音声操作はすべて無料です。
+
+### 설명
+
+両手は楽器に置いたまま、テンポは声で変えるメトロノームです。
+「start」と言えば始まり、「faster」と言えば速くなります。画面に触れる必要はありません。
+
+演奏中にテンポを変えようと手を離すと、流れが止まってしまいます。Not My Tempoはアプリ自身のマイクで聞き取り、端末上で音声を認識するので、iOSの音声コントロールやアクセシビリティの設定をオンにしなくてもすぐに使えます。音声コマンドは英語で話します。
+
+話しかけて使うメトロノーム
+「start」「stop」で開始と停止
+「faster」「slower」で5ずつ、「up」「down」で1ずつテンポを変更
+「tempo 120」のように数字を言えば、そのテンポにすぐ合わせます
+「double」「half」で2倍、半分に
+「quarter」「eighth」「triplet」「sixteenth」で1拍を細分
+「louder」「quieter」「mute」で音量を調整
+コマンドを忘れたら「help」と話しかけてください。話せる言葉がすぐ画面に表示されます
+
+メトロノームの基本はすべて無料
+1拍から8拍まで拍子を選べて、小節の1拍目は強く鳴ります
+4分、8分、3連符、16分音符で細分して聞けます
+バウンス、オービット、リングの3つの表示で拍を目で追えます
+大きな数字をリズムに合わせてタップすると、テンポを設定できるタップテンポ
+オービット表示で拍に合わせてタップすると、どれだけ正確かがわかるタイミングチェック
+演奏中は画面が消えず、最後に使ったテンポと拍子を覚えています
+楽器で短いフレーズを弾いて開始と停止ができる楽器シグナル
+
+Not My Tempo Pro
+練習モード：数小節ごとにテンポを少しずつ上げて、目標の速さまで引き上げるスピードトレーナー
+アクセントエディタ：小節内のクリックをひとつずつ強く、弱く、無音に設定し、曲ごとにプリセットとして保存
+クロマチックチューナー：練習の前にすぐチューニング。基準音A4は430から450Hzまで1Hz単位で変えられます
+Proは、無料トライアル付きの年間サブスクリプション、または1回限りの買い切りでご利用いただけます。
+
+アクセシビリティ
+iOSの音声コントロールをお使いの場合は、アプリのマイクをオフにして、ボタン名で操作できます。各ボタンにはVoiceOver用のラベルを付けています。
+
+サブスクリプションについて
+年間サブスクリプションは、現在の期間が終了する24時間前までに解約しない限り、自動的に更新されます。管理と解約は「設定」>「Apple Account」>「サブスクリプション」から行えます。買い切りは1回限りのお支払いです。
+利用規約（EULA）：https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+プライバシーポリシー：https://m1zz.github.io/HandsFreeMetronome/ja/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/ja/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/ja/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/ja/
+
+## de-DE
+
+### 이름
+
+Not My Tempo: Sprach-Metronom
+
+### 부제
+
+Freihändig per Zuruf steuern
+
+### 키워드
+
+bpm,taktgeber,klick,schlagzeug,gitarre,klavier,üben,rhythmus,stimmgerät,akzent,bass,geige,takt,cello
+
+### 프로모션 텍스트
+
+Beide Hände bleiben am Instrument. Sag auf Englisch „start“, „faster“ oder „tempo 120“ und der Klick folgt. Das ganze Metronom samt Sprachsteuerung ist gratis.
+
+### 설명
+
+Ein Metronom, das du mit deiner Stimme steuerst, damit deine Hände am Instrument bleiben.
+Sag „start“ zum Loslegen, „faster“ für mehr Tempo. Kein Antippen, kein Abbrechen mitten in der Phrase.
+
+Die App hört über ihr eigenes Mikrofon zu und erkennt Sprache direkt auf deinem Gerät, deshalb funktioniert sie sofort. Du musst weder die iOS-Sprachsteuerung noch andere Bedienungshilfen einschalten.
+
+Wichtig: Die Sprachbefehle sind englische Wörter. Du sagst sie auf Englisch, auch wenn dein iPhone auf Deutsch eingestellt ist. Es sind nur ein paar kurze Wörter, die du schnell drauf hast.
+
+SPRICH MIT DEINEM METRONOM
+„start“ und „stop“
+„faster“ und „slower“ ändern um 5 BPM, „up“ und „down“ um 1
+„tempo 120“ oder einfach eine Zahl springt direkt dorthin
+„double“ und „half“ verdoppeln oder halbieren
+„quarter“, „eighth“, „triplet“, „sixteenth“ für die Unterteilung
+„louder“, „quieter“, „mute“ für die Lautstärke
+Befehl vergessen? Sag „help“ und alle Befehle erscheinen auf dem Bildschirm
+
+STARTEN MIT DEM INSTRUMENT
+Nimm eine kurze Phrase aus zwei bis fünf Tönen auf. Spielst du sie, startet oder stoppt der Klick, auch mitten im Song. Halte jeden Ton etwa eine halbe Sekunde, damit schnelle Läufe ihn nicht auslösen.
+
+DAS KOMPLETTE METRONOM IST GRATIS
+Taktarten von 1 bis 8 Schlägen, mit betonter Eins
+Unterteilung in Viertel, Achtel, Triolen und Sechzehntel
+Drei Ansichten für den Beat: Ball, Orbit und Ring
+Tap-Tempo: Tippe die große Zahl im Rhythmus an und das BPM steht
+Timing-Check: Tippe beim Spielen auf den Orbit-Ring und sieh, wie genau du triffst
+Das Tempo erscheint als italienische Bezeichnung wie Largo oder Moderato oder als BPM
+Der Bildschirm bleibt beim Spielen an, und Tempo und Taktart werden gemerkt
+
+NOT MY TEMPO PRO
+Übungsmodus: Ein Tempotrainer legt alle paar Takte ein paar BPM drauf, bis du dein Zieltempo erreichst
+Akzent-Editor: Stell jeden Klick im Takt auf hoch, tief oder stumm und sichere ein Preset pro Song
+Chromatisches Stimmgerät: Stimm dich vor dem Spielen ein, mit Kammerton von 430 bis 450 Hz
+Pro gibt es als Jahresabo mit kostenlosem Testzeitraum oder als einmaligen Kauf auf Lebenszeit.
+
+BEDIENUNGSHILFEN
+Du nutzt die iOS-Sprachsteuerung? Schalte das Mikrofon der App aus und steuere sie stattdessen über die Namen der Tasten, etwa mit „Tippe auf Start“. Alle Bedienelemente haben VoiceOver-Beschriftungen.
+
+ABO-DETAILS
+Das Jahresabo verlängert sich automatisch, sofern es nicht spätestens 24 Stunden vor Ende des aktuellen Zeitraums gekündigt wird. Verwalten oder kündigen kannst du es unter Einstellungen > Apple Account > Abonnements. Der Kauf auf Lebenszeit wird nur einmal berechnet.
+Nutzungsbedingungen (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Datenschutzerklärung: https://m1zz.github.io/HandsFreeMetronome/de/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/de/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/de/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/de/
+
+## es-ES
+
+### 이름
+
+Not My Tempo: Metrónomo de voz
+
+### 부제
+
+Cambia el ritmo sin las manos
+
+### 키워드
+
+bpm,clic,afinador,guitarra,batería,piano,bajo,violín,ensayo,práctica,compás,velocidad,solfeo,banda
+
+### 프로모션 텍스트
+
+Mantén las dos manos en el instrumento. Di “start”, “faster” o “tempo 120” en inglés y el clic te sigue. El metrónomo completo y el control por voz son gratis.
+
+### 설명
+
+Un metrónomo que manejas con la voz, para que tus manos no se separen del instrumento.
+Di “start” para empezar y “faster” para acelerar. Sin tocar la pantalla, sin cortar la frase.
+
+La app escucha con su propio micrófono y reconoce la voz en el propio iPhone, así que funciona al momento. No hace falta activar Control por voz de iOS ni ningún ajuste de accesibilidad.
+
+Los comandos de voz se dicen en inglés: son palabras cortas y fáciles de recordar.
+
+HABLA CON TU METRÓNOMO
+“start” y “stop” para arrancar y parar
+“faster” y “slower” mueven 5 BPM; “up” y “down”, 1
+“tempo 120”, o solo un número, salta directo a ese tempo
+“double” y “half” para doblar o dividir a la mitad
+“quarter”, “eighth”, “triplet” y “sixteenth” para las subdivisiones
+“louder”, “quieter” y “mute” para el volumen
+¿Se te olvida un comando? Di “help” y verás en pantalla todo lo que puedes decir
+
+ARRANCA CON TU INSTRUMENTO
+Graba una frase corta de 2 a 5 notas y tócala para iniciar o detener el clic, incluso a mitad de canción. Mantén cada nota cerca de medio segundo.
+
+EL METRÓNOMO COMPLETO ES GRATIS
+De 30 a 260 BPM
+Compases de 1 a 8 tiempos, con el primer tiempo acentuado
+Subdivisiones en negras, corcheas, tresillos y semicorcheas
+Tres formas de ver el pulso: rebote, órbita y anillo
+Tempo por toques: pulsa el número grande al ritmo para fijar los BPM
+Prueba de precisión: pulsa el anillo de la órbita al compás del clic y mira lo cerca que caes
+El tempo se muestra como término italiano (Largo, Moderato…) o en BPM
+La pantalla no se apaga mientras suena, y la app recuerda tu último tempo y compás
+
+NOT MY TEMPO PRO
+Modo práctica: un entrenador de velocidad que suma unos BPM cada pocos compases hasta llegar a tu objetivo
+Editor de acentos: pon cada clic del compás en agudo, grave o silencio, y guarda un preajuste por canción
+Afinador cromático: afina antes de empezar, con el La de referencia ajustable de 430 a 450 Hz
+Pro es una suscripción anual con prueba gratuita, o una compra única de por vida.
+
+ACCESIBILIDAD
+Si usas Control por voz de iOS, apaga el micrófono propio de la app y manéjala por el nombre de cada botón. Los controles tienen etiquetas de VoiceOver.
+
+DETALLES DE LA SUSCRIPCIÓN
+El plan anual se renueva automáticamente salvo que lo canceles al menos 24 horas antes de que termine el periodo actual. Puedes gestionarlo o cancelarlo en Ajustes > Cuenta de Apple > Suscripciones. La opción de por vida es un único pago.
+Condiciones de uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de privacidad: https://m1zz.github.io/HandsFreeMetronome/es/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/es/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/es/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/es/
+
+## es-MX
+
+### 이름
+
+Not My Tempo: Metrónomo de voz
+
+### 부제
+
+Manos libres mientras tocas
+
+### 키워드
+
+bpm,clic,afinador,guitarra,batería,tarola,piano,bajo,violín,ritmo,práctica,compás,velocidad,banda
+
+### 프로모션 텍스트
+
+Tus dos manos se quedan en el instrumento. Di “start”, “faster” o “tempo 120” en inglés y el clic te sigue. El metrónomo completo y el control por voz son gratis.
+
+### 설명
+
+Un metrónomo que controlas con tu voz, para que tus manos nunca dejen el instrumento.
+Di “start” para arrancar y “faster” para subir la velocidad. Sin tocar el celular, sin cortar la frase.
+
+La app escucha con su propio micrófono y reconoce la voz directamente en tu iPhone, así que funciona de inmediato. No necesitas activar Control por voz de iOS ni ninguna opción de accesibilidad.
+
+Los comandos de voz se dicen en inglés: son palabras cortas y fáciles de recordar.
+
+PLATICA CON TU METRÓNOMO
+“start” y “stop” para arrancar y detener
+“faster” y “slower” mueven 5 BPM; “up” y “down”, 1
+“tempo 120”, o solo un número, te lleva directo a ese tempo
+“double” y “half” para duplicar o reducir a la mitad
+“quarter”, “eighth”, “triplet” y “sixteenth” para las subdivisiones
+“louder”, “quieter” y “mute” para el volumen
+¿Se te olvidó un comando? Di “help” y verás en pantalla todo lo que puedes decir
+
+ARRANCA CON TU INSTRUMENTO
+Graba una frase corta de 2 a 5 notas y tócala para iniciar o detener el clic, incluso a media canción. Sostén cada nota como medio segundo.
+
+EL METRÓNOMO COMPLETO ES GRATIS
+De 30 a 260 BPM
+Compases de 1 a 8 tiempos, con el primer tiempo acentuado
+Subdivisiones en negras, corcheas, tresillos y semicorcheas
+Tres formas de ver el pulso: rebote, órbita y anillo
+Tempo por toques: toca el número grande al ritmo para fijar los BPM
+Prueba de precisión: toca el anillo de la órbita junto con el clic y ve qué tan cerca caes
+El tempo se muestra como término italiano (Largo, Moderato…) o en BPM
+La pantalla no se apaga mientras suena, y la app recuerda tu último tempo y compás
+
+NOT MY TEMPO PRO
+Modo práctica: un entrenador de velocidad que suma unos BPM cada pocos compases hasta llegar a tu meta
+Editor de acentos: pon cada clic del compás en agudo, grave o silencio, y guarda un preajuste por canción
+Afinador cromático: afina antes de empezar, con el La de referencia ajustable de 430 a 450 Hz
+Pro es una suscripción anual con prueba gratis, o una compra única de por vida.
+
+ACCESIBILIDAD
+Si usas Control por voz de iOS, apaga el micrófono propio de la app y contrólala por el nombre de cada botón. Los controles tienen etiquetas de VoiceOver.
+
+DETALLES DE LA SUSCRIPCIÓN
+El plan anual se renueva automáticamente a menos que lo canceles al menos 24 horas antes de que termine el periodo actual. Puedes administrarlo o cancelarlo en Configuración > Cuenta de Apple > Suscripciones. La opción de por vida es un solo pago.
+Términos de uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Aviso de privacidad: https://m1zz.github.io/HandsFreeMetronome/es/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/es/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/es/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/es/
+
+## fr-FR
+
+### 이름
+
+Not My Tempo : Métronome vocal
+
+### 부제
+
+Pilote le clic sans les mains
+
+### 키워드
+
+bpm,rythme,accordeur,batterie,guitare,piano,basse,violon,mesure,solfège,pulsation,cadence,musique
+
+### 프로모션 텍스트
+
+Garde les deux mains sur ton instrument. Dis « start », « faster » ou « tempo 120 » et le clic suit. Le métronome complet et la commande vocale sont gratuits.
+
+### 설명
+
+Un métronome qui t’obéit à la voix, pour que tes mains ne quittent jamais l’instrument.
+Dis « start » pour lancer, « faster » pour accélérer. Pas besoin de toucher l’écran ni de t’arrêter en pleine phrase.
+
+L’app écoute avec son propre micro et reconnaît ta voix directement sur l’appareil : elle marche tout de suite, sans activer le Contrôle vocal d’iOS ni aucun réglage d’accessibilité. Les commandes vocales se disent en anglais, avec quelques mots simples.
+
+PARLE À TON MÉTRONOME
+« start » et « stop » pour lancer et arrêter
+« faster » et « slower » changent de 5 BPM, « up » et « down » de 1
+« tempo 120 », ou juste un nombre, pour aller droit au tempo voulu
+« double » et « half » pour doubler ou diviser par deux
+« quarter », « eighth », « triplet », « sixteenth » pour les subdivisions
+« louder », « quieter », « mute » pour le volume
+Une commande t’échappe ? Dis « help » et tout ce que tu peux dire s’affiche à l’écran
+
+LE MÉTRONOME COMPLET EST GRATUIT
+Mesures de 1 à 8 temps, avec un clic plus marqué sur le premier temps
+Subdivisions en noires, croches, triolets et doubles croches
+Trois façons de suivre le temps : rebond, orbite et anneau
+Tap tempo : tape le grand nombre en rythme pour régler les BPM
+Test de précision : touche l’anneau en orbite en jouant et vois si tu tombes pile
+Les termes italiens (Largo, Moderato…) ou les BPM, au choix
+Démarre et arrête le clic en jouant une courte phrase sur ton instrument
+L’écran reste allumé pendant la lecture, et ton dernier tempo et ta mesure sont mémorisés
+
+NOT MY TEMPO PRO
+Mode entraînement : le tempo monte de quelques BPM toutes les X mesures, jusqu’à ton objectif
+Éditeur d’accents : règle chaque clic de la mesure en aigu, grave ou muet, et enregistre un préréglage par morceau
+Accordeur chromatique : accorde-toi avant de jouer, avec un diapason réglable de 430 à 450 Hz
+Pro existe en abonnement annuel avec essai gratuit, ou en achat unique à vie.
+
+ACCESSIBILITÉ
+Si tu utilises le Contrôle vocal d’iOS, coupe le micro de l’app et pilote-la par le nom des boutons. Toutes les commandes ont un libellé VoiceOver.
+
+ABONNEMENT
+L’abonnement annuel se renouvelle automatiquement, sauf résiliation au moins 24 heures avant la fin de la période en cours. Tu peux le gérer ou le résilier dans Réglages > Compte Apple > Abonnements. L’achat à vie est facturé une seule fois.
+Conditions d’utilisation (EULA) : https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Politique de confidentialité : https://m1zz.github.io/HandsFreeMetronome/fr/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/fr/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/fr/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/fr/
+
+## zh-Hans
+
+### 이름
+
+Not My Tempo: 语音节拍器
+
+### 부제
+
+开口调速，双手不离琴
+
+### 키워드
+
+数拍子,练琴,调音器,BPM,打拍子,速度,吉他,钢琴,架子鼓,贝斯,小提琴,大提琴,尤克里里,重音,节奏,声控,免提,拍号,乐队,校音,古筝,二胡,萨克斯,电子琴,长笛,单簧管,口琴,琵琶
+
+### 프로모션 텍스트
+
+双手不用离开乐器。说一声“start”“faster”或“tempo 120”，节拍马上跟上。完整的节拍器功能和语音控制全部免费。
+
+### 설명
+
+用嘴控制的节拍器，双手始终留在乐器上。
+说“start”开始，说“faster”加快。不用点屏幕，也不用停下正在弹的乐句。
+
+演奏途中想改速度，手一离开乐器，节奏就断了。Not My Tempo 用自己的麦克风聆听，在设备上完成语音识别，打开就能用，无需开启 iOS 语音控制或任何辅助功能设置。语音指令需用英文单词说出。
+
+开口就能控制
+“start”和“stop”开始、停止
+“faster”和“slower”每次调 5 BPM，“up”和“down”每次调 1 BPM
+说“tempo 120”或直接说数字，立刻切到该速度
+“double”和“half”速度加倍或减半
+“quarter”“eighth”“triplet”“sixteenth”切换细分
+“louder”“quieter”“mute”调节音量
+忘了指令？说“help”，所有能说的指令都会显示在屏幕上
+
+节拍器的完整功能全部免费
+1 到 8 拍任选，每小节第一拍重音更明显
+四分、八分、三连音、十六分音符细分
+弹跳、轨道、环形三种视图，一眼看清节拍
+敲击定速：跟着节奏轻点大号数字即可设定 BPM
+准度检测：边弹边轻点轨道圆环，看看自己踩得有多准
+播放时屏幕保持常亮，并记住上次的速度和拍号
+
+还能用乐器开始和停止
+先录下 2 到 5 个音的短乐句，之后弹出这段乐句就能开始或停止节拍。每个音保持约半秒，平时演奏的快速音符不会误触发。
+
+NOT MY TEMPO PRO
+练习模式：速度训练器，每隔几小节自动加几 BPM，直到目标速度
+重音编辑器：小节里的每一击都可设为高音、低音或静音，并按曲目保存预设
+半音阶调音器：练习前随手调好音，基准音 A4 可在 430 到 450 Hz 之间调整
+Pro 提供含免费试用的年度订阅，也可一次性买断永久使用。
+
+辅助功能
+如果你依赖 iOS 语音控制，可以关闭本 App 的麦克风，改为说出按钮名称来操作。所有控件都配有 VoiceOver 标签。
+
+订阅说明
+年度订阅会自动续订，除非在当前订阅期结束前至少 24 小时取消。可在“设置 > Apple 账户 > 订阅”中管理或取消。永久版为一次性付费。
+使用条款 (EULA)：https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+隐私政策：https://m1zz.github.io/HandsFreeMetronome/zh-Hans/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/zh-Hans/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/zh-Hans/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/zh-Hans/
+
+## pt-BR
+
+### 이름
+
+Not My Tempo: Metrônomo de Voz
+
+### 부제
+
+Mude o andamento sem as mãos
+
+### 키워드
+
+bpm,clique,bateria,violão,guitarra,piano,baixo,estudo,ritmo,afinador,compasso,batida,cavaquinho,sax
+
+### 프로모션 텍스트
+
+Suas duas mãos ficam no instrumento. Diga “start”, “faster” ou “tempo 120” e o clique obedece. O metrônomo completo e o controle por voz são grátis.
+
+### 설명
+
+Um metrônomo que você comanda pela voz, sem tirar as mãos do instrumento.
+Diga “start” para começar e “faster” para acelerar. Nada de parar no meio da frase para mexer no celular.
+
+O app escuta pelo próprio microfone e reconhece a fala no seu aparelho, então funciona na hora. Não precisa ativar o Controle por Voz do iOS nem nenhum ajuste de Acessibilidade.
+
+Os comandos de voz são palavras em inglês. O resto do app fala português.
+
+FALE COM O SEU METRÔNOMO
+“start” e “stop” para tocar e parar
+“faster” e “slower” mudam 5 BPM, “up” e “down” mudam 1
+“tempo 120”, ou só o número, vai direto para o andamento
+“double” e “half” dobram ou cortam pela metade
+“quarter”, “eighth”, “triplet”, “sixteenth” trocam a subdivisão
+“louder”, “quieter”, “mute” controlam o volume
+Esqueceu um comando? Diga “help” e tudo o que dá para falar aparece na tela
+
+SINAL DO INSTRUMENTO
+Grave uma frase curta de 2 a 5 notas e toque essa frase para iniciar ou parar o clique, mesmo no meio da música. Sustente cada nota por cerca de meio segundo.
+
+O METRÔNOMO COMPLETO É GRÁTIS
+Andamento de 30 a 260 BPM
+Compassos de 1 a 8 tempos, com o primeiro tempo acentuado
+Subdivisões em semínimas, colcheias, tercinas e semicolcheias
+Três jeitos de ver a batida: bola quicando, órbita e anel
+Andamento pelo nome clássico (Largo, Moderato) ou em BPM
+Tap tempo: toque no número grande no ritmo para definir o BPM
+Teste de timing: toque no anel da órbita enquanto toca e veja o quanto você chegou perto
+A tela fica acesa enquanto o clique toca, e o último andamento e compasso ficam salvos
+
+NOT MY TEMPO PRO
+Modo de estudo: um treino de velocidade que sobe alguns BPM a cada poucos compassos até chegar na sua meta
+Editor de acentos: deixe cada clique do compasso agudo, grave ou mudo e salve um preset para cada música
+Afinador cromático: afine antes de começar, com Lá de referência ajustável de 430 a 450 Hz
+O Pro é uma assinatura anual com teste grátis, ou uma compra vitalícia com pagamento único.
+
+ACESSIBILIDADE
+Se você usa o Controle por Voz do iOS, desligue o microfone do app e comande pelos nomes dos botões, como “Toque em Iniciar”. Os controles têm rótulos para o VoiceOver.
+
+DETALHES DA ASSINATURA
+O plano anual é renovado automaticamente, a menos que seja cancelado com pelo menos 24 horas de antecedência do fim do período atual. Gerencie ou cancele em Ajustes > Conta Apple > Assinaturas. O vitalício é uma cobrança única.
+Termos de Uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de Privacidade: https://m1zz.github.io/HandsFreeMetronome/pt-BR/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/pt-BR/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/pt-BR/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/pt-BR/

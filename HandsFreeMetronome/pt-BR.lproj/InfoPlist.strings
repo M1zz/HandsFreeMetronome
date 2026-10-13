@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "Este metrônomo escuta seus comandos de voz (como “start” e “faster”) e pode detectar o andamento da música tocada por perto, para você controlar tudo sem tocar na tela.";
+"NSSpeechRecognitionUsageDescription" = "O reconhecimento de fala é usado para entender os comandos de voz sem usar as mãos. O reconhecimento acontece no próprio aparelho.";

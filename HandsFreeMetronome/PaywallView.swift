@@ -160,7 +160,7 @@ struct PaywallView: View {
             Task { await store.purchase(product) }
         } label: {
             VStack(spacing: 2) {
-                Text(isLifetime ? "Lifetime — \(product.displayPrice) once"
+                Text(isLifetime ? String(localized: "Lifetime — \(product.displayPrice) once")
                                 : trialLabel(trial, price: product.displayPrice))
                     .font(.headline)
                 Text(isLifetime ? "Pay once, yours forever"
@@ -186,16 +186,26 @@ struct PaywallView: View {
     }
 
     private func trialLabel(_ offer: Product.SubscriptionOffer?, price: String) -> String {
-        guard let offer, offer.paymentMode == .freeTrial else { return "Yearly — \(price)" }
-        let unit: String
+        guard let offer, offer.paymentMode == .freeTrial else { return String(localized: "Yearly — \(price)") }
+        // Whole sentences per period — a translated unit word can't be spliced
+        // into "Try free for a …" in most languages.
+        let n = offer.period.value
         switch offer.period.unit {
-        case .day: unit = offer.period.value == 7 ? "week" : "\(offer.period.value) days"
-        case .week: unit = offer.period.value == 1 ? "week" : "\(offer.period.value) weeks"
-        case .month: unit = offer.period.value == 1 ? "month" : "\(offer.period.value) months"
-        case .year: unit = "year"
-        @unknown default: unit = "trial"
+        case .day where n == 7, .week where n == 1: return String(localized: "Try free for a week")
+        case .day: return String(localized: "Try free for \(n) days")
+        case .week: return String(localized: "Try free for \(n) weeks")
+        case .month where n == 1: return String(localized: "Try free for a month")
+        case .month: return String(localized: "Try free for \(n) months")
+        case .year: return String(localized: "Try free for a year")
+        @unknown default: return String(localized: "Free trial")
         }
-        return "Try free for a \(unit)"
+    }
+
+    /// Each language links its own policy page (docs/<lang>/privacy.html); a
+    /// malformed translation falls back to the English page instead of crashing.
+    private var localizedPrivacyURL: URL {
+        let english = URL(string: "https://m1zz.github.io/HandsFreeMetronome/privacy.html")!
+        return URL(string: String(localized: "privacy-policy-url", defaultValue: "https://m1zz.github.io/HandsFreeMetronome/privacy.html")) ?? english
     }
 
     /// The escape hatch, right under the offer it declines — quiet on purpose,
@@ -234,7 +244,8 @@ struct PaywallView: View {
                     .accessibilityHint("Restores a previous Pro purchase")
                     .accessibilityInputLabels(["Restore", "Restore purchases"])
             }
-            Link("Privacy Policy", destination: URL(string: "https://m1zz.github.io/HandsFreeMetronome/privacy.html")!)
+            // Each language links its own policy page (docs/<lang>/privacy.html).
+            Link("Privacy Policy", destination: localizedPrivacyURL)
             Link("Terms of Use (EULA)", destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!)
         }
         .font(.caption)

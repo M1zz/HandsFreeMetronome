@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "节拍器需要聆听你的语音指令（例如“start”和“faster”），并能识别附近演奏音乐的速度，让你无需触碰屏幕即可操作。";
+"NSSpeechRecognitionUsageDescription" = "语音识别用于听懂免手动操作的语音指令，识别过程全部在设备上完成。";
