@@ -1,5 +1,70 @@
 # Release Notes — Not My Tempo
 
+## 1.0.8
+
+### 앱스토어 (한국어)
+
+연습 시간을 정하는 타이머가 생겼어요
+1분부터 120분까지 원하는 만큼 맞출 수 있어요
+메트로놈을 멈추면 타이머도 함께 쉬어요
+시간이 다 되면 박자가 멈추고 알림음이 울려요
+
+### App Store (English)
+
+New practice timer built right in
+Set any length from 1 to 120 minutes
+Pause the click and the timer waits too
+When time is up, the click stops with a chime
+
+### 앱스토어 (ja)
+
+練習時間を決めるタイマーが加わりました
+1分から120分まで好きな長さに設定できます
+メトロノームを止めるとタイマーも一時停止
+時間になるとクリックが止まりチャイムが鳴ります
+
+### 앱스토어 (de-DE)
+
+Neu: ein Übungstimer direkt in der App
+Stell 1 bis 120 Minuten ein
+Stoppst du den Klick, wartet der Timer
+Ist die Zeit um, stoppt der Klick mit Gong
+
+### 앱스토어 (es-ES)
+
+Nuevo temporizador para tus prácticas
+Elige de 1 a 120 minutos
+Si paras el metrónomo, el tiempo espera
+Al acabar, el clic se para y suena un aviso
+
+### 앱스토어 (es-MX)
+
+Nuevo temporizador para practicar
+Elige de 1 a 120 minutos
+Si detienes el metrónomo, el tiempo espera
+Al terminar, el clic se detiene con un aviso
+
+### 앱스토어 (fr-FR)
+
+Nouveau minuteur pour tes séances
+Choisis de 1 à 120 minutes
+Le minuteur attend quand tu arrêtes le clic
+Une fois le temps écoulé, un carillon sonne
+
+### 앱스토어 (zh-Hans)
+
+新增练习计时器
+可设定 1 到 120 分钟
+节拍器暂停时计时也会暂停
+时间一到节拍器自动停止并响起提示音
+
+### 앱스토어 (pt-BR)
+
+Novo timer para seus treinos
+Escolha de 1 a 120 minutos
+Pausou o metrônomo, o timer espera também
+No fim do tempo, o clique para com um aviso
+
 ## 1.0.7
 
 ### 앱스토어 (한국어)
