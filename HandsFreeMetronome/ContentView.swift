@@ -18,6 +18,7 @@ struct ContentView: View {
     @State private var showCommands = false
     @State private var showTuner = false
     @State private var showTrainer = false   // practice-mode modal
+    @State private var showTimer = false     // practice-timer modal
     @State private var showAccents = false   // accent-pattern grid modal
     @State private var showSavePreset = false     // name prompt for a new accent preset
     @State private var presetNameDraft = ""       // text field backing the prompt
@@ -154,6 +155,15 @@ struct ContentView: View {
             noteSignal.setSuspended(open)   // tuning a string must not fire the signal
         }
         .sheet(isPresented: $showTrainer) { trainerSheet }
+        .sheet(isPresented: $showTimer) { timerSheet }
+        // Practice timer ran out (the engine already stopped and chimed): a firm
+        // haptic for players who can't hear the chime over their instrument, and
+        // a spoken cue for VoiceOver.
+        .onChange(of: metronome.practiceTimerFinished) { _ in
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            UIAccessibility.post(notification: .announcement,
+                                 argument: String(localized: "Practice time is up"))
+        }
         .sheet(isPresented: $showAccents) { accentsSheet }
         .onChange(of: metronome.isPlaying) { playing in
             if playing {
@@ -1221,6 +1231,8 @@ struct ContentView: View {
                 : ["Listen", "Start listening"])
             .popoverTip(MicListeningTip())   // first-run guidance for plain mic users
 
+            timerButton
+
             Button { metronome.toggle() } label: {
                 transportLabel(metronome.isPlaying ? String(localized: "Stop") : String(localized: "Start"),
                                icon: metronome.isPlaying ? "stop.fill" : "play.fill",
@@ -1235,6 +1247,51 @@ struct ContentView: View {
             .popoverTip(VoiceControlTip())   // first-run guidance for Voice Control users
             .coachAnchor("start")
         }
+    }
+
+    /// Practice timer: a compact square that shows the time left once a timer is
+    /// set, so the countdown stays in view while playing. Tap to set it up.
+    private var timerButton: some View {
+        let on = metronome.practiceTimerOn
+        return Button { openTimer() } label: {
+            Group {
+                if on {
+                    Label(timerText(metronome.practiceTimerRemaining), systemImage: "timer")
+                        .monospacedDigit()
+                        .contentTransition(.numericText(countsDown: true))
+                } else {
+                    Label("Timer", systemImage: "timer").labelStyle(.iconOnly)
+                }
+            }
+            .font(.headline)
+            .lineLimit(1)
+            .foregroundStyle(on ? cue : .secondary)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 15)
+            .frame(minWidth: 56)
+            .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .fill((on ? cue : Color.secondary).opacity(0.15)))
+            .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .stroke((on ? cue : Color.secondary).opacity(0.35), lineWidth: 1.5))
+            .animation(.default, value: metronome.practiceTimerRemaining)
+        }
+        .buttonStyle(.plain)
+        .fixedSize()
+        .accessibilityLabel("Practice timer")
+        .accessibilityValue(on ? timerSpokenValue : String(localized: "Off"))
+        .accessibilityInputLabels(["Timer", "Practice timer"])
+        .coachAnchor("timer")
+    }
+
+    /// "4:05" — minutes are not padded, so up to 120:00 stays compact.
+    private func timerText(_ seconds: Int) -> String {
+        let s = max(0, seconds)
+        return String(format: "%d:%02d", s / 60, s % 60)
+    }
+
+    private var timerSpokenValue: String {
+        let left = Duration.seconds(metronome.practiceTimerRemaining)
+        return String(localized: "\(left.formatted(.units(allowed: [.minutes, .seconds], width: .wide))) left")
     }
 
     private func transportLabel(_ title: String, icon: String, color: Color, filled: Bool) -> some View {
@@ -1263,12 +1320,13 @@ struct ContentView: View {
         case "sub":   return "\u{201C}quarter\u{201D} · \u{201C}eighth\u{201D} · \u{201C}triplet\u{201D} · \u{201C}sixteenth\u{201D}"
         case "voice": return "\u{201C}help\u{201D} · \u{201C}close\u{201D}"
         case "start": return metronome.isPlaying ? "\u{201C}stop\u{201D}" : "\u{201C}start\u{201D}"
+        case "timer": return "\u{201C}timer 5 minutes\u{201D}"
         default:      return ""
         }
     }
 
     private func helpMarksOverlay(_ anchors: [String: Anchor<CGRect>], _ proxy: GeometryProxy) -> some View {
-        let ids = ["beat", "tempo", "sub", "voice", "start"].filter { anchors[$0] != nil }
+        let ids = ["beat", "tempo", "sub", "voice", "timer", "start"].filter { anchors[$0] != nil }
         return ZStack(alignment: .topLeading) {
             Color.black.opacity(0.6).ignoresSafeArea()
                 .contentShape(Rectangle())
@@ -1395,6 +1453,7 @@ struct ContentView: View {
                         usageRow("target", "Timing check", "In orbit view, tap the ring while playing — every click (including subdivisions) is a target. The moving dot leaves a ghost where your tap landed, and coloured counters tally Perfect / Good / Bad until you stop.")
                         usageRow("chart.line.uptrend.xyaxis", "Practice mode", "Open it from Beat view below, or say \u{201C}practice\u{201D}.")
                         usageRow("play.fill", "Play", "Tap Start / Stop at the bottom.")
+                        usageRow("timer", "Practice timer", "Tap the timer button next to Start, or say \u{201C}timer 5 minutes\u{201D}. It counts down while the click plays, then stops and chimes.")
                         usageRow("mic.fill", "Voice", "Tap Listen to turn voice control on or off.")
                     } header: {
                         Text("On-screen")
@@ -1409,6 +1468,8 @@ struct ContentView: View {
                     }
                     Section("Playback") {
                         commandRow("\"start\" / \"stop\"", "play / pause")
+                        commandRow("\"timer 5 minutes\"", "set a practice timer")
+                        commandRow("\"timer off\"", "turn the timer off")
                     }
                     .id(helpSections[1])
                     Section("Tempo") {
@@ -1601,6 +1662,72 @@ struct ContentView: View {
             }
         }
         .presentationDetents([.medium])
+    }
+
+    // MARK: Practice timer modal
+
+    private var timerSheet: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    Toggle("Practice timer", isOn: Binding(
+                        get: { metronome.practiceTimerOn },
+                        set: { metronome.setPracticeTimer($0) }))
+                        .tint(cue)
+                        .accessibilityInputLabels(["Practice timer", "Timer"])
+                    Stepper("\(metronome.practiceTimerMinutes) min", value: Binding(
+                        get: { metronome.practiceTimerMinutes },
+                        set: { metronome.setPracticeTimer(minutes: $0) }),
+                            in: MetronomeEngine.practiceTimerRange)
+                    HStack(spacing: 8) {
+                        ForEach([5, 10, 15, 30], id: \.self) { m in
+                            let selected = metronome.practiceTimerOn && metronome.practiceTimerMinutes == m
+                            Button {
+                                metronome.setPracticeTimer(minutes: m)
+                                haptic.impactOccurred(intensity: 0.5)
+                            } label: {
+                                Text("\(m) min")
+                                    .font(.body.weight(.semibold))
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.7)
+                                    .foregroundStyle(selected ? ink(on: cue) : cue)
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 10)
+                                    .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                        .fill(selected ? cue : cue.opacity(0.14)))
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityAddTraits(selected ? [.isButton, .isSelected] : .isButton)
+                        }
+                    }
+                } footer: {
+                    Text("Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say \u{201C}timer 5 minutes\u{201D} or \u{201C}timer off\u{201D} anytime.")
+                        .font(.body)
+                }
+                if metronome.practiceTimerOn {
+                    Section {
+                        HStack {
+                            Text("Time left")
+                            Spacer()
+                            Text(timerText(metronome.practiceTimerRemaining))
+                                .monospacedDigit()
+                                .foregroundStyle(.secondary)
+                        }
+                        .accessibilityElement(children: .combine)
+                        Button("Reset timer") { metronome.resetPracticeTimer() }
+                            .disabled(metronome.practiceTimerRemaining == metronome.practiceTimerMinutes * 60)
+                    }
+                }
+            }
+            .navigationTitle("Practice timer")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { showTimer = false }
+                }
+            }
+        }
+        .presentationDetents([.medium, .large])
     }
 
     // MARK: Tuner page — slides in from the right, covering the whole screen
@@ -1924,6 +2051,7 @@ struct ContentView: View {
         showCommands = false
         closeTuner()            // slides the page out; onChange stops the engine
         showTrainer = false
+        showTimer = false
         showAccents = false
         // "close" backs out of the paywall too
         withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = nil }
@@ -1988,7 +2116,19 @@ struct ContentView: View {
         case .scrollUp: helpIndex = max(0, helpIndex - 1)
         case .scrollDown: helpIndex = min(helpSections.count - 1, helpIndex + 1)
         case .practice: openPractice()
+        case .timer: openTimer()
+        case .setTimer(let m): metronome.setPracticeTimer(minutes: m)
+        case .timerOff: metronome.setPracticeTimer(false)
         }
+    }
+
+    /// The practice timer is part of the free core — no Pro gate.
+    private func openTimer() {
+        showCommands = false
+        withAnimation(tunerPageAnimation) { showTuner = false }
+        showTrainer = false
+        showAccents = false
+        showTimer = true
     }
 
     private func openPractice() {
@@ -1996,6 +2136,7 @@ struct ContentView: View {
         showCommands = false
         withAnimation(tunerPageAnimation) { showTuner = false }
         showAccents = false
+        showTimer = false
         showTrainer = true
         PracticeTip().invalidate(reason: .actionPerformed)
     }
@@ -2005,6 +2146,7 @@ struct ContentView: View {
         showCommands = false
         withAnimation(tunerPageAnimation) { showTuner = false }
         showTrainer = false
+        showTimer = false
         showAccents = true
         AccentGridTip().invalidate(reason: .actionPerformed)
     }
@@ -2013,6 +2155,7 @@ struct ContentView: View {
     private func showHelp() {
         withAnimation(tunerPageAnimation) { showTuner = false }
         showTrainer = false
+        showTimer = false
         withAnimation(.easeOut(duration: 0.2)) { showHelpMarks = true }
         HelpVoiceTip().invalidate(reason: .actionPerformed)
     }
@@ -2047,6 +2190,9 @@ struct ContentView: View {
         case .scrollUp: return String(localized: "Scroll up")
         case .scrollDown: return String(localized: "Scroll down")
         case .practice: return String(localized: "Practice")
+        case .timer: return String(localized: "Timer")
+        case .setTimer(let m): return String(localized: "Timer \(m) min")
+        case .timerOff: return String(localized: "Timer off")
         }
     }
 
