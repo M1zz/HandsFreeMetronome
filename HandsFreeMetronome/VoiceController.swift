@@ -30,6 +30,9 @@ final class VoiceController: ObservableObject {
         case setVolume(Int)      // 0…100 percent
         case toggleView, bounceView, orbitView   // beat visualization
         case help, tuner, dismiss, scrollUp, scrollDown, practice
+        case timer                // open the practice-timer panel
+        case setTimer(Int)        // minutes, "timer 5 minutes"
+        case timerOff
     }
 
     /// Mic buffers, broadcast so features like the tuner can share the input
@@ -268,6 +271,13 @@ final class VoiceController: ObservableObject {
     private func command(in text: String) -> Command? {
         if contains(text, ["help"]) { return .help }
         if contains(text, ["tune", "tuner"]) { return .tuner }
+        // Practice timer — "timer 5 minutes", "ten minutes", "timer off". Checked
+        // before "practice" ("practice timer") and before start/stop ("stop timer").
+        if contains(text, ["timer", "minute"]) {
+            if contains(text, ["off", "cancel", "clear", "no timer", "stop timer"]) { return .timerOff }
+            if let n = minutes(in: text) { return .setTimer(n) }
+            if contains(text, ["timer"]) { return .timer }
+        }
         // Open the practice-mode modal (auto tempo climb). Checked before "up"/numbers.
         if contains(text, ["practice", "trainer"]) { return .practice }
         // Beat visualization. Specific styles before the generic "view" toggle.
@@ -314,6 +324,30 @@ final class VoiceController: ObservableObject {
                                       ("five", 5), ("six", 6), ("seven", 7), ("eight", 8)]
         for (w, n) in words where text.contains(w) { return n }
         if let r = text.range(of: "[1-8]", options: .regularExpression) { return Int(text[r]) }
+        return nil
+    }
+
+    /// A practice length in minutes, as digits ("5", "15") or words ("five",
+    /// "twenty five"). Whole-word matching, so "fifteen" never reads as "five".
+    private func minutes(in text: String) -> Int? {
+        if let r = text.range(of: "\\d{1,3}", options: .regularExpression), let n = Int(text[r]), n > 0 {
+            return n
+        }
+        if contains(text, ["half an hour"]) { return 30 }
+        if contains(text, ["an hour", "one hour"]) { return 60 }
+        let units = ["one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
+                     "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12,
+                     "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen": 16,
+                     "seventeen": 17, "eighteen": 18, "nineteen": 19]
+        let tens = ["twenty": 20, "thirty": 30, "forty": 40, "fifty": 50, "sixty": 60]
+        let tokens = text.split { !$0.isLetter }.map(String.init)
+        for (i, word) in tokens.enumerated() {
+            if let t = tens[word] {
+                if i + 1 < tokens.count, let u = units[tokens[i + 1]], u < 10 { return t + u }
+                return t
+            }
+            if let u = units[word] { return u }
+        }
         return nil
     }
 

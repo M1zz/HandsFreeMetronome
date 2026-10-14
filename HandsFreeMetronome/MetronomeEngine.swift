@@ -85,6 +85,19 @@ final class MetronomeEngine: ObservableObject {
     /// Measures completed since the last automatic step. Only touched on `timerQueue`.
     private var measuresSinceStep = 0
 
+    // MARK: Practice timer — "practise for 5 minutes" without reaching for a
+    // separate timer app. Counts down only while the click is playing (stopping
+    // pauses it), then stops the metronome and chimes when time is up.
+    @Published private(set) var practiceTimerOn = false
+    @Published private(set) var practiceTimerMinutes = 5
+    /// Seconds left in the current practice run.
+    @Published private(set) var practiceTimerRemaining = 5 * 60
+    /// Bumped each time a countdown runs out, so the UI can announce it.
+    @Published private(set) var practiceTimerFinished = 0
+    static let practiceTimerRange = 1...120
+    private var countdown: Timer?
+    private var countdownEnd = Date()
+
     private static let bpmKey = "metronome.bpm"
     private static let subdivisionKey = "metronome.subdivision"
     private static let beatsKey = "metronome.beatsPerMeasure"
@@ -92,6 +105,8 @@ final class MetronomeEngine: ObservableObject {
     private static let trainerStepKey = "metronome.trainerStep"
     private static let trainerBarsKey = "metronome.trainerBars"
     private static let trainerTargetKey = "metronome.trainerTarget"
+    private static let practiceTimerOnKey = "metronome.practiceTimerOn"
+    private static let practiceTimerMinutesKey = "metronome.practiceTimerMinutes"
     private static func accentKey(beats: Int, sub: Int) -> String {
         "metronome.accentLevels.\(beats)x\(sub)"
     }
@@ -147,6 +162,11 @@ final class MetronomeEngine: ObservableObject {
         if defaults.object(forKey: Self.trainerTargetKey) != nil {
             trainerTarget = clampBPM(defaults.integer(forKey: Self.trainerTargetKey))
         }
+        if defaults.object(forKey: Self.practiceTimerMinutesKey) != nil {
+            practiceTimerMinutes = Self.clampTimerMinutes(defaults.integer(forKey: Self.practiceTimerMinutesKey))
+        }
+        practiceTimerOn = defaults.bool(forKey: Self.practiceTimerOnKey)
+        practiceTimerRemaining = practiceTimerMinutes * 60
         for beats in 1...Self.maxBeatsPerMeasure {
             for sub in 1...4 {
                 if let stored = defaults.array(forKey: Self.accentKey(beats: beats, sub: sub)) as? [Int],
@@ -252,11 +272,13 @@ final class MetronomeEngine: ObservableObject {
         isPlaying = true
         tick = 0
         startTimer()
+        startCountdown()
     }
 
     func stop() {
         guard isPlaying else { return }
         isPlaying = false
+        pauseCountdown()
         beatTimer?.cancel()
         beatTimer = nil
         // Barrier: wait for any in-flight fireTick to finish before tearing the
@@ -361,6 +383,69 @@ final class MetronomeEngine: ObservableObject {
         timerQueue.async { [weak self] in self?.measuresSinceStep = 0 }
     }
     func toggleSpeedTrainer() { setSpeedTrainer(!speedTrainerOn) }
+
+    // MARK: Practice timer
+
+    /// Turn the timer on or off. Turning it on starts a fresh run (and starts
+    /// counting right away if the click is already playing).
+    func setPracticeTimer(_ on: Bool) {
+        practiceTimerOn = on
+        UserDefaults.standard.set(on, forKey: Self.practiceTimerOnKey)
+        resetPracticeTimer()
+    }
+
+    /// Set the run length and switch the timer on — "timer 5 minutes".
+    func setPracticeTimer(minutes: Int) {
+        practiceTimerMinutes = Self.clampTimerMinutes(minutes)
+        UserDefaults.standard.set(practiceTimerMinutes, forKey: Self.practiceTimerMinutesKey)
+        setPracticeTimer(true)
+    }
+
+    /// Back to the full length; keeps counting if the click is playing.
+    func resetPracticeTimer() {
+        countdown?.invalidate()
+        countdown = nil
+        practiceTimerRemaining = practiceTimerMinutes * 60
+        if isPlaying { startCountdown() }
+    }
+
+    private func startCountdown() {
+        guard practiceTimerOn, countdown == nil else { return }
+        if practiceTimerRemaining <= 0 { practiceTimerRemaining = practiceTimerMinutes * 60 }
+        // Count against a deadline rather than decrementing per tick, so a late
+        // timer firing (busy main thread) never stretches the practice run.
+        countdownEnd = Date().addingTimeInterval(TimeInterval(practiceTimerRemaining))
+        let timer = Timer(timeInterval: 0.25, repeats: true) { [weak self] _ in
+            self?.countdownTick()
+        }
+        // .common so it keeps running while a slider or scroll view is tracking.
+        RunLoop.main.add(timer, forMode: .common)
+        countdown = timer
+    }
+
+    private func countdownTick() {
+        let left = Int(countdownEnd.timeIntervalSinceNow.rounded(.up))
+        if left <= 0 {
+            stop()
+            practiceTimerRemaining = practiceTimerMinutes * 60   // ready for the next run
+            practiceTimerFinished += 1
+            FeedbackSound.timerDone.play()
+        } else if left != practiceTimerRemaining {
+            practiceTimerRemaining = left
+        }
+    }
+
+    /// Stopping the click pauses the run; the next start picks up where it left off.
+    private func pauseCountdown() {
+        guard let timer = countdown else { return }
+        timer.invalidate()
+        countdown = nil
+        practiceTimerRemaining = max(0, Int(countdownEnd.timeIntervalSinceNow.rounded(.up)))
+    }
+
+    private static func clampTimerMinutes(_ value: Int) -> Int {
+        min(practiceTimerRange.upperBound, max(practiceTimerRange.lowerBound, value))
+    }
 
     // MARK: Tempo helpers — clamp here so the @Published setters never re-assign.
     func nudge(_ delta: Int) { bpm = clampBPM(bpm + delta) }
@@ -522,13 +607,24 @@ struct AccentPreset: Codable, Identifiable, Equatable {
 /// The sound is generated in memory (no audio file) and played via AVAudioPlayer,
 /// which mixes over the click and the mic without touching the metronome engine.
 final class FeedbackSound {
-    static let shared = FeedbackSound()
+    static let shared = FeedbackSound(notes: [
+        (987.77, 0.07, 26),   // B5
+        (1318.51, 0.16, 12)   // E6
+    ])
+    /// The practice timer ran out: a longer rising arpeggio, distinct from the
+    /// command chime so "time's up" is recognisable without looking.
+    static let timerDone = FeedbackSound(notes: [
+        (783.99, 0.14, 10),   // G5
+        (987.77, 0.14, 10),   // B5
+        (1174.66, 0.14, 10),  // D6
+        (1567.98, 0.6, 5)     // G6
+    ], volume: 0.8)
     private let player: AVAudioPlayer?
 
-    private init() {
-        if let data = FeedbackSound.makeChime() {
+    private init(notes: [(freq: Double, dur: Double, decay: Double)], volume: Float = 0.55) {
+        if let data = FeedbackSound.makeChime(notes) {
             player = try? AVAudioPlayer(data: data)
-            player?.volume = 0.55
+            player?.volume = volume
             player?.prepareToPlay()
         } else {
             player = nil
@@ -541,13 +637,10 @@ final class FeedbackSound {
         player.play()
     }
 
-    /// Two quick ascending sine notes with a fast decay → a light "ploong".
-    private static func makeChime() -> Data? {
+    /// Ascending sine notes, each with an exponential decay — two quick ones
+    /// give the light "ploong" of the command chime.
+    private static func makeChime(_ notes: [(freq: Double, dur: Double, decay: Double)]) -> Data? {
         let sr = 44_100.0
-        let notes: [(freq: Double, dur: Double, decay: Double)] = [
-            (987.77, 0.07, 26),   // B5
-            (1318.51, 0.16, 12)   // E6
-        ]
         var samples: [Int16] = []
         for note in notes {
             let count = Int(note.dur * sr)
