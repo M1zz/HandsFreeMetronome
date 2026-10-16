@@ -1535,6 +1535,7 @@ struct ContentView: View {
                     } header: {
                         Text("Support")
                     }
+                    UsageStatsSection()
                     DeveloperContactSection(accent: cue)
                 }
                 .onChange(of: helpIndex) { idx in
@@ -2416,6 +2417,25 @@ struct SegmentedRing: View {
             }
         }
         .padding(2)
+    }
+}
+
+// MARK: - Usage statistics switch
+
+/// The on/off switch, shown in the help sheet above the contact links.
+struct UsageStatsSection: View {
+    @AppStorage(Telemetry.optOutKey) private var optOut = false
+
+    var body: some View {
+        Section {
+            Toggle("Share anonymous usage statistics", isOn: Binding(
+                get: { !optOut },
+                set: { optOut = !$0 }))
+        } header: {
+            Text("Privacy")
+        } footer: {
+            Text("Counts like how many devices use the app and crash reports. No audio, settings or personal information. Applies from the next launch.")
+        }
     }
 }
 
