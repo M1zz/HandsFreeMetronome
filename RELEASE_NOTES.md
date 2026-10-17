@@ -1,5 +1,70 @@
 # Release Notes — Not My Tempo
 
+## 1.0.10
+
+### 앱스토어 (한국어)
+
+처음 여는 분께 짧은 안내가 생겼어요
+오퍼 코드를 앱 안에서 바로 쓸 수 있어요
+대비 증가를 켜면 박자가 더 또렷해요
+아주 큰 글씨에서도 화면이 깔끔하게 정리돼요
+
+### App Store (English)
+
+A short intro for first-time users
+Redeem offer codes right in the app
+Beats stand out with Increase Contrast
+Screens fit even the largest text sizes
+
+### 앱스토어 (ja)
+
+初めての方向けに短い紹介が加わりました
+オファーコードをアプリ内で使えます
+コントラストを上げると拍がより見やすく
+最大の文字サイズでも画面がすっきり
+
+### 앱스토어 (de-DE)
+
+Neue kurze Einführung beim ersten Start
+Angebotscodes direkt in der App einlösen
+Deutlichere Schläge mit mehr Kontrast
+Alles passt auch bei größter Schrift
+
+### 앱스토어 (es-ES)
+
+Nueva introducción breve al empezar
+Canjea códigos de oferta en la app
+Tiempos más visibles con más contraste
+Todo cabe con el texto más grande
+
+### 앱스토어 (es-MX)
+
+Nueva introducción breve al empezar
+Canjea códigos de oferta desde la app
+Tiempos más visibles con más contraste
+Todo cabe con el texto más grande
+
+### 앱스토어 (fr-FR)
+
+Courte présentation au premier lancement
+Utilise tes codes promo dans l’app
+Temps plus nets avec plus de contraste
+Tout tient même en très grand texte
+
+### 앱스토어 (zh-Hans)
+
+首次打开时会有简短介绍
+可在 App 内直接兑换优惠码
+开启增强对比度后节拍更清晰
+最大字号下界面也不会被截断
+
+### 앱스토어 (pt-BR)
+
+Nova introdução rápida no primeiro uso
+Resgate códigos de oferta no app
+Tempos mais visíveis com mais contraste
+Tudo cabe mesmo com o maior texto
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)
