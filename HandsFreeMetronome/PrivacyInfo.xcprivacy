@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+    PrivacyInfo.xcprivacy - Not My Tempo (HandsFreeMetronome)
+
+    ⚠️ App Store Connect 의 App Privacy 설문과 어긋나면 안 된다. 하나를 바꾸면 다른 하나도 바꾼다.
+
+    수집 근거 (2026-10-17 코드 실사)
+      · 익명 사용 통계 → HandsFreeMetronomeSpec.swift `Telemetry` / LeeoUsageReporter
+        무작위 설치 ID, 앱·OS 버전, 언어, 실행·이벤트 수, 하루 한 번 app_open, 구매 흐름 이벤트.
+        사용자가 도움말 ▸ 개인정보에서 끌 수 있고, 원격 스위치(NotMyTempoFlag.usageStats)로도 끈다.
+      · 크래시·멈춤 진단 → LeeoDiagnostics (MetricKit). 콜스택·앱 버전·OS·기기 종류. 설치 ID 없음.
+      · 피드백 → LeeoSupportSection ▸ LeeoFeedbackView. 사용자가 직접 쓴 글과
+        버그 신고에 붙는 기기 상태(남은 저장 공간 등, 보내기 전에 화면에 보인다).
+
+    수집하지 않는 것
+      · 마이크 소리·음성. 음성 명령은 기기(또는 Apple 음성 인식)에서 단어로만 쓰이고 저장·전송하지 않는다.
+      · 메트로놈 설정·프리셋(기기에만 저장), 위치, 연락처, 광고 식별자. 추적(ATT) 없음.
+-->
+<plist version="1.0">
+<dict>
+    <key>NSPrivacyTracking</key>
+    <false/>
+    <key>NSPrivacyTrackingDomains</key>
+    <array/>
+
+    <key>NSPrivacyCollectedDataTypes</key>
+    <array>
+        <!-- 제품 상호작용: 실행·주요 행동 이벤트 이름과 횟수. 익명 설치 ID 로만 묶인다. -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>NSPrivacyCollectedDataTypeProductInteraction</string>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+            <array>
+                <string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+            </array>
+        </dict>
+        <!-- 구매 이력: 페이월 노출 → 구매 시작 → 구매 완료 이벤트(금액·영수증은 보내지 않는다). -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>NSPrivacyCollectedDataTypePurchaseHistory</string>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+            <array>
+                <string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+            </array>
+        </dict>
+        <!-- 기기 ID: 앱이 만든 무작위 설치 UUID. 재설치하면 바뀐다. -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>NSPrivacyCollectedDataTypeDeviceID</string>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+            <array>
+                <string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+            </array>
+        </dict>
+        <!-- 크래시 데이터: MetricKit 크래시 진단. -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>NSPrivacyCollectedDataTypeCrashData</string>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+            <array>
+                <string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+            </array>
+        </dict>
+        <!-- 성능 데이터: MetricKit 멈춤(행) 진단. -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>NSPrivacyCollectedDataTypePerformanceData</string>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+            <array>
+                <string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+            </array>
+        </dict>
+        <!-- 고객 지원: 사용자가 직접 보낸 피드백 본문. -->
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>NSPrivacyCollectedDataTypeCustomerSupport</string>
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+            <array>
+                <string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+            </array>
+        </dict>
+    </array>
+
+    <key>NSPrivacyAccessedAPITypes</key>
+    <array>
+        <!-- UserDefaults: 템포·박자·프리셋·튜너 기준음·온보딩 표시 등 이 앱만의 설정. -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+            <key>NSPrivacyAccessedAPITypeReasons</key>
+            <array>
+                <string>CA92.1</string>
+            </array>
+        </dict>
+        <!-- systemUptime: 탭 템포에서 두 번 두드린 사이의 시간을 잰다(기기 밖으로 나가지 않는다). -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>NSPrivacyAccessedAPICategorySystemBootTime</string>
+            <key>NSPrivacyAccessedAPITypeReasons</key>
+            <array>
+                <string>35F9.1</string>
+            </array>
+        </dict>
+        <!-- 남은 저장 공간: 사용자가 직접 보내는 버그 신고에 붙는 기기 상태(LeeoKit LeeoBugProbe). -->
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>NSPrivacyAccessedAPICategoryDiskSpace</string>
+            <key>NSPrivacyAccessedAPITypeReasons</key>
+            <array>
+                <string>7D9E.1</string>
+            </array>
+        </dict>
+    </array>
+</dict>
+</plist>

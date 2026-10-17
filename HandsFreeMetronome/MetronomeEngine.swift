@@ -252,6 +252,10 @@ final class MetronomeEngine: ObservableObject {
 
     func start() {
         guard !isPlaying else { return }
+        // "Start" → first click: the audio graph spin-up is the part a player
+        // waits on, so it is measured (Instruments ▸ Points of Interest).
+        let state = Perf.signposter.beginInterval("Metronome start")
+        defer { Perf.signposter.endInterval("Metronome start", state) }
         if !engine.isRunning {
             do {
                 try engine.start()

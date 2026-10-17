@@ -143,6 +143,12 @@ final class ProStore: ObservableObject {
     /// grandfather clause, or the DEBUG dev unlock is active.
     var isPro: Bool { store.hasPro }
 
+    /// Whether `feature` is open right now — the Spec's gate (`proOnly`) read
+    /// against the same entitlement as `isPro` (purchase, grandfather, dev unlock).
+    func allows(_ feature: ProFeature) -> Bool {
+        store.gate.allows(feature.rawValue)
+    }
+
     /// Store products, ordered yearly-first for the paywall (config order).
     var products: [Product] { store.products }
 

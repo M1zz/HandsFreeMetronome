@@ -70,7 +70,12 @@ final class TunerEngine: ObservableObject {
             let frame = Array(self.window.suffix(self.windowSize))
             self.window.removeAll(keepingCapacity: true)
 
-            guard let f = TunerEngine.detectPitch(frame, sampleRate: sr) else { return }
+            // The YIN pass is the tuner's hot loop — it must finish well inside
+            // one window (~93 ms at 44.1 kHz) or the readout starts to lag.
+            let state = Perf.signposter.beginInterval("Tuner pitch")
+            let detected = TunerEngine.detectPitch(frame, sampleRate: sr)
+            Perf.signposter.endInterval("Tuner pitch", state)
+            guard let f = detected else { return }
             // Smooth within a note for a calm readout, but jump when the note
             // changes (more than ~半음 away) so switching strings is responsive.
             if self.smoothedFreq <= 0 || abs(1200 * log2(f / self.smoothedFreq)) > 80 {

@@ -1,9 +1,12 @@
 import Foundation
+import os
 import LeeoKit
 
 enum HandsFreeMetronomeSpec: LeeoAppSpec {
     static let appName = "Not My Tempo"
     static let developerEmail = "leeo@kakao.com"
+    /// "Write a review" deep-links to this listing; the family row uses it to leave this app out.
+    static let appStoreID: String? = "6781537149"
     static let feedback = LeeoFeedbackConfig(containerIdentifier: "iCloud.com.Ysoup.FeedbackHub", appIdentifier: "com.leeo.HandsFreeMetronome")
 
     // 익명 사용 통계 → FeedbackHub. 끄기 스위치를 지나서 나간다 (→ Telemetry.swift).
@@ -20,7 +23,11 @@ enum HandsFreeMetronomeSpec: LeeoAppSpec {
     static let monetization = LeeoMonetization.freemiumSubscription(
         LeeoSubscriptionConfig(
             productIDs: [ProStore.yearlyID, ProStore.lifetimeID],
-            termsURL: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!))
+            termsURL: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!,
+            // What a free user can't open without Pro — the three practice
+            // tools. Everything else (the metronome, voice control, timer)
+            // stays free. ContentView.requirePro asks this gate.
+            gate: LeeoGatePolicy(proOnly: Set(ProFeature.allCases.map(\.rawValue)))))
 }
 
 // MARK: - Usage statistics
@@ -40,20 +47,54 @@ enum Telemetry {
     /// Stored as an *opt-out* so the default (`false`) means "sending".
     static let optOutKey = "usage.optOut"
 
-    static var isEnabled: Bool { !UserDefaults.standard.bool(forKey: optOutKey) }
+    /// The user's switch AND the remote kill switch (→ `NotMyTempoFlag.usageStats`).
+    static var isEnabled: Bool {
+        !UserDefaults.standard.bool(forKey: optOutKey) && NotMyTempoFlag.usageStats.isEnabled
+    }
 
     /// Call once from `App.init()`.
     static func start() {
         // Launch count, analytics sink and preflight. Diagnostics and the
         // usage snapshot are started below so the switch can gate them.
-        LeeoKit.bootstrap(HandsFreeMetronomeSpec.self, diagnostics: false, usageReporting: false)
+        // `flags:` also refreshes the remote kill switches in the background.
+        // Its own DEBUG audit is off: it runs before the flags and diagnostics
+        // below are on and would always report them missing (→ auditContract).
+        LeeoKit.bootstrap(HandsFreeMetronomeSpec.self, flags: NotMyTempoFlag.self,
+                          diagnostics: false, usageReporting: false, preflight: false)
         LeeoDiagnostics.shared.start(spec: HandsFreeMetronomeSpec.self) { isEnabled }
+        #if DEBUG
+        auditContract()
+        #endif
         guard isEnabled else { return }
         // One snapshot per install (12 h throttle) plus one `app_open` per day
         // whenever the app comes to the foreground.
-        LeeoUsageReporter(spec: HandsFreeMetronomeSpec.self).reportInBackground()
+        let reporter = LeeoUsageReporter(spec: HandsFreeMetronomeSpec.self)
+        reporter.reportInBackground()
+        // Launches that died before the first screen (counted by LaunchGuard).
+        Task { _ = await LaunchGuard.crashGuard.reportIncompleteLaunches(to: reporter) }
     }
 }
+
+#if DEBUG
+extension Telemetry {
+    /// Development builds check the LeeoKit contract (paywall reachable, restore,
+    /// https policy links…) on every launch and log what's wrong to Console
+    /// (subsystem com.leeo.HandsFreeMetronome, category app). It only reports;
+    /// what blocks a release is `SpecPreflightTests`.
+    static func auditContract() {
+        let issues = LeeoPreflight.audit(HandsFreeMetronomeSpec.self)
+        if issues.isEmpty { Log.app.info("LeeoPreflight: contract OK") }
+        for issue in issues {
+            let line = "LeeoPreflight [\(issue.code)] \(issue.message)"
+            switch issue.severity {
+            case .error: Log.app.error("\(line, privacy: .public)")
+            case .warning: Log.app.warning("\(line, privacy: .public)")
+            case .info: Log.app.info("\(line, privacy: .public)")
+            }
+        }
+    }
+}
+#endif
 
 /// LeeoKit's own events (paywall, purchase, satisfaction, review, feedback)
 /// go through here, so switching statistics off silences them too.

@@ -1,5 +1,6 @@
 import Foundation
 import AVFoundation
+import LeeoKit
 
 /// Start / stop the metronome by playing a short phrase on your own instrument
 /// (e.g. E4 → C4). Like the tuner it does NOT open a microphone — it is fed the
@@ -110,8 +111,11 @@ final class NoteSignalDetector: ObservableObject {
         sync()
     }
 
+    /// False when the feature is switched off remotely (→ `NotMyTempoFlag`).
+    static var isAvailable: Bool { NotMyTempoFlag.instrumentSignal.isEnabled }
+
     private func sync() {
-        let on = enabled && !pattern.isEmpty
+        let on = enabled && !pattern.isEmpty && Self.isAvailable
         let notes = pattern
         analysisQueue.async { [weak self] in
             self?.listening = on
@@ -142,7 +146,9 @@ final class NoteSignalDetector: ObservableObject {
     }
 
     private func analyse(_ frame: [Float], sampleRate: Double) {
+        let state = Perf.signposter.beginInterval("Signal pitch")
         let note = TunerEngine.detectPitch(frame, sampleRate: sampleRate).map(Self.midi)
+        Perf.signposter.endInterval("Signal pitch", state)
 
         if isRecording, recorded.count >= Self.minNotes, clock - lastRecordedAt > Self.finishAfter {
             DispatchQueue.main.async { [weak self] in self?.finishRecording() }
