@@ -2237,6 +2237,12 @@ struct ContentView: View {
             case "voice": showHelp()
             case "accents":
                 metronome.setLevelsForScreenshot([2, 1, 2, 1,  2, 0, 1, 1,  2, 1, 2, 1,  2, 0, 1, 2])
+                // Show saved presets, not the empty state — genre names read the
+                // same in every store language.
+                if metronome.accentPresets.isEmpty {
+                    metronome.saveAccentPreset(named: "Bossa Nova")
+                    metronome.saveAccentPreset(named: "Samba")
+                }
                 showAccents = true
             default: break
             }

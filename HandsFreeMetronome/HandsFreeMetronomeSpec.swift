@@ -71,7 +71,14 @@ enum Telemetry {
         let reporter = LeeoUsageReporter(spec: HandsFreeMetronomeSpec.self)
         reporter.reportInBackground()
         // Launches that died before the first screen (counted by LaunchGuard).
-        Task { _ = await LaunchGuard.crashGuard.reportIncompleteLaunches(to: reporter) }
+        // Release only: in development, stopping the app from Xcode or a
+        // screenshot script kills it within seconds and would flood the hub —
+        // and unsigned simulator builds have no iCloud entitlement to send with.
+        #if !DEBUG
+        if LaunchGuard.crashGuard.unreportedIncompleteLaunches > 0 {
+            Task { _ = await LaunchGuard.crashGuard.reportIncompleteLaunches(to: reporter) }
+        }
+        #endif
     }
 }
 
