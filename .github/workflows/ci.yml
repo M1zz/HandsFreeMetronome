@@ -1,0 +1,61 @@
+name: CI
+
+# push · pull_request 마다 빌드 + 단위 시험을 돌린다.
+# UI 시험(HandsFreeMetronomeUITests)은 시뮬레이터 화면을 오래 붙잡아 러너 시간이 커서
+# 여기서는 단위 시험만 돌리고, UI 시험은 배포 전에 로컬에서 돌린다.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: 빌드 · 단위 시험
+    runs-on: macos-15
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Xcode 버전 확인
+        run: xcodebuild -version
+
+      # LeeoKit(공개 SPM 패키지)을 매번 새로 받지 않도록 캐시.
+      - name: SPM 캐시
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
+          key: spm-${{ runner.os }}-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: spm-${{ runner.os }}-
+
+      # 러너에 깔린 아이폰 시뮬레이터 하나를 골라 단위 시험만 돌린다.
+      - name: 단위 시험
+        run: |
+          set -o pipefail
+          UDID=$(xcrun simctl list devices available -j | python3 -c "import json,sys; d=json.load(sys.stdin)['devices']; print(next(x['udid'] for r,l in d.items() if 'iOS' in r for x in l if x['name'].startswith('iPhone')))")
+          echo "시뮬레이터: $UDID"
+          xcodebuild test \
+            -project HandsFreeMetronome.xcodeproj \
+            -scheme HandsFreeMetronome \
+            -destination "platform=iOS Simulator,id=$UDID" \
+            -only-testing:HandsFreeMetronomeTests \
+            CODE_SIGNING_ALLOWED=NO
+
+  lint:
+    name: SwiftLint
+    runs-on: macos-15
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: SwiftLint 설치
+        run: brew install swiftlint
+      # 강제 언랩은 경고(설정 참고)라 --strict 를 쓰지 않는다. force_try · 파일 길이 초과는 실패.
+      - name: SwiftLint 실행
+        run: swiftlint lint

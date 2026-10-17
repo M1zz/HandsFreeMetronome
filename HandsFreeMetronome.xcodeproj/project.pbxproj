@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20AD40C92E06CF81D30A9880 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A372D671513D27A0DD4B28E8 /* Foundation.framework */; };
 		245516F9CF19CB726BC69B61 /* HandsFreeMetronomeRoadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119F36266B8695EE44FDBD9E /* HandsFreeMetronomeRoadmap.swift */; };
 		4B3561E38821E3618B5B3D74 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5C792597780977588B1FF8A5 /* LeeoKit */; };
+		506803D79B3951241A9A7D63 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4B18BBB9A42BEB9767B23 /* WhatsNewView.swift */; };
+		5300980113BE13788779778E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A372D671513D27A0DD4B28E8 /* Foundation.framework */; };
+		67E78858EA0DCFC0A13EA9B0 /* HandsFreeMetronomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F7A6E714C5218EC6FC1DD /* HandsFreeMetronomeTests.swift */; };
+		6A896E540343E7FF97CBAC6B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3352ADFF3E467A373977D842 /* OnboardingView.swift */; };
 		A1000011 /* HandsFreeMetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001 /* HandsFreeMetronomeApp.swift */; };
 		A1000012 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002 /* ContentView.swift */; };
 		A1000013 /* MetronomeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000003 /* MetronomeEngine.swift */; };
@@ -22,12 +27,38 @@
 		A1000311 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000301 /* PaywallView.swift */; };
 		A1000F01 /* NoteSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000F02 /* NoteSignal.swift */; };
 		A1000F03 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000F04 /* Palette.swift */; };
+		AB0866CD1F227854441AC07D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A04C8D5D5269C68D20C4B1A1 /* PrivacyInfo.xcprivacy */; };
+		B7BE3F9B9E9439C74267E6A9 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587DE833F8E9313F80F10675 /* Operations.swift */; };
 		CC22D8B983C92CE776DDB015 /* HandsFreeMetronomeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */; };
+		D77BF4D721149A4AD59CD704 /* HandsFreeMetronomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B18107DE839F33D532A939 /* HandsFreeMetronomeUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C245F816A9413050BC21A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1000070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1000040;
+			remoteInfo = HandsFreeMetronome;
+		};
+		F0A2E60724C2489566DC2BD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1000070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1000040;
+			remoteInfo = HandsFreeMetronome;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		119F36266B8695EE44FDBD9E /* HandsFreeMetronomeRoadmap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeRoadmap.swift; sourceTree = "<group>"; };
+		2297C2A4752E1FC4601B08E1 /* HandsFreeMetronomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsFreeMetronomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeSpec.swift; sourceTree = "<group>"; };
+		3352ADFF3E467A373977D842 /* OnboardingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		51B18107DE839F33D532A939 /* HandsFreeMetronomeUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeUITests.swift; sourceTree = "<group>"; };
+		587DE833F8E9313F80F10675 /* Operations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		6C8F7A6E714C5218EC6FC1DD /* HandsFreeMetronomeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeTests.swift; sourceTree = "<group>"; };
+		A04C8D5D5269C68D20C4B1A1 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		A1000001 /* HandsFreeMetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeApp.swift; sourceTree = "<group>"; };
 		A1000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1000003 /* MetronomeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeEngine.swift; sourceTree = "<group>"; };
@@ -50,9 +81,28 @@
 		A1000302 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 		A1000F02 /* NoteSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSignal.swift; sourceTree = "<group>"; };
 		A1000F04 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		A372D671513D27A0DD4B28E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D7A4B18BBB9A42BEB9767B23 /* WhatsNewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
+		EFB1C9764327C94ECAA99F25 /* HandsFreeMetronomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsFreeMetronomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		052D435A5DED4CEB38EBED22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20AD40C92E06CF81D30A9880 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E620F08A3F564AF67D55C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5300980113BE13788779778E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1000020 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,11 +114,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E9E82D279715357AE331863 /* HandsFreeMetronomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				51B18107DE839F33D532A939 /* HandsFreeMetronomeUITests.swift */,
+			);
+			name = HandsFreeMetronomeUITests;
+			path = HandsFreeMetronomeUITests;
+			sourceTree = "<group>";
+		};
+		75BA4D6A9F50F3EC1D4CECA4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A372D671513D27A0DD4B28E8 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		A1000030 = {
 			isa = PBXGroup;
 			children = (
 				A1000032 /* HandsFreeMetronome */,
 				A1000031 /* Products */,
+				FE4609CAFE5094B3506C5476 /* Frameworks */,
+				E88E292D20A2A150C98C9895 /* HandsFreeMetronomeTests */,
+				6E9E82D279715357AE331863 /* HandsFreeMetronomeUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				A1000010 /* HandsFreeMetronome.app */,
+				2297C2A4752E1FC4601B08E1 /* HandsFreeMetronomeTests.xctest */,
+				EFB1C9764327C94ECAA99F25 /* HandsFreeMetronomeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,8 +172,29 @@
 				A1000201 /* Localizable.xcstrings */,
 				256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */,
 				119F36266B8695EE44FDBD9E /* HandsFreeMetronomeRoadmap.swift */,
+				587DE833F8E9313F80F10675 /* Operations.swift */,
+				D7A4B18BBB9A42BEB9767B23 /* WhatsNewView.swift */,
+				3352ADFF3E467A373977D842 /* OnboardingView.swift */,
+				A04C8D5D5269C68D20C4B1A1 /* PrivacyInfo.xcprivacy */,
 			);
 			path = HandsFreeMetronome;
+			sourceTree = "<group>";
+		};
+		E88E292D20A2A150C98C9895 /* HandsFreeMetronomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C8F7A6E714C5218EC6FC1DD /* HandsFreeMetronomeTests.swift */,
+			);
+			name = HandsFreeMetronomeTests;
+			path = HandsFreeMetronomeTests;
+			sourceTree = "<group>";
+		};
+		FE4609CAFE5094B3506C5476 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75BA4D6A9F50F3EC1D4CECA4 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +219,42 @@
 			productName = HandsFreeMetronome;
 			productReference = A1000010 /* HandsFreeMetronome.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A2619B6C4F44C03CD570E7B4 /* HandsFreeMetronomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E27826E3BD7BEE586D3F8AE /* Build configuration list for PBXNativeTarget "HandsFreeMetronomeTests" */;
+			buildPhases = (
+				B607A0CF49384DC5AE3B94D6 /* Sources */,
+				052D435A5DED4CEB38EBED22 /* Frameworks */,
+				09EC49CE4D7D8A814CE10C53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AB664753C5B3BF6F73150DC /* PBXTargetDependency */,
+			);
+			name = HandsFreeMetronomeTests;
+			productName = HandsFreeMetronomeTests;
+			productReference = 2297C2A4752E1FC4601B08E1 /* HandsFreeMetronomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C1892AEDF163BC975703A4A6 /* HandsFreeMetronomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21F3E119310478C913BB6A93 /* Build configuration list for PBXNativeTarget "HandsFreeMetronomeUITests" */;
+			buildPhases = (
+				6020F706D3B41E6BCF47A3DF /* Sources */,
+				52E620F08A3F564AF67D55C9 /* Frameworks */,
+				810F5E651FC93F924C2B2138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D178DF1A2F4F91F09ECB48E2 /* PBXTargetDependency */,
+			);
+			name = HandsFreeMetronomeUITests;
+			productName = HandsFreeMetronomeUITests;
+			productReference = EFB1C9764327C94ECAA99F25 /* HandsFreeMetronomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -165,11 +294,27 @@
 			projectRoot = "";
 			targets = (
 				A1000040 /* HandsFreeMetronome */,
+				A2619B6C4F44C03CD570E7B4 /* HandsFreeMetronomeTests */,
+				C1892AEDF163BC975703A4A6 /* HandsFreeMetronomeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		09EC49CE4D7D8A814CE10C53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810F5E651FC93F924C2B2138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1000051 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,12 +323,21 @@
 				A1000016 /* Preview Assets.xcassets in Resources */,
 				A1000103 /* InfoPlist.strings in Resources */,
 				A1000200 /* Localizable.xcstrings in Resources */,
+				AB0866CD1F227854441AC07D /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6020F706D3B41E6BCF47A3DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D77BF4D721149A4AD59CD704 /* HandsFreeMetronomeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1000050 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,10 +353,36 @@
 				A1000311 /* PaywallView.swift in Sources */,
 				CC22D8B983C92CE776DDB015 /* HandsFreeMetronomeSpec.swift in Sources */,
 				245516F9CF19CB726BC69B61 /* HandsFreeMetronomeRoadmap.swift in Sources */,
+				B7BE3F9B9E9439C74267E6A9 /* Operations.swift in Sources */,
+				506803D79B3951241A9A7D63 /* WhatsNewView.swift in Sources */,
+				6A896E540343E7FF97CBAC6B /* OnboardingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B607A0CF49384DC5AE3B94D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67E78858EA0DCFC0A13EA9B0 /* HandsFreeMetronomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AB664753C5B3BF6F73150DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HandsFreeMetronome;
+			target = A1000040 /* HandsFreeMetronome */;
+			targetProxy = 1C245F816A9413050BC21A26 /* PBXContainerItemProxy */;
+		};
+		D178DF1A2F4F91F09ECB48E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HandsFreeMetronome;
+			target = A1000040 /* HandsFreeMetronome */;
+			targetProxy = F0A2E60724C2489566DC2BD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A1000102 /* InfoPlist.strings */ = {
@@ -222,6 +402,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		48032DE639CFE6D5350CAC36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = HandsFreeMetronome;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F9529ABE48399D83A323A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HandsFreeMetronome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HandsFreeMetronome";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		A1000061 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -330,9 +547,62 @@
 			};
 			name = Release;
 		};
+		AE2386BB30A7FE8B00B18FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = HandsFreeMetronome;
+			};
+			name = Debug;
+		};
+		E3F849CD00E6A728ED9005C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HandsFreeMetronome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HandsFreeMetronome";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E27826E3BD7BEE586D3F8AE /* Build configuration list for PBXNativeTarget "HandsFreeMetronomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9529ABE48399D83A323A76 /* Release */,
+				E3F849CD00E6A728ED9005C4 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21F3E119310478C913BB6A93 /* Build configuration list for PBXNativeTarget "HandsFreeMetronomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48032DE639CFE6D5350CAC36 /* Release */,
+				AE2386BB30A7FE8B00B18FBA /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A1000060 /* Build configuration list for PBXNativeTarget "HandsFreeMetronome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -1,0 +1,38 @@
+# SwiftLint - 최소 규칙으로 시작한다 (클립키보드 설정을 본뜸).
+#
+# 여기 켠 규칙은 "나오면 반드시 고친다"는 뜻이다. 전체 규칙을 한꺼번에 걸면
+# 경고가 쏟아지고 아무도 안 본다. 늘릴 땐 하나씩, 기존 위반을 0으로 만든 뒤에.
+#
+# 실행: swiftlint            (경고 확인)
+#       swiftlint --strict   (CI - 경고도 실패 처리)
+
+only_rules:
+  - force_try          # try! - 크래시로 직행
+  - force_unwrapping   # 옵셔널 강제 언랩. 크래시 1순위 원인
+  - file_length        # 파일 비대화 방지
+
+included:
+  - HandsFreeMetronome
+# 시험 코드는 제외한다 - 시험에서 강제 언랩은 "여기서 바로 실패하라"는 관용 표현이다.
+
+excluded:
+  - build
+  - DerivedData
+  - docs
+  - scripts
+  - marketing
+
+force_unwrapping:
+  # 지금 남은 9건은 상수 URL 리터럴(약관·개인정보·메일 링크), WAV 헤더 ASCII 변환,
+  # 그리고 `Spec.paywall!`(구독 모델이면 항상 있다 - SpecPreflightTests 가 지킨다)라
+  # 실패할 수 없다. 경고로 두어 새로 들어오는 것을 눈에 띄게 한다.
+  severity: warning
+
+file_length:
+  # ContentView.swift 가 2,700줄에 가깝다 - 화면별 파일로 나눠 가는 게 목표.
+  # 지금 조이면 한 파일이 상시 위반이라 실효가 없어 3000 에서 시작한다.
+  warning: 3000
+  error: 4000
+  ignore_comment_only_lines: true
+
+reporter: "xcode"
