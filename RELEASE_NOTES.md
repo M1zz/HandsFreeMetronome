@@ -1,5 +1,61 @@
 # Release Notes — Not My Tempo
 
+## 1.0.9
+
+### 앱스토어 (한국어)
+
+앱이 더 안정적으로 동작해요
+문제가 생기면 더 빨리 찾아 고칠 수 있어요
+익명 사용 정보 보내기는 언제든 끌 수 있어요
+
+### App Store (English)
+
+The app now runs more reliably
+We can find and fix problems faster
+Anonymous usage sharing can be turned off anytime
+
+### 앱스토어 (ja)
+
+アプリの動作がより安定しました
+不具合をより早く見つけて直せるようになりました
+匿名の利用情報の送信はいつでもオフにできます
+
+### 앱스토어 (de-DE)
+
+Die App läuft jetzt stabiler
+Fehler finden und beheben wir schneller
+Anonyme Nutzungsdaten kannst du jederzeit abschalten
+
+### 앱스토어 (es-ES)
+
+La app funciona de forma más estable
+Ahora detectamos y corregimos fallos antes
+Puedes desactivar los datos de uso anónimos
+
+### 앱스토어 (es-MX)
+
+La app funciona de forma más estable
+Ahora detectamos y corregimos fallas más rápido
+Puedes desactivar los datos de uso anónimos
+
+### 앱스토어 (fr-FR)
+
+L’app fonctionne de façon plus stable
+Nous repérons et corrigeons les bugs plus vite
+Tu peux désactiver les données d’usage anonymes
+
+### 앱스토어 (zh-Hans)
+
+应用运行更加稳定
+能更快发现并修复问题
+匿名使用数据的发送可随时关闭
+
+### 앱스토어 (pt-BR)
+
+O app ficou mais estável
+Agora encontramos e corrigimos falhas mais rápido
+Você pode desativar o envio de dados anônimos
+
 ## 1.0.8
 
 ### 앱스토어 (한국어)
