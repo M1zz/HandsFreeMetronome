@@ -63,6 +63,15 @@ struct ContentView: View {
     // the input — the user drives every control by its name ("Tap Start", "Tap Faster").
     @AppStorage("usesVoiceControl") private var usesVoiceControl = false
 
+    // First-launch introduction and the once-per-version "What's new" card.
+    // Both ride in the ZStack like the paywall (a TipKit popover swallows sheets).
+    @AppStorage(NotMyTempoOnboardingView.hasCompletedOnboardingKey) private var hasCompletedOnboarding = false
+    @AppStorage("lastSeenWhatsNewVersion") private var lastSeenWhatsNewVersion = ""
+    @State private var showOnboarding = false
+    @State private var showWhatsNew = false
+    @State private var showOfferCode = false        // App Store offer-code redemption sheet
+    @State private var playStartedAt: Date?         // a run long enough to count as practice
+
     // Landscape on iPhone reports a compact height → switch to a two-column layout.
     @Environment(\.verticalSizeClass) private var vSizeClass
     // Accessibility preferences we honour throughout the UI.
@@ -71,6 +80,12 @@ struct ContentView: View {
     // Assistive Access (iOS 18+): when the app runs inside the simplified system
     // experience for people with cognitive disabilities, we show a distilled UI.
     @Environment(\.accessibilityAssistiveAccessEnabled) private var assistiveAccess
+    // Increase Contrast: dimmed beats and hairline outlines are drawn stronger.
+    @Environment(\.colorSchemeContrast) private var contrast
+    // Reduce Transparency: the help overlay's see-through scrims turn solid.
+    @Environment(\.accessibilityReduceTransparency) private var reduceTransparency
+    // Accessibility text sizes: crowded rows rearrange instead of truncating.
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     // Dynamic Type: scale the big fixed-size displays with the user's text setting.
     @ScaledMetric(relativeTo: .largeTitle) private var bpmFontSize: CGFloat = 52
@@ -136,6 +151,18 @@ struct ContentView: View {
                 .transition(reduceMotion ? .opacity : .move(edge: .bottom))
                 .zIndex(3)
             }
+
+            if showWhatsNew {
+                WhatsNewView { closeWhatsNew() }
+                    .transition(reduceMotion ? .opacity : .move(edge: .bottom))
+                    .zIndex(4)
+            }
+
+            if showOnboarding {
+                NotMyTempoOnboardingView(usesVoiceControl: usesVoiceControl) { finishOnboarding() }
+                    .transition(.opacity)
+                    .zIndex(5)
+            }
         }
         // "help" highlights every on-screen control at once, each tagged with the
         // voice command that drives it — read from the controls' captured bounds.
@@ -163,13 +190,25 @@ struct ContentView: View {
             UINotificationFeedbackGenerator().notificationOccurred(.success)
             UIAccessibility.post(notification: .announcement,
                                  argument: String(localized: "Practice time is up"))
+            // A finished timed session is the clearest "this app did its job" moment.
+            LeeoEngagement.shared.registerSignificantEvent()
         }
         .sheet(isPresented: $showAccents) { accentsSheet }
         .onChange(of: metronome.isPlaying) { playing in
             if playing {
                 withAnimation(.easeInOut(duration: 0.4)) { hintDismissed = true }
                 timingStats = TimingStats()   // fresh tap-accuracy tally for each run
-            } else { currentBeat = -1 }   // reset so the next start floats at centre first
+                playStartedAt = Date()
+            } else {
+                currentBeat = -1   // reset so the next start floats at centre first
+                // A real practice run (not a quick test click) feeds the review
+                // prompt's "was this useful?" signal.
+                if let started = playStartedAt,
+                   Date().timeIntervalSince(started) >= PracticeMoment.minimumRun {
+                    LeeoEngagement.shared.registerSignificantEvent()
+                }
+                playStartedAt = nil
+            }
             // Don't let the screen auto-lock mid-practice — a running metronome you
             // can't see (or that pauses when the display sleeps) is useless.
             UIApplication.shared.isIdleTimerDisabled = playing
@@ -182,12 +221,16 @@ struct ContentView: View {
         .onAppear {
             wireUp()
             syncTipState()
+            greetIfNeeded()
+            LaunchGuard.markLaunchSucceeded()
             #if DEBUG
             // Simulator-test hooks: the tuner (and its paywall gate) open by
             // voice only, which automation can't drive — these launch arguments
             // stand in for saying "tune". -uitest-tuner bypasses the gate to
             // exercise the slide-in page; -uitest-paywall goes through it.
             let uitestArgs = ProcessInfo.processInfo.arguments
+            // UI tests tap the controls tip popovers would sit on.
+            if uitestArgs.contains("-uitest-notips") { Tips.hideAllTipsForTesting() }
             if uitestArgs.contains("-uitest-tuner") || uitestArgs.contains("-uitest-paywall") {
                 Tips.hideAllTipsForTesting()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -214,9 +257,12 @@ struct ContentView: View {
             // Listen by default — UNLESS the user relies on iOS Voice Control, in
             // which case our own mic would fight the system recognizer. They drive
             // the app by control name ("Tap Start") instead.
-            if !didAutoStart {
+            // A newcomer hears why the mic is needed first — listening (and the
+            // permission alerts) start when the introduction ends. Safe mode
+            // (→ LaunchGuard) leaves the mic off; "Listen" still turns it on.
+            if !didAutoStart && !showOnboarding {
                 didAutoStart = true
-                if !usesVoiceControl && !voice.isListening { voice.toggle() }
+                if !LaunchGuard.isSafeMode { startListeningIfAppropriate() }
             }
         }
         // Turning Voice Control mode on/off flips whether we hold the mic.
@@ -260,7 +306,8 @@ struct ContentView: View {
     /// metronome whose mic is already listening, plus the key commands and the
     /// reassurance that every control also works with VoiceOver gestures.
     private func introduceVoiceOverIfNeeded() {
-        guard UIAccessibility.isVoiceOverRunning, !didIntroduceVoiceOver else { return }
+        // During the introduction the mic isn't on yet — wait for it to finish.
+        guard UIAccessibility.isVoiceOverRunning, !didIntroduceVoiceOver, !showOnboarding else { return }
         didIntroduceVoiceOver = true
         // In Voice Control mode our own mic is off, so orient the user toward the
         // "Tap …" command names rather than the app's spoken words.
@@ -282,6 +329,77 @@ struct ContentView: View {
             attributes: [.accessibilitySpeechAnnouncementPriority: UIAccessibilityPriority.high]
         )
         UIAccessibility.post(notification: .announcement, argument: announcement)
+    }
+
+    // MARK: Introduction · What's new
+
+    /// Once per launch: a newcomer gets the introduction, someone who updated
+    /// gets this version's What's-new card, everyone else goes straight in.
+    private func greetIfNeeded() {
+        #if DEBUG
+        // Screenshot and UI-test launches set up their own scene; only
+        // -uitest-onboarding asks for the introduction on purpose.
+        let args = ProcessInfo.processInfo.arguments
+        if args.contains("-uitest-onboarding") {
+            hasCompletedOnboarding = false
+            lastSeenWhatsNewVersion = WhatsNewContent.version
+        } else if args.contains("-shot") || args.contains(where: { $0.hasPrefix("-uitest") }) {
+            return
+        }
+        #endif
+        let audience = LaunchAudience.resolve(
+            launchCount: LeeoEngagement.shared.launchCount,
+            hasCompletedOnboarding: hasCompletedOnboarding,
+            lastSeenWhatsNewVersion: lastSeenWhatsNewVersion.isEmpty ? nil : lastSeenWhatsNewVersion)
+        switch audience {
+        case .newcomer:
+            // "What's new" means nothing to someone who just arrived.
+            lastSeenWhatsNewVersion = WhatsNewContent.version
+            AppTips.snoozed = true   // no tip popovers on top of the introduction
+            showOnboarding = true
+        case .returningNeedsWhatsNew:
+            hasCompletedOnboarding = true   // they were here before the introduction existed
+            lastSeenWhatsNewVersion = WhatsNewContent.version
+            AppTips.snoozed = true
+            showWhatsNew = true
+        case .returning:
+            hasCompletedOnboarding = true
+        }
+    }
+
+    private func finishOnboarding() {
+        hasCompletedOnboarding = true
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.3)) { showOnboarding = false }
+        AppTips.snoozed = false
+        // Listening (and with it the permission alerts) starts now that the
+        // last page has said why.
+        didAutoStart = true
+        startListeningIfAppropriate()
+        introduceVoiceOverIfNeeded()
+    }
+
+    private func closeWhatsNew() {
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.3)) { showWhatsNew = false }
+        AppTips.snoozed = false
+    }
+
+    /// Listen by default — UNLESS the user relies on iOS Voice Control, in
+    /// which case our own mic would fight the system recognizer.
+    private func startListeningIfAppropriate() {
+        if !usesVoiceControl && !voice.isListening { voice.toggle() }
+    }
+
+    /// Replay from the help sheet.
+    private func replayOnboarding() {
+        showCommands = false
+        AppTips.snoozed = true
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.3)) { showOnboarding = true }
+    }
+
+    private func reopenWhatsNew() {
+        showCommands = false
+        AppTips.snoozed = true
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.3)) { showWhatsNew = true }
     }
 
     // MARK: Layouts
@@ -440,8 +558,14 @@ struct ContentView: View {
         // Hint sits at the bottom edge as an overlay so it never nudges the content.
         .overlay(alignment: .bottom) {
             Text("\(metronome.beatsPerMeasure)/4  ·  tap dots to set beats")
-                .font(.caption2)
-                .foregroundStyle(.secondary)
+                .font(.caption)
+                // Small print needs 4.5:1 — system grey at this size falls just
+                // short (accessibility audit), so a darker ink of the label colour.
+                .foregroundStyle(Color(.label).opacity(0.7))
+                // Grows with the text size: wraps onto a second line instead of clipping.
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.horizontal, 16)
                 .opacity(!hintDismissed && !playing ? 1 : 0)
                 .accessibilityHidden(hintDismissed || playing)   // don't read the invisible hint
                 .padding(.bottom, 6)
@@ -696,9 +820,9 @@ struct ContentView: View {
     /// Wordless tally: one bubble per verdict colour with its tap count inside.
     private var timingStatsReadout: some View {
         HStack(spacing: 10) {
-            statBubble(timingStats.perfect, color: .green)
-            statBubble(timingStats.good, color: cue)
-            statBubble(timingStats.bad, color: beatRed)
+            statBubble(timingStats.perfect, color: .green, symbol: "checkmark")
+            statBubble(timingStats.good, color: cue, symbol: "circle")
+            statBubble(timingStats.bad, color: beatRed, symbol: "xmark")
         }
         .accessibilityHidden(true)   // spoken via the orbit view's accessibilityValue
     }
@@ -708,7 +832,7 @@ struct ContentView: View {
         fill == cue ? .onCue : .white
     }
 
-    private func statBubble(_ count: Int, color: Color) -> some View {
+    private func statBubble(_ count: Int, color: Color, symbol: String) -> some View {
         Text("\(count)")
             .font(.system(.headline, design: .rounded).weight(.bold))
             .monospacedDigit()
@@ -716,6 +840,17 @@ struct ContentView: View {
             .foregroundStyle(ink(on: color))
             .frame(width: 34, height: 34)
             .background(Circle().fill(color))
+            // Differentiate Without Color: perfect / good / bad also differ by mark.
+            .overlay(alignment: .topTrailing) {
+                if differentiateWithoutColor {
+                    Image(systemName: symbol)
+                        .font(.caption2.weight(.heavy))
+                        .foregroundStyle(color)
+                        .padding(3)
+                        .background(Circle().fill(Color(.systemBackground)))
+                        .offset(x: 6, y: -6)
+                }
+            }
     }
 
     /// Grade a tap by its distance to the nearest CLICK — the subdivision grid, so
@@ -830,7 +965,8 @@ struct ContentView: View {
         let lift: CGFloat = (reduceMotion || !metronome.isPlaying) ? 0 : (sounding ? -34 : 34)
         return Circle()
             .fill(active ? dotFill(i) : Color.clear)
-            .overlay(Circle().strokeBorder(active ? .clear : Color(.systemGray3), lineWidth: 1.5))
+            .overlay(Circle().strokeBorder(active ? .clear : inactiveOutline,
+                                           lineWidth: contrast == .increased ? 2 : 1.5))
             .frame(width: 30, height: 30)
             // As the beat advances the crest travels across the row → stadium wave (파도타기).
             .offset(y: lift)
@@ -857,6 +993,11 @@ struct ContentView: View {
             .accessibilityHint("Sets \(i + 1)/4 time")
     }
 
+    /// Outline of an unused beat — a hairline normally, a firm line with Increase Contrast.
+    private var inactiveOutline: Color {
+        contrast == .increased ? Color(.systemGray) : Color(.systemGray3)
+    }
+
     private func isActive(_ i: Int) -> Bool { metronome.isPlaying && i == currentBeat }
 
     /// Fill for an active beat: the currently sounding one is bright
@@ -864,7 +1005,7 @@ struct ContentView: View {
     /// downbeat "1" still reads as red even while stopped.
     private func dotFill(_ i: Int) -> Color {
         let hue = i == 0 ? beatRed : cue
-        return isActive(i) ? hue : hue.opacity(0.5)
+        return isActive(i) ? hue : hue.opacity(contrast == .increased ? 0.8 : 0.5)
     }
 
     // MARK: Tempo
@@ -876,6 +1017,7 @@ struct ContentView: View {
             Text(tempoAsNumber ? "\(metronome.bpm)" : MetronomeEngine.tempoName(for: metronome.bpm))
                 .font(.system(size: bpmFontSize, weight: .bold, design: .rounded))
                 .lineLimit(1)
+                .allowsTightening(true)   // "Prestissimo" tightens before it shrinks
                 .minimumScaleFactor(0.5)
                 .foregroundStyle(beatScale > 1.0 ? cue : Color.primary)
                 .scaleEffect(beatScale)
@@ -892,9 +1034,11 @@ struct ContentView: View {
                 .accessibilityAction(named: "Tap tempo") { tapTempo() }   // VoiceOver keeps tap-tempo
             Text(tempoSubtitle)
                 .font(.subheadline)
-                .lineLimit(1)
-                .minimumScaleFactor(0.7)
-                .foregroundStyle(metronome.speedTrainerOn ? cue : .secondary)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .fixedSize(horizontal: false, vertical: true)
+                // Readable grey: the system secondary colour misses 4.5:1 at this size.
+                .foregroundStyle(metronome.speedTrainerOn ? cue : Color(.label).opacity(0.7))
             HStack(spacing: 16) {
                 stepButton(systemName: "minus.circle.fill", delta: -1)
                 Slider(value: bpmBinding, in: 30...260, step: 1)
@@ -1032,16 +1176,28 @@ struct ContentView: View {
             }
             .alert("Save preset", isPresented: $showSavePreset) {
                 TextField("Name (e.g. Bossa intro)", text: $presetNameDraft)
-                Button("Save") {
-                    metronome.saveAccentPreset(named: presetNameDraft)
-                    presetNameDraft = ""
-                }
+                    .submitLabel(.done)
+                    .onSubmit { savePresetDraft() }
+                Button("Save") { savePresetDraft() }
                 Button("Cancel", role: .cancel) { presetNameDraft = "" }
             } message: {
                 Text("Saves this pattern with its meter and subdivision, so you can recall it per song.")
             }
         }
         .presentationDetents([.medium, .large])
+    }
+
+    /// Saves the pattern on screen under the typed name (Save button or Return).
+    private func savePresetDraft() {
+        let before = metronome.accentPresets.count
+        metronome.saveAccentPreset(named: presetNameDraft)
+        presetNameDraft = ""
+        showSavePreset = false
+        guard metronome.accentPresets.count > before else { return }   // blank name: nothing saved
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        AccessibilityNotification.Announcement(String(localized: "Preset saved")).post()
+        // Building a pattern for a song is real investment in the app.
+        LeeoEngagement.shared.registerSignificantEvent()
     }
 
     /// One cell of the accent grid. Each tap cycles high → low → silent. A tall bar
@@ -1086,9 +1242,17 @@ struct ContentView: View {
             Text("Presets")
                 .font(.subheadline.weight(.semibold))
             if metronome.accentPresets.isEmpty {
-                Text("Save a pattern per song — recalling it also restores its meter and subdivision.")
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
+                // Empty state with its own way out: the save button lives inside it.
+                ContentUnavailableView {
+                    Label("No presets yet", systemImage: "square.stack")
+                        .font(.headline)
+                } description: {
+                    Text("Save a pattern per song — recalling it also restores its meter and subdivision.")
+                        .font(.footnote)
+                } actions: {
+                    savePresetButton
+                }
+                .padding(.vertical, -12)   // sits inside a sheet; drop the full-screen padding
             }
             ForEach(metronome.accentPresets) { preset in
                 HStack(spacing: 10) {
@@ -1100,6 +1264,9 @@ struct ContentView: View {
                             Text(preset.name)
                                 .font(.subheadline.weight(.semibold))
                                 .foregroundStyle(.primary)
+                                // Long song names keep their start and end ("Bossa … outro").
+                                .lineLimit(2)
+                                .truncationMode(.middle)
                             Text("\(preset.beats)/4 · \(MetronomeEngine.subdivisionName(for: preset.sub))")
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
@@ -1127,16 +1294,20 @@ struct ContentView: View {
                 .background(RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .fill(Color(.tertiarySystemGroupedBackground)))
             }
-            Button {
-                showSavePreset = true
-            } label: {
-                Label("Save current pattern…", systemImage: "plus.circle.fill")
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(cue)
-            }
-            .accessibilityInputLabels(["Save pattern", "Save preset"])
+            if !metronome.accentPresets.isEmpty { savePresetButton }
         }
         .padding(.top, 4)
+    }
+
+    private var savePresetButton: some View {
+        Button {
+            showSavePreset = true
+        } label: {
+            Label("Save current pattern…", systemImage: "plus.circle.fill")
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(cue)
+        }
+        .accessibilityInputLabels(["Save pattern", "Save preset"])
     }
 
     // MARK: Voice status + help
@@ -1157,11 +1328,14 @@ struct ContentView: View {
                  ? (lastCommandText.isEmpty ? String(localized: "Listening…") : lastCommandText)
                  : micMessage)
                 .font(.subheadline.weight(voice.isListening && !lastCommandText.isEmpty ? .semibold : .regular))
+                // Mic off: this line is the instruction for turning it back on,
+                // so it reads at full contrast (the audit flagged grey-on-card).
                 .foregroundStyle(voice.isListening
                                  ? (lastCommandText.isEmpty ? Color.secondary : cue)
-                                 : .secondary)
-                .lineLimit(1)
-                .minimumScaleFactor(0.7)
+                                 : .primary)
+                // Wraps at large text sizes instead of shrinking out of reach.
+                .lineLimit(2)
+                .fixedSize(horizontal: false, vertical: true)
             Spacer(minLength: 0)
             Button { showHelp() } label: {
                 Image(systemName: "questionmark.circle.fill")
@@ -1212,8 +1386,13 @@ struct ContentView: View {
                                         : (voice.isListening ? String(localized: "Mute") : String(localized: "Listen")),
                                icon: flashing ? "checkmark.circle.fill"
                                      : (voice.isListening ? "speaker.wave.2.fill" : "mic"),
-                               color: voice.isListening ? cue : .secondary,
-                               filled: false)
+                               // Off state: muted, but dark enough to read (4.5:1) —
+                               // system grey on its own tinted fill fell short in the audit.
+                               color: voice.isListening ? cue : Color(.label).opacity(0.7),
+                               filled: false,
+                               // At accessibility text sizes three labelled buttons can't
+                               // share a row — this one goes icon-only so Start keeps its word.
+                               iconOnly: dynamicTypeSize.isAccessibilitySize)
                     .overlay {
                         // Border countdown: drains toward the auto-mute moment.
                         if voice.isListening {
@@ -1272,7 +1451,7 @@ struct ContentView: View {
             .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .fill((on ? cue : Color.secondary).opacity(0.15)))
             .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .stroke((on ? cue : Color.secondary).opacity(0.35), lineWidth: 1.5))
+                .stroke((on ? cue : Color.secondary).opacity(outlineOpacity), lineWidth: 1.5))
             .animation(.default, value: metronome.practiceTimerRemaining)
         }
         .buttonStyle(.plain)
@@ -1294,18 +1473,25 @@ struct ContentView: View {
         return String(localized: "\(left.formatted(.units(allowed: [.minutes, .seconds], width: .wide))) left")
     }
 
-    private func transportLabel(_ title: String, icon: String, color: Color, filled: Bool) -> some View {
+    /// Button outlines: soft by default, solid enough to see with Increase Contrast.
+    private var outlineOpacity: Double { contrast == .increased ? 0.85 : 0.35 }
+
+    private func transportLabel(_ title: String, icon: String, color: Color, filled: Bool,
+                                iconOnly: Bool = false) -> some View {
         Label(title, systemImage: icon)
+            .labelStyle(TransportLabelStyle(iconOnly: iconOnly))
             .font(.headline)
-            .lineLimit(1)
-            .minimumScaleFactor(0.7)   // a flashed command name may be a touch longer
+            // A flashed command name may be longer, and text may be large:
+            // wrap to a second line rather than shrink.
+            .lineLimit(2)
+            .multilineTextAlignment(.center)
             .foregroundStyle(filled ? ink(on: color) : color)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 15)
             .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .fill(filled ? color : color.opacity(0.15)))
             .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .stroke(color.opacity(filled ? 0 : 0.35), lineWidth: 1.5))
+                .stroke(color.opacity(filled ? 0 : outlineOpacity), lineWidth: 1.5))
     }
 
     // MARK: Help marks ("help" → highlight every on-screen control + its command)
@@ -1328,7 +1514,9 @@ struct ContentView: View {
     private func helpMarksOverlay(_ anchors: [String: Anchor<CGRect>], _ proxy: GeometryProxy) -> some View {
         let ids = ["beat", "tempo", "sub", "voice", "timer", "start"].filter { anchors[$0] != nil }
         return ZStack(alignment: .topLeading) {
-            Color.black.opacity(0.6).ignoresSafeArea()
+            // Reduce Transparency: a near-solid scrim, so the busy screen behind
+            // never shows through the callouts.
+            Color.black.opacity(reduceTransparency ? 0.92 : 0.6).ignoresSafeArea()
                 .contentShape(Rectangle())
                 .onTapGesture { dismissHelpMarks() }
                 .accessibilityLabel("Dismiss help")
@@ -1369,7 +1557,7 @@ struct ContentView: View {
                 }
                 .padding(.horizontal, 16).padding(.vertical, 10)
                 .background(RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(Color.black.opacity(0.45)))
+                    .fill(reduceTransparency ? Color.black : Color.black.opacity(0.45)))
                 .padding(.horizontal, 16)
                 .padding(.top, 52)   // clear the status bar / notch
                 Spacer()
@@ -1387,6 +1575,11 @@ struct ContentView: View {
         .background(RoundedRectangle(cornerRadius: 12, style: .continuous)
             .fill(Color(.systemBackground))
             .shadow(color: .black.opacity(0.3), radius: 8, y: 2))
+        .overlay {
+            if contrast == .increased {
+                RoundedRectangle(cornerRadius: 12, style: .continuous).stroke(cue, lineWidth: 1.5)
+            }
+        }
         .accessibilityElement(children: .combine)
     }
 
@@ -1409,7 +1602,8 @@ struct ContentView: View {
                     } header: {
                         Text("Accessibility")
                     }
-                    noteSignalSection
+                    // Can be switched off remotely (→ NotMyTempoFlag.instrumentSignal).
+                    if NoteSignalDetector.isAvailable { noteSignalSection }
                     Section {
                         if pro.isPro {
                             HStack(spacing: 12) {
@@ -1439,6 +1633,15 @@ struct ContentView: View {
                                 }
                             }
                             .accessibilityInputLabels(["Unlock Pro", "Pro", "Upgrade"])
+                            // Codes from promotions and giveaways — redeemed in place.
+                            Button {
+                                showOfferCode = true
+                            } label: {
+                                Label("Redeem offer code", systemImage: "ticket")
+                                    .font(.subheadline.weight(.semibold))
+                                    .foregroundStyle(cue)
+                            }
+                            .accessibilityInputLabels(["Redeem code", "Offer code", "Redeem offer code"])
                         }
                     } header: {
                         Text("Not My Tempo Pro")
@@ -1534,6 +1737,16 @@ struct ContentView: View {
                         LeeoSupportSection<HandsFreeMetronomeSpec>()
                         // 앞으로 만들 기능 — 원본은 HandsFreeMetronomeRoadmap.swift
                         NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
+                        Button { reopenWhatsNew() } label: {
+                            Label("What\u{2019}s new", systemImage: "sparkles")
+                        }
+                        .accessibilityInputLabels(["What's new"])
+                        Button { replayOnboarding() } label: {
+                            Label("Show the introduction again", systemImage: "play.rectangle")
+                        }
+                        .accessibilityInputLabels(["Introduction", "Show introduction"])
+                        // Other apps by the same developer.
+                        LeeoFamilySettingsRow<HandsFreeMetronomeSpec>()
                     } header: {
                         Text("Support")
                     }
@@ -1547,6 +1760,9 @@ struct ContentView: View {
             }
             .navigationTitle("Voice Commands")
             .navigationBarTitleDisplayMode(.inline)
+            .offerCodeRedemption(isPresented: $showOfferCode) { _ in
+                Task { await pro.refreshEntitlement() }
+            }
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { showCommands = false }
@@ -1682,25 +1898,12 @@ struct ContentView: View {
                         get: { metronome.practiceTimerMinutes },
                         set: { metronome.setPracticeTimer(minutes: $0) }),
                             in: MetronomeEngine.practiceTimerRange)
-                    HStack(spacing: 8) {
-                        ForEach([5, 10, 15, 30], id: \.self) { m in
-                            let selected = metronome.practiceTimerOn && metronome.practiceTimerMinutes == m
-                            Button {
-                                metronome.setPracticeTimer(minutes: m)
-                                haptic.impactOccurred(intensity: 0.5)
-                            } label: {
-                                Text("\(m) min")
-                                    .font(.body.weight(.semibold))
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.7)
-                                    .foregroundStyle(selected ? ink(on: cue) : cue)
-                                    .frame(maxWidth: .infinity)
-                                    .padding(.vertical, 10)
-                                    .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                        .fill(selected ? cue : cue.opacity(0.14)))
-                            }
-                            .buttonStyle(.plain)
-                            .accessibilityAddTraits(selected ? [.isButton, .isSelected] : .isButton)
+                    // One row of four; two rows of two when the text is too big for that.
+                    ViewThatFits(in: .horizontal) {
+                        HStack(spacing: 8) { quickTimerButtons([5, 10, 15, 30]) }
+                        VStack(spacing: 8) {
+                            HStack(spacing: 8) { quickTimerButtons([5, 10]) }
+                            HStack(spacing: 8) { quickTimerButtons([15, 30]) }
                         }
                     }
                 } footer: {
@@ -1731,6 +1934,28 @@ struct ContentView: View {
             }
         }
         .presentationDetents([.medium, .large])
+    }
+
+    /// Quick-pick minute buttons for the practice timer.
+    private func quickTimerButtons(_ minutes: [Int]) -> some View {
+        ForEach(minutes, id: \.self) { m in
+            let selected = metronome.practiceTimerOn && metronome.practiceTimerMinutes == m
+            Button {
+                metronome.setPracticeTimer(minutes: m)
+                haptic.impactOccurred(intensity: 0.5)
+            } label: {
+                Text("\(m) min")
+                    .font(.body.weight(.semibold))
+                    .lineLimit(1)
+                    .foregroundStyle(selected ? ink(on: cue) : cue)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 10)
+                    .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(selected ? cue : cue.opacity(0.14)))
+            }
+            .buttonStyle(.plain)
+            .accessibilityAddTraits(selected ? [.isButton, .isSelected] : .isButton)
+        }
     }
 
     // MARK: Tuner page — slides in from the right, covering the whole screen
@@ -1776,7 +2001,7 @@ struct ContentView: View {
                         .foregroundStyle(inTune ? Color.green : cue)
                         .accessibilityHidden(true)   // pitch already announced on the note
                 }
-                Text(tuner.frequency > 0 ? String(format: "%.1f Hz", tuner.frequency) : String(localized: "Play a note…"))
+                Text(tuner.frequency > 0 ? frequencyText(tuner.frequency) : String(localized: "Play a note…"))
                     .font(.headline)
                     .foregroundStyle(.secondary)
                     .monospacedDigit()
@@ -1832,6 +2057,11 @@ struct ContentView: View {
     /// Slide the tuner page back out to the right (the inverse of its entry).
     private func closeTuner() {
         withAnimation(tunerPageAnimation) { showTuner = false }
+    }
+
+    /// "440.0 Hz" / "440,0 Hz" — the decimal mark follows the user's region.
+    private func frequencyText(_ hz: Double) -> String {
+        "\(hz.formatted(.number.precision(.fractionLength(1)).grouping(.never))) Hz"
     }
 
     private var inTune: Bool { tuner.frequency > 0 && abs(tuner.cents) <= tuneTolerance }
@@ -2029,7 +2259,7 @@ struct ContentView: View {
     /// check lives in exactly one place. Locked → swap whatever was opening for
     /// the paywall, led by the feature that was just reached for.
     private func requirePro(_ feature: ProFeature) -> Bool {
-        if pro.isPro { return true }
+        if pro.allows(feature) { return true }
         closePanels()
         withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = feature }
         return false
@@ -2056,8 +2286,9 @@ struct ContentView: View {
         showTrainer = false
         showTimer = false
         showAccents = false
-        // "close" backs out of the paywall too
+        // "close" backs out of the paywall and the What's-new card too
         withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = nil }
+        if showWhatsNew { closeWhatsNew() }
         if showHelpMarks { dismissHelpMarks() }
     }
 
@@ -2231,6 +2462,24 @@ enum BeatVizMode: String {
 }
 
 /// Running tally of play-along taps for one run of the metronome (orbit view).
+/// Title + icon, or just the icon when the row is out of room.
+private struct TransportLabelStyle: LabelStyle {
+    let iconOnly: Bool
+    func makeBody(configuration: Configuration) -> some View {
+        if iconOnly {
+            configuration.icon
+        } else {
+            Label(configuration)
+        }
+    }
+}
+
+/// A play run at least this long counts as practice for the review prompt
+/// (`LeeoEngagement`) — a few seconds of trying the click out does not.
+enum PracticeMoment {
+    static let minimumRun: TimeInterval = 60
+}
+
 struct TimingStats: Equatable {
     var perfect = 0
     var good = 0
@@ -2465,7 +2714,12 @@ struct DeveloperContactSection: View {
         } header: {
             Text("Contact the Developer")
         } footer: {
-            Text("Bug reports and feature requests are welcome.")
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Bug reports and feature requests are welcome.")
+                // Selectable, for people whose mail app isn't Apple Mail.
+                Text(verbatim: HandsFreeMetronomeSpec.developerEmail)
+                    .textSelection(.enabled)
+            }
         }
     }
 }

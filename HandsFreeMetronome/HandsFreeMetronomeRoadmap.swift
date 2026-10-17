@@ -18,16 +18,16 @@ import LeeoKit
 extension HandsFreeMetronomeSpec {
     static var roadmap: [LeeoRoadmapItem] {[
         // MARK: 다음에 만들어요
-        .init(id: "a11y.largetext", status: .planned,
+        .init(id: "a11y.largetext", status: .shipped("1.0.10"),
               title: String(localized: "Even larger text", comment: "Roadmap item: a11y.largetext"),
               detail: String(localized: "The screen stays readable and tidy at the very largest text sizes.", comment: "Roadmap item detail: a11y.largetext")),
-        .init(id: "a11y.contrast", status: .planned,
+        .init(id: "a11y.contrast", status: .shipped("1.0.10"),
               title: String(localized: "Easier-to-see colors", comment: "Roadmap item: a11y.contrast"),
               detail: String(localized: "Beat and timing colors stay clear with Increase Contrast, or if colors are hard to tell apart.", comment: "Roadmap item detail: a11y.contrast")),
         .init(id: "a11y.keyboard", status: .planned,
               title: String(localized: "Keyboard control", comment: "Roadmap item: a11y.keyboard"),
               detail: String(localized: "On iPad with a keyboard, start, stop, and change the tempo with keys.", comment: "Roadmap item detail: a11y.keyboard")),
-        .init(id: "whatsnew", status: .planned,
+        .init(id: "whatsnew", status: .shipped("1.0.10"),
               title: String(localized: "What’s new", comment: "Roadmap item: whatsnew"),
               detail: String(localized: "After an update, see what’s new the first time you open the app.", comment: "Roadmap item detail: whatsnew")),
         .init(id: "feedback.reply", status: .planned,

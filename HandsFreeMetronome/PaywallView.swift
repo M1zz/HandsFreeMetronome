@@ -14,6 +14,8 @@ struct PaywallView: View {
     let onClose: () -> Void
 
     private let cue = Color.cue   // see Palette.swift
+    @State private var showOfferCode = false
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     /// The tapped feature first, then the other Pro features.
     private var orderedFeatures: [ProFeature] {
@@ -55,6 +57,11 @@ struct PaywallView: View {
         // dropping the user straight into the feature they reached for.
         .onChange(of: store.isPro) { unlocked in
             if unlocked { onClose() }
+        }
+        // Promo / giveaway codes. A redeemed code lands as a transaction, which
+        // the refresh turns into Pro — and the onChange above closes the paywall.
+        .offerCodeRedemption(isPresented: $showOfferCode) { _ in
+            Task { await store.refreshEntitlement() }
         }
     }
 
@@ -233,23 +240,36 @@ struct PaywallView: View {
         .accessibilityElement(children: .combine)
     }
 
+    /// Purchase actions on one line, policy links on the next. Each line stacks
+    /// vertically at accessibility text sizes, where side by side would clip.
     private var footerLinks: some View {
-        HStack(spacing: 16) {
-            if store.isRestoring {
-                ProgressView()
-                    .controlSize(.small)
-            } else {
-                Button("Restore Purchases") { Task { await store.restore() } }
+        let layout = dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(spacing: 12)) : AnyLayout(HStackLayout(spacing: 16))
+        return VStack(spacing: 12) {
+            layout {
+                if store.isRestoring {
+                    ProgressView()
+                        .controlSize(.small)
+                } else {
+                    Button("Restore Purchases") { Task { await store.restore() } }
+                        .disabled(store.isPurchasing)
+                        .accessibilityHint("Restores a previous Pro purchase")
+                        .accessibilityInputLabels(["Restore", "Restore purchases"])
+                }
+                // Promo and giveaway codes for Pro.
+                Button("Redeem Code") { showOfferCode = true }
                     .disabled(store.isPurchasing)
-                    .accessibilityHint("Restores a previous Pro purchase")
-                    .accessibilityInputLabels(["Restore", "Restore purchases"])
+                    .accessibilityInputLabels(["Redeem code", "Offer code"])
             }
-            // Each language links its own policy page (docs/<lang>/privacy.html).
-            Link("Privacy Policy", destination: localizedPrivacyURL)
-            Link("Terms of Use (EULA)", destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!)
+            layout {
+                // Each language links its own policy page (docs/<lang>/privacy.html).
+                Link("Privacy Policy", destination: localizedPrivacyURL)
+                Link("Terms of Use (EULA)", destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!)
+            }
         }
         .font(.caption)
         .foregroundStyle(.secondary)
+        .multilineTextAlignment(.center)
         .padding(.bottom, 6)
     }
 }
