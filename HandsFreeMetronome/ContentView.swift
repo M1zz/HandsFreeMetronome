@@ -1532,6 +1532,8 @@ struct ContentView: View {
                     .id(helpSections[5])
                     Section {
                         LeeoSupportSection<HandsFreeMetronomeSpec>()
+                        // 앞으로 만들 기능 — 원본은 HandsFreeMetronomeRoadmap.swift
+                        NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
                     } header: {
                         Text("Support")
                     }

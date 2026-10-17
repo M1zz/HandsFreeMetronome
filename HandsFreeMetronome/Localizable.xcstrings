@@ -12209,6 +12209,1072 @@
           }
         }
       }
+    },
+    "Even larger text" : {
+      "comment" : "Roadmap item: a11y.largetext",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "さらに大きな文字に対応"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch größere Schrift"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Texto aún más grande"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持更大字体"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Letras ainda maiores"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Texte encore plus grand"
+          }
+        }
+      }
+    },
+    "The screen stays readable and tidy at the very largest text sizes." : {
+      "comment" : "Roadmap item detail: a11y.largetext",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大の文字サイズでも、画面が崩れず読みやすく表示されます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auch bei den allergrößten Schriftgrößen bleibt alles lesbar und aufgeräumt."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La pantalla se mantiene clara y ordenada incluso con los tamaños de letra más grandes."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即使用最大的字号，界面也清晰整齐。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A tela continua legível e organizada até nos maiores tamanhos de texto."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’écran reste lisible et bien rangé, même avec les plus grandes tailles de texte."
+          }
+        }
+      }
+    },
+    "Easier-to-see colors" : {
+      "comment" : "Roadmap item: a11y.contrast",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "見やすい色とコントラスト"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besser lesbare Farben"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colores más fáciles de ver"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更易辨识的颜色与对比度"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cores mais fáceis de ver"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couleurs plus lisibles"
+          }
+        }
+      }
+    },
+    "Beat and timing colors stay clear with Increase Contrast, or if colors are hard to tell apart." : {
+      "comment" : "Roadmap item detail: a11y.contrast",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コントラストを上げても、色の区別が難しくても、拍やタイミングの色がはっきりわかります。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Farben für Schläge und Timing bleiben bei erhöhtem Kontrast oder Farbschwäche gut erkennbar."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los colores del pulso y del timing se distinguen bien con más contraste o si te cuesta diferenciar colores."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即使开启增强对比度或难以分辨颜色，也能看清节拍和节奏判定的颜色。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As cores das batidas e do timing ficam claras com mais contraste ou se você tiver dificuldade com cores."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les couleurs des temps et du timing restent nettes avec le contraste accru ou si tu distingues mal les couleurs."
+          }
+        }
+      }
+    },
+    "Keyboard control" : {
+      "comment" : "Roadmap item: a11y.keyboard",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キーボードで操作"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steuerung per Tastatur"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Control con teclado"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "键盘操作"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controle pelo teclado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contrôle au clavier"
+          }
+        }
+      }
+    },
+    "On iPad with a keyboard, start, stop, and change the tempo with keys." : {
+      "comment" : "Roadmap item detail: a11y.keyboard",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPadにキーボードをつなげば、開始・停止やテンポの変更をキーで操作できます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Am iPad mit Tastatur startest, stoppst und änderst du das Tempo per Taste."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En el iPad con teclado, inicia, detén y cambia el tempo con las teclas."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad 连接键盘后，用按键就能开始、停止和调整速度。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No iPad com teclado, inicie, pare e mude o andamento usando as teclas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sur iPad avec un clavier, lance, arrête et change le tempo avec les touches."
+          }
+        }
+      }
+    },
+    "What’s new" : {
+      "comment" : "Roadmap item: whatsnew",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アップデート情報"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neuigkeiten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Novedades"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新内容"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Novidades"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nouveautés"
+          }
+        }
+      }
+    },
+    "After an update, see what’s new the first time you open the app." : {
+      "comment" : "Roadmap item detail: whatsnew",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アップデート後に初めて開いたとき、新しくなった点をお知らせします。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach einem Update siehst du beim ersten Öffnen, was neu ist."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tras una actualización, verás qué hay de nuevo al abrir la app."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新后首次打开时，告诉你有哪些新变化。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Depois de uma atualização, veja o que mudou ao abrir o app."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Après une mise à jour, découvre les nouveautés à la première ouverture."
+          }
+        }
+      }
+    },
+    "Replies to your feedback" : {
+      "comment" : "Roadmap item: feedback.reply",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ご意見への返信"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antworten auf dein Feedback"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Respuestas a tus comentarios"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看反馈回复"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Respostas ao seu feedback"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réponses à tes retours"
+          }
+        }
+      }
+    },
+    "Read our replies to your feedback right in the app." : {
+      "comment" : "Roadmap item detail: feedback.reply",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お送りいただいたご意見への返信を、アプリ内で読めます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lies unsere Antworten auf dein Feedback direkt in der App."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lee nuestras respuestas a tus comentarios directamente en la app."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 App 内直接查看我们对你反馈的回复。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leia nossas respostas ao seu feedback direto no app."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lis nos réponses à tes retours directement dans l’app."
+          }
+        }
+      }
+    },
+    "Gift Pro" : {
+      "comment" : "Roadmap item: gift",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proをプレゼント"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro verschenken"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regalar Pro"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "赠送 Pro"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Presentear com o Pro"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offrir Pro"
+          }
+        }
+      }
+    },
+    "Give Not My Tempo Pro to a bandmate or a student." : {
+      "comment" : "Roadmap item detail: gift",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Proをバンド仲間や生徒に贈れます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verschenke Not My Tempo Pro an Bandkollegen oder Schüler."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regala Not My Tempo Pro a alguien de tu banda o a un alumno."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "把 Not My Tempo Pro 送给乐队伙伴或学生。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dê o Not My Tempo Pro de presente a alguém da sua banda ou a um aluno."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offre Not My Tempo Pro à un membre de ton groupe ou à un élève."
+          }
+        }
+      }
+    },
+    "Home Screen widget" : {
+      "comment" : "Roadmap item: widgets",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ホーム画面ウィジェット"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget für den Home-Bildschirm"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget de pantalla de inicio"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主屏幕小组件"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget na Tela de Início"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget pour l’écran d’accueil"
+          }
+        }
+      }
+    },
+    "Start the click right from your Home Screen without opening the app." : {
+      "comment" : "Roadmap item detail: widgets",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリを開かずに、ホーム画面からすぐクリックを鳴らせます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starte den Klick direkt vom Home-Bildschirm, ohne die App zu öffnen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicia el clic desde la pantalla de inicio sin abrir la app."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不用打开 App，在主屏幕上就能直接开始节拍。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comece o clique direto da Tela de Início, sem abrir o app."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lance le clic depuis l’écran d’accueil sans ouvrir l’app."
+          }
+        }
+      }
+    },
+    "Siri and Shortcuts" : {
+      "comment" : "Roadmap item: shortcuts",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siriとショートカット"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri und Kurzbefehle"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri y Atajos"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri 与快捷指令"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri e Atalhos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri et Raccourcis"
+          }
+        }
+      }
+    },
+    "Ask Siri or run a shortcut to start the click at your tempo." : {
+      "comment" : "Roadmap item detail: shortcuts",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siriに頼んだりショートカットを使ったりして、好きなテンポですぐ鳴らせます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte Siri oder nutze einen Kurzbefehl, um den Klick in deinem Tempo zu starten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pídeselo a Siri o usa un atajo para iniciar el clic a tu tempo."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让 Siri 帮忙或用快捷指令，按你的速度直接开始节拍。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peça à Siri ou use um atalho para começar o clique no seu andamento."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demande à Siri ou utilise un raccourci pour lancer le clic à ton tempo."
+          }
+        }
+      }
+    },
+    "Sync across devices" : {
+      "comment" : "Roadmap item: sync.icloud",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デバイス間で同期"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geräteübergreifend synchron"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronización entre dispositivos"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多设备同步"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronização entre dispositivos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchronisation entre appareils"
+          }
+        }
+      }
+    },
+    "Your presets and settings follow you between iPhone and iPad." : {
+      "comment" : "Roadmap item detail: sync.icloud",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プリセットや設定を、iPhoneとiPadで共有できます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Presets und Einstellungen sind auf iPhone und iPad gleich."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tus preajustes y tu configuración te acompañan en el iPhone y el iPad."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的预设和设置会在 iPhone 和 iPad 之间同步。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seus presets e ajustes acompanham você no iPhone e no iPad."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tes préréglages et réglages te suivent sur iPhone et iPad."
+          }
+        }
+      }
+    },
+    "Back up your presets" : {
+      "comment" : "Roadmap item: backup",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プリセットのバックアップ"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Presets sichern"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copia de seguridad de preajustes"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "备份预设"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Backup dos presets"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauvegarde des préréglages"
+          }
+        }
+      }
+    },
+    "Save your accent presets to a file and bring them back anytime." : {
+      "comment" : "Roadmap item detail: backup",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アクセントのプリセットをファイルに保存して、いつでも戻せます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichere deine Akzent-Presets in einer Datei und hol sie jederzeit zurück."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guarda tus preajustes de acentos en un archivo y recupéralos cuando quieras."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "把重音预设存成文件，随时都能恢复。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salve seus presets de acentuação em um arquivo e recupere quando quiser."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistre tes préréglages d’accents dans un fichier et récupère-les quand tu veux."
+          }
+        }
+      }
+    },
+    "Practice reminders" : {
+      "comment" : "Roadmap item: notifications",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "練習リマインダー"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übungserinnerungen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recordatorios de práctica"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "练习提醒"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lembretes de estudo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rappels d’entraînement"
+          }
+        }
+      }
+    },
+    "Get a gentle reminder at the time you choose to practice." : {
+      "comment" : "Roadmap item detail: notifications",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "決めた時間に、練習のお知らせが届きます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zur gewählten Zeit erinnert dich die App sanft ans Üben."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recibe un aviso a la hora que elijas para practicar."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在你设定的时间提醒你练习。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Receba um lembrete no horário que você escolher para estudar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reçois un petit rappel à l’heure choisie pour t’exercer."
+          }
+        }
+      }
+    },
+    "Foldable iPhone layout" : {
+      "comment" : "Roadmap item: fold",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "折りたたみiPhoneに対応"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für das faltbare iPhone"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para el iPhone plegable"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "适配折叠屏 iPhone"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para o iPhone dobrável"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour l’iPhone pliable"
+          }
+        }
+      }
+    },
+    "On a foldable iPhone, see the beat and the controls side by side." : {
+      "comment" : "Roadmap item detail: fold",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "折りたたみiPhoneでは、拍の表示と操作ボタンを左右に並べて使えます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf einem faltbaren iPhone siehst du Takt und Bedienelemente nebeneinander."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En un iPhone plegable, verás el pulso y los controles uno al lado del otro."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在折叠屏 iPhone 上，节拍显示和控制按钮并排呈现。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No iPhone dobrável, veja as batidas e os controles lado a lado."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sur un iPhone pliable, vois les temps et les commandes côte à côte."
+          }
+        }
+      }
+    },
+    "Erase all my data" : {
+      "comment" : "Roadmap item: data.delete",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "データをまとめて削除"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle meine Daten löschen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar todos mis datos"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一键清除我的数据"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apagar todos os meus dados"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effacer toutes mes données"
+          }
+        }
+      }
+    },
+    "Clear all your presets and settings in the app whenever you want." : {
+      "comment" : "Roadmap item detail: data.delete",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "必要なときに、プリセットや設定をアプリ内ですべて消せます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lösche bei Bedarf alle Presets und Einstellungen direkt in der App."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borra todos tus preajustes y ajustes desde la app cuando quieras."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要时可在 App 内清除全部预设和设置。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apague todos os seus presets e ajustes no app quando quiser."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Efface tous tes préréglages et réglages dans l’app quand tu veux."
+          }
+        }
+      }
     }
   },
   "version" : "1.1"

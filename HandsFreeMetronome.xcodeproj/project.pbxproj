@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245516F9CF19CB726BC69B61 /* HandsFreeMetronomeRoadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119F36266B8695EE44FDBD9E /* HandsFreeMetronomeRoadmap.swift */; };
 		4B3561E38821E3618B5B3D74 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5C792597780977588B1FF8A5 /* LeeoKit */; };
 		A1000011 /* HandsFreeMetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001 /* HandsFreeMetronomeApp.swift */; };
 		A1000012 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002 /* ContentView.swift */; };
@@ -16,15 +17,16 @@
 		A1000016 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000006 /* Preview Assets.xcassets */; };
 		A1000103 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000102 /* InfoPlist.strings */; };
 		A1000104 /* TunerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000105 /* TunerEngine.swift */; };
-		A1000F01 /* NoteSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000F02 /* NoteSignal.swift */; };
-		A1000F03 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000F04 /* Palette.swift */; };
 		A1000200 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A1000201 /* Localizable.xcstrings */; };
 		A1000310 /* ProStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000300 /* ProStore.swift */; };
 		A1000311 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000301 /* PaywallView.swift */; };
+		A1000F01 /* NoteSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000F02 /* NoteSignal.swift */; };
+		A1000F03 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000F04 /* Palette.swift */; };
 		CC22D8B983C92CE776DDB015 /* HandsFreeMetronomeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		119F36266B8695EE44FDBD9E /* HandsFreeMetronomeRoadmap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeRoadmap.swift; sourceTree = "<group>"; };
 		256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeSpec.swift; sourceTree = "<group>"; };
 		A1000001 /* HandsFreeMetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeApp.swift; sourceTree = "<group>"; };
 		A1000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,19 +37,19 @@
 		A1000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1000010 /* HandsFreeMetronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsFreeMetronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1000100 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1000105 /* TunerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerEngine.swift; sourceTree = "<group>"; };
 		A1000110 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1000111 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1000112 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1000113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A1000114 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh-Hans; path = zh-Hans.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A1000115 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt-BR; path = pt-BR.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A1000105 /* TunerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerEngine.swift; sourceTree = "<group>"; };
-		A1000F02 /* NoteSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSignal.swift; sourceTree = "<group>"; };
-		A1000F04 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		A1000114 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A1000115 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A1000201 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		A1000300 /* ProStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProStore.swift; sourceTree = "<group>"; };
 		A1000301 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		A1000302 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
+		A1000F02 /* NoteSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSignal.swift; sourceTree = "<group>"; };
+		A1000F04 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				A1000102 /* InfoPlist.strings */,
 				A1000201 /* Localizable.xcstrings */,
 				256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */,
+				119F36266B8695EE44FDBD9E /* HandsFreeMetronomeRoadmap.swift */,
 			);
 			path = HandsFreeMetronome;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				A1000310 /* ProStore.swift in Sources */,
 				A1000311 /* PaywallView.swift in Sources */,
 				CC22D8B983C92CE776DDB015 /* HandsFreeMetronomeSpec.swift in Sources */,
+				245516F9CF19CB726BC69B61 /* HandsFreeMetronomeRoadmap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +359,7 @@
 			repositoryURL = "https://github.com/M1zz/LeeoKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.16.2;
+				minimumVersion = 3.20.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
