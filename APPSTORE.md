@@ -16,7 +16,7 @@ DeployBar 가 이 파일을 읽어 App Store Connect 의 스토어 페이지를 
 
 ### 키워드
 
-템포,박자기,음성인식,음성명령,BPM,연습,드럼,기타,피아노,튜너,악센트,리듬,밴드,베이스,바이올린,첼로,합주,속도연습,클릭,접근성,악기,레슨,우쿨렐레,카운트
+음성메트로놈,악센트,악기,합주,박자연습,연습기록,우쿨렐레,기타연습,박자기,BPM,바이올린,첼로,연습,레슨,드럼,드럼메트로놈,박자맞추기,접근성,속도연습,카운트,음성인식
 
 ### 프로모션 텍스트
 
@@ -84,7 +84,7 @@ Change the beat, hands-free
 
 ### 키워드
 
-bpm,click,drum,guitar,piano,practice,rhythm,tuner,accent,trainer,speed,band,bass,violin,timing,cello
+saxophone,violin,trumpet,flute,choir,cello,accent,bpm,timing,practice,drum,ukulele,guitar,piano,band
 
 ### 프로모션 텍스트
 
