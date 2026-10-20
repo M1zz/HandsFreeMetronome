@@ -71,6 +71,7 @@ struct ContentView: View {
     @State private var showWhatsNew = false
     @State private var showOfferCode = false        // App Store offer-code redemption sheet
     @State private var playStartedAt: Date?         // a run long enough to count as practice
+    @State private var showReviewGate = false       // "Enjoying Not My Tempo?" right after practice
 
     // Landscape on iPhone reports a compact height → switch to a two-column layout.
     @Environment(\.verticalSizeClass) private var vSizeClass
@@ -192,8 +193,10 @@ struct ContentView: View {
                                  argument: String(localized: "Practice time is up"))
             // A finished timed session is the clearest "this app did its job" moment.
             LeeoEngagement.shared.registerSignificantEvent()
+            askForReviewAfterPractice()
         }
         .sheet(isPresented: $showAccents) { accentsSheet }
+        .leeoReviewGate(HandsFreeMetronomeSpec.self, isPresented: $showReviewGate)
         .onChange(of: metronome.isPlaying) { playing in
             if playing {
                 withAnimation(.easeInOut(duration: 0.4)) { hintDismissed = true }
@@ -206,6 +209,7 @@ struct ContentView: View {
                 if let started = playStartedAt,
                    Date().timeIntervalSince(started) >= PracticeMoment.minimumRun {
                     LeeoEngagement.shared.registerSignificantEvent()
+                    askForReviewAfterPractice()
                 }
                 playStartedAt = nil
             }
@@ -332,6 +336,24 @@ struct ContentView: View {
     }
 
     // MARK: Introduction · What's new
+
+    /// Asks "Enjoying it?" just after a real practice run ends — not on the next
+    /// launch, when the player has only just picked their instrument back up.
+    /// Waits a beat so the chime and haptic land first, and stays out of the way
+    /// if the click started again or anything else is on screen.
+    private func askForReviewAfterPractice() {
+        guard LeeoReviewRequest.shouldRequest() else { return }
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(1.5))
+            let busy = metronome.isPlaying || paywallFeature != nil || showOnboarding || showWhatsNew
+                || showCommands || showTuner || showTrainer || showTimer || showAccents || showSavePreset
+                || showOfferCode || showReviewGate
+            // Both a timer run-out and the stop it causes land here; the first one asks.
+            guard !busy, LeeoReviewRequest.shouldRequest() else { return }
+            LeeoReviewRequest.markRequested()
+            showReviewGate = true
+        }
+    }
 
     /// Once per launch: a newcomer gets the introduction, someone who updated
     /// gets this version's What's-new card, everyone else goes straight in.

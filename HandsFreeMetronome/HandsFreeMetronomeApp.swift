@@ -25,8 +25,9 @@ struct HandsFreeMetronomeApp: App {
 
     var body: some Scene {
         WindowGroup {
+            // The satisfaction prompt is asked right after practice (ContentView),
+            // not on launch.
             ContentView()
-                .leeoSatisfactionCheck(HandsFreeMetronomeSpec.self)
         }
     }
 }
