@@ -1,7 +1,7 @@
 # 낫마템포 App Store 문구
 
 DeployBar 가 이 파일을 읽어 App Store Connect 의 스토어 페이지를 채운다.
-앱 화면은 en · ja · de · es · fr · zh-Hans · pt-BR 로 번역돼 있고(Localizable.xcstrings), 한국어 페이지는 영어 화면을 보여 준다.
+앱 화면은 en · ko · ja · de · es · fr · zh-Hans · zh-Hant · pt-BR 로 번역돼 있다(Localizable.xcstrings).
 음성 명령은 모든 언어에서 영어 단어다(VoiceController 의 en-US 인식기) — 어느 언어 문구든 그 사실을 숨기지 않는다.
 
 ## ko
@@ -573,6 +573,77 @@ https://m1zz.github.io/HandsFreeMetronome/zh-Hans/privacy.html
 ### 마케팅 URL
 
 https://m1zz.github.io/HandsFreeMetronome/zh-Hans/
+
+## zh-Hant
+
+### 이름
+
+Not My Tempo: 語音節拍器
+
+### 부제
+
+開口變速，雙手不離樂器
+
+### 키워드
+
+練琴,調音器,BPM,打拍子,速度,吉他,鋼琴,爵士鼓,貝斯,小提琴,大提琴,烏克麗麗,重音,節奏,聲控,免持,拍號,樂團,校音,薩克斯風,電子琴,長笛,豎笛,口琴,拍速,古箏,二胡,小號
+
+### 프로모션 텍스트
+
+雙手不必離開樂器。說一聲「start」「faster」或「tempo 120」，節拍立刻跟上。完整的節拍器功能與語音控制全部免費。
+
+### 설명
+
+用嘴巴控制的節拍器，雙手始終留在樂器上。
+說「start」開始，說「faster」加快。不用點螢幕，也不必停下正在彈的樂句。
+
+演奏到一半想改速度，手一離開樂器，節奏就斷了。Not My Tempo 使用自己的麥克風聆聽，並在裝置上完成語音辨識，開啟就能用，不需要開啟 iOS 語音控制或任何輔助使用設定。語音指令需用英文單字說出。
+
+開口就能控制
+「start」和「stop」開始、停止
+「faster」和「slower」每次調整 5 BPM，「up」和「down」每次調整 1 BPM
+說「tempo 120」或直接說數字，立刻切換到該速度
+「double」和「half」速度加倍或減半
+「quarter」「eighth」「triplet」「sixteenth」切換細分
+「louder」「quieter」「mute」調整音量
+忘了指令？說「help」，所有能說的指令都會顯示在螢幕上
+
+完整的節拍器功能全部免費
+1 到 8 拍任選，每小節第一拍的重音更明顯
+四分、八分、三連音、十六分音符細分
+彈跳、軌道、環形三種檢視，一眼看清節拍
+點拍定速：跟著節奏點選大大的數字就能設定 BPM
+準度檢測：邊彈邊點選軌道圓環，看看自己踩得有多準
+播放時螢幕保持恆亮，並記住上次的速度與拍號
+
+還能用樂器開始和停止
+先錄下 2 到 5 個音的短樂句，之後彈出這段樂句就能開始或停止節拍。每個音按住約半秒，平常演奏的快速音符就不會誤觸發。
+
+NOT MY TEMPO PRO
+練習模式：速度訓練器，每隔幾小節自動增加幾 BPM，直到目標速度
+重音編輯器：小節裡的每一下都可設為高音、低音或靜音，並依曲目儲存預設
+半音階調音器：開始練習前隨手調好音，基準音 A4 可在 430 到 450 Hz 之間調整
+Pro 提供含免費試用的年度訂閱，也可一次買斷、永久使用。
+
+輔助使用
+如果你仰賴 iOS 語音控制，可以關閉本 App 的麥克風，改為說出按鈕名稱來操作。所有控制項都有 VoiceOver 標籤。
+
+訂閱說明
+年度訂閱會自動續訂，除非在目前訂閱期間結束前至少 24 小時取消。可在「設定 > Apple 帳號 > 訂閱項目」中管理或取消。永久版為一次性付費。
+使用條款 (EULA)：https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+隱私權政策：https://m1zz.github.io/HandsFreeMetronome/zh-Hant/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/zh-Hant/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/zh-Hant/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/zh-Hant/
 
 ## pt-BR
 

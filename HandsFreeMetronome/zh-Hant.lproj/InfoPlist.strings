@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "為了讓你不用觸碰螢幕就能操作，本 App 使用麥克風聆聽語音指令（例如「start」「faster」），並偵測附近演奏的音樂速度。";
+"NSSpeechRecognitionUsageDescription" = "使用語音辨識來理解免手持的語音指令。辨識會直接在裝置上進行。";

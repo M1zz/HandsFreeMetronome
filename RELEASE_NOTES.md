@@ -65,6 +65,13 @@ Resgate códigos de oferta no app
 Tempos mais visíveis com mais contraste
 Tudo cabe mesmo com o maior texto
 
+### 앱스토어 (zh-Hant)
+
+首次開啟時會有簡短介紹
+可在 App 內直接兌換優惠代碼
+開啟提高對比後，節拍更清楚
+最大字級下，畫面也不會被截斷
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)

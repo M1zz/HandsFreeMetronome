@@ -15,7 +15,7 @@ RAW = ROOT / "docs" / "screenshots" / "raw"
 # 스토어 로케일 → 앱 화면 언어. 한국어 페이지는 앱 번역이 없어 영어 화면을 쓰고,
 # 스페인어 한 벌이 es-ES · es-MX 두 페이지를 맡는다.
 SCREEN = {"en-US": "en", "ko": "en", "ja": "ja", "de-DE": "de", "es-ES": "es", "es-MX": "es",
-          "fr-FR": "fr", "zh-Hans": "zh-Hans", "pt-BR": "pt-BR"}
+          "fr-FR": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR"}
 OUT = ROOT / "docs" / "screenshots" / "marketing"
 WORK = pathlib.Path("/tmp") / "nmt-marketing"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -78,6 +78,13 @@ SHOTS = {
         ("03-count.png", "right", "第几拍<br>一眼看清", "隔着谱架也看得清的大数字"),
         ("04-voice.png", "hero", "忘了指令？<br>说“help”", "能说的指令直接显示在屏幕上"),
         ("05-accents.png", "bottom", "每一击的轻重<br>由你决定", "Pro 的重音网格和按曲目预设"),
+    ],
+    "zh-Hant": [
+        ("01-playing.png", "hero", "雙手留在樂器上<br>速度開口就改", "用英文說「start」「faster」就行"),
+        ("02-orbit.png", "left", "每一拍轉動<br>看得見", "軌道、彈跳、環形三種檢視"),
+        ("03-count.png", "right", "第幾拍<br>一眼看清", "隔著譜架也看得清的大數字"),
+        ("04-voice.png", "hero", "忘了指令？<br>說「help」", "能說的指令直接顯示在螢幕上"),
+        ("05-accents.png", "bottom", "每一下的輕重<br>由你決定", "Pro 的重音格與依曲目儲存的預設"),
     ],
     "pt-BR": [
         ("01-playing.png", "hero", "As duas mãos<br>no instrumento", "Diga “start” ou “faster” — sem tocar na tela"),
@@ -143,7 +150,7 @@ def main(only):
         (OUT / loc).mkdir(parents=True, exist_ok=True)
         for fname, layout, headline, sub in shots:
             html = WORK / f"{loc}-{fname}.html"
-            html.write_text(HTML.format(lang=loc if loc == "zh-Hans" else loc.split("-")[0], css=BASE_CSS + LAYOUTS[layout],
+            html.write_text(HTML.format(lang=loc if loc in ("zh-Hans", "zh-Hant") else loc.split("-")[0], css=BASE_CSS + LAYOUTS[layout],
                                         img=(RAW / SCREEN[loc] / fname).as_uri(), headline=headline, sub=sub), encoding="utf-8")
             out = OUT / loc / fname
             # 다른 세션의 Chrome 과 겹치면 가끔 실패한다 — 새 프로필로 몇 번 다시 시도한다.
