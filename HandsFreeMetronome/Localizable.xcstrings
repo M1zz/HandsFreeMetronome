@@ -41,6 +41,12 @@
             "state" : "translated",
             "value" : "%@ par an"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연 %@"
+          }
         }
       }
     },
@@ -86,6 +92,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, %2$lld cents trop bas"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld센트 낮음"
           }
         }
       }
@@ -133,6 +145,12 @@
             "state" : "translated",
             "value" : "%1$@, %2$lld cents trop haut"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld센트 높음"
+          }
         }
       }
     },
@@ -173,6 +191,12 @@
             "state" : "translated",
             "value" : "%@, juste"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, 음정 정확"
+          }
         }
       }
     },
@@ -211,6 +235,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -311,6 +341,12 @@
             "state" : "translated",
             "value" : "%lld temps"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld박"
+          }
         }
       }
     },
@@ -365,6 +401,12 @@
               }
             }
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "분당 %lld박"
+          }
         }
       }
     },
@@ -403,6 +445,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -455,6 +503,12 @@
             "state" : "translated",
             "value" : "%1$lld BPM, %2$@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM, %@"
+          }
         }
       }
     },
@@ -503,6 +557,12 @@
             "state" : "translated",
             "value" : "Parfait : %1$lld, Bien : %2$lld, Raté : %3$lld"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "퍼펙트 %lld, 굿 %lld, 배드 %lld"
+          }
         }
       }
     },
@@ -544,6 +604,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  touche les points pour la mesure"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  점을 눌러 박 설정"
           }
         }
       }
@@ -593,6 +659,12 @@
             "state" : "translated",
             "value" : "%1$lld/4 · %2$@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4 · %@"
+          }
         }
       }
     },
@@ -632,6 +704,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Doubles croches"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "16분음표"
           }
         }
       }
@@ -673,6 +751,12 @@
             "state" : "translated",
             "value" : "Noires"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4분음표"
+          }
         }
       }
     },
@@ -713,6 +797,12 @@
             "state" : "translated",
             "value" : "Croches"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "8분음표"
+          }
         }
       }
     },
@@ -752,6 +842,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La = %lld Hz"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
           }
         }
       }
@@ -795,6 +891,12 @@
             "state" : "translated",
             "value" : "Éditeur d’accents"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "악센트 편집기"
+          }
         }
       }
     },
@@ -834,6 +936,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Éditeur d’accents et préréglages"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "악센트 편집기 및 프리셋"
           }
         }
       }
@@ -877,6 +985,12 @@
             "state" : "translated",
             "value" : "Accents"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "악센트"
+          }
         }
       }
     },
@@ -917,6 +1031,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accessibilité"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "손쉬운 사용"
           }
         }
       }
@@ -960,6 +1080,12 @@
             "state" : "translated",
             "value" : "Ajouter %lld BPM"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM 올리기"
+          }
         }
       }
     },
@@ -1001,6 +1127,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toutes les commandes"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모든 명령"
           }
         }
       }
@@ -1044,6 +1176,12 @@
             "state" : "translated",
             "value" : "Applique ce motif, cette mesure et cette subdivision"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 패턴, 박자, 분할을 적용합니다"
+          }
         }
       }
     },
@@ -1085,6 +1223,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Retour"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "뒤로"
           }
         }
       }
@@ -1128,6 +1272,12 @@
             "state" : "translated",
             "value" : "Retour au métronome"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메트로놈으로 돌아가기"
+          }
         }
       }
     },
@@ -1167,6 +1317,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Raté"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배드"
           }
         }
       }
@@ -1209,6 +1365,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Temps %lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld박"
           }
         }
       }
@@ -1258,6 +1420,12 @@
             "state" : "translated",
             "value" : "Temps %1$lld clic %2$lld"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld박 클릭 %lld"
+          }
         }
       }
     },
@@ -1305,6 +1473,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Temps %1$lld sur %2$lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld박"
           }
         }
       }
@@ -1354,6 +1528,12 @@
             "state" : "translated",
             "value" : "Temps %1$lld sur %2$lld, %3$@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld박, %@"
+          }
         }
       }
     },
@@ -1402,6 +1582,12 @@
             "state" : "translated",
             "value" : "Temps %1$lld, clic %2$lld"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld박, 클릭 %lld"
+          }
         }
       }
     },
@@ -1442,6 +1628,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vue des temps"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "박 보기"
           }
         }
       }
@@ -1484,6 +1676,12 @@
             "state" : "translated",
             "value" : "Temps"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "박"
+          }
         }
       }
     },
@@ -1524,6 +1722,12 @@
             "state" : "translated",
             "value" : "Vue rebond"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "바운스 보기"
+          }
         }
       }
     },
@@ -1562,6 +1766,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -1608,6 +1818,12 @@
             "state" : "translated",
             "value" : "Bugs et idées de fonctionnalités sont les bienvenus."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버그 신고와 기능 요청을 환영합니다."
+          }
         }
       }
     },
@@ -1649,6 +1865,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acheter à vie"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평생 이용권 구매"
           }
         }
       }
@@ -1692,6 +1914,12 @@
             "state" : "translated",
             "value" : "Acheter à vie pour %@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에 평생 이용권 구매"
+          }
         }
       }
     },
@@ -1733,6 +1961,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuler"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소"
           }
         }
       }
@@ -1776,6 +2010,12 @@
             "state" : "translated",
             "value" : "Changer de vue"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보기 전환"
+          }
         }
       }
     },
@@ -1818,6 +2058,12 @@
             "state" : "translated",
             "value" : "Tester la précision"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이밍 확인"
+          }
         }
       }
     },
@@ -1857,6 +2103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accordeur chromatique"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "크로매틱 튜너"
           }
         }
       }
@@ -1899,6 +2151,12 @@
             "state" : "translated",
             "value" : "Fermer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "닫기"
+          }
         }
       }
     },
@@ -1938,6 +2196,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "fermer un panneau ou une astuce"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "패널이나 팁 닫기"
           }
         }
       }
@@ -1981,6 +2245,12 @@
             "state" : "translated",
             "value" : "Contacter le développeur"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개발자에게 문의"
+          }
         }
       }
     },
@@ -2023,6 +2293,12 @@
             "state" : "translated",
             "value" : "Pilote-le à la voix"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음성으로 조작하기"
+          }
         }
       }
     },
@@ -2062,6 +2338,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible de charger les prix depuis l’App Store."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Store에서 가격을 불러오지 못했어요."
           }
         }
       }
@@ -2105,6 +2387,12 @@
             "state" : "translated",
             "value" : "Personnaliser les accents"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "악센트 사용자 설정"
+          }
         }
       }
     },
@@ -2144,6 +2432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alterne entre aigu, grave et muet"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "높은 소리, 낮은 소리, 무음 순으로 전환합니다"
           }
         }
       }
@@ -2187,6 +2481,12 @@
             "state" : "translated",
             "value" : "Diminuer le tempo"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "템포 낮추기"
+          }
         }
       }
     },
@@ -2229,6 +2529,12 @@
             "state" : "translated",
             "value" : "Supprimer le préréglage %@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프리셋 %@ 삭제"
+          }
         }
       }
     },
@@ -2268,6 +2574,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Règle chaque clic de la mesure — aigu, grave ou muet — et enregistre un motif par morceau."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마디의 모든 클릭을 높은 소리, 낮은 소리, 무음으로 설계하고 곡마다 패턴을 저장하세요."
           }
         }
       }
@@ -2309,6 +2621,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aide détaillée"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자세한 도움말"
           }
         }
       }
@@ -2352,6 +2670,12 @@
             "state" : "translated",
             "value" : "Fermer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "닫기"
+          }
         }
       }
     },
@@ -2394,6 +2718,12 @@
             "state" : "translated",
             "value" : "Fermer l’aide"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도움말 닫기"
+          }
         }
       }
     },
@@ -2435,6 +2765,12 @@
             "state" : "translated",
             "value" : "OK"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "완료"
+          }
         }
       }
     },
@@ -2474,6 +2810,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Double ×2"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "두 배 ×2"
           }
         }
       }
@@ -2517,6 +2859,12 @@
             "state" : "translated",
             "value" : "Touche deux fois ici pour ouvrir la grille d’accents — règle chaque clic de la mesure en aigu, grave ou muet, et enregistre tes motifs en préréglages."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기를 두 번 탭하면 악센트 격자가 열려요. 마디의 모든 클릭을 높은 소리, 낮은 소리, 무음으로 정하고 패턴을 프리셋으로 저장할 수 있어요."
+          }
         }
       }
     },
@@ -2556,6 +2904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche deux fois la carte de subdivision pour modifier toute la mesure — chaque case alterne aigu → grave → muet, et tes motifs s’enregistrent en préréglages nommés."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "분할 카드를 두 번 탭해 마디 전체를 편집하세요. 칸을 누를 때마다 높은 소리 → 낮은 소리 → 무음으로 바뀌고, 패턴은 이름을 붙여 프리셋으로 저장할 수 있어요."
           }
         }
       }
@@ -2597,6 +2951,12 @@
             "state" : "translated",
             "value" : "Touche deux fois pour ouvrir Accents"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "두 번 탭하여 악센트 열기"
+          }
         }
       }
     },
@@ -2637,6 +2997,12 @@
             "state" : "translated",
             "value" : "Baisse −1"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내리기 −1"
+          }
         }
       }
     },
@@ -2676,6 +3042,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fais glisser le curseur de tempo, ou touche les boutons − / +."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "템포 슬라이더를 끌거나 − / + 버튼을 탭하세요."
           }
         }
       }
@@ -2719,6 +3091,12 @@
             "state" : "translated",
             "value" : "Modifier les accents"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "악센트 편집"
+          }
         }
       }
     },
@@ -2759,6 +3137,12 @@
             "state" : "translated",
             "value" : "Croches"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "8분음표"
+          }
         }
       }
     },
@@ -2798,6 +3182,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Croches"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "8분"
           }
         }
       }
@@ -2841,6 +3231,12 @@
             "state" : "translated",
             "value" : "E-mail"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이메일"
+          }
         }
       }
     },
@@ -2882,6 +3278,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Écrire au développeur"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개발자에게 이메일 보내기"
           }
         }
       }
@@ -2973,6 +3375,12 @@
               }
             }
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld마디마다"
+          }
         }
       }
     },
@@ -3012,6 +3420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chaque clic de la mesure a sa case — %lld clics en tout. Touche une case pour la faire changer : aigu → grave → muet."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마디의 클릭 하나하나가 각각의 칸이에요. 총 %lld개예요. 칸을 탭하면 높은 소리 → 낮은 소리 → 무음 순으로 바뀝니다."
           }
         }
       }
@@ -3055,6 +3469,12 @@
             "state" : "translated",
             "value" : "Tout cela marche aussi à la voix — les commandes sont juste en dessous."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기 있는 모든 기능은 음성으로도 쓸 수 있어요. 아래 명령을 확인해 보세요."
+          }
         }
       }
     },
@@ -3097,6 +3517,12 @@
             "state" : "translated",
             "value" : "Plus vite"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빠르게"
+          }
         }
       }
     },
@@ -3136,6 +3562,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plus vite +5"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빠르게 +5"
           }
         }
       }
@@ -3179,6 +3611,12 @@
             "state" : "translated",
             "value" : "Une commande t’échappe ?"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "명령이 기억나지 않나요?"
+          }
         }
       }
     },
@@ -3221,6 +3659,12 @@
             "state" : "translated",
             "value" : "Gratuit pour toujours, sans rien débloquer :"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평생 무료, 잠금 해제가 필요 없어요:"
+          }
         }
       }
     },
@@ -3260,6 +3704,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Essai gratuit"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "무료 체험"
           }
         }
       }
@@ -3301,6 +3751,12 @@
             "state" : "translated",
             "value" : "Bien"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "굿"
+          }
         }
       }
     },
@@ -3341,6 +3797,12 @@
             "state" : "translated",
             "value" : "Moitié ÷2"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "절반 ÷2"
+          }
         }
       }
     },
@@ -3380,6 +3842,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Entendu : %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "인식된 말: %@"
           }
         }
       }
@@ -3423,6 +3891,12 @@
             "state" : "translated",
             "value" : "Aide"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도움말"
+          }
         }
       }
     },
@@ -3464,6 +3938,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naviguer dans l’aide"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도움말 탐색"
           }
         }
       }
@@ -3507,6 +3987,12 @@
             "state" : "translated",
             "value" : "Son aigu"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "높은 소리"
+          }
         }
       }
     },
@@ -3549,6 +4035,12 @@
             "state" : "translated",
             "value" : "J’utilise le Contrôle vocal d’iOS"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS 음성 제어를 사용해요"
+          }
         }
       }
     },
@@ -3588,6 +4080,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "En vue orbite, touche l’anneau pendant la lecture — chaque clic (subdivisions comprises) est une cible. Le point en mouvement laisse une trace là où ton doigt a frappé, et des compteurs en couleur font le total Parfait / Bien / Raté jusqu’à l’arrêt."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오빗 보기에서 재생 중에 링을 탭하세요. 분할을 포함한 모든 클릭이 목표예요. 움직이는 점이 탭한 자리에 잔상을 남기고, 색깔 카운터가 멈출 때까지 퍼펙트 / 굿 / 배드를 집계해요."
           }
         }
       }
@@ -3631,6 +4129,12 @@
             "state" : "translated",
             "value" : "Augmenter le tempo"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "템포 높이기"
+          }
         }
       }
     },
@@ -3669,6 +4173,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -3715,6 +4225,12 @@
             "state" : "translated",
             "value" : "Message Instagram"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram DM"
+          }
         }
       }
     },
@@ -3756,6 +4272,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Message Instagram (@lee25_ios)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram DM (@lee25_ios)"
           }
         }
       }
@@ -3799,6 +4321,12 @@
             "state" : "translated",
             "value" : "Signal instrument"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "악기 신호"
+          }
         }
       }
     },
@@ -3840,6 +4368,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "fait partie de Pro — trois outils de travail, un seul déblocage."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "은(는) Pro에 포함돼요. 연습 도구 세 가지가 한 번에 열립니다."
           }
         }
       }
@@ -3883,6 +4417,12 @@
             "state" : "translated",
             "value" : "Largo ? Moderato ?"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라르고? 모데라토?"
+          }
         }
       }
     },
@@ -3925,6 +4465,12 @@
             "state" : "translated",
             "value" : "À vie"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평생 이용권"
+          }
         }
       }
     },
@@ -3964,6 +4510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "À vie — %@ en une fois"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평생 이용권 — 1회 %@"
           }
         }
       }
@@ -4005,6 +4557,12 @@
             "state" : "translated",
             "value" : "lister les commandes possibles"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "말할 수 있는 명령 목록 보기"
+          }
         }
       }
     },
@@ -4045,6 +4603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Écoute"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣기"
           }
         }
       }
@@ -4088,6 +4652,12 @@
             "state" : "translated",
             "value" : "Écouter la voix"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음성 듣기"
+          }
         }
       }
     },
@@ -4129,6 +4699,12 @@
             "state" : "translated",
             "value" : "À l’écoute"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣는 중"
+          }
         }
       }
     },
@@ -4168,6 +4744,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "À l’écoute…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣는 중…"
           }
         }
       }
@@ -4211,6 +4793,12 @@
             "state" : "translated",
             "value" : "À l’écoute… tiens chaque note"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣는 중… 음마다 길게 연주하세요"
+          }
         }
       }
     },
@@ -4252,6 +4840,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chargement des prix…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가격 불러오는 중…"
           }
         }
       }
@@ -4295,6 +4889,12 @@
             "state" : "translated",
             "value" : "Son grave"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "낮은 소리"
+          }
         }
       }
     },
@@ -4336,6 +4936,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pensé pour le Contrôle vocal"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음성 제어 지원"
           }
         }
       }
@@ -4379,6 +4985,12 @@
             "state" : "translated",
             "value" : "Mode métronome"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메트로놈 모드"
+          }
         }
       }
     },
@@ -4418,6 +5030,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Micro ou reconnaissance vocale bloqués — voir Réglages"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마이크/음성 인식이 차단됨 — 설정에서 켜 주세요"
           }
         }
       }
@@ -4461,6 +5079,12 @@
             "state" : "translated",
             "value" : "Moins"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마이너스"
+          }
         }
       }
     },
@@ -4502,6 +5126,12 @@
             "state" : "translated",
             "value" : "Plus d’options"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더 보기"
+          }
         }
       }
     },
@@ -4541,6 +5171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "faire défiler cette liste"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 목록 이동"
           }
         }
       }
@@ -4582,6 +5218,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Couper"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음소거"
           }
         }
       }
@@ -4625,6 +5267,12 @@
             "state" : "translated",
             "value" : "Couper la commande vocale"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음성 제어 음소거"
+          }
         }
       }
     },
@@ -4666,6 +5314,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nom (ex. Intro bossa)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이름 (예: 보사노바 인트로)"
           }
         }
       }
@@ -4709,6 +5363,12 @@
             "state" : "translated",
             "value" : "Nécessite le micro de l’app — désactive « J’utilise le Contrôle vocal d’iOS » pour t’en servir."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 앱의 마이크가 필요해요. 쓰려면 “iOS 음성 제어를 사용해요”를 꺼 주세요."
+          }
         }
       }
     },
@@ -4748,6 +5408,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aucune note détectée, joue une note"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "감지된 음이 없어요. 한 음을 연주하세요"
           }
         }
       }
@@ -4789,6 +5455,12 @@
             "state" : "translated",
             "value" : "Aucun achat précédent n’a été trouvé."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이전 구매 내역을 찾지 못했어요."
+          }
         }
       }
     },
@@ -4825,6 +5497,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -4871,6 +5549,12 @@
             "state" : "translated",
             "value" : "Plus tard"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나중에"
+          }
         }
       }
     },
@@ -4913,6 +5597,12 @@
             "state" : "translated",
             "value" : "Note"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음"
+          }
         }
       }
     },
@@ -4953,6 +5643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notes"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음"
           }
         }
       }
@@ -4996,6 +5692,12 @@
             "state" : "translated",
             "value" : "À l’écran"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "화면 터치"
+          }
         }
       }
     },
@@ -5036,6 +5738,12 @@
             "state" : "translated",
             "value" : "Ouvrir"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "열기"
+          }
         }
       }
     },
@@ -5075,6 +5783,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ouvrir l’éditeur d’accents"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "악센트 편집기 열기"
           }
         }
       }
@@ -5118,6 +5832,12 @@
             "state" : "translated",
             "value" : "Ouvrir les accents"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "악센트 열기"
+          }
         }
       }
     },
@@ -5157,6 +5877,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ouvre-le depuis Vue des temps ci-dessous, ou dis « practice »."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아래 박 보기에서 열거나 “practice”라고 말하세요."
           }
         }
       }
@@ -5200,6 +5926,12 @@
             "state" : "translated",
             "value" : "Ouvrir l’entraînement"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연습 열기"
+          }
         }
       }
     },
@@ -5242,6 +5974,12 @@
             "state" : "translated",
             "value" : "Ouvrir le mode entraînement"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연습 모드 열기"
+          }
         }
       }
     },
@@ -5281,6 +6019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ouvrir le mode entraînement"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연습 모드 열기"
           }
         }
       }
@@ -5322,6 +6066,12 @@
             "state" : "translated",
             "value" : "ouvrir l’accordeur"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "튜너 열기"
+          }
         }
       }
     },
@@ -5361,6 +6111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vue orbite"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오빗 보기"
           }
         }
       }
@@ -5404,6 +6160,12 @@
             "state" : "translated",
             "value" : "Pause"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일시정지"
+          }
         }
       }
     },
@@ -5446,6 +6208,12 @@
             "state" : "translated",
             "value" : "Un seul paiement, à toi pour toujours"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한 번 결제하면 평생 내 것"
+          }
         }
       }
     },
@@ -5485,6 +6253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Parfait !"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "퍼펙트!"
           }
         }
       }
@@ -5527,6 +6301,12 @@
             "state" : "translated",
             "value" : "Lecture"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "재생"
+          }
         }
       }
     },
@@ -5566,6 +6346,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "lecture / pause"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "재생 / 일시정지"
           }
         }
       }
@@ -5607,6 +6393,12 @@
             "state" : "translated",
             "value" : "Joue 2 à 5 notes, environ une demi-seconde chacune."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2~5개 음을 한 음당 0.5초 정도로 연주하세요."
+          }
         }
       }
     },
@@ -5646,6 +6438,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Joue une note…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한 음 연주…"
           }
         }
       }
@@ -5689,6 +6487,12 @@
             "state" : "translated",
             "value" : "Joue ta phrase pour lancer ou arrêter le clic, même en plein morceau. Tiens chaque note environ une demi-seconde, pour que les notes rapides de ton jeu ne le déclenchent pas. Fonctionne quand Écoute est activée."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프레이즈를 연주하면 클릭이 시작되거나 멈춰요. 곡 도중에도 됩니다. 연주 중 짧은 음에 반응하지 않도록 한 음을 0.5초 정도 길게 유지하세요. 듣기가 켜져 있을 때 동작해요."
+          }
         }
       }
     },
@@ -5730,6 +6534,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lecture"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "재생"
           }
         }
       }
@@ -5773,6 +6583,12 @@
             "state" : "translated",
             "value" : "Plus"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "플러스"
+          }
         }
       }
     },
@@ -5813,6 +6629,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Entraînement"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연습"
           }
         }
       }
@@ -5855,6 +6677,12 @@
             "state" : "translated",
             "value" : "Mode entraînement"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연습 모드"
+          }
         }
       }
     },
@@ -5894,6 +6722,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mode entraînement · éditeur d’accents et préréglages · accordeur"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연습 모드 · 악센트 편집기 및 프리셋 · 튜너"
           }
         }
       }
@@ -5937,6 +6771,12 @@
             "state" : "translated",
             "value" : "Préréglage %@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프리셋 %@"
+          }
         }
       }
     },
@@ -5978,6 +6818,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Préréglages"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프리셋"
           }
         }
       }
@@ -6021,6 +6867,12 @@
             "state" : "translated",
             "value" : "Politique de confidentialité"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개인정보 처리방침"
+          }
         }
       }
     },
@@ -6061,6 +6913,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/fr/privacy.html"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/ko/privacy.html"
+          }
         }
       }
     },
@@ -6097,6 +6955,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -6143,6 +7007,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -6182,6 +7052,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro débloqué — merci !"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro가 열렸어요. 감사합니다!"
           }
         }
       }
@@ -6223,6 +7099,12 @@
             "state" : "translated",
             "value" : "Noires"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4분음표"
+          }
         }
       }
     },
@@ -6263,6 +7145,12 @@
             "state" : "translated",
             "value" : "Noires"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4분"
+          }
         }
       }
     },
@@ -6302,6 +7190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Le tempo monte tout seul, par paliers de quelques mesures — pour accélérer un passage, sans les mains."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "몇 마디마다 템포가 자동으로 올라가요. 손을 쓰지 않고 구간을 점점 빠르게 연습하세요."
           }
         }
       }
@@ -6345,6 +7239,12 @@
             "state" : "translated",
             "value" : "Monte le tempo tout seul par paliers de quelques mesures pendant que tu joues — pour accélérer un passage petit à petit. S’arrête à l’objectif. Dis « practice » à tout moment pour l’ouvrir."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연주하는 동안 몇 마디마다 템포를 자동으로 올려요. 한 구간을 서서히 빠르게 끌어올릴 때 좋고, 목표 템포에서 멈춰요. 언제든 “practice”라고 말하면 열려요."
+          }
         }
       }
     },
@@ -6386,6 +7286,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enregistre d’abord une courte phrase."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "먼저 짧은 프레이즈를 녹음하세요."
           }
         }
       }
@@ -6429,6 +7335,12 @@
             "state" : "translated",
             "value" : "Réenregistrer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 녹음"
+          }
         }
       }
     },
@@ -6471,6 +7383,12 @@
             "state" : "translated",
             "value" : "Enregistrer le signal"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "신호 녹음"
+          }
         }
       }
     },
@@ -6510,6 +7428,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diapason"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기준음"
           }
         }
       }
@@ -6553,6 +7477,12 @@
             "state" : "translated",
             "value" : "Nécessite Pro"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro 필요"
+          }
         }
       }
     },
@@ -6594,6 +7524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réinitialiser"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "초기화"
           }
         }
       }
@@ -6637,6 +7573,12 @@
             "state" : "translated",
             "value" : "Restaurer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "복원"
+          }
         }
       }
     },
@@ -6678,6 +7620,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaurer les achats"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구매 복원"
           }
         }
       }
@@ -6721,6 +7669,12 @@
             "state" : "translated",
             "value" : "Restaurer les achats"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구매 복원"
+          }
         }
       }
     },
@@ -6762,6 +7716,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restaure un achat Pro précédent"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이전에 구매한 Pro를 복원합니다"
           }
         }
       }
@@ -6805,6 +7765,12 @@
             "state" : "translated",
             "value" : "Rétablit le motif par défaut de cette mesure"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 박자의 기본 패턴으로 되돌립니다"
+          }
         }
       }
     },
@@ -6846,6 +7812,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enregistrer"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장"
           }
         }
       }
@@ -6889,6 +7861,12 @@
             "state" : "translated",
             "value" : "Enregistre un motif par morceau — le rappeler rétablit aussi sa mesure et sa subdivision."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "곡마다 패턴을 저장하세요. 불러오면 박자와 분할도 함께 복원돼요."
+          }
         }
       }
     },
@@ -6930,6 +7908,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enregistrer le motif actuel…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 패턴 저장…"
           }
         }
       }
@@ -6973,6 +7957,12 @@
             "state" : "translated",
             "value" : "Enregistrer le motif"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "패턴 저장"
+          }
         }
       }
     },
@@ -7014,6 +8004,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enregistrer le préréglage"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프리셋 저장"
           }
         }
       }
@@ -7057,6 +8053,12 @@
             "state" : "translated",
             "value" : "Enregistre ce motif avec sa mesure et sa subdivision, pour le rappeler morceau par morceau."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 패턴을 박자·분할과 함께 저장해 곡마다 불러올 수 있어요."
+          }
         }
       }
     },
@@ -7098,6 +8100,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "dis"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "말하기"
           }
         }
       }
@@ -7141,6 +8149,12 @@
             "state" : "translated",
             "value" : "Dis « close » pour quitter"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“close”라고 말해서 나가기"
+          }
         }
       }
     },
@@ -7180,6 +8194,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dis « start », « faster » ou « help »"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“start”, “faster”, “help”라고 말해 보세요"
           }
         }
       }
@@ -7222,6 +8242,12 @@
             "state" : "translated",
             "value" : "Dis une commande"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "명령을 말해 보세요"
+          }
         }
       }
     },
@@ -7261,6 +8287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dis « close » / « done », ou touche OK."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“close” / “done”이라고 말하거나 완료를 탭하세요."
           }
         }
       }
@@ -7304,6 +8336,12 @@
             "state" : "translated",
             "value" : "Dis « close » ou touche pour fermer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“close”라고 말하거나 탭해서 닫기"
+          }
         }
       }
     },
@@ -7346,6 +8384,12 @@
             "state" : "translated",
             "value" : "Dis « help » à tout moment — ou touche ici — pour voir toutes les commandes possibles, puis « close » pour fermer."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "언제든 “help”라고 말하거나 여기를 탭하면 말할 수 있는 모든 명령이 나와요. 닫을 땐 “close”라고 하세요."
+          }
         }
       }
     },
@@ -7386,6 +8430,12 @@
             "state" : "translated",
             "value" : "Dis « help » ou touche le bouton « ? »."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“help”라고 말하거나 ? 버튼을 탭하세요."
+          }
         }
       }
     },
@@ -7425,6 +8475,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dis « louder » / « quieter » / « mute », ou « volume 60 »."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“louder” / “quieter” / “mute”, 또는 “volume 60”이라고 말하세요."
           }
         }
       }
@@ -7468,6 +8524,12 @@
             "state" : "translated",
             "value" : "Dis « practice » pour faire monter le tempo par paliers de quelques mesures pendant que tu joues — idéal pour travailler la vitesse."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“practice”라고 말하면 연주하는 동안 몇 마디마다 템포가 자동으로 올라가요. 속도 연습에 딱 좋아요."
+          }
         }
       }
     },
@@ -7508,6 +8570,12 @@
             "state" : "translated",
             "value" : "Dis « scroll down » / « scroll up », ou balaie l’écran."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“scroll down” / “scroll up”이라고 말하거나 스와이프하세요."
+          }
         }
       }
     },
@@ -7547,6 +8615,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dis « tune » et joue — note, cents et zone de justesse."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“tune”이라고 말하고 연주해 보세요. 음 이름, 센트, 음정 정확 구간이 나와요."
           }
         }
       }
@@ -7590,6 +8664,12 @@
             "state" : "translated",
             "value" : "Dis « tune » pour ouvrir l’accordeur chromatique, et « close » quand tu as fini."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“tune”이라고 말하면 크로매틱 튜너가 열리고, 끝나면 “close”라고 하세요."
+          }
         }
       }
     },
@@ -7629,6 +8709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Défilement"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스크롤"
           }
         }
       }
@@ -7670,6 +8756,12 @@
             "state" : "translated",
             "value" : "Défiler vers le bas"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아래로 스크롤"
+          }
         }
       }
     },
@@ -7709,6 +8801,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Défiler vers le haut"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위로 스크롤"
           }
         }
       }
@@ -7752,6 +8850,12 @@
             "state" : "translated",
             "value" : "Défilement"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스크롤"
+          }
         }
       }
     },
@@ -7791,6 +8895,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Régler la mesure"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "박 설정"
           }
         }
       }
@@ -7832,6 +8942,12 @@
             "state" : "translated",
             "value" : "régler en pourcentage"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "퍼센트 설정"
+          }
         }
       }
     },
@@ -7872,6 +8988,12 @@
             "state" : "translated",
             "value" : "choisir la mesure"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "박자 설정"
+          }
         }
       }
     },
@@ -7911,6 +9033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "valeur précise"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "값 설정"
           }
         }
       }
@@ -7954,6 +9082,12 @@
             "state" : "translated",
             "value" : "Passe en %lld/4"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4박자로 설정합니다"
+          }
         }
       }
     },
@@ -7996,6 +9130,12 @@
             "state" : "translated",
             "value" : "Signal : %@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "신호: %@"
+          }
         }
       }
     },
@@ -8035,6 +9175,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "couper le clic"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "클릭 끄기"
           }
         }
       }
@@ -8078,6 +9224,12 @@
             "state" : "translated",
             "value" : "Muet"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "무음"
+          }
         }
       }
     },
@@ -8118,6 +9270,12 @@
             "state" : "translated",
             "value" : "Doubles croches"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "16분음표"
+          }
         }
       }
     },
@@ -8157,6 +9315,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Doubles croches"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "16분"
           }
         }
       }
@@ -8200,6 +9364,12 @@
             "state" : "translated",
             "value" : "Plus lent"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "느리게"
+          }
         }
       }
     },
@@ -8240,6 +9410,12 @@
             "state" : "translated",
             "value" : "Plus lent −5"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "느리게 −5"
+          }
         }
       }
     },
@@ -8279,6 +9455,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reconnaissance vocale indisponible ici"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기서는 음성 인식을 사용할 수 없어요"
           }
         }
       }
@@ -8321,6 +9503,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Montée en vitesse"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스피드 트레이너"
           }
         }
       }
@@ -8368,6 +9556,12 @@
             "state" : "translated",
             "value" : "Montée en vitesse · +%1$lld toutes les %2$lld mesures → %3$lld"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스피드 트레이너 · %lld마디마다 +%lld → %lld"
+          }
         }
       }
     },
@@ -8408,6 +9602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Démarrer"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시작"
           }
         }
       }
@@ -8451,6 +9651,12 @@
             "state" : "translated",
             "value" : "Démarrer / arrêter avec mon instrument"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 악기로 시작 / 정지"
+          }
         }
       }
     },
@@ -8492,6 +9698,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Activer l’écoute"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣기 시작"
           }
         }
       }
@@ -8535,6 +9747,12 @@
             "state" : "translated",
             "value" : "Démarrer le métronome"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메트로놈 시작"
+          }
         }
       }
     },
@@ -8575,6 +9793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arrêter"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정지"
           }
         }
       }
@@ -8618,6 +9842,12 @@
             "state" : "translated",
             "value" : "Arrêter l’écoute"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣기 중지"
+          }
         }
       }
     },
@@ -8660,6 +9890,12 @@
             "state" : "translated",
             "value" : "Arrêter le métronome"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메트로놈 정지"
+          }
         }
       }
     },
@@ -8700,6 +9936,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Subdivision"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "분할"
           }
         }
       }
@@ -8743,6 +9985,12 @@
             "state" : "translated",
             "value" : "S’abonner"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구독"
+          }
         }
       }
     },
@@ -8785,6 +10033,12 @@
             "state" : "translated",
             "value" : "S’abonner à l’année pour %@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에 연간 구독"
+          }
         }
       }
     },
@@ -8824,6 +10078,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Assistance"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지원"
           }
         }
       }
@@ -8865,6 +10125,12 @@
             "state" : "translated",
             "value" : "Passer en vue rebond"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "바운스 보기로 전환"
+          }
         }
       }
     },
@@ -8904,6 +10170,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Passer en vue orbite"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오빗 보기로 전환"
           }
         }
       }
@@ -8947,6 +10219,12 @@
             "state" : "translated",
             "value" : "Passer en vue anneau"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "링 스윕 보기로 전환"
+          }
         }
       }
     },
@@ -8989,6 +10267,12 @@
             "state" : "translated",
             "value" : "Changer de vue"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보기 전환"
+          }
         }
       }
     },
@@ -9029,6 +10313,12 @@
             "state" : "translated",
             "value" : "changer d’affichage"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시각화 전환"
+          }
         }
       }
     },
@@ -9068,6 +10358,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche 1/4, 1/8, Trip ou 1/16. Touche deux fois la carte pour ouvrir Accents et régler chaque clic de la mesure en aigu, grave ou muet."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/4, 1/8, 셋잇단, 1/16 중에서 탭하세요. 카드를 두 번 탭하면 악센트가 열려 마디의 모든 클릭을 높은 소리, 낮은 소리, 무음으로 정할 수 있어요."
           }
         }
       }
@@ -9111,6 +10407,12 @@
             "state" : "translated",
             "value" : "Tape en rythme pour tester ta précision"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리듬에 맞춰 탭해 타이밍 확인"
+          }
         }
       }
     },
@@ -9150,6 +10452,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche Écoute pour piloter à la voix"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣기를 탭해 음성으로 조작"
           }
         }
       }
@@ -9191,6 +10499,12 @@
             "state" : "translated",
             "value" : "Touche Écoute pour activer ou couper la commande vocale."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣기를 탭하면 음성 제어를 켜고 끌 수 있어요."
+          }
         }
       }
     },
@@ -9230,6 +10544,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche Démarrer / Arrêter en bas."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아래의 시작 / 정지를 탭하세요."
           }
         }
       }
@@ -9273,6 +10593,12 @@
             "state" : "translated",
             "value" : "Tap tempo"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탭 템포"
+          }
         }
       }
     },
@@ -9312,6 +10638,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tape en rythme sur le grand nombre de BPM pour régler le tempo."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "큰 BPM 숫자를 리듬에 맞춰 탭해 템포를 정하세요."
           }
         }
       }
@@ -9353,6 +10685,12 @@
             "state" : "translated",
             "value" : "Touche les points pour choisir la mesure."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "점을 탭해 박자를 고르세요."
+          }
         }
       }
     },
@@ -9392,6 +10730,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Touche l’icône de vue (en haut à droite de la carte des temps) — rebond → orbite → anneau."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보기 아이콘(박 카드 오른쪽 위)을 탭하세요. 바운스 → 오빗 → 링 스윕 순으로 바뀝니다."
           }
         }
       }
@@ -9435,6 +10779,12 @@
             "state" : "translated",
             "value" : "Touche pour passer de la balle qui rebondit à l’anneau en orbite — ou dis « bounce » / « orbit »."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탭하면 튀는 공과 오빗 링이 전환돼요. “bounce” / “orbit”이라고 말해도 됩니다."
+          }
         }
       }
     },
@@ -9477,6 +10827,12 @@
             "state" : "translated",
             "value" : "Touche pour alterner entre le nom du tempo et les BPM"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탭하면 템포 이름과 BPM이 전환돼요"
+          }
         }
       }
     },
@@ -9518,6 +10874,12 @@
             "state" : "translated",
             "value" : "Tempo"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "템포"
+          }
         }
       }
     },
@@ -9557,6 +10919,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo %lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "템포 %lld"
           }
         }
       }
@@ -9600,6 +10968,12 @@
             "state" : "translated",
             "value" : "Curseur de tempo"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "템포 슬라이더"
+          }
         }
       }
     },
@@ -9641,6 +11015,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conditions d’utilisation (EULA)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이용 약관(EULA)"
           }
         }
       }
@@ -9684,6 +11064,12 @@
             "state" : "translated",
             "value" : "C’est ton tempo sous son nom classique. Touche-le pour passer au nombre de BPM, et inversement."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "클래식 용어로 본 현재 템포예요. 탭하면 BPM 숫자로 바뀌고, 다시 탭하면 돌아와요."
+          }
         }
       }
     },
@@ -9725,6 +11111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Le micro de l’app est coupé pour ne pas gêner le Contrôle vocal. Dis « Touche Démarrer », « Touche Plus vite » ou « Touche 3 temps »."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱 자체 마이크는 꺼져 있어 음성 제어와 충돌하지 않아요. “Tap Start”, “Tap Faster”, “Tap 3 beats”라고 말해 보세요."
           }
         }
       }
@@ -9768,6 +11160,12 @@
             "state" : "translated",
             "value" : "Le métronome complet — tous les tempos, mesures et subdivisions — les trois vues des temps, le tap tempo, le test de précision et toute la commande vocale mains libres."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모든 템포, 박자, 분할을 갖춘 완전한 메트로놈에 박 보기 세 가지, 탭 템포, 타이밍 확인, 완전한 핸즈프리 음성 제어까지."
+          }
         }
       }
     },
@@ -9809,6 +11207,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Le micro écoute déjà — dis « start », « faster » ou « help ». Tu utilises le Contrôle vocal d’iOS ? Ouvre Commandes vocales pour basculer."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마이크가 이미 듣고 있어요. “start”, “faster”, “help”라고 말해 보세요. iOS 음성 제어를 쓰시나요? 음성 명령에서 전환하세요."
           }
         }
       }
@@ -9852,6 +11256,12 @@
             "state" : "translated",
             "value" : "L’abonnement annuel se renouvelle automatiquement à %@/an, sauf résiliation au moins 24 heures avant son renouvellement, dans Réglages > Compte Apple > Abonnements. L’achat à vie est facturé une seule fois."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연간 플랜은 갱신 최소 24시간 전에 설정 > Apple 계정 > 구독에서 해지하지 않으면 연 %@에 자동 갱신돼요. 평생 이용권은 한 번만 결제해요."
+          }
         }
       }
     },
@@ -9894,6 +11304,12 @@
             "state" : "translated",
             "value" : "Il y a aussi un accordeur"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "튜너도 있어요"
+          }
         }
       }
     },
@@ -9933,6 +11349,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Test de précision"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이밍 확인"
           }
         }
       }
@@ -9976,6 +11398,12 @@
             "state" : "translated",
             "value" : "Astuces"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "팁"
+          }
         }
       }
     },
@@ -10018,6 +11446,12 @@
             "state" : "translated",
             "value" : "Entraîneur"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트레이너"
+          }
         }
       }
     },
@@ -10058,6 +11492,12 @@
             "state" : "translated",
             "value" : "Triolets"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "셋잇단"
+          }
         }
       }
     },
@@ -10097,6 +11537,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "triolets"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "셋잇단"
           }
         }
       }
@@ -10139,6 +11585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réessayer"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 시도"
           }
         }
       }
@@ -10228,6 +11680,12 @@
               }
             }
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld일 무료 체험"
+          }
         }
       }
     },
@@ -10303,6 +11761,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Essai gratuit de %lld mois"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld개월 무료 체험"
           }
         }
       }
@@ -10392,6 +11856,12 @@
               }
             }
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld주 무료 체험"
+          }
         }
       }
     },
@@ -10431,6 +11901,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Essai gratuit d’un mois"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1개월 무료 체험"
           }
         }
       }
@@ -10472,6 +11948,12 @@
             "state" : "translated",
             "value" : "Essai gratuit d’une semaine"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1주일 무료 체험"
+          }
         }
       }
     },
@@ -10511,6 +11993,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Essai gratuit d’un an"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1년 무료 체험"
           }
         }
       }
@@ -10552,6 +12040,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accordeur"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "튜너"
           }
         }
       }
@@ -10595,6 +12089,12 @@
             "state" : "translated",
             "value" : "Coupe le micro de l’app et pilote les commandes par leur nom"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱 자체 마이크를 끄고 이름으로 조작합니다"
+          }
         }
       }
     },
@@ -10634,6 +12134,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coupe le micro de l’app pour éviter les conflits. Pilote-la en disant « Touche Démarrer », « Touche Plus vite », « Touche 3 temps »."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱 마이크를 꺼서 두 기능이 충돌하지 않게 해요. “Tap Start”, “Tap Faster”, “Tap 3 beats”라고 말해 조작하세요."
           }
         }
       }
@@ -10677,6 +12183,12 @@
             "state" : "translated",
             "value" : "Deux vues des temps"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "두 가지 박 보기"
+          }
         }
       }
     },
@@ -10717,6 +12229,12 @@
             "state" : "translated",
             "value" : "Débloquer Pro"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro 잠금 해제"
+          }
         }
       }
     },
@@ -10756,6 +12274,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hausse +1"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "올리기 +1"
           }
         }
       }
@@ -10799,6 +12323,12 @@
             "state" : "translated",
             "value" : "Jusqu’à %lld BPM"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최대 %lld BPM"
+          }
         }
       }
     },
@@ -10838,6 +12368,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Passer à Pro"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업그레이드"
           }
         }
       }
@@ -10880,6 +12416,12 @@
             "state" : "translated",
             "value" : "Vue"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보기"
+          }
         }
       }
     },
@@ -10919,6 +12461,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voix"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음성"
           }
         }
       }
@@ -10962,6 +12510,12 @@
             "state" : "translated",
             "value" : "Commandes vocales"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음성 명령"
+          }
         }
       }
     },
@@ -11002,6 +12556,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Commandes vocales"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음성 명령"
           }
         }
       }
@@ -11044,6 +12604,12 @@
             "state" : "translated",
             "value" : "Commande vocale coupée"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음성 제어 꺼짐"
+          }
         }
       }
     },
@@ -11085,6 +12651,12 @@
             "state" : "translated",
             "value" : "Volume"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "볼륨"
+          }
         }
       }
     },
@@ -11124,6 +12696,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volume %lld %%"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "볼륨 %lld%%"
           }
         }
       }
@@ -11165,6 +12743,12 @@
             "state" : "translated",
             "value" : "Baisser le volume"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "볼륨 낮추기"
+          }
         }
       }
     },
@@ -11204,6 +12788,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Monter le volume"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "볼륨 높이기"
           }
         }
       }
@@ -11247,6 +12837,12 @@
             "state" : "translated",
             "value" : "Annuel"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연간"
+          }
         }
       }
     },
@@ -11287,6 +12883,12 @@
             "state" : "translated",
             "value" : "Annuel — %@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연간 — %@"
+          }
         }
       }
     },
@@ -11323,6 +12925,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -11367,6 +12975,12 @@
             "state" : "translated",
             "value" : "±10 %"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -11403,6 +13017,12 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -11447,6 +13067,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -11486,6 +13112,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ Arrêter"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ 정지"
           }
         }
       }
@@ -11527,6 +13159,12 @@
             "state" : "translated",
             "value" : "▶ Démarrer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ 시작"
+          }
         }
       }
     },
@@ -11566,6 +13204,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이머"
           }
         }
       }
@@ -11607,6 +13251,12 @@
             "state" : "translated",
             "value" : "Desligado"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "끔"
+          }
         }
       }
     },
@@ -11646,6 +13296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer de estudo"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연습 타이머"
           }
         }
       }
@@ -11687,6 +13343,12 @@
             "state" : "translated",
             "value" : "%lld min"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld분"
+          }
         }
       }
     },
@@ -11726,6 +13388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo restante"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "남은 시간"
           }
         }
       }
@@ -11767,6 +13435,12 @@
             "state" : "translated",
             "value" : "Reiniciar timer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이머 초기화"
+          }
         }
       }
     },
@@ -11806,6 +13480,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer desligado"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이머 꺼짐"
           }
         }
       }
@@ -11847,6 +13527,12 @@
             "state" : "translated",
             "value" : "Timer %lld min"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이머 %lld분"
+          }
         }
       }
     },
@@ -11886,6 +13572,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Faltam %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 남음"
           }
         }
       }
@@ -11927,6 +13619,12 @@
             "state" : "translated",
             "value" : "O tempo de estudo acabou"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연습 시간이 끝났어요"
+          }
         }
       }
     },
@@ -11966,6 +13664,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "definir um timer"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연습 타이머 설정"
           }
         }
       }
@@ -12007,6 +13711,12 @@
             "state" : "translated",
             "value" : "desligar o timer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이머 끄기"
+          }
         }
       }
     },
@@ -12046,6 +13756,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toque no botão de timer ao lado de Iniciar ou diga “timer 5 minutes”. Ele conta enquanto o clique toca e depois para com um aviso sonoro."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시작 옆의 타이머 버튼을 탭하거나 “timer 5 minutes”라고 말하세요. 클릭이 울리는 동안 카운트다운하고, 끝나면 멈추고 알림음이 울려요."
           }
         }
       }
@@ -12087,6 +13803,12 @@
             "state" : "translated",
             "value" : "Conta enquanto o clique toca e pausa quando você para. Quando o tempo acaba, o metrônomo para com um aviso sonoro. Diga “timer 5 minutes” ou “timer off” a qualquer momento."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "클릭이 울리는 동안 카운트다운하고, 멈추면 일시정지돼요. 시간이 다 되면 메트로놈이 멈추고 알림음이 울려요. 언제든 “timer 5 minutes” 또는 “timer off”라고 말하세요."
+          }
         }
       }
     },
@@ -12126,6 +13848,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Compartilhar estatísticas de uso anônimas"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "익명 사용 통계 공유"
           }
         }
       }
@@ -12167,6 +13895,12 @@
             "state" : "translated",
             "value" : "Privacidade"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개인정보"
+          }
         }
       }
     },
@@ -12206,6 +13940,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Contagens como quantos dispositivos usam o app e relatórios de falhas. Sem áudio, ajustes ou dados pessoais. Vale a partir da próxima abertura."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱을 쓰는 기기 수, 비정상 종료 보고서 같은 집계예요. 오디오, 설정, 개인 정보는 포함되지 않아요. 다음 실행부터 적용돼요."
           }
         }
       }
@@ -12248,6 +13988,12 @@
             "state" : "translated",
             "value" : "Texte encore plus grand"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더 큰 글씨 지원"
+          }
         }
       }
     },
@@ -12288,6 +14034,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "L’écran reste lisible et bien rangé, même avec les plus grandes tailles de texte."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가장 큰 글자 크기에서도 화면이 읽기 쉽고 깔끔하게 유지돼요."
           }
         }
       }
@@ -12330,6 +14082,12 @@
             "state" : "translated",
             "value" : "Couleurs plus lisibles"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더 보기 쉬운 색상"
+          }
         }
       }
     },
@@ -12370,6 +14128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Les couleurs des temps et du timing restent nettes avec le contraste accru ou si tu distingues mal les couleurs."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대비 증가를 켜거나 색을 구분하기 어려울 때도 박과 타이밍 색상이 또렷해요."
           }
         }
       }
@@ -12412,6 +14176,12 @@
             "state" : "translated",
             "value" : "Contrôle au clavier"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "키보드 조작"
+          }
         }
       }
     },
@@ -12452,6 +14222,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sur iPad avec un clavier, lance, arrête et change le tempo avec les touches."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "키보드를 연결한 iPad에서 키로 시작, 정지, 템포 변경을 할 수 있어요."
           }
         }
       }
@@ -12494,6 +14270,12 @@
             "state" : "translated",
             "value" : "Nouveautés"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로운 기능"
+          }
         }
       }
     },
@@ -12534,6 +14316,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Après une mise à jour, découvre les nouveautés à la première ouverture."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트 후 앱을 처음 열 때 새로운 기능을 볼 수 있어요."
           }
         }
       }
@@ -12576,6 +14364,12 @@
             "state" : "translated",
             "value" : "Réponses à tes retours"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "피드백 답장"
+          }
         }
       }
     },
@@ -12616,6 +14410,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lis nos réponses à tes retours directement dans l’app."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보낸 피드백에 대한 답장을 앱 안에서 바로 확인하세요."
           }
         }
       }
@@ -12658,6 +14458,12 @@
             "state" : "translated",
             "value" : "Offrir Pro"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro 선물하기"
+          }
         }
       }
     },
@@ -12698,6 +14504,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Offre Not My Tempo Pro à un membre de ton groupe ou à un élève."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "밴드 동료나 학생에게 Not My Tempo Pro를 선물하세요."
           }
         }
       }
@@ -12740,6 +14552,12 @@
             "state" : "translated",
             "value" : "Widget pour l’écran d’accueil"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "홈 화면 위젯"
+          }
         }
       }
     },
@@ -12780,6 +14598,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lance le clic depuis l’écran d’accueil sans ouvrir l’app."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱을 열지 않고 홈 화면에서 바로 클릭을 시작하세요."
           }
         }
       }
@@ -12822,6 +14646,12 @@
             "state" : "translated",
             "value" : "Siri et Raccourcis"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri와 단축어"
+          }
         }
       }
     },
@@ -12862,6 +14692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Demande à Siri ou utilise un raccourci pour lancer le clic à ton tempo."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri에게 말하거나 단축어를 실행해 내 템포로 클릭을 시작하세요."
           }
         }
       }
@@ -12904,6 +14740,12 @@
             "state" : "translated",
             "value" : "Synchronisation entre appareils"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기기 간 동기화"
+          }
         }
       }
     },
@@ -12944,6 +14786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tes préréglages et réglages te suivent sur iPhone et iPad."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프리셋과 설정이 iPhone과 iPad에서 그대로 이어져요."
           }
         }
       }
@@ -12986,6 +14834,12 @@
             "state" : "translated",
             "value" : "Sauvegarde des préréglages"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프리셋 백업"
+          }
         }
       }
     },
@@ -13026,6 +14880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enregistre tes préréglages d’accents dans un fichier et récupère-les quand tu veux."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "악센트 프리셋을 파일로 저장해 두고 언제든 불러오세요."
           }
         }
       }
@@ -13068,6 +14928,12 @@
             "state" : "translated",
             "value" : "Rappels d’entraînement"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연습 알림"
+          }
         }
       }
     },
@@ -13108,6 +14974,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reçois un petit rappel à l’heure choisie pour t’exercer."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정한 시간에 연습하라는 부드러운 알림을 받아 보세요."
           }
         }
       }
@@ -13150,6 +15022,12 @@
             "state" : "translated",
             "value" : "Pour l’iPhone pliable"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "폴더블 iPhone 레이아웃"
+          }
         }
       }
     },
@@ -13190,6 +15068,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sur un iPhone pliable, vois les temps et les commandes côte à côte."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "폴더블 iPhone에서 박 보기와 조작부를 나란히 볼 수 있어요."
           }
         }
       }
@@ -13232,6 +15116,12 @@
             "state" : "translated",
             "value" : "Effacer toutes mes données"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 데이터 모두 삭제"
+          }
         }
       }
     },
@@ -13273,6 +15163,12 @@
             "state" : "translated",
             "value" : "Efface tous tes préréglages et réglages dans l’app quand tu veux."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "원할 때 언제든 앱의 프리셋과 설정을 모두 지울 수 있어요."
+          }
         }
       }
     },
@@ -13312,6 +15208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Utilise un code promo"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오퍼 코드 사용"
           }
         }
       }
@@ -13353,6 +15255,12 @@
             "state" : "translated",
             "value" : "Tu as un code pour Pro ? Saisis-le directement dans l’app, sur l’écran Pro ou dans Commandes vocales."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro 코드가 있나요? Pro 화면이나 음성 명령에서 앱 안에 바로 입력하세요."
+          }
         }
       }
     },
@@ -13392,6 +15300,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plus net avec Augmenter le contraste"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대비 증가로 더 선명하게"
           }
         }
       }
@@ -13433,6 +15347,12 @@
             "state" : "translated",
             "value" : "Avec Augmenter le contraste ou Réduire la transparence, les temps, les contours et l’aide à l’écran sont plus marqués et opaques."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대비 증가나 투명도 줄이기를 켜면 박, 윤곽선, 도움말 오버레이가 더 굵고 단단하게 그려져요."
+          }
         }
       }
     },
@@ -13472,6 +15392,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De la place pour le plus grand texte"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가장 큰 글씨도 문제없어요"
           }
         }
       }
@@ -13513,6 +15439,12 @@
             "state" : "translated",
             "value" : "Aux plus grandes tailles de texte, les boutons et les listes se réorganisent pour que rien ne soit coupé."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가장 큰 글자 크기에서는 버튼과 목록이 재배치되어 잘리는 곳이 없어요."
+          }
         }
       }
     },
@@ -13552,6 +15484,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Version %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버전 %@"
           }
         }
       }
@@ -13593,6 +15531,12 @@
             "state" : "translated",
             "value" : "Continuer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "계속"
+          }
         }
       }
     },
@@ -13632,6 +15576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Un métronome à qui tu parles"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대화하는 메트로놈"
           }
         }
       }
@@ -13673,6 +15623,12 @@
             "state" : "translated",
             "value" : "Dis « start », « stop », « faster » ou « tempo 120 » et garde les deux mains sur ton instrument."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“start”, “stop”, “faster”, “tempo 120”이라고 말하면서 두 손은 악기에 두세요."
+          }
         }
       }
     },
@@ -13712,6 +15668,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Les commandes sont des mots anglais"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "명령은 영어 단어예요"
           }
         }
       }
@@ -13753,6 +15715,12 @@
             "state" : "translated",
             "value" : "Quelle que soit la langue, tu pilotes l’app avec de courts mots anglais. Dis « help » à tout moment pour les voir toutes à l’écran."
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어떤 언어에서든 짧은 영어 단어로 앱을 조작해요. 언제든 “help”라고 말하면 모든 명령이 화면에 나와요."
+          }
         }
       }
     },
@@ -13792,6 +15760,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Le micro de l’app reste coupé pour ne pas gêner le Contrôle vocal. Dis « Touche Démarrer » ou « Touche Plus vite »."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱 자체 마이크는 꺼져 있어 음성 제어와 충돌하지 않아요. “Tap Start” 또는 “Tap Faster”라고 말해 보세요."
           }
         }
       }
@@ -13833,6 +15807,12 @@
             "state" : "translated",
             "value" : "Ensuite : le micro"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음: 마이크"
+          }
         }
       }
     },
@@ -13872,6 +15852,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS va te demander l’accès au micro et à la reconnaissance vocale. Ils servent uniquement à entendre tes commandes. L’app n’enregistre ni ne conserve jamais ce qu’elle entend."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS가 마이크와 음성 인식 권한을 물어볼 거예요. 두 가지는 명령을 듣는 데만 쓰이고, 앱은 들은 내용을 녹음하거나 저장하지 않아요."
           }
         }
       }
@@ -13913,6 +15899,12 @@
             "state" : "translated",
             "value" : "Passer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건너뛰기"
+          }
         }
       }
     },
@@ -13952,6 +15944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "C’est parti"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시작하기"
           }
         }
       }
@@ -13993,6 +15991,12 @@
             "state" : "translated",
             "value" : "Suivant"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음"
+          }
         }
       }
     },
@@ -14032,6 +16036,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Préréglage enregistré"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프리셋을 저장했어요"
           }
         }
       }
@@ -14073,6 +16083,12 @@
             "state" : "translated",
             "value" : "Aucun préréglage pour l’instant"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 프리셋이 없어요"
+          }
         }
       }
     },
@@ -14112,6 +16128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Utiliser un code promo"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오퍼 코드 사용"
           }
         }
       }
@@ -14153,6 +16175,12 @@
             "state" : "translated",
             "value" : "Revoir la présentation"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소개 다시 보기"
+          }
         }
       }
     },
@@ -14192,6 +16220,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Utiliser un code"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "코드 사용"
           }
         }
       }
@@ -14233,6 +16267,12 @@
             "state" : "translated",
             "value" : "Présentation"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소개"
+          }
         }
       }
     },
@@ -14272,6 +16312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voir la présentation"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소개 보기"
           }
         }
       }
@@ -14313,6 +16359,12 @@
             "state" : "translated",
             "value" : "Code promo"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오퍼 코드"
+          }
         }
       }
     },
@@ -14352,6 +16404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Utiliser un code"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "코드 사용"
           }
         }
       }
@@ -14393,6 +16451,12 @@
             "state" : "translated",
             "value" : "Nouveautés"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로운 기능"
+          }
         }
       }
     },
@@ -14432,6 +16496,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Passer la présentation"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소개 건너뛰기"
           }
         }
       }

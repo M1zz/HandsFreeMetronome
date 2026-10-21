@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "화면을 만지지 않고 조작할 수 있도록 음성 명령(“start”, “faster” 등)을 듣고, 근처에서 연주하는 음악의 템포를 감지하는 데 마이크를 사용합니다.";
+"NSSpeechRecognitionUsageDescription" = "손을 쓰지 않는 음성 명령을 이해하기 위해 음성 인식을 사용합니다. 인식은 기기 안에서 이루어집니다.";
