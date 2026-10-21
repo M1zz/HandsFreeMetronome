@@ -53,6 +53,12 @@
             "state" : "translated",
             "value" : "每年 %@"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ all’anno"
+          }
         }
       }
     },
@@ -110,6 +116,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@，偏低 %lld 音分"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld cent calante"
           }
         }
       }
@@ -169,6 +181,12 @@
             "state" : "translated",
             "value" : "%@，偏高 %lld 音分"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld cent crescente"
+          }
         }
       }
     },
@@ -221,6 +239,12 @@
             "state" : "translated",
             "value" : "%@，音準正確"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, intonato"
+          }
         }
       }
     },
@@ -271,6 +295,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -383,6 +413,12 @@
             "state" : "translated",
             "value" : "%lld 拍"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld movimenti"
+          }
         }
       }
     },
@@ -449,6 +485,12 @@
             "state" : "translated",
             "value" : "每分鐘 %lld 拍"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld movimenti al minuto"
+          }
         }
       }
     },
@@ -499,6 +541,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -563,6 +611,12 @@
             "state" : "translated",
             "value" : "%lld BPM，%@"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM, %@"
+          }
         }
       }
     },
@@ -623,6 +677,12 @@
             "state" : "translated",
             "value" : "Perfect %lld、Good %lld、Bad %lld"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld perfetti, %lld buoni, %lld sbagliati"
+          }
         }
       }
     },
@@ -676,6 +736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  點選圓點設定拍數"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  tocca i punti per scegliere i movimenti"
           }
         }
       }
@@ -737,6 +803,12 @@
             "state" : "translated",
             "value" : "%lld/4 · %@"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4 · %@"
+          }
         }
       }
     },
@@ -788,6 +860,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "十六分音符"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semicrome"
           }
         }
       }
@@ -841,6 +919,12 @@
             "state" : "translated",
             "value" : "四分音符"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semiminime"
+          }
         }
       }
     },
@@ -893,6 +977,12 @@
             "state" : "translated",
             "value" : "八分音符"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crome"
+          }
         }
       }
     },
@@ -941,6 +1031,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "A4 = %lld Hz"
@@ -999,6 +1095,12 @@
             "state" : "translated",
             "value" : "重音編輯器"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editor degli accenti"
+          }
         }
       }
     },
@@ -1050,6 +1152,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "重音編輯器與預設"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editor degli accenti e preset"
           }
         }
       }
@@ -1105,6 +1213,12 @@
             "state" : "translated",
             "value" : "重音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenti"
+          }
         }
       }
     },
@@ -1157,6 +1271,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "輔助使用"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accessibilità"
           }
         }
       }
@@ -1212,6 +1332,12 @@
             "state" : "translated",
             "value" : "增加 %lld BPM"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi %lld BPM"
+          }
         }
       }
     },
@@ -1265,6 +1391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "所有指令"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutti i comandi"
           }
         }
       }
@@ -1320,6 +1452,12 @@
             "state" : "translated",
             "value" : "套用此節奏型態、拍號與細分"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Applica questo schema, tempo e suddivisione"
+          }
         }
       }
     },
@@ -1373,6 +1511,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "返回"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indietro"
           }
         }
       }
@@ -1428,6 +1572,12 @@
             "state" : "translated",
             "value" : "返回節拍器"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torna al metronomo"
+          }
         }
       }
     },
@@ -1479,6 +1629,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bad"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sbagliato"
           }
         }
       }
@@ -1533,6 +1689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "第 %lld 拍"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Movimento %lld"
           }
         }
       }
@@ -1594,6 +1756,12 @@
             "state" : "translated",
             "value" : "第 %lld 拍，點擊 %lld"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Movimento %lld, click %lld"
+          }
         }
       }
     },
@@ -1653,6 +1821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "第 %lld／%lld 拍"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Movimento %lld di %lld"
           }
         }
       }
@@ -1714,6 +1888,12 @@
             "state" : "translated",
             "value" : "第 %lld／%lld 拍，%@"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Movimento %lld di %lld, %@"
+          }
         }
       }
     },
@@ -1774,6 +1954,12 @@
             "state" : "translated",
             "value" : "第 %lld 拍，點擊 %lld"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Movimento %lld, click %lld"
+          }
         }
       }
     },
@@ -1826,6 +2012,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "拍子檢視"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista movimenti"
           }
         }
       }
@@ -1880,6 +2072,12 @@
             "state" : "translated",
             "value" : "拍數"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Movimenti"
+          }
         }
       }
     },
@@ -1932,6 +2130,12 @@
             "state" : "translated",
             "value" : "彈跳檢視"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista rimbalzo"
+          }
         }
       }
     },
@@ -1982,6 +2186,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -2040,6 +2250,12 @@
             "state" : "translated",
             "value" : "歡迎回報問題與提出功能建議。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segnalazioni di bug e richieste di funzioni sono benvenute."
+          }
         }
       }
     },
@@ -2093,6 +2309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "買斷永久版"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acquista a vita"
           }
         }
       }
@@ -2148,6 +2370,12 @@
             "state" : "translated",
             "value" : "以 %@ 買斷永久版"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acquista a vita a %@"
+          }
         }
       }
     },
@@ -2201,6 +2429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annulla"
           }
         }
       }
@@ -2256,6 +2490,12 @@
             "state" : "translated",
             "value" : "切換檢視"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambia vista"
+          }
         }
       }
     },
@@ -2310,6 +2550,12 @@
             "state" : "translated",
             "value" : "節拍準度檢測"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controlla il ritmo"
+          }
         }
       }
     },
@@ -2361,6 +2607,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "半音階調音器"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accordatore cromatico"
           }
         }
       }
@@ -2415,6 +2667,12 @@
             "state" : "translated",
             "value" : "關閉"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiudi"
+          }
         }
       }
     },
@@ -2466,6 +2724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "關閉面板或提示"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "chiudi un pannello o un suggerimento"
           }
         }
       }
@@ -2521,6 +2785,12 @@
             "state" : "translated",
             "value" : "聯絡開發者"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contatta lo sviluppatore"
+          }
         }
       }
     },
@@ -2575,6 +2845,12 @@
             "state" : "translated",
             "value" : "用語音操控"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controllalo con la voce"
+          }
         }
       }
     },
@@ -2626,6 +2902,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "無法從 App Store 載入價格。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossibile caricare i prezzi dall’App Store."
           }
         }
       }
@@ -2681,6 +2963,12 @@
             "state" : "translated",
             "value" : "自訂重音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personalizza gli accenti"
+          }
         }
       }
     },
@@ -2732,6 +3020,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在高音、低音與靜音之間循環切換"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passa ciclicamente tra acuto, grave e silenzio"
           }
         }
       }
@@ -2787,6 +3081,12 @@
             "state" : "translated",
             "value" : "降低速度"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diminuisci il tempo"
+          }
         }
       }
     },
@@ -2841,6 +3141,12 @@
             "state" : "translated",
             "value" : "刪除預設「%@」"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elimina il preset %@"
+          }
         }
       }
     },
@@ -2892,6 +3198,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "為小節中的每一下點擊設計高音、低音或靜音，並依歌曲儲存節奏型態。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disegna ogni click della battuta — acuto, grave o silenzioso — e salva gli schemi per ogni brano."
           }
         }
       }
@@ -2945,6 +3257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "詳細說明"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guida dettagliata"
           }
         }
       }
@@ -3000,6 +3318,12 @@
             "state" : "translated",
             "value" : "關閉"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiudi"
+          }
         }
       }
     },
@@ -3054,6 +3378,12 @@
             "state" : "translated",
             "value" : "關閉說明"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiudi la guida"
+          }
         }
       }
     },
@@ -3107,6 +3437,12 @@
             "state" : "translated",
             "value" : "完成"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fine"
+          }
         }
       }
     },
@@ -3158,6 +3494,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "加倍 ×2"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doppio ×2"
           }
         }
       }
@@ -3213,6 +3555,12 @@
             "state" : "translated",
             "value" : "連點兩下這裡即可開啟重音格：把小節中的每一下點擊設為高音、低音或靜音，並將節奏型態存成預設。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca due volte qui per aprire la griglia degli accenti: imposta ogni click della battuta su acuto, grave o silenzioso e salva gli schemi come preset."
+          }
         }
       }
     },
@@ -3264,6 +3612,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "連點兩下細分卡片即可編輯整個小節——每個格子會依「高音 → 低音 → 靜音」循環，節奏型態還能命名並存成預設。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca due volte la scheda della suddivisione per modificare l’intera battuta: ogni casella passa da acuto → grave → silenzioso e gli schemi si salvano come preset con un nome."
           }
         }
       }
@@ -3317,6 +3671,12 @@
             "state" : "translated",
             "value" : "連點兩下以開啟重音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca due volte per aprire gli accenti"
+          }
         }
       }
     },
@@ -3369,6 +3729,12 @@
             "state" : "translated",
             "value" : "減少 −1"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giù −1"
+          }
         }
       }
     },
@@ -3420,6 +3786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "拖移速度滑桿，或點選 − / + 按鈕。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trascina il cursore del tempo oppure tocca i pulsanti − / +."
           }
         }
       }
@@ -3475,6 +3847,12 @@
             "state" : "translated",
             "value" : "編輯重音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifica accenti"
+          }
         }
       }
     },
@@ -3527,6 +3905,12 @@
             "state" : "translated",
             "value" : "八分音符"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crome"
+          }
         }
       }
     },
@@ -3578,6 +3962,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "八分"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crome"
           }
         }
       }
@@ -3633,6 +4023,12 @@
             "state" : "translated",
             "value" : "電子郵件"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
         }
       }
     },
@@ -3686,6 +4082,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "寄電子郵件給開發者"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scrivi allo sviluppatore"
           }
         }
       }
@@ -3789,6 +4191,12 @@
             "state" : "translated",
             "value" : "每 %lld 小節"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ogni %lld battute"
+          }
         }
       }
     },
@@ -3840,6 +4248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "小節中的每一下點擊都是獨立的格子，共 %lld 下。點選格子即可循環切換：高音 → 低音 → 靜音。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ogni click della battuta ha la sua casella: %lld click in tutto. Tocca una casella per cambiarla: acuto → grave → silenzioso."
           }
         }
       }
@@ -3895,6 +4309,12 @@
             "state" : "translated",
             "value" : "這裡的所有功能也都能用語音操作，請參閱下方的指令。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutto questo funziona anche a voce: guarda i comandi qui sotto."
+          }
         }
       }
     },
@@ -3949,6 +4369,12 @@
             "state" : "translated",
             "value" : "加快"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Più veloce"
+          }
         }
       }
     },
@@ -4000,6 +4426,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "加快 +5"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Più veloce +5"
           }
         }
       }
@@ -4055,6 +4487,12 @@
             "state" : "translated",
             "value" : "忘了指令嗎？"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai dimenticato un comando?"
+          }
         }
       }
     },
@@ -4109,6 +4547,12 @@
             "state" : "translated",
             "value" : "永久免費，不需解鎖："
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gratis per sempre, senza sblocco:"
+          }
         }
       }
     },
@@ -4160,6 +4604,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "免費試用"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratuita"
           }
         }
       }
@@ -4213,6 +4663,12 @@
             "state" : "translated",
             "value" : "Good"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buono"
+          }
         }
       }
     },
@@ -4265,6 +4721,12 @@
             "state" : "translated",
             "value" : "減半 ÷2"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metà ÷2"
+          }
         }
       }
     },
@@ -4316,6 +4778,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "聽到：%@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sentito: %@"
           }
         }
       }
@@ -4371,6 +4839,12 @@
             "state" : "translated",
             "value" : "說明"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aiuto"
+          }
         }
       }
     },
@@ -4424,6 +4898,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "說明導覽"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navigazione dell’aiuto"
           }
         }
       }
@@ -4479,6 +4959,12 @@
             "state" : "translated",
             "value" : "高音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suono acuto"
+          }
         }
       }
     },
@@ -4533,6 +5019,12 @@
             "state" : "translated",
             "value" : "我使用 iOS 語音控制"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uso il Controllo vocale di iOS"
+          }
         }
       }
     },
@@ -4584,6 +5076,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在軌道檢視中，播放時點選圓環——每一下點擊（包含細分）都是目標。移動的圓點會在你點選的位置留下殘影，彩色計數器會統計 Perfect／Good／Bad，直到你停止為止。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nella vista orbita, tocca l’anello mentre suona: ogni click (suddivisioni comprese) è un bersaglio. Il punto in movimento lascia un’ombra dove hai toccato e i contatori colorati contano Perfetto / Buono / Sbagliato finché non ti fermi."
           }
         }
       }
@@ -4639,6 +5137,12 @@
             "state" : "translated",
             "value" : "提高速度"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aumenta il tempo"
+          }
         }
       }
     },
@@ -4689,6 +5193,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -4747,6 +5257,12 @@
             "state" : "translated",
             "value" : "Instagram 私訊"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Messaggio su Instagram"
+          }
         }
       }
     },
@@ -4800,6 +5316,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram 私訊（@lee25_ios）"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Messaggio su Instagram (@lee25_ios)"
           }
         }
       }
@@ -4855,6 +5377,12 @@
             "state" : "translated",
             "value" : "樂器訊號"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segnale dello strumento"
+          }
         }
       }
     },
@@ -4908,6 +5436,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "包含在 Pro 中——三項練習工具，一次解鎖。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "è incluso in Pro: tre strumenti di pratica, un solo sblocco."
           }
         }
       }
@@ -4963,6 +5497,12 @@
             "state" : "translated",
             "value" : "Largo？Moderato？"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
         }
       }
     },
@@ -5017,6 +5557,12 @@
             "state" : "translated",
             "value" : "永久版"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A vita"
+          }
         }
       }
     },
@@ -5068,6 +5614,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "永久版——一次 %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A vita — %@ una tantum"
           }
         }
       }
@@ -5121,6 +5673,12 @@
             "state" : "translated",
             "value" : "列出你可以說的指令"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "elenca i comandi che puoi dire"
+          }
         }
       }
     },
@@ -5173,6 +5731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "聆聽"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ascolta"
           }
         }
       }
@@ -5228,6 +5792,12 @@
             "state" : "translated",
             "value" : "聆聽語音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ascolta la voce"
+          }
         }
       }
     },
@@ -5281,6 +5851,12 @@
             "state" : "translated",
             "value" : "聆聽中"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In ascolto"
+          }
         }
       }
     },
@@ -5332,6 +5908,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "聆聽中…"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In ascolto…"
           }
         }
       }
@@ -5387,6 +5969,12 @@
             "state" : "translated",
             "value" : "聆聽中…每個音請按住"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In ascolto… tieni ogni nota"
+          }
         }
       }
     },
@@ -5440,6 +6028,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在載入價格…"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caricamento prezzi…"
           }
         }
       }
@@ -5495,6 +6089,12 @@
             "state" : "translated",
             "value" : "低音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suono grave"
+          }
         }
       }
     },
@@ -5548,6 +6148,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "專為語音控制設計"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pensata per il Controllo vocale"
           }
         }
       }
@@ -5603,6 +6209,12 @@
             "state" : "translated",
             "value" : "節拍器模式"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modalità metronomo"
+          }
         }
       }
     },
@@ -5654,6 +6266,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "麥克風／語音辨識已封鎖——請至「設定」開啟"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Microfono/voce bloccati: attivali in Impostazioni"
           }
         }
       }
@@ -5709,6 +6327,12 @@
             "state" : "translated",
             "value" : "減"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meno"
+          }
         }
       }
     },
@@ -5762,6 +6386,12 @@
             "state" : "translated",
             "value" : "更多"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altro"
+          }
         }
       }
     },
@@ -5813,6 +6443,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "移動此列表"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sposta questo elenco"
           }
         }
       }
@@ -5866,6 +6502,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "靜音"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muto"
           }
         }
       }
@@ -5921,6 +6563,12 @@
             "state" : "translated",
             "value" : "將語音控制靜音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Silenzia il controllo vocale"
+          }
         }
       }
     },
@@ -5974,6 +6622,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "名稱（例如：Bossa 前奏）"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nome (es. Intro bossa)"
           }
         }
       }
@@ -6029,6 +6683,12 @@
             "state" : "translated",
             "value" : "需要使用本 App 的麥克風——請關閉「我使用 iOS 語音控制」。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serve il microfono di questa app: disattiva “Uso il Controllo vocale di iOS” per usarlo."
+          }
         }
       }
     },
@@ -6080,6 +6740,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "未偵測到音符，請彈奏一個音"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessuna nota rilevata, suona una nota"
           }
         }
       }
@@ -6133,6 +6799,12 @@
             "state" : "translated",
             "value" : "找不到先前的購買項目。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non è stato trovato nessun acquisto precedente."
+          }
         }
       }
     },
@@ -6181,6 +6853,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -6239,6 +6917,12 @@
             "state" : "translated",
             "value" : "稍後再說"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non ora"
+          }
         }
       }
     },
@@ -6293,6 +6977,12 @@
             "state" : "translated",
             "value" : "音符"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nota"
+          }
         }
       }
     },
@@ -6345,6 +7035,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "音符"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note"
           }
         }
       }
@@ -6400,6 +7096,12 @@
             "state" : "translated",
             "value" : "螢幕操作"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sullo schermo"
+          }
         }
       }
     },
@@ -6452,6 +7154,12 @@
             "state" : "translated",
             "value" : "開啟"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri"
+          }
         }
       }
     },
@@ -6503,6 +7211,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟重音編輯器"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri l’editor degli accenti"
           }
         }
       }
@@ -6558,6 +7272,12 @@
             "state" : "translated",
             "value" : "開啟重音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri gli accenti"
+          }
         }
       }
     },
@@ -6609,6 +7329,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請從下方的拍子檢視開啟，或說「practice」。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aprilo dalla vista movimenti qui sotto, oppure dì “practice”."
           }
         }
       }
@@ -6664,6 +7390,12 @@
             "state" : "translated",
             "value" : "開啟練習"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri la pratica"
+          }
         }
       }
     },
@@ -6718,6 +7450,12 @@
             "state" : "translated",
             "value" : "開啟練習模式"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri la modalità pratica"
+          }
         }
       }
     },
@@ -6769,6 +7507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟練習模式"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "apri la modalità pratica"
           }
         }
       }
@@ -6822,6 +7566,12 @@
             "state" : "translated",
             "value" : "開啟調音器"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "apri l’accordatore"
+          }
         }
       }
     },
@@ -6873,6 +7623,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "軌道檢視"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista orbita"
           }
         }
       }
@@ -6928,6 +7684,12 @@
             "state" : "translated",
             "value" : "暫停"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pausa"
+          }
         }
       }
     },
@@ -6982,6 +7744,12 @@
             "state" : "translated",
             "value" : "一次付費，永久擁有"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paghi una volta, è tuo per sempre"
+          }
         }
       }
     },
@@ -7033,6 +7801,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfect！"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfetto!"
           }
         }
       }
@@ -7087,6 +7861,12 @@
             "state" : "translated",
             "value" : "播放"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riproduci"
+          }
         }
       }
     },
@@ -7138,6 +7918,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "播放／暫停"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "riproduci / pausa"
           }
         }
       }
@@ -7191,6 +7977,12 @@
             "state" : "translated",
             "value" : "彈奏 2 至 5 個音，每個音約半秒。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suona 2–5 note, circa mezzo secondo ciascuna."
+          }
         }
       }
     },
@@ -7242,6 +8034,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "彈奏一個音…"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suona una nota…"
           }
         }
       }
@@ -7297,6 +8095,12 @@
             "state" : "translated",
             "value" : "彈奏你的樂句即可開始或停止點擊聲，演奏到一半也可以。每個音請按住約半秒，以免演奏中的快速音符誤觸發。聆聽開啟時才會運作。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suona la tua frase per avviare o fermare il click, anche a metà brano. Tieni ogni nota per circa mezzo secondo, così le note veloci del tuo modo di suonare non lo fanno scattare. Funziona con Ascolta attivo."
+          }
         }
       }
     },
@@ -7350,6 +8154,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "播放"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riproduzione"
           }
         }
       }
@@ -7405,6 +8215,12 @@
             "state" : "translated",
             "value" : "加"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Più"
+          }
         }
       }
     },
@@ -7457,6 +8273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "練習"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pratica"
           }
         }
       }
@@ -7511,6 +8333,12 @@
             "state" : "translated",
             "value" : "練習模式"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modalità pratica"
+          }
         }
       }
     },
@@ -7562,6 +8390,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "練習模式 · 重音編輯器與預設 · 調音器"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modalità pratica · editor degli accenti e preset · accordatore"
           }
         }
       }
@@ -7617,6 +8451,12 @@
             "state" : "translated",
             "value" : "預設「%@」"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset %@"
+          }
         }
       }
     },
@@ -7670,6 +8510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "預設"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset"
           }
         }
       }
@@ -7725,6 +8571,12 @@
             "state" : "translated",
             "value" : "隱私權政策"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informativa sulla privacy"
+          }
         }
       }
     },
@@ -7777,6 +8629,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hant/privacy.html"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/it/privacy.html"
+          }
         }
       }
     },
@@ -7825,6 +8683,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -7883,6 +8747,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -7934,6 +8804,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro 已解鎖——謝謝你！"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro sbloccato: grazie!"
           }
         }
       }
@@ -7987,6 +8863,12 @@
             "state" : "translated",
             "value" : "四分音符"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semiminime"
+          }
         }
       }
     },
@@ -8039,6 +8921,12 @@
             "state" : "translated",
             "value" : "四分"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quarti"
+          }
         }
       }
     },
@@ -8090,6 +8978,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "每隔幾小節自動加快速度——讓樂段越練越快，完全不用動手。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aumenta il tempo in automatico ogni poche battute: porta un passaggio a velocità più alta, a mani libere."
           }
         }
       }
@@ -8145,6 +9039,12 @@
             "state" : "translated",
             "value" : "演奏時每隔幾小節自動加快速度，適合循序漸進地把樂段練快，到達目標速度就會停止。隨時說「practice」即可開啟。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aumenta il tempo in automatico ogni poche battute mentre suoni, per portare gradualmente un passaggio a velocità più alta. Si ferma al tempo obiettivo. Dì “practice” in qualsiasi momento per aprirlo."
+          }
         }
       }
     },
@@ -8198,6 +9098,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請先錄下一段短樂句。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registra prima una breve frase."
           }
         }
       }
@@ -8253,6 +9159,12 @@
             "state" : "translated",
             "value" : "重新錄製"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registra di nuovo"
+          }
         }
       }
     },
@@ -8307,6 +9219,12 @@
             "state" : "translated",
             "value" : "錄製訊號"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registra il segnale"
+          }
         }
       }
     },
@@ -8358,6 +9276,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "基準音高"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altezza di riferimento"
           }
         }
       }
@@ -8413,6 +9337,12 @@
             "state" : "translated",
             "value" : "需要 Pro"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richiede Pro"
+          }
         }
       }
     },
@@ -8466,6 +9396,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "重置"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripristina"
           }
         }
       }
@@ -8521,6 +9457,12 @@
             "state" : "translated",
             "value" : "還原"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripristina"
+          }
         }
       }
     },
@@ -8574,6 +9516,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "還原購買項目"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripristina gli acquisti"
           }
         }
       }
@@ -8629,6 +9577,12 @@
             "state" : "translated",
             "value" : "還原購買項目"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripristina gli acquisti"
+          }
         }
       }
     },
@@ -8682,6 +9636,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "還原先前購買的 Pro"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripristina un acquisto Pro precedente"
           }
         }
       }
@@ -8737,6 +9697,12 @@
             "state" : "translated",
             "value" : "還原此拍號的預設節奏型態"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripristina lo schema predefinito per questo tempo"
+          }
         }
       }
     },
@@ -8790,6 +9756,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "儲存"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva"
           }
         }
       }
@@ -8845,6 +9817,12 @@
             "state" : "translated",
             "value" : "依歌曲儲存節奏型態——叫出時也會一併還原拍號與細分。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva uno schema per ogni brano: richiamandolo ripristini anche tempo e suddivisione."
+          }
         }
       }
     },
@@ -8898,6 +9876,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "儲存目前的節奏型態…"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva lo schema attuale…"
           }
         }
       }
@@ -8953,6 +9937,12 @@
             "state" : "translated",
             "value" : "儲存節奏型態"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva schema"
+          }
         }
       }
     },
@@ -9006,6 +9996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "儲存預設"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva preset"
           }
         }
       }
@@ -9061,6 +10057,12 @@
             "state" : "translated",
             "value" : "將此節奏型態連同拍號與細分一起儲存，之後可依歌曲叫出。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva questo schema con il suo tempo e la sua suddivisione, per richiamarlo brano per brano."
+          }
         }
       }
     },
@@ -9114,6 +10116,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "說"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dì"
           }
         }
       }
@@ -9169,6 +10177,12 @@
             "state" : "translated",
             "value" : "說「close」即可離開"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “close” per uscire"
+          }
         }
       }
     },
@@ -9220,6 +10234,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "說「start」「faster」或「help」"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “start”, “faster” o “help”"
           }
         }
       }
@@ -9274,6 +10294,12 @@
             "state" : "translated",
             "value" : "說出指令"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì un comando"
+          }
         }
       }
     },
@@ -9325,6 +10351,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "說「close」／「done」，或點選「完成」。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “close” / “done”, oppure tocca Fine."
           }
         }
       }
@@ -9380,6 +10412,12 @@
             "state" : "translated",
             "value" : "說「close」或點選即可關閉"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “close” o tocca per chiudere"
+          }
         }
       }
     },
@@ -9434,6 +10472,12 @@
             "state" : "translated",
             "value" : "隨時說「help」——或點選這裡——即可查看所有能說的指令，再說「close」關閉。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “help” quando vuoi, oppure tocca qui, per vedere ogni comando che puoi dire, poi “close” per chiudere."
+          }
         }
       }
     },
@@ -9486,6 +10530,12 @@
             "state" : "translated",
             "value" : "說「help」或點選 ? 按鈕。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “help” o tocca il pulsante ?."
+          }
         }
       }
     },
@@ -9537,6 +10587,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "說「louder」／「quieter」／「mute」，或說「volume 60」。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “louder” / “quieter” / “mute”, oppure “volume 60”."
           }
         }
       }
@@ -9592,6 +10648,12 @@
             "state" : "translated",
             "value" : "說「practice」，演奏時就會每隔幾小節自動加快速度——非常適合速度練習。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “practice” per aumentare il tempo in automatico ogni poche battute mentre suoni: ottimo per gli esercizi di velocità."
+          }
         }
       }
     },
@@ -9644,6 +10706,12 @@
             "state" : "translated",
             "value" : "說「scroll down」／「scroll up」，或用滑動的方式。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “scroll down” / “scroll up”, oppure scorri con il dito."
+          }
         }
       }
     },
@@ -9695,6 +10763,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "說「tune」並彈奏——會顯示音名、音分與音準區間。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “tune” e suona: nota, cent e zona di intonazione."
           }
         }
       }
@@ -9750,6 +10824,12 @@
             "state" : "translated",
             "value" : "說「tune」開啟半音階調音器，完成後說「close」。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “tune” per aprire l’accordatore cromatico e “close” quando hai finito."
+          }
         }
       }
     },
@@ -9801,6 +10881,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "捲動"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorri"
           }
         }
       }
@@ -9854,6 +10940,12 @@
             "state" : "translated",
             "value" : "向下捲動"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorri in giù"
+          }
         }
       }
     },
@@ -9905,6 +10997,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "向上捲動"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorri in su"
           }
         }
       }
@@ -9960,6 +11058,12 @@
             "state" : "translated",
             "value" : "捲動"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorrimento"
+          }
         }
       }
     },
@@ -10011,6 +11115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定拍數"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imposta i movimenti"
           }
         }
       }
@@ -10064,6 +11174,12 @@
             "state" : "translated",
             "value" : "設定百分比"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "imposta la percentuale"
+          }
         }
       }
     },
@@ -10116,6 +11232,12 @@
             "state" : "translated",
             "value" : "設定拍號"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "imposta il tempo in battuta"
+          }
         }
       }
     },
@@ -10167,6 +11289,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定數值"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "imposta il valore"
           }
         }
       }
@@ -10222,6 +11350,12 @@
             "state" : "translated",
             "value" : "設為 %lld/4 拍"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imposta il tempo in %lld/4"
+          }
         }
       }
     },
@@ -10276,6 +11410,12 @@
             "state" : "translated",
             "value" : "訊號：%@"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segnale: %@"
+          }
         }
       }
     },
@@ -10327,6 +11467,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "讓點擊聲靜音"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "silenzia il click"
           }
         }
       }
@@ -10382,6 +11528,12 @@
             "state" : "translated",
             "value" : "靜音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Silenzioso"
+          }
         }
       }
     },
@@ -10434,6 +11586,12 @@
             "state" : "translated",
             "value" : "十六分音符"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semicrome"
+          }
         }
       }
     },
@@ -10485,6 +11643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "十六分"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sedicesimi"
           }
         }
       }
@@ -10540,6 +11704,12 @@
             "state" : "translated",
             "value" : "減慢"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Più lento"
+          }
         }
       }
     },
@@ -10592,6 +11762,12 @@
             "state" : "translated",
             "value" : "減慢 −5"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Più lento −5"
+          }
         }
       }
     },
@@ -10643,6 +11819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "此處無法使用語音辨識"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riconoscimento vocale non disponibile qui"
           }
         }
       }
@@ -10697,6 +11879,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "速度訓練器"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allenatore di velocità"
           }
         }
       }
@@ -10756,6 +11944,12 @@
             "state" : "translated",
             "value" : "速度訓練器 · 每 %lld 小節 +%lld → %lld"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allenatore di velocità · +%lld ogni %lld battute → %lld"
+          }
         }
       }
     },
@@ -10808,6 +12002,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開始"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avvia"
           }
         }
       }
@@ -10863,6 +12063,12 @@
             "state" : "translated",
             "value" : "用我的樂器開始／停止"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avvia / ferma con il mio strumento"
+          }
         }
       }
     },
@@ -10916,6 +12122,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開始聆聽"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inizia ad ascoltare"
           }
         }
       }
@@ -10971,6 +12183,12 @@
             "state" : "translated",
             "value" : "開始節拍器"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avvia il metronomo"
+          }
         }
       }
     },
@@ -11023,6 +12241,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "停止"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ferma"
           }
         }
       }
@@ -11078,6 +12302,12 @@
             "state" : "translated",
             "value" : "停止聆聽"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smetti di ascoltare"
+          }
         }
       }
     },
@@ -11132,6 +12362,12 @@
             "state" : "translated",
             "value" : "停止節拍器"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ferma il metronomo"
+          }
         }
       }
     },
@@ -11184,6 +12420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "細分"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suddivisione"
           }
         }
       }
@@ -11239,6 +12481,12 @@
             "state" : "translated",
             "value" : "訂閱"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbonati"
+          }
         }
       }
     },
@@ -11293,6 +12541,12 @@
             "state" : "translated",
             "value" : "以 %@ 訂閱一年"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbonati per un anno a %@"
+          }
         }
       }
     },
@@ -11344,6 +12598,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "支援"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supporto"
           }
         }
       }
@@ -11397,6 +12657,12 @@
             "state" : "translated",
             "value" : "切換為彈跳檢視"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passa alla vista rimbalzo"
+          }
         }
       }
     },
@@ -11448,6 +12714,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "切換為軌道檢視"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passa alla vista orbita"
           }
         }
       }
@@ -11503,6 +12775,12 @@
             "state" : "translated",
             "value" : "切換為環形掃描檢視"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passa alla vista anello"
+          }
         }
       }
     },
@@ -11557,6 +12835,12 @@
             "state" : "translated",
             "value" : "切換檢視"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambia vista"
+          }
         }
       }
     },
@@ -11609,6 +12893,12 @@
             "state" : "translated",
             "value" : "切換視覺效果"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "cambia visualizzazione"
+          }
         }
       }
     },
@@ -11660,6 +12950,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "點選 1/4、1/8、三連音或 1/16。連點兩下卡片即可開啟重音，把小節中的每一下點擊設為高音、低音或靜音。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca 1/4, 1/8, Terzina o 1/16. Tocca due volte la scheda per aprire gli accenti e impostare ogni click della battuta su acuto, grave o silenzioso."
           }
         }
       }
@@ -11715,6 +13011,12 @@
             "state" : "translated",
             "value" : "跟著節奏點選，檢測你的拍子準度"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca a ritmo per controllare il tuo tempo"
+          }
         }
       }
     },
@@ -11766,6 +13068,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "點選「聆聽」以用語音操控"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca Ascolta per usare la voce"
           }
         }
       }
@@ -11819,6 +13127,12 @@
             "state" : "translated",
             "value" : "點選「聆聽」即可開啟或關閉語音控制。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca Ascolta per attivare o disattivare il controllo vocale."
+          }
         }
       }
     },
@@ -11870,6 +13184,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "點選底部的「開始／停止」。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca Avvia / Ferma in basso."
           }
         }
       }
@@ -11925,6 +13245,12 @@
             "state" : "translated",
             "value" : "點拍定速"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap tempo"
+          }
         }
       }
     },
@@ -11976,6 +13302,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "跟著節奏點選大大的 BPM 數字即可設定速度。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca a ritmo il grande numero dei BPM per impostare il tempo."
           }
         }
       }
@@ -12029,6 +13361,12 @@
             "state" : "translated",
             "value" : "點選圓點即可選擇拍號。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca i punti per scegliere il tempo in battuta."
+          }
         }
       }
     },
@@ -12080,6 +13418,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "點選檢視圖示（拍子卡片右上角）——彈跳 → 軌道 → 環形掃描。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca l’icona della vista (in alto a destra nella scheda dei movimenti): rimbalzo → orbita → anello."
           }
         }
       }
@@ -12135,6 +13479,12 @@
             "state" : "translated",
             "value" : "點選即可在彈跳球與軌道圓環之間切換——或說「bounce」／「orbit」。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca per passare dalla pallina che rimbalza all’anello orbitale, oppure dì “bounce” / “orbit”."
+          }
         }
       }
     },
@@ -12189,6 +13539,12 @@
             "state" : "translated",
             "value" : "點選即可在速度名稱與 BPM 之間切換"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca per passare dal nome del tempo ai BPM"
+          }
         }
       }
     },
@@ -12242,6 +13598,12 @@
             "state" : "translated",
             "value" : "速度"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
+          }
         }
       }
     },
@@ -12293,6 +13655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "速度 %lld"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo %lld"
           }
         }
       }
@@ -12348,6 +13716,12 @@
             "state" : "translated",
             "value" : "速度滑桿"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursore del tempo"
+          }
         }
       }
     },
@@ -12401,6 +13775,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "使用條款（EULA）"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Condizioni d’uso (EULA)"
           }
         }
       }
@@ -12456,6 +13836,12 @@
             "state" : "translated",
             "value" : "這是以古典術語表示的速度。點選即可切換為 BPM 數字，再點一次則切換回來。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "È il tuo tempo come termine classico. Toccalo per passare al numero dei BPM e viceversa."
+          }
         }
       }
     },
@@ -12509,6 +13895,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "本 App 自己的麥克風已關閉，以免與語音控制衝突。請說「Tap Start」「Tap Faster」或「Tap 3 beats」。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il microfono dell’app è spento per non andare in conflitto con il Controllo vocale. Dì “Tap Start”, “Tap Faster” o “Tap 3 beats”."
           }
         }
       }
@@ -12564,6 +13956,12 @@
             "state" : "translated",
             "value" : "完整的節拍器——所有速度、拍號與細分——包含三種拍子檢視、點拍定速、節拍準度檢測，以及完整的免手持語音控制。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il metronomo completo — ogni tempo, misura e suddivisione — con tutte e tre le viste, tap tempo, controllo del ritmo e controllo vocale a mani libere al completo."
+          }
         }
       }
     },
@@ -12617,6 +14015,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "麥克風已在聆聽——請說「start」「faster」或「help」。使用 iOS 語音控制嗎？請開啟「語音指令」進行切換。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il microfono è già in ascolto: dì “start”, “faster” o “help”. Usi il Controllo vocale di iOS? Apri Comandi vocali per cambiare."
           }
         }
       }
@@ -12672,6 +14076,12 @@
             "state" : "translated",
             "value" : "年度方案會以每年 %@ 自動續訂，除非在續訂前至少 24 小時於「設定」>「Apple 帳號」>「訂閱項目」中取消。永久版為一次性收費。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’abbonamento annuale si rinnova automaticamente a %@ all’anno, salvo disdetta almeno 24 ore prima del rinnovo, in Impostazioni > Account Apple > Abbonamenti. L’acquisto a vita è un unico pagamento."
+          }
         }
       }
     },
@@ -12726,6 +14136,12 @@
             "state" : "translated",
             "value" : "還有調音器"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "C’è anche un accordatore"
+          }
         }
       }
     },
@@ -12777,6 +14193,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "節拍準度檢測"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controllo del ritmo"
           }
         }
       }
@@ -12832,6 +14254,12 @@
             "state" : "translated",
             "value" : "提示"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggerimenti"
+          }
         }
       }
     },
@@ -12886,6 +14314,12 @@
             "state" : "translated",
             "value" : "訓練器"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allenatore"
+          }
         }
       }
     },
@@ -12938,6 +14372,12 @@
             "state" : "translated",
             "value" : "三連音"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terzine"
+          }
         }
       }
     },
@@ -12989,6 +14429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "三連音"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "terzine"
           }
         }
       }
@@ -13043,6 +14489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "再試一次"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riprova"
           }
         }
       }
@@ -13144,6 +14596,12 @@
             "state" : "translated",
             "value" : "免費試用 %lld 天"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis per %lld giorni"
+          }
         }
       }
     },
@@ -13231,6 +14689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "免費試用 %lld 個月"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis per %lld mesi"
           }
         }
       }
@@ -13332,6 +14796,12 @@
             "state" : "translated",
             "value" : "免費試用 %lld 週"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis per %lld settimane"
+          }
         }
       }
     },
@@ -13383,6 +14853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "免費試用一個月"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis per un mese"
           }
         }
       }
@@ -13436,6 +14912,12 @@
             "state" : "translated",
             "value" : "免費試用一週"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis per una settimana"
+          }
         }
       }
     },
@@ -13487,6 +14969,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "免費試用一年"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis per un anno"
           }
         }
       }
@@ -13540,6 +15028,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "調音器"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accordatore"
           }
         }
       }
@@ -13595,6 +15089,12 @@
             "state" : "translated",
             "value" : "關閉本 App 自己的麥克風，改以按鈕名稱操作"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spegne il microfono dell’app e controlla i pulsanti per nome"
+          }
         }
       }
     },
@@ -13646,6 +15146,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "關閉本 App 的麥克風，以免兩者衝突。請說「Tap Start」「Tap Faster」「Tap 3 beats」來操作。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spegne il microfono di questa app per evitare conflitti. Controllala dicendo “Tap Start”, “Tap Faster”, “Tap 3 beats”."
           }
         }
       }
@@ -13701,6 +15207,12 @@
             "state" : "translated",
             "value" : "兩種拍子檢視"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Due viste dei movimenti"
+          }
         }
       }
     },
@@ -13753,6 +15265,12 @@
             "state" : "translated",
             "value" : "解鎖 Pro"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sblocca Pro"
+          }
         }
       }
     },
@@ -13804,6 +15322,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "加 +1"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Su +1"
           }
         }
       }
@@ -13859,6 +15383,12 @@
             "state" : "translated",
             "value" : "最高 %lld BPM"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fino a %lld BPM"
+          }
         }
       }
     },
@@ -13910,6 +15440,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "升級"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passa a Pro"
           }
         }
       }
@@ -13964,6 +15500,12 @@
             "state" : "translated",
             "value" : "檢視"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista"
+          }
         }
       }
     },
@@ -14015,6 +15557,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "語音"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voce"
           }
         }
       }
@@ -14070,6 +15618,12 @@
             "state" : "translated",
             "value" : "語音指令"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comandi vocali"
+          }
         }
       }
     },
@@ -14122,6 +15676,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "語音指令"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comandi vocali"
           }
         }
       }
@@ -14176,6 +15736,12 @@
             "state" : "translated",
             "value" : "語音控制已關閉"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controllo vocale disattivato"
+          }
         }
       }
     },
@@ -14229,6 +15795,12 @@
             "state" : "translated",
             "value" : "音量"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volume"
+          }
         }
       }
     },
@@ -14280,6 +15852,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "音量 %lld%%"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volume %lld%%"
           }
         }
       }
@@ -14333,6 +15911,12 @@
             "state" : "translated",
             "value" : "調低音量"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbassa il volume"
+          }
         }
       }
     },
@@ -14384,6 +15968,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "調高音量"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alza il volume"
           }
         }
       }
@@ -14439,6 +16029,12 @@
             "state" : "translated",
             "value" : "每年"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuale"
+          }
         }
       }
     },
@@ -14491,6 +16087,12 @@
             "state" : "translated",
             "value" : "每年——%@"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuale — %@"
+          }
         }
       }
     },
@@ -14539,6 +16141,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -14595,6 +16203,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -14643,6 +16257,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -14699,6 +16319,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -14750,6 +16376,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ 停止"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ Ferma"
           }
         }
       }
@@ -14803,6 +16435,12 @@
             "state" : "translated",
             "value" : "▶ 開始"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ Avvia"
+          }
         }
       }
     },
@@ -14854,6 +16492,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "計時器"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer"
           }
         }
       }
@@ -14907,6 +16551,12 @@
             "state" : "translated",
             "value" : "關閉"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spento"
+          }
         }
       }
     },
@@ -14958,6 +16608,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "練習計時器"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer di pratica"
           }
         }
       }
@@ -15011,6 +16667,12 @@
             "state" : "translated",
             "value" : "%lld 分鐘"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
         }
       }
     },
@@ -15062,6 +16724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "剩餘時間"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo rimasto"
           }
         }
       }
@@ -15115,6 +16783,12 @@
             "state" : "translated",
             "value" : "重置計時器"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Azzera il timer"
+          }
         }
       }
     },
@@ -15166,6 +16840,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "計時器已關閉"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer spento"
           }
         }
       }
@@ -15219,6 +16899,12 @@
             "state" : "translated",
             "value" : "計時器 %lld 分鐘"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer %lld min"
+          }
         }
       }
     },
@@ -15270,6 +16956,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "剩 %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mancano %@"
           }
         }
       }
@@ -15323,6 +17015,12 @@
             "state" : "translated",
             "value" : "練習時間到了"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tempo di pratica è finito"
+          }
         }
       }
     },
@@ -15374,6 +17072,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定練習計時器"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "imposta un timer di pratica"
           }
         }
       }
@@ -15427,6 +17131,12 @@
             "state" : "translated",
             "value" : "關閉計時器"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "spegni il timer"
+          }
         }
       }
     },
@@ -15478,6 +17188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "點選「開始」旁的計時器按鈕，或說「timer 5 minutes」。點擊聲播放時會倒數，時間到會停止並響起提示音。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca il pulsante del timer accanto ad Avvia, oppure dì “timer 5 minutes”. Il conto alla rovescia procede mentre suona il click, poi si ferma con un suono."
           }
         }
       }
@@ -15531,6 +17247,12 @@
             "state" : "translated",
             "value" : "點擊聲播放時倒數，停止時暫停。時間到，節拍器會停止並響起提示音。隨時說「timer 5 minutes」或「timer off」都可以。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il conto alla rovescia procede mentre suona il click e si mette in pausa quando ti fermi. Allo scadere il metronomo si ferma con un suono. Dì “timer 5 minutes” o “timer off” in qualsiasi momento."
+          }
         }
       }
     },
@@ -15582,6 +17304,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "分享匿名使用統計資料"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Condividi statistiche d’uso anonime"
           }
         }
       }
@@ -15635,6 +17363,12 @@
             "state" : "translated",
             "value" : "隱私權"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
+          }
         }
       }
     },
@@ -15686,6 +17420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "例如有多少裝置在使用本 App，以及當機報告。不含音訊、設定或個人資訊。下次啟動時生效。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dati come quanti dispositivi usano l’app e i rapporti sugli arresti anomali. Nessun audio, impostazione o dato personale. Vale dal prossimo avvio."
           }
         }
       }
@@ -15740,6 +17480,12 @@
             "state" : "translated",
             "value" : "更大的文字"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testo ancora più grande"
+          }
         }
       }
     },
@@ -15792,6 +17538,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "即使在最大的文字大小下，畫面仍然清楚易讀、整齊不亂。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lo schermo resta leggibile e in ordine anche con le dimensioni di testo più grandi."
           }
         }
       }
@@ -15846,6 +17598,12 @@
             "state" : "translated",
             "value" : "更容易辨識的顏色"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colori più facili da vedere"
+          }
         }
       }
     },
@@ -15898,6 +17656,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟「提高對比」，或不易分辨顏色時，拍子與節奏準度的顏色依然清楚。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I colori dei movimenti e del ritmo restano chiari con Aumenta contrasto o se è difficile distinguere i colori."
           }
         }
       }
@@ -15952,6 +17716,12 @@
             "state" : "translated",
             "value" : "鍵盤操作"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controllo da tastiera"
+          }
         }
       }
     },
@@ -16004,6 +17774,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在連接鍵盤的 iPad 上，可用按鍵開始、停止並調整速度。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Su iPad con tastiera, avvia, ferma e cambia il tempo con i tasti."
           }
         }
       }
@@ -16058,6 +17834,12 @@
             "state" : "translated",
             "value" : "新功能"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Novità"
+          }
         }
       }
     },
@@ -16110,6 +17892,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "更新後，第一次開啟 App 時會看到新增了什麼。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dopo un aggiornamento, vedi le novità la prima volta che apri l’app."
           }
         }
       }
@@ -16164,6 +17952,12 @@
             "state" : "translated",
             "value" : "回覆你的意見回饋"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Risposte ai tuoi feedback"
+          }
         }
       }
     },
@@ -16216,6 +18010,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "直接在 App 內閱讀我們對你意見回饋的回覆。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leggi le nostre risposte ai tuoi feedback direttamente nell’app."
           }
         }
       }
@@ -16270,6 +18070,12 @@
             "state" : "translated",
             "value" : "贈送 Pro"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regala Pro"
+          }
         }
       }
     },
@@ -16322,6 +18128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "把 Not My Tempo Pro 送給團員或學生。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regala Not My Tempo Pro a un compagno di band o a un allievo."
           }
         }
       }
@@ -16376,6 +18188,12 @@
             "state" : "translated",
             "value" : "主畫面小工具"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget nella schermata Home"
+          }
         }
       }
     },
@@ -16428,6 +18246,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "不用開啟 App，直接從主畫面開始點擊聲。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avvia il click dalla schermata Home senza aprire l’app."
           }
         }
       }
@@ -16482,6 +18306,12 @@
             "state" : "translated",
             "value" : "Siri 與捷徑"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri e Comandi rapidi"
+          }
         }
       }
     },
@@ -16534,6 +18364,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請 Siri 或執行捷徑，以你的速度開始點擊聲。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiedi a Siri o esegui un comando rapido per avviare il click al tuo tempo."
           }
         }
       }
@@ -16588,6 +18424,12 @@
             "state" : "translated",
             "value" : "跨裝置同步"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronizzazione tra dispositivi"
+          }
         }
       }
     },
@@ -16640,6 +18482,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "你的預設與設定會在 iPhone 與 iPad 之間同步。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I tuoi preset e le impostazioni ti seguono tra iPhone e iPad."
           }
         }
       }
@@ -16694,6 +18542,12 @@
             "state" : "translated",
             "value" : "備份你的預設"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva i tuoi preset"
+          }
         }
       }
     },
@@ -16746,6 +18600,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "把重音預設存成檔案，隨時都能還原。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva i preset degli accenti in un file e recuperali quando vuoi."
           }
         }
       }
@@ -16800,6 +18660,12 @@
             "state" : "translated",
             "value" : "練習提醒"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Promemoria di pratica"
+          }
         }
       }
     },
@@ -16852,6 +18718,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在你選定的時間，收到溫和的練習提醒。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ricevi un promemoria gentile all’ora che scegli per esercitarti."
           }
         }
       }
@@ -16906,6 +18778,12 @@
             "state" : "translated",
             "value" : "可摺疊 iPhone 版面"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layout per iPhone pieghevole"
+          }
         }
       }
     },
@@ -16958,6 +18836,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在可摺疊 iPhone 上，並排顯示拍子與控制項。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Su un iPhone pieghevole, vedi i movimenti e i controlli affiancati."
           }
         }
       }
@@ -17012,6 +18896,12 @@
             "state" : "translated",
             "value" : "清除我的所有資料"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancella tutti i miei dati"
+          }
         }
       }
     },
@@ -17065,6 +18955,12 @@
             "state" : "translated",
             "value" : "隨時都能在 App 內清除你所有的預設與設定。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancella nell’app tutti i tuoi preset e le impostazioni quando vuoi."
+          }
         }
       }
     },
@@ -17116,6 +19012,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "兌換優惠代碼"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riscatta un codice promozionale"
           }
         }
       }
@@ -17169,6 +19071,12 @@
             "state" : "translated",
             "value" : "有 Pro 的優惠代碼嗎？直接在 App 內的 Pro 畫面或「語音指令」中輸入。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai un codice per Pro? Inseriscilo direttamente nell’app, nella schermata Pro o in Comandi vocali."
+          }
         }
       }
     },
@@ -17220,6 +19128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟「提高對比」更清晰"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Più chiaro con Aumenta contrasto"
           }
         }
       }
@@ -17273,6 +19187,12 @@
             "state" : "translated",
             "value" : "開啟「提高對比」或「降低透明度」時，拍子、輪廓與說明浮層會以更粗、更不透明的方式顯示。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Con Aumenta contrasto o Riduci trasparenza attivi, movimenti, contorni e guida a schermo sono più marcati e pieni."
+          }
         }
       }
     },
@@ -17324,6 +19244,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "容得下最大的文字"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spazio per il testo più grande"
           }
         }
       }
@@ -17377,6 +19303,12 @@
             "state" : "translated",
             "value" : "在最大的文字大小下，按鈕與列表會重新排列，不會有東西被截掉。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Con le dimensioni di testo più grandi, pulsanti ed elenchi si riorganizzano e niente viene tagliato."
+          }
         }
       }
     },
@@ -17428,6 +19360,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "版本 %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versione %@"
           }
         }
       }
@@ -17481,6 +19419,12 @@
             "state" : "translated",
             "value" : "繼續"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continua"
+          }
         }
       }
     },
@@ -17532,6 +19476,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "會聽你說話的節拍器"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un metronomo con cui parli"
           }
         }
       }
@@ -17585,6 +19535,12 @@
             "state" : "translated",
             "value" : "說「start」「stop」「faster」或「tempo 120」，雙手繼續放在樂器上。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dì “start”, “stop”, “faster” o “tempo 120” e tieni entrambe le mani sullo strumento."
+          }
         }
       }
     },
@@ -17636,6 +19592,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "指令是英文單字"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I comandi sono parole inglesi"
           }
         }
       }
@@ -17689,6 +19651,12 @@
             "state" : "translated",
             "value" : "不論使用哪種語言，都是用簡短的英文單字來操控 App。隨時說「help」，就能在畫面上看到全部指令。"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In ogni lingua, controlli l’app con brevi parole inglesi. Dì “help” in qualsiasi momento per vederle tutte sullo schermo."
+          }
         }
       }
     },
@@ -17740,6 +19708,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "本 App 自己的麥克風保持關閉，以免與語音控制衝突。請說「Tap Start」或「Tap Faster」。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il microfono dell’app resta spento per non andare in conflitto con il Controllo vocale. Dì “Tap Start” o “Tap Faster”."
           }
         }
       }
@@ -17793,6 +19767,12 @@
             "state" : "translated",
             "value" : "下一步：麥克風"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poi: il microfono"
+          }
         }
       }
     },
@@ -17844,6 +19824,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS 會詢問麥克風與語音辨識的權限，這兩項只用來聽取你的指令。App 絕不會錄下或儲存聽到的內容。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS ti chiederà il microfono e il riconoscimento vocale. Servono solo per sentire i tuoi comandi. L’app non registra né salva mai ciò che sente."
           }
         }
       }
@@ -17897,6 +19883,12 @@
             "state" : "translated",
             "value" : "略過"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salta"
+          }
         }
       }
     },
@@ -17948,6 +19940,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開始使用"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inizia"
           }
         }
       }
@@ -18001,6 +19999,12 @@
             "state" : "translated",
             "value" : "下一步"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avanti"
+          }
         }
       }
     },
@@ -18052,6 +20056,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "預設已儲存"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset salvato"
           }
         }
       }
@@ -18105,6 +20115,12 @@
             "state" : "translated",
             "value" : "尚無預設"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancora nessun preset"
+          }
         }
       }
     },
@@ -18156,6 +20172,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "兌換優惠代碼"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riscatta un codice promozionale"
           }
         }
       }
@@ -18209,6 +20231,12 @@
             "state" : "translated",
             "value" : "再次顯示簡介"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostra di nuovo l’introduzione"
+          }
         }
       }
     },
@@ -18260,6 +20288,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "兌換代碼"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riscatta codice"
           }
         }
       }
@@ -18313,6 +20347,12 @@
             "state" : "translated",
             "value" : "簡介"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduzione"
+          }
         }
       }
     },
@@ -18364,6 +20404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "顯示簡介"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostra l’introduzione"
           }
         }
       }
@@ -18417,6 +20463,12 @@
             "state" : "translated",
             "value" : "優惠代碼"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Codice promozionale"
+          }
         }
       }
     },
@@ -18468,6 +20520,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "兌換代碼"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riscatta il codice"
           }
         }
       }
@@ -18521,6 +20579,12 @@
             "state" : "translated",
             "value" : "新功能"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Novità"
+          }
         }
       }
     },
@@ -18572,6 +20636,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "略過簡介"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salta l’introduzione"
           }
         }
       }

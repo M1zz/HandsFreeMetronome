@@ -72,6 +72,13 @@ Tudo cabe mesmo com o maior texto
 開啟提高對比後，節拍更清楚
 最大字級下，畫面也不會被截斷
 
+### 앱스토어 (it)
+
+Nuova breve introduzione al primo avvio
+Riscatta i codici nell’app
+Più contrasto, movimenti più nitidi
+Tutto entra anche col testo più grande
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)

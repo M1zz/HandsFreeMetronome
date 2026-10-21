@@ -1,7 +1,7 @@
 # 낫마템포 App Store 문구
 
 DeployBar 가 이 파일을 읽어 App Store Connect 의 스토어 페이지를 채운다.
-앱 화면은 en · ko · ja · de · es · fr · zh-Hans · zh-Hant · pt-BR 로 번역돼 있다(Localizable.xcstrings).
+앱 화면은 en · ko · ja · de · es · fr · zh-Hans · zh-Hant · pt-BR · it 로 번역돼 있다(Localizable.xcstrings).
 음성 명령은 모든 언어에서 영어 단어다(VoiceController 의 en-US 인식기) — 어느 언어 문구든 그 사실을 숨기지 않는다.
 
 ## ko
@@ -644,6 +644,77 @@ https://m1zz.github.io/HandsFreeMetronome/zh-Hant/privacy.html
 ### 마케팅 URL
 
 https://m1zz.github.io/HandsFreeMetronome/zh-Hant/
+
+## it
+
+### 이름
+
+Not My Tempo: Metronomo vocale
+
+### 부제
+
+Cambia tempo a mani libere
+
+### 키워드
+
+bpm,accordatore,esercizio,chitarra,pianoforte,batteria,basso,violino,sassofono,tromba,flauto,coro,ukulele,accenti,ritmo,band,terzine
+
+### 프로모션 텍스트
+
+Tieni le mani sullo strumento. Dì “start”, “faster” o “tempo 120” e il click ti segue. Il metronomo completo e il controllo vocale sono gratuiti.
+
+### 설명
+
+Un metronomo che controlli con la voce, così le mani non lasciano mai lo strumento.
+Dì “start” per partire, “faster” per accelerare. Niente tocchi, niente interruzioni a metà frase.
+
+Cambiare tempo mentre suoni di solito significa staccare le mani dallo strumento e perdere il filo. Not My Tempo ascolta con il proprio microfono e riconosce la voce direttamente sul dispositivo, quindi funziona subito, senza attivare il Controllo vocale di iOS né alcuna impostazione di accessibilità. I comandi si dicono con parole inglesi.
+
+PARLA AL TUO METRONOMO
+“start” e “stop” per avviare e fermare
+“faster” e “slower” cambiano di 5 BPM, “up” e “down” di 1
+“tempo 120”, o semplicemente un numero, va dritto a quel valore
+“double” e “half” per raddoppiare o dimezzare
+“quarter”, “eighth”, “triplet”, “sixteenth” per le suddivisioni
+“louder”, “quieter”, “mute” per il volume
+Hai dimenticato un comando? Dì “help” e ogni frase che puoi usare appare sullo schermo
+
+IL METRONOMO COMPLETO È GRATIS
+Tempi in battuta da 1 a 8 movimenti, con il click più forte sul primo
+Suddivisioni in crome, terzine e semicrome
+Tre modi per vedere il ritmo: rimbalzo, orbita e anello
+Tap tempo: tocca a ritmo il grande numero per impostare i BPM
+Controllo del ritmo: tocca l’anello dell’orbita mentre suoni e scopri quanto sei preciso
+Lo schermo resta acceso durante la riproduzione e l’app ricorda l’ultimo tempo e la misura
+
+AVVIA E FERMA CON IL TUO STRUMENTO
+Registra prima una breve frase di 2–5 note, poi suonala per avviare o fermare il click. Tieni ogni nota per circa mezzo secondo, così le note veloci del tuo modo di suonare non lo fanno scattare.
+
+NOT MY TEMPO PRO
+Modalità pratica: un allenatore di velocità che aggiunge qualche BPM ogni poche battute fino al tempo obiettivo
+Editor degli accenti: imposta ogni click della battuta su acuto, grave o silenzioso e salva un preset per ogni brano
+Accordatore cromatico: accorda prima di iniziare, con il La di riferimento regolabile da 430 a 450 Hz
+Pro è un abbonamento annuale con prova gratuita, oppure un acquisto a vita una tantum.
+
+ACCESSIBILITÀ
+Se usi il Controllo vocale di iOS, spegni il microfono dell’app e comandala dicendo il nome dei pulsanti. I controlli hanno etichette per VoiceOver.
+
+DETTAGLI SULL’ABBONAMENTO
+L’abbonamento annuale si rinnova automaticamente, salvo disdetta almeno 24 ore prima della fine del periodo in corso. Gestiscilo o disdicilo in Impostazioni > Account Apple > Abbonamenti. L’acquisto a vita è un unico pagamento.
+Condizioni d’uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Informativa sulla privacy: https://m1zz.github.io/HandsFreeMetronome/it/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/it/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/it/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/it/
 
 ## pt-BR
 

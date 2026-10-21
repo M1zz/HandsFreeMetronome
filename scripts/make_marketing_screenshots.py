@@ -15,7 +15,7 @@ RAW = ROOT / "docs" / "screenshots" / "raw"
 # 스토어 로케일 → 앱 화면 언어. 한국어 페이지는 앱 번역이 없어 영어 화면을 쓰고,
 # 스페인어 한 벌이 es-ES · es-MX 두 페이지를 맡는다.
 SCREEN = {"en-US": "en", "ko": "en", "ja": "ja", "de-DE": "de", "es-ES": "es", "es-MX": "es",
-          "fr-FR": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR"}
+          "fr-FR": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it"}
 OUT = ROOT / "docs" / "screenshots" / "marketing"
 WORK = pathlib.Path("/tmp") / "nmt-marketing"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -85,6 +85,13 @@ SHOTS = {
         ("03-count.png", "right", "第幾拍<br>一眼看清", "隔著譜架也看得清的大數字"),
         ("04-voice.png", "hero", "忘了指令？<br>說「help」", "能說的指令直接顯示在螢幕上"),
         ("05-accents.png", "bottom", "每一下的輕重<br>由你決定", "Pro 的重音格與依曲目儲存的預設"),
+    ],
+    "it": [
+        ("01-playing.png", "hero", "Le mani<br>sullo strumento", "Dì “start” o “faster” in inglese, senza toccare"),
+        ("02-orbit.png", "left", "Guarda ogni movimento<br>girare", "Viste orbita, rimbalzo e anello"),
+        ("03-count.png", "right", "Conta la battuta<br>a colpo d’occhio", "Numeri grandi, leggibili dal leggio"),
+        ("04-voice.png", "hero", "Comando dimenticato?<br>Dì “help”", "Tutto ciò che puoi dire, sullo schermo"),
+        ("05-accents.png", "bottom", "Ogni click<br>a modo tuo", "Accenti e preset per brano con Pro"),
     ],
     "pt-BR": [
         ("01-playing.png", "hero", "As duas mãos<br>no instrumento", "Diga “start” ou “faster” — sem tocar na tela"),

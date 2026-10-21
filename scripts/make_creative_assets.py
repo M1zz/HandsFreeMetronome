@@ -27,7 +27,7 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 STORE = {"en": "en-US", "de": "de-DE", "es": "es-ES", "es-MX": "es-MX", "fr": "fr-FR"}
 # 문구 언어 → 기기 화면 캡처 폴더 (앱이 영어 한 벌)
 SCREEN = {"ko": "en", "en": "en", "ja": "ja", "de": "de", "es": "es", "es-MX": "es",
-          "fr": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR"}
+          "fr": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it"}
 
 # (가로, 세로, 안전 영역 left, top, right, bottom)
 SPEC = {
@@ -48,6 +48,7 @@ SEARCH = {
     "zh-Hans": ("节拍器", "速度<br>开口就能改", "用英文说“start”“faster”就行"),
     "pt-BR": ("Metrônomo", "Mude o andamento<br>com a voz", "Diga “start” ou “faster” enquanto toca"),
     "zh-Hant": ("節拍器", "速度<br>開口就能改", "用英文說「start」「faster」就行"),
+    "it": ("Metronomo", "Cambia tempo<br>con la voce", "Dì “start” o “faster” mentre suoni"),
 }
 
 # 헤더: 처음 온 사람에게 한 가지 약속. 연주하는 손을 떼지 않는다.
@@ -62,6 +63,7 @@ HEADER = {
     "zh-Hans": ("免手动节拍器", "双手留在乐器上<br>速度开口就改"),
     "pt-BR": ("Metrônomo sem usar as mãos", "Mãos no instrumento.<br>É só dizer “faster”."),
     "zh-Hant": ("免手動節拍器", "雙手留在樂器上<br>速度開口就改"),
+    "it": ("Metronomo a mani libere", "Le mani sullo strumento.<br>Tu dì solo “faster”."),
 }
 
 # 바탕 · 글자색은 앱의 색이다: 다크 모드 화면(검정) + 키 색 청록(cue #22D3EE, Palette.swift 의
