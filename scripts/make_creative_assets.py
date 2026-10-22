@@ -27,7 +27,8 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 STORE = {"en": "en-US", "de": "de-DE", "es": "es-ES", "es-MX": "es-MX", "fr": "fr-FR"}
 # 문구 언어 → 기기 화면 캡처 폴더 (앱이 영어 한 벌)
 SCREEN = {"ko": "en", "en": "en", "ja": "ja", "de": "de", "es": "es", "es-MX": "es",
-          "fr": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it"}
+          "fr": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it", "en-GB": "en",
+          "ru": "ru", "nl": "nl", "pl": "pl", "tr": "tr", "sv": "sv", "da": "da", "nb": "nb", "fi": "fi", "cs": "cs", "el": "el", "th": "th", "vi": "vi", "id": "id"}
 
 # (가로, 세로, 안전 영역 left, top, right, bottom)
 SPEC = {
@@ -49,6 +50,20 @@ SEARCH = {
     "pt-BR": ("Metrônomo", "Mude o andamento<br>com a voz", "Diga “start” ou “faster” enquanto toca"),
     "zh-Hant": ("節拍器", "速度<br>開口就能改", "用英文說「start」「faster」就行"),
     "it": ("Metronomo", "Cambia tempo<br>con la voce", "Dì “start” o “faster” mentre suoni"),
+    "ru": ("Метроном", "Меняйте темп<br>голосом", "Скажите «start» или «faster» во время игры"),
+    "nl": ("Metronoom", "Wijzig het tempo<br>met je stem", "Zeg “start” of “faster” terwijl je speelt"),
+    "pl": ("Metronom", "Zmieniaj tempo<br>głosem", "Powiedz „start” lub „faster” podczas gry"),
+    "tr": ("Metronom", "Temposu<br>sesinizle değiştirin", "Çalarken “start” veya “faster” deyin"),
+    "sv": ("Metronom", "Byt tempo<br>med rösten", "Säg “start” eller “faster” medan du spelar"),
+    "da": ("Metronom", "Skift tempo<br>med stemmen", "Sig “start” eller “faster”, mens du spiller"),
+    "nb": ("Metronom", "Bytt tempo<br>med stemmen", "Si «start» eller «faster» mens du spiller"),
+    "fi": ("Metronomi", "Vaihda tempoa<br>äänellä", "Sano “start” tai “faster” soittaessasi"),
+    "cs": ("Metronom", "Měňte tempo<br>hlasem", "Řekněte „start“ nebo „faster“ za hraní"),
+    "el": ("Μετρονόμος", "Αλλάξτε ταχύτητα<br>με τη φωνή σας", "Πείτε «start» ή «faster» ενώ παίζετε"),
+    "th": ("เมโทรนอม", "เปลี่ยนความเร็ว<br>ด้วยเสียง", "พูดว่า “start” หรือ “faster” ขณะเล่น"),
+    "vi": ("Máy gõ nhịp", "Đổi tốc độ<br>bằng giọng nói", "Nói “start” hoặc “faster” khi đang chơi"),
+    "id": ("Metronom", "Ubah tempo<br>dengan suara", "Ucapkan “start” atau “faster” saat bermain"),
+    "en-GB": ("Metronome", "Change tempo<br>with your voice", "Say “start” or “faster” as you play"),
 }
 
 # 헤더: 처음 온 사람에게 한 가지 약속. 연주하는 손을 떼지 않는다.
@@ -64,6 +79,20 @@ HEADER = {
     "pt-BR": ("Metrônomo sem usar as mãos", "Mãos no instrumento.<br>É só dizer “faster”."),
     "zh-Hant": ("免手動節拍器", "雙手留在樂器上<br>速度開口就改"),
     "it": ("Metronomo a mani libere", "Le mani sullo strumento.<br>Tu dì solo “faster”."),
+    "ru": ("Метроном без рук", "Руки на инструменте.<br>Просто скажите «faster»."),
+    "nl": ("Handsfree metronoom", "Beide handen aan het spelen.<br>Zeg gewoon “faster”."),
+    "pl": ("Metronom bez rąk", "Obie ręce przy grze.<br>Po prostu powiedz „faster”."),
+    "tr": ("Eller serbest metronom", "İki el çalmaya devam.<br>Sadece “faster” deyin."),
+    "sv": ("Metronom utan händer", "Båda händerna på spelet.<br>Säg bara “faster”."),
+    "da": ("Håndfri metronom", "Begge hænder på instrumentet.<br>Sig bare “faster”."),
+    "nb": ("Håndfri metronom", "Begge hendene på spillet.<br>Si bare «faster»."),
+    "fi": ("Käsiä vapauttava metronomi", "Molemmat kädet soittamassa.<br>Sano vain “faster”."),
+    "cs": ("Metronom bez rukou", "Obě ruce při hře.<br>Stačí říct „faster“."),
+    "el": ("Μετρονόμος χωρίς χέρια", "Και τα δύο χέρια στο παίξιμο.<br>Πείτε απλώς «faster»."),
+    "th": ("เมโทรนอมแบบไม่ใช้มือ", "มือทั้งสองข้างอยู่กับการเล่น<br>แค่พูดว่า “faster”"),
+    "vi": ("Máy gõ nhịp rảnh tay", "Hai tay cứ chơi nhạc.<br>Chỉ cần nói “faster”."),
+    "id": ("Metronom bebas tangan", "Kedua tangan tetap bermain.<br>Cukup ucapkan “faster”."),
+    "en-GB": ("Hands-free metronome", "Keep both hands playing.<br>Just say “faster.”"),
 }
 
 # 바탕 · 글자색은 앱의 색이다: 다크 모드 화면(검정) + 키 색 청록(cue #22D3EE, Palette.swift 의

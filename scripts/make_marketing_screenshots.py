@@ -15,7 +15,8 @@ RAW = ROOT / "docs" / "screenshots" / "raw"
 # 스토어 로케일 → 앱 화면 언어. 한국어 페이지는 앱 번역이 없어 영어 화면을 쓰고,
 # 스페인어 한 벌이 es-ES · es-MX 두 페이지를 맡는다.
 SCREEN = {"en-US": "en", "ko": "en", "ja": "ja", "de-DE": "de", "es-ES": "es", "es-MX": "es",
-          "fr-FR": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it"}
+          "fr-FR": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it", "en-GB": "en",
+          "ru": "ru", "nl": "nl", "pl": "pl", "tr": "tr", "sv": "sv", "da": "da", "nb": "nb", "fi": "fi", "cs": "cs", "el": "el", "th": "th", "vi": "vi", "id": "id"}
 OUT = ROOT / "docs" / "screenshots" / "marketing"
 WORK = pathlib.Path("/tmp") / "nmt-marketing"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -99,6 +100,104 @@ SHOTS = {
         ("03-count.png", "right", "Conte o compasso<br>num relance", "Números grandes que dá para ler da estante"),
         ("04-voice.png", "hero", "Esqueceu o comando?<br>Diga “help”", "Tudo o que você pode dizer, direto na tela"),
         ("05-accents.png", "bottom", "Cada clique<br>do seu jeito", "Grade de acentos e presets por música no Pro"),
+    ],
+    "ru": [
+        ("01-playing.png", "hero", "Обе руки<br>на инструменте", "Скажите «start» или «faster» — без нажатий"),
+        ("02-orbit.png", "left", "Смотрите, как<br>идёт каждая доля", "Виды: орбита, мячик и кольцо"),
+        ("03-count.png", "right", "Считайте такт<br>с одного взгляда", "Крупные цифры видны даже с пульта"),
+        ("04-voice.png", "hero", "Забыли команду?<br>Скажите «help»", "Все команды сразу на экране"),
+        ("05-accents.png", "bottom", "Каждый клик<br>по-своему", "Сетка акцентов и пресеты для пьес в Pro"),
+    ],
+    "nl": [
+        ("01-playing.png", "hero", "Beide handen<br>op je instrument", "Zeg “start” of “faster” — geen getik"),
+        ("02-orbit.png", "left", "Zie elke tel<br>rondgaan", "Baan-, stuiter- en ringweergave"),
+        ("03-count.png", "right", "Tel de maat<br>in één oogopslag", "Grote cijfers, leesbaar vanaf de lessenaar"),
+        ("04-voice.png", "hero", "Commando vergeten?<br>Zeg “help”", "Alles wat je kunt zeggen, op het scherm"),
+        ("05-accents.png", "bottom", "Maak elke klik<br>van jezelf", "Accentenraster en presets per nummer met Pro"),
+    ],
+    "pl": [
+        ("01-playing.png", "hero", "Obie ręce<br>na instrumencie", "Powiedz „start” lub „faster” — bez stukania"),
+        ("02-orbit.png", "left", "Zobacz, jak każde<br>uderzenie krąży", "Widok odbicia, orbity i pierścienia"),
+        ("03-count.png", "right", "Policz takt<br>jednym spojrzeniem", "Duże cyfry czytelne z pulpitu"),
+        ("04-voice.png", "hero", "Zapomniałeś polecenia?<br>Powiedz „help”", "Wszystko, co możesz powiedzieć, na ekranie"),
+        ("05-accents.png", "bottom", "Każdy klik<br>po swojemu", "Siatka akcentów i presety dla utworów w Pro"),
+    ],
+    "tr": [
+        ("01-playing.png", "hero", "İki eliniz<br>enstrümanda", "“start” veya “faster” deyin — dokunmak yok"),
+        ("02-orbit.png", "left", "Her vuruşun<br>dönüşünü görün", "Zıplama, yörünge ve halka görünümü"),
+        ("03-count.png", "right", "Ölçüyü<br>tek bakışta sayın", "Nota sehpasından okunan büyük rakamlar"),
+        ("04-voice.png", "hero", "Komutu mu unuttunuz?<br>“help” deyin", "Söyleyebileceğiniz her şey ekranda"),
+        ("05-accents.png", "bottom", "Her tık<br>sizin elinizde", "Pro ile vurgu ızgarası ve şarkıya özel hazır ayarlar"),
+    ],
+    "sv": [
+        ("01-playing.png", "hero", "Båda händerna<br>på instrumentet", "Säg “start” eller “faster” — inga tryck"),
+        ("02-orbit.png", "left", "Se varje slag<br>gå runt", "Studs-, omlopps- och ringvy"),
+        ("03-count.png", "right", "Räkna takten<br>med en blick", "Stora siffror som syns från notstället"),
+        ("04-voice.png", "hero", "Glömt kommandot?<br>Säg “help”", "Allt du kan säga, direkt på skärmen"),
+        ("05-accents.png", "bottom", "Gör varje klick<br>till ditt eget", "Accentrutnät och förinställningar per låt med Pro"),
+    ],
+    "da": [
+        ("01-playing.png", "hero", "Begge hænder<br>på instrumentet", "Sig “start” eller “faster” — ingen tryk"),
+        ("02-orbit.png", "left", "Se hvert slag<br>løbe rundt", "Hoppe-, kredsløbs- og ringvisning"),
+        ("03-count.png", "right", "Tæl takten<br>med et blik", "Store tal, der kan læses fra nodestativet"),
+        ("04-voice.png", "hero", "Glemt kommandoen?<br>Sig “help”", "Alt, du kan sige, direkte på skærmen"),
+        ("05-accents.png", "bottom", "Gør hvert klik<br>til dit eget", "Accentgitter og forudindstillinger pr. sang med Pro"),
+    ],
+    "nb": [
+        ("01-playing.png", "hero", "Begge hendene<br>på instrumentet", "Si «start» eller «faster» — ingen trykking"),
+        ("02-orbit.png", "left", "Se hvert slag<br>gå rundt", "Sprett-, bane- og ringvisning"),
+        ("03-count.png", "right", "Tell takten<br>med et blikk", "Store tall som kan leses fra notestativet"),
+        ("04-voice.png", "hero", "Glemt kommandoen?<br>Si «help»", "Alt du kan si, rett på skjermen"),
+        ("05-accents.png", "bottom", "Gjør hvert klikk<br>til ditt eget", "Aksentrutenett og forhåndsinnstillinger per sang med Pro"),
+    ],
+    "fi": [
+        ("01-playing.png", "hero", "Molemmat kädet<br>soittimella", "Sano “start” tai “faster” — ei napautuksia"),
+        ("02-orbit.png", "left", "Katso, kuinka jokainen<br>isku kiertää", "Pomppu-, rata- ja rengasnäkymä"),
+        ("03-count.png", "right", "Laske tahti<br>yhdellä silmäyksellä", "Isot numerot, jotka näkyvät nuottitelineeltä"),
+        ("04-voice.png", "hero", "Unohtuiko komento?<br>Sano “help”", "Kaikki sanottavat komennot näytöllä"),
+        ("05-accents.png", "bottom", "Tee jokaisesta<br>naksahduksesta omasi", "Painotusruudukko ja kappalekohtaiset esiasetukset Prossa"),
+    ],
+    "cs": [
+        ("01-playing.png", "hero", "Obě ruce<br>na nástroji", "Řekněte „start“ nebo „faster“ — žádné klepání"),
+        ("02-orbit.png", "left", "Sledujte, jak každá<br>doba obíhá", "Zobrazení odrazu, dráhy a kruhu"),
+        ("03-count.png", "right", "Spočítejte takt<br>jedním pohledem", "Velká čísla čitelná i z notového stojanu"),
+        ("04-voice.png", "hero", "Zapomněli jste příkaz?<br>Řekněte „help“", "Vše, co lze říct, přímo na obrazovce"),
+        ("05-accents.png", "bottom", "Každé klepnutí<br>po svém", "Mřížka akcentů a předvolby pro skladby v Pro"),
+    ],
+    "el": [
+        ("01-playing.png", "hero", "Και τα δύο χέρια<br>στο όργανο", "Πείτε «start» ή «faster» — χωρίς πατήματα"),
+        ("02-orbit.png", "left", "Δείτε κάθε χρόνο<br>να κάνει κύκλο", "Προβολή αναπήδησης, τροχιάς και δακτυλίου"),
+        ("03-count.png", "right", "Μετρήστε το μέτρο<br>με μια ματιά", "Μεγάλοι αριθμοί ευανάγνωστοι από το αναλόγιο"),
+        ("04-voice.png", "hero", "Ξεχάσατε την εντολή;<br>Πείτε «help»", "Όλες οι εντολές στην οθόνη"),
+        ("05-accents.png", "bottom", "Κάθε κλικ<br>με τον δικό σας τρόπο", "Πλέγμα τόνων και προεπιλογές ανά κομμάτι με το Pro"),
+    ],
+    "th": [
+        ("01-playing.png", "hero", "มือทั้งสองข้าง<br>อยู่กับเครื่องดนตรี", "พูดว่า “start” หรือ “faster” ไม่ต้องแตะ"),
+        ("02-orbit.png", "left", "ดูทุกจังหวะ<br>หมุนไปรอบ ๆ", "มุมมองลูกบอลเด้ง วงโคจร และวงแหวน"),
+        ("03-count.png", "right", "นับห้องเพลง<br>ได้ในพริบตา", "ตัวเลขใหญ่ อ่านได้จากขาตั้งโน้ต"),
+        ("04-voice.png", "hero", "ลืมคำสั่งใช่ไหม<br>พูดว่า “help”", "ทุกคำที่พูดได้ แสดงบนหน้าจอ"),
+        ("05-accents.png", "bottom", "ทุกเสียงคลิก<br>เป็นแบบของคุณ", "ตารางเสียงเน้นและค่าที่ตั้งไว้ต่อเพลงใน Pro"),
+    ],
+    "vi": [
+        ("01-playing.png", "hero", "Hai tay<br>trên nhạc cụ", "Nói “start” hoặc “faster” — không cần chạm"),
+        ("02-orbit.png", "left", "Nhìn từng phách<br>chạy vòng", "Chế độ nảy, quỹ đạo và vòng"),
+        ("03-count.png", "right", "Đếm ô nhịp<br>trong một cái nhìn", "Số lớn, đọc được từ giá nhạc"),
+        ("04-voice.png", "hero", "Quên lệnh?<br>Nói “help”", "Mọi lệnh có thể nói hiện ngay trên màn hình"),
+        ("05-accents.png", "bottom", "Mỗi tiếng gõ<br>theo ý bạn", "Lưới nhấn phách và cài đặt sẵn theo bài với Pro"),
+    ],
+    "id": [
+        ("01-playing.png", "hero", "Kedua tangan<br>di instrumen", "Ucapkan “start” atau “faster” — tanpa mengetuk"),
+        ("02-orbit.png", "left", "Lihat setiap ketukan<br>berputar", "Tampilan pantul, orbit, dan cincin"),
+        ("03-count.png", "right", "Hitung birama<br>sekilas pandang", "Angka besar yang terbaca dari stand not"),
+        ("04-voice.png", "hero", "Lupa perintah?<br>Ucapkan “help”", "Semua yang bisa diucapkan, langsung di layar"),
+        ("05-accents.png", "bottom", "Setiap klik<br>sesuai gayamu", "Kisi aksen dan preset per lagu dengan Pro"),
+    ],
+    "en-GB": [
+        ("01-playing.png", "hero", "Keep both hands<br>on your instrument", "Say “start” or “faster” — no tapping"),
+        ("02-orbit.png", "left", "See every beat<br>go around", "Orbit, bounce and ring views"),
+        ("03-count.png", "right", "Count the bar<br>at a glance", "Big numbers you can read from the stand"),
+        ("04-voice.png", "hero", "Forgot a command?<br>Just say “help”", "Every word you can say, right on screen"),
+        ("05-accents.png", "bottom", "Make every<br>click your own", "Accent grid and per-song presets with Pro"),
     ],
 }
 

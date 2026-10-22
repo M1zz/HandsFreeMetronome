@@ -2,7 +2,7 @@
 # App Store 원본 캡처: 시뮬레이터에서 앱 언어마다 같은 장면을 찍는다.
 #
 # 사용법: scripts/capture_raw_screenshots.sh <시뮬레이터 UDID> <앱 경로(.app, Debug)> [앱언어 ...]
-#   (언어를 안 주면 전부: en ja de es fr zh-Hans zh-Hant pt-BR it)
+#   (언어를 안 주면 전부: en ja de es fr zh-Hans zh-Hant pt-BR it ru nl pl tr sv da nb fi cs el th vi id)
 #   ONLY="03-count 05-accents" 처럼 주면 그 파일만 다시 찍는다.
 #
 # 장면은 ContentView 의 -shot <scene> 훅(Debug 전용)이 스스로 차린다.
@@ -15,7 +15,7 @@
 set -euo pipefail
 
 UDID="$1"; APP="$2"; shift 2
-LANGS=("$@"); [ ${#LANGS[@]} -eq 0 ] && LANGS=(en ja de es fr zh-Hans zh-Hant pt-BR it)
+LANGS=("$@"); [ ${#LANGS[@]} -eq 0 ] && LANGS=(en ja de es fr zh-Hans zh-Hant pt-BR it ru nl pl tr sv da nb fi cs el th vi id)
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 BUNDLE=com.leeo.HandsFreeMetronome
 
@@ -33,7 +33,8 @@ shoot() {   # <앱언어> <장면> <파일>
     if [ -n "${ONLY:-}" ] && [[ " $ONLY " != *" $(basename "$out" .png) "* ]]; then return; fi
     local region; case "$lang" in
         en) region=en_US;; ja) region=ja_JP;; de) region=de_DE;; es) region=es_ES;;
-        fr) region=fr_FR;; zh-Hans) region=zh_CN;; zh-Hant) region=zh_TW;; it) region=it_IT;; pt-BR) region=pt_BR;; *) region=en_US;;
+        fr) region=fr_FR;; zh-Hans) region=zh_CN;; zh-Hant) region=zh_TW;; it) region=it_IT;; pt-BR) region=pt_BR;;
+        ru) region=ru_RU;; nl) region=nl_NL;; pl) region=pl_PL;; tr) region=tr_TR;; sv) region=sv_SE;; da) region=da_DK;; nb) region=nb_NO;; fi) region=fi_FI;; cs) region=cs_CZ;; el) region=el_GR;; th) region=th_TH;; vi) region=vi_VN;; id) region=id_ID;; *) region=en_US;;
     esac
     xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
     xcrun simctl launch "$UDID" "$BUNDLE" -AppleLanguages "($lang)" -AppleLocale "$region" \
