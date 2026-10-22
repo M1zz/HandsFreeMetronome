@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "Метроном слушает ваши голосовые команды (например, «start» и «faster») и может определять темп музыки, которую вы играете рядом, — так вы управляете им, не касаясь экрана.";
+"NSSpeechRecognitionUsageDescription" = "Распознавание речи нужно, чтобы понимать команды без рук. Оно выполняется прямо на вашем устройстве.";

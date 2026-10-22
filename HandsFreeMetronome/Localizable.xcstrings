@@ -65,6 +65,12 @@
             "state" : "translated",
             "value" : "%@ per year"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ в год"
+          }
         }
       }
     },
@@ -134,6 +140,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, %2$lld cents flat"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, ниже на %2$lld цент."
           }
         }
       }
@@ -205,6 +217,12 @@
             "state" : "translated",
             "value" : "%1$@, %2$lld cents sharp"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, выше на %2$lld цент."
+          }
         }
       }
     },
@@ -269,6 +287,12 @@
             "state" : "translated",
             "value" : "%@, in tune"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, строй точный"
+          }
         }
       }
     },
@@ -331,6 +355,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -467,6 +497,36 @@
               }
             }
           }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld доля"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld доли"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld долей"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld доли"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -545,6 +605,12 @@
             "state" : "translated",
             "value" : "%lld beats per minute"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ударов в минуту: %lld"
+          }
         }
       }
     },
@@ -607,6 +673,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -683,6 +755,12 @@
             "state" : "translated",
             "value" : "%1$lld BPM, %2$@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld BPM, %2$@"
+          }
         }
       }
     },
@@ -755,6 +833,12 @@
             "state" : "translated",
             "value" : "%1$lld perfect, %2$lld good, %3$lld bad"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Идеально: %1$lld, хорошо: %2$lld, мимо: %3$lld"
+          }
         }
       }
     },
@@ -820,6 +904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  tap dots to set beats"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  нажмите на точки, чтобы выбрать число долей"
           }
         }
       }
@@ -893,6 +983,12 @@
             "state" : "translated",
             "value" : "%1$lld/4 · %2$@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/4 · %2$@"
+          }
         }
       }
     },
@@ -956,6 +1052,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1/16 notes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шестнадцатые"
           }
         }
       }
@@ -1021,6 +1123,12 @@
             "state" : "translated",
             "value" : "1/4 notes"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Четвертные"
+          }
         }
       }
     },
@@ -1085,6 +1193,12 @@
             "state" : "translated",
             "value" : "1/8 notes"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восьмые"
+          }
         }
       }
     },
@@ -1148,6 +1262,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A4 = %lld Hz"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ля¹ = %lld Гц"
           }
         }
       }
@@ -1215,6 +1335,12 @@
             "state" : "translated",
             "value" : "Accent editor"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редактор акцентов"
+          }
         }
       }
     },
@@ -1278,6 +1404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accent editor & presets"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редактор акцентов и пресеты"
           }
         }
       }
@@ -1345,6 +1477,12 @@
             "state" : "translated",
             "value" : "Accents"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Акценты"
+          }
         }
       }
     },
@@ -1409,6 +1547,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accessibility"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Универсальный доступ"
           }
         }
       }
@@ -1476,6 +1620,12 @@
             "state" : "translated",
             "value" : "Add %lld BPM"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить %lld BPM"
+          }
         }
       }
     },
@@ -1541,6 +1691,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "All commands"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все команды"
           }
         }
       }
@@ -1608,6 +1764,12 @@
             "state" : "translated",
             "value" : "Applies this pattern, metre, and subdivision"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Применяет этот рисунок, размер и дробление"
+          }
         }
       }
     },
@@ -1673,6 +1835,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Back"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назад"
           }
         }
       }
@@ -1740,6 +1908,12 @@
             "state" : "translated",
             "value" : "Back to metronome"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вернуться к метроному"
+          }
         }
       }
     },
@@ -1803,6 +1977,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bad"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мимо"
           }
         }
       }
@@ -1869,6 +2049,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beat %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доля %lld"
           }
         }
       }
@@ -1942,6 +2128,12 @@
             "state" : "translated",
             "value" : "Beat %1$lld click %2$lld"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доля %1$lld, клик %2$lld"
+          }
         }
       }
     },
@@ -2013,6 +2205,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beat %1$lld of %2$lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доля %1$lld из %2$lld"
           }
         }
       }
@@ -2086,6 +2284,12 @@
             "state" : "translated",
             "value" : "Beat %1$lld of %2$lld, %3$@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доля %1$lld из %2$lld, %3$@"
+          }
         }
       }
     },
@@ -2158,6 +2362,12 @@
             "state" : "translated",
             "value" : "Beat %1$lld, click %2$lld"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доля %1$lld, клик %2$lld"
+          }
         }
       }
     },
@@ -2222,6 +2432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beat view"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вид долей"
           }
         }
       }
@@ -2288,6 +2504,12 @@
             "state" : "translated",
             "value" : "Beats"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доли"
+          }
         }
       }
     },
@@ -2352,6 +2574,12 @@
             "state" : "translated",
             "value" : "Bounce view"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вид «Мячик»"
+          }
         }
       }
     },
@@ -2414,6 +2642,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -2484,6 +2718,12 @@
             "state" : "translated",
             "value" : "Bug reports and feature requests are welcome."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сообщения об ошибках и пожелания по функциям приветствуются."
+          }
         }
       }
     },
@@ -2549,6 +2789,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Buy lifetime"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Купить навсегда"
           }
         }
       }
@@ -2616,6 +2862,12 @@
             "state" : "translated",
             "value" : "Buy lifetime for %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Купить навсегда за %@"
+          }
         }
       }
     },
@@ -2681,6 +2933,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отмена"
           }
         }
       }
@@ -2748,6 +3006,12 @@
             "state" : "translated",
             "value" : "Change view"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сменить вид"
+          }
         }
       }
     },
@@ -2814,6 +3078,12 @@
             "state" : "translated",
             "value" : "Check timing"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверить ритм"
+          }
         }
       }
     },
@@ -2877,6 +3147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chromatic tuner"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хроматический тюнер"
           }
         }
       }
@@ -2943,6 +3219,12 @@
             "state" : "translated",
             "value" : "Close"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть"
+          }
         }
       }
     },
@@ -3006,6 +3288,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "close a panel or tip"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "закрыть панель или подсказку"
           }
         }
       }
@@ -3073,6 +3361,12 @@
             "state" : "translated",
             "value" : "Contact the Developer"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Связь с разработчиком"
+          }
         }
       }
     },
@@ -3139,6 +3433,12 @@
             "state" : "translated",
             "value" : "Control it by voice"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управляйте голосом"
+          }
         }
       }
     },
@@ -3202,6 +3502,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Couldn’t load prices from the App Store."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить цены из App Store."
           }
         }
       }
@@ -3269,6 +3575,12 @@
             "state" : "translated",
             "value" : "Customise accents"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настроить акценты"
+          }
         }
       }
     },
@@ -3332,6 +3644,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cycles between high, low, and silent"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Переключает: высокий, низкий, тишина"
           }
         }
       }
@@ -3399,6 +3717,12 @@
             "state" : "translated",
             "value" : "Decrease tempo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уменьшить темп"
+          }
         }
       }
     },
@@ -3465,6 +3789,12 @@
             "state" : "translated",
             "value" : "Delete preset %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить пресет «%@»"
+          }
         }
       }
     },
@@ -3528,6 +3858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Design every click of the measure — high, low, or silent — and save patterns per song."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройте каждый клик такта — высокий, низкий или тихий — и сохраняйте рисунки для каждой пьесы."
           }
         }
       }
@@ -3593,6 +3929,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Detailed help"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подробная справка"
           }
         }
       }
@@ -3660,6 +4002,12 @@
             "state" : "translated",
             "value" : "Dismiss"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть"
+          }
         }
       }
     },
@@ -3726,6 +4074,12 @@
             "state" : "translated",
             "value" : "Dismiss help"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть справку"
+          }
         }
       }
     },
@@ -3791,6 +4145,12 @@
             "state" : "translated",
             "value" : "Done"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово"
+          }
         }
       }
     },
@@ -3854,6 +4214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Double ×2"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вдвое ×2"
           }
         }
       }
@@ -3921,6 +4287,12 @@
             "state" : "translated",
             "value" : "Double-tap here to open the accent grid — set every click of the measure high, low, or silent, and save patterns as presets."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите дважды, чтобы открыть сетку акцентов: задайте каждому клику такта высокий, низкий или тихий звук и сохраните рисунок как пресет."
+          }
         }
       }
     },
@@ -3984,6 +4356,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Double-tap the subdivision card to edit the full measure — each cell cycles high → low → silent, and patterns can be saved as named presets."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите дважды на карточку дробления, чтобы править весь такт: каждая ячейка переключается так: высокий → низкий → тишина. Рисунки можно сохранять как именные пресеты."
           }
         }
       }
@@ -4049,6 +4427,12 @@
             "state" : "translated",
             "value" : "Double-tap to open Accents"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите дважды, чтобы открыть акценты"
+          }
         }
       }
     },
@@ -4113,6 +4497,12 @@
             "state" : "translated",
             "value" : "Down −1"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вниз −1"
+          }
         }
       }
     },
@@ -4176,6 +4566,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Drag the tempo slider, or tap the − / + buttons."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Двигайте ползунок темпа или нажимайте кнопки − / +."
           }
         }
       }
@@ -4243,6 +4639,12 @@
             "state" : "translated",
             "value" : "Edit accents"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изменить акценты"
+          }
         }
       }
     },
@@ -4307,6 +4709,12 @@
             "state" : "translated",
             "value" : "Eighth notes"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восьмые"
+          }
         }
       }
     },
@@ -4370,6 +4778,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eighths"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восьмые"
           }
         }
       }
@@ -4437,6 +4851,12 @@
             "state" : "translated",
             "value" : "Email"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почта"
+          }
         }
       }
     },
@@ -4502,6 +4922,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Email the developer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Написать разработчику"
           }
         }
       }
@@ -4617,6 +5043,12 @@
             "state" : "translated",
             "value" : "Every %lld bars"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каждые %lld т."
+          }
         }
       }
     },
@@ -4680,6 +5112,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Every click of the measure is its own cell — %lld clicks in all. Tap a cell to cycle it: high → low → silent."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каждый клик такта — отдельная ячейка, всего их %lld. Нажимайте на ячейку, чтобы переключать: высокий → низкий → тишина."
           }
         }
       }
@@ -4747,6 +5185,12 @@
             "state" : "translated",
             "value" : "Everything here also works by voice — see the commands below."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Всё это работает и голосом — команды ниже."
+          }
         }
       }
     },
@@ -4813,6 +5257,12 @@
             "state" : "translated",
             "value" : "Faster"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрее"
+          }
         }
       }
     },
@@ -4876,6 +5326,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Faster +5"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрее +5"
           }
         }
       }
@@ -4943,6 +5399,12 @@
             "state" : "translated",
             "value" : "Forget a command?"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Забыли команду?"
+          }
         }
       }
     },
@@ -5009,6 +5471,12 @@
             "state" : "translated",
             "value" : "Free forever, no unlock needed:"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесплатно навсегда, без разблокировки:"
+          }
         }
       }
     },
@@ -5072,6 +5540,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Free trial"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пробный период"
           }
         }
       }
@@ -5137,6 +5611,12 @@
             "state" : "translated",
             "value" : "Good"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хорошо"
+          }
         }
       }
     },
@@ -5201,6 +5681,12 @@
             "state" : "translated",
             "value" : "Half ÷2"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вполовину ÷2"
+          }
         }
       }
     },
@@ -5264,6 +5750,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heard: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слышу: %@"
           }
         }
       }
@@ -5331,6 +5823,12 @@
             "state" : "translated",
             "value" : "Help"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Справка"
+          }
         }
       }
     },
@@ -5396,6 +5894,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Help navigation"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Навигация по справке"
           }
         }
       }
@@ -5463,6 +5967,12 @@
             "state" : "translated",
             "value" : "High tone"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Высокий звук"
+          }
         }
       }
     },
@@ -5529,6 +6039,12 @@
             "state" : "translated",
             "value" : "I use iOS Voice Control"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я использую «Управление голосом» iOS"
+          }
         }
       }
     },
@@ -5592,6 +6108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "In orbit view, tap the ring while playing — every click (including subdivisions) is a target. The moving dot leaves a ghost where your tap landed, and coloured counters tally Perfect / Good / Bad until you stop."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В виде «Орбита» нажимайте на кольцо во время игры: целью служит каждый клик, включая дробления. Движущаяся точка оставляет след там, где вы попали, а цветные счётчики считают «Идеально» / «Хорошо» / «Мимо», пока вы не остановитесь."
           }
         }
       }
@@ -5659,6 +6181,12 @@
             "state" : "translated",
             "value" : "Increase tempo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Увеличить темп"
+          }
         }
       }
     },
@@ -5721,6 +6249,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -5791,6 +6325,12 @@
             "state" : "translated",
             "value" : "Instagram DM"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Личное сообщение в Instagram"
+          }
         }
       }
     },
@@ -5856,6 +6396,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram DM (@lee25_ios)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Личное сообщение в Instagram (@lee25_ios)"
           }
         }
       }
@@ -5923,6 +6469,12 @@
             "state" : "translated",
             "value" : "Instrument signal"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сигнал инструментом"
+          }
         }
       }
     },
@@ -5989,6 +6541,12 @@
             "state" : "translated",
             "value" : "is part of Pro — three practice tools, one unlock."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "входит в Pro: три инструмента для занятий, одна разблокировка."
+          }
         }
       }
     },
@@ -6051,6 +6609,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Largo? Moderato?"
@@ -6121,6 +6685,12 @@
             "state" : "translated",
             "value" : "Lifetime"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Навсегда"
+          }
         }
       }
     },
@@ -6184,6 +6754,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lifetime — %@ once"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Навсегда — %@ один раз"
           }
         }
       }
@@ -6249,6 +6825,12 @@
             "state" : "translated",
             "value" : "list the commands you can say"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "показать доступные команды"
+          }
         }
       }
     },
@@ -6313,6 +6895,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Listen"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слушать"
           }
         }
       }
@@ -6380,6 +6968,12 @@
             "state" : "translated",
             "value" : "Listen for voice"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слушать голос"
+          }
         }
       }
     },
@@ -6445,6 +7039,12 @@
             "state" : "translated",
             "value" : "Listening"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слушаю"
+          }
         }
       }
     },
@@ -6508,6 +7108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Listening…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слушаю…"
           }
         }
       }
@@ -6575,6 +7181,12 @@
             "state" : "translated",
             "value" : "Listening… hold each note"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слушаю… держите каждую ноту"
+          }
         }
       }
     },
@@ -6640,6 +7252,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loading prices…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузка цен…"
           }
         }
       }
@@ -6707,6 +7325,12 @@
             "state" : "translated",
             "value" : "Low tone"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Низкий звук"
+          }
         }
       }
     },
@@ -6772,6 +7396,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Made for Voice Control"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Создано для управления голосом"
           }
         }
       }
@@ -6839,6 +7469,12 @@
             "state" : "translated",
             "value" : "Metronome mode"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим метронома"
+          }
         }
       }
     },
@@ -6902,6 +7538,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mic/Speech blocked — enable in Settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Микрофон или речь заблокированы — включите в «Настройках»"
           }
         }
       }
@@ -6969,6 +7611,12 @@
             "state" : "translated",
             "value" : "Minus"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Минус"
+          }
         }
       }
     },
@@ -7034,6 +7682,12 @@
             "state" : "translated",
             "value" : "More"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ещё"
+          }
         }
       }
     },
@@ -7097,6 +7751,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "move this list"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "прокрутить этот список"
           }
         }
       }
@@ -7162,6 +7822,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mute"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Без звука"
           }
         }
       }
@@ -7229,6 +7895,12 @@
             "state" : "translated",
             "value" : "Mute voice control"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключить голосовое управление"
+          }
         }
       }
     },
@@ -7294,6 +7966,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Name (e.g. Bossa intro)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название (например, вступление босса-новы)"
           }
         }
       }
@@ -7361,6 +8039,12 @@
             "state" : "translated",
             "value" : "Needs this app’s mic — turn off “I use iOS Voice Control” to use it."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нужен микрофон приложения — выключите «Я использую „Управление голосом“ iOS»."
+          }
         }
       }
     },
@@ -7424,6 +8108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No note detected, play a note"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нота не распознана, сыграйте ноту"
           }
         }
       }
@@ -7489,6 +8179,12 @@
             "state" : "translated",
             "value" : "No previous purchase was found."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прежних покупок не найдено."
+          }
         }
       }
     },
@@ -7549,6 +8245,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -7619,6 +8321,12 @@
             "state" : "translated",
             "value" : "Not now"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не сейчас"
+          }
         }
       }
     },
@@ -7685,6 +8393,12 @@
             "state" : "translated",
             "value" : "Note"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нота"
+          }
         }
       }
     },
@@ -7749,6 +8463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ноты"
           }
         }
       }
@@ -7816,6 +8536,12 @@
             "state" : "translated",
             "value" : "On-screen"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На экране"
+          }
         }
       }
     },
@@ -7880,6 +8606,12 @@
             "state" : "translated",
             "value" : "Open"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть"
+          }
         }
       }
     },
@@ -7943,6 +8675,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open accent editor"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть редактор акцентов"
           }
         }
       }
@@ -8010,6 +8748,12 @@
             "state" : "translated",
             "value" : "Open accents"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть акценты"
+          }
         }
       }
     },
@@ -8073,6 +8817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open it from Beat view below, or say “practice”."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте его в виде долей ниже или скажите «practice»."
           }
         }
       }
@@ -8140,6 +8890,12 @@
             "state" : "translated",
             "value" : "Open practice"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть тренировку"
+          }
         }
       }
     },
@@ -8206,6 +8962,12 @@
             "state" : "translated",
             "value" : "Open practice mode"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть режим тренировки"
+          }
         }
       }
     },
@@ -8269,6 +9031,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "open practice mode"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "открыть режим тренировки"
           }
         }
       }
@@ -8334,6 +9102,12 @@
             "state" : "translated",
             "value" : "open the tuner"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "открыть тюнер"
+          }
         }
       }
     },
@@ -8397,6 +9171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Orbit view"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вид «Орбита»"
           }
         }
       }
@@ -8464,6 +9244,12 @@
             "state" : "translated",
             "value" : "Pause"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пауза"
+          }
         }
       }
     },
@@ -8530,6 +9316,12 @@
             "state" : "translated",
             "value" : "Pay once, yours forever"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заплатите один раз — и навсегда"
+          }
         }
       }
     },
@@ -8593,6 +9385,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfect!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Идеально!"
           }
         }
       }
@@ -8659,6 +9457,12 @@
             "state" : "translated",
             "value" : "Play"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Играть"
+          }
         }
       }
     },
@@ -8722,6 +9526,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "play / pause"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "играть / пауза"
           }
         }
       }
@@ -8787,6 +9597,12 @@
             "state" : "translated",
             "value" : "Play 2–5 notes, about half a second each."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сыграйте 2–5 нот, каждую около полусекунды."
+          }
         }
       }
     },
@@ -8850,6 +9666,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Play a note…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сыграйте ноту…"
           }
         }
       }
@@ -8917,6 +9739,12 @@
             "state" : "translated",
             "value" : "Play your phrase to start or stop the click, even mid-song. Hold each note about half a second so quick notes in your playing don’t set it off. Works while Listen is on."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сыграйте свою фразу, чтобы запустить или остановить клик — даже посреди пьесы. Держите каждую ноту около полусекунды, чтобы быстрые ноты в игре не вызывали срабатывания. Работает, пока включено прослушивание."
+          }
         }
       }
     },
@@ -8982,6 +9810,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Playback"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Воспроизведение"
           }
         }
       }
@@ -9049,6 +9883,12 @@
             "state" : "translated",
             "value" : "Plus"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плюс"
+          }
         }
       }
     },
@@ -9113,6 +9953,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Practice"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тренировка"
           }
         }
       }
@@ -9179,6 +10025,12 @@
             "state" : "translated",
             "value" : "Practice mode"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим тренировки"
+          }
         }
       }
     },
@@ -9242,6 +10094,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Practice mode · accent editor & presets · tuner"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим тренировки · редактор акцентов и пресеты · тюнер"
           }
         }
       }
@@ -9309,6 +10167,12 @@
             "state" : "translated",
             "value" : "Preset %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пресет «%@»"
+          }
         }
       }
     },
@@ -9374,6 +10238,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Presets"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пресеты"
           }
         }
       }
@@ -9441,6 +10311,12 @@
             "state" : "translated",
             "value" : "Privacy Policy"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Политика конфиденциальности"
+          }
         }
       }
     },
@@ -9505,6 +10381,12 @@
             "state" : "translated",
             "value" : "privacy-policy-url"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/ru/privacy.html"
+          }
         }
       }
     },
@@ -9565,6 +10447,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -9635,6 +10523,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -9698,6 +10592,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro unlocked — thank you!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro разблокирован — спасибо!"
           }
         }
       }
@@ -9763,6 +10663,12 @@
             "state" : "translated",
             "value" : "Quarter notes"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Четвертные"
+          }
         }
       }
     },
@@ -9827,6 +10733,12 @@
             "state" : "translated",
             "value" : "Quarters"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Четвертные"
+          }
         }
       }
     },
@@ -9890,6 +10802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Raise the tempo automatically every few bars — push a passage faster, hands-free."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Темп сам растёт каждые несколько тактов: разгоняйте пассаж, не отрываясь от инструмента."
           }
         }
       }
@@ -9957,6 +10875,12 @@
             "state" : "translated",
             "value" : "Raises the tempo automatically every few bars while you play — for gradually pushing a passage faster. Stops at the target. Say “practice” anytime to open this."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока вы играете, темп автоматически растёт каждые несколько тактов — так удобно постепенно разгонять пассаж. На целевом темпе рост останавливается. Скажите «practice» в любой момент, чтобы открыть этот режим."
+          }
         }
       }
     },
@@ -10022,6 +10946,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Record a short phrase first."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сначала запишите короткую фразу."
           }
         }
       }
@@ -10089,6 +11019,12 @@
             "state" : "translated",
             "value" : "Record again"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Записать заново"
+          }
         }
       }
     },
@@ -10155,6 +11091,12 @@
             "state" : "translated",
             "value" : "Record signal"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Записать сигнал"
+          }
         }
       }
     },
@@ -10218,6 +11160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reference pitch"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Опорный тон"
           }
         }
       }
@@ -10285,6 +11233,12 @@
             "state" : "translated",
             "value" : "Requires Pro"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нужен Pro"
+          }
         }
       }
     },
@@ -10350,6 +11304,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reset"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить"
           }
         }
       }
@@ -10417,6 +11377,12 @@
             "state" : "translated",
             "value" : "Restore"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восстановить"
+          }
         }
       }
     },
@@ -10482,6 +11448,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restore purchases"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восстановить покупки"
           }
         }
       }
@@ -10549,6 +11521,12 @@
             "state" : "translated",
             "value" : "Restore Purchases"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восстановить покупки"
+          }
         }
       }
     },
@@ -10614,6 +11592,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restores a previous Pro purchase"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восстанавливает прежнюю покупку Pro"
           }
         }
       }
@@ -10681,6 +11665,12 @@
             "state" : "translated",
             "value" : "Restores the default pattern for this metre"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Возвращает рисунок по умолчанию для этого размера"
+          }
         }
       }
     },
@@ -10746,6 +11736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Save"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить"
           }
         }
       }
@@ -10813,6 +11809,12 @@
             "state" : "translated",
             "value" : "Save a pattern per song — recalling it also restores its metre and subdivision."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохраняйте рисунок для каждой пьесы: при вызове вернутся также размер и дробление."
+          }
         }
       }
     },
@@ -10878,6 +11880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Save current pattern…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить текущий рисунок…"
           }
         }
       }
@@ -10945,6 +11953,12 @@
             "state" : "translated",
             "value" : "Save pattern"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить рисунок"
+          }
         }
       }
     },
@@ -11010,6 +12024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Save preset"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить пресет"
           }
         }
       }
@@ -11077,6 +12097,12 @@
             "state" : "translated",
             "value" : "Saves this pattern with its metre and subdivision, so you can recall it per song."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохраняет этот рисунок вместе с размером и дроблением, чтобы вызывать его для каждой пьесы."
+          }
         }
       }
     },
@@ -11142,6 +12168,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "say"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "скажите"
           }
         }
       }
@@ -11209,6 +12241,12 @@
             "state" : "translated",
             "value" : "Say \"close\" to exit"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «close», чтобы выйти"
+          }
         }
       }
     },
@@ -11272,6 +12310,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Say \"start\", \"faster\", or \"help\""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «start», «faster» или «help»"
           }
         }
       }
@@ -11338,6 +12382,12 @@
             "state" : "translated",
             "value" : "Say a command"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите команду"
+          }
         }
       }
     },
@@ -11401,6 +12451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Say “close” / “done”, or tap Done."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «close» / «done» или нажмите «Готово»."
           }
         }
       }
@@ -11468,6 +12524,12 @@
             "state" : "translated",
             "value" : "Say “close” or tap to dismiss"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «close» или нажмите, чтобы закрыть"
+          }
         }
       }
     },
@@ -11534,6 +12596,12 @@
             "state" : "translated",
             "value" : "Say “help” anytime — or tap here — to see every command you can say, then “close” to dismiss."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «help» в любой момент или нажмите здесь, чтобы увидеть все команды, а потом «close», чтобы закрыть."
+          }
         }
       }
     },
@@ -11598,6 +12666,12 @@
             "state" : "translated",
             "value" : "Say “help” or tap the ? button."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «help» или нажмите кнопку ?."
+          }
         }
       }
     },
@@ -11661,6 +12735,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Say “louder” / “quieter” / “mute”, or “volume 60”."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «louder» / «quieter» / «mute» или «volume 60»."
           }
         }
       }
@@ -11728,6 +12808,12 @@
             "state" : "translated",
             "value" : "Say “practice” to raise the tempo automatically every few bars while you play — great for speed drills."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «practice», чтобы темп автоматически рос каждые несколько тактов, пока вы играете, — отлично для скоростных упражнений."
+          }
         }
       }
     },
@@ -11792,6 +12878,12 @@
             "state" : "translated",
             "value" : "Say “scroll down” / “scroll up”, or swipe."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «scroll down» / «scroll up» или проведите пальцем."
+          }
         }
       }
     },
@@ -11855,6 +12947,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Say “tune” and play — note, cents, and an in-tune zone."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «tune» и играйте: нота, центы и зона точного строя."
           }
         }
       }
@@ -11922,6 +13020,12 @@
             "state" : "translated",
             "value" : "Say “tune” to open the chromatic tuner, and “close” when you’re done."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «tune», чтобы открыть хроматический тюнер, и «close», когда закончите."
+          }
         }
       }
     },
@@ -11985,6 +13089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scroll"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прокрутка"
           }
         }
       }
@@ -12050,6 +13160,12 @@
             "state" : "translated",
             "value" : "Scroll down"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прокрутить вниз"
+          }
         }
       }
     },
@@ -12113,6 +13229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scroll up"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прокрутить вверх"
           }
         }
       }
@@ -12180,6 +13302,12 @@
             "state" : "translated",
             "value" : "Scrolling"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прокрутка"
+          }
         }
       }
     },
@@ -12243,6 +13371,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Set beats"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать доли"
           }
         }
       }
@@ -12308,6 +13442,12 @@
             "state" : "translated",
             "value" : "set percent"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "задать процент"
+          }
         }
       }
     },
@@ -12372,6 +13512,12 @@
             "state" : "translated",
             "value" : "set time signature"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "задать размер"
+          }
         }
       }
     },
@@ -12435,6 +13581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "set value"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "задать значение"
           }
         }
       }
@@ -12502,6 +13654,12 @@
             "state" : "translated",
             "value" : "Sets %lld/4 time"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Задаёт размер %lld/4"
+          }
         }
       }
     },
@@ -12568,6 +13726,12 @@
             "state" : "translated",
             "value" : "Signal: %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сигнал: %@"
+          }
         }
       }
     },
@@ -12631,6 +13795,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "silence the click"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "заглушить клик"
           }
         }
       }
@@ -12698,6 +13868,12 @@
             "state" : "translated",
             "value" : "Silent"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тишина"
+          }
         }
       }
     },
@@ -12762,6 +13938,12 @@
             "state" : "translated",
             "value" : "Sixteenth notes"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шестнадцатые"
+          }
         }
       }
     },
@@ -12825,6 +14007,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sixteenths"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шестнадцатые"
           }
         }
       }
@@ -12892,6 +14080,12 @@
             "state" : "translated",
             "value" : "Slower"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Медленнее"
+          }
         }
       }
     },
@@ -12956,6 +14150,12 @@
             "state" : "translated",
             "value" : "Slower −5"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Медленнее −5"
+          }
         }
       }
     },
@@ -13019,6 +14219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Speech recognition unavailable here"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Распознавание речи здесь недоступно"
           }
         }
       }
@@ -13085,6 +14291,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Speed trainer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тренажёр скорости"
           }
         }
       }
@@ -13156,6 +14368,12 @@
             "state" : "translated",
             "value" : "Speed trainer · +%1$lld every %2$lld bars → %3$lld"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тренажёр скорости · +%1$lld каждые %2$lld т. → %3$lld"
+          }
         }
       }
     },
@@ -13220,6 +14438,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Старт"
           }
         }
       }
@@ -13287,6 +14511,12 @@
             "state" : "translated",
             "value" : "Start / stop with my instrument"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Старт и стоп с моим инструментом"
+          }
         }
       }
     },
@@ -13352,6 +14582,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start listening"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать слушать"
           }
         }
       }
@@ -13419,6 +14655,12 @@
             "state" : "translated",
             "value" : "Start metronome"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запустить метроном"
+          }
         }
       }
     },
@@ -13483,6 +14725,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stop"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стоп"
           }
         }
       }
@@ -13550,6 +14798,12 @@
             "state" : "translated",
             "value" : "Stop listening"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перестать слушать"
+          }
         }
       }
     },
@@ -13616,6 +14870,12 @@
             "state" : "translated",
             "value" : "Stop metronome"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Остановить метроном"
+          }
         }
       }
     },
@@ -13680,6 +14940,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Subdivision"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дробление"
           }
         }
       }
@@ -13747,6 +15013,12 @@
             "state" : "translated",
             "value" : "Subscribe"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подписаться"
+          }
         }
       }
     },
@@ -13813,6 +15085,12 @@
             "state" : "translated",
             "value" : "Subscribe yearly for %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подписка на год за %@"
+          }
         }
       }
     },
@@ -13876,6 +15154,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Support"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддержка"
           }
         }
       }
@@ -13941,6 +15225,12 @@
             "state" : "translated",
             "value" : "Switch to bounce view"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перейти к виду «Мячик»"
+          }
         }
       }
     },
@@ -14004,6 +15294,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Switch to orbit view"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перейти к виду «Орбита»"
           }
         }
       }
@@ -14071,6 +15367,12 @@
             "state" : "translated",
             "value" : "Switch to ring sweep view"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перейти к виду «Кольцо»"
+          }
         }
       }
     },
@@ -14137,6 +15439,12 @@
             "state" : "translated",
             "value" : "Switch view"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сменить вид"
+          }
         }
       }
     },
@@ -14201,6 +15509,12 @@
             "state" : "translated",
             "value" : "switch visualisation"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "сменить визуализацию"
+          }
         }
       }
     },
@@ -14264,6 +15578,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap 1/4, 1/8, Trip, or 1/16. Double-tap the card to open Accents and set every click of the measure high, low, or silent."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите 1/4, 1/8, триоль или 1/16. Нажмите на карточку дважды, чтобы открыть акценты и задать каждому клику такта высокий, низкий или тихий звук."
           }
         }
       }
@@ -14331,6 +15651,12 @@
             "state" : "translated",
             "value" : "Tap in rhythm to check your timing"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажимайте в ритме, чтобы проверить свой ритм"
+          }
         }
       }
     },
@@ -14394,6 +15720,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap Listen to control by voice"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите «Слушать» для голосового управления"
           }
         }
       }
@@ -14459,6 +15791,12 @@
             "state" : "translated",
             "value" : "Tap Listen to turn voice control on or off."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите «Слушать», чтобы включить или выключить голосовое управление."
+          }
         }
       }
     },
@@ -14522,6 +15860,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap Start / Stop at the bottom."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите «Старт» / «Стоп» внизу."
           }
         }
       }
@@ -14589,6 +15933,12 @@
             "state" : "translated",
             "value" : "Tap tempo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тап-темп"
+          }
         }
       }
     },
@@ -14652,6 +16002,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap the big BPM number in rhythm to set the tempo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажимайте на большое число BPM в ритме, чтобы задать темп."
           }
         }
       }
@@ -14717,6 +16073,12 @@
             "state" : "translated",
             "value" : "Tap the dots to choose the time signature."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите на точки, чтобы выбрать размер."
+          }
         }
       }
     },
@@ -14780,6 +16142,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap the view icon (top-right of the beat card) — bounce → orbit → ring sweep."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите на значок вида (справа вверху на карточке долей): мячик → орбита → кольцо."
           }
         }
       }
@@ -14847,6 +16215,12 @@
             "state" : "translated",
             "value" : "Tap to switch between the bouncing ball and the orbit ring — or say “bounce” / “orbit”."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите, чтобы переключаться между прыгающим мячиком и орбитальным кольцом, или скажите «bounce» / «orbit»."
+          }
         }
       }
     },
@@ -14913,6 +16287,12 @@
             "state" : "translated",
             "value" : "Tap to switch between the tempo name and BPM"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите, чтобы переключать название темпа и BPM"
+          }
         }
       }
     },
@@ -14978,6 +16358,12 @@
             "state" : "translated",
             "value" : "Tempo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Темп"
+          }
         }
       }
     },
@@ -15041,6 +16427,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo %lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Темп %lld"
           }
         }
       }
@@ -15108,6 +16500,12 @@
             "state" : "translated",
             "value" : "Tempo slider"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ползунок темпа"
+          }
         }
       }
     },
@@ -15173,6 +16571,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terms of Use (EULA)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Условия использования (EULA)"
           }
         }
       }
@@ -15240,6 +16644,12 @@
             "state" : "translated",
             "value" : "That’s your tempo as a classical term. Tap it to flip to the BPM number and back."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Это ваш темп в виде классического термина. Нажмите, чтобы увидеть число BPM, и ещё раз — чтобы вернуться."
+          }
         }
       }
     },
@@ -15305,6 +16715,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The app’s own mic is off so it won’t clash with Voice Control. Say “Tap Start”, “Tap Faster”, or “Tap 3 beats”."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Микрофон приложения выключен, чтобы не мешать «Управлению голосом». Скажите «Tap Start», «Tap Faster» или «Tap 3 beats»."
           }
         }
       }
@@ -15372,6 +16788,12 @@
             "state" : "translated",
             "value" : "The full metronome — every tempo, metre, and subdivision — all three beat views, tap tempo, timing check, and complete hands-free voice control."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Полный метроном: любой темп, размер и дробление, все три вида долей, тап-темп, проверка ритма и полное голосовое управление без рук."
+          }
         }
       }
     },
@@ -15437,6 +16859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The mic is already listening — say “start”, “faster”, or “help”. Use iOS Voice Control? Open Voice Commands to switch."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Микрофон уже слушает: скажите «start», «faster» или «help». Пользуетесь «Управлением голосом» iOS? Откройте «Голосовые команды», чтобы переключиться."
           }
         }
       }
@@ -15504,6 +16932,12 @@
             "state" : "translated",
             "value" : "The yearly plan auto-renews at %@/year until cancelled at least 24 hours before renewal, in Settings > Apple Account > Subscriptions. Lifetime is a single one-time charge."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Годовая подписка продлевается автоматически по цене %@ в год, пока вы не отмените её не позднее чем за 24 часа до продления в «Настройки» > «Учётная запись Apple» > «Подписки». Покупка «навсегда» — единовременный платёж."
+          }
         }
       }
     },
@@ -15570,6 +17004,12 @@
             "state" : "translated",
             "value" : "There’s a tuner too"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Есть и тюнер"
+          }
         }
       }
     },
@@ -15633,6 +17073,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timing check"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверка ритма"
           }
         }
       }
@@ -15700,6 +17146,12 @@
             "state" : "translated",
             "value" : "Tips"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Советы"
+          }
         }
       }
     },
@@ -15766,6 +17218,12 @@
             "state" : "translated",
             "value" : "Trainer"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тренажёр"
+          }
         }
       }
     },
@@ -15830,6 +17288,12 @@
             "state" : "translated",
             "value" : "Triplets"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Триоли"
+          }
         }
       }
     },
@@ -15893,6 +17357,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "triplets"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "триоли"
           }
         }
       }
@@ -15959,6 +17429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Try again"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повторить"
           }
         }
       }
@@ -16072,6 +17548,12 @@
             "state" : "translated",
             "value" : "Try free for %lld days"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесплатно: %lld дн."
+          }
         }
       }
     },
@@ -16171,6 +17653,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Try free for %lld months"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесплатно: %lld мес."
           }
         }
       }
@@ -16284,6 +17772,12 @@
             "state" : "translated",
             "value" : "Try free for %lld weeks"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесплатно: %lld нед."
+          }
         }
       }
     },
@@ -16347,6 +17841,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Try free for a month"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесплатно на месяц"
           }
         }
       }
@@ -16412,6 +17912,12 @@
             "state" : "translated",
             "value" : "Try free for a week"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесплатно на неделю"
+          }
         }
       }
     },
@@ -16475,6 +17981,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Try free for a year"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесплатно на год"
           }
         }
       }
@@ -16540,6 +18052,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tuner"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тюнер"
           }
         }
       }
@@ -16607,6 +18125,12 @@
             "state" : "translated",
             "value" : "Turns off the app's own microphone and drives controls by name"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключает микрофон приложения; кнопками можно управлять по названию"
+          }
         }
       }
     },
@@ -16670,6 +18194,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turns off this app’s mic so the two don’t clash. Control it by saying “Tap Start”, “Tap Faster”, “Tap 3 beats”."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключает микрофон приложения, чтобы они не мешали друг другу. Управляйте командами «Tap Start», «Tap Faster», «Tap 3 beats»."
           }
         }
       }
@@ -16737,6 +18267,12 @@
             "state" : "translated",
             "value" : "Two beat views"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Два вида долей"
+          }
         }
       }
     },
@@ -16801,6 +18337,12 @@
             "state" : "translated",
             "value" : "Unlock Pro"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разблокировать Pro"
+          }
         }
       }
     },
@@ -16864,6 +18406,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Up +1"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вверх +1"
           }
         }
       }
@@ -16931,6 +18479,12 @@
             "state" : "translated",
             "value" : "Up to %lld BPM"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "До %lld BPM"
+          }
         }
       }
     },
@@ -16994,6 +18548,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upgrade"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перейти на Pro"
           }
         }
       }
@@ -17060,6 +18620,12 @@
             "state" : "translated",
             "value" : "View"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вид"
+          }
         }
       }
     },
@@ -17123,6 +18689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voice"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Голос"
           }
         }
       }
@@ -17190,6 +18762,12 @@
             "state" : "translated",
             "value" : "Voice commands"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Голосовые команды"
+          }
         }
       }
     },
@@ -17254,6 +18832,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voice Commands"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Голосовые команды"
           }
         }
       }
@@ -17320,6 +18904,12 @@
             "state" : "translated",
             "value" : "Voice control off"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Голосовое управление выключено"
+          }
         }
       }
     },
@@ -17385,6 +18975,12 @@
             "state" : "translated",
             "value" : "Volume"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Громкость"
+          }
         }
       }
     },
@@ -17448,6 +19044,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volume %lld%%"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Громкость %lld%%"
           }
         }
       }
@@ -17513,6 +19115,12 @@
             "state" : "translated",
             "value" : "Volume down"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тише"
+          }
         }
       }
     },
@@ -17576,6 +19184,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volume up"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Громче"
           }
         }
       }
@@ -17643,6 +19257,12 @@
             "state" : "translated",
             "value" : "Yearly"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На год"
+          }
         }
       }
     },
@@ -17707,6 +19327,12 @@
             "state" : "translated",
             "value" : "Yearly — %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На год — %@"
+          }
         }
       }
     },
@@ -17767,6 +19393,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -17835,6 +19467,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -17895,6 +19533,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -17963,6 +19607,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -18026,6 +19676,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ Stop"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ Стоп"
           }
         }
       }
@@ -18091,6 +19747,12 @@
             "state" : "translated",
             "value" : "▶ Start"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ Старт"
+          }
         }
       }
     },
@@ -18154,6 +19816,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Таймер"
           }
         }
       }
@@ -18219,6 +19887,12 @@
             "state" : "translated",
             "value" : "Off"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выкл."
+          }
         }
       }
     },
@@ -18282,6 +19956,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Practice timer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Таймер занятия"
           }
         }
       }
@@ -18347,6 +20027,12 @@
             "state" : "translated",
             "value" : "%lld min"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld мин"
+          }
         }
       }
     },
@@ -18410,6 +20096,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Time left"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Осталось времени"
           }
         }
       }
@@ -18475,6 +20167,12 @@
             "state" : "translated",
             "value" : "Reset timer"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить таймер"
+          }
         }
       }
     },
@@ -18538,6 +20236,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer off"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Таймер выключен"
           }
         }
       }
@@ -18603,6 +20307,12 @@
             "state" : "translated",
             "value" : "Timer %lld min"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Таймер: %lld мин"
+          }
         }
       }
     },
@@ -18666,6 +20376,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ left"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Осталось: %@"
           }
         }
       }
@@ -18731,6 +20447,12 @@
             "state" : "translated",
             "value" : "Practice time is up"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время занятия вышло"
+          }
         }
       }
     },
@@ -18794,6 +20516,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "set a practice timer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "поставить таймер занятия"
           }
         }
       }
@@ -18859,6 +20587,12 @@
             "state" : "translated",
             "value" : "turn the timer off"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "выключить таймер"
+          }
         }
       }
     },
@@ -18922,6 +20656,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap the timer button next to Start, or say “timer 5 minutes”. It counts down while the click plays, then stops and chimes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите кнопку таймера рядом со «Старт» или скажите «timer 5 minutes». Отсчёт идёт, пока звучит клик, затем метроном останавливается и звенит."
           }
         }
       }
@@ -18987,6 +20727,12 @@
             "state" : "translated",
             "value" : "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “timer 5 minutes” or “timer off” anytime."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отсчёт идёт, пока звучит клик, и ставится на паузу, когда вы останавливаетесь. Когда время выйдет, метроном остановится и прозвенит. Скажите «timer 5 minutes» или «timer off» в любой момент."
+          }
         }
       }
     },
@@ -19050,6 +20796,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Share anonymous usage statistics"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отправлять анонимную статистику использования"
           }
         }
       }
@@ -19115,6 +20867,12 @@
             "state" : "translated",
             "value" : "Privacy"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Конфиденциальность"
+          }
         }
       }
     },
@@ -19178,6 +20936,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Counts like how many devices use the app and crash reports. No audio, settings or personal information. Applies from the next launch."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Только счётчики — например, сколько устройств используют приложение, — и отчёты о сбоях. Никакого звука, настроек и личных данных. Вступает в силу со следующего запуска."
           }
         }
       }
@@ -19244,6 +21008,12 @@
             "state" : "translated",
             "value" : "Even larger text"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ещё более крупный текст"
+          }
         }
       }
     },
@@ -19308,6 +21078,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The screen stays readable and tidy at the very largest text sizes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экран остаётся читаемым и аккуратным даже при самом крупном размере текста."
           }
         }
       }
@@ -19374,6 +21150,12 @@
             "state" : "translated",
             "value" : "Easier-to-see colours"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цвета, которые легче различать"
+          }
         }
       }
     },
@@ -19438,6 +21220,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beat and timing colours stay clear with Increase Contrast, or if colours are hard to tell apart."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цвета долей и ритма остаются чёткими при включённом «Увеличении контраста» или если цвета трудно различать."
           }
         }
       }
@@ -19504,6 +21292,12 @@
             "state" : "translated",
             "value" : "Keyboard control"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управление с клавиатуры"
+          }
         }
       }
     },
@@ -19568,6 +21362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "On iPad with a keyboard, start, stop, and change the tempo with keys."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На iPad с клавиатурой запускайте, останавливайте метроном и меняйте темп клавишами."
           }
         }
       }
@@ -19634,6 +21434,12 @@
             "state" : "translated",
             "value" : "What’s new"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что нового"
+          }
         }
       }
     },
@@ -19698,6 +21504,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "After an update, see what’s new the first time you open the app."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "После обновления при первом запуске приложения вы увидите, что нового."
           }
         }
       }
@@ -19764,6 +21576,12 @@
             "state" : "translated",
             "value" : "Replies to your feedback"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ответы на ваши отзывы"
+          }
         }
       }
     },
@@ -19828,6 +21646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Read our replies to your feedback right in the app."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Читайте наши ответы на ваши отзывы прямо в приложении."
           }
         }
       }
@@ -19894,6 +21718,12 @@
             "state" : "translated",
             "value" : "Gift Pro"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подарить Pro"
+          }
         }
       }
     },
@@ -19958,6 +21788,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Give Not My Tempo Pro to a bandmate or a student."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подарите Not My Tempo Pro коллеге по группе или ученику."
           }
         }
       }
@@ -20024,6 +21860,12 @@
             "state" : "translated",
             "value" : "Home Screen widget"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виджет на экране «Домой»"
+          }
         }
       }
     },
@@ -20088,6 +21930,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start the click right from your Home Screen without opening the app."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запускайте клик прямо с экрана «Домой», не открывая приложение."
           }
         }
       }
@@ -20154,6 +22002,12 @@
             "state" : "translated",
             "value" : "Siri and Shortcuts"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri и «Быстрые команды»"
+          }
         }
       }
     },
@@ -20218,6 +22072,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ask Siri or run a shortcut to start the click at your tempo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Попросите Siri или запустите быструю команду, чтобы включить клик в вашем темпе."
           }
         }
       }
@@ -20284,6 +22144,12 @@
             "state" : "translated",
             "value" : "Sync across devices"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Синхронизация между устройствами"
+          }
         }
       }
     },
@@ -20348,6 +22214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your presets and settings follow you between iPhone and iPad."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваши пресеты и настройки переходят между iPhone и iPad."
           }
         }
       }
@@ -20414,6 +22286,12 @@
             "state" : "translated",
             "value" : "Back up your presets"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Резервная копия пресетов"
+          }
         }
       }
     },
@@ -20478,6 +22356,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Save your accent presets to a file and bring them back anytime."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохраните пресеты акцентов в файл и восстановите их в любой момент."
           }
         }
       }
@@ -20544,6 +22428,12 @@
             "state" : "translated",
             "value" : "Practice reminders"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Напоминания о занятиях"
+          }
         }
       }
     },
@@ -20608,6 +22498,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Get a gentle reminder at the time you choose to practice."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мягкое напоминание в то время, которое вы выбрали для занятий."
           }
         }
       }
@@ -20674,6 +22570,12 @@
             "state" : "translated",
             "value" : "Foldable iPhone layout"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вид для складного iPhone"
+          }
         }
       }
     },
@@ -20738,6 +22640,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "On a foldable iPhone, see the beat and the controls side by side."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На складном iPhone доли и элементы управления располагаются рядом."
           }
         }
       }
@@ -20804,6 +22712,12 @@
             "state" : "translated",
             "value" : "Erase all my data"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стереть все мои данные"
+          }
         }
       }
     },
@@ -20869,6 +22783,12 @@
             "state" : "translated",
             "value" : "Clear all your presets and settings in the app whenever you want."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удаляйте все пресеты и настройки в приложении, когда захотите."
+          }
         }
       }
     },
@@ -20932,6 +22852,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Redeem an offer code"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Активировать промокод"
           }
         }
       }
@@ -20997,6 +22923,12 @@
             "state" : "translated",
             "value" : "Got a code for Pro? Enter it right in the app, on the Pro screen or under Voice Commands."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Есть код для Pro? Введите его прямо в приложении — на экране Pro или в разделе «Голосовые команды»."
+          }
         }
       }
     },
@@ -21060,6 +22992,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clearer with Increase Contrast"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чётче при увеличении контраста"
           }
         }
       }
@@ -21125,6 +23063,12 @@
             "state" : "translated",
             "value" : "With Increase Contrast or Reduce Transparency on, beats, outlines and the help overlay are drawn bolder and solid."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если включено «Увеличение контраста» или «Понижение прозрачности», доли, контуры и подсказки отображаются жирнее и без прозрачности."
+          }
         }
       }
     },
@@ -21188,6 +23132,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Room for the largest text"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Место для самого крупного текста"
           }
         }
       }
@@ -21253,6 +23203,12 @@
             "state" : "translated",
             "value" : "At the largest text sizes, buttons and lists rearrange so nothing gets cut off."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "При самом крупном тексте кнопки и списки перестраиваются, и ничего не обрезается."
+          }
         }
       }
     },
@@ -21316,6 +23272,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Version %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия %@"
           }
         }
       }
@@ -21381,6 +23343,12 @@
             "state" : "translated",
             "value" : "Continue"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжить"
+          }
         }
       }
     },
@@ -21444,6 +23412,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A metronome you talk to"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Метроном, с которым можно говорить"
           }
         }
       }
@@ -21509,6 +23483,12 @@
             "state" : "translated",
             "value" : "Say “start”, “stop”, “faster” or “tempo 120” and keep both hands on your instrument."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скажите «start», «stop», «faster» или «tempo 120» — обе руки остаются на инструменте."
+          }
         }
       }
     },
@@ -21572,6 +23552,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Commands are English words"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Команды — английские слова"
           }
         }
       }
@@ -21637,6 +23623,12 @@
             "state" : "translated",
             "value" : "In every language, you control the app with short English words. Say “help” anytime to see them all on screen."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На любом языке приложением управляют короткие английские слова. Скажите «help» в любой момент, чтобы увидеть их все на экране."
+          }
         }
       }
     },
@@ -21700,6 +23692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The app’s own mic stays off so it won’t clash with Voice Control. Say “Tap Start” or “Tap Faster”."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Микрофон приложения остаётся выключенным, чтобы не мешать «Управлению голосом». Скажите «Tap Start» или «Tap Faster»."
           }
         }
       }
@@ -21765,6 +23763,12 @@
             "state" : "translated",
             "value" : "Next: the microphone"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Далее: микрофон"
+          }
         }
       }
     },
@@ -21828,6 +23832,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS will ask for the microphone and speech recognition. They are used only to hear your commands. The app never records or saves what it hears."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS запросит доступ к микрофону и распознаванию речи. Они нужны только для того, чтобы слышать ваши команды. Приложение ничего не записывает и не сохраняет."
           }
         }
       }
@@ -21893,6 +23903,12 @@
             "state" : "translated",
             "value" : "Skip"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пропустить"
+          }
         }
       }
     },
@@ -21956,6 +23972,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Get started"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать"
           }
         }
       }
@@ -22021,6 +24043,12 @@
             "state" : "translated",
             "value" : "Next"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Далее"
+          }
         }
       }
     },
@@ -22084,6 +24112,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preset saved"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пресет сохранён"
           }
         }
       }
@@ -22149,6 +24183,12 @@
             "state" : "translated",
             "value" : "No presets yet"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пресетов пока нет"
+          }
         }
       }
     },
@@ -22212,6 +24252,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Redeem offer code"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Активировать промокод"
           }
         }
       }
@@ -22277,6 +24323,12 @@
             "state" : "translated",
             "value" : "Show the introduction again"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать вступление ещё раз"
+          }
         }
       }
     },
@@ -22340,6 +24392,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Redeem Code"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Активировать код"
           }
         }
       }
@@ -22405,6 +24463,12 @@
             "state" : "translated",
             "value" : "Introduction"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вступление"
+          }
         }
       }
     },
@@ -22468,6 +24532,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show introduction"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать вступление"
           }
         }
       }
@@ -22533,6 +24603,12 @@
             "state" : "translated",
             "value" : "Offer code"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Промокод"
+          }
         }
       }
     },
@@ -22596,6 +24672,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Redeem code"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Активировать код"
           }
         }
       }
@@ -22661,6 +24743,12 @@
             "state" : "translated",
             "value" : "What's new"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что нового"
+          }
         }
       }
     },
@@ -22724,6 +24812,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skip introduction"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пропустить вступление"
           }
         }
       }

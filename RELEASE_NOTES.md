@@ -86,6 +86,13 @@ Redeem offer codes right in the app
 Beats stand out with Increase Contrast
 Screens fit even the largest text sizes
 
+### App Store (ru)
+
+Короткое знакомство при первом запуске
+Промокоды теперь вводятся в приложении
+Увеличение контраста делает доли чётче
+Всё влезает и при самом крупном тексте
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)
