@@ -128,6 +128,13 @@ Indløs tilbudskoder direkte i appen
 Slagene ses tydeligere med Øg kontrast
 Alt passer også med den største tekst
 
+### App Store (nb)
+
+Kort introduksjon første gang du åpner
+Løs inn tilbudskoder rett i appen
+Slagene synes tydeligere med Øk kontrast
+Alt får plass selv med størst tekst
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)

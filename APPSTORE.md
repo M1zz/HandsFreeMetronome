@@ -1210,6 +1210,77 @@ https://m1zz.github.io/HandsFreeMetronome/da/privacy.html
 
 https://m1zz.github.io/HandsFreeMetronome/da/
 
+## nb
+
+### 이름
+
+Not My Tempo: Stemmemetronom
+
+### 부제
+
+Bytt tempo uten hendene
+
+### 키워드
+
+bpm,stemmeapparat,øving,gitar,piano,trommer,fiolin,saksofon,trompet,fløyte,kor,ukulele,aksenter
+
+### 프로모션 텍스트
+
+Ha hendene på instrumentet. Si «start», «faster» eller «tempo 120», så følger klikket med. Hele metronomen og stemmestyringen er gratis.
+
+### 설명
+
+En metronom du styrer med stemmen, slik at hendene aldri forlater instrumentet.
+Si «start» for å begynne og «faster» for å øke farten. Ingen trykking, ingen stopp midt i frasen.
+
+Å endre tempoet mens du spiller betyr vanligvis å slippe instrumentet og miste tråden. Not My Tempo lytter med sin egen mikrofon og gjenkjenner tale på enheten din, så den fungerer med en gang – uten at du må slå på Stemmestyring i iOS eller en tilgjengelighetsinnstilling. Kommandoene sier du på engelsk.
+
+SNAKK MED METRONOMEN
+«start» og «stop» for å starte og stoppe
+«faster» og «slower» endrer med 5 BPM, «up» og «down» med 1
+«tempo 120», eller bare et tall, hopper rett dit
+«double» og «half» for å doble eller halvere
+«quarter», «eighth», «triplet», «sixteenth» for underdelinger
+«louder», «quieter», «mute» for volumet
+Glemt en kommando? Si «help», så vises alle frasene du kan bruke på skjermen
+
+HELE METRONOMEN ER GRATIS
+Taktarter fra 1 til 8 slag, med et kraftigere klikk på første slag
+Underdelinger i åttedeler, trioler og sekstendedeler
+Tre måter å se slaget på: sprett, bane og ring
+Tapp tempo: trykk i rytme på det store tallet for å stille inn BPM
+Timingsjekk: trykk på baneringen mens du spiller, og se hvor nær du traff
+Skjermen holder seg på under avspilling, og appen husker sist brukte tempo og taktart
+
+START OG STOPP MED INSTRUMENTET
+Ta først opp en kort frase på 2–5 toner, og spill den for å starte eller stoppe klikket. Hold hver tone i omtrent et halvt sekund, slik at raske toner i spillet ditt ikke utløser det.
+
+NOT MY TEMPO PRO
+Øvingsmodus: en hastighetstrener som legger til noen få BPM for hver få takter til du når måltempoet
+Aksenteditor: sett hvert klikk i takten til høyt, lavt eller stille, og lagre en forhåndsinnstilling for hver sang
+Kromatisk stemmeapparat: stem opp før du begynner, med en justerbar stemmetone A fra 430 til 450 Hz
+Pro er et årsabonnement med gratis prøveperiode, eller et engangskjøp for alltid.
+
+TILGJENGELIGHET
+Bruker du Stemmestyring i iOS, slår du av appens egen mikrofon og styrer ved å si navnene på knappene. Kontrollene har VoiceOver-etiketter.
+
+OM ABONNEMENTET
+Årsabonnementet fornyes automatisk med mindre det sies opp minst 24 timer før utløpet av gjeldende periode. Administrer eller si opp i Innstillinger > Apple-konto > Abonnementer. Kjøp for alltid er en enkelt engangsbetaling.
+Bruksvilkår (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Personvernerklæring: https://m1zz.github.io/HandsFreeMetronome/nb/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/nb/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/nb/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/nb/
+
 ## pt-BR
 
 ### 이름
