@@ -716,6 +716,74 @@ https://m1zz.github.io/HandsFreeMetronome/it/privacy.html
 
 https://m1zz.github.io/HandsFreeMetronome/it/
 
+## en-GB
+
+### 이름
+
+Not My Tempo: Voice Metronome
+
+### 부제
+
+Change the beat, hands-free
+
+### 키워드
+
+saxophone,violin,trumpet,flute,choir,cello,accent,bpm,timing,practice,drum,ukulele,guitar,piano,band
+
+### 프로모션 텍스트
+
+Keep both hands on your instrument. Say "start," "faster," or "tempo 120" and the click follows. The full metronome and voice control are free.
+
+### 설명
+
+A metronome you run with your voice, so your hands never leave the instrument.
+Say "start" to begin, "faster" to speed up. No tapping, no stopping mid-phrase.
+
+The app listens through its own microphone and recognizes speech on your device, so it works right away. There is no need to turn on iOS Voice Control or any Accessibility setting.
+
+TALK TO YOUR METRONOME
+"start" and "stop"
+"faster" and "slower" move 5 BPM, "up" and "down" move 1
+"tempo 120", or just a number, jumps straight to it
+"double" and "half"
+"quarter", "eighth", "triplet", "sixteenth" for subdivisions
+"louder", "quieter", "mute"
+Forget a command? Say "help" and every phrase you can use appears on screen
+
+THE FULL METRONOME IS FREE
+Time signatures from 1 to 8 beats, with a stronger click on beat one
+Quarter, eighth, triplet and sixteenth subdivisions
+Three ways to watch the beat: bounce, orbit and ring
+Tap tempo: tap the big number in rhythm to set the BPM
+Timing check: tap the orbit ring as you play and see how close you landed
+The screen stays awake while it plays, and your last tempo and meter are remembered
+
+NOT MY TEMPO PRO
+Practice mode: a speed trainer that adds a few BPM every few bars until you reach your target
+Accent editor: set every click in the bar to high, low or silent, and save a preset per song
+Chromatic tuner: tune up before you start
+Pro is a yearly subscription with a free trial, or a one-time lifetime purchase.
+
+ACCESSIBILITY
+If you rely on iOS Voice Control, switch the app's own mic off and drive it by button name instead. Controls carry VoiceOver labels.
+
+SUBSCRIPTION DETAILS
+The yearly plan renews automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel it in Settings > Apple Account > Subscriptions. Lifetime is a single one-time charge.
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://m1zz.github.io/HandsFreeMetronome/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/
+
 ## pt-BR
 
 ### 이름

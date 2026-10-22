@@ -59,6 +59,12 @@
             "state" : "translated",
             "value" : "%@ all’anno"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ per year"
+          }
         }
       }
     },
@@ -122,6 +128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, %lld cent calante"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld cents flat"
           }
         }
       }
@@ -187,6 +199,12 @@
             "state" : "translated",
             "value" : "%@, %lld cent crescente"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld cents sharp"
+          }
         }
       }
     },
@@ -245,6 +263,12 @@
             "state" : "translated",
             "value" : "%@, intonato"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, in tune"
+          }
         }
       }
     },
@@ -301,6 +325,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -419,6 +449,24 @@
             "state" : "translated",
             "value" : "%lld movimenti"
           }
+        },
+        "en-GB" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld beat"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld beats"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -491,6 +539,12 @@
             "state" : "translated",
             "value" : "%lld movimenti al minuto"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld beats per minute"
+          }
         }
       }
     },
@@ -547,6 +601,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -617,6 +677,12 @@
             "state" : "translated",
             "value" : "%lld BPM, %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld BPM, %2$@"
+          }
         }
       }
     },
@@ -683,6 +749,12 @@
             "state" : "translated",
             "value" : "%lld perfetti, %lld buoni, %lld sbagliati"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld perfect, %2$lld good, %3$lld bad"
+          }
         }
       }
     },
@@ -742,6 +814,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  tocca i punti per scegliere i movimenti"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  tap dots to set beats"
           }
         }
       }
@@ -809,6 +887,12 @@
             "state" : "translated",
             "value" : "%lld/4 · %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/4 · %2$@"
+          }
         }
       }
     },
@@ -866,6 +950,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Semicrome"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/16 notes"
           }
         }
       }
@@ -925,6 +1015,12 @@
             "state" : "translated",
             "value" : "Semiminime"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/4 notes"
+          }
         }
       }
     },
@@ -983,6 +1079,12 @@
             "state" : "translated",
             "value" : "Crome"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1/8 notes"
+          }
         }
       }
     },
@@ -1037,6 +1139,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "A4 = %lld Hz"
@@ -1101,6 +1209,12 @@
             "state" : "translated",
             "value" : "Editor degli accenti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accent editor"
+          }
         }
       }
     },
@@ -1158,6 +1272,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Editor degli accenti e preset"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accent editor & presets"
           }
         }
       }
@@ -1219,6 +1339,12 @@
             "state" : "translated",
             "value" : "Accenti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accents"
+          }
         }
       }
     },
@@ -1277,6 +1403,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accessibilità"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accessibility"
           }
         }
       }
@@ -1338,6 +1470,12 @@
             "state" : "translated",
             "value" : "Aggiungi %lld BPM"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add %lld BPM"
+          }
         }
       }
     },
@@ -1397,6 +1535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tutti i comandi"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All commands"
           }
         }
       }
@@ -1458,6 +1602,12 @@
             "state" : "translated",
             "value" : "Applica questo schema, tempo e suddivisione"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Applies this pattern, metre, and subdivision"
+          }
         }
       }
     },
@@ -1517,6 +1667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Indietro"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
           }
         }
       }
@@ -1578,6 +1734,12 @@
             "state" : "translated",
             "value" : "Torna al metronomo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to metronome"
+          }
         }
       }
     },
@@ -1635,6 +1797,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sbagliato"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bad"
           }
         }
       }
@@ -1695,6 +1863,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Movimento %lld"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beat %lld"
           }
         }
       }
@@ -1762,6 +1936,12 @@
             "state" : "translated",
             "value" : "Movimento %lld, click %lld"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beat %1$lld click %2$lld"
+          }
         }
       }
     },
@@ -1827,6 +2007,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Movimento %lld di %lld"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beat %1$lld of %2$lld"
           }
         }
       }
@@ -1894,6 +2080,12 @@
             "state" : "translated",
             "value" : "Movimento %lld di %lld, %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beat %1$lld of %2$lld, %3$@"
+          }
         }
       }
     },
@@ -1960,6 +2152,12 @@
             "state" : "translated",
             "value" : "Movimento %lld, click %lld"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beat %1$lld, click %2$lld"
+          }
         }
       }
     },
@@ -2018,6 +2216,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vista movimenti"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beat view"
           }
         }
       }
@@ -2078,6 +2282,12 @@
             "state" : "translated",
             "value" : "Movimenti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beats"
+          }
         }
       }
     },
@@ -2136,6 +2346,12 @@
             "state" : "translated",
             "value" : "Vista rimbalzo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bounce view"
+          }
         }
       }
     },
@@ -2192,6 +2408,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -2256,6 +2478,12 @@
             "state" : "translated",
             "value" : "Segnalazioni di bug e richieste di funzioni sono benvenute."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bug reports and feature requests are welcome."
+          }
         }
       }
     },
@@ -2315,6 +2543,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acquista a vita"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buy lifetime"
           }
         }
       }
@@ -2376,6 +2610,12 @@
             "state" : "translated",
             "value" : "Acquista a vita a %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buy lifetime for %@"
+          }
         }
       }
     },
@@ -2435,6 +2675,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annulla"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
           }
         }
       }
@@ -2496,6 +2742,12 @@
             "state" : "translated",
             "value" : "Cambia vista"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change view"
+          }
         }
       }
     },
@@ -2556,6 +2808,12 @@
             "state" : "translated",
             "value" : "Controlla il ritmo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check timing"
+          }
         }
       }
     },
@@ -2613,6 +2871,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accordatore cromatico"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chromatic tuner"
           }
         }
       }
@@ -2673,6 +2937,12 @@
             "state" : "translated",
             "value" : "Chiudi"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
         }
       }
     },
@@ -2730,6 +3000,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "chiudi un pannello o un suggerimento"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "close a panel or tip"
           }
         }
       }
@@ -2791,6 +3067,12 @@
             "state" : "translated",
             "value" : "Contatta lo sviluppatore"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact the Developer"
+          }
         }
       }
     },
@@ -2851,6 +3133,12 @@
             "state" : "translated",
             "value" : "Controllalo con la voce"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Control it by voice"
+          }
         }
       }
     },
@@ -2908,6 +3196,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossibile caricare i prezzi dall’App Store."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t load prices from the App Store."
           }
         }
       }
@@ -2969,6 +3263,12 @@
             "state" : "translated",
             "value" : "Personalizza gli accenti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customise accents"
+          }
         }
       }
     },
@@ -3026,6 +3326,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Passa ciclicamente tra acuto, grave e silenzio"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cycles between high, low, and silent"
           }
         }
       }
@@ -3087,6 +3393,12 @@
             "state" : "translated",
             "value" : "Diminuisci il tempo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decrease tempo"
+          }
         }
       }
     },
@@ -3147,6 +3459,12 @@
             "state" : "translated",
             "value" : "Elimina il preset %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete preset %@"
+          }
         }
       }
     },
@@ -3204,6 +3522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Disegna ogni click della battuta — acuto, grave o silenzioso — e salva gli schemi per ogni brano."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Design every click of the measure — high, low, or silent — and save patterns per song."
           }
         }
       }
@@ -3263,6 +3587,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guida dettagliata"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detailed help"
           }
         }
       }
@@ -3324,6 +3654,12 @@
             "state" : "translated",
             "value" : "Chiudi"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dismiss"
+          }
         }
       }
     },
@@ -3384,6 +3720,12 @@
             "state" : "translated",
             "value" : "Chiudi la guida"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dismiss help"
+          }
         }
       }
     },
@@ -3443,6 +3785,12 @@
             "state" : "translated",
             "value" : "Fine"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
         }
       }
     },
@@ -3500,6 +3848,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Doppio ×2"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double ×2"
           }
         }
       }
@@ -3561,6 +3915,12 @@
             "state" : "translated",
             "value" : "Tocca due volte qui per aprire la griglia degli accenti: imposta ogni click della battuta su acuto, grave o silenzioso e salva gli schemi come preset."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double-tap here to open the accent grid — set every click of the measure high, low, or silent, and save patterns as presets."
+          }
         }
       }
     },
@@ -3618,6 +3978,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tocca due volte la scheda della suddivisione per modificare l’intera battuta: ogni casella passa da acuto → grave → silenzioso e gli schemi si salvano come preset con un nome."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double-tap the subdivision card to edit the full measure — each cell cycles high → low → silent, and patterns can be saved as named presets."
           }
         }
       }
@@ -3677,6 +4043,12 @@
             "state" : "translated",
             "value" : "Tocca due volte per aprire gli accenti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double-tap to open Accents"
+          }
         }
       }
     },
@@ -3735,6 +4107,12 @@
             "state" : "translated",
             "value" : "Giù −1"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Down −1"
+          }
         }
       }
     },
@@ -3792,6 +4170,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trascina il cursore del tempo oppure tocca i pulsanti − / +."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drag the tempo slider, or tap the − / + buttons."
           }
         }
       }
@@ -3853,6 +4237,12 @@
             "state" : "translated",
             "value" : "Modifica accenti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit accents"
+          }
         }
       }
     },
@@ -3910,6 +4300,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Crome"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eighth notes"
           }
         }
       }
@@ -3969,6 +4365,12 @@
             "state" : "translated",
             "value" : "Crome"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eighths"
+          }
         }
       }
     },
@@ -4025,6 +4427,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Email"
@@ -4088,6 +4496,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scrivi allo sviluppatore"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email the developer"
           }
         }
       }
@@ -4197,6 +4611,12 @@
             "state" : "translated",
             "value" : "Ogni %lld battute"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every %lld bars"
+          }
         }
       }
     },
@@ -4254,6 +4674,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ogni click della battuta ha la sua casella: %lld click in tutto. Tocca una casella per cambiarla: acuto → grave → silenzioso."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every click of the measure is its own cell — %lld clicks in all. Tap a cell to cycle it: high → low → silent."
           }
         }
       }
@@ -4315,6 +4741,12 @@
             "state" : "translated",
             "value" : "Tutto questo funziona anche a voce: guarda i comandi qui sotto."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Everything here also works by voice — see the commands below."
+          }
         }
       }
     },
@@ -4375,6 +4807,12 @@
             "state" : "translated",
             "value" : "Più veloce"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faster"
+          }
         }
       }
     },
@@ -4432,6 +4870,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Più veloce +5"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faster +5"
           }
         }
       }
@@ -4493,6 +4937,12 @@
             "state" : "translated",
             "value" : "Hai dimenticato un comando?"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forget a command?"
+          }
         }
       }
     },
@@ -4553,6 +5003,12 @@
             "state" : "translated",
             "value" : "Gratis per sempre, senza sblocco:"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Free forever, no unlock needed:"
+          }
         }
       }
     },
@@ -4610,6 +5066,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prova gratuita"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Free trial"
           }
         }
       }
@@ -4669,6 +5131,12 @@
             "state" : "translated",
             "value" : "Buono"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good"
+          }
         }
       }
     },
@@ -4727,6 +5195,12 @@
             "state" : "translated",
             "value" : "Metà ÷2"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Half ÷2"
+          }
         }
       }
     },
@@ -4784,6 +5258,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sentito: %@"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heard: %@"
           }
         }
       }
@@ -4845,6 +5325,12 @@
             "state" : "translated",
             "value" : "Aiuto"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help"
+          }
         }
       }
     },
@@ -4904,6 +5390,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navigazione dell’aiuto"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help navigation"
           }
         }
       }
@@ -4965,6 +5457,12 @@
             "state" : "translated",
             "value" : "Suono acuto"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "High tone"
+          }
         }
       }
     },
@@ -5025,6 +5523,12 @@
             "state" : "translated",
             "value" : "Uso il Controllo vocale di iOS"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I use iOS Voice Control"
+          }
         }
       }
     },
@@ -5082,6 +5586,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nella vista orbita, tocca l’anello mentre suona: ogni click (suddivisioni comprese) è un bersaglio. Il punto in movimento lascia un’ombra dove hai toccato e i contatori colorati contano Perfetto / Buono / Sbagliato finché non ti fermi."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In orbit view, tap the ring while playing — every click (including subdivisions) is a target. The moving dot leaves a ghost where your tap landed, and coloured counters tally Perfect / Good / Bad until you stop."
           }
         }
       }
@@ -5143,6 +5653,12 @@
             "state" : "translated",
             "value" : "Aumenta il tempo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Increase tempo"
+          }
         }
       }
     },
@@ -5199,6 +5715,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -5263,6 +5785,12 @@
             "state" : "translated",
             "value" : "Messaggio su Instagram"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram DM"
+          }
         }
       }
     },
@@ -5322,6 +5850,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Messaggio su Instagram (@lee25_ios)"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram DM (@lee25_ios)"
           }
         }
       }
@@ -5383,6 +5917,12 @@
             "state" : "translated",
             "value" : "Segnale dello strumento"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instrument signal"
+          }
         }
       }
     },
@@ -5443,6 +5983,12 @@
             "state" : "translated",
             "value" : "è incluso in Pro: tre strumenti di pratica, un solo sblocco."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "is part of Pro — three practice tools, one unlock."
+          }
         }
       }
     },
@@ -5499,6 +6045,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Largo? Moderato?"
@@ -5563,6 +6115,12 @@
             "state" : "translated",
             "value" : "A vita"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lifetime"
+          }
         }
       }
     },
@@ -5620,6 +6178,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A vita — %@ una tantum"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lifetime — %@ once"
           }
         }
       }
@@ -5679,6 +6243,12 @@
             "state" : "translated",
             "value" : "elenca i comandi che puoi dire"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "list the commands you can say"
+          }
         }
       }
     },
@@ -5737,6 +6307,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ascolta"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen"
           }
         }
       }
@@ -5798,6 +6374,12 @@
             "state" : "translated",
             "value" : "Ascolta la voce"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen for voice"
+          }
         }
       }
     },
@@ -5857,6 +6439,12 @@
             "state" : "translated",
             "value" : "In ascolto"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listening"
+          }
         }
       }
     },
@@ -5914,6 +6502,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "In ascolto…"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listening…"
           }
         }
       }
@@ -5975,6 +6569,12 @@
             "state" : "translated",
             "value" : "In ascolto… tieni ogni nota"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listening… hold each note"
+          }
         }
       }
     },
@@ -6034,6 +6634,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Caricamento prezzi…"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading prices…"
           }
         }
       }
@@ -6095,6 +6701,12 @@
             "state" : "translated",
             "value" : "Suono grave"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Low tone"
+          }
         }
       }
     },
@@ -6154,6 +6766,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pensata per il Controllo vocale"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Made for Voice Control"
           }
         }
       }
@@ -6215,6 +6833,12 @@
             "state" : "translated",
             "value" : "Modalità metronomo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronome mode"
+          }
         }
       }
     },
@@ -6272,6 +6896,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Microfono/voce bloccati: attivali in Impostazioni"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mic/Speech blocked — enable in Settings"
           }
         }
       }
@@ -6333,6 +6963,12 @@
             "state" : "translated",
             "value" : "Meno"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minus"
+          }
         }
       }
     },
@@ -6392,6 +7028,12 @@
             "state" : "translated",
             "value" : "Altro"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "More"
+          }
         }
       }
     },
@@ -6449,6 +7091,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "sposta questo elenco"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "move this list"
           }
         }
       }
@@ -6508,6 +7156,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Muto"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mute"
           }
         }
       }
@@ -6569,6 +7223,12 @@
             "state" : "translated",
             "value" : "Silenzia il controllo vocale"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mute voice control"
+          }
         }
       }
     },
@@ -6628,6 +7288,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nome (es. Intro bossa)"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name (e.g. Bossa intro)"
           }
         }
       }
@@ -6689,6 +7355,12 @@
             "state" : "translated",
             "value" : "Serve il microfono di questa app: disattiva “Uso il Controllo vocale di iOS” per usarlo."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Needs this app’s mic — turn off “I use iOS Voice Control” to use it."
+          }
         }
       }
     },
@@ -6746,6 +7418,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nessuna nota rilevata, suona una nota"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No note detected, play a note"
           }
         }
       }
@@ -6805,6 +7483,12 @@
             "state" : "translated",
             "value" : "Non è stato trovato nessun acquisto precedente."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No previous purchase was found."
+          }
         }
       }
     },
@@ -6859,6 +7543,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -6923,6 +7613,12 @@
             "state" : "translated",
             "value" : "Non ora"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not now"
+          }
         }
       }
     },
@@ -6983,6 +7679,12 @@
             "state" : "translated",
             "value" : "Nota"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note"
+          }
         }
       }
     },
@@ -7041,6 +7743,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Note"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notes"
           }
         }
       }
@@ -7102,6 +7810,12 @@
             "state" : "translated",
             "value" : "Sullo schermo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On-screen"
+          }
         }
       }
     },
@@ -7160,6 +7874,12 @@
             "state" : "translated",
             "value" : "Apri"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open"
+          }
         }
       }
     },
@@ -7217,6 +7937,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apri l’editor degli accenti"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open accent editor"
           }
         }
       }
@@ -7278,6 +8004,12 @@
             "state" : "translated",
             "value" : "Apri gli accenti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open accents"
+          }
         }
       }
     },
@@ -7335,6 +8067,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aprilo dalla vista movimenti qui sotto, oppure dì “practice”."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open it from Beat view below, or say “practice”."
           }
         }
       }
@@ -7396,6 +8134,12 @@
             "state" : "translated",
             "value" : "Apri la pratica"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open practice"
+          }
         }
       }
     },
@@ -7456,6 +8200,12 @@
             "state" : "translated",
             "value" : "Apri la modalità pratica"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open practice mode"
+          }
         }
       }
     },
@@ -7513,6 +8263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "apri la modalità pratica"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "open practice mode"
           }
         }
       }
@@ -7572,6 +8328,12 @@
             "state" : "translated",
             "value" : "apri l’accordatore"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "open the tuner"
+          }
         }
       }
     },
@@ -7629,6 +8391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vista orbita"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orbit view"
           }
         }
       }
@@ -7690,6 +8458,12 @@
             "state" : "translated",
             "value" : "Pausa"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pause"
+          }
         }
       }
     },
@@ -7750,6 +8524,12 @@
             "state" : "translated",
             "value" : "Paghi una volta, è tuo per sempre"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pay once, yours forever"
+          }
         }
       }
     },
@@ -7807,6 +8587,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfetto!"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfect!"
           }
         }
       }
@@ -7867,6 +8653,12 @@
             "state" : "translated",
             "value" : "Riproduci"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play"
+          }
         }
       }
     },
@@ -7924,6 +8716,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "riproduci / pausa"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "play / pause"
           }
         }
       }
@@ -7983,6 +8781,12 @@
             "state" : "translated",
             "value" : "Suona 2–5 note, circa mezzo secondo ciascuna."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play 2–5 notes, about half a second each."
+          }
         }
       }
     },
@@ -8040,6 +8844,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Suona una nota…"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play a note…"
           }
         }
       }
@@ -8101,6 +8911,12 @@
             "state" : "translated",
             "value" : "Suona la tua frase per avviare o fermare il click, anche a metà brano. Tieni ogni nota per circa mezzo secondo, così le note veloci del tuo modo di suonare non lo fanno scattare. Funziona con Ascolta attivo."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play your phrase to start or stop the click, even mid-song. Hold each note about half a second so quick notes in your playing don’t set it off. Works while Listen is on."
+          }
         }
       }
     },
@@ -8160,6 +8976,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Riproduzione"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Playback"
           }
         }
       }
@@ -8221,6 +9043,12 @@
             "state" : "translated",
             "value" : "Più"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus"
+          }
         }
       }
     },
@@ -8279,6 +9107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pratica"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practice"
           }
         }
       }
@@ -8339,6 +9173,12 @@
             "state" : "translated",
             "value" : "Modalità pratica"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practice mode"
+          }
         }
       }
     },
@@ -8397,6 +9237,12 @@
             "state" : "translated",
             "value" : "Modalità pratica · editor degli accenti e preset · accordatore"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practice mode · accent editor & presets · tuner"
+          }
         }
       }
     },
@@ -8453,6 +9299,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset %@"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preset %@"
@@ -8517,6 +9369,12 @@
             "state" : "translated",
             "value" : "Preset"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Presets"
+          }
         }
       }
     },
@@ -8577,6 +9435,12 @@
             "state" : "translated",
             "value" : "Informativa sulla privacy"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
         }
       }
     },
@@ -8635,6 +9499,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/it/privacy.html"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "privacy-policy-url"
+          }
         }
       }
     },
@@ -8689,6 +9559,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -8753,6 +9629,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -8810,6 +9692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro sbloccato: grazie!"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro unlocked — thank you!"
           }
         }
       }
@@ -8869,6 +9757,12 @@
             "state" : "translated",
             "value" : "Semiminime"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quarter notes"
+          }
         }
       }
     },
@@ -8927,6 +9821,12 @@
             "state" : "translated",
             "value" : "Quarti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quarters"
+          }
         }
       }
     },
@@ -8984,6 +9884,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aumenta il tempo in automatico ogni poche battute: porta un passaggio a velocità più alta, a mani libere."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raise the tempo automatically every few bars — push a passage faster, hands-free."
           }
         }
       }
@@ -9045,6 +9951,12 @@
             "state" : "translated",
             "value" : "Aumenta il tempo in automatico ogni poche battute mentre suoni, per portare gradualmente un passaggio a velocità più alta. Si ferma al tempo obiettivo. Dì “practice” in qualsiasi momento per aprirlo."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raises the tempo automatically every few bars while you play — for gradually pushing a passage faster. Stops at the target. Say “practice” anytime to open this."
+          }
         }
       }
     },
@@ -9104,6 +10016,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Registra prima una breve frase."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Record a short phrase first."
           }
         }
       }
@@ -9165,6 +10083,12 @@
             "state" : "translated",
             "value" : "Registra di nuovo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Record again"
+          }
         }
       }
     },
@@ -9225,6 +10149,12 @@
             "state" : "translated",
             "value" : "Registra il segnale"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Record signal"
+          }
         }
       }
     },
@@ -9282,6 +10212,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Altezza di riferimento"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reference pitch"
           }
         }
       }
@@ -9343,6 +10279,12 @@
             "state" : "translated",
             "value" : "Richiede Pro"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Requires Pro"
+          }
         }
       }
     },
@@ -9402,6 +10344,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ripristina"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset"
           }
         }
       }
@@ -9463,6 +10411,12 @@
             "state" : "translated",
             "value" : "Ripristina"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore"
+          }
         }
       }
     },
@@ -9522,6 +10476,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ripristina gli acquisti"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore purchases"
           }
         }
       }
@@ -9583,6 +10543,12 @@
             "state" : "translated",
             "value" : "Ripristina gli acquisti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore Purchases"
+          }
         }
       }
     },
@@ -9642,6 +10608,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ripristina un acquisto Pro precedente"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restores a previous Pro purchase"
           }
         }
       }
@@ -9703,6 +10675,12 @@
             "state" : "translated",
             "value" : "Ripristina lo schema predefinito per questo tempo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restores the default pattern for this metre"
+          }
         }
       }
     },
@@ -9762,6 +10740,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Salva"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
           }
         }
       }
@@ -9823,6 +10807,12 @@
             "state" : "translated",
             "value" : "Salva uno schema per ogni brano: richiamandolo ripristini anche tempo e suddivisione."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save a pattern per song — recalling it also restores its metre and subdivision."
+          }
         }
       }
     },
@@ -9882,6 +10872,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Salva lo schema attuale…"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save current pattern…"
           }
         }
       }
@@ -9943,6 +10939,12 @@
             "state" : "translated",
             "value" : "Salva schema"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save pattern"
+          }
         }
       }
     },
@@ -10002,6 +11004,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Salva preset"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save preset"
           }
         }
       }
@@ -10063,6 +11071,12 @@
             "state" : "translated",
             "value" : "Salva questo schema con il suo tempo e la sua suddivisione, per richiamarlo brano per brano."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saves this pattern with its metre and subdivision, so you can recall it per song."
+          }
         }
       }
     },
@@ -10122,6 +11136,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "dì"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "say"
           }
         }
       }
@@ -10183,6 +11203,12 @@
             "state" : "translated",
             "value" : "Dì “close” per uscire"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say \"close\" to exit"
+          }
         }
       }
     },
@@ -10240,6 +11266,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dì “start”, “faster” o “help”"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say \"start\", \"faster\", or \"help\""
           }
         }
       }
@@ -10300,6 +11332,12 @@
             "state" : "translated",
             "value" : "Dì un comando"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say a command"
+          }
         }
       }
     },
@@ -10357,6 +11395,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dì “close” / “done”, oppure tocca Fine."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say “close” / “done”, or tap Done."
           }
         }
       }
@@ -10418,6 +11462,12 @@
             "state" : "translated",
             "value" : "Dì “close” o tocca per chiudere"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say “close” or tap to dismiss"
+          }
         }
       }
     },
@@ -10478,6 +11528,12 @@
             "state" : "translated",
             "value" : "Dì “help” quando vuoi, oppure tocca qui, per vedere ogni comando che puoi dire, poi “close” per chiudere."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say “help” anytime — or tap here — to see every command you can say, then “close” to dismiss."
+          }
         }
       }
     },
@@ -10536,6 +11592,12 @@
             "state" : "translated",
             "value" : "Dì “help” o tocca il pulsante ?."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say “help” or tap the ? button."
+          }
         }
       }
     },
@@ -10593,6 +11655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dì “louder” / “quieter” / “mute”, oppure “volume 60”."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say “louder” / “quieter” / “mute”, or “volume 60”."
           }
         }
       }
@@ -10654,6 +11722,12 @@
             "state" : "translated",
             "value" : "Dì “practice” per aumentare il tempo in automatico ogni poche battute mentre suoni: ottimo per gli esercizi di velocità."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say “practice” to raise the tempo automatically every few bars while you play — great for speed drills."
+          }
         }
       }
     },
@@ -10712,6 +11786,12 @@
             "state" : "translated",
             "value" : "Dì “scroll down” / “scroll up”, oppure scorri con il dito."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say “scroll down” / “scroll up”, or swipe."
+          }
         }
       }
     },
@@ -10769,6 +11849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dì “tune” e suona: nota, cent e zona di intonazione."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say “tune” and play — note, cents, and an in-tune zone."
           }
         }
       }
@@ -10830,6 +11916,12 @@
             "state" : "translated",
             "value" : "Dì “tune” per aprire l’accordatore cromatico e “close” quando hai finito."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say “tune” to open the chromatic tuner, and “close” when you’re done."
+          }
         }
       }
     },
@@ -10887,6 +11979,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scorri"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scroll"
           }
         }
       }
@@ -10946,6 +12044,12 @@
             "state" : "translated",
             "value" : "Scorri in giù"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scroll down"
+          }
         }
       }
     },
@@ -11003,6 +12107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scorri in su"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scroll up"
           }
         }
       }
@@ -11064,6 +12174,12 @@
             "state" : "translated",
             "value" : "Scorrimento"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scrolling"
+          }
         }
       }
     },
@@ -11121,6 +12237,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Imposta i movimenti"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set beats"
           }
         }
       }
@@ -11180,6 +12302,12 @@
             "state" : "translated",
             "value" : "imposta la percentuale"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "set percent"
+          }
         }
       }
     },
@@ -11238,6 +12366,12 @@
             "state" : "translated",
             "value" : "imposta il tempo in battuta"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "set time signature"
+          }
         }
       }
     },
@@ -11295,6 +12429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "imposta il valore"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "set value"
           }
         }
       }
@@ -11356,6 +12496,12 @@
             "state" : "translated",
             "value" : "Imposta il tempo in %lld/4"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sets %lld/4 time"
+          }
         }
       }
     },
@@ -11416,6 +12562,12 @@
             "state" : "translated",
             "value" : "Segnale: %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signal: %@"
+          }
         }
       }
     },
@@ -11473,6 +12625,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "silenzia il click"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "silence the click"
           }
         }
       }
@@ -11534,6 +12692,12 @@
             "state" : "translated",
             "value" : "Silenzioso"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Silent"
+          }
         }
       }
     },
@@ -11592,6 +12756,12 @@
             "state" : "translated",
             "value" : "Semicrome"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sixteenth notes"
+          }
         }
       }
     },
@@ -11649,6 +12819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sedicesimi"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sixteenths"
           }
         }
       }
@@ -11710,6 +12886,12 @@
             "state" : "translated",
             "value" : "Più lento"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slower"
+          }
         }
       }
     },
@@ -11768,6 +12950,12 @@
             "state" : "translated",
             "value" : "Più lento −5"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slower −5"
+          }
         }
       }
     },
@@ -11825,6 +13013,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Riconoscimento vocale non disponibile qui"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speech recognition unavailable here"
           }
         }
       }
@@ -11885,6 +13079,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Allenatore di velocità"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speed trainer"
           }
         }
       }
@@ -11950,6 +13150,12 @@
             "state" : "translated",
             "value" : "Allenatore di velocità · +%lld ogni %lld battute → %lld"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speed trainer · +%1$lld every %2$lld bars → %3$lld"
+          }
         }
       }
     },
@@ -12008,6 +13214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avvia"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
           }
         }
       }
@@ -12069,6 +13281,12 @@
             "state" : "translated",
             "value" : "Avvia / ferma con il mio strumento"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start / stop with my instrument"
+          }
         }
       }
     },
@@ -12128,6 +13346,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inizia ad ascoltare"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start listening"
           }
         }
       }
@@ -12189,6 +13413,12 @@
             "state" : "translated",
             "value" : "Avvia il metronomo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start metronome"
+          }
         }
       }
     },
@@ -12247,6 +13477,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ferma"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
           }
         }
       }
@@ -12308,6 +13544,12 @@
             "state" : "translated",
             "value" : "Smetti di ascoltare"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop listening"
+          }
         }
       }
     },
@@ -12368,6 +13610,12 @@
             "state" : "translated",
             "value" : "Ferma il metronomo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop metronome"
+          }
         }
       }
     },
@@ -12426,6 +13674,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Suddivisione"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subdivision"
           }
         }
       }
@@ -12487,6 +13741,12 @@
             "state" : "translated",
             "value" : "Abbonati"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subscribe"
+          }
         }
       }
     },
@@ -12547,6 +13807,12 @@
             "state" : "translated",
             "value" : "Abbonati per un anno a %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subscribe yearly for %@"
+          }
         }
       }
     },
@@ -12604,6 +13870,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Supporto"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
           }
         }
       }
@@ -12663,6 +13935,12 @@
             "state" : "translated",
             "value" : "Passa alla vista rimbalzo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switch to bounce view"
+          }
         }
       }
     },
@@ -12720,6 +13998,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Passa alla vista orbita"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switch to orbit view"
           }
         }
       }
@@ -12781,6 +14065,12 @@
             "state" : "translated",
             "value" : "Passa alla vista anello"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switch to ring sweep view"
+          }
         }
       }
     },
@@ -12841,6 +14131,12 @@
             "state" : "translated",
             "value" : "Cambia vista"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switch view"
+          }
         }
       }
     },
@@ -12899,6 +14195,12 @@
             "state" : "translated",
             "value" : "cambia visualizzazione"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "switch visualisation"
+          }
         }
       }
     },
@@ -12956,6 +14258,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tocca 1/4, 1/8, Terzina o 1/16. Tocca due volte la scheda per aprire gli accenti e impostare ogni click della battuta su acuto, grave o silenzioso."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap 1/4, 1/8, Trip, or 1/16. Double-tap the card to open Accents and set every click of the measure high, low, or silent."
           }
         }
       }
@@ -13017,6 +14325,12 @@
             "state" : "translated",
             "value" : "Tocca a ritmo per controllare il tuo tempo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap in rhythm to check your timing"
+          }
         }
       }
     },
@@ -13074,6 +14388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tocca Ascolta per usare la voce"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap Listen to control by voice"
           }
         }
       }
@@ -13133,6 +14453,12 @@
             "state" : "translated",
             "value" : "Tocca Ascolta per attivare o disattivare il controllo vocale."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap Listen to turn voice control on or off."
+          }
         }
       }
     },
@@ -13191,6 +14517,12 @@
             "state" : "translated",
             "value" : "Tocca Avvia / Ferma in basso."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap Start / Stop at the bottom."
+          }
         }
       }
     },
@@ -13247,6 +14579,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap tempo"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap tempo"
@@ -13309,6 +14647,12 @@
             "state" : "translated",
             "value" : "Tocca a ritmo il grande numero dei BPM per impostare il tempo."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap the big BPM number in rhythm to set the tempo."
+          }
         }
       }
     },
@@ -13367,6 +14711,12 @@
             "state" : "translated",
             "value" : "Tocca i punti per scegliere il tempo in battuta."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap the dots to choose the time signature."
+          }
         }
       }
     },
@@ -13424,6 +14774,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tocca l’icona della vista (in alto a destra nella scheda dei movimenti): rimbalzo → orbita → anello."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap the view icon (top-right of the beat card) — bounce → orbit → ring sweep."
           }
         }
       }
@@ -13485,6 +14841,12 @@
             "state" : "translated",
             "value" : "Tocca per passare dalla pallina che rimbalza all’anello orbitale, oppure dì “bounce” / “orbit”."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to switch between the bouncing ball and the orbit ring — or say “bounce” / “orbit”."
+          }
         }
       }
     },
@@ -13545,6 +14907,12 @@
             "state" : "translated",
             "value" : "Tocca per passare dal nome del tempo ai BPM"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to switch between the tempo name and BPM"
+          }
         }
       }
     },
@@ -13604,6 +14972,12 @@
             "state" : "translated",
             "value" : "Tempo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
+          }
         }
       }
     },
@@ -13658,6 +15032,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo %lld"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo %lld"
@@ -13722,6 +15102,12 @@
             "state" : "translated",
             "value" : "Cursore del tempo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo slider"
+          }
         }
       }
     },
@@ -13781,6 +15167,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Condizioni d’uso (EULA)"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Use (EULA)"
           }
         }
       }
@@ -13842,6 +15234,12 @@
             "state" : "translated",
             "value" : "È il tuo tempo come termine classico. Toccalo per passare al numero dei BPM e viceversa."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "That’s your tempo as a classical term. Tap it to flip to the BPM number and back."
+          }
         }
       }
     },
@@ -13901,6 +15299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Il microfono dell’app è spento per non andare in conflitto con il Controllo vocale. Dì “Tap Start”, “Tap Faster” o “Tap 3 beats”."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The app’s own mic is off so it won’t clash with Voice Control. Say “Tap Start”, “Tap Faster”, or “Tap 3 beats”."
           }
         }
       }
@@ -13962,6 +15366,12 @@
             "state" : "translated",
             "value" : "Il metronomo completo — ogni tempo, misura e suddivisione — con tutte e tre le viste, tap tempo, controllo del ritmo e controllo vocale a mani libere al completo."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The full metronome — every tempo, metre, and subdivision — all three beat views, tap tempo, timing check, and complete hands-free voice control."
+          }
         }
       }
     },
@@ -14021,6 +15431,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Il microfono è già in ascolto: dì “start”, “faster” o “help”. Usi il Controllo vocale di iOS? Apri Comandi vocali per cambiare."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The mic is already listening — say “start”, “faster”, or “help”. Use iOS Voice Control? Open Voice Commands to switch."
           }
         }
       }
@@ -14082,6 +15498,12 @@
             "state" : "translated",
             "value" : "L’abbonamento annuale si rinnova automaticamente a %@ all’anno, salvo disdetta almeno 24 ore prima del rinnovo, in Impostazioni > Account Apple > Abbonamenti. L’acquisto a vita è un unico pagamento."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The yearly plan auto-renews at %@/year until cancelled at least 24 hours before renewal, in Settings > Apple Account > Subscriptions. Lifetime is a single one-time charge."
+          }
         }
       }
     },
@@ -14142,6 +15564,12 @@
             "state" : "translated",
             "value" : "C’è anche un accordatore"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There’s a tuner too"
+          }
         }
       }
     },
@@ -14199,6 +15627,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Controllo del ritmo"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timing check"
           }
         }
       }
@@ -14260,6 +15694,12 @@
             "state" : "translated",
             "value" : "Suggerimenti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tips"
+          }
         }
       }
     },
@@ -14320,6 +15760,12 @@
             "state" : "translated",
             "value" : "Allenatore"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trainer"
+          }
         }
       }
     },
@@ -14378,6 +15824,12 @@
             "state" : "translated",
             "value" : "Terzine"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triplets"
+          }
         }
       }
     },
@@ -14435,6 +15887,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "terzine"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "triplets"
           }
         }
       }
@@ -14495,6 +15953,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Riprova"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again"
           }
         }
       }
@@ -14602,6 +16066,12 @@
             "state" : "translated",
             "value" : "Prova gratis per %lld giorni"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try free for %lld days"
+          }
         }
       }
     },
@@ -14695,6 +16165,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prova gratis per %lld mesi"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try free for %lld months"
           }
         }
       }
@@ -14802,6 +16278,12 @@
             "state" : "translated",
             "value" : "Prova gratis per %lld settimane"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try free for %lld weeks"
+          }
         }
       }
     },
@@ -14859,6 +16341,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prova gratis per un mese"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try free for a month"
           }
         }
       }
@@ -14918,6 +16406,12 @@
             "state" : "translated",
             "value" : "Prova gratis per una settimana"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try free for a week"
+          }
         }
       }
     },
@@ -14975,6 +16469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prova gratis per un anno"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try free for a year"
           }
         }
       }
@@ -15034,6 +16534,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accordatore"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuner"
           }
         }
       }
@@ -15095,6 +16601,12 @@
             "state" : "translated",
             "value" : "Spegne il microfono dell’app e controlla i pulsanti per nome"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turns off the app's own microphone and drives controls by name"
+          }
         }
       }
     },
@@ -15152,6 +16664,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spegne il microfono di questa app per evitare conflitti. Controllala dicendo “Tap Start”, “Tap Faster”, “Tap 3 beats”."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turns off this app’s mic so the two don’t clash. Control it by saying “Tap Start”, “Tap Faster”, “Tap 3 beats”."
           }
         }
       }
@@ -15213,6 +16731,12 @@
             "state" : "translated",
             "value" : "Due viste dei movimenti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Two beat views"
+          }
         }
       }
     },
@@ -15271,6 +16795,12 @@
             "state" : "translated",
             "value" : "Sblocca Pro"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unlock Pro"
+          }
         }
       }
     },
@@ -15328,6 +16858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Su +1"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Up +1"
           }
         }
       }
@@ -15389,6 +16925,12 @@
             "state" : "translated",
             "value" : "Fino a %lld BPM"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Up to %lld BPM"
+          }
         }
       }
     },
@@ -15446,6 +16988,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Passa a Pro"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade"
           }
         }
       }
@@ -15506,6 +17054,12 @@
             "state" : "translated",
             "value" : "Vista"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View"
+          }
         }
       }
     },
@@ -15563,6 +17117,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voce"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice"
           }
         }
       }
@@ -15624,6 +17184,12 @@
             "state" : "translated",
             "value" : "Comandi vocali"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice commands"
+          }
         }
       }
     },
@@ -15682,6 +17248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comandi vocali"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice Commands"
           }
         }
       }
@@ -15742,6 +17314,12 @@
             "state" : "translated",
             "value" : "Controllo vocale disattivato"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice control off"
+          }
         }
       }
     },
@@ -15797,6 +17375,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volume"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volume"
@@ -15859,6 +17443,12 @@
             "state" : "translated",
             "value" : "Volume %lld%%"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volume %lld%%"
+          }
         }
       }
     },
@@ -15917,6 +17507,12 @@
             "state" : "translated",
             "value" : "Abbassa il volume"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volume down"
+          }
         }
       }
     },
@@ -15974,6 +17570,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alza il volume"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volume up"
           }
         }
       }
@@ -16035,6 +17637,12 @@
             "state" : "translated",
             "value" : "Annuale"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yearly"
+          }
         }
       }
     },
@@ -16093,6 +17701,12 @@
             "state" : "translated",
             "value" : "Annuale — %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yearly — %@"
+          }
         }
       }
     },
@@ -16147,6 +17761,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -16209,6 +17829,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -16263,6 +17889,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -16325,6 +17957,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -16382,6 +18020,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ Ferma"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ Stop"
           }
         }
       }
@@ -16441,6 +18085,12 @@
             "state" : "translated",
             "value" : "▶ Avvia"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ Start"
+          }
         }
       }
     },
@@ -16495,6 +18145,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer"
@@ -16557,6 +18213,12 @@
             "state" : "translated",
             "value" : "Spento"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off"
+          }
         }
       }
     },
@@ -16615,6 +18277,12 @@
             "state" : "translated",
             "value" : "Timer di pratica"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practice timer"
+          }
         }
       }
     },
@@ -16669,6 +18337,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld min"
@@ -16731,6 +18405,12 @@
             "state" : "translated",
             "value" : "Tempo rimasto"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time left"
+          }
         }
       }
     },
@@ -16788,6 +18468,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Azzera il timer"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset timer"
           }
         }
       }
@@ -16847,6 +18533,12 @@
             "state" : "translated",
             "value" : "Timer spento"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer off"
+          }
         }
       }
     },
@@ -16901,6 +18593,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer %lld min"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer %lld min"
@@ -16963,6 +18661,12 @@
             "state" : "translated",
             "value" : "Mancano %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ left"
+          }
         }
       }
     },
@@ -17020,6 +18724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Il tempo di pratica è finito"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practice time is up"
           }
         }
       }
@@ -17079,6 +18789,12 @@
             "state" : "translated",
             "value" : "imposta un timer di pratica"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "set a practice timer"
+          }
         }
       }
     },
@@ -17136,6 +18852,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "spegni il timer"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "turn the timer off"
           }
         }
       }
@@ -17195,6 +18917,12 @@
             "state" : "translated",
             "value" : "Tocca il pulsante del timer accanto ad Avvia, oppure dì “timer 5 minutes”. Il conto alla rovescia procede mentre suona il click, poi si ferma con un suono."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap the timer button next to Start, or say “timer 5 minutes”. It counts down while the click plays, then stops and chimes."
+          }
         }
       }
     },
@@ -17252,6 +18980,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Il conto alla rovescia procede mentre suona il click e si mette in pausa quando ti fermi. Allo scadere il metronomo si ferma con un suono. Dì “timer 5 minutes” o “timer off” in qualsiasi momento."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “timer 5 minutes” or “timer off” anytime."
           }
         }
       }
@@ -17311,6 +19045,12 @@
             "state" : "translated",
             "value" : "Condividi statistiche d’uso anonime"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share anonymous usage statistics"
+          }
         }
       }
     },
@@ -17365,6 +19105,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privacy"
@@ -17427,6 +19173,12 @@
             "state" : "translated",
             "value" : "Dati come quanti dispositivi usano l’app e i rapporti sugli arresti anomali. Nessun audio, impostazione o dato personale. Vale dal prossimo avvio."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Counts like how many devices use the app and crash reports. No audio, settings or personal information. Applies from the next launch."
+          }
         }
       }
     },
@@ -17485,6 +19237,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Testo ancora più grande"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Even larger text"
           }
         }
       }
@@ -17545,6 +19303,12 @@
             "state" : "translated",
             "value" : "Lo schermo resta leggibile e in ordine anche con le dimensioni di testo più grandi."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The screen stays readable and tidy at the very largest text sizes."
+          }
         }
       }
     },
@@ -17603,6 +19367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Colori più facili da vedere"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Easier-to-see colours"
           }
         }
       }
@@ -17663,6 +19433,12 @@
             "state" : "translated",
             "value" : "I colori dei movimenti e del ritmo restano chiari con Aumenta contrasto o se è difficile distinguere i colori."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beat and timing colours stay clear with Increase Contrast, or if colours are hard to tell apart."
+          }
         }
       }
     },
@@ -17721,6 +19497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Controllo da tastiera"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keyboard control"
           }
         }
       }
@@ -17781,6 +19563,12 @@
             "state" : "translated",
             "value" : "Su iPad con tastiera, avvia, ferma e cambia il tempo con i tasti."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On iPad with a keyboard, start, stop, and change the tempo with keys."
+          }
         }
       }
     },
@@ -17839,6 +19627,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Novità"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What’s new"
           }
         }
       }
@@ -17899,6 +19693,12 @@
             "state" : "translated",
             "value" : "Dopo un aggiornamento, vedi le novità la prima volta che apri l’app."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After an update, see what’s new the first time you open the app."
+          }
         }
       }
     },
@@ -17957,6 +19757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Risposte ai tuoi feedback"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Replies to your feedback"
           }
         }
       }
@@ -18017,6 +19823,12 @@
             "state" : "translated",
             "value" : "Leggi le nostre risposte ai tuoi feedback direttamente nell’app."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Read our replies to your feedback right in the app."
+          }
         }
       }
     },
@@ -18075,6 +19887,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Regala Pro"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gift Pro"
           }
         }
       }
@@ -18135,6 +19953,12 @@
             "state" : "translated",
             "value" : "Regala Not My Tempo Pro a un compagno di band o a un allievo."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Give Not My Tempo Pro to a bandmate or a student."
+          }
         }
       }
     },
@@ -18193,6 +20017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Widget nella schermata Home"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home Screen widget"
           }
         }
       }
@@ -18253,6 +20083,12 @@
             "state" : "translated",
             "value" : "Avvia il click dalla schermata Home senza aprire l’app."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start the click right from your Home Screen without opening the app."
+          }
         }
       }
     },
@@ -18311,6 +20147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri e Comandi rapidi"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri and Shortcuts"
           }
         }
       }
@@ -18371,6 +20213,12 @@
             "state" : "translated",
             "value" : "Chiedi a Siri o esegui un comando rapido per avviare il click al tuo tempo."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ask Siri or run a shortcut to start the click at your tempo."
+          }
         }
       }
     },
@@ -18429,6 +20277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sincronizzazione tra dispositivi"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sync across devices"
           }
         }
       }
@@ -18489,6 +20343,12 @@
             "state" : "translated",
             "value" : "I tuoi preset e le impostazioni ti seguono tra iPhone e iPad."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your presets and settings follow you between iPhone and iPad."
+          }
         }
       }
     },
@@ -18547,6 +20407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Salva i tuoi preset"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back up your presets"
           }
         }
       }
@@ -18607,6 +20473,12 @@
             "state" : "translated",
             "value" : "Salva i preset degli accenti in un file e recuperali quando vuoi."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save your accent presets to a file and bring them back anytime."
+          }
         }
       }
     },
@@ -18665,6 +20537,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Promemoria di pratica"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practice reminders"
           }
         }
       }
@@ -18725,6 +20603,12 @@
             "state" : "translated",
             "value" : "Ricevi un promemoria gentile all’ora che scegli per esercitarti."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get a gentle reminder at the time you choose to practice."
+          }
         }
       }
     },
@@ -18783,6 +20667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Layout per iPhone pieghevole"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foldable iPhone layout"
           }
         }
       }
@@ -18843,6 +20733,12 @@
             "state" : "translated",
             "value" : "Su un iPhone pieghevole, vedi i movimenti e i controlli affiancati."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On a foldable iPhone, see the beat and the controls side by side."
+          }
         }
       }
     },
@@ -18901,6 +20797,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancella tutti i miei dati"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erase all my data"
           }
         }
       }
@@ -18961,6 +20863,12 @@
             "state" : "translated",
             "value" : "Cancella nell’app tutti i tuoi preset e le impostazioni quando vuoi."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear all your presets and settings in the app whenever you want."
+          }
         }
       }
     },
@@ -19018,6 +20926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Riscatta un codice promozionale"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redeem an offer code"
           }
         }
       }
@@ -19077,6 +20991,12 @@
             "state" : "translated",
             "value" : "Hai un codice per Pro? Inseriscilo direttamente nell’app, nella schermata Pro o in Comandi vocali."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Got a code for Pro? Enter it right in the app, on the Pro screen or under Voice Commands."
+          }
         }
       }
     },
@@ -19134,6 +21054,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Più chiaro con Aumenta contrasto"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clearer with Increase Contrast"
           }
         }
       }
@@ -19193,6 +21119,12 @@
             "state" : "translated",
             "value" : "Con Aumenta contrasto o Riduci trasparenza attivi, movimenti, contorni e guida a schermo sono più marcati e pieni."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "With Increase Contrast or Reduce Transparency on, beats, outlines and the help overlay are drawn bolder and solid."
+          }
         }
       }
     },
@@ -19250,6 +21182,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spazio per il testo più grande"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Room for the largest text"
           }
         }
       }
@@ -19309,6 +21247,12 @@
             "state" : "translated",
             "value" : "Con le dimensioni di testo più grandi, pulsanti ed elenchi si riorganizzano e niente viene tagliato."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "At the largest text sizes, buttons and lists rearrange so nothing gets cut off."
+          }
         }
       }
     },
@@ -19366,6 +21310,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Versione %@"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
           }
         }
       }
@@ -19425,6 +21375,12 @@
             "state" : "translated",
             "value" : "Continua"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
         }
       }
     },
@@ -19482,6 +21438,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Un metronomo con cui parli"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A metronome you talk to"
           }
         }
       }
@@ -19541,6 +21503,12 @@
             "state" : "translated",
             "value" : "Dì “start”, “stop”, “faster” o “tempo 120” e tieni entrambe le mani sullo strumento."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say “start”, “stop”, “faster” or “tempo 120” and keep both hands on your instrument."
+          }
         }
       }
     },
@@ -19598,6 +21566,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "I comandi sono parole inglesi"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commands are English words"
           }
         }
       }
@@ -19657,6 +21631,12 @@
             "state" : "translated",
             "value" : "In ogni lingua, controlli l’app con brevi parole inglesi. Dì “help” in qualsiasi momento per vederle tutte sullo schermo."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In every language, you control the app with short English words. Say “help” anytime to see them all on screen."
+          }
         }
       }
     },
@@ -19714,6 +21694,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Il microfono dell’app resta spento per non andare in conflitto con il Controllo vocale. Dì “Tap Start” o “Tap Faster”."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The app’s own mic stays off so it won’t clash with Voice Control. Say “Tap Start” or “Tap Faster”."
           }
         }
       }
@@ -19773,6 +21759,12 @@
             "state" : "translated",
             "value" : "Poi: il microfono"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next: the microphone"
+          }
         }
       }
     },
@@ -19830,6 +21822,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS ti chiederà il microfono e il riconoscimento vocale. Servono solo per sentire i tuoi comandi. L’app non registra né salva mai ciò che sente."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS will ask for the microphone and speech recognition. They are used only to hear your commands. The app never records or saves what it hears."
           }
         }
       }
@@ -19889,6 +21887,12 @@
             "state" : "translated",
             "value" : "Salta"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
+          }
         }
       }
     },
@@ -19946,6 +21950,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inizia"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get started"
           }
         }
       }
@@ -20005,6 +22015,12 @@
             "state" : "translated",
             "value" : "Avanti"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
         }
       }
     },
@@ -20062,6 +22078,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preset salvato"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset saved"
           }
         }
       }
@@ -20121,6 +22143,12 @@
             "state" : "translated",
             "value" : "Ancora nessun preset"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No presets yet"
+          }
         }
       }
     },
@@ -20178,6 +22206,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Riscatta un codice promozionale"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redeem offer code"
           }
         }
       }
@@ -20237,6 +22271,12 @@
             "state" : "translated",
             "value" : "Mostra di nuovo l’introduzione"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show the introduction again"
+          }
         }
       }
     },
@@ -20294,6 +22334,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Riscatta codice"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redeem Code"
           }
         }
       }
@@ -20353,6 +22399,12 @@
             "state" : "translated",
             "value" : "Introduzione"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduction"
+          }
         }
       }
     },
@@ -20410,6 +22462,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mostra l’introduzione"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show introduction"
           }
         }
       }
@@ -20469,6 +22527,12 @@
             "state" : "translated",
             "value" : "Codice promozionale"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offer code"
+          }
         }
       }
     },
@@ -20526,6 +22590,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Riscatta il codice"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redeem code"
           }
         }
       }
@@ -20585,6 +22655,12 @@
             "state" : "translated",
             "value" : "Novità"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's new"
+          }
         }
       }
     },
@@ -20642,6 +22718,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Salta l’introduzione"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip introduction"
           }
         }
       }

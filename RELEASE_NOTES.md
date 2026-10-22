@@ -79,6 +79,13 @@ Riscatta i codici nell’app
 Più contrasto, movimenti più nitidi
 Tutto entra anche col testo più grande
 
+### App Store (en-GB)
+
+A short intro for first-time users
+Redeem offer codes right in the app
+Beats stand out with Increase Contrast
+Screens fit even the largest text sizes
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)
