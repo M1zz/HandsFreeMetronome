@@ -142,6 +142,13 @@ Lunasta tarjouskoodit sovelluksessa
 Lisää kontrastia selkeyttää iskuja
 Kaikki mahtuu suurimmalle tekstille
 
+### App Store (cs)
+
+Krátký úvod při prvním spuštění
+Kódy nabídek uplatníte v aplikaci
+Zvýšený kontrast zvýrazní doby
+Vejde se i největší velikost textu
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)

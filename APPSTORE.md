@@ -1352,6 +1352,77 @@ https://m1zz.github.io/HandsFreeMetronome/fi/privacy.html
 
 https://m1zz.github.io/HandsFreeMetronome/fi/
 
+## cs
+
+### 이름
+
+Not My Tempo: Hlasový metronom
+
+### 부제
+
+Měňte tempo bez rukou
+
+### 키워드
+
+bpm,ladička,cvičení,kytara,klavír,bicí,basa,housle,saxofon,trubka,flétna,sbor,ukulele,akcenty,rytmus
+
+### 프로모션 텍스트
+
+Ruce nechte na nástroji. Řekněte „start“, „faster“ nebo „tempo 120“ a klikání vás následuje. Plný metronom i hlasové ovládání jsou zdarma.
+
+### 설명
+
+Metronom, který ovládáte hlasem, takže ruce nikdy neopustí nástroj.
+Řekněte „start“ a začnete, „faster“ a zrychlíte. Žádné klepání, žádné přerušování uprostřed fráze.
+
+Změna tempa za hraní obvykle znamená pustit nástroj a ztratit nit. Not My Tempo poslouchá vlastním mikrofonem a řeč rozpoznává přímo ve vašem zařízení, takže funguje hned – bez zapínání Ovládání hlasem v iOS či nastavení zpřístupnění. Příkazy se říkají anglicky.
+
+MLUVTE NA SVŮJ METRONOM
+„start“ a „stop“ – spuštění a zastavení
+„faster“ a „slower“ mění tempo o 5 BPM, „up“ a „down“ o 1
+„tempo 120“ nebo jen číslo – skočí rovnou na hodnotu
+„double“ a „half“ – zdvojnásobení nebo půlení
+„quarter“, „eighth“, „triplet“, „sixteenth“ – dělení
+„louder“, „quieter“, „mute“ – hlasitost
+Zapomněli jste příkaz? Řekněte „help“ a všechny použitelné fráze se objeví na obrazovce
+
+PLNÝ METRONOM JE ZDARMA
+Takty od 1 do 8 dob se zdůrazněným klikáním na první době
+Dělení na osminy, trioly a šestnáctiny
+Tři způsoby, jak sledovat dobu: odraz, oběžná dráha a kruh
+Tap tempo: klepáním do rytmu na velké číslo nastavíte BPM
+Kontrola rytmu: během hraní klepejte na oběžný kruh a uvidíte, jak přesně trefujete
+Displej zůstává při přehrávání zapnutý a aplikace si pamatuje poslední tempo i takt
+
+START A STOP VAŠÍM NÁSTROJEM
+Nejprve nahrajte krátkou frázi o 2–5 notách a pak ji hrajte, abyste klikání spustili či zastavili. Každou notu držte zhruba půl sekundy, aby rychlé noty ve vaší hře klikání nespustily.
+
+NOT MY TEMPO PRO
+Režim cvičení: trenér rychlosti přidává pár BPM každých pár taktů, dokud nedosáhnete cílového tempa
+Editor akcentů: nastavte každý cvak taktu jako vysoký, nízký nebo tichý a ukládejte předvolbu pro každou skladbu
+Chromatická ladička: naladíte se před hraním, komorní tón A lze nastavit od 430 do 450 Hz
+Pro je roční předplatné s bezplatnou zkušební dobou, nebo jednorázový nákup navždy.
+
+ZPŘÍSTUPNĚNÍ
+Pokud používáte Ovládání hlasem v iOS, vypněte vlastní mikrofon aplikace a ovládejte ji názvy tlačítek. Ovládací prvky mají popisky pro VoiceOver.
+
+PODROBNOSTI O PŘEDPLATNÉM
+Roční předplatné se obnovuje automaticky, pokud ho nezrušíte nejméně 24 hodin před koncem aktuálního období. Spravovat ho nebo zrušit můžete v Nastavení > Účet Apple > Předplatné. Nákup navždy je jednorázová platba.
+Podmínky použití (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Zásady ochrany osobních údajů: https://m1zz.github.io/HandsFreeMetronome/cs/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/cs/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/cs/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/cs/
+
 ## pt-BR
 
 ### 이름

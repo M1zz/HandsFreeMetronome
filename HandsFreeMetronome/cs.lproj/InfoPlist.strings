@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "Metronom poslouchá vaše hlasové příkazy (například „start“ a „faster“) a dokáže rozpoznat tempo hudby, kterou hrajete poblíž, takže ho ovládáte bez dotyku displeje.";
+"NSSpeechRecognitionUsageDescription" = "Rozpoznávání řeči slouží k pochopení hlasových příkazů bez rukou. Probíhá přímo ve vašem zařízení.";
