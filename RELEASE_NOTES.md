@@ -114,6 +114,13 @@ Teklif kodlarını uygulamada kullanın
 Kontrast artınca vuruşlar daha net
 En büyük yazıda bile ekran düzgün
 
+### App Store (sv)
+
+Kort introduktion vid första start
+Lös in erbjudandekoder direkt i appen
+Slagen syns tydligare med Öka kontrast
+Allt ryms även med den största texten
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)

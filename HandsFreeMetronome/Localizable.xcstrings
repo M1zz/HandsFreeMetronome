@@ -89,6 +89,12 @@
             "state" : "translated",
             "value" : "Yıllık %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ per år"
+          }
         }
       }
     },
@@ -182,6 +188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, %2$lld sent pes"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld cent för lågt"
           }
         }
       }
@@ -277,6 +289,12 @@
             "state" : "translated",
             "value" : "%1$@, %2$lld sent tiz"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld cent för högt"
+          }
         }
       }
     },
@@ -365,6 +383,12 @@
             "state" : "translated",
             "value" : "%@, akortlu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, rent"
+          }
         }
       }
     },
@@ -451,6 +475,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -671,6 +701,12 @@
             "state" : "translated",
             "value" : "%lld vuruş"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld slag"
+          }
         }
       }
     },
@@ -797,6 +833,12 @@
             "state" : "translated",
             "value" : "Dakikada %lld vuruş"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld slag per minut"
+          }
         }
       }
     },
@@ -883,6 +925,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -983,6 +1031,12 @@
             "state" : "translated",
             "value" : "%1$lld BPM, %2$@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld BPM, %2$@"
+          }
         }
       }
     },
@@ -1079,6 +1133,12 @@
             "state" : "translated",
             "value" : "%1$lld mükemmel, %2$lld iyi, %3$lld kötü"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld perfekta, %2$lld bra, %3$lld dåliga"
+          }
         }
       }
     },
@@ -1168,6 +1228,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  vuruş sayısını seçmek için noktalara dokunun"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  tryck på prickarna för att välja antal slag"
           }
         }
       }
@@ -1265,6 +1331,12 @@
             "state" : "translated",
             "value" : "%1$lld/4 · %2$@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/4 · %2$@"
+          }
         }
       }
     },
@@ -1352,6 +1424,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "16'lık notalar"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sextondelar"
           }
         }
       }
@@ -1441,6 +1519,12 @@
             "state" : "translated",
             "value" : "4'lük notalar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjärdedelar"
+          }
         }
       }
     },
@@ -1529,6 +1613,12 @@
             "state" : "translated",
             "value" : "8'lik notalar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åttondelar"
+          }
         }
       }
     },
@@ -1613,6 +1703,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "A4 = %lld Hz"
@@ -1707,6 +1803,12 @@
             "state" : "translated",
             "value" : "Vurgu düzenleyici"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenteditor"
+          }
         }
       }
     },
@@ -1794,6 +1896,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vurgu düzenleyici ve hazır ayarlar"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenteditor och förinställningar"
           }
         }
       }
@@ -1885,6 +1993,12 @@
             "state" : "translated",
             "value" : "Vurgular"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenter"
+          }
         }
       }
     },
@@ -1973,6 +2087,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Erişilebilirlik"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillgänglighet"
           }
         }
       }
@@ -2064,6 +2184,12 @@
             "state" : "translated",
             "value" : "%lld BPM ekle"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till %lld BPM"
+          }
         }
       }
     },
@@ -2153,6 +2279,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tüm komutlar"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alla kommandon"
           }
         }
       }
@@ -2244,6 +2376,12 @@
             "state" : "translated",
             "value" : "Bu deseni, ölçüyü ve alt bölümü uygular"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Använder det här mönstret, taktarten och underdelningen"
+          }
         }
       }
     },
@@ -2333,6 +2471,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geri"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillbaka"
           }
         }
       }
@@ -2424,6 +2568,12 @@
             "state" : "translated",
             "value" : "Metronoma dön"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillbaka till metronomen"
+          }
         }
       }
     },
@@ -2511,6 +2661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kötü"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dåligt"
           }
         }
       }
@@ -2601,6 +2757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vuruş %lld"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag %lld"
           }
         }
       }
@@ -2698,6 +2860,12 @@
             "state" : "translated",
             "value" : "Vuruş %1$lld, tık %2$lld"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag %1$lld, klick %2$lld"
+          }
         }
       }
     },
@@ -2793,6 +2961,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vuruş %1$lld / %2$lld"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag %1$lld av %2$lld"
           }
         }
       }
@@ -2890,6 +3064,12 @@
             "state" : "translated",
             "value" : "Vuruş %1$lld / %2$lld, %3$@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag %1$lld av %2$lld, %3$@"
+          }
         }
       }
     },
@@ -2986,6 +3166,12 @@
             "state" : "translated",
             "value" : "Vuruş %1$lld, tık %2$lld"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag %1$lld, klick %2$lld"
+          }
         }
       }
     },
@@ -3074,6 +3260,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vuruş görünümü"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slagvy"
           }
         }
       }
@@ -3164,6 +3356,12 @@
             "state" : "translated",
             "value" : "Vuruşlar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag"
+          }
         }
       }
     },
@@ -3252,6 +3450,12 @@
             "state" : "translated",
             "value" : "Zıplama görünümü"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Studsvy"
+          }
         }
       }
     },
@@ -3338,6 +3542,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -3432,6 +3642,12 @@
             "state" : "translated",
             "value" : "Hata bildirimleri ve özellik istekleri memnuniyetle karşılanır."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felrapporter och önskemål om funktioner är välkomna."
+          }
         }
       }
     },
@@ -3521,6 +3737,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ömür boyu satın al"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Köp för alltid"
           }
         }
       }
@@ -3612,6 +3834,12 @@
             "state" : "translated",
             "value" : "%@ karşılığında ömür boyu satın al"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Köp för alltid för %@"
+          }
         }
       }
     },
@@ -3701,6 +3929,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vazgeç"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avbryt"
           }
         }
       }
@@ -3792,6 +4026,12 @@
             "state" : "translated",
             "value" : "Görünümü değiştir"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Byt vy"
+          }
         }
       }
     },
@@ -3882,6 +4122,12 @@
             "state" : "translated",
             "value" : "Zamanlamayı denetle"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontrollera timing"
+          }
         }
       }
     },
@@ -3969,6 +4215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kromatik akort aleti"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kromatisk stämapparat"
           }
         }
       }
@@ -4059,6 +4311,12 @@
             "state" : "translated",
             "value" : "Kapat"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stäng"
+          }
         }
       }
     },
@@ -4146,6 +4404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "bir paneli veya ipucunu kapat"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "stäng en panel eller ett tips"
           }
         }
       }
@@ -4237,6 +4501,12 @@
             "state" : "translated",
             "value" : "Geliştiriciyle iletişim"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontakta utvecklaren"
+          }
         }
       }
     },
@@ -4327,6 +4597,12 @@
             "state" : "translated",
             "value" : "Sesinizle yönetin"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Styr med rösten"
+          }
         }
       }
     },
@@ -4414,6 +4690,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fiyatlar App Store’dan yüklenemedi."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det gick inte att hämta priser från App Store."
           }
         }
       }
@@ -4505,6 +4787,12 @@
             "state" : "translated",
             "value" : "Vurguları özelleştir"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anpassa accenter"
+          }
         }
       }
     },
@@ -4592,6 +4880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tiz, pes ve sessiz arasında geçiş yapar"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Växlar mellan hög, låg och tyst"
           }
         }
       }
@@ -4683,6 +4977,12 @@
             "state" : "translated",
             "value" : "Temposu azalt"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sänk tempot"
+          }
         }
       }
     },
@@ -4773,6 +5073,12 @@
             "state" : "translated",
             "value" : "%@ hazır ayarını sil"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta bort förinställningen %@"
+          }
         }
       }
     },
@@ -4860,6 +5166,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ölçünün her tıkını tiz, pes veya sessiz olarak ayarlayın ve desenleri şarkı başına kaydedin."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utforma varje klick i takten – högt, lågt eller tyst – och spara mönster för varje låt."
           }
         }
       }
@@ -4949,6 +5261,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ayrıntılı yardım"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detaljerad hjälp"
           }
         }
       }
@@ -5040,6 +5358,12 @@
             "state" : "translated",
             "value" : "Kapat"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stäng"
+          }
         }
       }
     },
@@ -5130,6 +5454,12 @@
             "state" : "translated",
             "value" : "Yardımı kapat"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stäng hjälpen"
+          }
         }
       }
     },
@@ -5219,6 +5549,12 @@
             "state" : "translated",
             "value" : "Bitti"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klar"
+          }
         }
       }
     },
@@ -5306,6 +5642,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "İki katı ×2"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbelt ×2"
           }
         }
       }
@@ -5397,6 +5739,12 @@
             "state" : "translated",
             "value" : "Vurgu ızgarasını açmak için çift dokunun: ölçünün her tıkını tiz, pes veya sessiz yapın ve desenleri hazır ayar olarak kaydedin."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbeltryck här för att öppna accentrutnätet – ställ in varje klick i takten som högt, lågt eller tyst och spara mönster som förinställningar."
+          }
         }
       }
     },
@@ -5484,6 +5832,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tüm ölçüyü düzenlemek için alt bölüm kartına çift dokunun: her hücre tiz → pes → sessiz olarak döner ve desenler adlı hazır ayarlar olarak kaydedilebilir."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbeltryck på underdelningskortet för att redigera hela takten – varje ruta växlar hög → låg → tyst, och mönster kan sparas som förinställningar med namn."
           }
         }
       }
@@ -5573,6 +5927,12 @@
             "state" : "translated",
             "value" : "Vurguları açmak için çift dokunun"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbeltryck för att öppna accenter"
+          }
         }
       }
     },
@@ -5661,6 +6021,12 @@
             "state" : "translated",
             "value" : "Aşağı −1"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ner −1"
+          }
         }
       }
     },
@@ -5748,6 +6114,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo kaydırıcısını sürükleyin veya − / + düğmelerine dokunun."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dra i temporeglaget eller tryck på knapparna − / +."
           }
         }
       }
@@ -5839,6 +6211,12 @@
             "state" : "translated",
             "value" : "Vurguları düzenle"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redigera accenter"
+          }
         }
       }
     },
@@ -5927,6 +6305,12 @@
             "state" : "translated",
             "value" : "8'lik notalar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åttondelar"
+          }
         }
       }
     },
@@ -6014,6 +6398,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "8'likler"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åttondelar"
           }
         }
       }
@@ -6105,6 +6495,12 @@
             "state" : "translated",
             "value" : "E-posta"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-post"
+          }
         }
       }
     },
@@ -6194,6 +6590,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geliştiriciye e-posta gönder"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mejla utvecklaren"
           }
         }
       }
@@ -6357,6 +6759,12 @@
             "state" : "translated",
             "value" : "Her %lld ölçüde"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Var %lld:e takt"
+          }
         }
       }
     },
@@ -6444,6 +6852,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ölçünün her tıkı ayrı bir hücredir; toplam %lld tık var. Değiştirmek için hücreye dokunun: tiz → pes → sessiz."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Varje klick i takten har sin egen ruta – %lld klick totalt. Tryck på en ruta för att växla: hög → låg → tyst."
           }
         }
       }
@@ -6535,6 +6949,12 @@
             "state" : "translated",
             "value" : "Buradaki her şey sesle de çalışır; komutlar aşağıda."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allt här fungerar även med rösten – se kommandona nedan."
+          }
         }
       }
     },
@@ -6625,6 +7045,12 @@
             "state" : "translated",
             "value" : "Daha hızlı"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snabbare"
+          }
         }
       }
     },
@@ -6712,6 +7138,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Daha hızlı +5"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snabbare +5"
           }
         }
       }
@@ -6803,6 +7235,12 @@
             "state" : "translated",
             "value" : "Bir komutu mu unuttunuz?"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Glömt ett kommando?"
+          }
         }
       }
     },
@@ -6893,6 +7331,12 @@
             "state" : "translated",
             "value" : "Her zaman ücretsiz, kilit açmaya gerek yok:"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alltid gratis, ingen upplåsning behövs:"
+          }
         }
       }
     },
@@ -6980,6 +7424,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ücretsiz deneme"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gratis provperiod"
           }
         }
       }
@@ -7069,6 +7519,12 @@
             "state" : "translated",
             "value" : "İyi"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bra"
+          }
         }
       }
     },
@@ -7157,6 +7613,12 @@
             "state" : "translated",
             "value" : "Yarısı ÷2"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halv ÷2"
+          }
         }
       }
     },
@@ -7244,6 +7706,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Duyulan: %@"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hörde: %@"
           }
         }
       }
@@ -7335,6 +7803,12 @@
             "state" : "translated",
             "value" : "Yardım"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hjälp"
+          }
         }
       }
     },
@@ -7424,6 +7898,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yardımda gezinme"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navigera i hjälpen"
           }
         }
       }
@@ -7515,6 +7995,12 @@
             "state" : "translated",
             "value" : "Tiz ses"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hög ton"
+          }
         }
       }
     },
@@ -7605,6 +8091,12 @@
             "state" : "translated",
             "value" : "iOS Sesle Denetim kullanıyorum"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jag använder röststyrning i iOS"
+          }
         }
       }
     },
@@ -7692,6 +8184,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yörünge görünümünde çalarken halkaya dokunun; her tık (alt bölümler dahil) bir hedeftir. Hareket eden nokta dokunuşunuzun düştüğü yerde iz bırakır ve renkli sayaçlar siz durana kadar Mükemmel / İyi / Kötü sayısını tutar."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I omloppsvyn trycker du på ringen medan du spelar – varje klick (även underdelningar) är ett mål. Den rörliga pricken lämnar ett spår där du tryckte, och färgade räknare summerar Perfekt / Bra / Dåligt tills du stoppar."
           }
         }
       }
@@ -7783,6 +8281,12 @@
             "state" : "translated",
             "value" : "Temposu artır"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Höj tempot"
+          }
         }
       }
     },
@@ -7869,6 +8373,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -7963,6 +8473,12 @@
             "state" : "translated",
             "value" : "Instagram mesajı"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-meddelande"
+          }
         }
       }
     },
@@ -8052,6 +8568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram mesajı (@lee25_ios)"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-meddelande (@lee25_ios)"
           }
         }
       }
@@ -8143,6 +8665,12 @@
             "state" : "translated",
             "value" : "Enstrüman sinyali"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instrumentsignal"
+          }
         }
       }
     },
@@ -8233,6 +8761,12 @@
             "state" : "translated",
             "value" : "Pro’nun bir parçasıdır: üç çalışma aracı, tek kilit açma."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ingår i Pro – tre övningsverktyg, en upplåsning."
+          }
         }
       }
     },
@@ -8319,6 +8853,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Largo? Moderato?"
@@ -8413,6 +8953,12 @@
             "state" : "translated",
             "value" : "Ömür boyu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "För alltid"
+          }
         }
       }
     },
@@ -8500,6 +9046,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ömür boyu — tek sefer %@"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "För alltid – %@ en gång"
           }
         }
       }
@@ -8589,6 +9141,12 @@
             "state" : "translated",
             "value" : "söyleyebileceğiniz komutları listele"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "visa kommandona du kan säga"
+          }
         }
       }
     },
@@ -8677,6 +9235,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dinle"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyssna"
           }
         }
       }
@@ -8768,6 +9332,12 @@
             "state" : "translated",
             "value" : "Sesi dinle"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyssna efter röst"
+          }
         }
       }
     },
@@ -8857,6 +9427,12 @@
             "state" : "translated",
             "value" : "Dinliyor"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyssnar"
+          }
         }
       }
     },
@@ -8944,6 +9520,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dinliyor…"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyssnar …"
           }
         }
       }
@@ -9035,6 +9617,12 @@
             "state" : "translated",
             "value" : "Dinliyor… her notayı basılı tutun"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyssnar … håll varje ton"
+          }
         }
       }
     },
@@ -9124,6 +9712,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fiyatlar yükleniyor…"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hämtar priser …"
           }
         }
       }
@@ -9215,6 +9809,12 @@
             "state" : "translated",
             "value" : "Pes ses"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Låg ton"
+          }
         }
       }
     },
@@ -9304,6 +9904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sesle Denetim için tasarlandı"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gjord för röststyrning"
           }
         }
       }
@@ -9395,6 +10001,12 @@
             "state" : "translated",
             "value" : "Metronom modu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronomläge"
+          }
         }
       }
     },
@@ -9482,6 +10094,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon/Konuşma engellendi — Ayarlar’dan açın"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofon/tal blockerat – aktivera i Inställningar"
           }
         }
       }
@@ -9573,6 +10191,12 @@
             "state" : "translated",
             "value" : "Eksi"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minus"
+          }
         }
       }
     },
@@ -9662,6 +10286,12 @@
             "state" : "translated",
             "value" : "Daha fazla"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mer"
+          }
         }
       }
     },
@@ -9749,6 +10379,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "bu listeyi kaydır"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "flytta den här listan"
           }
         }
       }
@@ -9838,6 +10474,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sessiz"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tysta"
           }
         }
       }
@@ -9929,6 +10571,12 @@
             "state" : "translated",
             "value" : "Sesli denetimi sessize al"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stäng av röststyrningen"
+          }
         }
       }
     },
@@ -10018,6 +10666,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ad (ör. Bossa girişi)"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Namn (t.ex. Bossaintro)"
           }
         }
       }
@@ -10109,6 +10763,12 @@
             "state" : "translated",
             "value" : "Bu uygulamanın mikrofonu gerekir; kullanmak için “iOS Sesle Denetim kullanıyorum” seçeneğini kapatın."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kräver appens mikrofon – stäng av ”Jag använder röststyrning i iOS” för att använda den."
+          }
         }
       }
     },
@@ -10196,6 +10856,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nota algılanmadı, bir nota çalın"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen ton hittades, spela en ton"
           }
         }
       }
@@ -10285,6 +10951,12 @@
             "state" : "translated",
             "value" : "Önceki bir satın alma bulunamadı."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inget tidigare köp hittades."
+          }
         }
       }
     },
@@ -10369,6 +11041,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -10463,6 +11141,12 @@
             "state" : "translated",
             "value" : "Şimdi değil"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inte nu"
+          }
         }
       }
     },
@@ -10553,6 +11237,12 @@
             "state" : "translated",
             "value" : "Nota"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ton"
+          }
         }
       }
     },
@@ -10641,6 +11331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notalar"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toner"
           }
         }
       }
@@ -10732,6 +11428,12 @@
             "state" : "translated",
             "value" : "Ekranda"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På skärmen"
+          }
         }
       }
     },
@@ -10820,6 +11522,12 @@
             "state" : "translated",
             "value" : "Aç"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna"
+          }
         }
       }
     },
@@ -10907,6 +11615,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vurgu düzenleyiciyi aç"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna accenteditorn"
           }
         }
       }
@@ -10998,6 +11712,12 @@
             "state" : "translated",
             "value" : "Vurguları aç"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna accenter"
+          }
         }
       }
     },
@@ -11085,6 +11805,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aşağıdaki Vuruş görünümünden açın veya “practice” deyin."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna den från slagvyn nedan eller säg ”practice”."
           }
         }
       }
@@ -11176,6 +11902,12 @@
             "state" : "translated",
             "value" : "Çalışmayı aç"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna övning"
+          }
         }
       }
     },
@@ -11266,6 +11998,12 @@
             "state" : "translated",
             "value" : "Çalışma modunu aç"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna övningsläget"
+          }
         }
       }
     },
@@ -11353,6 +12091,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "çalışma modunu aç"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "öppna övningsläget"
           }
         }
       }
@@ -11442,6 +12186,12 @@
             "state" : "translated",
             "value" : "akort aletini aç"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "öppna stämapparaten"
+          }
         }
       }
     },
@@ -11529,6 +12279,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yörünge görünümü"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omloppsvy"
           }
         }
       }
@@ -11620,6 +12376,12 @@
             "state" : "translated",
             "value" : "Duraklat"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pausa"
+          }
         }
       }
     },
@@ -11710,6 +12472,12 @@
             "state" : "translated",
             "value" : "Bir kez ödeyin, sonsuza dek sizin olsun"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betala en gång, behåll för alltid"
+          }
         }
       }
     },
@@ -11797,6 +12565,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mükemmel!"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfekt!"
           }
         }
       }
@@ -11887,6 +12661,12 @@
             "state" : "translated",
             "value" : "Çal"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spela"
+          }
         }
       }
     },
@@ -11974,6 +12754,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "çal / duraklat"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "spela / pausa"
           }
         }
       }
@@ -12063,6 +12849,12 @@
             "state" : "translated",
             "value" : "2–5 nota çalın; her biri yaklaşık yarım saniye sürsün."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spela 2–5 toner, ungefär en halv sekund vardera."
+          }
         }
       }
     },
@@ -12150,6 +12942,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bir nota çalın…"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spela en ton …"
           }
         }
       }
@@ -12241,6 +13039,12 @@
             "state" : "translated",
             "value" : "Tıkı başlatmak veya durdurmak için cümlenizi çalın; şarkının ortasında bile olur. Çalışınızdaki hızlı notalar yanlışlıkla tetiklemesin diye her notayı yaklaşık yarım saniye basılı tutun. Dinleme açıkken çalışır."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spela din fras för att starta eller stoppa klicket, även mitt i en låt. Håll varje ton i ungefär en halv sekund så att snabba toner i ditt spel inte utlöser det av misstag. Fungerar när Lyssna är på."
+          }
         }
       }
     },
@@ -12330,6 +13134,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oynatma"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uppspelning"
           }
         }
       }
@@ -12421,6 +13231,12 @@
             "state" : "translated",
             "value" : "Artı"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus"
+          }
         }
       }
     },
@@ -12509,6 +13325,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çalışma"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Övning"
           }
         }
       }
@@ -12599,6 +13421,12 @@
             "state" : "translated",
             "value" : "Çalışma modu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Övningsläge"
+          }
         }
       }
     },
@@ -12686,6 +13514,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çalışma modu · vurgu düzenleyici ve hazır ayarlar · akort aleti"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Övningsläge · accenteditor och förinställningar · stämapparat"
           }
         }
       }
@@ -12777,6 +13611,12 @@
             "state" : "translated",
             "value" : "Hazır ayar %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förinställning %@"
+          }
         }
       }
     },
@@ -12866,6 +13706,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hazır ayarlar"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förinställningar"
           }
         }
       }
@@ -12957,6 +13803,12 @@
             "state" : "translated",
             "value" : "Gizlilik Politikası"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Integritetspolicy"
+          }
         }
       }
     },
@@ -13045,6 +13897,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/tr/privacy.html"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/sv/privacy.html"
+          }
         }
       }
     },
@@ -13129,6 +13987,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -13223,6 +14087,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -13310,6 +14180,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro açıldı — teşekkürler!"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro upplåst – tack!"
           }
         }
       }
@@ -13399,6 +14275,12 @@
             "state" : "translated",
             "value" : "4'lük notalar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjärdedelar"
+          }
         }
       }
     },
@@ -13487,6 +14369,12 @@
             "state" : "translated",
             "value" : "4'lükler"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjärdedelar"
+          }
         }
       }
     },
@@ -13574,6 +14462,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Temposu birkaç ölçüde bir kendiliğinden artırın; bir pasajı eller serbest hızlandırın."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Höj tempot automatiskt var några takter – få upp farten i ett parti utan att släppa instrumentet."
           }
         }
       }
@@ -13665,6 +14559,12 @@
             "state" : "translated",
             "value" : "Çalarken temposu birkaç ölçüde bir kendiliğinden artırır; bir pasajı yavaş yavaş hızlandırmak için. Hedefe gelince durur. Açmak için istediğiniz an “practice” deyin."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Höjer tempot automatiskt var några takter medan du spelar – för att steg för steg öka farten i ett parti. Stannar vid målet. Säg ”practice” när som helst för att öppna det här."
+          }
         }
       }
     },
@@ -13754,6 +14654,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Önce kısa bir cümle kaydedin."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spela först in en kort fras."
           }
         }
       }
@@ -13845,6 +14751,12 @@
             "state" : "translated",
             "value" : "Yeniden kaydet"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spela in igen"
+          }
         }
       }
     },
@@ -13935,6 +14847,12 @@
             "state" : "translated",
             "value" : "Sinyal kaydet"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spela in signal"
+          }
         }
       }
     },
@@ -14022,6 +14940,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Referans perde"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stämton"
           }
         }
       }
@@ -14113,6 +15037,12 @@
             "state" : "translated",
             "value" : "Pro gerekir"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kräver Pro"
+          }
         }
       }
     },
@@ -14202,6 +15132,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sıfırla"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ"
           }
         }
       }
@@ -14293,6 +15229,12 @@
             "state" : "translated",
             "value" : "Geri yükle"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ"
+          }
         }
       }
     },
@@ -14382,6 +15324,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Satın alımları geri yükle"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ köp"
           }
         }
       }
@@ -14473,6 +15421,12 @@
             "state" : "translated",
             "value" : "Satın Alımları Geri Yükle"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ köp"
+          }
         }
       }
     },
@@ -14562,6 +15516,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Önceki bir Pro satın alımını geri yükler"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställer ett tidigare Pro-köp"
           }
         }
       }
@@ -14653,6 +15613,12 @@
             "state" : "translated",
             "value" : "Bu ölçü için varsayılan deseni geri yükler"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställer standardmönstret för den här taktarten"
+          }
         }
       }
     },
@@ -14742,6 +15708,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kaydet"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara"
           }
         }
       }
@@ -14833,6 +15805,12 @@
             "state" : "translated",
             "value" : "Şarkı başına bir desen kaydedin; çağırdığınızda ölçüsü ve alt bölümü de geri gelir."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara ett mönster per låt – när du hämtar det återställs även taktart och underdelning."
+          }
         }
       }
     },
@@ -14922,6 +15900,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geçerli deseni kaydet…"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara aktuellt mönster …"
           }
         }
       }
@@ -15013,6 +15997,12 @@
             "state" : "translated",
             "value" : "Deseni kaydet"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara mönster"
+          }
         }
       }
     },
@@ -15102,6 +16092,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hazır ayarı kaydet"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara förinställning"
           }
         }
       }
@@ -15193,6 +16189,12 @@
             "state" : "translated",
             "value" : "Bu deseni ölçüsü ve alt bölümüyle kaydeder; böylece şarkı başına çağırabilirsiniz."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparar mönstret med taktart och underdelning så att du kan hämta det per låt."
+          }
         }
       }
     },
@@ -15282,6 +16284,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "deyin"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "säg"
           }
         }
       }
@@ -15373,6 +16381,12 @@
             "state" : "translated",
             "value" : "Çıkmak için “close” deyin"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”close” för att stänga"
+          }
         }
       }
     },
@@ -15460,6 +16474,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "“start”, “faster” veya “help” deyin"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”start”, ”faster” eller ”help”"
           }
         }
       }
@@ -15550,6 +16570,12 @@
             "state" : "translated",
             "value" : "Bir komut söyleyin"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ett kommando"
+          }
         }
       }
     },
@@ -15637,6 +16663,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "“close” / “done” deyin veya Bitti’ye dokunun."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”close” / ”done” eller tryck på Klar."
           }
         }
       }
@@ -15728,6 +16760,12 @@
             "state" : "translated",
             "value" : "Kapatmak için “close” deyin veya dokunun"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”close” eller tryck för att stänga"
+          }
         }
       }
     },
@@ -15818,6 +16856,12 @@
             "state" : "translated",
             "value" : "Söyleyebileceğiniz tüm komutları görmek için istediğiniz an “help” deyin veya buraya dokunun, kapatmak için “close” deyin."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”help” när som helst – eller tryck här – för att se alla kommandon du kan säga, och sedan ”close” för att stänga."
+          }
         }
       }
     },
@@ -15906,6 +16950,12 @@
             "state" : "translated",
             "value" : "“help” deyin veya ? düğmesine dokunun."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”help” eller tryck på knappen ?."
+          }
         }
       }
     },
@@ -15993,6 +17043,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "“louder” / “quieter” / “mute” veya “volume 60” deyin."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”louder” / ”quieter” / ”mute” eller ”volume 60”."
           }
         }
       }
@@ -16084,6 +17140,12 @@
             "state" : "translated",
             "value" : "Çalarken temposu birkaç ölçüde bir kendiliğinden artırmak için “practice” deyin; hız çalışmaları için harika."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”practice” för att höja tempot automatiskt var några takter medan du spelar – perfekt för snabbhetsövningar."
+          }
         }
       }
     },
@@ -16172,6 +17234,12 @@
             "state" : "translated",
             "value" : "“scroll down” / “scroll up” deyin veya kaydırın."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”scroll down” / ”scroll up” eller svep."
+          }
         }
       }
     },
@@ -16259,6 +17327,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "“tune” deyin ve çalın: nota, sent ve akortlu bölge."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”tune” och spela – ton, cent och en zon för ren stämning."
           }
         }
       }
@@ -16350,6 +17424,12 @@
             "state" : "translated",
             "value" : "Kromatik akort aletini açmak için “tune”, işiniz bitince “close” deyin."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”tune” för att öppna den kromatiska stämapparaten och ”close” när du är klar."
+          }
         }
       }
     },
@@ -16437,6 +17517,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kaydır"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scrolla"
           }
         }
       }
@@ -16526,6 +17612,12 @@
             "state" : "translated",
             "value" : "Aşağı kaydır"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scrolla ner"
+          }
         }
       }
     },
@@ -16613,6 +17705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yukarı kaydır"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scrolla upp"
           }
         }
       }
@@ -16704,6 +17802,12 @@
             "state" : "translated",
             "value" : "Kaydırma"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scrollning"
+          }
         }
       }
     },
@@ -16791,6 +17895,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vuruşları ayarla"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ställ in slag"
           }
         }
       }
@@ -16880,6 +17990,12 @@
             "state" : "translated",
             "value" : "yüzdeyi ayarla"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ställ in procent"
+          }
         }
       }
     },
@@ -16968,6 +18084,12 @@
             "state" : "translated",
             "value" : "ölçü birimini ayarla"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ställ in taktart"
+          }
         }
       }
     },
@@ -17055,6 +18177,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "değeri ayarla"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ställ in värde"
           }
         }
       }
@@ -17146,6 +18274,12 @@
             "state" : "translated",
             "value" : "%lld/4 ölçüsünü ayarlar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ställer in %lld/4-takt"
+          }
         }
       }
     },
@@ -17236,6 +18370,12 @@
             "state" : "translated",
             "value" : "Sinyal: %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signal: %@"
+          }
         }
       }
     },
@@ -17323,6 +18463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "tıkı sustur"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tysta klicket"
           }
         }
       }
@@ -17414,6 +18560,12 @@
             "state" : "translated",
             "value" : "Sessiz"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tyst"
+          }
         }
       }
     },
@@ -17502,6 +18654,12 @@
             "state" : "translated",
             "value" : "16'lık notalar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sextondelar"
+          }
         }
       }
     },
@@ -17589,6 +18747,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "16'lıklar"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sextondelar"
           }
         }
       }
@@ -17680,6 +18844,12 @@
             "state" : "translated",
             "value" : "Daha yavaş"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Långsammare"
+          }
         }
       }
     },
@@ -17768,6 +18938,12 @@
             "state" : "translated",
             "value" : "Daha yavaş −5"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Långsammare −5"
+          }
         }
       }
     },
@@ -17855,6 +19031,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Konuşma tanıma burada kullanılamıyor"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taligenkänning är inte tillgänglig här"
           }
         }
       }
@@ -17945,6 +19127,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hız antrenörü"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hastighetstränare"
           }
         }
       }
@@ -18040,6 +19228,12 @@
             "state" : "translated",
             "value" : "Hız antrenörü · her %2$lld ölçüde +%1$lld → %3$lld"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hastighetstränare · +%1$lld var %2$lld:e takt → %3$lld"
+          }
         }
       }
     },
@@ -18128,6 +19322,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Başlat"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
           }
         }
       }
@@ -18219,6 +19419,12 @@
             "state" : "translated",
             "value" : "Enstrümanımla başlat / durdur"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starta / stoppa med mitt instrument"
+          }
         }
       }
     },
@@ -18308,6 +19514,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dinlemeyi başlat"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Börja lyssna"
           }
         }
       }
@@ -18399,6 +19611,12 @@
             "state" : "translated",
             "value" : "Metronomu başlat"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starta metronomen"
+          }
         }
       }
     },
@@ -18487,6 +19705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Durdur"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stopp"
           }
         }
       }
@@ -18578,6 +19802,12 @@
             "state" : "translated",
             "value" : "Dinlemeyi durdur"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluta lyssna"
+          }
         }
       }
     },
@@ -18668,6 +19898,12 @@
             "state" : "translated",
             "value" : "Metronomu durdur"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stoppa metronomen"
+          }
         }
       }
     },
@@ -18756,6 +19992,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alt bölüm"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Underdelning"
           }
         }
       }
@@ -18847,6 +20089,12 @@
             "state" : "translated",
             "value" : "Abone ol"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prenumerera"
+          }
         }
       }
     },
@@ -18937,6 +20185,12 @@
             "state" : "translated",
             "value" : "Yıllık %@ ile abone ol"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prenumerera årligen för %@"
+          }
         }
       }
     },
@@ -19024,6 +20278,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Destek"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
           }
         }
       }
@@ -19113,6 +20373,12 @@
             "state" : "translated",
             "value" : "Zıplama görünümüne geç"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Byt till studsvy"
+          }
         }
       }
     },
@@ -19200,6 +20466,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yörünge görünümüne geç"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Byt till omloppsvy"
           }
         }
       }
@@ -19291,6 +20563,12 @@
             "state" : "translated",
             "value" : "Halka görünümüne geç"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Byt till ringvy"
+          }
         }
       }
     },
@@ -19381,6 +20659,12 @@
             "state" : "translated",
             "value" : "Görünümü değiştir"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Byt vy"
+          }
         }
       }
     },
@@ -19469,6 +20753,12 @@
             "state" : "translated",
             "value" : "görselleştirmeyi değiştir"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "byt visualisering"
+          }
         }
       }
     },
@@ -19556,6 +20846,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1/4, 1/8, Üçlü veya 1/16’ya dokunun. Vurguları açmak ve ölçünün her tıkını tiz, pes veya sessiz yapmak için karta çift dokunun."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck på 1/4, 1/8, triol eller 1/16. Dubbeltryck på kortet för att öppna accenter och ställa in varje klick i takten som högt, lågt eller tyst."
           }
         }
       }
@@ -19647,6 +20943,12 @@
             "state" : "translated",
             "value" : "Zamanlamanızı denetlemek için ritme uyarak dokunun"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck i rytm för att kontrollera din timing"
+          }
         }
       }
     },
@@ -19734,6 +21036,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sesle yönetmek için Dinle’ye dokunun"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck på Lyssna för att styra med rösten"
           }
         }
       }
@@ -19823,6 +21131,12 @@
             "state" : "translated",
             "value" : "Sesli denetimi açıp kapatmak için Dinle’ye dokunun."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck på Lyssna för att slå på eller av röststyrningen."
+          }
         }
       }
     },
@@ -19910,6 +21224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alttaki Başlat / Durdur’a dokunun."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck på Start / Stopp längst ner."
           }
         }
       }
@@ -20001,6 +21321,12 @@
             "state" : "translated",
             "value" : "Tempo vur"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tapptempo"
+          }
         }
       }
     },
@@ -20088,6 +21414,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Temposu ayarlamak için büyük BPM sayısına ritme uyarak dokunun."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck i rytm på det stora BPM-talet för att ställa in tempot."
           }
         }
       }
@@ -20177,6 +21509,12 @@
             "state" : "translated",
             "value" : "Ölçü birimini seçmek için noktalara dokunun."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck på prickarna för att välja taktart."
+          }
         }
       }
     },
@@ -20264,6 +21602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Görünüm simgesine (vuruş kartının sağ üstünde) dokunun: zıplama → yörünge → halka."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck på vyikonen (uppe till höger på slagkortet): studs → omlopp → ring."
           }
         }
       }
@@ -20355,6 +21699,12 @@
             "state" : "translated",
             "value" : "Zıplayan top ile yörünge halkası arasında geçmek için dokunun veya “bounce” / “orbit” deyin."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck för att växla mellan den studsande bollen och omloppsringen – eller säg ”bounce” / ”orbit”."
+          }
         }
       }
     },
@@ -20445,6 +21795,12 @@
             "state" : "translated",
             "value" : "Tempo adı ile BPM arasında geçmek için dokunun"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck för att växla mellan tempobeteckning och BPM"
+          }
         }
       }
     },
@@ -20534,6 +21890,12 @@
             "state" : "translated",
             "value" : "Tempo"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
+          }
         }
       }
     },
@@ -20618,6 +21980,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo %lld"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo %lld"
@@ -20712,6 +22080,12 @@
             "state" : "translated",
             "value" : "Tempo kaydırıcısı"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temporeglage"
+          }
         }
       }
     },
@@ -20801,6 +22175,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kullanım Koşulları (EULA)"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Användarvillkor (EULA)"
           }
         }
       }
@@ -20892,6 +22272,12 @@
             "state" : "translated",
             "value" : "Bu, temponuzun klasik terimle karşılığı. BPM sayısına geçmek ve geri dönmek için dokunun."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det här är ditt tempo som klassisk beteckning. Tryck för att byta till BPM-talet och tillbaka."
+          }
         }
       }
     },
@@ -20981,6 +22367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sesle Denetim ile çakışmaması için uygulamanın kendi mikrofonu kapalı. “Tap Start”, “Tap Faster” veya “Tap 3 beats” deyin."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appens egen mikrofon är av så att den inte krockar med röststyrningen. Säg ”Tap Start”, ”Tap Faster” eller ”Tap 3 beats”."
           }
         }
       }
@@ -21072,6 +22464,12 @@
             "state" : "translated",
             "value" : "Tam metronom: her tempo, ölçü ve alt bölüm, üç vuruş görünümünün hepsi, tempo vurma, zamanlama denetimi ve eller serbest tam sesli denetim."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hela metronomen – alla tempon, taktarter och underdelningar, alla tre slagvyer, tapptempo, timingkontroll och fullständig röststyrning utan händer."
+          }
         }
       }
     },
@@ -21161,6 +22559,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon zaten dinliyor: “start”, “faster” veya “help” deyin. iOS Sesle Denetim mi kullanıyorsunuz? Geçmek için Sesli Komutlar’ı açın."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofonen lyssnar redan – säg ”start”, ”faster” eller ”help”. Använder du röststyrning i iOS? Öppna Röstkommandon för att byta."
           }
         }
       }
@@ -21252,6 +22656,12 @@
             "state" : "translated",
             "value" : "Yıllık plan, yenilemeden en az 24 saat önce Ayarlar > Apple Hesabı > Abonelikler bölümünden iptal edilmedikçe yılda %@ karşılığında otomatik yenilenir. Ömür boyu seçeneği tek seferlik bir ödemedir."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Årsprenumerationen förnyas automatiskt för %@ per år tills du säger upp den minst 24 timmar före förnyelsen i Inställningar > Apple-konto > Prenumerationer. Köp för alltid är en engångsbetalning."
+          }
         }
       }
     },
@@ -21342,6 +22752,12 @@
             "state" : "translated",
             "value" : "Akort aleti de var"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det finns också en stämapparat"
+          }
         }
       }
     },
@@ -21429,6 +22845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zamanlama denetimi"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timingkontroll"
           }
         }
       }
@@ -21520,6 +22942,12 @@
             "state" : "translated",
             "value" : "İpuçları"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tips"
+          }
         }
       }
     },
@@ -21610,6 +23038,12 @@
             "state" : "translated",
             "value" : "Antrenör"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tränare"
+          }
         }
       }
     },
@@ -21698,6 +23132,12 @@
             "state" : "translated",
             "value" : "Üçlemeler"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triol"
+          }
         }
       }
     },
@@ -21785,6 +23225,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "üçlemeler"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "trioler"
           }
         }
       }
@@ -21875,6 +23321,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tekrar dene"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Försök igen"
           }
         }
       }
@@ -22036,6 +23488,12 @@
             "state" : "translated",
             "value" : "%lld gün ücretsiz deneyin"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis i %lld dagar"
+          }
         }
       }
     },
@@ -22183,6 +23641,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld ay ücretsiz deneyin"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis i %lld månader"
           }
         }
       }
@@ -22344,6 +23808,12 @@
             "state" : "translated",
             "value" : "%lld hafta ücretsiz deneyin"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis i %lld veckor"
+          }
         }
       }
     },
@@ -22431,6 +23901,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bir ay ücretsiz deneyin"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis i en månad"
           }
         }
       }
@@ -22520,6 +23996,12 @@
             "state" : "translated",
             "value" : "Bir hafta ücretsiz deneyin"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis i en vecka"
+          }
         }
       }
     },
@@ -22607,6 +24089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bir yıl ücretsiz deneyin"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratis i ett år"
           }
         }
       }
@@ -22696,6 +24184,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Akort aleti"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stämapparat"
           }
         }
       }
@@ -22787,6 +24281,12 @@
             "state" : "translated",
             "value" : "Uygulamanın kendi mikrofonunu kapatır; düğmeler adlarıyla yönetilir"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stänger av appens egen mikrofon och styr knapparna med deras namn"
+          }
         }
       }
     },
@@ -22874,6 +24374,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "İkisi çakışmasın diye bu uygulamanın mikrofonunu kapatır. “Tap Start”, “Tap Faster”, “Tap 3 beats” diyerek yönetin."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stänger av appens mikrofon så att de inte krockar. Styr genom att säga ”Tap Start”, ”Tap Faster”, ”Tap 3 beats”."
           }
         }
       }
@@ -22965,6 +24471,12 @@
             "state" : "translated",
             "value" : "İki vuruş görünümü"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Två slagvyer"
+          }
         }
       }
     },
@@ -23053,6 +24565,12 @@
             "state" : "translated",
             "value" : "Pro’nun kilidini aç"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås upp Pro"
+          }
         }
       }
     },
@@ -23140,6 +24658,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yukarı +1"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upp +1"
           }
         }
       }
@@ -23231,6 +24755,12 @@
             "state" : "translated",
             "value" : "%lld BPM’ye kadar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upp till %lld BPM"
+          }
         }
       }
     },
@@ -23318,6 +24848,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro’ya geç"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uppgradera"
           }
         }
       }
@@ -23408,6 +24944,12 @@
             "state" : "translated",
             "value" : "Görünüm"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vy"
+          }
         }
       }
     },
@@ -23495,6 +25037,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ses"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Röst"
           }
         }
       }
@@ -23586,6 +25134,12 @@
             "state" : "translated",
             "value" : "Sesli komutlar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Röstkommandon"
+          }
         }
       }
     },
@@ -23674,6 +25228,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sesli Komutlar"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Röstkommandon"
           }
         }
       }
@@ -23764,6 +25324,12 @@
             "state" : "translated",
             "value" : "Sesli denetim kapalı"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Röststyrning av"
+          }
         }
       }
     },
@@ -23853,6 +25419,12 @@
             "state" : "translated",
             "value" : "Ses"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volym"
+          }
         }
       }
     },
@@ -23940,6 +25512,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ses %%%lld"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volym %lld %%"
           }
         }
       }
@@ -24029,6 +25607,12 @@
             "state" : "translated",
             "value" : "Sesi azalt"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sänk volymen"
+          }
         }
       }
     },
@@ -24116,6 +25700,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sesi artır"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Höj volymen"
           }
         }
       }
@@ -24207,6 +25797,12 @@
             "state" : "translated",
             "value" : "Yıllık"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Årlig"
+          }
         }
       }
     },
@@ -24295,6 +25891,12 @@
             "state" : "translated",
             "value" : "Yıllık — %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Årlig – %@"
+          }
         }
       }
     },
@@ -24379,6 +25981,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -24471,6 +26079,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -24555,6 +26169,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -24647,6 +26267,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -24734,6 +26360,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ Durdur"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ Stopp"
           }
         }
       }
@@ -24823,6 +26455,12 @@
             "state" : "translated",
             "value" : "▶ Başlat"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ Start"
+          }
         }
       }
     },
@@ -24910,6 +26548,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zamanlayıcı"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer"
           }
         }
       }
@@ -24999,6 +26643,12 @@
             "state" : "translated",
             "value" : "Kapalı"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Av"
+          }
         }
       }
     },
@@ -25086,6 +26736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çalışma zamanlayıcısı"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Övningstimer"
           }
         }
       }
@@ -25175,6 +26831,12 @@
             "state" : "translated",
             "value" : "%lld dk"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
         }
       }
     },
@@ -25262,6 +26924,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kalan süre"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid kvar"
           }
         }
       }
@@ -25351,6 +27019,12 @@
             "state" : "translated",
             "value" : "Zamanlayıcıyı sıfırla"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nollställ timern"
+          }
         }
       }
     },
@@ -25438,6 +27112,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zamanlayıcı kapalı"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer av"
           }
         }
       }
@@ -25527,6 +27207,12 @@
             "state" : "translated",
             "value" : "Zamanlayıcı %lld dk"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer %lld min"
+          }
         }
       }
     },
@@ -25614,6 +27300,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ kaldı"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ kvar"
           }
         }
       }
@@ -25703,6 +27395,12 @@
             "state" : "translated",
             "value" : "Çalışma süresi doldu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Övningstiden är slut"
+          }
         }
       }
     },
@@ -25790,6 +27488,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "çalışma zamanlayıcısı kur"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ställ in en övningstimer"
           }
         }
       }
@@ -25879,6 +27583,12 @@
             "state" : "translated",
             "value" : "zamanlayıcıyı kapat"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "stäng av timern"
+          }
         }
       }
     },
@@ -25966,6 +27676,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Başlat’ın yanındaki zamanlayıcı düğmesine dokunun veya “timer 5 minutes” deyin. Tık çalarken geri sayar, sonra durur ve zil çalar."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck på timerknappen bredvid Start eller säg ”timer 5 minutes”. Den räknar ner medan klicket spelas och stoppar sedan med en ljudsignal."
           }
         }
       }
@@ -26055,6 +27771,12 @@
             "state" : "translated",
             "value" : "Tık çalarken geri sayar, durdurduğunuzda duraklar. Süre dolunca metronom durur ve zil çalar. İstediğiniz an “timer 5 minutes” veya “timer off” deyin."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Räknar ner medan klicket spelas och pausar när du stoppar. När tiden är slut stoppar metronomen med en ljudsignal. Säg ”timer 5 minutes” eller ”timer off” när som helst."
+          }
         }
       }
     },
@@ -26142,6 +27864,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anonim kullanım istatistiklerini paylaş"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dela anonym användningsstatistik"
           }
         }
       }
@@ -26231,6 +27959,12 @@
             "state" : "translated",
             "value" : "Gizlilik"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Integritet"
+          }
         }
       }
     },
@@ -26318,6 +28052,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uygulamayı kaç cihazın kullandığı gibi sayımlar ve çökme raporları. Ses, ayar veya kişisel bilgi yok. Bir sonraki açılıştan itibaren geçerli olur."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Räknare, till exempel hur många enheter som använder appen, samt kraschrapporter. Inget ljud, inga inställningar och ingen personlig information. Gäller från nästa start."
           }
         }
       }
@@ -26408,6 +28148,12 @@
             "state" : "translated",
             "value" : "Daha da büyük yazı"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ännu större text"
+          }
         }
       }
     },
@@ -26496,6 +28242,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ekran, en büyük yazı boyutlarında bile okunaklı ve düzenli kalır."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skärmen förblir läsbar och prydlig även med de allra största textstorlekarna."
           }
         }
       }
@@ -26586,6 +28338,12 @@
             "state" : "translated",
             "value" : "Daha kolay seçilen renkler"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Färger som är lättare att se"
+          }
         }
       }
     },
@@ -26674,6 +28432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kontrastı Artır açıkken veya renkleri ayırt etmek zorsa vuruş ve zamanlama renkleri net kalır."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag- och timingfärger förblir tydliga med Öka kontrast, eller om färger är svåra att skilja åt."
           }
         }
       }
@@ -26764,6 +28528,12 @@
             "state" : "translated",
             "value" : "Klavye ile denetim"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tangentbordsstyrning"
+          }
         }
       }
     },
@@ -26852,6 +28622,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klavyeli iPad’de tuşlarla başlatın, durdurun ve temposu değiştirin."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På iPad med tangentbord startar, stoppar och ändrar du tempot med tangenterna."
           }
         }
       }
@@ -26942,6 +28718,12 @@
             "state" : "translated",
             "value" : "Yenilikler"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyheter"
+          }
         }
       }
     },
@@ -27030,6 +28812,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Güncellemeden sonra uygulamayı ilk açışınızda yenilikleri görün."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Efter en uppdatering ser du vad som är nytt första gången du öppnar appen."
           }
         }
       }
@@ -27120,6 +28908,12 @@
             "state" : "translated",
             "value" : "Geri bildirimlerinize yanıtlar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Svar på din feedback"
+          }
         }
       }
     },
@@ -27208,6 +29002,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geri bildirimlerinize verdiğimiz yanıtları doğrudan uygulamada okuyun."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Läs våra svar på din feedback direkt i appen."
           }
         }
       }
@@ -27298,6 +29098,12 @@
             "state" : "translated",
             "value" : "Pro hediye et"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ge bort Pro"
+          }
         }
       }
     },
@@ -27386,6 +29192,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro’yu grup arkadaşınıza veya öğrencinize hediye edin."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ge Not My Tempo Pro till en bandkompis eller en elev."
           }
         }
       }
@@ -27476,6 +29288,12 @@
             "state" : "translated",
             "value" : "Ana Ekran widget’ı"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hemskärmswidget"
+          }
         }
       }
     },
@@ -27564,6 +29382,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uygulamayı açmadan tıkı doğrudan Ana Ekran’dan başlatın."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starta klicket direkt från hemskärmen utan att öppna appen."
           }
         }
       }
@@ -27654,6 +29478,12 @@
             "state" : "translated",
             "value" : "Siri ve Kestirmeler"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri och Genvägar"
+          }
         }
       }
     },
@@ -27742,6 +29572,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tıkı kendi temponuzda başlatmak için Siri’ye söyleyin veya bir kestirme çalıştırın."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fråga Siri eller kör en genväg för att starta klicket i ditt tempo."
           }
         }
       }
@@ -27832,6 +29668,12 @@
             "state" : "translated",
             "value" : "Cihazlar arasında eşitleme"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synka mellan enheter"
+          }
         }
       }
     },
@@ -27920,6 +29762,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hazır ayarlarınız ve ayarlarınız iPhone ile iPad arasında sizi takip eder."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dina förinställningar och inställningar följer med mellan iPhone och iPad."
           }
         }
       }
@@ -28010,6 +29858,12 @@
             "state" : "translated",
             "value" : "Hazır ayarlarınızı yedekleyin"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säkerhetskopiera dina förinställningar"
+          }
         }
       }
     },
@@ -28098,6 +29952,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vurgu hazır ayarlarınızı bir dosyaya kaydedin ve istediğiniz zaman geri getirin."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara dina accentförinställningar i en fil och hämta tillbaka dem när du vill."
           }
         }
       }
@@ -28188,6 +30048,12 @@
             "state" : "translated",
             "value" : "Çalışma hatırlatıcıları"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Övningspåminnelser"
+          }
         }
       }
     },
@@ -28276,6 +30142,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Çalışmak için seçtiğiniz saatte nazik bir hatırlatma alın."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Få en vänlig påminnelse vid den tid du väljer att öva."
           }
         }
       }
@@ -28366,6 +30238,12 @@
             "state" : "translated",
             "value" : "Katlanabilir iPhone düzeni"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layout för vikbar iPhone"
+          }
         }
       }
     },
@@ -28454,6 +30332,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Katlanabilir iPhone’da vuruşu ve denetimleri yan yana görün."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På en vikbar iPhone ser du slaget och kontrollerna sida vid sida."
           }
         }
       }
@@ -28544,6 +30428,12 @@
             "state" : "translated",
             "value" : "Tüm verilerimi sil"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera all min data"
+          }
         }
       }
     },
@@ -28633,6 +30523,12 @@
             "state" : "translated",
             "value" : "İstediğiniz zaman uygulamadaki tüm hazır ayarlarınızı ve ayarlarınızı temizleyin."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rensa alla dina förinställningar och inställningar i appen när du vill."
+          }
         }
       }
     },
@@ -28720,6 +30616,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teklif kodu kullan"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lös in en erbjudandekod"
           }
         }
       }
@@ -28809,6 +30711,12 @@
             "state" : "translated",
             "value" : "Pro için kodunuz mu var? Doğrudan uygulamada, Pro ekranında veya Sesli Komutlar altında girin."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Har du en kod för Pro? Ange den direkt i appen, på Pro-skärmen eller under Röstkommandon."
+          }
         }
       }
     },
@@ -28896,6 +30804,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kontrastı Artır ile daha net"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tydligare med Öka kontrast"
           }
         }
       }
@@ -28985,6 +30899,12 @@
             "state" : "translated",
             "value" : "Kontrastı Artır veya Saydamlığı Azalt açıkken vuruşlar, kenar çizgileri ve yardım katmanı daha kalın ve opak çizilir."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Med Öka kontrast eller Minska transparens på ritas slag, konturer och hjälplagret tydligare och ogenomskinliga."
+          }
         }
       }
     },
@@ -29072,6 +30992,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "En büyük yazıya yer var"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plats för den största texten"
           }
         }
       }
@@ -29161,6 +31087,12 @@
             "state" : "translated",
             "value" : "En büyük yazı boyutlarında düğmeler ve listeler yeniden dizilir, hiçbir şey kesilmez."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vid de största textstorlekarna ordnas knappar och listor om så att inget klipps av."
+          }
         }
       }
     },
@@ -29248,6 +31180,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sürüm %@"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
           }
         }
       }
@@ -29337,6 +31275,12 @@
             "state" : "translated",
             "value" : "Devam"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortsätt"
+          }
         }
       }
     },
@@ -29424,6 +31368,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Konuştuğunuz bir metronom"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En metronom du pratar med"
           }
         }
       }
@@ -29513,6 +31463,12 @@
             "state" : "translated",
             "value" : "“start”, “stop”, “faster” veya “tempo 120” deyin, iki elinizi de enstrümanınızda tutun."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säg ”start”, ”stop”, ”faster” eller ”tempo 120” och ha båda händerna kvar på instrumentet."
+          }
         }
       }
     },
@@ -29600,6 +31556,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Komutlar İngilizce sözcüklerdir"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommandona är engelska ord"
           }
         }
       }
@@ -29689,6 +31651,12 @@
             "state" : "translated",
             "value" : "Her dilde uygulamayı kısa İngilizce sözcüklerle yönetirsiniz. Hepsini ekranda görmek için istediğiniz an “help” deyin."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På alla språk styr du appen med korta engelska ord. Säg ”help” när som helst för att se dem alla på skärmen."
+          }
         }
       }
     },
@@ -29776,6 +31744,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sesle Denetim ile çakışmaması için uygulamanın kendi mikrofonu kapalı kalır. “Tap Start” veya “Tap Faster” deyin."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appens egen mikrofon förblir av så att den inte krockar med röststyrningen. Säg ”Tap Start” eller ”Tap Faster”."
           }
         }
       }
@@ -29865,6 +31839,12 @@
             "state" : "translated",
             "value" : "Sırada: mikrofon"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Härnäst: mikrofonen"
+          }
         }
       }
     },
@@ -29952,6 +31932,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS, mikrofon ve konuşma tanıma için izin isteyecek. Bunlar yalnızca komutlarınızı duymak için kullanılır. Uygulama duyduklarını asla kaydetmez veya saklamaz."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS frågar efter mikrofon och taligenkänning. De används bara för att höra dina kommandon. Appen spelar aldrig in eller sparar det den hör."
           }
         }
       }
@@ -30041,6 +32027,12 @@
             "state" : "translated",
             "value" : "Atla"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoppa över"
+          }
         }
       }
     },
@@ -30128,6 +32120,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Başlayın"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom igång"
           }
         }
       }
@@ -30217,6 +32215,12 @@
             "state" : "translated",
             "value" : "İleri"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nästa"
+          }
         }
       }
     },
@@ -30304,6 +32308,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hazır ayar kaydedildi"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förinställning sparad"
           }
         }
       }
@@ -30393,6 +32403,12 @@
             "state" : "translated",
             "value" : "Henüz hazır ayar yok"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga förinställningar än"
+          }
         }
       }
     },
@@ -30480,6 +32496,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teklif kodu kullan"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lös in erbjudandekod"
           }
         }
       }
@@ -30569,6 +32591,12 @@
             "state" : "translated",
             "value" : "Tanıtımı yeniden göster"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visa introduktionen igen"
+          }
         }
       }
     },
@@ -30656,6 +32684,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kodu Kullan"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lös in kod"
           }
         }
       }
@@ -30745,6 +32779,12 @@
             "state" : "translated",
             "value" : "Tanıtım"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduktion"
+          }
         }
       }
     },
@@ -30832,6 +32872,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tanıtımı göster"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visa introduktionen"
           }
         }
       }
@@ -30921,6 +32967,12 @@
             "state" : "translated",
             "value" : "Teklif kodu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erbjudandekod"
+          }
         }
       }
     },
@@ -31008,6 +33060,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kodu kullan"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lös in kod"
           }
         }
       }
@@ -31097,6 +33155,12 @@
             "state" : "translated",
             "value" : "Yenilikler"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyheter"
+          }
         }
       }
     },
@@ -31184,6 +33248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tanıtımı atla"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoppa över introduktionen"
           }
         }
       }
