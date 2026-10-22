@@ -125,6 +125,12 @@
             "state" : "translated",
             "value" : "%@ per tahun"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@/năm"
+          }
         }
       }
     },
@@ -254,6 +260,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, %2$lld sen terlalu rendah"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, thấp %2$lld xu"
           }
         }
       }
@@ -385,6 +397,12 @@
             "state" : "translated",
             "value" : "%1$@, %2$lld sen terlalu tinggi"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, cao %2$lld xu"
+          }
         }
       }
     },
@@ -509,6 +527,12 @@
             "state" : "translated",
             "value" : "%@, sudah pas"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, đúng cao độ"
+          }
         }
       }
     },
@@ -631,6 +655,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -923,6 +953,12 @@
             "state" : "translated",
             "value" : "%lld ketukan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld phách"
+          }
         }
       }
     },
@@ -1085,6 +1121,12 @@
             "state" : "translated",
             "value" : "%lld ketukan per menit"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld phách mỗi phút"
+          }
         }
       }
     },
@@ -1207,6 +1249,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -1343,6 +1391,12 @@
             "state" : "translated",
             "value" : "%1$lld BPM, %2$@"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld BPM, %2$@"
+          }
         }
       }
     },
@@ -1475,6 +1529,12 @@
             "state" : "translated",
             "value" : "%1$lld sempurna, %2$lld bagus, %3$lld meleset"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld hoàn hảo, %2$lld tốt, %3$lld trượt"
+          }
         }
       }
     },
@@ -1600,6 +1660,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  ketuk titik untuk memilih jumlah ketukan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  chạm vào các chấm để chọn số phách"
           }
         }
       }
@@ -1733,6 +1799,12 @@
             "state" : "translated",
             "value" : "%1$lld/4 · %2$@"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/4 · %2$@"
+          }
         }
       }
     },
@@ -1856,6 +1928,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not 1/16"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nốt móc ba"
           }
         }
       }
@@ -1981,6 +2059,12 @@
             "state" : "translated",
             "value" : "Not 1/4"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nốt đen"
+          }
         }
       }
     },
@@ -2105,6 +2189,12 @@
             "state" : "translated",
             "value" : "Not 1/8"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nốt móc đơn"
+          }
         }
       }
     },
@@ -2225,6 +2315,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "A4 = %lld Hz"
@@ -2355,6 +2451,12 @@
             "state" : "translated",
             "value" : "Editor aksen"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trình chỉnh nhấn"
+          }
         }
       }
     },
@@ -2478,6 +2580,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Editor aksen & preset"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trình chỉnh nhấn & cài đặt sẵn"
           }
         }
       }
@@ -2605,6 +2713,12 @@
             "state" : "translated",
             "value" : "Aksen"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn phách"
+          }
         }
       }
     },
@@ -2729,6 +2843,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aksesibilitas"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trợ năng"
           }
         }
       }
@@ -2856,6 +2976,12 @@
             "state" : "translated",
             "value" : "Tambah %lld BPM"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm %lld BPM"
+          }
         }
       }
     },
@@ -2981,6 +3107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Semua perintah"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tất cả lệnh"
           }
         }
       }
@@ -3108,6 +3240,12 @@
             "state" : "translated",
             "value" : "Menerapkan pola, birama, dan subdivisi ini"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Áp dụng mẫu, nhịp và cách chia nhỏ này"
+          }
         }
       }
     },
@@ -3233,6 +3371,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kembali"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quay lại"
           }
         }
       }
@@ -3360,6 +3504,12 @@
             "state" : "translated",
             "value" : "Kembali ke metronom"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quay lại máy gõ nhịp"
+          }
         }
       }
     },
@@ -3483,6 +3633,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Meleset"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trượt"
           }
         }
       }
@@ -3609,6 +3765,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketukan %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phách %lld"
           }
         }
       }
@@ -3742,6 +3904,12 @@
             "state" : "translated",
             "value" : "Ketukan %1$lld, klik %2$lld"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phách %1$lld, tiếng gõ %2$lld"
+          }
         }
       }
     },
@@ -3873,6 +4041,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketukan %1$lld dari %2$lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phách %1$lld/%2$lld"
           }
         }
       }
@@ -4006,6 +4180,12 @@
             "state" : "translated",
             "value" : "Ketukan %1$lld dari %2$lld, %3$@"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phách %1$lld/%2$lld, %3$@"
+          }
         }
       }
     },
@@ -4138,6 +4318,12 @@
             "state" : "translated",
             "value" : "Ketukan %1$lld, klik %2$lld"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phách %1$lld, tiếng gõ %2$lld"
+          }
         }
       }
     },
@@ -4262,6 +4448,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tampilan ketukan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chế độ xem phách"
           }
         }
       }
@@ -4388,6 +4580,12 @@
             "state" : "translated",
             "value" : "Ketukan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phách"
+          }
         }
       }
     },
@@ -4512,6 +4710,12 @@
             "state" : "translated",
             "value" : "Tampilan pantul"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chế độ nảy"
+          }
         }
       }
     },
@@ -4634,6 +4838,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -4764,6 +4974,12 @@
             "state" : "translated",
             "value" : "Laporan bug dan permintaan fitur sangat diterima."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rất hoan nghênh báo lỗi và đề xuất tính năng."
+          }
         }
       }
     },
@@ -4889,6 +5105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beli seumur hidup"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mua trọn đời"
           }
         }
       }
@@ -5016,6 +5238,12 @@
             "state" : "translated",
             "value" : "Beli seumur hidup seharga %@"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mua trọn đời với giá %@"
+          }
         }
       }
     },
@@ -5141,6 +5369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Batal"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hủy"
           }
         }
       }
@@ -5268,6 +5502,12 @@
             "state" : "translated",
             "value" : "Ganti tampilan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đổi chế độ xem"
+          }
         }
       }
     },
@@ -5394,6 +5634,12 @@
             "state" : "translated",
             "value" : "Cek ketepatan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kiểm tra độ đều nhịp"
+          }
         }
       }
     },
@@ -5517,6 +5763,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tuner kromatik"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Máy lên dây bán cung"
           }
         }
       }
@@ -5643,6 +5895,12 @@
             "state" : "translated",
             "value" : "Tutup"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng"
+          }
         }
       }
     },
@@ -5766,6 +6024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "tutup panel atau tips"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "đóng bảng hoặc mẹo"
           }
         }
       }
@@ -5893,6 +6157,12 @@
             "state" : "translated",
             "value" : "Hubungi pengembang"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liên hệ nhà phát triển"
+          }
         }
       }
     },
@@ -6019,6 +6289,12 @@
             "state" : "translated",
             "value" : "Kendalikan dengan suara"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điều khiển bằng giọng nói"
+          }
         }
       }
     },
@@ -6142,6 +6418,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tidak dapat memuat harga dari App Store."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không tải được giá từ App Store."
           }
         }
       }
@@ -6269,6 +6551,12 @@
             "state" : "translated",
             "value" : "Atur aksen"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tùy chỉnh nhấn phách"
+          }
         }
       }
     },
@@ -6392,6 +6680,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Berganti antara tinggi, rendah, dan senyap"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuyển qua lại giữa cao, thấp và im lặng"
           }
         }
       }
@@ -6519,6 +6813,12 @@
             "state" : "translated",
             "value" : "Kurangi tempo"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giảm tốc độ"
+          }
         }
       }
     },
@@ -6645,6 +6945,12 @@
             "state" : "translated",
             "value" : "Hapus preset %@"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa cài đặt sẵn %@"
+          }
         }
       }
     },
@@ -6768,6 +7074,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atur setiap klik dalam birama — tinggi, rendah, atau senyap — dan simpan pola untuk tiap lagu."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thiết kế từng tiếng gõ trong ô nhịp — cao, thấp hoặc im lặng — và lưu mẫu cho từng bài hát."
           }
         }
       }
@@ -6893,6 +7205,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bantuan lengkap"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trợ giúp chi tiết"
           }
         }
       }
@@ -7020,6 +7338,12 @@
             "state" : "translated",
             "value" : "Tutup"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng"
+          }
         }
       }
     },
@@ -7146,6 +7470,12 @@
             "state" : "translated",
             "value" : "Tutup bantuan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng trợ giúp"
+          }
         }
       }
     },
@@ -7271,6 +7601,12 @@
             "state" : "translated",
             "value" : "Selesai"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xong"
+          }
         }
       }
     },
@@ -7394,6 +7730,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ganda ×2"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gấp đôi ×2"
           }
         }
       }
@@ -7521,6 +7863,12 @@
             "state" : "translated",
             "value" : "Ketuk dua kali di sini untuk membuka kisi aksen: atur setiap klik dalam birama menjadi tinggi, rendah, atau senyap, lalu simpan pola sebagai preset."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm hai lần để mở lưới nhấn phách: đặt từng tiếng gõ trong ô nhịp là cao, thấp hoặc im lặng, rồi lưu mẫu thành cài đặt sẵn."
+          }
         }
       }
     },
@@ -7644,6 +7992,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketuk dua kali kartu subdivisi untuk mengedit seluruh birama: tiap sel berganti tinggi → rendah → senyap, dan pola dapat disimpan sebagai preset bernama."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm hai lần vào thẻ chia nhỏ để chỉnh cả ô nhịp: mỗi ô chuyển qua cao → thấp → im lặng, và có thể lưu mẫu thành cài đặt sẵn có tên."
           }
         }
       }
@@ -7769,6 +8123,12 @@
             "state" : "translated",
             "value" : "Ketuk dua kali untuk membuka aksen"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm hai lần để mở nhấn phách"
+          }
         }
       }
     },
@@ -7893,6 +8253,12 @@
             "state" : "translated",
             "value" : "Turun −1"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xuống −1"
+          }
         }
       }
     },
@@ -8016,6 +8382,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geser penggeser tempo, atau ketuk tombol − / +."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kéo thanh trượt tốc độ hoặc chạm các nút − / +."
           }
         }
       }
@@ -8143,6 +8515,12 @@
             "state" : "translated",
             "value" : "Edit aksen"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sửa nhấn phách"
+          }
         }
       }
     },
@@ -8266,6 +8644,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not 1/8"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nốt móc đơn"
           }
         }
       }
@@ -8391,6 +8775,12 @@
             "state" : "translated",
             "value" : "Seperdelapan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Móc đơn"
+          }
         }
       }
     },
@@ -8513,6 +8903,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Email"
@@ -8642,6 +9038,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kirim email ke pengembang"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gửi email cho nhà phát triển"
           }
         }
       }
@@ -8841,6 +9243,12 @@
             "state" : "translated",
             "value" : "Setiap %lld birama"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mỗi %lld ô nhịp"
+          }
         }
       }
     },
@@ -8964,6 +9372,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Setiap klik dalam birama punya selnya sendiri — total %lld klik. Ketuk sel untuk menggantinya: tinggi → rendah → senyap."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mỗi tiếng gõ trong ô nhịp là một ô riêng — tổng cộng %lld tiếng. Chạm vào ô để đổi: cao → thấp → im lặng."
           }
         }
       }
@@ -9091,6 +9505,12 @@
             "state" : "translated",
             "value" : "Semua ini juga bisa dengan suara — lihat perintah di bawah."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mọi thứ ở đây đều dùng được bằng giọng nói — xem các lệnh bên dưới."
+          }
         }
       }
     },
@@ -9217,6 +9637,12 @@
             "state" : "translated",
             "value" : "Lebih cepat"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhanh hơn"
+          }
         }
       }
     },
@@ -9340,6 +9766,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lebih cepat +5"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhanh hơn +5"
           }
         }
       }
@@ -9467,6 +9899,12 @@
             "state" : "translated",
             "value" : "Lupa perintah?"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quên lệnh?"
+          }
         }
       }
     },
@@ -9593,6 +10031,12 @@
             "state" : "translated",
             "value" : "Gratis selamanya, tanpa perlu membuka kunci:"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miễn phí mãi mãi, không cần mở khóa:"
+          }
         }
       }
     },
@@ -9716,6 +10160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uji coba gratis"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng thử miễn phí"
           }
         }
       }
@@ -9841,6 +10291,12 @@
             "state" : "translated",
             "value" : "Bagus"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tốt"
+          }
         }
       }
     },
@@ -9965,6 +10421,12 @@
             "state" : "translated",
             "value" : "Setengah ÷2"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một nửa ÷2"
+          }
         }
       }
     },
@@ -10088,6 +10550,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terdengar: %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã nghe: %@"
           }
         }
       }
@@ -10215,6 +10683,12 @@
             "state" : "translated",
             "value" : "Bantuan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trợ giúp"
+          }
         }
       }
     },
@@ -10340,6 +10814,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navigasi bantuan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điều hướng trợ giúp"
           }
         }
       }
@@ -10467,6 +10947,12 @@
             "state" : "translated",
             "value" : "Nada tinggi"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Âm cao"
+          }
         }
       }
     },
@@ -10593,6 +11079,12 @@
             "state" : "translated",
             "value" : "Saya memakai Kontrol Suara iOS"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tôi dùng Điều khiển bằng giọng nói của iOS"
+          }
         }
       }
     },
@@ -10716,6 +11208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Di tampilan orbit, ketuk cincin saat bermain — setiap klik (termasuk subdivisi) adalah target. Titik yang bergerak meninggalkan jejak di tempat ketukanmu mendarat, dan penghitung berwarna menghitung Sempurna / Bagus / Meleset sampai kamu berhenti."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ở chế độ quỹ đạo, hãy chạm vào vòng khi đang chơi — mỗi tiếng gõ (kể cả phần chia nhỏ) là một mục tiêu. Chấm di chuyển để lại dấu ở nơi bạn chạm, và các bộ đếm màu cộng dồn Hoàn hảo / Tốt / Trượt cho đến khi bạn dừng."
           }
         }
       }
@@ -10843,6 +11341,12 @@
             "state" : "translated",
             "value" : "Naikkan tempo"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tăng tốc độ"
+          }
         }
       }
     },
@@ -10965,6 +11469,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -11095,6 +11605,12 @@
             "state" : "translated",
             "value" : "DM Instagram"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tin nhắn Instagram"
+          }
         }
       }
     },
@@ -11220,6 +11736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "DM Instagram (@lee25_ios)"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tin nhắn Instagram (@lee25_ios)"
           }
         }
       }
@@ -11347,6 +11869,12 @@
             "state" : "translated",
             "value" : "Sinyal instrumen"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tín hiệu nhạc cụ"
+          }
         }
       }
     },
@@ -11473,6 +12001,12 @@
             "state" : "translated",
             "value" : "termasuk dalam Pro — tiga alat latihan, sekali buka."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nằm trong Pro — ba công cụ luyện tập, mở khóa một lần."
+          }
         }
       }
     },
@@ -11595,6 +12129,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Largo? Moderato?"
@@ -11725,6 +12265,12 @@
             "state" : "translated",
             "value" : "Seumur hidup"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trọn đời"
+          }
         }
       }
     },
@@ -11848,6 +12394,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seumur hidup — %@ sekali bayar"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trọn đời — %@ một lần"
           }
         }
       }
@@ -11973,6 +12525,12 @@
             "state" : "translated",
             "value" : "tampilkan perintah yang bisa diucapkan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "liệt kê các lệnh có thể nói"
+          }
         }
       }
     },
@@ -12097,6 +12655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dengarkan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe"
           }
         }
       }
@@ -12224,6 +12788,12 @@
             "state" : "translated",
             "value" : "Dengarkan suara"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghe giọng nói"
+          }
         }
       }
     },
@@ -12349,6 +12919,12 @@
             "state" : "translated",
             "value" : "Mendengarkan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang nghe"
+          }
         }
       }
     },
@@ -12472,6 +13048,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mendengarkan…"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang nghe…"
           }
         }
       }
@@ -12599,6 +13181,12 @@
             "state" : "translated",
             "value" : "Mendengarkan… tahan setiap not"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang nghe… hãy giữ từng nốt"
+          }
         }
       }
     },
@@ -12724,6 +13312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Memuat harga…"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang tải giá…"
           }
         }
       }
@@ -12851,6 +13445,12 @@
             "state" : "translated",
             "value" : "Nada rendah"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Âm thấp"
+          }
         }
       }
     },
@@ -12976,6 +13576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dibuat untuk Kontrol Suara"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dành cho Điều khiển bằng giọng nói"
           }
         }
       }
@@ -13103,6 +13709,12 @@
             "state" : "translated",
             "value" : "Mode metronom"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chế độ máy gõ nhịp"
+          }
         }
       }
     },
@@ -13226,6 +13838,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon/ucapan diblokir — aktifkan di Pengaturan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Micrô/giọng nói bị chặn — bật trong Cài đặt"
           }
         }
       }
@@ -13353,6 +13971,12 @@
             "state" : "translated",
             "value" : "Kurang"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trừ"
+          }
         }
       }
     },
@@ -13478,6 +14102,12 @@
             "state" : "translated",
             "value" : "Lainnya"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm"
+          }
         }
       }
     },
@@ -13601,6 +14231,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "gulir daftar ini"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "cuộn danh sách này"
           }
         }
       }
@@ -13726,6 +14362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bisukan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tắt tiếng"
           }
         }
       }
@@ -13853,6 +14495,12 @@
             "state" : "translated",
             "value" : "Bisukan kontrol suara"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tắt tiếng điều khiển giọng nói"
+          }
         }
       }
     },
@@ -13978,6 +14626,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nama (mis. Intro bossa)"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tên (ví dụ: Intro bossa)"
           }
         }
       }
@@ -14105,6 +14759,12 @@
             "state" : "translated",
             "value" : "Memerlukan mikrofon aplikasi ini — matikan “Saya memakai Kontrol Suara iOS” untuk menggunakannya."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cần micrô của ứng dụng này — hãy tắt “Tôi dùng Điều khiển bằng giọng nói của iOS” để dùng."
+          }
         }
       }
     },
@@ -14228,6 +14888,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not tidak terdeteksi, mainkan sebuah not"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không phát hiện nốt nào, hãy chơi một nốt"
           }
         }
       }
@@ -14353,6 +15019,12 @@
             "state" : "translated",
             "value" : "Tidak ditemukan pembelian sebelumnya."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không tìm thấy giao dịch mua trước đó."
+          }
         }
       }
     },
@@ -14473,6 +15145,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -14603,6 +15281,12 @@
             "state" : "translated",
             "value" : "Nanti saja"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Để sau"
+          }
         }
       }
     },
@@ -14729,6 +15413,12 @@
             "state" : "translated",
             "value" : "Not"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nốt"
+          }
         }
       }
     },
@@ -14853,6 +15543,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nốt"
           }
         }
       }
@@ -14980,6 +15676,12 @@
             "state" : "translated",
             "value" : "Di layar"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên màn hình"
+          }
         }
       }
     },
@@ -15104,6 +15806,12 @@
             "state" : "translated",
             "value" : "Buka"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở"
+          }
         }
       }
     },
@@ -15227,6 +15935,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Buka editor aksen"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở trình chỉnh nhấn"
           }
         }
       }
@@ -15354,6 +16068,12 @@
             "state" : "translated",
             "value" : "Buka aksen"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở nhấn phách"
+          }
         }
       }
     },
@@ -15477,6 +16197,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Buka dari tampilan ketukan di bawah, atau ucapkan “practice”."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở từ chế độ xem phách bên dưới, hoặc nói “practice”."
           }
         }
       }
@@ -15604,6 +16330,12 @@
             "state" : "translated",
             "value" : "Buka latihan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở luyện tập"
+          }
         }
       }
     },
@@ -15730,6 +16462,12 @@
             "state" : "translated",
             "value" : "Buka mode latihan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở chế độ luyện tập"
+          }
         }
       }
     },
@@ -15853,6 +16591,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "buka mode latihan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mở chế độ luyện tập"
           }
         }
       }
@@ -15978,6 +16722,12 @@
             "state" : "translated",
             "value" : "buka tuner"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mở máy lên dây"
+          }
         }
       }
     },
@@ -16101,6 +16851,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tampilan orbit"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chế độ quỹ đạo"
           }
         }
       }
@@ -16228,6 +16984,12 @@
             "state" : "translated",
             "value" : "Jeda"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tạm dừng"
+          }
         }
       }
     },
@@ -16354,6 +17116,12 @@
             "state" : "translated",
             "value" : "Bayar sekali, jadi milikmu selamanya"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trả một lần, dùng mãi mãi"
+          }
         }
       }
     },
@@ -16477,6 +17245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sempurna!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoàn hảo!"
           }
         }
       }
@@ -16603,6 +17377,12 @@
             "state" : "translated",
             "value" : "Putar"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phát"
+          }
         }
       }
     },
@@ -16726,6 +17506,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "putar / jeda"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "phát / tạm dừng"
           }
         }
       }
@@ -16851,6 +17637,12 @@
             "state" : "translated",
             "value" : "Mainkan 2–5 not, masing-masing sekitar setengah detik."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chơi 2–5 nốt, mỗi nốt khoảng nửa giây."
+          }
         }
       }
     },
@@ -16974,6 +17766,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mainkan sebuah not…"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy chơi một nốt…"
           }
         }
       }
@@ -17101,6 +17899,12 @@
             "state" : "translated",
             "value" : "Mainkan frasemu untuk memulai atau menghentikan klik, bahkan di tengah lagu. Tahan tiap not sekitar setengah detik agar not-not cepat dalam permainanmu tidak memicunya. Berfungsi saat Dengarkan aktif."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chơi câu nhạc của bạn để bắt đầu hoặc dừng tiếng gõ, ngay cả giữa bài. Hãy giữ mỗi nốt khoảng nửa giây để những nốt nhanh khi bạn chơi không vô tình kích hoạt. Hoạt động khi chế độ Nghe đang bật."
+          }
         }
       }
     },
@@ -17226,6 +18030,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pemutaran"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phát lại"
           }
         }
       }
@@ -17353,6 +18163,12 @@
             "state" : "translated",
             "value" : "Tambah"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cộng"
+          }
         }
       }
     },
@@ -17477,6 +18293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Latihan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luyện tập"
           }
         }
       }
@@ -17603,6 +18425,12 @@
             "state" : "translated",
             "value" : "Mode latihan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chế độ luyện tập"
+          }
         }
       }
     },
@@ -17726,6 +18554,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mode latihan · editor aksen & preset · tuner"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chế độ luyện tập · trình chỉnh nhấn & cài đặt sẵn · máy lên dây"
           }
         }
       }
@@ -17853,6 +18687,12 @@
             "state" : "translated",
             "value" : "Preset %@"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt sẵn %@"
+          }
         }
       }
     },
@@ -17978,6 +18818,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preset"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt sẵn"
           }
         }
       }
@@ -18105,6 +18951,12 @@
             "state" : "translated",
             "value" : "Kebijakan Privasi"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chính sách quyền riêng tư"
+          }
         }
       }
     },
@@ -18229,6 +19081,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/id/privacy.html"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/vi/privacy.html"
+          }
         }
       }
     },
@@ -18349,6 +19207,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -18479,6 +19343,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -18602,6 +19472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro terbuka — terima kasih!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã mở khóa Pro — cảm ơn bạn!"
           }
         }
       }
@@ -18727,6 +19603,12 @@
             "state" : "translated",
             "value" : "Not 1/4"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nốt đen"
+          }
         }
       }
     },
@@ -18851,6 +19733,12 @@
             "state" : "translated",
             "value" : "Seperempat"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nốt đen"
+          }
         }
       }
     },
@@ -18974,6 +19862,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naikkan tempo otomatis setiap beberapa birama — percepat satu bagian tanpa melepas instrumen."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tự tăng tốc độ sau mỗi vài ô nhịp — đẩy nhanh một đoạn nhạc mà không cần rời tay khỏi nhạc cụ."
           }
         }
       }
@@ -19101,6 +19995,12 @@
             "state" : "translated",
             "value" : "Menaikkan tempo otomatis setiap beberapa birama saat kamu bermain — untuk mempercepat satu bagian secara bertahap. Berhenti di tempo target. Ucapkan “practice” kapan saja untuk membukanya."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tự tăng tốc độ sau mỗi vài ô nhịp khi bạn chơi — để đẩy nhanh dần một đoạn nhạc. Dừng khi đạt mục tiêu. Hãy nói “practice” bất cứ lúc nào để mở."
+          }
         }
       }
     },
@@ -19226,6 +20126,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rekam frase pendek terlebih dahulu."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy ghi âm một câu nhạc ngắn trước."
           }
         }
       }
@@ -19353,6 +20259,12 @@
             "state" : "translated",
             "value" : "Rekam ulang"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghi âm lại"
+          }
         }
       }
     },
@@ -19479,6 +20391,12 @@
             "state" : "translated",
             "value" : "Rekam sinyal"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghi tín hiệu"
+          }
         }
       }
     },
@@ -19602,6 +20520,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nada acuan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cao độ chuẩn"
           }
         }
       }
@@ -19729,6 +20653,12 @@
             "state" : "translated",
             "value" : "Memerlukan Pro"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cần Pro"
+          }
         }
       }
     },
@@ -19854,6 +20784,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atur ulang"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đặt lại"
           }
         }
       }
@@ -19981,6 +20917,12 @@
             "state" : "translated",
             "value" : "Pulihkan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khôi phục"
+          }
         }
       }
     },
@@ -20106,6 +21048,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pulihkan pembelian"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khôi phục giao dịch mua"
           }
         }
       }
@@ -20233,6 +21181,12 @@
             "state" : "translated",
             "value" : "Pulihkan Pembelian"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khôi phục giao dịch mua"
+          }
         }
       }
     },
@@ -20358,6 +21312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Memulihkan pembelian Pro sebelumnya"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khôi phục giao dịch mua Pro trước đó"
           }
         }
       }
@@ -20485,6 +21445,12 @@
             "state" : "translated",
             "value" : "Mengembalikan pola bawaan untuk birama ini"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khôi phục mẫu mặc định cho nhịp này"
+          }
         }
       }
     },
@@ -20610,6 +21576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Simpan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu"
           }
         }
       }
@@ -20737,6 +21709,12 @@
             "state" : "translated",
             "value" : "Simpan satu pola untuk tiap lagu — saat dipanggil, birama dan subdivisinya ikut kembali."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu một mẫu cho mỗi bài hát — khi gọi lại, nhịp và cách chia nhỏ cũng được khôi phục."
+          }
         }
       }
     },
@@ -20862,6 +21840,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Simpan pola saat ini…"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu mẫu hiện tại…"
           }
         }
       }
@@ -20989,6 +21973,12 @@
             "state" : "translated",
             "value" : "Simpan pola"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu mẫu"
+          }
         }
       }
     },
@@ -21114,6 +22104,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Simpan preset"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu cài đặt sẵn"
           }
         }
       }
@@ -21241,6 +22237,12 @@
             "state" : "translated",
             "value" : "Menyimpan pola ini beserta birama dan subdivisinya, sehingga bisa dipanggil untuk tiap lagu."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu mẫu này cùng nhịp và cách chia nhỏ, để bạn gọi lại cho từng bài hát."
+          }
         }
       }
     },
@@ -21366,6 +22368,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ucapkan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nói"
           }
         }
       }
@@ -21493,6 +22501,12 @@
             "state" : "translated",
             "value" : "Ucapkan “close” untuk keluar"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “close” để thoát"
+          }
         }
       }
     },
@@ -21616,6 +22630,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ucapkan “start”, “faster”, atau “help”"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “start”, “faster” hoặc “help”"
           }
         }
       }
@@ -21742,6 +22762,12 @@
             "state" : "translated",
             "value" : "Ucapkan perintah"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy nói một lệnh"
+          }
         }
       }
     },
@@ -21865,6 +22891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ucapkan “close” / “done”, atau ketuk Selesai."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “close” / “done”, hoặc chạm Xong."
           }
         }
       }
@@ -21992,6 +23024,12 @@
             "state" : "translated",
             "value" : "Ucapkan “close” atau ketuk untuk menutup"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “close” hoặc chạm để đóng"
+          }
         }
       }
     },
@@ -22118,6 +23156,12 @@
             "state" : "translated",
             "value" : "Ucapkan “help” kapan saja — atau ketuk di sini — untuk melihat semua perintah yang bisa diucapkan, lalu “close” untuk menutup."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “help” bất cứ lúc nào — hoặc chạm vào đây — để xem mọi lệnh có thể nói, rồi nói “close” để đóng."
+          }
         }
       }
     },
@@ -22242,6 +23286,12 @@
             "state" : "translated",
             "value" : "Ucapkan “help” atau ketuk tombol ?."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “help” hoặc chạm nút ?."
+          }
         }
       }
     },
@@ -22365,6 +23415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ucapkan “louder” / “quieter” / “mute”, atau “volume 60”."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “louder” / “quieter” / “mute”, hoặc “volume 60”."
           }
         }
       }
@@ -22492,6 +23548,12 @@
             "state" : "translated",
             "value" : "Ucapkan “practice” untuk menaikkan tempo otomatis setiap beberapa birama saat bermain — cocok untuk latihan kecepatan."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “practice” để tự tăng tốc độ sau mỗi vài ô nhịp khi bạn chơi — rất hợp để luyện tốc độ."
+          }
         }
       }
     },
@@ -22616,6 +23678,12 @@
             "state" : "translated",
             "value" : "Ucapkan “scroll down” / “scroll up”, atau gesek."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “scroll down” / “scroll up”, hoặc vuốt."
+          }
         }
       }
     },
@@ -22739,6 +23807,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ucapkan “tune” lalu bermain — not, sen, dan zona nada pas."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “tune” rồi chơi — hiển thị nốt, xu và vùng đúng cao độ."
           }
         }
       }
@@ -22866,6 +23940,12 @@
             "state" : "translated",
             "value" : "Ucapkan “tune” untuk membuka tuner kromatik, dan “close” setelah selesai."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “tune” để mở máy lên dây bán cung và “close” khi xong."
+          }
         }
       }
     },
@@ -22989,6 +24069,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gulir"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuộn"
           }
         }
       }
@@ -23114,6 +24200,12 @@
             "state" : "translated",
             "value" : "Gulir ke bawah"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuộn xuống"
+          }
         }
       }
     },
@@ -23237,6 +24329,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gulir ke atas"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuộn lên"
           }
         }
       }
@@ -23364,6 +24462,12 @@
             "state" : "translated",
             "value" : "Menggulir"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuộn"
+          }
         }
       }
     },
@@ -23487,6 +24591,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atur ketukan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đặt số phách"
           }
         }
       }
@@ -23612,6 +24722,12 @@
             "state" : "translated",
             "value" : "atur persen"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "đặt phần trăm"
+          }
         }
       }
     },
@@ -23736,6 +24852,12 @@
             "state" : "translated",
             "value" : "atur birama"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "đặt nhịp"
+          }
         }
       }
     },
@@ -23859,6 +24981,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "atur nilai"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "đặt giá trị"
           }
         }
       }
@@ -23986,6 +25114,12 @@
             "state" : "translated",
             "value" : "Mengatur birama %lld/4"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đặt nhịp %lld/4"
+          }
         }
       }
     },
@@ -24112,6 +25246,12 @@
             "state" : "translated",
             "value" : "Sinyal: %@"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tín hiệu: %@"
+          }
         }
       }
     },
@@ -24235,6 +25375,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "bisukan klik"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tắt tiếng gõ"
           }
         }
       }
@@ -24362,6 +25508,12 @@
             "state" : "translated",
             "value" : "Senyap"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im lặng"
+          }
         }
       }
     },
@@ -24486,6 +25638,12 @@
             "state" : "translated",
             "value" : "Not 1/16"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nốt móc ba"
+          }
         }
       }
     },
@@ -24609,6 +25767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seperenambelas"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Móc ba"
           }
         }
       }
@@ -24736,6 +25900,12 @@
             "state" : "translated",
             "value" : "Lebih lambat"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chậm hơn"
+          }
         }
       }
     },
@@ -24860,6 +26030,12 @@
             "state" : "translated",
             "value" : "Lebih lambat −5"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chậm hơn −5"
+          }
         }
       }
     },
@@ -24983,6 +26159,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pengenalan ucapan tidak tersedia di sini"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có nhận dạng giọng nói ở đây"
           }
         }
       }
@@ -25109,6 +26291,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pelatih kecepatan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huấn luyện tốc độ"
           }
         }
       }
@@ -25240,6 +26428,12 @@
             "state" : "translated",
             "value" : "Pelatih kecepatan · +%1$lld tiap %2$lld birama → %3$lld"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huấn luyện tốc độ · +%1$lld mỗi %2$lld ô nhịp → %3$lld"
+          }
         }
       }
     },
@@ -25364,6 +26558,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mulai"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu"
           }
         }
       }
@@ -25491,6 +26691,12 @@
             "state" : "translated",
             "value" : "Mulai / berhenti dengan instrumenku"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu / dừng bằng nhạc cụ của tôi"
+          }
         }
       }
     },
@@ -25616,6 +26822,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mulai mendengarkan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu nghe"
           }
         }
       }
@@ -25743,6 +26955,12 @@
             "state" : "translated",
             "value" : "Mulai metronom"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bật máy gõ nhịp"
+          }
         }
       }
     },
@@ -25867,6 +27085,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Berhenti"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dừng"
           }
         }
       }
@@ -25994,6 +27218,12 @@
             "state" : "translated",
             "value" : "Berhenti mendengarkan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ngừng nghe"
+          }
         }
       }
     },
@@ -26120,6 +27350,12 @@
             "state" : "translated",
             "value" : "Hentikan metronom"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dừng máy gõ nhịp"
+          }
         }
       }
     },
@@ -26244,6 +27480,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Subdivisi"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chia nhỏ"
           }
         }
       }
@@ -26371,6 +27613,12 @@
             "state" : "translated",
             "value" : "Berlangganan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng ký"
+          }
         }
       }
     },
@@ -26497,6 +27745,12 @@
             "state" : "translated",
             "value" : "Berlangganan tahunan seharga %@"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng ký theo năm với giá %@"
+          }
         }
       }
     },
@@ -26620,6 +27874,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dukungan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hỗ trợ"
           }
         }
       }
@@ -26745,6 +28005,12 @@
             "state" : "translated",
             "value" : "Beralih ke tampilan pantul"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuyển sang chế độ nảy"
+          }
         }
       }
     },
@@ -26868,6 +28134,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beralih ke tampilan orbit"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuyển sang chế độ quỹ đạo"
           }
         }
       }
@@ -26995,6 +28267,12 @@
             "state" : "translated",
             "value" : "Beralih ke tampilan cincin"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuyển sang chế độ vòng"
+          }
         }
       }
     },
@@ -27121,6 +28399,12 @@
             "state" : "translated",
             "value" : "Ganti tampilan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đổi chế độ xem"
+          }
         }
       }
     },
@@ -27245,6 +28529,12 @@
             "state" : "translated",
             "value" : "ganti visualisasi"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "đổi hiển thị"
+          }
         }
       }
     },
@@ -27368,6 +28658,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketuk 1/4, 1/8, triol, atau 1/16. Ketuk dua kali kartu untuk membuka aksen dan atur tiap klik dalam birama menjadi tinggi, rendah, atau senyap."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm 1/4, 1/8, nhịp ba hoặc 1/16. Chạm hai lần vào thẻ để mở nhấn phách và đặt từng tiếng gõ trong ô nhịp là cao, thấp hoặc im lặng."
           }
         }
       }
@@ -27495,6 +28791,12 @@
             "state" : "translated",
             "value" : "Ketuk mengikuti irama untuk mengecek ketepatanmu"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm theo nhịp để kiểm tra độ đều nhịp của bạn"
+          }
         }
       }
     },
@@ -27618,6 +28920,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketuk Dengarkan untuk mengontrol dengan suara"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm Nghe để điều khiển bằng giọng nói"
           }
         }
       }
@@ -27743,6 +29051,12 @@
             "state" : "translated",
             "value" : "Ketuk Dengarkan untuk menyalakan atau mematikan kontrol suara."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm Nghe để bật hoặc tắt điều khiển giọng nói."
+          }
         }
       }
     },
@@ -27866,6 +29180,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketuk Mulai / Berhenti di bagian bawah."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm Bắt đầu / Dừng ở phía dưới."
           }
         }
       }
@@ -27993,6 +29313,12 @@
             "state" : "translated",
             "value" : "Ketuk tempo"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm để lấy nhịp"
+          }
         }
       }
     },
@@ -28116,6 +29442,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketuk angka BPM besar mengikuti irama untuk mengatur tempo."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm theo nhịp vào số BPM lớn để đặt tốc độ."
           }
         }
       }
@@ -28241,6 +29573,12 @@
             "state" : "translated",
             "value" : "Ketuk titik untuk memilih birama."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm vào các chấm để chọn nhịp."
+          }
         }
       }
     },
@@ -28364,6 +29702,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketuk ikon tampilan (kanan atas kartu ketukan): pantul → orbit → cincin."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm biểu tượng chế độ xem (góc trên bên phải thẻ phách): nảy → quỹ đạo → vòng."
           }
         }
       }
@@ -28491,6 +29835,12 @@
             "state" : "translated",
             "value" : "Ketuk untuk beralih antara bola memantul dan cincin orbit — atau ucapkan “bounce” / “orbit”."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm để chuyển giữa quả bóng nảy và vòng quỹ đạo — hoặc nói “bounce” / “orbit”."
+          }
         }
       }
     },
@@ -28617,6 +29967,12 @@
             "state" : "translated",
             "value" : "Ketuk untuk beralih antara nama tempo dan BPM"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm để chuyển giữa tên tốc độ và BPM"
+          }
         }
       }
     },
@@ -28742,6 +30098,12 @@
             "state" : "translated",
             "value" : "Tempo"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tốc độ"
+          }
         }
       }
     },
@@ -28865,6 +30227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo %lld"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tốc độ %lld"
           }
         }
       }
@@ -28992,6 +30360,12 @@
             "state" : "translated",
             "value" : "Penggeser tempo"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thanh trượt tốc độ"
+          }
         }
       }
     },
@@ -29117,6 +30491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketentuan Penggunaan (EULA)"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điều khoản sử dụng (EULA)"
           }
         }
       }
@@ -29244,6 +30624,12 @@
             "state" : "translated",
             "value" : "Itu tempomu dalam istilah klasik. Ketuk untuk beralih ke angka BPM dan kembali."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đó là tốc độ của bạn theo thuật ngữ cổ điển. Chạm để chuyển sang số BPM và quay lại."
+          }
         }
       }
     },
@@ -29369,6 +30755,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon aplikasi dimatikan agar tidak bentrok dengan Kontrol Suara. Ucapkan “Tap Start”, “Tap Faster”, atau “Tap 3 beats”."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Micrô của ứng dụng đang tắt để không xung đột với Điều khiển bằng giọng nói. Hãy nói “Tap Start”, “Tap Faster” hoặc “Tap 3 beats”."
           }
         }
       }
@@ -29496,6 +30888,12 @@
             "state" : "translated",
             "value" : "Metronom lengkap — semua tempo, birama, dan subdivisi, ketiga tampilan ketukan, ketuk tempo, cek ketepatan, dan kontrol suara bebas tangan secara penuh."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Máy gõ nhịp đầy đủ — mọi tốc độ, nhịp và cách chia nhỏ, cả ba chế độ xem phách, lấy nhịp bằng chạm, kiểm tra độ đều nhịp và điều khiển giọng nói rảnh tay hoàn chỉnh."
+          }
         }
       }
     },
@@ -29621,6 +31019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon sudah mendengarkan — ucapkan “start”, “faster”, atau “help”. Memakai Kontrol Suara iOS? Buka Perintah Suara untuk beralih."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Micrô đang nghe — hãy nói “start”, “faster” hoặc “help”. Bạn dùng Điều khiển bằng giọng nói của iOS? Mở Lệnh giọng nói để chuyển."
           }
         }
       }
@@ -29748,6 +31152,12 @@
             "state" : "translated",
             "value" : "Paket tahunan diperpanjang otomatis seharga %@/tahun kecuali dibatalkan paling lambat 24 jam sebelum perpanjangan di Pengaturan > Akun Apple > Langganan. Seumur hidup adalah sekali bayar."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gói năm tự động gia hạn với giá %@/năm trừ khi bạn hủy ít nhất 24 giờ trước khi gia hạn trong Cài đặt > Tài khoản Apple > Đăng ký. Gói trọn đời chỉ thanh toán một lần."
+          }
         }
       }
     },
@@ -29874,6 +31284,12 @@
             "state" : "translated",
             "value" : "Ada tuner juga"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Còn có cả máy lên dây"
+          }
         }
       }
     },
@@ -29997,6 +31413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cek ketepatan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kiểm tra độ đều nhịp"
           }
         }
       }
@@ -30124,6 +31546,12 @@
             "state" : "translated",
             "value" : "Tips"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mẹo"
+          }
         }
       }
     },
@@ -30250,6 +31678,12 @@
             "state" : "translated",
             "value" : "Pelatih"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huấn luyện"
+          }
         }
       }
     },
@@ -30374,6 +31808,12 @@
             "state" : "translated",
             "value" : "Triol"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhịp ba"
+          }
         }
       }
     },
@@ -30497,6 +31937,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "triol"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nhịp ba"
           }
         }
       }
@@ -30623,6 +32069,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coba lagi"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thử lại"
           }
         }
       }
@@ -30856,6 +32308,12 @@
             "state" : "translated",
             "value" : "Coba gratis %lld hari"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng thử miễn phí %lld ngày"
+          }
         }
       }
     },
@@ -31075,6 +32533,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coba gratis %lld bulan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng thử miễn phí %lld tháng"
           }
         }
       }
@@ -31308,6 +32772,12 @@
             "state" : "translated",
             "value" : "Coba gratis %lld minggu"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng thử miễn phí %lld tuần"
+          }
         }
       }
     },
@@ -31431,6 +32901,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coba gratis sebulan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng thử miễn phí một tháng"
           }
         }
       }
@@ -31556,6 +33032,12 @@
             "state" : "translated",
             "value" : "Coba gratis seminggu"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng thử miễn phí một tuần"
+          }
         }
       }
     },
@@ -31679,6 +33161,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coba gratis setahun"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng thử miễn phí một năm"
           }
         }
       }
@@ -31804,6 +33292,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tuner"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Máy lên dây"
           }
         }
       }
@@ -31931,6 +33425,12 @@
             "state" : "translated",
             "value" : "Mematikan mikrofon aplikasi dan mengendalikan tombol lewat nama"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tắt micrô của ứng dụng và điều khiển các nút theo tên"
+          }
         }
       }
     },
@@ -32054,6 +33554,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mematikan mikrofon aplikasi ini agar keduanya tidak bentrok. Kendalikan dengan mengucapkan “Tap Start”, “Tap Faster”, “Tap 3 beats”."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tắt micrô của ứng dụng này để hai bên không xung đột. Điều khiển bằng cách nói “Tap Start”, “Tap Faster”, “Tap 3 beats”."
           }
         }
       }
@@ -32181,6 +33687,12 @@
             "state" : "translated",
             "value" : "Dua tampilan ketukan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai chế độ xem phách"
+          }
         }
       }
     },
@@ -32305,6 +33817,12 @@
             "state" : "translated",
             "value" : "Buka Pro"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở khóa Pro"
+          }
         }
       }
     },
@@ -32428,6 +33946,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naik +1"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lên +1"
           }
         }
       }
@@ -32555,6 +34079,12 @@
             "state" : "translated",
             "value" : "Hingga %lld BPM"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tối đa %lld BPM"
+          }
         }
       }
     },
@@ -32678,6 +34208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tingkatkan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nâng cấp"
           }
         }
       }
@@ -32804,6 +34340,12 @@
             "state" : "translated",
             "value" : "Tampilan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chế độ xem"
+          }
         }
       }
     },
@@ -32927,6 +34469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Suara"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giọng nói"
           }
         }
       }
@@ -33054,6 +34602,12 @@
             "state" : "translated",
             "value" : "Perintah suara"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lệnh giọng nói"
+          }
         }
       }
     },
@@ -33178,6 +34732,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perintah Suara"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lệnh giọng nói"
           }
         }
       }
@@ -33304,6 +34864,12 @@
             "state" : "translated",
             "value" : "Kontrol suara mati"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã tắt điều khiển giọng nói"
+          }
         }
       }
     },
@@ -33429,6 +34995,12 @@
             "state" : "translated",
             "value" : "Volume"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Âm lượng"
+          }
         }
       }
     },
@@ -33552,6 +35124,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volume %lld%%"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Âm lượng %lld%%"
           }
         }
       }
@@ -33677,6 +35255,12 @@
             "state" : "translated",
             "value" : "Kecilkan volume"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giảm âm lượng"
+          }
         }
       }
     },
@@ -33800,6 +35384,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Besarkan volume"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tăng âm lượng"
           }
         }
       }
@@ -33927,6 +35517,12 @@
             "state" : "translated",
             "value" : "Tahunan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Theo năm"
+          }
         }
       }
     },
@@ -34051,6 +35647,12 @@
             "state" : "translated",
             "value" : "Tahunan — %@"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Theo năm — %@"
+          }
         }
       }
     },
@@ -34171,6 +35773,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -34299,6 +35907,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -34419,6 +36033,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -34547,6 +36167,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -34670,6 +36296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ Berhenti"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ Dừng"
           }
         }
       }
@@ -34795,6 +36427,12 @@
             "state" : "translated",
             "value" : "▶ Mulai"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ Bắt đầu"
+          }
         }
       }
     },
@@ -34918,6 +36556,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hẹn giờ"
           }
         }
       }
@@ -35043,6 +36687,12 @@
             "state" : "translated",
             "value" : "Mati"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tắt"
+          }
         }
       }
     },
@@ -35166,6 +36816,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer latihan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hẹn giờ luyện tập"
           }
         }
       }
@@ -35291,6 +36947,12 @@
             "state" : "translated",
             "value" : "%lld mnt"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld phút"
+          }
         }
       }
     },
@@ -35414,6 +37076,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sisa waktu"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thời gian còn lại"
           }
         }
       }
@@ -35539,6 +37207,12 @@
             "state" : "translated",
             "value" : "Atur ulang timer"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đặt lại hẹn giờ"
+          }
         }
       }
     },
@@ -35662,6 +37336,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer mati"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã tắt hẹn giờ"
           }
         }
       }
@@ -35787,6 +37467,12 @@
             "state" : "translated",
             "value" : "Timer %lld mnt"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hẹn giờ %lld phút"
+          }
         }
       }
     },
@@ -35910,6 +37596,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sisa %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Còn %@"
           }
         }
       }
@@ -36035,6 +37727,12 @@
             "state" : "translated",
             "value" : "Waktu latihan habis"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã hết giờ luyện tập"
+          }
         }
       }
     },
@@ -36158,6 +37856,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "atur timer latihan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "đặt hẹn giờ luyện tập"
           }
         }
       }
@@ -36283,6 +37987,12 @@
             "state" : "translated",
             "value" : "matikan timer"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tắt hẹn giờ"
+          }
         }
       }
     },
@@ -36406,6 +38116,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketuk tombol timer di samping Mulai, atau ucapkan “timer 5 minutes”. Timer menghitung mundur selama klik berbunyi, lalu berhenti dan berdenting."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chạm nút hẹn giờ cạnh Bắt đầu, hoặc nói “timer 5 minutes”. Bộ đếm lùi khi tiếng gõ phát, rồi dừng và reo chuông."
           }
         }
       }
@@ -36531,6 +38247,12 @@
             "state" : "translated",
             "value" : "Menghitung mundur selama klik berbunyi dan berhenti sejenak saat kamu berhenti. Saat waktu habis, metronom berhenti dan berdenting. Ucapkan “timer 5 minutes” atau “timer off” kapan saja."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đếm lùi khi tiếng gõ phát và tạm dừng khi bạn dừng. Hết giờ, máy gõ nhịp dừng và reo chuông. Hãy nói “timer 5 minutes” hoặc “timer off” bất cứ lúc nào."
+          }
         }
       }
     },
@@ -36654,6 +38376,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bagikan statistik penggunaan anonim"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chia sẻ thống kê sử dụng ẩn danh"
           }
         }
       }
@@ -36779,6 +38507,12 @@
             "state" : "translated",
             "value" : "Privasi"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quyền riêng tư"
+          }
         }
       }
     },
@@ -36902,6 +38636,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hitungan seperti jumlah perangkat yang memakai aplikasi dan laporan kerusakan. Tanpa audio, pengaturan, atau informasi pribadi. Berlaku mulai peluncuran berikutnya."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các số đếm như số thiết bị dùng ứng dụng và báo cáo sự cố. Không có âm thanh, cài đặt hay thông tin cá nhân. Áp dụng từ lần mở tiếp theo."
           }
         }
       }
@@ -37028,6 +38768,12 @@
             "state" : "translated",
             "value" : "Teks lebih besar lagi"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chữ còn lớn hơn nữa"
+          }
         }
       }
     },
@@ -37152,6 +38898,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Layar tetap terbaca dan rapi bahkan pada ukuran teks terbesar."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Màn hình vẫn dễ đọc và gọn gàng ngay cả ở cỡ chữ lớn nhất."
           }
         }
       }
@@ -37278,6 +39030,12 @@
             "state" : "translated",
             "value" : "Warna yang lebih mudah dilihat"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Màu dễ nhìn hơn"
+          }
         }
       }
     },
@@ -37402,6 +39160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Warna ketukan dan ketepatan tetap jelas dengan Tingkatkan Kontras, atau jika warna sulit dibedakan."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Màu phách và độ đều nhịp vẫn rõ khi bật Tăng độ tương phản, hoặc khi khó phân biệt màu."
           }
         }
       }
@@ -37528,6 +39292,12 @@
             "state" : "translated",
             "value" : "Kontrol keyboard"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điều khiển bằng bàn phím"
+          }
         }
       }
     },
@@ -37652,6 +39422,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Di iPad dengan keyboard, mulai, hentikan, dan ubah tempo dengan tombol."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên iPad có bàn phím, bắt đầu, dừng và đổi tốc độ bằng phím."
           }
         }
       }
@@ -37778,6 +39554,12 @@
             "state" : "translated",
             "value" : "Yang baru"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có gì mới"
+          }
         }
       }
     },
@@ -37902,6 +39684,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Setelah pembaruan, lihat yang baru saat pertama kali membuka aplikasi."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sau khi cập nhật, xem có gì mới ngay lần đầu mở ứng dụng."
           }
         }
       }
@@ -38028,6 +39816,12 @@
             "state" : "translated",
             "value" : "Balasan atas masukanmu"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phản hồi cho ý kiến của bạn"
+          }
         }
       }
     },
@@ -38152,6 +39946,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Baca balasan kami atas masukanmu langsung di aplikasi."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đọc phản hồi của chúng tôi cho ý kiến của bạn ngay trong ứng dụng."
           }
         }
       }
@@ -38278,6 +40078,12 @@
             "state" : "translated",
             "value" : "Hadiahkan Pro"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tặng Pro"
+          }
         }
       }
     },
@@ -38402,6 +40208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hadiahkan Not My Tempo Pro kepada rekan band atau murid."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tặng Not My Tempo Pro cho bạn cùng ban nhạc hoặc học trò."
           }
         }
       }
@@ -38528,6 +40340,12 @@
             "state" : "translated",
             "value" : "Widget Layar Utama"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiện ích Màn hình chính"
+          }
         }
       }
     },
@@ -38652,6 +40470,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mulai klik langsung dari Layar Utama tanpa membuka aplikasi."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bật tiếng gõ ngay từ Màn hình chính mà không cần mở ứng dụng."
           }
         }
       }
@@ -38778,6 +40602,12 @@
             "state" : "translated",
             "value" : "Siri dan Pintasan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri và Phím tắt"
+          }
         }
       }
     },
@@ -38902,6 +40732,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Minta Siri atau jalankan pintasan untuk memulai klik pada tempomu."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hỏi Siri hoặc chạy phím tắt để bật tiếng gõ ở đúng tốc độ của bạn."
           }
         }
       }
@@ -39028,6 +40864,12 @@
             "state" : "translated",
             "value" : "Sinkronisasi antarperangkat"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đồng bộ giữa các thiết bị"
+          }
         }
       }
     },
@@ -39152,6 +40994,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preset dan pengaturanmu ikut berpindah antara iPhone dan iPad."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt sẵn và cài đặt của bạn đi theo bạn giữa iPhone và iPad."
           }
         }
       }
@@ -39278,6 +41126,12 @@
             "state" : "translated",
             "value" : "Cadangkan presetmu"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sao lưu cài đặt sẵn"
+          }
         }
       }
     },
@@ -39402,6 +41256,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Simpan preset aksenmu ke file dan kembalikan kapan saja."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu cài đặt sẵn nhấn phách vào tệp và khôi phục bất cứ lúc nào."
           }
         }
       }
@@ -39528,6 +41388,12 @@
             "state" : "translated",
             "value" : "Pengingat latihan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhắc nhở luyện tập"
+          }
         }
       }
     },
@@ -39652,6 +41518,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dapatkan pengingat lembut pada waktu yang kamu pilih untuk berlatih."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhận lời nhắc nhẹ nhàng vào giờ bạn chọn để luyện tập."
           }
         }
       }
@@ -39778,6 +41650,12 @@
             "state" : "translated",
             "value" : "Tata letak iPhone lipat"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bố cục cho iPhone gập"
+          }
         }
       }
     },
@@ -39902,6 +41780,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Di iPhone lipat, lihat ketukan dan kontrol berdampingan."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trên iPhone gập, xem phách và các nút điều khiển cạnh nhau."
           }
         }
       }
@@ -40028,6 +41912,12 @@
             "state" : "translated",
             "value" : "Hapus semua datamu"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa toàn bộ dữ liệu của tôi"
+          }
         }
       }
     },
@@ -40153,6 +42043,12 @@
             "state" : "translated",
             "value" : "Hapus semua preset dan pengaturan di aplikasi kapan pun kamu mau."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa toàn bộ cài đặt sẵn và cài đặt trong ứng dụng bất cứ khi nào bạn muốn."
+          }
         }
       }
     },
@@ -40276,6 +42172,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tukarkan kode penawaran"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đổi mã ưu đãi"
           }
         }
       }
@@ -40401,6 +42303,12 @@
             "state" : "translated",
             "value" : "Punya kode untuk Pro? Masukkan langsung di aplikasi, di layar Pro atau di Perintah Suara."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có mã dành cho Pro? Nhập ngay trong ứng dụng, tại màn hình Pro hoặc trong Lệnh giọng nói."
+          }
         }
       }
     },
@@ -40524,6 +42432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lebih jelas dengan Tingkatkan Kontras"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rõ hơn với Tăng độ tương phản"
           }
         }
       }
@@ -40649,6 +42563,12 @@
             "state" : "translated",
             "value" : "Saat Tingkatkan Kontras atau Kurangi Transparansi aktif, ketukan, garis tepi, dan lapisan bantuan digambar lebih tebal dan solid."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khi bật Tăng độ tương phản hoặc Giảm độ trong suốt, phách, đường viền và lớp trợ giúp được vẽ đậm hơn và đặc hơn."
+          }
         }
       }
     },
@@ -40772,6 +42692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ruang untuk teks terbesar"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đủ chỗ cho chữ lớn nhất"
           }
         }
       }
@@ -40897,6 +42823,12 @@
             "state" : "translated",
             "value" : "Pada ukuran teks terbesar, tombol dan daftar ditata ulang agar tidak ada yang terpotong."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ở cỡ chữ lớn nhất, các nút và danh sách tự sắp xếp lại để không bị cắt mất."
+          }
         }
       }
     },
@@ -41020,6 +42952,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Versi %@"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phiên bản %@"
           }
         }
       }
@@ -41145,6 +43083,12 @@
             "state" : "translated",
             "value" : "Lanjutkan"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp tục"
+          }
         }
       }
     },
@@ -41268,6 +43212,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Metronom yang bisa kamu ajak bicara"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Máy gõ nhịp bạn có thể trò chuyện"
           }
         }
       }
@@ -41393,6 +43343,12 @@
             "state" : "translated",
             "value" : "Ucapkan “start”, “stop”, “faster”, atau “tempo 120” dan biarkan kedua tangan tetap di instrumenmu."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nói “start”, “stop”, “faster” hoặc “tempo 120” và giữ cả hai tay trên nhạc cụ."
+          }
         }
       }
     },
@@ -41516,6 +43472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perintahnya kata-kata bahasa Inggris"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lệnh là các từ tiếng Anh"
           }
         }
       }
@@ -41641,6 +43603,12 @@
             "state" : "translated",
             "value" : "Di semua bahasa, kamu mengendalikan aplikasi dengan kata bahasa Inggris yang singkat. Ucapkan “help” kapan saja untuk melihat semuanya di layar."
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ở mọi ngôn ngữ, bạn điều khiển ứng dụng bằng những từ tiếng Anh ngắn. Hãy nói “help” bất cứ lúc nào để xem tất cả trên màn hình."
+          }
         }
       }
     },
@@ -41764,6 +43732,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon aplikasi tetap mati agar tidak bentrok dengan Kontrol Suara. Ucapkan “Tap Start” atau “Tap Faster”."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Micrô của ứng dụng vẫn tắt để không xung đột với Điều khiển bằng giọng nói. Hãy nói “Tap Start” hoặc “Tap Faster”."
           }
         }
       }
@@ -41889,6 +43863,12 @@
             "state" : "translated",
             "value" : "Berikutnya: mikrofon"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp theo: micrô"
+          }
         }
       }
     },
@@ -42012,6 +43992,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS akan meminta izin mikrofon dan pengenalan ucapan. Keduanya hanya dipakai untuk mendengar perintahmu. Aplikasi tidak pernah merekam atau menyimpan apa yang didengarnya."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS sẽ hỏi quyền dùng micrô và nhận dạng giọng nói. Chúng chỉ dùng để nghe lệnh của bạn. Ứng dụng không bao giờ ghi âm hay lưu những gì nghe được."
           }
         }
       }
@@ -42137,6 +44123,12 @@
             "state" : "translated",
             "value" : "Lewati"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bỏ qua"
+          }
         }
       }
     },
@@ -42260,6 +44252,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mulai"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu"
           }
         }
       }
@@ -42385,6 +44383,12 @@
             "state" : "translated",
             "value" : "Lanjut"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp"
+          }
         }
       }
     },
@@ -42508,6 +44512,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preset tersimpan"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã lưu cài đặt sẵn"
           }
         }
       }
@@ -42633,6 +44643,12 @@
             "state" : "translated",
             "value" : "Belum ada preset"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có cài đặt sẵn"
+          }
         }
       }
     },
@@ -42756,6 +44772,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tukarkan kode penawaran"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đổi mã ưu đãi"
           }
         }
       }
@@ -42881,6 +44903,12 @@
             "state" : "translated",
             "value" : "Tampilkan pengantar lagi"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiện lại phần giới thiệu"
+          }
         }
       }
     },
@@ -43004,6 +45032,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tukarkan Kode"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đổi mã"
           }
         }
       }
@@ -43129,6 +45163,12 @@
             "state" : "translated",
             "value" : "Pengantar"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giới thiệu"
+          }
         }
       }
     },
@@ -43252,6 +45292,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tampilkan pengantar"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiện phần giới thiệu"
           }
         }
       }
@@ -43377,6 +45423,12 @@
             "state" : "translated",
             "value" : "Kode penawaran"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mã ưu đãi"
+          }
         }
       }
     },
@@ -43500,6 +45552,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tukarkan kode"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đổi mã"
           }
         }
       }
@@ -43625,6 +45683,12 @@
             "state" : "translated",
             "value" : "Yang baru"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Có gì mới"
+          }
         }
       }
     },
@@ -43748,6 +45812,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lewati pengantar"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bỏ qua phần giới thiệu"
           }
         }
       }

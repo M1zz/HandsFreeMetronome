@@ -1494,6 +1494,77 @@ https://m1zz.github.io/HandsFreeMetronome/id/privacy.html
 
 https://m1zz.github.io/HandsFreeMetronome/id/
 
+## vi
+
+### 이름
+
+Not My Tempo: Máy gõ nhịp
+
+### 부제
+
+Đổi tốc độ không cần tay
+
+### 키워드
+
+bpm,tuner,luyện,tập,guitar,piano,trống,violin,saxophone,trumpet,sáo,ukulele,nhấn,nhịp,bass,cello,hát
+
+### 프로모션 텍스트
+
+Giữ hai tay trên nhạc cụ. Nói “start”, “faster” hoặc “tempo 120” là tiếng gõ theo ngay. Máy gõ nhịp đầy đủ và điều khiển bằng giọng nói đều miễn phí.
+
+### 설명
+
+Máy gõ nhịp bạn điều khiển bằng giọng nói, để đôi tay không bao giờ rời nhạc cụ.
+Nói “start” để bắt đầu, “faster” để nhanh hơn. Không cần chạm, không phải dừng giữa câu nhạc.
+
+Đổi tốc độ khi đang chơi thường nghĩa là phải rời tay khỏi nhạc cụ và mất mạch. Not My Tempo nghe bằng micrô riêng và nhận dạng giọng nói ngay trên thiết bị, nên dùng được ngay — không cần bật Điều khiển bằng giọng nói của iOS hay bất kỳ cài đặt trợ năng nào. Các lệnh được nói bằng từ tiếng Anh.
+
+TRÒ CHUYỆN VỚI MÁY GÕ NHỊP
+“start” và “stop” để bắt đầu và dừng
+“faster” và “slower” đổi 5 BPM, “up” và “down” đổi 1
+“tempo 120”, hoặc chỉ một con số, nhảy thẳng tới giá trị đó
+“double” và “half” để nhân đôi hoặc giảm một nửa
+“quarter”, “eighth”, “triplet”, “sixteenth” để chia nhỏ phách
+“louder”, “quieter”, “mute” để chỉnh âm lượng
+Quên lệnh? Nói “help” và mọi câu bạn có thể dùng sẽ hiện trên màn hình
+
+MÁY GÕ NHỊP ĐẦY ĐỦ MIỄN PHÍ
+Nhịp từ 1 đến 8 phách, tiếng gõ mạnh hơn ở phách đầu
+Chia nhỏ thành nốt móc đơn, nhịp ba và nốt móc ba
+Ba cách xem phách: nảy, quỹ đạo và vòng
+Chạm để lấy nhịp: chạm theo nhịp vào số lớn để đặt BPM
+Kiểm tra độ đều nhịp: chạm vào vòng quỹ đạo khi chơi và xem bạn gõ sát đến đâu
+Màn hình luôn sáng khi phát, và ứng dụng nhớ tốc độ cùng nhịp lần trước
+
+BẮT ĐẦU VÀ DỪNG BẰNG NHẠC CỤ
+Hãy ghi âm trước một câu nhạc ngắn 2–5 nốt, rồi chơi câu đó để bật hoặc tắt tiếng gõ. Giữ mỗi nốt khoảng nửa giây để những nốt nhanh khi bạn chơi không vô tình kích hoạt.
+
+NOT MY TEMPO PRO
+Chế độ luyện tập: huấn luyện tốc độ, thêm vài BPM sau mỗi vài ô nhịp cho đến khi chạm mục tiêu
+Trình chỉnh nhấn: đặt từng tiếng gõ trong ô nhịp là cao, thấp hoặc im lặng, và lưu cài đặt sẵn cho từng bài
+Máy lên dây bán cung: lên dây trước khi bắt đầu, nốt La chuẩn chỉnh được từ 430 đến 450 Hz
+Pro là gói đăng ký năm có dùng thử miễn phí, hoặc mua trọn đời một lần.
+
+TRỢ NĂNG
+Nếu bạn dùng Điều khiển bằng giọng nói của iOS, hãy tắt micrô riêng của ứng dụng và điều khiển bằng cách nói tên nút. Các nút điều khiển đều có nhãn VoiceOver.
+
+THÔNG TIN ĐĂNG KÝ
+Gói năm tự động gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kỳ hiện tại kết thúc. Quản lý hoặc hủy trong Cài đặt > Tài khoản Apple > Đăng ký. Gói trọn đời chỉ thanh toán một lần.
+Điều khoản sử dụng (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Chính sách quyền riêng tư: https://m1zz.github.io/HandsFreeMetronome/vi/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/vi/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/vi/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/vi/
+
 ## pt-BR
 
 ### 이름

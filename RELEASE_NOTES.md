@@ -156,6 +156,13 @@ Tukarkan kode penawaran di aplikasi
 Kontras tinggi membuat ketukan jelas
 Layar muat meski teks terbesar
 
+### App Store (vi)
+
+Có phần giới thiệu ngắn khi mở lần đầu
+Đổi mã ưu đãi ngay trong ứng dụng
+Tăng tương phản giúp phách rõ hơn
+Chữ lớn nhất vẫn vừa màn hình
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)

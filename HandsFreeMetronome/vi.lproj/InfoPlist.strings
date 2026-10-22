@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "Máy gõ nhịp nghe lệnh giọng nói của bạn (như “start” và “faster”) và có thể nhận biết tốc độ bản nhạc bạn chơi gần đó, để bạn điều khiển mà không cần chạm màn hình.";
+"NSSpeechRecognitionUsageDescription" = "Nhận dạng giọng nói dùng để hiểu các lệnh rảnh tay. Việc nhận dạng diễn ra ngay trên thiết bị của bạn.";
