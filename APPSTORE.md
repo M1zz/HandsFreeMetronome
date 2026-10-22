@@ -657,7 +657,7 @@ Cambia tempo a mani libere
 
 ### 키워드
 
-bpm,accordatore,esercizio,chitarra,pianoforte,batteria,basso,violino,sassofono,tromba,flauto,coro,ukulele,accenti,ritmo,band,terzine
+bpm,accordatore,esercizio,chitarra,pianoforte,batteria,violino,sassofono,tromba,ukulele,accenti
 
 ### 프로모션 텍스트
 
@@ -796,7 +796,7 @@ Not My Tempo: Метроном
 
 ### 키워드
 
-bpm,тюнер,тренировка,гитара,пианино,барабаны,скрипка,саксофон,труба,флейта,хор,укулеле,акценты,ритм,бас
+bpm,тюнер,тренировка,гитара,пианино,барабаны,скрипка,саксофон,труба,флейта,хор,укулеле,акценты,ритм
 
 ### 프로모션 텍스트
 
