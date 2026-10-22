@@ -12,3 +12,5 @@ xcuserdata/
 
 # Misc
 todo.md
+__pycache__/
+*.pyc
