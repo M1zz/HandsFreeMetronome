@@ -997,6 +997,77 @@ https://m1zz.github.io/HandsFreeMetronome/pl/privacy.html
 
 https://m1zz.github.io/HandsFreeMetronome/pl/
 
+## tr
+
+### 이름
+
+Not My Tempo: Sesli Metronom
+
+### 부제
+
+Temposu eller serbest değiştir
+
+### 키워드
+
+bpm,akort,çalışma,gitar,piyano,davul,bas,keman,saksofon,trompet,flüt,koro,ukulele,vurgu,ritim,üçleme
+
+### 프로모션 텍스트
+
+Elleriniz enstrümanınızda kalsın. “start”, “faster” veya “tempo 120” deyin, tık sizi takip etsin. Tam metronom ve sesli denetim ücretsiz.
+
+### 설명
+
+Sesinizle yönettiğiniz bir metronom; elleriniz enstrümanınızdan hiç ayrılmaz.
+Başlamak için “start”, hızlanmak için “faster” deyin. Dokunmak yok, cümlenin ortasında durmak yok.
+
+Çalarken temposu değiştirmek genellikle elinizi enstrümandan çekip akışı kaybetmek demektir. Not My Tempo kendi mikrofonuyla dinler ve konuşmayı cihazınızda tanır; bu yüzden iOS Sesle Denetim’i veya herhangi bir erişilebilirlik ayarını açmadan hemen çalışır. Komutlar İngilizce sözcüklerle söylenir.
+
+METRONOMUNUZLA KONUŞUN
+“start” ve “stop” ile başlatın, durdurun
+“faster” ve “slower” 5 BPM, “up” ve “down” 1 BPM değiştirir
+“tempo 120” ya da yalnızca bir sayı doğrudan o değere atlar
+“double” ve “half” ile iki katına çıkarın veya yarıya indirin
+“quarter”, “eighth”, “triplet”, “sixteenth” ile alt bölümü seçin
+“louder”, “quieter”, “mute” ile sesi ayarlayın
+Bir komutu mu unuttunuz? “help” deyin, kullanabileceğiniz tüm cümleler ekranda belirsin
+
+TAM METRONOM ÜCRETSİZ
+1 ile 8 vuruş arası ölçüler, ilk vuruşta daha güçlü tık
+8'lik, üçleme ve 16'lık alt bölümler
+Vuruşu izlemenin üç yolu: zıplama, yörünge ve halka
+Tempo vurma: BPM’yi ayarlamak için büyük sayıya ritme uyarak dokunun
+Zamanlama denetimi: çalarken yörünge halkasına dokunun ve ne kadar yakın vurduğunuzu görün
+Çalarken ekran açık kalır, uygulama son temponuzu ve ölçünüzü hatırlar
+
+ENSTRÜMANINIZLA BAŞLATIN VE DURDURUN
+Önce 2–5 notalık kısa bir cümle kaydedin, sonra tıkı başlatmak veya durdurmak için o cümleyi çalın. Çalışınızdaki hızlı notalar tetiklemesin diye her notayı yaklaşık yarım saniye basılı tutun.
+
+NOT MY TEMPO PRO
+Çalışma modu: hedef tempoya ulaşana kadar birkaç ölçüde bir birkaç BPM ekleyen hız antrenörü
+Vurgu düzenleyici: ölçüdeki her tıkı tiz, pes veya sessiz yapın ve şarkı başına bir hazır ayar kaydedin
+Kromatik akort aleti: başlamadan önce akort edin; referans la sesi 430 ile 450 Hz arasında ayarlanır
+Pro, ücretsiz denemeli yıllık bir abonelik ya da tek seferlik ömür boyu bir satın alımdır.
+
+ERİŞİLEBİLİRLİK
+iOS Sesle Denetim kullanıyorsanız uygulamanın kendi mikrofonunu kapatın ve düğme adlarını söyleyerek yönetin. Denetimlerde VoiceOver etiketleri bulunur.
+
+ABONELİK AYRINTILARI
+Yıllık plan, geçerli dönemin bitiminden en az 24 saat önce iptal edilmedikçe otomatik olarak yenilenir. Ayarlar > Apple Hesabı > Abonelikler bölümünden yönetin veya iptal edin. Ömür boyu seçeneği tek seferlik bir ödemedir.
+Kullanım Koşulları (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Gizlilik Politikası: https://m1zz.github.io/HandsFreeMetronome/tr/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/tr/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/tr/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/tr/
+
 ## pt-BR
 
 ### 이름

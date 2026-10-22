@@ -107,6 +107,13 @@ Kody promocyjne zrealizujesz w aplikacji
 Większy kontrast uwydatnia uderzenia
 Mieści się nawet największy tekst
 
+### App Store (tr)
+
+İlk açılışta kısa bir tanıtım eklendi
+Teklif kodlarını uygulamada kullanın
+Kontrast artınca vuruşlar daha net
+En büyük yazıda bile ekran düzgün
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)
