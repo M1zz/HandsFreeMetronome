@@ -855,6 +855,77 @@ https://m1zz.github.io/HandsFreeMetronome/ru/privacy.html
 
 https://m1zz.github.io/HandsFreeMetronome/ru/
 
+## nl
+
+### 이름
+
+Not My Tempo: Stemmetronoom
+
+### 부제
+
+Wijzig het tempo handsfree
+
+### 키워드
+
+bpm,tuner,oefenen,gitaar,piano,drums,viool,saxofoon,trompet,dwarsfluit,koor,ukelele,accenten,ritme
+
+### 프로모션 텍스트
+
+Houd je handen op je instrument. Zeg “start”, “faster” of “tempo 120” en de klik volgt. De complete metronoom en spraakbediening zijn gratis.
+
+### 설명
+
+Een metronoom die je met je stem bedient, zodat je handen op je instrument blijven.
+Zeg “start” om te beginnen, “faster” om te versnellen. Geen getik, nooit meer stoppen midden in een frase.
+
+Het tempo aanpassen terwijl je speelt betekent meestal je instrument loslaten en de draad kwijtraken. Not My Tempo luistert via zijn eigen microfoon en herkent spraak op je apparaat, dus het werkt meteen, zonder Spraakbediening van iOS of een toegankelijkheidsinstelling aan te zetten. De commando’s zijn Engelse woorden.
+
+PRAAT MET JE METRONOOM
+“start” en “stop” om te beginnen en te stoppen
+“faster” en “slower” veranderen 5 BPM, “up” en “down” 1
+“tempo 120”, of gewoon een getal, springt direct naar die waarde
+“double” en “half” om te verdubbelen of te halveren
+“quarter”, “eighth”, “triplet”, “sixteenth” voor onderverdelingen
+“louder”, “quieter”, “mute” voor het volume
+Commando vergeten? Zeg “help” en alle zinnen die je kunt gebruiken verschijnen op het scherm
+
+DE COMPLETE METRONOOM IS GRATIS
+Maatsoorten van 1 tot 8 tellen, met een sterkere klik op de eerste tel
+Onderverdelingen in achtste noten, triolen en zestiende noten
+Drie manieren om de tel te zien: stuiteren, baan en ring
+Tap-tempo: tik in het ritme op het grote getal om de BPM in te stellen
+Timingcontrole: tik tijdens het spelen op de baanring en zie hoe dicht je erbij zat
+Het scherm blijft aan terwijl het speelt en de app onthoudt je laatste tempo en maatsoort
+
+START EN STOP MET JE INSTRUMENT
+Neem eerst een korte frase van 2–5 noten op en speel die om de klik te starten of te stoppen. Houd elke noot ongeveer een halve seconde aan, zodat snelle noten in je spel de klik niet per ongeluk starten.
+
+NOT MY TEMPO PRO
+Oefenmodus: een snelheidstrainer die om de paar maten een paar BPM erbij doet tot je je doeltempo bereikt
+Accenteditor: zet elke klik van de maat op hoog, laag of stil en bewaar een preset per nummer
+Chromatische tuner: stem voordat je begint, met een instelbare stemtoon A van 430 tot 450 Hz
+Pro is een jaarabonnement met gratis proefperiode, of een eenmalige aankoop voor altijd.
+
+TOEGANKELIJKHEID
+Gebruik je Spraakbediening van iOS? Zet dan de eigen microfoon van de app uit en bedien de app met de namen van de knoppen. De bediening heeft VoiceOver-labels.
+
+ABONNEMENTSGEGEVENS
+Het jaarabonnement wordt automatisch verlengd, tenzij je het minstens 24 uur vóór het einde van de huidige periode opzegt. Beheer of zeg het op in Instellingen > Apple Account > Abonnementen. Levenslang is een eenmalige betaling.
+Gebruiksvoorwaarden (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacybeleid: https://m1zz.github.io/HandsFreeMetronome/nl/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/nl/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/nl/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/nl/
+
 ## pt-BR
 
 ### 이름

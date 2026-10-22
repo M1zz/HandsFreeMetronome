@@ -71,6 +71,12 @@
             "state" : "translated",
             "value" : "%@ в год"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ per jaar"
+          }
         }
       }
     },
@@ -146,6 +152,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, ниже на %2$lld цент."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld cent te laag"
           }
         }
       }
@@ -223,6 +235,12 @@
             "state" : "translated",
             "value" : "%1$@, выше на %2$lld цент."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld cent te hoog"
+          }
         }
       }
     },
@@ -293,6 +311,12 @@
             "state" : "translated",
             "value" : "%@, строй точный"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, zuiver"
+          }
         }
       }
     },
@@ -361,6 +385,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -527,6 +557,24 @@
               }
             }
           }
+        },
+        "nl" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld tel"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld tellen"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -611,6 +659,12 @@
             "state" : "translated",
             "value" : "Ударов в минуту: %lld"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld slagen per minuut"
+          }
         }
       }
     },
@@ -679,6 +733,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -761,6 +821,12 @@
             "state" : "translated",
             "value" : "%1$lld BPM, %2$@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld BPM, %2$@"
+          }
         }
       }
     },
@@ -839,6 +905,12 @@
             "state" : "translated",
             "value" : "Идеально: %1$lld, хорошо: %2$lld, мимо: %3$lld"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld perfect, %2$lld goed, %3$lld mis"
+          }
         }
       }
     },
@@ -910,6 +982,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  нажмите на точки, чтобы выбрать число долей"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  tik op de stippen om het aantal tellen te kiezen"
           }
         }
       }
@@ -989,6 +1067,12 @@
             "state" : "translated",
             "value" : "%1$lld/4 · %2$@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/4 · %2$@"
+          }
         }
       }
     },
@@ -1058,6 +1142,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Шестнадцатые"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zestiende noten"
           }
         }
       }
@@ -1129,6 +1219,12 @@
             "state" : "translated",
             "value" : "Четвертные"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kwartnoten"
+          }
         }
       }
     },
@@ -1199,6 +1295,12 @@
             "state" : "translated",
             "value" : "Восьмые"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Achtste noten"
+          }
         }
       }
     },
@@ -1268,6 +1370,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ля¹ = %lld Гц"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
           }
         }
       }
@@ -1341,6 +1449,12 @@
             "state" : "translated",
             "value" : "Редактор акцентов"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenteditor"
+          }
         }
       }
     },
@@ -1410,6 +1524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Редактор акцентов и пресеты"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenteditor en presets"
           }
         }
       }
@@ -1483,6 +1603,12 @@
             "state" : "translated",
             "value" : "Акценты"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenten"
+          }
         }
       }
     },
@@ -1553,6 +1679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Универсальный доступ"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toegankelijkheid"
           }
         }
       }
@@ -1626,6 +1758,12 @@
             "state" : "translated",
             "value" : "Добавить %lld BPM"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM erbij"
+          }
         }
       }
     },
@@ -1697,6 +1835,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Все команды"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle commando’s"
           }
         }
       }
@@ -1770,6 +1914,12 @@
             "state" : "translated",
             "value" : "Применяет этот рисунок, размер и дробление"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Past dit patroon, de maatsoort en de onderverdeling toe"
+          }
         }
       }
     },
@@ -1841,6 +1991,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Назад"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terug"
           }
         }
       }
@@ -1914,6 +2070,12 @@
             "state" : "translated",
             "value" : "Вернуться к метроному"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terug naar de metronoom"
+          }
         }
       }
     },
@@ -1983,6 +2145,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мимо"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mis"
           }
         }
       }
@@ -2055,6 +2223,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Доля %lld"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tel %lld"
           }
         }
       }
@@ -2134,6 +2308,12 @@
             "state" : "translated",
             "value" : "Доля %1$lld, клик %2$lld"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tel %1$lld, klik %2$lld"
+          }
         }
       }
     },
@@ -2211,6 +2391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Доля %1$lld из %2$lld"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tel %1$lld van %2$lld"
           }
         }
       }
@@ -2290,6 +2476,12 @@
             "state" : "translated",
             "value" : "Доля %1$lld из %2$lld, %3$@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tel %1$lld van %2$lld, %3$@"
+          }
         }
       }
     },
@@ -2368,6 +2560,12 @@
             "state" : "translated",
             "value" : "Доля %1$lld, клик %2$lld"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tel %1$lld, klik %2$lld"
+          }
         }
       }
     },
@@ -2438,6 +2636,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вид долей"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telweergave"
           }
         }
       }
@@ -2510,6 +2714,12 @@
             "state" : "translated",
             "value" : "Доли"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tellen"
+          }
         }
       }
     },
@@ -2580,6 +2790,12 @@
             "state" : "translated",
             "value" : "Вид «Мячик»"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stuiterweergave"
+          }
         }
       }
     },
@@ -2648,6 +2864,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -2724,6 +2946,12 @@
             "state" : "translated",
             "value" : "Сообщения об ошибках и пожелания по функциям приветствуются."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugmeldingen en functieverzoeken zijn welkom."
+          }
         }
       }
     },
@@ -2795,6 +3023,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Купить навсегда"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eenmalig kopen"
           }
         }
       }
@@ -2868,6 +3102,12 @@
             "state" : "translated",
             "value" : "Купить навсегда за %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eenmalig kopen voor %@"
+          }
         }
       }
     },
@@ -2939,6 +3179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отмена"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuleer"
           }
         }
       }
@@ -3012,6 +3258,12 @@
             "state" : "translated",
             "value" : "Сменить вид"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weergave wijzigen"
+          }
         }
       }
     },
@@ -3084,6 +3336,12 @@
             "state" : "translated",
             "value" : "Проверить ритм"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timing controleren"
+          }
         }
       }
     },
@@ -3153,6 +3411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Хроматический тюнер"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chromatische tuner"
           }
         }
       }
@@ -3225,6 +3489,12 @@
             "state" : "translated",
             "value" : "Закрыть"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluit"
+          }
         }
       }
     },
@@ -3294,6 +3564,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "закрыть панель или подсказку"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sluit een paneel of tip"
           }
         }
       }
@@ -3367,6 +3643,12 @@
             "state" : "translated",
             "value" : "Связь с разработчиком"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact met de ontwikkelaar"
+          }
         }
       }
     },
@@ -3439,6 +3721,12 @@
             "state" : "translated",
             "value" : "Управляйте голосом"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedien met je stem"
+          }
         }
       }
     },
@@ -3508,6 +3796,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не удалось загрузить цены из App Store."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kon de prijzen niet laden uit de App Store."
           }
         }
       }
@@ -3581,6 +3875,12 @@
             "state" : "translated",
             "value" : "Настроить акценты"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenten aanpassen"
+          }
         }
       }
     },
@@ -3650,6 +3950,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Переключает: высокий, низкий, тишина"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wisselt tussen hoog, laag en stil"
           }
         }
       }
@@ -3723,6 +4029,12 @@
             "state" : "translated",
             "value" : "Уменьшить темп"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo verlagen"
+          }
         }
       }
     },
@@ -3795,6 +4107,12 @@
             "state" : "translated",
             "value" : "Удалить пресет «%@»"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset %@ verwijderen"
+          }
         }
       }
     },
@@ -3864,6 +4182,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Настройте каждый клик такта — высокий, низкий или тихий — и сохраняйте рисунки для каждой пьесы."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stel elke klik van de maat in — hoog, laag of stil — en bewaar patronen per nummer."
           }
         }
       }
@@ -3935,6 +4259,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Подробная справка"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uitgebreide help"
           }
         }
       }
@@ -4008,6 +4338,12 @@
             "state" : "translated",
             "value" : "Закрыть"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluit"
+          }
         }
       }
     },
@@ -4080,6 +4416,12 @@
             "state" : "translated",
             "value" : "Закрыть справку"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help sluiten"
+          }
         }
       }
     },
@@ -4151,6 +4493,12 @@
             "state" : "translated",
             "value" : "Готово"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klaar"
+          }
         }
       }
     },
@@ -4220,6 +4568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вдвое ×2"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbel ×2"
           }
         }
       }
@@ -4293,6 +4647,12 @@
             "state" : "translated",
             "value" : "Нажмите дважды, чтобы открыть сетку акцентов: задайте каждому клику такта высокий, низкий или тихий звук и сохраните рисунок как пресет."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik hier twee keer om het accentenraster te openen: stel elke klik van de maat in op hoog, laag of stil en bewaar patronen als presets."
+          }
         }
       }
     },
@@ -4362,6 +4722,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажмите дважды на карточку дробления, чтобы править весь такт: каждая ячейка переключается так: высокий → низкий → тишина. Рисунки можно сохранять как именные пресеты."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik twee keer op de onderverdelingskaart om de hele maat te bewerken: elke cel wisselt tussen hoog → laag → stil en patronen bewaar je als presets met een naam."
           }
         }
       }
@@ -4433,6 +4799,12 @@
             "state" : "translated",
             "value" : "Нажмите дважды, чтобы открыть акценты"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik twee keer om Accenten te openen"
+          }
         }
       }
     },
@@ -4503,6 +4875,12 @@
             "state" : "translated",
             "value" : "Вниз −1"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omlaag −1"
+          }
         }
       }
     },
@@ -4572,6 +4950,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Двигайте ползунок темпа или нажимайте кнопки − / +."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sleep de temposchuif of tik op de knoppen − / +."
           }
         }
       }
@@ -4645,6 +5029,12 @@
             "state" : "translated",
             "value" : "Изменить акценты"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenten bewerken"
+          }
         }
       }
     },
@@ -4715,6 +5105,12 @@
             "state" : "translated",
             "value" : "Восьмые"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Achtste noten"
+          }
         }
       }
     },
@@ -4784,6 +5180,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Восьмые"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Achtsten"
           }
         }
       }
@@ -4857,6 +5259,12 @@
             "state" : "translated",
             "value" : "Почта"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail"
+          }
         }
       }
     },
@@ -4928,6 +5336,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Написать разработчику"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mail de ontwikkelaar"
           }
         }
       }
@@ -5049,6 +5463,12 @@
             "state" : "translated",
             "value" : "Каждые %lld т."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elke %lld maten"
+          }
         }
       }
     },
@@ -5118,6 +5538,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каждый клик такта — отдельная ячейка, всего их %lld. Нажимайте на ячейку, чтобы переключать: высокий → низкий → тишина."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elke klik van de maat heeft een eigen cel — %lld klikken in totaal. Tik op een cel om te wisselen: hoog → laag → stil."
           }
         }
       }
@@ -5191,6 +5617,12 @@
             "state" : "translated",
             "value" : "Всё это работает и голосом — команды ниже."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alles hier werkt ook met je stem — zie de commando’s hieronder."
+          }
         }
       }
     },
@@ -5263,6 +5695,12 @@
             "state" : "translated",
             "value" : "Быстрее"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sneller"
+          }
         }
       }
     },
@@ -5332,6 +5770,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Быстрее +5"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sneller +5"
           }
         }
       }
@@ -5405,6 +5849,12 @@
             "state" : "translated",
             "value" : "Забыли команду?"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commando vergeten?"
+          }
         }
       }
     },
@@ -5477,6 +5927,12 @@
             "state" : "translated",
             "value" : "Бесплатно навсегда, без разблокировки:"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Altijd gratis, zonder ontgrendelen:"
+          }
         }
       }
     },
@@ -5546,6 +6002,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пробный период"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gratis proefperiode"
           }
         }
       }
@@ -5617,6 +6079,12 @@
             "state" : "translated",
             "value" : "Хорошо"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Goed"
+          }
         }
       }
     },
@@ -5687,6 +6155,12 @@
             "state" : "translated",
             "value" : "Вполовину ÷2"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Half ÷2"
+          }
         }
       }
     },
@@ -5756,6 +6230,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Слышу: %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gehoord: %@"
           }
         }
       }
@@ -5829,6 +6309,12 @@
             "state" : "translated",
             "value" : "Справка"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help"
+          }
         }
       }
     },
@@ -5900,6 +6386,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Навигация по справке"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navigeren in de help"
           }
         }
       }
@@ -5973,6 +6465,12 @@
             "state" : "translated",
             "value" : "Высокий звук"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoge toon"
+          }
         }
       }
     },
@@ -6045,6 +6543,12 @@
             "state" : "translated",
             "value" : "Я использую «Управление голосом» iOS"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ik gebruik Spraakbediening van iOS"
+          }
         }
       }
     },
@@ -6114,6 +6618,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "В виде «Орбита» нажимайте на кольцо во время игры: целью служит каждый клик, включая дробления. Движущаяся точка оставляет след там, где вы попали, а цветные счётчики считают «Идеально» / «Хорошо» / «Мимо», пока вы не остановитесь."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik in de baanweergave tijdens het spelen op de ring: elke klik (ook onderverdelingen) is een doel. De bewegende stip laat een spoor achter waar je tik viel, en gekleurde tellers houden Perfect / Goed / Mis bij tot je stopt."
           }
         }
       }
@@ -6187,6 +6697,12 @@
             "state" : "translated",
             "value" : "Увеличить темп"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo verhogen"
+          }
         }
       }
     },
@@ -6255,6 +6771,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -6331,6 +6853,12 @@
             "state" : "translated",
             "value" : "Личное сообщение в Instagram"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-bericht"
+          }
         }
       }
     },
@@ -6402,6 +6930,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Личное сообщение в Instagram (@lee25_ios)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-bericht (@lee25_ios)"
           }
         }
       }
@@ -6475,6 +7009,12 @@
             "state" : "translated",
             "value" : "Сигнал инструментом"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instrumentsignaal"
+          }
         }
       }
     },
@@ -6547,6 +7087,12 @@
             "state" : "translated",
             "value" : "входит в Pro: три инструмента для занятий, одна разблокировка."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hoort bij Pro: drie oefenhulpmiddelen, één keer ontgrendelen."
+          }
         }
       }
     },
@@ -6615,6 +7161,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Largo? Moderato?"
@@ -6691,6 +7243,12 @@
             "state" : "translated",
             "value" : "Навсегда"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levenslang"
+          }
         }
       }
     },
@@ -6760,6 +7318,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Навсегда — %@ один раз"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levenslang — eenmalig %@"
           }
         }
       }
@@ -6831,6 +7395,12 @@
             "state" : "translated",
             "value" : "показать доступные команды"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "toon de commando’s die je kunt zeggen"
+          }
         }
       }
     },
@@ -6901,6 +7471,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Слушать"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luister"
           }
         }
       }
@@ -6974,6 +7550,12 @@
             "state" : "translated",
             "value" : "Слушать голос"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luister naar stem"
+          }
         }
       }
     },
@@ -7045,6 +7627,12 @@
             "state" : "translated",
             "value" : "Слушаю"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luistert"
+          }
         }
       }
     },
@@ -7114,6 +7702,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Слушаю…"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luistert…"
           }
         }
       }
@@ -7187,6 +7781,12 @@
             "state" : "translated",
             "value" : "Слушаю… держите каждую ноту"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luistert… houd elke noot aan"
+          }
         }
       }
     },
@@ -7258,6 +7858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Загрузка цен…"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prijzen laden…"
           }
         }
       }
@@ -7331,6 +7937,12 @@
             "state" : "translated",
             "value" : "Низкий звук"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lage toon"
+          }
         }
       }
     },
@@ -7402,6 +8014,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Создано для управления голосом"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemaakt voor Spraakbediening"
           }
         }
       }
@@ -7475,6 +8093,12 @@
             "state" : "translated",
             "value" : "Режим метронома"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronoommodus"
+          }
         }
       }
     },
@@ -7544,6 +8168,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Микрофон или речь заблокированы — включите в «Настройках»"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Microfoon/spraak geblokkeerd — zet aan in Instellingen"
           }
         }
       }
@@ -7617,6 +8247,12 @@
             "state" : "translated",
             "value" : "Минус"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min"
+          }
         }
       }
     },
@@ -7688,6 +8324,12 @@
             "state" : "translated",
             "value" : "Ещё"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meer"
+          }
         }
       }
     },
@@ -7757,6 +8399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "прокрутить этот список"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "verplaats deze lijst"
           }
         }
       }
@@ -7828,6 +8476,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Без звука"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dempen"
           }
         }
       }
@@ -7901,6 +8555,12 @@
             "state" : "translated",
             "value" : "Выключить голосовое управление"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spraakbediening dempen"
+          }
         }
       }
     },
@@ -7972,6 +8632,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Название (например, вступление босса-новы)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naam (bijv. Bossa-intro)"
           }
         }
       }
@@ -8045,6 +8711,12 @@
             "state" : "translated",
             "value" : "Нужен микрофон приложения — выключите «Я использую „Управление голосом“ iOS»."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heeft de microfoon van deze app nodig — zet “Ik gebruik Spraakbediening van iOS” uit om dit te gebruiken."
+          }
         }
       }
     },
@@ -8114,6 +8786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нота не распознана, сыграйте ноту"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen noot gehoord, speel een noot"
           }
         }
       }
@@ -8185,6 +8863,12 @@
             "state" : "translated",
             "value" : "Прежних покупок не найдено."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er is geen eerdere aankoop gevonden."
+          }
         }
       }
     },
@@ -8251,6 +8935,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -8327,6 +9017,12 @@
             "state" : "translated",
             "value" : "Не сейчас"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet nu"
+          }
         }
       }
     },
@@ -8399,6 +9095,12 @@
             "state" : "translated",
             "value" : "Нота"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noot"
+          }
         }
       }
     },
@@ -8469,6 +9171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ноты"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noten"
           }
         }
       }
@@ -8542,6 +9250,12 @@
             "state" : "translated",
             "value" : "На экране"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op het scherm"
+          }
         }
       }
     },
@@ -8612,6 +9326,12 @@
             "state" : "translated",
             "value" : "Открыть"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open"
+          }
         }
       }
     },
@@ -8681,6 +9401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Открыть редактор акцентов"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenteditor openen"
           }
         }
       }
@@ -8754,6 +9480,12 @@
             "state" : "translated",
             "value" : "Открыть акценты"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenten openen"
+          }
         }
       }
     },
@@ -8823,6 +9555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Откройте его в виде долей ниже или скажите «practice»."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open het via de telweergave hieronder of zeg “practice”."
           }
         }
       }
@@ -8896,6 +9634,12 @@
             "state" : "translated",
             "value" : "Открыть тренировку"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oefenen openen"
+          }
         }
       }
     },
@@ -8968,6 +9712,12 @@
             "state" : "translated",
             "value" : "Открыть режим тренировки"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oefenmodus openen"
+          }
         }
       }
     },
@@ -9037,6 +9787,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "открыть режим тренировки"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "open de oefenmodus"
           }
         }
       }
@@ -9108,6 +9864,12 @@
             "state" : "translated",
             "value" : "открыть тюнер"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "open de tuner"
+          }
         }
       }
     },
@@ -9177,6 +9939,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вид «Орбита»"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baanweergave"
           }
         }
       }
@@ -9250,6 +10018,12 @@
             "state" : "translated",
             "value" : "Пауза"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pauze"
+          }
         }
       }
     },
@@ -9322,6 +10096,12 @@
             "state" : "translated",
             "value" : "Заплатите один раз — и навсегда"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eén keer betalen, voor altijd van jou"
+          }
         }
       }
     },
@@ -9391,6 +10171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Идеально!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfect!"
           }
         }
       }
@@ -9463,6 +10249,12 @@
             "state" : "translated",
             "value" : "Играть"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afspelen"
+          }
         }
       }
     },
@@ -9532,6 +10324,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "играть / пауза"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "afspelen / pauze"
           }
         }
       }
@@ -9603,6 +10401,12 @@
             "state" : "translated",
             "value" : "Сыграйте 2–5 нот, каждую около полусекунды."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speel 2–5 noten, elk ongeveer een halve seconde."
+          }
         }
       }
     },
@@ -9672,6 +10476,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сыграйте ноту…"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speel een noot…"
           }
         }
       }
@@ -9745,6 +10555,12 @@
             "state" : "translated",
             "value" : "Сыграйте свою фразу, чтобы запустить или остановить клик — даже посреди пьесы. Держите каждую ноту около полусекунды, чтобы быстрые ноты в игре не вызывали срабатывания. Работает, пока включено прослушивание."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speel je frase om de klik te starten of te stoppen, ook midden in een nummer. Houd elke noot ongeveer een halve seconde aan, zodat snelle noten in je spel de klik niet per ongeluk starten. Werkt zolang Luister aan staat."
+          }
         }
       }
     },
@@ -9816,6 +10632,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Воспроизведение"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afspelen"
           }
         }
       }
@@ -9889,6 +10711,12 @@
             "state" : "translated",
             "value" : "Плюс"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus"
+          }
         }
       }
     },
@@ -9959,6 +10787,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тренировка"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oefenen"
           }
         }
       }
@@ -10031,6 +10865,12 @@
             "state" : "translated",
             "value" : "Режим тренировки"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oefenmodus"
+          }
         }
       }
     },
@@ -10100,6 +10940,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Режим тренировки · редактор акцентов и пресеты · тюнер"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oefenmodus · accenteditor en presets · tuner"
           }
         }
       }
@@ -10173,6 +11019,12 @@
             "state" : "translated",
             "value" : "Пресет «%@»"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset %@"
+          }
         }
       }
     },
@@ -10244,6 +11096,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пресеты"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Presets"
           }
         }
       }
@@ -10317,6 +11175,12 @@
             "state" : "translated",
             "value" : "Политика конфиденциальности"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacybeleid"
+          }
         }
       }
     },
@@ -10387,6 +11251,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/ru/privacy.html"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/nl/privacy.html"
+          }
         }
       }
     },
@@ -10453,6 +11323,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -10529,6 +11405,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -10598,6 +11480,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro разблокирован — спасибо!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro ontgrendeld — bedankt!"
           }
         }
       }
@@ -10669,6 +11557,12 @@
             "state" : "translated",
             "value" : "Четвертные"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kwartnoten"
+          }
         }
       }
     },
@@ -10739,6 +11633,12 @@
             "state" : "translated",
             "value" : "Четвертные"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kwarten"
+          }
         }
       }
     },
@@ -10808,6 +11708,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Темп сам растёт каждые несколько тактов: разгоняйте пассаж, не отрываясь от инструмента."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verhoog het tempo automatisch om de paar maten en breng een passage op snelheid, zonder je handen te gebruiken."
           }
         }
       }
@@ -10881,6 +11787,12 @@
             "state" : "translated",
             "value" : "Пока вы играете, темп автоматически растёт каждые несколько тактов — так удобно постепенно разгонять пассаж. На целевом темпе рост останавливается. Скажите «practice» в любой момент, чтобы открыть этот режим."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verhoogt het tempo tijdens het spelen automatisch om de paar maten, zodat je een passage stap voor stap sneller maakt. Stopt bij het doel. Zeg op elk moment “practice” om dit te openen."
+          }
         }
       }
     },
@@ -10952,6 +11864,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сначала запишите короткую фразу."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neem eerst een korte frase op."
           }
         }
       }
@@ -11025,6 +11943,12 @@
             "state" : "translated",
             "value" : "Записать заново"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opnieuw opnemen"
+          }
         }
       }
     },
@@ -11097,6 +12021,12 @@
             "state" : "translated",
             "value" : "Записать сигнал"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signaal opnemen"
+          }
         }
       }
     },
@@ -11166,6 +12096,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Опорный тон"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemtoon"
           }
         }
       }
@@ -11239,6 +12175,12 @@
             "state" : "translated",
             "value" : "Нужен Pro"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vereist Pro"
+          }
         }
       }
     },
@@ -11310,6 +12252,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сбросить"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herstel"
           }
         }
       }
@@ -11383,6 +12331,12 @@
             "state" : "translated",
             "value" : "Восстановить"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herstel"
+          }
         }
       }
     },
@@ -11454,6 +12408,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Восстановить покупки"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aankopen herstellen"
           }
         }
       }
@@ -11527,6 +12487,12 @@
             "state" : "translated",
             "value" : "Восстановить покупки"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aankopen herstellen"
+          }
         }
       }
     },
@@ -11598,6 +12564,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Восстанавливает прежнюю покупку Pro"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Herstelt een eerdere Pro-aankoop"
           }
         }
       }
@@ -11671,6 +12643,12 @@
             "state" : "translated",
             "value" : "Возвращает рисунок по умолчанию для этого размера"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zet het standaardpatroon voor deze maatsoort terug"
+          }
         }
       }
     },
@@ -11742,6 +12720,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сохранить"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaar"
           }
         }
       }
@@ -11815,6 +12799,12 @@
             "state" : "translated",
             "value" : "Сохраняйте рисунок для каждой пьесы: при вызове вернутся также размер и дробление."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaar een patroon per nummer — als je het oproept, komen ook de maatsoort en onderverdeling terug."
+          }
         }
       }
     },
@@ -11886,6 +12876,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сохранить текущий рисунок…"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huidig patroon bewaren…"
           }
         }
       }
@@ -11959,6 +12955,12 @@
             "state" : "translated",
             "value" : "Сохранить рисунок"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patroon bewaren"
+          }
         }
       }
     },
@@ -12030,6 +13032,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сохранить пресет"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset bewaren"
           }
         }
       }
@@ -12103,6 +13111,12 @@
             "state" : "translated",
             "value" : "Сохраняет этот рисунок вместе с размером и дроблением, чтобы вызывать его для каждой пьесы."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaart dit patroon samen met de maatsoort en onderverdeling, zodat je het per nummer kunt oproepen."
+          }
         }
       }
     },
@@ -12174,6 +13188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "скажите"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "zeg"
           }
         }
       }
@@ -12247,6 +13267,12 @@
             "state" : "translated",
             "value" : "Скажите «close», чтобы выйти"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “close” om te sluiten"
+          }
         }
       }
     },
@@ -12316,6 +13342,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скажите «start», «faster» или «help»"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “start”, “faster” of “help”"
           }
         }
       }
@@ -12388,6 +13420,12 @@
             "state" : "translated",
             "value" : "Скажите команду"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg een commando"
+          }
         }
       }
     },
@@ -12457,6 +13495,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скажите «close» / «done» или нажмите «Готово»."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “close” / “done” of tik op Klaar."
           }
         }
       }
@@ -12530,6 +13574,12 @@
             "state" : "translated",
             "value" : "Скажите «close» или нажмите, чтобы закрыть"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “close” of tik om te sluiten"
+          }
         }
       }
     },
@@ -12602,6 +13652,12 @@
             "state" : "translated",
             "value" : "Скажите «help» в любой момент или нажмите здесь, чтобы увидеть все команды, а потом «close», чтобы закрыть."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg op elk moment “help” — of tik hier — om alle commando’s te zien, en daarna “close” om te sluiten."
+          }
         }
       }
     },
@@ -12672,6 +13728,12 @@
             "state" : "translated",
             "value" : "Скажите «help» или нажмите кнопку ?."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “help” of tik op de knop ?."
+          }
         }
       }
     },
@@ -12741,6 +13803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скажите «louder» / «quieter» / «mute» или «volume 60»."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “louder” / “quieter” / “mute” of “volume 60”."
           }
         }
       }
@@ -12814,6 +13882,12 @@
             "state" : "translated",
             "value" : "Скажите «practice», чтобы темп автоматически рос каждые несколько тактов, пока вы играете, — отлично для скоростных упражнений."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “practice” om het tempo tijdens het spelen automatisch om de paar maten te verhogen — ideaal voor snelheidsoefeningen."
+          }
         }
       }
     },
@@ -12884,6 +13958,12 @@
             "state" : "translated",
             "value" : "Скажите «scroll down» / «scroll up» или проведите пальцем."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “scroll down” / “scroll up” of veeg."
+          }
         }
       }
     },
@@ -12953,6 +14033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скажите «tune» и играйте: нота, центы и зона точного строя."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “tune” en speel: noot, cents en een zuivere zone."
           }
         }
       }
@@ -13026,6 +14112,12 @@
             "state" : "translated",
             "value" : "Скажите «tune», чтобы открыть хроматический тюнер, и «close», когда закончите."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “tune” om de chromatische tuner te openen en “close” als je klaar bent."
+          }
         }
       }
     },
@@ -13095,6 +14187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Прокрутка"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scrollen"
           }
         }
       }
@@ -13166,6 +14264,12 @@
             "state" : "translated",
             "value" : "Прокрутить вниз"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omlaag scrollen"
+          }
         }
       }
     },
@@ -13235,6 +14339,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Прокрутить вверх"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omhoog scrollen"
           }
         }
       }
@@ -13308,6 +14418,12 @@
             "state" : "translated",
             "value" : "Прокрутка"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scrollen"
+          }
         }
       }
     },
@@ -13377,6 +14493,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выбрать доли"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tellen instellen"
           }
         }
       }
@@ -13448,6 +14570,12 @@
             "state" : "translated",
             "value" : "задать процент"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "stel percentage in"
+          }
         }
       }
     },
@@ -13518,6 +14646,12 @@
             "state" : "translated",
             "value" : "задать размер"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "stel maatsoort in"
+          }
         }
       }
     },
@@ -13587,6 +14721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "задать значение"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "stel waarde in"
           }
         }
       }
@@ -13660,6 +14800,12 @@
             "state" : "translated",
             "value" : "Задаёт размер %lld/4"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stelt de maatsoort in op %lld/4"
+          }
         }
       }
     },
@@ -13732,6 +14878,12 @@
             "state" : "translated",
             "value" : "Сигнал: %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signaal: %@"
+          }
         }
       }
     },
@@ -13801,6 +14953,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "заглушить клик"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "demp de klik"
           }
         }
       }
@@ -13874,6 +15032,12 @@
             "state" : "translated",
             "value" : "Тишина"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stil"
+          }
         }
       }
     },
@@ -13944,6 +15108,12 @@
             "state" : "translated",
             "value" : "Шестнадцатые"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zestiende noten"
+          }
         }
       }
     },
@@ -14013,6 +15183,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Шестнадцатые"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zestienden"
           }
         }
       }
@@ -14086,6 +15262,12 @@
             "state" : "translated",
             "value" : "Медленнее"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langzamer"
+          }
         }
       }
     },
@@ -14156,6 +15338,12 @@
             "state" : "translated",
             "value" : "Медленнее −5"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langzamer −5"
+          }
         }
       }
     },
@@ -14225,6 +15413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Распознавание речи здесь недоступно"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spraakherkenning is hier niet beschikbaar"
           }
         }
       }
@@ -14297,6 +15491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тренажёр скорости"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snelheidstrainer"
           }
         }
       }
@@ -14374,6 +15574,12 @@
             "state" : "translated",
             "value" : "Тренажёр скорости · +%1$lld каждые %2$lld т. → %3$lld"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snelheidstrainer · +%1$lld om de %2$lld maten → %3$lld"
+          }
         }
       }
     },
@@ -14444,6 +15650,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Старт"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
           }
         }
       }
@@ -14517,6 +15729,12 @@
             "state" : "translated",
             "value" : "Старт и стоп с моим инструментом"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start / stop met mijn instrument"
+          }
         }
       }
     },
@@ -14588,6 +15806,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Начать слушать"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Begin met luisteren"
           }
         }
       }
@@ -14661,6 +15885,12 @@
             "state" : "translated",
             "value" : "Запустить метроном"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronoom starten"
+          }
         }
       }
     },
@@ -14731,6 +15961,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Стоп"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
           }
         }
       }
@@ -14804,6 +16040,12 @@
             "state" : "translated",
             "value" : "Перестать слушать"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop met luisteren"
+          }
         }
       }
     },
@@ -14876,6 +16118,12 @@
             "state" : "translated",
             "value" : "Остановить метроном"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronoom stoppen"
+          }
         }
       }
     },
@@ -14946,6 +16194,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дробление"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onderverdeling"
           }
         }
       }
@@ -15019,6 +16273,12 @@
             "state" : "translated",
             "value" : "Подписаться"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonneren"
+          }
         }
       }
     },
@@ -15091,6 +16351,12 @@
             "state" : "translated",
             "value" : "Подписка на год за %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jaarlijks abonneren voor %@"
+          }
         }
       }
     },
@@ -15160,6 +16426,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поддержка"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
           }
         }
       }
@@ -15231,6 +16503,12 @@
             "state" : "translated",
             "value" : "Перейти к виду «Мячик»"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naar stuiterweergave"
+          }
         }
       }
     },
@@ -15300,6 +16578,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перейти к виду «Орбита»"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naar baanweergave"
           }
         }
       }
@@ -15373,6 +16657,12 @@
             "state" : "translated",
             "value" : "Перейти к виду «Кольцо»"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naar ringweergave"
+          }
         }
       }
     },
@@ -15445,6 +16735,12 @@
             "state" : "translated",
             "value" : "Сменить вид"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weergave wisselen"
+          }
         }
       }
     },
@@ -15515,6 +16811,12 @@
             "state" : "translated",
             "value" : "сменить визуализацию"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "wissel de weergave"
+          }
         }
       }
     },
@@ -15584,6 +16886,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выберите 1/4, 1/8, триоль или 1/16. Нажмите на карточку дважды, чтобы открыть акценты и задать каждому клику такта высокий, низкий или тихий звук."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op 1/4, 1/8, triool of 1/16. Tik twee keer op de kaart om Accenten te openen en elke klik van de maat op hoog, laag of stil te zetten."
           }
         }
       }
@@ -15657,6 +16965,12 @@
             "state" : "translated",
             "value" : "Нажимайте в ритме, чтобы проверить свой ритм"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik in het ritme om je timing te controleren"
+          }
         }
       }
     },
@@ -15726,6 +17040,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажмите «Слушать» для голосового управления"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op Luister om met je stem te bedienen"
           }
         }
       }
@@ -15797,6 +17117,12 @@
             "state" : "translated",
             "value" : "Нажмите «Слушать», чтобы включить или выключить голосовое управление."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op Luister om de spraakbediening aan of uit te zetten."
+          }
         }
       }
     },
@@ -15866,6 +17192,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажмите «Старт» / «Стоп» внизу."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik onderaan op Start / Stop."
           }
         }
       }
@@ -15939,6 +17271,12 @@
             "state" : "translated",
             "value" : "Тап-темп"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap-tempo"
+          }
         }
       }
     },
@@ -16008,6 +17346,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажимайте на большое число BPM в ритме, чтобы задать темп."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik in het ritme op het grote BPM-getal om het tempo in te stellen."
           }
         }
       }
@@ -16079,6 +17423,12 @@
             "state" : "translated",
             "value" : "Нажмите на точки, чтобы выбрать размер."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op de stippen om de maatsoort te kiezen."
+          }
         }
       }
     },
@@ -16148,6 +17498,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажмите на значок вида (справа вверху на карточке долей): мячик → орбита → кольцо."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op het weergavepictogram (rechtsboven op de telkaart): stuiter → baan → ring."
           }
         }
       }
@@ -16221,6 +17577,12 @@
             "state" : "translated",
             "value" : "Нажмите, чтобы переключаться между прыгающим мячиком и орбитальным кольцом, или скажите «bounce» / «orbit»."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik om te wisselen tussen de stuiterende bal en de baanring — of zeg “bounce” / “orbit”."
+          }
         }
       }
     },
@@ -16293,6 +17655,12 @@
             "state" : "translated",
             "value" : "Нажмите, чтобы переключать название темпа и BPM"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik om te wisselen tussen de tempoaanduiding en BPM"
+          }
         }
       }
     },
@@ -16364,6 +17732,12 @@
             "state" : "translated",
             "value" : "Темп"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
+          }
         }
       }
     },
@@ -16433,6 +17807,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Темп %lld"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo %lld"
           }
         }
       }
@@ -16506,6 +17886,12 @@
             "state" : "translated",
             "value" : "Ползунок темпа"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temposchuif"
+          }
         }
       }
     },
@@ -16577,6 +17963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Условия использования (EULA)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebruiksvoorwaarden (EULA)"
           }
         }
       }
@@ -16650,6 +18042,12 @@
             "state" : "translated",
             "value" : "Это ваш темп в виде классического термина. Нажмите, чтобы увидеть число BPM, и ещё раз — чтобы вернуться."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit is je tempo als klassieke term. Tik erop om naar het BPM-getal te wisselen en weer terug."
+          }
         }
       }
     },
@@ -16721,6 +18119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Микрофон приложения выключен, чтобы не мешать «Управлению голосом». Скажите «Tap Start», «Tap Faster» или «Tap 3 beats»."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De eigen microfoon van de app staat uit, zodat hij Spraakbediening niet in de weg zit. Zeg “Tap Start”, “Tap Faster” of “Tap 3 beats”."
           }
         }
       }
@@ -16794,6 +18198,12 @@
             "state" : "translated",
             "value" : "Полный метроном: любой темп, размер и дробление, все три вида долей, тап-темп, проверка ритма и полное голосовое управление без рук."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De complete metronoom: elk tempo, elke maatsoort en onderverdeling, alle drie de weergaven, tap-tempo, timingcontrole en volledige handsfree spraakbediening."
+          }
         }
       }
     },
@@ -16865,6 +18275,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Микрофон уже слушает: скажите «start», «faster» или «help». Пользуетесь «Управлением голосом» iOS? Откройте «Голосовые команды», чтобы переключиться."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De microfoon luistert al — zeg “start”, “faster” of “help”. Gebruik je Spraakbediening van iOS? Open Spraakcommando’s om te wisselen."
           }
         }
       }
@@ -16938,6 +18354,12 @@
             "state" : "translated",
             "value" : "Годовая подписка продлевается автоматически по цене %@ в год, пока вы не отмените её не позднее чем за 24 часа до продления в «Настройки» > «Учётная запись Apple» > «Подписки». Покупка «навсегда» — единовременный платёж."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het jaarabonnement wordt automatisch verlengd voor %@ per jaar, tenzij je het minstens 24 uur vóór de verlenging opzegt in Instellingen > Apple Account > Abonnementen. Levenslang is een eenmalige betaling."
+          }
         }
       }
     },
@@ -17010,6 +18432,12 @@
             "state" : "translated",
             "value" : "Есть и тюнер"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er is ook een tuner"
+          }
         }
       }
     },
@@ -17079,6 +18507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Проверка ритма"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timingcontrole"
           }
         }
       }
@@ -17152,6 +18586,12 @@
             "state" : "translated",
             "value" : "Советы"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tips"
+          }
         }
       }
     },
@@ -17224,6 +18664,12 @@
             "state" : "translated",
             "value" : "Тренажёр"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trainer"
+          }
         }
       }
     },
@@ -17294,6 +18740,12 @@
             "state" : "translated",
             "value" : "Триоли"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triolen"
+          }
         }
       }
     },
@@ -17363,6 +18815,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "триоли"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "triolen"
           }
         }
       }
@@ -17435,6 +18893,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Повторить"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Probeer opnieuw"
           }
         }
       }
@@ -17554,6 +19018,12 @@
             "state" : "translated",
             "value" : "Бесплатно: %lld дн."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld dagen gratis proberen"
+          }
         }
       }
     },
@@ -17659,6 +19129,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бесплатно: %lld мес."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld maanden gratis proberen"
           }
         }
       }
@@ -17778,6 +19254,12 @@
             "state" : "translated",
             "value" : "Бесплатно: %lld нед."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld weken gratis proberen"
+          }
         }
       }
     },
@@ -17847,6 +19329,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бесплатно на месяц"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een maand gratis proberen"
           }
         }
       }
@@ -17918,6 +19406,12 @@
             "state" : "translated",
             "value" : "Бесплатно на неделю"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een week gratis proberen"
+          }
         }
       }
     },
@@ -17987,6 +19481,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бесплатно на год"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een jaar gratis proberen"
           }
         }
       }
@@ -18058,6 +19558,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тюнер"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuner"
           }
         }
       }
@@ -18131,6 +19637,12 @@
             "state" : "translated",
             "value" : "Выключает микрофон приложения; кнопками можно управлять по названию"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zet de eigen microfoon van de app uit; bedien de knoppen op naam"
+          }
         }
       }
     },
@@ -18200,6 +19712,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключает микрофон приложения, чтобы они не мешали друг другу. Управляйте командами «Tap Start», «Tap Faster», «Tap 3 beats»."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zet de microfoon van deze app uit, zodat ze elkaar niet in de weg zitten. Bedien de app met “Tap Start”, “Tap Faster” of “Tap 3 beats”."
           }
         }
       }
@@ -18273,6 +19791,12 @@
             "state" : "translated",
             "value" : "Два вида долей"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Twee telweergaven"
+          }
         }
       }
     },
@@ -18343,6 +19867,12 @@
             "state" : "translated",
             "value" : "Разблокировать Pro"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro ontgrendelen"
+          }
         }
       }
     },
@@ -18412,6 +19942,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вверх +1"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omhoog +1"
           }
         }
       }
@@ -18485,6 +20021,12 @@
             "state" : "translated",
             "value" : "До %lld BPM"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tot %lld BPM"
+          }
         }
       }
     },
@@ -18554,6 +20096,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Перейти на Pro"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naar Pro"
           }
         }
       }
@@ -18626,6 +20174,12 @@
             "state" : "translated",
             "value" : "Вид"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weergave"
+          }
         }
       }
     },
@@ -18695,6 +20249,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Голос"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stem"
           }
         }
       }
@@ -18768,6 +20328,12 @@
             "state" : "translated",
             "value" : "Голосовые команды"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spraakcommando’s"
+          }
         }
       }
     },
@@ -18838,6 +20404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Голосовые команды"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spraakcommando’s"
           }
         }
       }
@@ -18910,6 +20482,12 @@
             "state" : "translated",
             "value" : "Голосовое управление выключено"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spraakbediening uit"
+          }
         }
       }
     },
@@ -18981,6 +20559,12 @@
             "state" : "translated",
             "value" : "Громкость"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volume"
+          }
         }
       }
     },
@@ -19050,6 +20634,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Громкость %lld%%"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volume %lld%%"
           }
         }
       }
@@ -19121,6 +20711,12 @@
             "state" : "translated",
             "value" : "Тише"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zachter"
+          }
         }
       }
     },
@@ -19190,6 +20786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Громче"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luider"
           }
         }
       }
@@ -19263,6 +20865,12 @@
             "state" : "translated",
             "value" : "На год"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jaarlijks"
+          }
         }
       }
     },
@@ -19333,6 +20941,12 @@
             "state" : "translated",
             "value" : "На год — %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jaarlijks — %@"
+          }
         }
       }
     },
@@ -19399,6 +21013,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -19473,6 +21093,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -19539,6 +21165,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -19613,6 +21245,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -19682,6 +21320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ Стоп"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ Stop"
           }
         }
       }
@@ -19753,6 +21397,12 @@
             "state" : "translated",
             "value" : "▶ Старт"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ Start"
+          }
         }
       }
     },
@@ -19822,6 +21472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Таймер"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer"
           }
         }
       }
@@ -19893,6 +21549,12 @@
             "state" : "translated",
             "value" : "Выкл."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uit"
+          }
         }
       }
     },
@@ -19962,6 +21624,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Таймер занятия"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oefentimer"
           }
         }
       }
@@ -20033,6 +21701,12 @@
             "state" : "translated",
             "value" : "%lld мин"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
         }
       }
     },
@@ -20102,6 +21776,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Осталось времени"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resterende tijd"
           }
         }
       }
@@ -20173,6 +21853,12 @@
             "state" : "translated",
             "value" : "Сбросить таймер"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer herstellen"
+          }
         }
       }
     },
@@ -20242,6 +21928,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Таймер выключен"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer uit"
           }
         }
       }
@@ -20313,6 +22005,12 @@
             "state" : "translated",
             "value" : "Таймер: %lld мин"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer %lld min"
+          }
         }
       }
     },
@@ -20382,6 +22080,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Осталось: %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog %@"
           }
         }
       }
@@ -20453,6 +22157,12 @@
             "state" : "translated",
             "value" : "Время занятия вышло"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De oefentijd is om"
+          }
         }
       }
     },
@@ -20522,6 +22232,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "поставить таймер занятия"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "stel een oefentimer in"
           }
         }
       }
@@ -20593,6 +22309,12 @@
             "state" : "translated",
             "value" : "выключить таймер"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "zet de timer uit"
+          }
         }
       }
     },
@@ -20662,6 +22384,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажмите кнопку таймера рядом со «Старт» или скажите «timer 5 minutes». Отсчёт идёт, пока звучит клик, затем метроном останавливается и звенит."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik op de timerknop naast Start of zeg “timer 5 minutes”. Hij telt af terwijl de klik speelt, stopt daarna en laat een geluidje horen."
           }
         }
       }
@@ -20733,6 +22461,12 @@
             "state" : "translated",
             "value" : "Отсчёт идёт, пока звучит клик, и ставится на паузу, когда вы останавливаетесь. Когда время выйдет, метроном остановится и прозвенит. Скажите «timer 5 minutes» или «timer off» в любой момент."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telt af terwijl de klik speelt en pauzeert als je stopt. Als de tijd om is, stopt de metronoom met een geluidje. Zeg op elk moment “timer 5 minutes” of “timer off”."
+          }
         }
       }
     },
@@ -20802,6 +22536,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отправлять анонимную статистику использования"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anonieme gebruiksstatistieken delen"
           }
         }
       }
@@ -20873,6 +22613,12 @@
             "state" : "translated",
             "value" : "Конфиденциальность"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
+          }
         }
       }
     },
@@ -20942,6 +22688,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Только счётчики — например, сколько устройств используют приложение, — и отчёты о сбоях. Никакого звука, настроек и личных данных. Вступает в силу со следующего запуска."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tellingen zoals hoeveel apparaten de app gebruiken, plus crashrapporten. Geen audio, instellingen of persoonlijke gegevens. Geldt vanaf de volgende keer opstarten."
           }
         }
       }
@@ -21014,6 +22766,12 @@
             "state" : "translated",
             "value" : "Ещё более крупный текст"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nóg grotere tekst"
+          }
         }
       }
     },
@@ -21084,6 +22842,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Экран остаётся читаемым и аккуратным даже при самом крупном размере текста."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het scherm blijft leesbaar en netjes, ook bij de allergrootste tekstgrootte."
           }
         }
       }
@@ -21156,6 +22920,12 @@
             "state" : "translated",
             "value" : "Цвета, которые легче различать"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kleuren die makkelijker te zien zijn"
+          }
         }
       }
     },
@@ -21226,6 +22996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Цвета долей и ритма остаются чёткими при включённом «Увеличении контраста» или если цвета трудно различать."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tel- en timingkleuren blijven duidelijk met Verhoog contrast, of als kleuren moeilijk te onderscheiden zijn."
           }
         }
       }
@@ -21298,6 +23074,12 @@
             "state" : "translated",
             "value" : "Управление с клавиатуры"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toetsenbordbediening"
+          }
         }
       }
     },
@@ -21368,6 +23150,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "На iPad с клавиатурой запускайте, останавливайте метроном и меняйте темп клавишами."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op een iPad met toetsenbord start, stop en wijzig je het tempo met toetsen."
           }
         }
       }
@@ -21440,6 +23228,12 @@
             "state" : "translated",
             "value" : "Что нового"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wat is er nieuw"
+          }
         }
       }
     },
@@ -21510,6 +23304,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "После обновления при первом запуске приложения вы увидите, что нового."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zie na een update wat er nieuw is wanneer je de app voor het eerst opent."
           }
         }
       }
@@ -21582,6 +23382,12 @@
             "state" : "translated",
             "value" : "Ответы на ваши отзывы"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antwoorden op je feedback"
+          }
         }
       }
     },
@@ -21652,6 +23458,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Читайте наши ответы на ваши отзывы прямо в приложении."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lees onze antwoorden op je feedback direct in de app."
           }
         }
       }
@@ -21724,6 +23536,12 @@
             "state" : "translated",
             "value" : "Подарить Pro"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro cadeau geven"
+          }
         }
       }
     },
@@ -21794,6 +23612,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Подарите Not My Tempo Pro коллеге по группе или ученику."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geef Not My Tempo Pro aan een bandlid of een leerling."
           }
         }
       }
@@ -21866,6 +23690,12 @@
             "state" : "translated",
             "value" : "Виджет на экране «Домой»"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget voor beginscherm"
+          }
         }
       }
     },
@@ -21936,6 +23766,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Запускайте клик прямо с экрана «Домой», не открывая приложение."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start de klik direct vanaf je beginscherm, zonder de app te openen."
           }
         }
       }
@@ -22008,6 +23844,12 @@
             "state" : "translated",
             "value" : "Siri и «Быстрые команды»"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri en Opdrachten"
+          }
         }
       }
     },
@@ -22078,6 +23920,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Попросите Siri или запустите быструю команду, чтобы включить клик в вашем темпе."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vraag het aan Siri of voer een opdracht uit om de klik in jouw tempo te starten."
           }
         }
       }
@@ -22150,6 +23998,12 @@
             "state" : "translated",
             "value" : "Синхронизация между устройствами"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchroniseren tussen apparaten"
+          }
         }
       }
     },
@@ -22220,6 +24074,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ваши пресеты и настройки переходят между iPhone и iPad."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je presets en instellingen volgen je tussen iPhone en iPad."
           }
         }
       }
@@ -22292,6 +24152,12 @@
             "state" : "translated",
             "value" : "Резервная копия пресетов"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back-up van je presets"
+          }
         }
       }
     },
@@ -22362,6 +24228,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сохраните пресеты акцентов в файл и восстановите их в любой момент."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaar je accentpresets in een bestand en haal ze op wanneer je wilt."
           }
         }
       }
@@ -22434,6 +24306,12 @@
             "state" : "translated",
             "value" : "Напоминания о занятиях"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oefenherinneringen"
+          }
         }
       }
     },
@@ -22504,6 +24382,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мягкое напоминание в то время, которое вы выбрали для занятий."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krijg een vriendelijke herinnering op het tijdstip dat jij kiest om te oefenen."
           }
         }
       }
@@ -22576,6 +24460,12 @@
             "state" : "translated",
             "value" : "Вид для складного iPhone"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indeling voor opvouwbare iPhone"
+          }
         }
       }
     },
@@ -22646,6 +24536,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "На складном iPhone доли и элементы управления располагаются рядом."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op een opvouwbare iPhone zie je de tellen en de knoppen naast elkaar."
           }
         }
       }
@@ -22718,6 +24614,12 @@
             "state" : "translated",
             "value" : "Стереть все мои данные"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wis al mijn gegevens"
+          }
         }
       }
     },
@@ -22789,6 +24691,12 @@
             "state" : "translated",
             "value" : "Удаляйте все пресеты и настройки в приложении, когда захотите."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wis al je presets en instellingen in de app wanneer je maar wilt."
+          }
         }
       }
     },
@@ -22858,6 +24766,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Активировать промокод"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanbiedingscode inwisselen"
           }
         }
       }
@@ -22929,6 +24843,12 @@
             "state" : "translated",
             "value" : "Есть код для Pro? Введите его прямо в приложении — на экране Pro или в разделе «Голосовые команды»."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heb je een code voor Pro? Voer hem direct in de app in, op het Pro-scherm of bij Spraakcommando’s."
+          }
         }
       }
     },
@@ -22998,6 +24918,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Чётче при увеличении контраста"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duidelijker met Verhoog contrast"
           }
         }
       }
@@ -23069,6 +24995,12 @@
             "state" : "translated",
             "value" : "Если включено «Увеличение контраста» или «Понижение прозрачности», доли, контуры и подсказки отображаются жирнее и без прозрачности."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Met Verhoog contrast of Verminder transparantie aan worden tellen, contouren en de helpoverlay steviger en ondoorzichtig getekend."
+          }
         }
       }
     },
@@ -23138,6 +25070,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Место для самого крупного текста"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ruimte voor de grootste tekst"
           }
         }
       }
@@ -23209,6 +25147,12 @@
             "state" : "translated",
             "value" : "При самом крупном тексте кнопки и списки перестраиваются, и ничего не обрезается."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bij de grootste tekstgroottes schikken knoppen en lijsten zich anders, zodat niets wordt afgekapt."
+          }
         }
       }
     },
@@ -23278,6 +25222,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Версия %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versie %@"
           }
         }
       }
@@ -23349,6 +25299,12 @@
             "state" : "translated",
             "value" : "Продолжить"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ga door"
+          }
         }
       }
     },
@@ -23418,6 +25374,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Метроном, с которым можно говорить"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een metronoom waar je tegen praat"
           }
         }
       }
@@ -23489,6 +25451,12 @@
             "state" : "translated",
             "value" : "Скажите «start», «stop», «faster» или «tempo 120» — обе руки остаются на инструменте."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeg “start”, “stop”, “faster” of “tempo 120” en houd beide handen op je instrument."
+          }
         }
       }
     },
@@ -23558,6 +25526,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Команды — английские слова"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commando’s zijn Engelse woorden"
           }
         }
       }
@@ -23629,6 +25603,12 @@
             "state" : "translated",
             "value" : "На любом языке приложением управляют короткие английские слова. Скажите «help» в любой момент, чтобы увидеть их все на экране."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In elke taal bedien je de app met korte Engelse woorden. Zeg op elk moment “help” om ze allemaal op het scherm te zien."
+          }
         }
       }
     },
@@ -23698,6 +25678,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Микрофон приложения остаётся выключенным, чтобы не мешать «Управлению голосом». Скажите «Tap Start» или «Tap Faster»."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De eigen microfoon van de app blijft uit, zodat hij Spraakbediening niet in de weg zit. Zeg “Tap Start” of “Tap Faster”."
           }
         }
       }
@@ -23769,6 +25755,12 @@
             "state" : "translated",
             "value" : "Далее: микрофон"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Straks: de microfoon"
+          }
         }
       }
     },
@@ -23838,6 +25830,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS запросит доступ к микрофону и распознаванию речи. Они нужны только для того, чтобы слышать ваши команды. Приложение ничего не записывает и не сохраняет."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS vraagt toegang tot de microfoon en spraakherkenning. Die worden alleen gebruikt om je commando’s te horen. De app neemt nooit iets op en bewaart niets van wat hij hoort."
           }
         }
       }
@@ -23909,6 +25907,12 @@
             "state" : "translated",
             "value" : "Пропустить"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sla over"
+          }
         }
       }
     },
@@ -23978,6 +25982,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Начать"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aan de slag"
           }
         }
       }
@@ -24049,6 +26059,12 @@
             "state" : "translated",
             "value" : "Далее"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volgende"
+          }
         }
       }
     },
@@ -24118,6 +26134,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пресет сохранён"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset bewaard"
           }
         }
       }
@@ -24189,6 +26211,12 @@
             "state" : "translated",
             "value" : "Пресетов пока нет"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog geen presets"
+          }
         }
       }
     },
@@ -24258,6 +26286,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Активировать промокод"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanbiedingscode inwisselen"
           }
         }
       }
@@ -24329,6 +26363,12 @@
             "state" : "translated",
             "value" : "Показать вступление ещё раз"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon de introductie opnieuw"
+          }
         }
       }
     },
@@ -24398,6 +26438,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Активировать код"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Code inwisselen"
           }
         }
       }
@@ -24469,6 +26515,12 @@
             "state" : "translated",
             "value" : "Вступление"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introductie"
+          }
         }
       }
     },
@@ -24538,6 +26590,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Показать вступление"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon introductie"
           }
         }
       }
@@ -24609,6 +26667,12 @@
             "state" : "translated",
             "value" : "Промокод"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanbiedingscode"
+          }
         }
       }
     },
@@ -24678,6 +26742,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Активировать код"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Code inwisselen"
           }
         }
       }
@@ -24749,6 +26819,12 @@
             "state" : "translated",
             "value" : "Что нового"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wat is er nieuw"
+          }
         }
       }
     },
@@ -24818,6 +26894,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пропустить вступление"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sla de introductie over"
           }
         }
       }

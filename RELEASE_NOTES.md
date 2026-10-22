@@ -93,6 +93,13 @@ Screens fit even the largest text sizes
 Увеличение контраста делает доли чётче
 Всё влезает и при самом крупном тексте
 
+### App Store (nl)
+
+Korte intro bij de eerste keer openen
+Wissel aanbiedingscodes in de app in
+Met meer contrast zie je de tellen beter
+Alles past ook bij de grootste tekst
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)

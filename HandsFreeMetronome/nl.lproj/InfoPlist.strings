@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "De metronoom luistert naar je spraakcommando’s (zoals “start” en “faster”) en kan het tempo herkennen van muziek die je in de buurt speelt, zodat je hem kunt bedienen zonder het scherm aan te raken.";
+"NSSpeechRecognitionUsageDescription" = "Spraakherkenning wordt gebruikt om handsfree spraakcommando’s te begrijpen. De herkenning gebeurt rechtstreeks op je apparaat.";
