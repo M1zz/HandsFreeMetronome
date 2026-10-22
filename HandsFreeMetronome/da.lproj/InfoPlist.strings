@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "Metronomen lytter efter dine stemmekommandoer (som “start” og “faster”) og kan registrere tempoet i musik, du spiller i nærheden, så du styrer den uden at røre skærmen.";
+"NSSpeechRecognitionUsageDescription" = "Talegenkendelse bruges til at forstå håndfri stemmekommandoer. Genkendelsen foregår direkte på din enhed.";

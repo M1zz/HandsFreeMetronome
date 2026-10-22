@@ -121,6 +121,13 @@ Lös in erbjudandekoder direkt i appen
 Slagen syns tydligare med Öka kontrast
 Allt ryms även med den största texten
 
+### App Store (da)
+
+Kort introduktion ved første åbning
+Indløs tilbudskoder direkte i appen
+Slagene ses tydeligere med Øg kontrast
+Alt passer også med den største tekst
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)

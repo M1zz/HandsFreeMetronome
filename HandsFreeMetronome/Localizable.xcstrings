@@ -95,6 +95,12 @@
             "state" : "translated",
             "value" : "%@ per år"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ om året"
+          }
         }
       }
     },
@@ -194,6 +200,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, %2$lld cent för lågt"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld cent for lav"
           }
         }
       }
@@ -295,6 +307,12 @@
             "state" : "translated",
             "value" : "%1$@, %2$lld cent för högt"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld cent for høj"
+          }
         }
       }
     },
@@ -385,6 +403,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, rent"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, rent"
@@ -481,6 +505,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -707,6 +737,12 @@
             "state" : "translated",
             "value" : "%lld slag"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld slag"
+          }
         }
       }
     },
@@ -839,6 +875,12 @@
             "state" : "translated",
             "value" : "%lld slag per minut"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld slag i minuttet"
+          }
         }
       }
     },
@@ -931,6 +973,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -1037,6 +1085,12 @@
             "state" : "translated",
             "value" : "%1$lld BPM, %2$@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld BPM, %2$@"
+          }
         }
       }
     },
@@ -1139,6 +1193,12 @@
             "state" : "translated",
             "value" : "%1$lld perfekta, %2$lld bra, %3$lld dåliga"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld perfekte, %2$lld gode, %3$lld dårlige"
+          }
         }
       }
     },
@@ -1234,6 +1294,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  tryck på prickarna för att välja antal slag"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  tryk på prikkerne for at vælge antal slag"
           }
         }
       }
@@ -1337,6 +1403,12 @@
             "state" : "translated",
             "value" : "%1$lld/4 · %2$@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/4 · %2$@"
+          }
         }
       }
     },
@@ -1430,6 +1502,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sextondelar"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sekstendedele"
           }
         }
       }
@@ -1525,6 +1603,12 @@
             "state" : "translated",
             "value" : "Fjärdedelar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjerdedele"
+          }
         }
       }
     },
@@ -1619,6 +1703,12 @@
             "state" : "translated",
             "value" : "Åttondelar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ottendedele"
+          }
         }
       }
     },
@@ -1709,6 +1799,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "A4 = %lld Hz"
@@ -1809,6 +1905,12 @@
             "state" : "translated",
             "value" : "Accenteditor"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenteditor"
+          }
         }
       }
     },
@@ -1903,6 +2005,12 @@
             "state" : "translated",
             "value" : "Accenteditor och förinställningar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenteditor og forudindstillinger"
+          }
         }
       }
     },
@@ -1995,6 +2103,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accenter"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accenter"
@@ -2094,6 +2208,12 @@
             "state" : "translated",
             "value" : "Tillgänglighet"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilgængelighed"
+          }
         }
       }
     },
@@ -2189,6 +2309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lägg till %lld BPM"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj %lld BPM"
           }
         }
       }
@@ -2286,6 +2412,12 @@
             "state" : "translated",
             "value" : "Alla kommandon"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle kommandoer"
+          }
         }
       }
     },
@@ -2381,6 +2513,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Använder det här mönstret, taktarten och underdelningen"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruger dette mønster, taktart og underdeling"
           }
         }
       }
@@ -2478,6 +2616,12 @@
             "state" : "translated",
             "value" : "Tillbaka"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbage"
+          }
         }
       }
     },
@@ -2574,6 +2718,12 @@
             "state" : "translated",
             "value" : "Tillbaka till metronomen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbage til metronomen"
+          }
         }
       }
     },
@@ -2668,6 +2818,12 @@
             "state" : "translated",
             "value" : "Dåligt"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dårligt"
+          }
         }
       }
     },
@@ -2760,6 +2916,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag %lld"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slag %lld"
@@ -2866,6 +3028,12 @@
             "state" : "translated",
             "value" : "Slag %1$lld, klick %2$lld"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag %1$lld, klik %2$lld"
+          }
         }
       }
     },
@@ -2967,6 +3135,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slag %1$lld av %2$lld"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag %1$lld af %2$lld"
           }
         }
       }
@@ -3070,6 +3244,12 @@
             "state" : "translated",
             "value" : "Slag %1$lld av %2$lld, %3$@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag %1$lld af %2$lld, %3$@"
+          }
         }
       }
     },
@@ -3172,6 +3352,12 @@
             "state" : "translated",
             "value" : "Slag %1$lld, klick %2$lld"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag %1$lld, klik %2$lld"
+          }
         }
       }
     },
@@ -3267,6 +3453,12 @@
             "state" : "translated",
             "value" : "Slagvy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slagvisning"
+          }
         }
       }
     },
@@ -3358,6 +3550,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slag"
@@ -3456,6 +3654,12 @@
             "state" : "translated",
             "value" : "Studsvy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoppevisning"
+          }
         }
       }
     },
@@ -3548,6 +3752,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -3648,6 +3858,12 @@
             "state" : "translated",
             "value" : "Felrapporter och önskemål om funktioner är välkomna."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fejlrapporter og ønsker til nye funktioner er meget velkomne."
+          }
         }
       }
     },
@@ -3743,6 +3959,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Köp för alltid"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Køb for evigt"
           }
         }
       }
@@ -3840,6 +4062,12 @@
             "state" : "translated",
             "value" : "Köp för alltid för %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Køb for evigt for %@"
+          }
         }
       }
     },
@@ -3935,6 +4163,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avbryt"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuller"
           }
         }
       }
@@ -4032,6 +4266,12 @@
             "state" : "translated",
             "value" : "Byt vy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skift visning"
+          }
         }
       }
     },
@@ -4128,6 +4368,12 @@
             "state" : "translated",
             "value" : "Kontrollera timing"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tjek timing"
+          }
         }
       }
     },
@@ -4221,6 +4467,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kromatisk stämapparat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kromatisk stemmeapparat"
           }
         }
       }
@@ -4317,6 +4569,12 @@
             "state" : "translated",
             "value" : "Stäng"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luk"
+          }
         }
       }
     },
@@ -4410,6 +4668,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "stäng en panel eller ett tips"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "luk et panel eller tip"
           }
         }
       }
@@ -4507,6 +4771,12 @@
             "state" : "translated",
             "value" : "Kontakta utvecklaren"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontakt udvikleren"
+          }
         }
       }
     },
@@ -4603,6 +4873,12 @@
             "state" : "translated",
             "value" : "Styr med rösten"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Styr den med stemmen"
+          }
         }
       }
     },
@@ -4696,6 +4972,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Det gick inte att hämta priser från App Store."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priserne kunne ikke hentes fra App Store."
           }
         }
       }
@@ -4793,6 +5075,12 @@
             "state" : "translated",
             "value" : "Anpassa accenter"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilpas accenter"
+          }
         }
       }
     },
@@ -4886,6 +5174,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Växlar mellan hög, låg och tyst"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skifter mellem høj, lav og lydløs"
           }
         }
       }
@@ -4983,6 +5277,12 @@
             "state" : "translated",
             "value" : "Sänk tempot"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sænk tempoet"
+          }
         }
       }
     },
@@ -5079,6 +5379,12 @@
             "state" : "translated",
             "value" : "Ta bort förinställningen %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet forudindstillingen %@"
+          }
         }
       }
     },
@@ -5172,6 +5478,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Utforma varje klick i takten – högt, lågt eller tyst – och spara mönster för varje låt."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indstil hvert klik i taktten – højt, lavt eller lydløst – og gem mønstre for hver sang."
           }
         }
       }
@@ -5267,6 +5579,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Detaljerad hjälp"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detaljeret hjælp"
           }
         }
       }
@@ -5364,6 +5682,12 @@
             "state" : "translated",
             "value" : "Stäng"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luk"
+          }
         }
       }
     },
@@ -5460,6 +5784,12 @@
             "state" : "translated",
             "value" : "Stäng hjälpen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luk hjælpen"
+          }
         }
       }
     },
@@ -5555,6 +5885,12 @@
             "state" : "translated",
             "value" : "Klar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Færdig"
+          }
         }
       }
     },
@@ -5648,6 +5984,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dubbelt ×2"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dobbelt ×2"
           }
         }
       }
@@ -5745,6 +6087,12 @@
             "state" : "translated",
             "value" : "Dubbeltryck här för att öppna accentrutnätet – ställ in varje klick i takten som högt, lågt eller tyst och spara mönster som förinställningar."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dobbelttryk her for at åbne accentgitteret: sæt hvert klik i taktten til højt, lavt eller lydløst, og gem mønstre som forudindstillinger."
+          }
         }
       }
     },
@@ -5838,6 +6186,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dubbeltryck på underdelningskortet för att redigera hela takten – varje ruta växlar hög → låg → tyst, och mönster kan sparas som förinställningar med namn."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dobbelttryk på underdelingskortet for at redigere hele taktten: hver celle skifter mellem høj → lav → lydløs, og mønstre kan gemmes som forudindstillinger med navn."
           }
         }
       }
@@ -5933,6 +6287,12 @@
             "state" : "translated",
             "value" : "Dubbeltryck för att öppna accenter"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dobbelttryk for at åbne accenter"
+          }
         }
       }
     },
@@ -6027,6 +6387,12 @@
             "state" : "translated",
             "value" : "Ner −1"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ned −1"
+          }
         }
       }
     },
@@ -6120,6 +6486,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dra i temporeglaget eller tryck på knapparna − / +."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Træk i temposkyderen, eller tryk på knapperne − / +."
           }
         }
       }
@@ -6217,6 +6589,12 @@
             "state" : "translated",
             "value" : "Redigera accenter"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rediger accenter"
+          }
         }
       }
     },
@@ -6311,6 +6689,12 @@
             "state" : "translated",
             "value" : "Åttondelar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ottendedele"
+          }
         }
       }
     },
@@ -6404,6 +6788,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åttondelar"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ottendedele"
           }
         }
       }
@@ -6501,6 +6891,12 @@
             "state" : "translated",
             "value" : "E-post"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail"
+          }
         }
       }
     },
@@ -6596,6 +6992,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mejla utvecklaren"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv til udvikleren"
           }
         }
       }
@@ -6765,6 +7167,12 @@
             "state" : "translated",
             "value" : "Var %lld:e takt"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hver %lld. takt"
+          }
         }
       }
     },
@@ -6858,6 +7266,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Varje klick i takten har sin egen ruta – %lld klick totalt. Tryck på en ruta för att växla: hög → låg → tyst."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvert klik i taktten har sin egen celle – i alt %lld klik. Tryk på en celle for at skifte: høj → lav → lydløs."
           }
         }
       }
@@ -6955,6 +7369,12 @@
             "state" : "translated",
             "value" : "Allt här fungerar även med rösten – se kommandona nedan."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alt her virker også med stemmen – se kommandoerne nedenfor."
+          }
         }
       }
     },
@@ -7051,6 +7471,12 @@
             "state" : "translated",
             "value" : "Snabbare"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hurtigere"
+          }
         }
       }
     },
@@ -7144,6 +7570,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Snabbare +5"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hurtigere +5"
           }
         }
       }
@@ -7241,6 +7673,12 @@
             "state" : "translated",
             "value" : "Glömt ett kommando?"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Glemt en kommando?"
+          }
         }
       }
     },
@@ -7337,6 +7775,12 @@
             "state" : "translated",
             "value" : "Alltid gratis, ingen upplåsning behövs:"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gratis for altid, ingen oplåsning nødvendig:"
+          }
         }
       }
     },
@@ -7430,6 +7874,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gratis provperiod"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gratis prøveperiode"
           }
         }
       }
@@ -7525,6 +7975,12 @@
             "state" : "translated",
             "value" : "Bra"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Godt"
+          }
         }
       }
     },
@@ -7615,6 +8071,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halv ÷2"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Halv ÷2"
@@ -7713,6 +8175,12 @@
             "state" : "translated",
             "value" : "Hörde: %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hørte: %@"
+          }
         }
       }
     },
@@ -7808,6 +8276,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hjälp"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hjælp"
           }
         }
       }
@@ -7905,6 +8379,12 @@
             "state" : "translated",
             "value" : "Navigera i hjälpen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navigation i hjælpen"
+          }
         }
       }
     },
@@ -8000,6 +8480,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hög ton"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Høj tone"
           }
         }
       }
@@ -8097,6 +8583,12 @@
             "state" : "translated",
             "value" : "Jag använder röststyrning i iOS"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeg bruger Stemmestyring i iOS"
+          }
         }
       }
     },
@@ -8190,6 +8682,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "I omloppsvyn trycker du på ringen medan du spelar – varje klick (även underdelningar) är ett mål. Den rörliga pricken lämnar ett spår där du tryckte, och färgade räknare summerar Perfekt / Bra / Dåligt tills du stoppar."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I kredsløbsvisningen trykker du på ringen, mens du spiller – hvert klik (også underdelinger) er et mål. Den bevægelige prik efterlader et spor, hvor dit tryk landede, og farvede tællere summerer Perfekt / Godt / Dårligt, indtil du stopper."
           }
         }
       }
@@ -8287,6 +8785,12 @@
             "state" : "translated",
             "value" : "Höj tempot"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Øg tempoet"
+          }
         }
       }
     },
@@ -8379,6 +8883,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -8479,6 +8989,12 @@
             "state" : "translated",
             "value" : "Instagram-meddelande"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-besked"
+          }
         }
       }
     },
@@ -8575,6 +9091,12 @@
             "state" : "translated",
             "value" : "Instagram-meddelande (@lee25_ios)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-besked (@lee25_ios)"
+          }
         }
       }
     },
@@ -8667,6 +9189,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instrumentsignal"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instrumentsignal"
@@ -8767,6 +9295,12 @@
             "state" : "translated",
             "value" : "ingår i Pro – tre övningsverktyg, en upplåsning."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "er en del af Pro – tre øveværktøjer, én oplåsning."
+          }
         }
       }
     },
@@ -8859,6 +9393,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Largo? Moderato?"
@@ -8959,6 +9499,12 @@
             "state" : "translated",
             "value" : "För alltid"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For evigt"
+          }
         }
       }
     },
@@ -9052,6 +9598,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "För alltid – %@ en gång"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For evigt – %@ én gang"
           }
         }
       }
@@ -9147,6 +9699,12 @@
             "state" : "translated",
             "value" : "visa kommandona du kan säga"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vis de kommandoer, du kan sige"
+          }
         }
       }
     },
@@ -9241,6 +9799,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lyssna"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyt"
           }
         }
       }
@@ -9338,6 +9902,12 @@
             "state" : "translated",
             "value" : "Lyssna efter röst"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyt efter stemme"
+          }
         }
       }
     },
@@ -9433,6 +10003,12 @@
             "state" : "translated",
             "value" : "Lyssnar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lytter"
+          }
         }
       }
     },
@@ -9526,6 +10102,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lyssnar …"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lytter …"
           }
         }
       }
@@ -9623,6 +10205,12 @@
             "state" : "translated",
             "value" : "Lyssnar … håll varje ton"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lytter … hold hver tone"
+          }
         }
       }
     },
@@ -9718,6 +10306,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hämtar priser …"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henter priser …"
           }
         }
       }
@@ -9815,6 +10409,12 @@
             "state" : "translated",
             "value" : "Låg ton"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lav tone"
+          }
         }
       }
     },
@@ -9910,6 +10510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gjord för röststyrning"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lavet til Stemmestyring"
           }
         }
       }
@@ -10007,6 +10613,12 @@
             "state" : "translated",
             "value" : "Metronomläge"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronomtilstand"
+          }
         }
       }
     },
@@ -10101,6 +10713,12 @@
             "state" : "translated",
             "value" : "Mikrofon/tal blockerat – aktivera i Inställningar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofon/tale blokeret – slå til i Indstillinger"
+          }
         }
       }
     },
@@ -10193,6 +10811,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minus"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Minus"
@@ -10292,6 +10916,12 @@
             "state" : "translated",
             "value" : "Mer"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mere"
+          }
         }
       }
     },
@@ -10385,6 +11015,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "flytta den här listan"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "flyt denne liste"
           }
         }
       }
@@ -10480,6 +11116,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tysta"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå lyden fra"
           }
         }
       }
@@ -10577,6 +11219,12 @@
             "state" : "translated",
             "value" : "Stäng av röststyrningen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå stemmestyring fra"
+          }
         }
       }
     },
@@ -10672,6 +11320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Namn (t.ex. Bossaintro)"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navn (fx Bossaintro)"
           }
         }
       }
@@ -10769,6 +11423,12 @@
             "state" : "translated",
             "value" : "Kräver appens mikrofon – stäng av ”Jag använder röststyrning i iOS” för att använda den."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kræver appens mikrofon – slå “Jeg bruger Stemmestyring i iOS” fra for at bruge den."
+          }
         }
       }
     },
@@ -10862,6 +11522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen ton hittades, spela en ton"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen tone registreret, spil en tone"
           }
         }
       }
@@ -10957,6 +11623,12 @@
             "state" : "translated",
             "value" : "Inget tidigare köp hittades."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der blev ikke fundet noget tidligere køb."
+          }
         }
       }
     },
@@ -11047,6 +11719,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -11147,6 +11825,12 @@
             "state" : "translated",
             "value" : "Inte nu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke nu"
+          }
         }
       }
     },
@@ -11243,6 +11927,12 @@
             "state" : "translated",
             "value" : "Ton"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tone"
+          }
         }
       }
     },
@@ -11334,6 +12024,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toner"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toner"
@@ -11434,6 +12130,12 @@
             "state" : "translated",
             "value" : "På skärmen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På skærmen"
+          }
         }
       }
     },
@@ -11528,6 +12230,12 @@
             "state" : "translated",
             "value" : "Öppna"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn"
+          }
         }
       }
     },
@@ -11621,6 +12329,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Öppna accenteditorn"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn accenteditoren"
           }
         }
       }
@@ -11718,6 +12432,12 @@
             "state" : "translated",
             "value" : "Öppna accenter"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn accenter"
+          }
         }
       }
     },
@@ -11811,6 +12531,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Öppna den från slagvyn nedan eller säg ”practice”."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn den fra slagvisningen nedenfor, eller sig “practice”."
           }
         }
       }
@@ -11908,6 +12634,12 @@
             "state" : "translated",
             "value" : "Öppna övning"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn øvning"
+          }
         }
       }
     },
@@ -12004,6 +12736,12 @@
             "state" : "translated",
             "value" : "Öppna övningsläget"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn øvetilstand"
+          }
         }
       }
     },
@@ -12097,6 +12835,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "öppna övningsläget"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "åbn øvetilstand"
           }
         }
       }
@@ -12192,6 +12936,12 @@
             "state" : "translated",
             "value" : "öppna stämapparaten"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "åbn stemmeapparatet"
+          }
         }
       }
     },
@@ -12285,6 +13035,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Omloppsvy"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kredsløbsvisning"
           }
         }
       }
@@ -12382,6 +13138,12 @@
             "state" : "translated",
             "value" : "Pausa"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pause"
+          }
         }
       }
     },
@@ -12478,6 +13240,12 @@
             "state" : "translated",
             "value" : "Betala en gång, behåll för alltid"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betal én gang, behold for evigt"
+          }
         }
       }
     },
@@ -12568,6 +13336,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfekt!"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfekt!"
@@ -12667,6 +13441,12 @@
             "state" : "translated",
             "value" : "Spela"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afspil"
+          }
         }
       }
     },
@@ -12760,6 +13540,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "spela / pausa"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "afspil / pause"
           }
         }
       }
@@ -12855,6 +13641,12 @@
             "state" : "translated",
             "value" : "Spela 2–5 toner, ungefär en halv sekund vardera."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spil 2–5 toner, hver i omkring et halvt sekund."
+          }
         }
       }
     },
@@ -12948,6 +13740,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spela en ton …"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spil en tone …"
           }
         }
       }
@@ -13045,6 +13843,12 @@
             "state" : "translated",
             "value" : "Spela din fras för att starta eller stoppa klicket, även mitt i en låt. Håll varje ton i ungefär en halv sekund så att snabba toner i ditt spel inte utlöser det av misstag. Fungerar när Lyssna är på."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spil din frase for at starte eller stoppe klikket, også midt i en sang. Hold hver tone i omkring et halvt sekund, så hurtige toner i dit spil ikke udløser det ved en fejl. Virker, når Lyt er slået til."
+          }
         }
       }
     },
@@ -13141,6 +13945,12 @@
             "state" : "translated",
             "value" : "Uppspelning"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afspilning"
+          }
         }
       }
     },
@@ -13233,6 +14043,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plus"
@@ -13332,6 +14148,12 @@
             "state" : "translated",
             "value" : "Övning"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Øvning"
+          }
         }
       }
     },
@@ -13427,6 +14249,12 @@
             "state" : "translated",
             "value" : "Övningsläge"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Øvetilstand"
+          }
         }
       }
     },
@@ -13520,6 +14348,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Övningsläge · accenteditor och förinställningar · stämapparat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Øvetilstand · accenteditor og forudindstillinger · stemmeapparat"
           }
         }
       }
@@ -13617,6 +14451,12 @@
             "state" : "translated",
             "value" : "Förinställning %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forudindstilling %@"
+          }
         }
       }
     },
@@ -13712,6 +14552,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Förinställningar"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forudindstillinger"
           }
         }
       }
@@ -13809,6 +14655,12 @@
             "state" : "translated",
             "value" : "Integritetspolicy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privatlivspolitik"
+          }
         }
       }
     },
@@ -13903,6 +14755,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/sv/privacy.html"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/da/privacy.html"
+          }
         }
       }
     },
@@ -13993,6 +14851,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -14093,6 +14957,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -14186,6 +15056,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro upplåst – tack!"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro er låst op – tak!"
           }
         }
       }
@@ -14281,6 +15157,12 @@
             "state" : "translated",
             "value" : "Fjärdedelar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjerdedele"
+          }
         }
       }
     },
@@ -14375,6 +15257,12 @@
             "state" : "translated",
             "value" : "Fjärdedelar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjerdedele"
+          }
         }
       }
     },
@@ -14468,6 +15356,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Höj tempot automatiskt var några takter – få upp farten i ett parti utan att släppa instrumentet."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hæv tempoet automatisk for hver få takter – få mere fart på en passage uden at slippe instrumentet."
           }
         }
       }
@@ -14565,6 +15459,12 @@
             "state" : "translated",
             "value" : "Höjer tempot automatiskt var några takter medan du spelar – för att steg för steg öka farten i ett parti. Stannar vid målet. Säg ”practice” när som helst för att öppna det här."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hæver tempoet automatisk for hver få takter, mens du spiller – så du trin for trin øger farten i en passage. Stopper ved målet. Sig “practice” når som helst for at åbne den."
+          }
         }
       }
     },
@@ -14660,6 +15560,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spela först in en kort fras."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optag først en kort frase."
           }
         }
       }
@@ -14757,6 +15663,12 @@
             "state" : "translated",
             "value" : "Spela in igen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optag igen"
+          }
         }
       }
     },
@@ -14853,6 +15765,12 @@
             "state" : "translated",
             "value" : "Spela in signal"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optag signal"
+          }
         }
       }
     },
@@ -14946,6 +15864,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stämton"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kammertone"
           }
         }
       }
@@ -15043,6 +15967,12 @@
             "state" : "translated",
             "value" : "Kräver Pro"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kræver Pro"
+          }
         }
       }
     },
@@ -15138,6 +16068,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Återställ"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nulstil"
           }
         }
       }
@@ -15235,6 +16171,12 @@
             "state" : "translated",
             "value" : "Återställ"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gendan"
+          }
         }
       }
     },
@@ -15330,6 +16272,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Återställ köp"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gendan køb"
           }
         }
       }
@@ -15427,6 +16375,12 @@
             "state" : "translated",
             "value" : "Återställ köp"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gendan køb"
+          }
         }
       }
     },
@@ -15522,6 +16476,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Återställer ett tidigare Pro-köp"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gendanner et tidligere Pro-køb"
           }
         }
       }
@@ -15619,6 +16579,12 @@
             "state" : "translated",
             "value" : "Återställer standardmönstret för den här taktarten"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gendanner standardmønsteret for denne taktart"
+          }
         }
       }
     },
@@ -15714,6 +16680,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spara"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem"
           }
         }
       }
@@ -15811,6 +16783,12 @@
             "state" : "translated",
             "value" : "Spara ett mönster per låt – när du hämtar det återställs även taktart och underdelning."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem et mønster for hver sang – når du henter det, gendannes også taktart og underdeling."
+          }
         }
       }
     },
@@ -15906,6 +16884,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spara aktuellt mönster …"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem det aktuelle mønster …"
           }
         }
       }
@@ -16003,6 +16987,12 @@
             "state" : "translated",
             "value" : "Spara mönster"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem mønster"
+          }
         }
       }
     },
@@ -16098,6 +17088,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spara förinställning"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem forudindstilling"
           }
         }
       }
@@ -16195,6 +17191,12 @@
             "state" : "translated",
             "value" : "Sparar mönstret med taktart och underdelning så att du kan hämta det per låt."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemmer mønstret med taktart og underdeling, så du kan hente det for hver sang."
+          }
         }
       }
     },
@@ -16290,6 +17292,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "säg"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sig"
           }
         }
       }
@@ -16387,6 +17395,12 @@
             "state" : "translated",
             "value" : "Säg ”close” för att stänga"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “close” for at lukke"
+          }
         }
       }
     },
@@ -16480,6 +17494,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Säg ”start”, ”faster” eller ”help”"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “start”, “faster” eller “help”"
           }
         }
       }
@@ -16576,6 +17596,12 @@
             "state" : "translated",
             "value" : "Säg ett kommando"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig en kommando"
+          }
         }
       }
     },
@@ -16669,6 +17695,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Säg ”close” / ”done” eller tryck på Klar."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “close” / “done”, eller tryk på Færdig."
           }
         }
       }
@@ -16766,6 +17798,12 @@
             "state" : "translated",
             "value" : "Säg ”close” eller tryck för att stänga"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “close”, eller tryk for at lukke"
+          }
         }
       }
     },
@@ -16862,6 +17900,12 @@
             "state" : "translated",
             "value" : "Säg ”help” när som helst – eller tryck här – för att se alla kommandon du kan säga, och sedan ”close” för att stänga."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “help” når som helst – eller tryk her – for at se alle de kommandoer, du kan sige, og derefter “close” for at lukke."
+          }
         }
       }
     },
@@ -16956,6 +18000,12 @@
             "state" : "translated",
             "value" : "Säg ”help” eller tryck på knappen ?."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “help”, eller tryk på knappen ?."
+          }
         }
       }
     },
@@ -17049,6 +18099,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Säg ”louder” / ”quieter” / ”mute” eller ”volume 60”."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “louder” / “quieter” / “mute” eller “volume 60”."
           }
         }
       }
@@ -17146,6 +18202,12 @@
             "state" : "translated",
             "value" : "Säg ”practice” för att höja tempot automatiskt var några takter medan du spelar – perfekt för snabbhetsövningar."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “practice” for at hæve tempoet automatisk for hver få takter, mens du spiller – perfekt til hastighedsøvelser."
+          }
         }
       }
     },
@@ -17240,6 +18302,12 @@
             "state" : "translated",
             "value" : "Säg ”scroll down” / ”scroll up” eller svep."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “scroll down” / “scroll up”, eller stryg."
+          }
         }
       }
     },
@@ -17333,6 +18401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Säg ”tune” och spela – ton, cent och en zon för ren stämning."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “tune”, og spil – tone, cent og en zone for ren stemning."
           }
         }
       }
@@ -17430,6 +18504,12 @@
             "state" : "translated",
             "value" : "Säg ”tune” för att öppna den kromatiska stämapparaten och ”close” när du är klar."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “tune” for at åbne det kromatiske stemmeapparat og “close”, når du er færdig."
+          }
         }
       }
     },
@@ -17523,6 +18603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scrolla"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rul"
           }
         }
       }
@@ -17618,6 +18704,12 @@
             "state" : "translated",
             "value" : "Scrolla ner"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rul ned"
+          }
         }
       }
     },
@@ -17711,6 +18803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scrolla upp"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rul op"
           }
         }
       }
@@ -17808,6 +18906,12 @@
             "state" : "translated",
             "value" : "Scrollning"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rulning"
+          }
         }
       }
     },
@@ -17901,6 +19005,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ställ in slag"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg slag"
           }
         }
       }
@@ -17996,6 +19106,12 @@
             "state" : "translated",
             "value" : "ställ in procent"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "angiv procent"
+          }
         }
       }
     },
@@ -18090,6 +19206,12 @@
             "state" : "translated",
             "value" : "ställ in taktart"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "angiv taktart"
+          }
         }
       }
     },
@@ -18183,6 +19305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ställ in värde"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "angiv værdi"
           }
         }
       }
@@ -18280,6 +19408,12 @@
             "state" : "translated",
             "value" : "Ställer in %lld/4-takt"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indstiller %lld/4-takt"
+          }
         }
       }
     },
@@ -18372,6 +19506,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signal: %@"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Signal: %@"
@@ -18470,6 +19610,12 @@
             "state" : "translated",
             "value" : "tysta klicket"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gør klikket lydløst"
+          }
         }
       }
     },
@@ -18566,6 +19712,12 @@
             "state" : "translated",
             "value" : "Tyst"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lydløs"
+          }
         }
       }
     },
@@ -18660,6 +19812,12 @@
             "state" : "translated",
             "value" : "Sextondelar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sekstendedele"
+          }
         }
       }
     },
@@ -18753,6 +19911,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sextondelar"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sekstendedele"
           }
         }
       }
@@ -18850,6 +20014,12 @@
             "state" : "translated",
             "value" : "Långsammare"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langsommere"
+          }
         }
       }
     },
@@ -18944,6 +20114,12 @@
             "state" : "translated",
             "value" : "Långsammare −5"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langsommere −5"
+          }
         }
       }
     },
@@ -19037,6 +20213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Taligenkänning är inte tillgänglig här"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Talegenkendelse er ikke tilgængelig her"
           }
         }
       }
@@ -19133,6 +20315,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hastighetstränare"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hastighedstræner"
           }
         }
       }
@@ -19234,6 +20422,12 @@
             "state" : "translated",
             "value" : "Hastighetstränare · +%1$lld var %2$lld:e takt → %3$lld"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hastighedstræner · +%1$lld hver %2$lld. takt → %3$lld"
+          }
         }
       }
     },
@@ -19325,6 +20519,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start"
@@ -19425,6 +20625,12 @@
             "state" : "translated",
             "value" : "Starta / stoppa med mitt instrument"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start / stop med mit instrument"
+          }
         }
       }
     },
@@ -19520,6 +20726,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Börja lyssna"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Begynd at lytte"
           }
         }
       }
@@ -19617,6 +20829,12 @@
             "state" : "translated",
             "value" : "Starta metronomen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start metronomen"
+          }
         }
       }
     },
@@ -19711,6 +20929,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stopp"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
           }
         }
       }
@@ -19808,6 +21032,12 @@
             "state" : "translated",
             "value" : "Sluta lyssna"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop med at lytte"
+          }
         }
       }
     },
@@ -19904,6 +21134,12 @@
             "state" : "translated",
             "value" : "Stoppa metronomen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop metronomen"
+          }
         }
       }
     },
@@ -19998,6 +21234,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Underdelning"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Underdeling"
           }
         }
       }
@@ -20095,6 +21337,12 @@
             "state" : "translated",
             "value" : "Prenumerera"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnér"
+          }
         }
       }
     },
@@ -20191,6 +21439,12 @@
             "state" : "translated",
             "value" : "Prenumerera årligen för %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnér årligt for %@"
+          }
         }
       }
     },
@@ -20281,6 +21535,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Support"
@@ -20379,6 +21639,12 @@
             "state" : "translated",
             "value" : "Byt till studsvy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skift til hoppevisning"
+          }
         }
       }
     },
@@ -20472,6 +21738,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Byt till omloppsvy"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skift til kredsløbsvisning"
           }
         }
       }
@@ -20569,6 +21841,12 @@
             "state" : "translated",
             "value" : "Byt till ringvy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skift til ringvisning"
+          }
         }
       }
     },
@@ -20665,6 +21943,12 @@
             "state" : "translated",
             "value" : "Byt vy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skift visning"
+          }
         }
       }
     },
@@ -20759,6 +22043,12 @@
             "state" : "translated",
             "value" : "byt visualisering"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "skift visualisering"
+          }
         }
       }
     },
@@ -20852,6 +22142,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tryck på 1/4, 1/8, triol eller 1/16. Dubbeltryck på kortet för att öppna accenter och ställa in varje klick i takten som högt, lågt eller tyst."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk på 1/4, 1/8, triol eller 1/16. Dobbelttryk på kortet for at åbne accenter og sætte hvert klik i taktten til højt, lavt eller lydløst."
           }
         }
       }
@@ -20949,6 +22245,12 @@
             "state" : "translated",
             "value" : "Tryck i rytm för att kontrollera din timing"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk i rytme for at tjekke din timing"
+          }
         }
       }
     },
@@ -21042,6 +22344,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tryck på Lyssna för att styra med rösten"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk på Lyt for at styre med stemmen"
           }
         }
       }
@@ -21137,6 +22445,12 @@
             "state" : "translated",
             "value" : "Tryck på Lyssna för att slå på eller av röststyrningen."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk på Lyt for at slå stemmestyring til eller fra."
+          }
         }
       }
     },
@@ -21230,6 +22544,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tryck på Start / Stopp längst ner."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk på Start / Stop nederst."
           }
         }
       }
@@ -21327,6 +22647,12 @@
             "state" : "translated",
             "value" : "Tapptempo"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap-tempo"
+          }
         }
       }
     },
@@ -21420,6 +22746,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tryck i rytm på det stora BPM-talet för att ställa in tempot."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk i rytme på det store BPM-tal for at indstille tempoet."
           }
         }
       }
@@ -21515,6 +22847,12 @@
             "state" : "translated",
             "value" : "Tryck på prickarna för att välja taktart."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk på prikkerne for at vælge taktart."
+          }
         }
       }
     },
@@ -21608,6 +22946,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tryck på vyikonen (uppe till höger på slagkortet): studs → omlopp → ring."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk på visningsikonet (øverst til højre på slagkortet): hop → kredsløb → ring."
           }
         }
       }
@@ -21705,6 +23049,12 @@
             "state" : "translated",
             "value" : "Tryck för att växla mellan den studsande bollen och omloppsringen – eller säg ”bounce” / ”orbit”."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk for at skifte mellem den hoppende bold og kredsløbsringen – eller sig “bounce” / “orbit”."
+          }
         }
       }
     },
@@ -21801,6 +23151,12 @@
             "state" : "translated",
             "value" : "Tryck för att växla mellan tempobeteckning och BPM"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk for at skifte mellem tempobetegnelse og BPM"
+          }
         }
       }
     },
@@ -21896,6 +23252,12 @@
             "state" : "translated",
             "value" : "Tempo"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
+          }
         }
       }
     },
@@ -21986,6 +23348,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo %lld"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo %lld"
@@ -22086,6 +23454,12 @@
             "state" : "translated",
             "value" : "Temporeglage"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temposkyder"
+          }
         }
       }
     },
@@ -22181,6 +23555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Användarvillkor (EULA)"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brugsvilkår (EULA)"
           }
         }
       }
@@ -22278,6 +23658,12 @@
             "state" : "translated",
             "value" : "Det här är ditt tempo som klassisk beteckning. Tryck för att byta till BPM-talet och tillbaka."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det er dit tempo som klassisk betegnelse. Tryk for at skifte til BPM-tallet og tilbage."
+          }
         }
       }
     },
@@ -22373,6 +23759,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appens egen mikrofon är av så att den inte krockar med röststyrningen. Säg ”Tap Start”, ”Tap Faster” eller ”Tap 3 beats”."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appens egen mikrofon er slået fra, så den ikke kolliderer med Stemmestyring. Sig “Tap Start”, “Tap Faster” eller “Tap 3 beats”."
           }
         }
       }
@@ -22470,6 +23862,12 @@
             "state" : "translated",
             "value" : "Hela metronomen – alla tempon, taktarter och underdelningar, alla tre slagvyer, tapptempo, timingkontroll och fullständig röststyrning utan händer."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hele metronomen – alle tempi, taktarter og underdelinger, alle tre slagvisninger, tap-tempo, timingtjek og komplet håndfri stemmestyring."
+          }
         }
       }
     },
@@ -22565,6 +23963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofonen lyssnar redan – säg ”start”, ”faster” eller ”help”. Använder du röststyrning i iOS? Öppna Röstkommandon för att byta."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofonen lytter allerede – sig “start”, “faster” eller “help”. Bruger du Stemmestyring i iOS? Åbn Stemmekommandoer for at skifte."
           }
         }
       }
@@ -22662,6 +24066,12 @@
             "state" : "translated",
             "value" : "Årsprenumerationen förnyas automatiskt för %@ per år tills du säger upp den minst 24 timmar före förnyelsen i Inställningar > Apple-konto > Prenumerationer. Köp för alltid är en engångsbetalning."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det årlige abonnement fornyes automatisk til %@ om året, medmindre du opsiger det mindst 24 timer før fornyelsen i Indstillinger > Apple-konto > Abonnementer. Køb for evigt er en enkelt engangsbetaling."
+          }
         }
       }
     },
@@ -22758,6 +24168,12 @@
             "state" : "translated",
             "value" : "Det finns också en stämapparat"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der er også et stemmeapparat"
+          }
         }
       }
     },
@@ -22852,6 +24268,12 @@
             "state" : "translated",
             "value" : "Timingkontroll"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timingtjek"
+          }
         }
       }
     },
@@ -22944,6 +24366,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tips"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tips"
@@ -23044,6 +24472,12 @@
             "state" : "translated",
             "value" : "Tränare"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Træner"
+          }
         }
       }
     },
@@ -23138,6 +24572,12 @@
             "state" : "translated",
             "value" : "Triol"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trioler"
+          }
         }
       }
     },
@@ -23228,6 +24668,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "trioler"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "trioler"
@@ -23327,6 +24773,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Försök igen"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv igen"
           }
         }
       }
@@ -23494,6 +24946,12 @@
             "state" : "translated",
             "value" : "Prova gratis i %lld dagar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv gratis i %lld dage"
+          }
         }
       }
     },
@@ -23647,6 +25105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prova gratis i %lld månader"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv gratis i %lld måneder"
           }
         }
       }
@@ -23814,6 +25278,12 @@
             "state" : "translated",
             "value" : "Prova gratis i %lld veckor"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv gratis i %lld uger"
+          }
         }
       }
     },
@@ -23907,6 +25377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prova gratis i en månad"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv gratis i en måned"
           }
         }
       }
@@ -24002,6 +25478,12 @@
             "state" : "translated",
             "value" : "Prova gratis i en vecka"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv gratis i en uge"
+          }
         }
       }
     },
@@ -24095,6 +25577,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prova gratis i ett år"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv gratis i et år"
           }
         }
       }
@@ -24190,6 +25678,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stämapparat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemmeapparat"
           }
         }
       }
@@ -24287,6 +25781,12 @@
             "state" : "translated",
             "value" : "Stänger av appens egen mikrofon och styr knapparna med deras namn"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slår appens egen mikrofon fra og styrer knapperne ved navn"
+          }
         }
       }
     },
@@ -24380,6 +25880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stänger av appens mikrofon så att de inte krockar. Styr genom att säga ”Tap Start”, ”Tap Faster”, ”Tap 3 beats”."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slår appens mikrofon fra, så de to ikke kolliderer. Styr den ved at sige “Tap Start”, “Tap Faster”, “Tap 3 beats”."
           }
         }
       }
@@ -24477,6 +25983,12 @@
             "state" : "translated",
             "value" : "Två slagvyer"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To slagvisninger"
+          }
         }
       }
     },
@@ -24571,6 +26083,12 @@
             "state" : "translated",
             "value" : "Lås upp Pro"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås Pro op"
+          }
         }
       }
     },
@@ -24664,6 +26182,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upp +1"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op +1"
           }
         }
       }
@@ -24761,6 +26285,12 @@
             "state" : "translated",
             "value" : "Upp till %lld BPM"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op til %lld BPM"
+          }
         }
       }
     },
@@ -24854,6 +26384,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uppgradera"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opgrader"
           }
         }
       }
@@ -24950,6 +26486,12 @@
             "state" : "translated",
             "value" : "Vy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visning"
+          }
         }
       }
     },
@@ -25043,6 +26585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Röst"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemme"
           }
         }
       }
@@ -25140,6 +26688,12 @@
             "state" : "translated",
             "value" : "Röstkommandon"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemmekommandoer"
+          }
         }
       }
     },
@@ -25234,6 +26788,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Röstkommandon"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemmekommandoer"
           }
         }
       }
@@ -25330,6 +26890,12 @@
             "state" : "translated",
             "value" : "Röststyrning av"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemmestyring fra"
+          }
         }
       }
     },
@@ -25425,6 +26991,12 @@
             "state" : "translated",
             "value" : "Volym"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lydstyrke"
+          }
         }
       }
     },
@@ -25518,6 +27090,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volym %lld %%"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lydstyrke %lld %%"
           }
         }
       }
@@ -25613,6 +27191,12 @@
             "state" : "translated",
             "value" : "Sänk volymen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lavere lydstyrke"
+          }
         }
       }
     },
@@ -25706,6 +27290,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Höj volymen"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Højere lydstyrke"
           }
         }
       }
@@ -25803,6 +27393,12 @@
             "state" : "translated",
             "value" : "Årlig"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Årligt"
+          }
         }
       }
     },
@@ -25897,6 +27493,12 @@
             "state" : "translated",
             "value" : "Årlig – %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Årligt – %@"
+          }
         }
       }
     },
@@ -25987,6 +27589,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -26085,6 +27693,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -26175,6 +27789,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -26273,6 +27893,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -26367,6 +27993,12 @@
             "state" : "translated",
             "value" : "■ Stopp"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ Stop"
+          }
         }
       }
     },
@@ -26457,6 +28089,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ Start"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "▶ Start"
@@ -26555,6 +28193,12 @@
             "state" : "translated",
             "value" : "Timer"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer"
+          }
         }
       }
     },
@@ -26648,6 +28292,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Av"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fra"
           }
         }
       }
@@ -26743,6 +28393,12 @@
             "state" : "translated",
             "value" : "Övningstimer"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Øvetimer"
+          }
         }
       }
     },
@@ -26836,6 +28492,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld min"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min."
           }
         }
       }
@@ -26931,6 +28593,12 @@
             "state" : "translated",
             "value" : "Tid kvar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid tilbage"
+          }
         }
       }
     },
@@ -27024,6 +28692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nollställ timern"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nulstil timer"
           }
         }
       }
@@ -27119,6 +28793,12 @@
             "state" : "translated",
             "value" : "Timer av"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer fra"
+          }
         }
       }
     },
@@ -27212,6 +28892,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer %lld min"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer %lld min."
           }
         }
       }
@@ -27307,6 +28993,12 @@
             "state" : "translated",
             "value" : "%@ kvar"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ tilbage"
+          }
         }
       }
     },
@@ -27400,6 +29092,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Övningstiden är slut"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Øvetiden er gået"
           }
         }
       }
@@ -27495,6 +29193,12 @@
             "state" : "translated",
             "value" : "ställ in en övningstimer"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "indstil en øvetimer"
+          }
         }
       }
     },
@@ -27588,6 +29292,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "stäng av timern"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "slå timeren fra"
           }
         }
       }
@@ -27683,6 +29393,12 @@
             "state" : "translated",
             "value" : "Tryck på timerknappen bredvid Start eller säg ”timer 5 minutes”. Den räknar ner medan klicket spelas och stoppar sedan med en ljudsignal."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk på timerknappen ved siden af Start, eller sig “timer 5 minutes”. Den tæller ned, mens klikket spiller, og stopper så med en lyd."
+          }
         }
       }
     },
@@ -27776,6 +29492,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Räknar ner medan klicket spelas och pausar när du stoppar. När tiden är slut stoppar metronomen med en ljudsignal. Säg ”timer 5 minutes” eller ”timer off” när som helst."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tæller ned, mens klikket spiller, og sættes på pause, når du stopper. Når tiden er gået, stopper metronomen med en lyd. Sig “timer 5 minutes” eller “timer off” når som helst."
           }
         }
       }
@@ -27871,6 +29593,12 @@
             "state" : "translated",
             "value" : "Dela anonym användningsstatistik"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Del anonym brugsstatistik"
+          }
         }
       }
     },
@@ -27965,6 +29693,12 @@
             "state" : "translated",
             "value" : "Integritet"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privatliv"
+          }
         }
       }
     },
@@ -28058,6 +29792,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Räknare, till exempel hur många enheter som använder appen, samt kraschrapporter. Inget ljud, inga inställningar och ingen personlig information. Gäller från nästa start."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tællere som fx hvor mange enheder der bruger appen, og nedbrudsrapporter. Ingen lyd, indstillinger eller personlige oplysninger. Gælder fra næste start."
           }
         }
       }
@@ -28154,6 +29894,12 @@
             "state" : "translated",
             "value" : "Ännu större text"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endnu større tekst"
+          }
         }
       }
     },
@@ -28248,6 +29994,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skärmen förblir läsbar och prydlig även med de allra största textstorlekarna."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skærmen forbliver læsbar og ryddelig, selv med de allerstørste tekststørrelser."
           }
         }
       }
@@ -28344,6 +30096,12 @@
             "state" : "translated",
             "value" : "Färger som är lättare att se"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farver, der er nemmere at se"
+          }
         }
       }
     },
@@ -28438,6 +30196,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slag- och timingfärger förblir tydliga med Öka kontrast, eller om färger är svåra att skilja åt."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slag- og timingfarver forbliver tydelige med Øg kontrast, eller hvis farver er svære at skelne."
           }
         }
       }
@@ -28534,6 +30298,12 @@
             "state" : "translated",
             "value" : "Tangentbordsstyrning"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tastaturstyring"
+          }
         }
       }
     },
@@ -28628,6 +30398,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "På iPad med tangentbord startar, stoppar och ändrar du tempot med tangenterna."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På iPad med tastatur kan du starte, stoppe og ændre tempoet med taster."
           }
         }
       }
@@ -28724,6 +30500,12 @@
             "state" : "translated",
             "value" : "Nyheter"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyheder"
+          }
         }
       }
     },
@@ -28819,6 +30601,12 @@
             "state" : "translated",
             "value" : "Efter en uppdatering ser du vad som är nytt första gången du öppnar appen."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Efter en opdatering kan du se, hvad der er nyt, første gang du åbner appen."
+          }
         }
       }
     },
@@ -28910,6 +30698,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Svar på din feedback"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Svar på din feedback"
@@ -29009,6 +30803,12 @@
             "state" : "translated",
             "value" : "Läs våra svar på din feedback direkt i appen."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Læs vores svar på din feedback direkte i appen."
+          }
         }
       }
     },
@@ -29103,6 +30903,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ge bort Pro"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giv Pro i gave"
           }
         }
       }
@@ -29199,6 +31005,12 @@
             "state" : "translated",
             "value" : "Ge Not My Tempo Pro till en bandkompis eller en elev."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giv Not My Tempo Pro til en bandkammerat eller en elev."
+          }
         }
       }
     },
@@ -29293,6 +31105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hemskärmswidget"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget til hjemmeskærmen"
           }
         }
       }
@@ -29389,6 +31207,12 @@
             "state" : "translated",
             "value" : "Starta klicket direkt från hemskärmen utan att öppna appen."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start klikket direkte fra hjemmeskærmen uden at åbne appen."
+          }
         }
       }
     },
@@ -29483,6 +31307,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri och Genvägar"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri og Genveje"
           }
         }
       }
@@ -29579,6 +31409,12 @@
             "state" : "translated",
             "value" : "Fråga Siri eller kör en genväg för att starta klicket i ditt tempo."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bed Siri eller kør en genvej for at starte klikket i dit tempo."
+          }
         }
       }
     },
@@ -29673,6 +31509,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Synka mellan enheter"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synkronisering mellem enheder"
           }
         }
       }
@@ -29769,6 +31611,12 @@
             "state" : "translated",
             "value" : "Dina förinställningar och inställningar följer med mellan iPhone och iPad."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dine forudindstillinger og indstillinger følger dig mellem iPhone og iPad."
+          }
         }
       }
     },
@@ -29863,6 +31711,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Säkerhetskopiera dina förinställningar"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sikkerhedskopier dine forudindstillinger"
           }
         }
       }
@@ -29959,6 +31813,12 @@
             "state" : "translated",
             "value" : "Spara dina accentförinställningar i en fil och hämta tillbaka dem när du vill."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem dine accentforudindstillinger i en fil, og hent dem tilbage, når du vil."
+          }
         }
       }
     },
@@ -30053,6 +31913,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Övningspåminnelser"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Øvepåmindelser"
           }
         }
       }
@@ -30149,6 +32015,12 @@
             "state" : "translated",
             "value" : "Få en vänlig påminnelse vid den tid du väljer att öva."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Få en venlig påmindelse på det tidspunkt, du vælger at øve."
+          }
         }
       }
     },
@@ -30243,6 +32115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Layout för vikbar iPhone"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layout til foldbar iPhone"
           }
         }
       }
@@ -30339,6 +32217,12 @@
             "state" : "translated",
             "value" : "På en vikbar iPhone ser du slaget och kontrollerna sida vid sida."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På en foldbar iPhone ser du slaget og betjeningen side om side."
+          }
         }
       }
     },
@@ -30433,6 +32317,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Radera all min data"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet alle mine data"
           }
         }
       }
@@ -30529,6 +32419,12 @@
             "state" : "translated",
             "value" : "Rensa alla dina förinställningar och inställningar i appen när du vill."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ryd alle dine forudindstillinger og indstillinger i appen, når du vil."
+          }
         }
       }
     },
@@ -30622,6 +32518,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lös in en erbjudandekod"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indløs en tilbudskode"
           }
         }
       }
@@ -30717,6 +32619,12 @@
             "state" : "translated",
             "value" : "Har du en kod för Pro? Ange den direkt i appen, på Pro-skärmen eller under Röstkommandon."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Har du en kode til Pro? Indtast den direkte i appen, på Pro-skærmen eller under Stemmekommandoer."
+          }
         }
       }
     },
@@ -30810,6 +32718,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tydligare med Öka kontrast"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tydeligere med Øg kontrast"
           }
         }
       }
@@ -30905,6 +32819,12 @@
             "state" : "translated",
             "value" : "Med Öka kontrast eller Minska transparens på ritas slag, konturer och hjälplagret tydligare och ogenomskinliga."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Med Øg kontrast eller Reducer gennemsigtighed slået til tegnes slag, konturer og hjælpelaget federe og uigennemsigtigt."
+          }
         }
       }
     },
@@ -30998,6 +32918,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plats för den största texten"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plads til den største tekst"
           }
         }
       }
@@ -31093,6 +33019,12 @@
             "state" : "translated",
             "value" : "Vid de största textstorlekarna ordnas knappar och listor om så att inget klipps av."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ved de største tekststørrelser omarrangeres knapper og lister, så intet bliver skåret af."
+          }
         }
       }
     },
@@ -31183,6 +33115,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Version %@"
@@ -31281,6 +33219,12 @@
             "state" : "translated",
             "value" : "Fortsätt"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortsæt"
+          }
         }
       }
     },
@@ -31374,6 +33318,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "En metronom du pratar med"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En metronom, du taler med"
           }
         }
       }
@@ -31469,6 +33419,12 @@
             "state" : "translated",
             "value" : "Säg ”start”, ”stop”, ”faster” eller ”tempo 120” och ha båda händerna kvar på instrumentet."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sig “start”, “stop”, “faster” eller “tempo 120”, og behold begge hænder på instrumentet."
+          }
         }
       }
     },
@@ -31562,6 +33518,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kommandona är engelska ord"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommandoerne er engelske ord"
           }
         }
       }
@@ -31657,6 +33619,12 @@
             "state" : "translated",
             "value" : "På alla språk styr du appen med korta engelska ord. Säg ”help” när som helst för att se dem alla på skärmen."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På alle sprog styrer du appen med korte engelske ord. Sig “help” når som helst for at se dem alle på skærmen."
+          }
         }
       }
     },
@@ -31750,6 +33718,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appens egen mikrofon förblir av så att den inte krockar med röststyrningen. Säg ”Tap Start” eller ”Tap Faster”."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appens egen mikrofon forbliver slået fra, så den ikke kolliderer med Stemmestyring. Sig “Tap Start” eller “Tap Faster”."
           }
         }
       }
@@ -31845,6 +33819,12 @@
             "state" : "translated",
             "value" : "Härnäst: mikrofonen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Næste: mikrofonen"
+          }
         }
       }
     },
@@ -31938,6 +33918,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS frågar efter mikrofon och taligenkänning. De används bara för att höra dina kommandon. Appen spelar aldrig in eller sparar det den hör."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS spørger om adgang til mikrofonen og talegenkendelse. De bruges kun til at høre dine kommandoer. Appen optager eller gemmer aldrig det, den hører."
           }
         }
       }
@@ -32033,6 +34019,12 @@
             "state" : "translated",
             "value" : "Hoppa över"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spring over"
+          }
         }
       }
     },
@@ -32126,6 +34118,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kom igång"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom i gang"
           }
         }
       }
@@ -32221,6 +34219,12 @@
             "state" : "translated",
             "value" : "Nästa"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Næste"
+          }
         }
       }
     },
@@ -32314,6 +34318,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Förinställning sparad"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forudindstilling gemt"
           }
         }
       }
@@ -32409,6 +34419,12 @@
             "state" : "translated",
             "value" : "Inga förinställningar än"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen forudindstillinger endnu"
+          }
         }
       }
     },
@@ -32502,6 +34518,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lös in erbjudandekod"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indløs tilbudskode"
           }
         }
       }
@@ -32597,6 +34619,12 @@
             "state" : "translated",
             "value" : "Visa introduktionen igen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vis introduktionen igen"
+          }
         }
       }
     },
@@ -32691,6 +34719,12 @@
             "state" : "translated",
             "value" : "Lös in kod"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indløs kode"
+          }
         }
       }
     },
@@ -32781,6 +34815,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduktion"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Introduktion"
@@ -32879,6 +34919,12 @@
             "state" : "translated",
             "value" : "Visa introduktionen"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vis introduktionen"
+          }
         }
       }
     },
@@ -32972,6 +35018,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Erbjudandekod"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbudskode"
           }
         }
       }
@@ -33067,6 +35119,12 @@
             "state" : "translated",
             "value" : "Lös in kod"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indløs kode"
+          }
         }
       }
     },
@@ -33161,6 +35219,12 @@
             "state" : "translated",
             "value" : "Nyheter"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyheder"
+          }
         }
       }
     },
@@ -33254,6 +35318,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hoppa över introduktionen"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spring introduktionen over"
           }
         }
       }
