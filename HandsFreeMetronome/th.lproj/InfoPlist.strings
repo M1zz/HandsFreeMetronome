@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "เมโทรนอมจะฟังคำสั่งเสียงของคุณ (เช่น “start” และ “faster”) และตรวจจับความเร็วของเพลงที่คุณเล่นอยู่ใกล้ ๆ ได้ คุณจึงควบคุมได้โดยไม่ต้องแตะหน้าจอ";
+"NSSpeechRecognitionUsageDescription" = "การรู้จำเสียงพูดใช้เพื่อเข้าใจคำสั่งเสียงแบบไม่ใช้มือ การรู้จำทำงานบนอุปกรณ์ของคุณโดยตรง";

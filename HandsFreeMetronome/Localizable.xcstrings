@@ -137,6 +137,12 @@
             "state" : "translated",
             "value" : "%@ ανά έτος"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ต่อปี"
+          }
         }
       }
     },
@@ -278,6 +284,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, %2$lld σεντ χαμηλότερα"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ ต่ำไป %2$lld เซนต์"
           }
         }
       }
@@ -421,6 +433,12 @@
             "state" : "translated",
             "value" : "%1$@, %2$lld σεντ υψηλότερα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ สูงไป %2$lld เซนต์"
+          }
         }
       }
     },
@@ -557,6 +575,12 @@
             "state" : "translated",
             "value" : "%@, κούρδισμα ΟΚ"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ตรงเสียงแล้ว"
+          }
         }
       }
     },
@@ -691,6 +715,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -1007,6 +1037,12 @@
               }
             }
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld จังหวะ"
+          }
         }
       }
     },
@@ -1181,6 +1217,12 @@
             "state" : "translated",
             "value" : "%lld παλμοί ανά λεπτό"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld จังหวะต่อนาที"
+          }
         }
       }
     },
@@ -1315,6 +1357,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -1463,6 +1511,12 @@
             "state" : "translated",
             "value" : "%1$lld BPM, %2$@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld BPM, %2$@"
+          }
         }
       }
     },
@@ -1607,6 +1661,12 @@
             "state" : "translated",
             "value" : "%1$lld τέλεια, %2$lld καλά, %3$lld άστοχα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เป๊ะ %1$lld ดี %2$lld พลาด %3$lld"
+          }
         }
       }
     },
@@ -1744,6 +1804,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  πατήστε τις τελείες για να ορίσετε τους χρόνους"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  แตะจุดเพื่อเลือกจำนวนจังหวะ"
           }
         }
       }
@@ -1889,6 +1955,12 @@
             "state" : "translated",
             "value" : "%1$lld/4 · %2$@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/4 · %2$@"
+          }
         }
       }
     },
@@ -2024,6 +2096,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεκαεξαδικά"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โน้ตตัวเขบ็ต 2 ชั้น"
           }
         }
       }
@@ -2161,6 +2239,12 @@
             "state" : "translated",
             "value" : "Τέταρτα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โน้ตตัวดำ"
+          }
         }
       }
     },
@@ -2297,6 +2381,12 @@
             "state" : "translated",
             "value" : "Όγδοα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โน้ตตัวเขบ็ต"
+          }
         }
       }
     },
@@ -2432,6 +2522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Λα4 = %lld Hz"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
           }
         }
       }
@@ -2571,6 +2667,12 @@
             "state" : "translated",
             "value" : "Επεξεργασία τόνων"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวแก้ไขเสียงเน้น"
+          }
         }
       }
     },
@@ -2706,6 +2808,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Επεξεργασία τόνων και προεπιλογές"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวแก้ไขเสียงเน้นและค่าที่ตั้งไว้"
           }
         }
       }
@@ -2845,6 +2953,12 @@
             "state" : "translated",
             "value" : "Τόνοι"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เสียงเน้น"
+          }
         }
       }
     },
@@ -2981,6 +3095,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προσβασιμότητα"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การช่วยการเข้าถึง"
           }
         }
       }
@@ -3120,6 +3240,12 @@
             "state" : "translated",
             "value" : "Προσθήκη %lld BPM"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่ม %lld BPM"
+          }
         }
       }
     },
@@ -3257,6 +3383,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Όλες οι εντολές"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คำสั่งทั้งหมด"
           }
         }
       }
@@ -3396,6 +3528,12 @@
             "state" : "translated",
             "value" : "Εφαρμόζει αυτό το μοτίβο, το μέτρο και τον υποδιαιρετικό χωρισμό"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้รูปแบบ อัตราจังหวะ และการแบ่งจังหวะย่อยนี้"
+          }
         }
       }
     },
@@ -3533,6 +3671,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πίσω"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กลับ"
           }
         }
       }
@@ -3672,6 +3816,12 @@
             "state" : "translated",
             "value" : "Πίσω στο μετρονόμο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กลับไปที่เมโทรนอม"
+          }
         }
       }
     },
@@ -3807,6 +3957,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Άστοχο"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พลาด"
           }
         }
       }
@@ -3945,6 +4101,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χρόνος %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จังหวะที่ %lld"
           }
         }
       }
@@ -4090,6 +4252,12 @@
             "state" : "translated",
             "value" : "Χρόνος %1$lld, κλικ %2$lld"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จังหวะที่ %1$lld เสียงคลิกที่ %2$lld"
+          }
         }
       }
     },
@@ -4233,6 +4401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χρόνος %1$lld από %2$lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จังหวะที่ %1$lld จาก %2$lld"
           }
         }
       }
@@ -4378,6 +4552,12 @@
             "state" : "translated",
             "value" : "Χρόνος %1$lld από %2$lld, %3$@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จังหวะที่ %1$lld จาก %2$lld, %3$@"
+          }
         }
       }
     },
@@ -4522,6 +4702,12 @@
             "state" : "translated",
             "value" : "Χρόνος %1$lld, κλικ %2$lld"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จังหวะที่ %1$lld เสียงคลิกที่ %2$lld"
+          }
         }
       }
     },
@@ -4658,6 +4844,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προβολή χρόνων"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มุมมองจังหวะ"
           }
         }
       }
@@ -4796,6 +4988,12 @@
             "state" : "translated",
             "value" : "Χρόνοι"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จังหวะ"
+          }
         }
       }
     },
@@ -4932,6 +5130,12 @@
             "state" : "translated",
             "value" : "Προβολή αναπήδησης"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มุมมองลูกบอลเด้ง"
+          }
         }
       }
     },
@@ -5066,6 +5270,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -5208,6 +5418,12 @@
             "state" : "translated",
             "value" : "Οι αναφορές σφαλμάτων και τα αιτήματα λειτουργιών είναι ευπρόσδεκτα."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยินดีรับรายงานข้อบกพร่องและข้อเสนอแนะฟีเจอร์ใหม่"
+          }
         }
       }
     },
@@ -5345,6 +5561,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αγορά για πάντα"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ซื้อแบบตลอดชีพ"
           }
         }
       }
@@ -5484,6 +5706,12 @@
             "state" : "translated",
             "value" : "Αγορά για πάντα με %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ซื้อแบบตลอดชีพ %@"
+          }
         }
       }
     },
@@ -5621,6 +5849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ακύρωση"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยกเลิก"
           }
         }
       }
@@ -5760,6 +5994,12 @@
             "state" : "translated",
             "value" : "Αλλαγή προβολής"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปลี่ยนมุมมอง"
+          }
         }
       }
     },
@@ -5898,6 +6138,12 @@
             "state" : "translated",
             "value" : "Έλεγχος ρυθμού"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตรวจความแม่นจังหวะ"
+          }
         }
       }
     },
@@ -6033,6 +6279,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χρωματικό κουρδιστήρι"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เครื่องตั้งสายโครมาติก"
           }
         }
       }
@@ -6171,6 +6423,12 @@
             "state" : "translated",
             "value" : "Κλείσιμο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิด"
+          }
         }
       }
     },
@@ -6306,6 +6564,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "κλείσιμο πίνακα ή συμβουλής"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดแผงหรือคำแนะนำ"
           }
         }
       }
@@ -6445,6 +6709,12 @@
             "state" : "translated",
             "value" : "Επικοινωνία με τον προγραμματιστή"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ติดต่อผู้พัฒนา"
+          }
         }
       }
     },
@@ -6583,6 +6853,12 @@
             "state" : "translated",
             "value" : "Ελέγξτε το με τη φωνή σας"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ควบคุมด้วยเสียง"
+          }
         }
       }
     },
@@ -6718,6 +6994,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεν ήταν δυνατή η φόρτωση τιμών από το App Store."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหลดราคาจาก App Store ไม่ได้"
           }
         }
       }
@@ -6857,6 +7139,12 @@
             "state" : "translated",
             "value" : "Προσαρμογή τόνων"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปรับแต่งเสียงเน้น"
+          }
         }
       }
     },
@@ -6992,6 +7280,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εναλλάσσει υψηλό, χαμηλό και σιωπηλό"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สลับระหว่างเสียงสูง เสียงต่ำ และเงียบ"
           }
         }
       }
@@ -7131,6 +7425,12 @@
             "state" : "translated",
             "value" : "Μείωση ταχύτητας"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลดความเร็ว"
+          }
         }
       }
     },
@@ -7269,6 +7569,12 @@
             "state" : "translated",
             "value" : "Διαγραφή προεπιλογής %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลบค่าที่ตั้งไว้ %@"
+          }
         }
       }
     },
@@ -7404,6 +7710,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ορίστε κάθε κλικ του μέτρου — υψηλό, χαμηλό ή σιωπηλό — και αποθηκεύστε μοτίβα για κάθε κομμάτι."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำหนดเสียงคลิกทุกจังหวะในห้อง จะสูง ต่ำ หรือเงียบก็ได้ แล้วบันทึกรูปแบบแยกตามเพลง"
           }
         }
       }
@@ -7541,6 +7853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αναλυτική βοήθεια"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วิธีใช้แบบละเอียด"
           }
         }
       }
@@ -7680,6 +7998,12 @@
             "state" : "translated",
             "value" : "Κλείσιμο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิด"
+          }
         }
       }
     },
@@ -7818,6 +8142,12 @@
             "state" : "translated",
             "value" : "Κλείσιμο βοήθειας"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดวิธีใช้"
+          }
         }
       }
     },
@@ -7955,6 +8285,12 @@
             "state" : "translated",
             "value" : "Τέλος"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เสร็จสิ้น"
+          }
         }
       }
     },
@@ -8090,6 +8426,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Διπλάσιο ×2"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เร็วขึ้นเท่าตัว ×2"
           }
         }
       }
@@ -8229,6 +8571,12 @@
             "state" : "translated",
             "value" : "Πατήστε δύο φορές για να ανοίξετε το πλέγμα τόνων: ορίστε κάθε κλικ του μέτρου ως υψηλό, χαμηλό ή σιωπηλό και αποθηκεύστε μοτίβα ως προεπιλογές."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะสองครั้งเพื่อเปิดตารางเสียงเน้น: กำหนดเสียงคลิกทุกจังหวะในห้องเป็นสูง ต่ำ หรือเงียบ แล้วบันทึกรูปแบบเป็นค่าที่ตั้งไว้"
+          }
         }
       }
     },
@@ -8364,6 +8712,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πατήστε δύο φορές την κάρτα υποδιαίρεσης για να επεξεργαστείτε ολόκληρο το μέτρο: κάθε κελί εναλλάσσεται υψηλό → χαμηλό → σιωπηλό και τα μοτίβα αποθηκεύονται ως προεπιλογές με όνομα."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะสองครั้งที่การ์ดการแบ่งจังหวะย่อยเพื่อแก้ไขทั้งห้อง: แต่ละช่องจะสลับสูง → ต่ำ → เงียบ และบันทึกรูปแบบเป็นค่าที่ตั้งไว้พร้อมชื่อได้"
           }
         }
       }
@@ -8501,6 +8855,12 @@
             "state" : "translated",
             "value" : "Πατήστε δύο φορές για να ανοίξουν οι τόνοι"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะสองครั้งเพื่อเปิดเสียงเน้น"
+          }
         }
       }
     },
@@ -8637,6 +8997,12 @@
             "state" : "translated",
             "value" : "Κάτω −1"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลด −1"
+          }
         }
       }
     },
@@ -8772,6 +9138,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σύρετε το ρυθμιστικό ταχύτητας ή πατήστε τα κουμπιά − / +."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลากแถบเลื่อนความเร็ว หรือแตะปุ่ม − / +"
           }
         }
       }
@@ -8911,6 +9283,12 @@
             "state" : "translated",
             "value" : "Επεξεργασία τόνων"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แก้ไขเสียงเน้น"
+          }
         }
       }
     },
@@ -9047,6 +9425,12 @@
             "state" : "translated",
             "value" : "Όγδοα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โน้ตตัวเขบ็ต"
+          }
         }
       }
     },
@@ -9182,6 +9566,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Όγδοα"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวเขบ็ต"
           }
         }
       }
@@ -9321,6 +9711,12 @@
             "state" : "translated",
             "value" : "Email"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อีเมล"
+          }
         }
       }
     },
@@ -9458,6 +9854,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Στείλτε email στον προγραμματιστή"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ส่งอีเมลถึงผู้พัฒนา"
           }
         }
       }
@@ -9669,6 +10071,12 @@
             "state" : "translated",
             "value" : "Κάθε %lld μέτρα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทุก %lld ห้อง"
+          }
         }
       }
     },
@@ -9804,6 +10212,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κάθε κλικ του μέτρου έχει το δικό του κελί — %lld κλικ συνολικά. Πατήστε ένα κελί για εναλλαγή: υψηλό → χαμηλό → σιωπηλό."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เสียงคลิกแต่ละครั้งในห้องมีช่องของตัวเอง รวม %lld ครั้ง แตะช่องเพื่อสลับ: สูง → ต่ำ → เงียบ"
           }
         }
       }
@@ -9943,6 +10357,12 @@
             "state" : "translated",
             "value" : "Όλα εδώ λειτουργούν και με τη φωνή — δείτε τις εντολές παρακάτω."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทุกอย่างที่นี่ใช้ด้วยเสียงได้เช่นกัน ดูคำสั่งด้านล่าง"
+          }
         }
       }
     },
@@ -10081,6 +10501,12 @@
             "state" : "translated",
             "value" : "Πιο γρήγορα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เร็วขึ้น"
+          }
         }
       }
     },
@@ -10216,6 +10642,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πιο γρήγορα +5"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เร็วขึ้น +5"
           }
         }
       }
@@ -10355,6 +10787,12 @@
             "state" : "translated",
             "value" : "Ξεχάσατε μια εντολή;"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลืมคำสั่งใช่ไหม"
+          }
         }
       }
     },
@@ -10493,6 +10931,12 @@
             "state" : "translated",
             "value" : "Πάντα δωρεάν, χωρίς ξεκλείδωμα:"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้ฟรีตลอดไป ไม่ต้องปลดล็อก:"
+          }
         }
       }
     },
@@ -10628,6 +11072,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δωρεάν δοκιμή"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทดลองใช้ฟรี"
           }
         }
       }
@@ -10765,6 +11215,12 @@
             "state" : "translated",
             "value" : "Καλό"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดี"
+          }
         }
       }
     },
@@ -10901,6 +11357,12 @@
             "state" : "translated",
             "value" : "Μισό ÷2"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ช้าลงครึ่งหนึ่ง ÷2"
+          }
         }
       }
     },
@@ -11036,6 +11498,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Άκουσα: %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ได้ยิน: %@"
           }
         }
       }
@@ -11175,6 +11643,12 @@
             "state" : "translated",
             "value" : "Βοήθεια"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วิธีใช้"
+          }
         }
       }
     },
@@ -11312,6 +11786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πλοήγηση στη βοήθεια"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การนำทางในวิธีใช้"
           }
         }
       }
@@ -11451,6 +11931,12 @@
             "state" : "translated",
             "value" : "Υψηλός ήχος"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เสียงสูง"
+          }
         }
       }
     },
@@ -11589,6 +12075,12 @@
             "state" : "translated",
             "value" : "Χρησιμοποιώ τον Έλεγχο φωνής του iOS"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ฉันใช้การควบคุมด้วยเสียงของ iOS"
+          }
         }
       }
     },
@@ -11724,6 +12216,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Στην προβολή τροχιάς, πατήστε τον δακτύλιο ενώ παίζετε — κάθε κλικ (και οι υποδιαιρέσεις) είναι στόχος. Η κινούμενη τελεία αφήνει ίχνος εκεί που πατήσατε και έγχρωμοι μετρητές καταγράφουν Τέλεια / Καλά / Άστοχα μέχρι να σταματήσετε."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ในมุมมองวงโคจร ให้แตะวงแหวนขณะเล่น ทุกเสียงคลิก (รวมถึงจังหวะย่อย) คือเป้าหมาย จุดที่เคลื่อนที่จะทิ้งรอยไว้ตรงที่คุณแตะ และตัวนับสีจะนับ เป๊ะ / ดี / พลาด จนกว่าคุณจะหยุด"
           }
         }
       }
@@ -11863,6 +12361,12 @@
             "state" : "translated",
             "value" : "Αύξηση ταχύτητας"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มความเร็ว"
+          }
         }
       }
     },
@@ -11997,6 +12501,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -12139,6 +12649,12 @@
             "state" : "translated",
             "value" : "Μήνυμα στο Instagram"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้อความ Instagram"
+          }
         }
       }
     },
@@ -12276,6 +12792,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μήνυμα στο Instagram (@lee25_ios)"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้อความ Instagram (@lee25_ios)"
           }
         }
       }
@@ -12415,6 +12937,12 @@
             "state" : "translated",
             "value" : "Σήμα οργάνου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สัญญาณจากเครื่องดนตรี"
+          }
         }
       }
     },
@@ -12552,6 +13080,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ανήκει στο Pro — τρία εργαλεία εξάσκησης, ένα ξεκλείδωμα."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เป็นส่วนหนึ่งของ Pro ปลดล็อกครั้งเดียวได้เครื่องมือฝึกซ้อมสามอย่าง"
           }
         }
       }
@@ -12691,6 +13225,12 @@
             "state" : "translated",
             "value" : "Largo; Moderato;"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
         }
       }
     },
@@ -12829,6 +13369,12 @@
             "state" : "translated",
             "value" : "Για πάντα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตลอดชีพ"
+          }
         }
       }
     },
@@ -12964,6 +13510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Για πάντα — %@ εφάπαξ"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตลอดชีพ — จ่ายครั้งเดียว %@"
           }
         }
       }
@@ -13101,6 +13653,12 @@
             "state" : "translated",
             "value" : "εμφάνιση των εντολών που μπορείτε να πείτε"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงคำสั่งที่พูดได้"
+          }
         }
       }
     },
@@ -13237,6 +13795,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ακρόαση"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ฟัง"
           }
         }
       }
@@ -13376,6 +13940,12 @@
             "state" : "translated",
             "value" : "Ακρόαση φωνής"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ฟังเสียงพูด"
+          }
         }
       }
     },
@@ -13513,6 +14083,12 @@
             "state" : "translated",
             "value" : "Ακούει"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังฟัง"
+          }
         }
       }
     },
@@ -13648,6 +14224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ακούει…"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังฟัง…"
           }
         }
       }
@@ -13787,6 +14369,12 @@
             "state" : "translated",
             "value" : "Ακούει… κρατήστε κάθε νότα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังฟัง… กดโน้ตแต่ละตัวค้างไว้"
+          }
         }
       }
     },
@@ -13924,6 +14512,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φόρτωση τιμών…"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังโหลดราคา…"
           }
         }
       }
@@ -14063,6 +14657,12 @@
             "state" : "translated",
             "value" : "Χαμηλός ήχος"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เสียงต่ำ"
+          }
         }
       }
     },
@@ -14200,6 +14800,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φτιαγμένο για Έλεγχο φωνής"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ออกแบบมาเพื่อการควบคุมด้วยเสียง"
           }
         }
       }
@@ -14339,6 +14945,12 @@
             "state" : "translated",
             "value" : "Λειτουργία μετρονόμου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหมดเมโทรนอม"
+          }
         }
       }
     },
@@ -14474,6 +15086,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μικρόφωνο/ομιλία αποκλεισμένα — ενεργοποιήστε στις Ρυθμίσεις"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไมค์/เสียงพูดถูกบล็อก — เปิดใช้ในการตั้งค่า"
           }
         }
       }
@@ -14613,6 +15231,12 @@
             "state" : "translated",
             "value" : "Μείον"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลบ"
+          }
         }
       }
     },
@@ -14750,6 +15374,12 @@
             "state" : "translated",
             "value" : "Περισσότερα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มเติม"
+          }
         }
       }
     },
@@ -14885,6 +15515,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "κύλιση αυτής της λίστας"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลื่อนรายการนี้"
           }
         }
       }
@@ -15022,6 +15658,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σίγαση"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดเสียง"
           }
         }
       }
@@ -15161,6 +15803,12 @@
             "state" : "translated",
             "value" : "Σίγαση ελέγχου φωνής"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดเสียงการควบคุมด้วยเสียง"
+          }
         }
       }
     },
@@ -15298,6 +15946,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Όνομα (π.χ. Εισαγωγή μπόσα νόβα)"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ชื่อ (เช่น อินโทรบอสซา)"
           }
         }
       }
@@ -15437,6 +16091,12 @@
             "state" : "translated",
             "value" : "Χρειάζεται το μικρόφωνο της εφαρμογής — απενεργοποιήστε το «Χρησιμοποιώ τον Έλεγχο φωνής του iOS» για να το χρησιμοποιήσετε."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ต้องใช้ไมค์ของแอปนี้ — ปิด “ฉันใช้การควบคุมด้วยเสียงของ iOS” เพื่อใช้งาน"
+          }
         }
       }
     },
@@ -15572,6 +16232,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεν εντοπίστηκε νότα, παίξτε μια νότα"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่พบโน้ต ลองเล่นโน้ตสักตัว"
           }
         }
       }
@@ -15709,6 +16375,12 @@
             "state" : "translated",
             "value" : "Δεν βρέθηκε προηγούμενη αγορά."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่พบการซื้อก่อนหน้า"
+          }
         }
       }
     },
@@ -15841,6 +16513,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -15983,6 +16661,12 @@
             "state" : "translated",
             "value" : "Όχι τώρα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไว้ทีหลัง"
+          }
         }
       }
     },
@@ -16121,6 +16805,12 @@
             "state" : "translated",
             "value" : "Νότα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โน้ต"
+          }
         }
       }
     },
@@ -16257,6 +16947,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Νότες"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โน้ต"
           }
         }
       }
@@ -16396,6 +17092,12 @@
             "state" : "translated",
             "value" : "Στην οθόνη"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บนหน้าจอ"
+          }
         }
       }
     },
@@ -16532,6 +17234,12 @@
             "state" : "translated",
             "value" : "Άνοιγμα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิด"
+          }
         }
       }
     },
@@ -16667,6 +17375,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Άνοιγμα επεξεργασίας τόνων"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดตัวแก้ไขเสียงเน้น"
           }
         }
       }
@@ -16806,6 +17520,12 @@
             "state" : "translated",
             "value" : "Άνοιγμα τόνων"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดเสียงเน้น"
+          }
         }
       }
     },
@@ -16941,6 +17661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ανοίξτε το από την προβολή χρόνων παρακάτω ή πείτε «practice»."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดได้จากมุมมองจังหวะด้านล่าง หรือพูดว่า “practice”"
           }
         }
       }
@@ -17080,6 +17806,12 @@
             "state" : "translated",
             "value" : "Άνοιγμα εξάσκησης"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดการฝึกซ้อม"
+          }
         }
       }
     },
@@ -17218,6 +17950,12 @@
             "state" : "translated",
             "value" : "Άνοιγμα λειτουργίας εξάσκησης"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดโหมดฝึกซ้อม"
+          }
         }
       }
     },
@@ -17353,6 +18091,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "άνοιγμα λειτουργίας εξάσκησης"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดโหมดฝึกซ้อม"
           }
         }
       }
@@ -17490,6 +18234,12 @@
             "state" : "translated",
             "value" : "άνοιγμα κουρδιστηριού"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดเครื่องตั้งสาย"
+          }
         }
       }
     },
@@ -17625,6 +18375,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προβολή τροχιάς"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มุมมองวงโคจร"
           }
         }
       }
@@ -17764,6 +18520,12 @@
             "state" : "translated",
             "value" : "Παύση"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดชั่วคราว"
+          }
         }
       }
     },
@@ -17902,6 +18664,12 @@
             "state" : "translated",
             "value" : "Πληρώστε μία φορά, δικό σας για πάντα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จ่ายครั้งเดียว เป็นของคุณตลอดไป"
+          }
         }
       }
     },
@@ -18037,6 +18805,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τέλειο!"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เป๊ะ!"
           }
         }
       }
@@ -18175,6 +18949,12 @@
             "state" : "translated",
             "value" : "Αναπαραγωγή"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เล่น"
+          }
         }
       }
     },
@@ -18310,6 +19090,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "αναπαραγωγή / παύση"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เล่น / หยุดชั่วคราว"
           }
         }
       }
@@ -18447,6 +19233,12 @@
             "state" : "translated",
             "value" : "Παίξτε 2–5 νότες, περίπου μισό δευτερόλεπτο η καθεμία."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เล่นโน้ต 2–5 ตัว ตัวละประมาณครึ่งวินาที"
+          }
         }
       }
     },
@@ -18582,6 +19374,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Παίξτε μια νότα…"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เล่นโน้ตสักตัว…"
           }
         }
       }
@@ -18721,6 +19519,12 @@
             "state" : "translated",
             "value" : "Παίξτε τη φράση σας για να ξεκινήσετε ή να σταματήσετε το κλικ, ακόμα και στη μέση ενός κομματιού. Κρατήστε κάθε νότα περίπου μισό δευτερόλεπτο, ώστε οι γρήγορες νότες του παιξίματός σας να μην το ενεργοποιούν κατά λάθος. Λειτουργεί όσο η Ακρόαση είναι ενεργή."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เล่นวลีของคุณเพื่อเริ่มหรือหยุดเสียงคลิก แม้อยู่กลางเพลง กดโน้ตแต่ละตัวค้างประมาณครึ่งวินาที เพื่อไม่ให้โน้ตเร็ว ๆ ในการเล่นของคุณไปกระตุ้นโดยไม่ตั้งใจ ใช้ได้เมื่อเปิดการฟังอยู่"
+          }
         }
       }
     },
@@ -18858,6 +19662,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αναπαραγωγή"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การเล่น"
           }
         }
       }
@@ -18997,6 +19807,12 @@
             "state" : "translated",
             "value" : "Συν"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บวก"
+          }
         }
       }
     },
@@ -19133,6 +19949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εξάσκηση"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ฝึกซ้อม"
           }
         }
       }
@@ -19271,6 +20093,12 @@
             "state" : "translated",
             "value" : "Λειτουργία εξάσκησης"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหมดฝึกซ้อม"
+          }
         }
       }
     },
@@ -19406,6 +20234,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Λειτουργία εξάσκησης · επεξεργασία τόνων και προεπιλογές · κουρδιστήρι"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหมดฝึกซ้อม · ตัวแก้ไขเสียงเน้นและค่าที่ตั้งไว้ · เครื่องตั้งสาย"
           }
         }
       }
@@ -19545,6 +20379,12 @@
             "state" : "translated",
             "value" : "Προεπιλογή %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ค่าที่ตั้งไว้ %@"
+          }
         }
       }
     },
@@ -19682,6 +20522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προεπιλογές"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ค่าที่ตั้งไว้"
           }
         }
       }
@@ -19821,6 +20667,12 @@
             "state" : "translated",
             "value" : "Πολιτική απορρήτου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "นโยบายความเป็นส่วนตัว"
+          }
         }
       }
     },
@@ -19957,6 +20809,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/el/privacy.html"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/th/privacy.html"
+          }
         }
       }
     },
@@ -20089,6 +20947,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -20231,6 +21095,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -20366,6 +21236,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Το Pro ξεκλειδώθηκε — ευχαριστούμε!"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปลดล็อก Pro แล้ว ขอบคุณที่สนับสนุน!"
           }
         }
       }
@@ -20503,6 +21379,12 @@
             "state" : "translated",
             "value" : "Τέταρτα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โน้ตตัวดำ"
+          }
         }
       }
     },
@@ -20639,6 +21521,12 @@
             "state" : "translated",
             "value" : "Τέταρτα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวดำ"
+          }
         }
       }
     },
@@ -20774,6 +21662,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αυξάνει αυτόματα την ταχύτητα κάθε λίγα μέτρα — επιταχύνετε ένα πέρασμα χωρίς να αφήσετε το όργανο."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มความเร็วอัตโนมัติทุกไม่กี่ห้อง ซ้อมเร่งท่อนยาก ๆ โดยไม่ต้องละมือจากเครื่องดนตรี"
           }
         }
       }
@@ -20913,6 +21807,12 @@
             "state" : "translated",
             "value" : "Αυξάνει αυτόματα την ταχύτητα κάθε λίγα μέτρα ενώ παίζετε — για να επιταχύνετε σταδιακά ένα πέρασμα. Σταματά στον στόχο. Πείτε «practice» όποτε θέλετε για να το ανοίξετε."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มความเร็วอัตโนมัติทุกไม่กี่ห้องขณะที่คุณเล่น เพื่อค่อย ๆ เร่งท่อนที่ซ้อมให้เร็วขึ้น และหยุดเมื่อถึงเป้าหมาย พูดว่า “practice” เมื่อไรก็ได้เพื่อเปิดใช้"
+          }
         }
       }
     },
@@ -21050,6 +21950,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ηχογραφήστε πρώτα μια σύντομη φράση."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกวลีสั้น ๆ ก่อน"
           }
         }
       }
@@ -21189,6 +22095,12 @@
             "state" : "translated",
             "value" : "Νέα ηχογράφηση"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกใหม่"
+          }
         }
       }
     },
@@ -21327,6 +22239,12 @@
             "state" : "translated",
             "value" : "Ηχογράφηση σήματος"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกสัญญาณ"
+          }
         }
       }
     },
@@ -21462,6 +22380,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τόνος αναφοράς"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เสียงอ้างอิง"
           }
         }
       }
@@ -21601,6 +22525,12 @@
             "state" : "translated",
             "value" : "Απαιτεί Pro"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ต้องใช้ Pro"
+          }
         }
       }
     },
@@ -21738,6 +22668,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Επαναφορά"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รีเซ็ต"
           }
         }
       }
@@ -21877,6 +22813,12 @@
             "state" : "translated",
             "value" : "Επαναφορά"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กู้คืน"
+          }
         }
       }
     },
@@ -22014,6 +22956,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Επαναφορά αγορών"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กู้คืนการซื้อ"
           }
         }
       }
@@ -22153,6 +23101,12 @@
             "state" : "translated",
             "value" : "Επαναφορά αγορών"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กู้คืนการซื้อ"
+          }
         }
       }
     },
@@ -22290,6 +23244,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Επαναφέρει μια προηγούμενη αγορά Pro"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กู้คืนการซื้อ Pro ก่อนหน้า"
           }
         }
       }
@@ -22429,6 +23389,12 @@
             "state" : "translated",
             "value" : "Επαναφέρει το προεπιλεγμένο μοτίβο για αυτό το μέτρο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คืนค่ารูปแบบเริ่มต้นของอัตราจังหวะนี้"
+          }
         }
       }
     },
@@ -22566,6 +23532,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αποθήκευση"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึก"
           }
         }
       }
@@ -22705,6 +23677,12 @@
             "state" : "translated",
             "value" : "Αποθηκεύστε ένα μοτίβο για κάθε κομμάτι — όταν το ανακαλείτε, επανέρχονται και το μέτρο και η υποδιαίρεσή του."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกรูปแบบแยกตามเพลง เมื่อเรียกกลับมา อัตราจังหวะและการแบ่งจังหวะย่อยจะกลับมาด้วย"
+          }
         }
       }
     },
@@ -22842,6 +23820,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αποθήκευση τρέχοντος μοτίβου…"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกรูปแบบปัจจุบัน…"
           }
         }
       }
@@ -22981,6 +23965,12 @@
             "state" : "translated",
             "value" : "Αποθήκευση μοτίβου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกรูปแบบ"
+          }
         }
       }
     },
@@ -23118,6 +24108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αποθήκευση προεπιλογής"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกค่าที่ตั้งไว้"
           }
         }
       }
@@ -23257,6 +24253,12 @@
             "state" : "translated",
             "value" : "Αποθηκεύει αυτό το μοτίβο μαζί με το μέτρο και την υποδιαίρεσή του, ώστε να το ανακαλείτε για κάθε κομμάτι."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกรูปแบบนี้พร้อมอัตราจังหวะและการแบ่งจังหวะย่อย เพื่อเรียกใช้แยกตามเพลง"
+          }
         }
       }
     },
@@ -23394,6 +24396,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "πείτε"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า"
           }
         }
       }
@@ -23533,6 +24541,12 @@
             "state" : "translated",
             "value" : "Πείτε «close» για έξοδο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “close” เพื่อปิด"
+          }
         }
       }
     },
@@ -23668,6 +24682,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πείτε «start», «faster» ή «help»"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “start”, “faster” หรือ “help”"
           }
         }
       }
@@ -23806,6 +24826,12 @@
             "state" : "translated",
             "value" : "Πείτε μια εντολή"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดคำสั่ง"
+          }
         }
       }
     },
@@ -23941,6 +24967,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πείτε «close» / «done» ή πατήστε Τέλος."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “close” / “done” หรือแตะเสร็จสิ้น"
           }
         }
       }
@@ -24080,6 +25112,12 @@
             "state" : "translated",
             "value" : "Πείτε «close» ή πατήστε για κλείσιμο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “close” หรือแตะเพื่อปิด"
+          }
         }
       }
     },
@@ -24218,6 +25256,12 @@
             "state" : "translated",
             "value" : "Πείτε «help» όποτε θέλετε — ή πατήστε εδώ — για να δείτε όλες τις εντολές και μετά «close» για κλείσιμο."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “help” เมื่อไรก็ได้ หรือแตะที่นี่ เพื่อดูคำสั่งทั้งหมด แล้วพูดว่า “close” เพื่อปิด"
+          }
         }
       }
     },
@@ -24354,6 +25398,12 @@
             "state" : "translated",
             "value" : "Πείτε «help» ή πατήστε το κουμπί ?."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “help” หรือแตะปุ่ม ?"
+          }
         }
       }
     },
@@ -24489,6 +25539,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πείτε «louder» / «quieter» / «mute» ή «volume 60»."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “louder” / “quieter” / “mute” หรือ “volume 60”"
           }
         }
       }
@@ -24628,6 +25684,12 @@
             "state" : "translated",
             "value" : "Πείτε «practice» για αυτόματη αύξηση της ταχύτητας κάθε λίγα μέτρα ενώ παίζετε — ιδανικό για ασκήσεις ταχύτητας."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “practice” เพื่อให้ความเร็วเพิ่มขึ้นเองทุกไม่กี่ห้องขณะเล่น เหมาะกับการซ้อมเร่งความเร็ว"
+          }
         }
       }
     },
@@ -24764,6 +25826,12 @@
             "state" : "translated",
             "value" : "Πείτε «scroll down» / «scroll up» ή σύρετε."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “scroll down” / “scroll up” หรือปัดหน้าจอ"
+          }
         }
       }
     },
@@ -24899,6 +25967,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πείτε «tune» και παίξτε — νότα, σεντ και ζώνη σωστού κουρδίσματος."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “tune” แล้วเล่น จะแสดงโน้ต เซนต์ และโซนที่ตรงเสียง"
           }
         }
       }
@@ -25038,6 +26112,12 @@
             "state" : "translated",
             "value" : "Πείτε «tune» για να ανοίξει το χρωματικό κουρδιστήρι και «close» όταν τελειώσετε."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “tune” เพื่อเปิดเครื่องตั้งสายโครมาติก และ “close” เมื่อเสร็จ"
+          }
         }
       }
     },
@@ -25173,6 +26253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κύλιση"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลื่อน"
           }
         }
       }
@@ -25310,6 +26396,12 @@
             "state" : "translated",
             "value" : "Κύλιση κάτω"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลื่อนลง"
+          }
         }
       }
     },
@@ -25445,6 +26537,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κύλιση πάνω"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลื่อนขึ้น"
           }
         }
       }
@@ -25584,6 +26682,12 @@
             "state" : "translated",
             "value" : "Κύλιση"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การเลื่อน"
+          }
         }
       }
     },
@@ -25719,6 +26823,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ορισμός χρόνων"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตั้งจำนวนจังหวะ"
           }
         }
       }
@@ -25856,6 +26966,12 @@
             "state" : "translated",
             "value" : "ορισμός ποσοστού"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตั้งเปอร์เซ็นต์"
+          }
         }
       }
     },
@@ -25992,6 +27108,12 @@
             "state" : "translated",
             "value" : "ορισμός μέτρου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตั้งอัตราจังหวะ"
+          }
         }
       }
     },
@@ -26127,6 +27249,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ορισμός τιμής"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตั้งค่า"
           }
         }
       }
@@ -26266,6 +27394,12 @@
             "state" : "translated",
             "value" : "Ορίζει μέτρο %lld/4"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตั้งอัตราจังหวะ %lld/4"
+          }
         }
       }
     },
@@ -26404,6 +27538,12 @@
             "state" : "translated",
             "value" : "Σήμα: %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สัญญาณ: %@"
+          }
         }
       }
     },
@@ -26539,6 +27679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "σίγαση του κλικ"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดเสียงคลิก"
           }
         }
       }
@@ -26678,6 +27824,12 @@
             "state" : "translated",
             "value" : "Σιωπηλό"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เงียบ"
+          }
         }
       }
     },
@@ -26814,6 +27966,12 @@
             "state" : "translated",
             "value" : "Δεκαεξαδικά"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โน้ตตัวเขบ็ต 2 ชั้น"
+          }
         }
       }
     },
@@ -26949,6 +28107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεκαεξαδικά"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวเขบ็ต 2 ชั้น"
           }
         }
       }
@@ -27088,6 +28252,12 @@
             "state" : "translated",
             "value" : "Πιο αργά"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ช้าลง"
+          }
         }
       }
     },
@@ -27224,6 +28394,12 @@
             "state" : "translated",
             "value" : "Πιο αργά −5"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ช้าลง −5"
+          }
         }
       }
     },
@@ -27359,6 +28535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Η αναγνώριση ομιλίας δεν είναι διαθέσιμη εδώ"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้การรู้จำเสียงพูดที่นี่ไม่ได้"
           }
         }
       }
@@ -27497,6 +28679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εκπαιδευτής ταχύτητας"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวช่วยฝึกความเร็ว"
           }
         }
       }
@@ -27640,6 +28828,12 @@
             "state" : "translated",
             "value" : "Εκπαιδευτής ταχύτητας · +%1$lld κάθε %2$lld μέτρα → %3$lld"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวช่วยฝึกความเร็ว · +%1$lld ทุก %2$lld ห้อง → %3$lld"
+          }
         }
       }
     },
@@ -27776,6 +28970,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Έναρξη"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เริ่ม"
           }
         }
       }
@@ -27915,6 +29115,12 @@
             "state" : "translated",
             "value" : "Έναρξη / διακοπή με το όργανό μου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เริ่ม / หยุดด้วยเครื่องดนตรีของฉัน"
+          }
         }
       }
     },
@@ -28052,6 +29258,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Έναρξη ακρόασης"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เริ่มฟัง"
           }
         }
       }
@@ -28191,6 +29403,12 @@
             "state" : "translated",
             "value" : "Έναρξη μετρονόμου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เริ่มเมโทรนอม"
+          }
         }
       }
     },
@@ -28327,6 +29545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Διακοπή"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุด"
           }
         }
       }
@@ -28466,6 +29690,12 @@
             "state" : "translated",
             "value" : "Διακοπή ακρόασης"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดฟัง"
+          }
         }
       }
     },
@@ -28604,6 +29834,12 @@
             "state" : "translated",
             "value" : "Διακοπή μετρονόμου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดเมโทรนอม"
+          }
         }
       }
     },
@@ -28740,6 +29976,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Υποδιαίρεση"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การแบ่งจังหวะย่อย"
           }
         }
       }
@@ -28879,6 +30121,12 @@
             "state" : "translated",
             "value" : "Συνδρομή"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สมัครสมาชิก"
+          }
         }
       }
     },
@@ -29017,6 +30265,12 @@
             "state" : "translated",
             "value" : "Ετήσια συνδρομή με %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สมัครรายปี %@"
+          }
         }
       }
     },
@@ -29152,6 +30406,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Υποστήριξη"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ช่วยเหลือ"
           }
         }
       }
@@ -29289,6 +30549,12 @@
             "state" : "translated",
             "value" : "Μετάβαση στην προβολή αναπήδησης"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สลับเป็นมุมมองลูกบอลเด้ง"
+          }
         }
       }
     },
@@ -29424,6 +30690,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μετάβαση στην προβολή τροχιάς"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สลับเป็นมุมมองวงโคจร"
           }
         }
       }
@@ -29563,6 +30835,12 @@
             "state" : "translated",
             "value" : "Μετάβαση στην προβολή δακτυλίου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สลับเป็นมุมมองวงแหวน"
+          }
         }
       }
     },
@@ -29701,6 +30979,12 @@
             "state" : "translated",
             "value" : "Αλλαγή προβολής"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สลับมุมมอง"
+          }
         }
       }
     },
@@ -29837,6 +31121,12 @@
             "state" : "translated",
             "value" : "αλλαγή απεικόνισης"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สลับการแสดงภาพ"
+          }
         }
       }
     },
@@ -29972,6 +31262,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πατήστε 1/4, 1/8, τρίολα ή 1/16. Πατήστε δύο φορές την κάρτα για να ανοίξουν οι τόνοι και να ορίσετε κάθε κλικ του μέτρου ως υψηλό, χαμηλό ή σιωπηλό."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะ 1/4, 1/8, ทริปเปิล หรือ 1/16 แตะการ์ดสองครั้งเพื่อเปิดเสียงเน้น แล้วกำหนดเสียงคลิกทุกจังหวะในห้องเป็นสูง ต่ำ หรือเงียบ"
           }
         }
       }
@@ -30111,6 +31407,12 @@
             "state" : "translated",
             "value" : "Πατήστε στον ρυθμό για να ελέγξετε τον χρονισμό σας"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะตามจังหวะเพื่อตรวจความแม่นจังหวะของคุณ"
+          }
         }
       }
     },
@@ -30246,6 +31548,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πατήστε Ακρόαση για έλεγχο με φωνή"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะ ฟัง เพื่อควบคุมด้วยเสียง"
           }
         }
       }
@@ -30383,6 +31691,12 @@
             "state" : "translated",
             "value" : "Πατήστε Ακρόαση για ενεργοποίηση ή απενεργοποίηση του ελέγχου φωνής."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะ ฟัง เพื่อเปิดหรือปิดการควบคุมด้วยเสียง"
+          }
         }
       }
     },
@@ -30518,6 +31832,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πατήστε Έναρξη / Διακοπή στο κάτω μέρος."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะ เริ่ม / หยุด ที่ด้านล่าง"
           }
         }
       }
@@ -30657,6 +31977,12 @@
             "state" : "translated",
             "value" : "Tap tempo"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะหาความเร็ว"
+          }
         }
       }
     },
@@ -30792,6 +32118,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πατήστε στον ρυθμό τον μεγάλο αριθμό BPM για να ορίσετε την ταχύτητα."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะตัวเลข BPM ใหญ่ตามจังหวะเพื่อตั้งความเร็ว"
           }
         }
       }
@@ -30929,6 +32261,12 @@
             "state" : "translated",
             "value" : "Πατήστε τις τελείες για να επιλέξετε το μέτρο."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะจุดเพื่อเลือกอัตราจังหวะ"
+          }
         }
       }
     },
@@ -31064,6 +32402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πατήστε το εικονίδιο προβολής (πάνω δεξιά στην κάρτα χρόνων): αναπήδηση → τροχιά → δακτύλιος."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะไอคอนมุมมอง (มุมขวาบนของการ์ดจังหวะ): ลูกบอลเด้ง → วงโคจร → วงแหวน"
           }
         }
       }
@@ -31203,6 +32547,12 @@
             "state" : "translated",
             "value" : "Πατήστε για εναλλαγή μεταξύ της μπάλας που αναπηδά και του δακτυλίου τροχιάς — ή πείτε «bounce» / «orbit»."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะเพื่อสลับระหว่างลูกบอลเด้งกับวงโคจร หรือพูดว่า “bounce” / “orbit”"
+          }
         }
       }
     },
@@ -31341,6 +32691,12 @@
             "state" : "translated",
             "value" : "Πατήστε για εναλλαγή μεταξύ ονομασίας ταχύτητας και BPM"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะเพื่อสลับระหว่างชื่อความเร็วกับ BPM"
+          }
         }
       }
     },
@@ -31478,6 +32834,12 @@
             "state" : "translated",
             "value" : "Ταχύτητα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ความเร็ว"
+          }
         }
       }
     },
@@ -31613,6 +32975,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ταχύτητα %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ความเร็ว %lld"
           }
         }
       }
@@ -31752,6 +33120,12 @@
             "state" : "translated",
             "value" : "Ρυθμιστικό ταχύτητας"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แถบเลื่อนความเร็ว"
+          }
         }
       }
     },
@@ -31889,6 +33263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Όροι χρήσης (EULA)"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้อกำหนดการใช้งาน (EULA)"
           }
         }
       }
@@ -32028,6 +33408,12 @@
             "state" : "translated",
             "value" : "Αυτή είναι η ταχύτητά σας ως κλασικός όρος. Πατήστε για να δείτε τον αριθμό BPM και ξανά για να επιστρέψετε."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "นี่คือความเร็วของคุณในรูปศัพท์ดนตรีคลาสสิก แตะเพื่อดูตัวเลข BPM แล้วแตะอีกครั้งเพื่อกลับ"
+          }
         }
       }
     },
@@ -32165,6 +33551,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Το μικρόφωνο της εφαρμογής είναι απενεργοποιημένο, ώστε να μη συγκρούεται με τον Έλεγχο φωνής. Πείτε «Tap Start», «Tap Faster» ή «Tap 3 beats»."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไมค์ของแอปปิดอยู่เพื่อไม่ให้ชนกับการควบคุมด้วยเสียง ให้พูดว่า “Tap Start”, “Tap Faster” หรือ “Tap 3 beats”"
           }
         }
       }
@@ -32304,6 +33696,12 @@
             "state" : "translated",
             "value" : "Ο πλήρης μετρονόμος — κάθε ταχύτητα, μέτρο και υποδιαίρεση, και οι τρεις προβολές χρόνων, tap tempo, έλεγχος ρυθμού και πλήρης φωνητικός έλεγχος χωρίς χέρια."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมโทรนอมเต็มรูปแบบ ทุกความเร็ว อัตราจังหวะ และการแบ่งจังหวะย่อย ครบทั้งสามมุมมองจังหวะ แตะหาความเร็ว ตรวจความแม่นจังหวะ และควบคุมด้วยเสียงแบบไม่ใช้มือครบถ้วน"
+          }
         }
       }
     },
@@ -32441,6 +33839,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Το μικρόφωνο ακούει ήδη — πείτε «start», «faster» ή «help». Χρησιμοποιείτε τον Έλεγχο φωνής του iOS; Ανοίξτε τις Φωνητικές εντολές για εναλλαγή."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไมค์กำลังฟังอยู่ พูดว่า “start”, “faster” หรือ “help” ใช้การควบคุมด้วยเสียงของ iOS อยู่ใช่ไหม เปิดคำสั่งเสียงเพื่อสลับ"
           }
         }
       }
@@ -32580,6 +33984,12 @@
             "state" : "translated",
             "value" : "Το ετήσιο πλάνο ανανεώνεται αυτόματα με %@ ετησίως, εκτός αν ακυρωθεί τουλάχιστον 24 ώρες πριν από την ανανέωση στις Ρυθμίσεις > Λογαριασμός Apple > Συνδρομές. Η αγορά για πάντα είναι εφάπαξ χρέωση."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แผนรายปีจะต่ออายุอัตโนมัติในราคา %@ ต่อปี เว้นแต่จะยกเลิกอย่างน้อย 24 ชั่วโมงก่อนต่ออายุที่ การตั้งค่า > บัญชี Apple > การสมัครสมาชิก ส่วนแบบตลอดชีพชำระครั้งเดียว"
+          }
         }
       }
     },
@@ -32718,6 +34128,12 @@
             "state" : "translated",
             "value" : "Υπάρχει και κουρδιστήρι"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มีเครื่องตั้งสายด้วย"
+          }
         }
       }
     },
@@ -32853,6 +34269,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Έλεγχος ρυθμού"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตรวจความแม่นจังหวะ"
           }
         }
       }
@@ -32992,6 +34414,12 @@
             "state" : "translated",
             "value" : "Συμβουλές"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เคล็ดลับ"
+          }
         }
       }
     },
@@ -33130,6 +34558,12 @@
             "state" : "translated",
             "value" : "Εκπαιδευτής"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวช่วยฝึก"
+          }
         }
       }
     },
@@ -33266,6 +34700,12 @@
             "state" : "translated",
             "value" : "Τρίολες"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทริปเปิล"
+          }
         }
       }
     },
@@ -33401,6 +34841,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "τρίολες"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทริปเปิล"
           }
         }
       }
@@ -33539,6 +34985,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δοκιμάστε ξανά"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลองอีกครั้ง"
           }
         }
       }
@@ -33796,6 +35248,12 @@
               }
             }
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทดลองฟรี %lld วัน"
+          }
         }
       }
     },
@@ -34039,6 +35497,12 @@
                 }
               }
             }
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทดลองฟรี %lld เดือน"
           }
         }
       }
@@ -34296,6 +35760,12 @@
               }
             }
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทดลองฟรี %lld สัปดาห์"
+          }
         }
       }
     },
@@ -34431,6 +35901,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δοκιμάστε δωρεάν για έναν μήνα"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทดลองฟรี 1 เดือน"
           }
         }
       }
@@ -34568,6 +36044,12 @@
             "state" : "translated",
             "value" : "Δοκιμάστε δωρεάν για μία εβδομάδα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทดลองฟรี 1 สัปดาห์"
+          }
         }
       }
     },
@@ -34703,6 +36185,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δοκιμάστε δωρεάν για ένα έτος"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทดลองฟรี 1 ปี"
           }
         }
       }
@@ -34840,6 +36328,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κουρδιστήρι"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เครื่องตั้งสาย"
           }
         }
       }
@@ -34979,6 +36473,12 @@
             "state" : "translated",
             "value" : "Απενεργοποιεί το μικρόφωνο της εφαρμογής και ελέγχει τα κουμπιά με το όνομά τους"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดไมค์ของแอป และควบคุมปุ่มด้วยการพูดชื่อ"
+          }
         }
       }
     },
@@ -35114,6 +36614,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Απενεργοποιεί το μικρόφωνο αυτής της εφαρμογής, ώστε να μη συγκρούονται. Ελέγξτε την λέγοντας «Tap Start», «Tap Faster», «Tap 3 beats»."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดไมค์ของแอปนี้เพื่อไม่ให้ชนกัน ควบคุมด้วยการพูดว่า “Tap Start”, “Tap Faster”, “Tap 3 beats”"
           }
         }
       }
@@ -35253,6 +36759,12 @@
             "state" : "translated",
             "value" : "Δύο προβολές χρόνων"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สองมุมมองจังหวะ"
+          }
         }
       }
     },
@@ -35389,6 +36901,12 @@
             "state" : "translated",
             "value" : "Ξεκλείδωμα Pro"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปลดล็อก Pro"
+          }
         }
       }
     },
@@ -35524,6 +37042,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πάνω +1"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่ม +1"
           }
         }
       }
@@ -35663,6 +37187,12 @@
             "state" : "translated",
             "value" : "Έως %lld BPM"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สูงสุด %lld BPM"
+          }
         }
       }
     },
@@ -35798,6 +37328,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αναβάθμιση"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อัปเกรด"
           }
         }
       }
@@ -35936,6 +37472,12 @@
             "state" : "translated",
             "value" : "Προβολή"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มุมมอง"
+          }
         }
       }
     },
@@ -36071,6 +37613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φωνή"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เสียง"
           }
         }
       }
@@ -36210,6 +37758,12 @@
             "state" : "translated",
             "value" : "Φωνητικές εντολές"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คำสั่งเสียง"
+          }
         }
       }
     },
@@ -36346,6 +37900,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φωνητικές εντολές"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คำสั่งเสียง"
           }
         }
       }
@@ -36484,6 +38044,12 @@
             "state" : "translated",
             "value" : "Ο έλεγχος φωνής είναι απενεργοποιημένος"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดการควบคุมด้วยเสียง"
+          }
         }
       }
     },
@@ -36621,6 +38187,12 @@
             "state" : "translated",
             "value" : "Ένταση"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ระดับเสียง"
+          }
         }
       }
     },
@@ -36756,6 +38328,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ένταση %lld%%"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ระดับเสียง %lld%%"
           }
         }
       }
@@ -36893,6 +38471,12 @@
             "state" : "translated",
             "value" : "Μείωση έντασης"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลดเสียง"
+          }
         }
       }
     },
@@ -37028,6 +38612,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αύξηση έντασης"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มเสียง"
           }
         }
       }
@@ -37167,6 +38757,12 @@
             "state" : "translated",
             "value" : "Ετήσια"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รายปี"
+          }
         }
       }
     },
@@ -37303,6 +38899,12 @@
             "state" : "translated",
             "value" : "Ετήσια — %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รายปี — %@"
+          }
         }
       }
     },
@@ -37435,6 +39037,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -37575,6 +39183,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -37707,6 +39321,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -37847,6 +39467,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -37982,6 +39608,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ Διακοπή"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ หยุด"
           }
         }
       }
@@ -38119,6 +39751,12 @@
             "state" : "translated",
             "value" : "▶ Έναρξη"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ เริ่ม"
+          }
         }
       }
     },
@@ -38254,6 +39892,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χρονόμετρο"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวตั้งเวลา"
           }
         }
       }
@@ -38391,6 +40035,12 @@
             "state" : "translated",
             "value" : "Ανενεργό"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิด"
+          }
         }
       }
     },
@@ -38526,6 +40176,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χρονόμετρο εξάσκησης"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวตั้งเวลาฝึกซ้อม"
           }
         }
       }
@@ -38663,6 +40319,12 @@
             "state" : "translated",
             "value" : "%lld λεπτά"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld นาที"
+          }
         }
       }
     },
@@ -38798,6 +40460,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χρόνος που απομένει"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เวลาที่เหลือ"
           }
         }
       }
@@ -38935,6 +40603,12 @@
             "state" : "translated",
             "value" : "Μηδενισμός χρονομέτρου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รีเซ็ตตัวตั้งเวลา"
+          }
         }
       }
     },
@@ -39070,6 +40744,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χρονόμετρο ανενεργό"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดตัวตั้งเวลา"
           }
         }
       }
@@ -39207,6 +40887,12 @@
             "state" : "translated",
             "value" : "Χρονόμετρο %lld λεπτά"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตั้งเวลา %lld นาที"
+          }
         }
       }
     },
@@ -39342,6 +41028,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Απομένουν %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เหลือ %@"
           }
         }
       }
@@ -39479,6 +41171,12 @@
             "state" : "translated",
             "value" : "Ο χρόνος εξάσκησης τελείωσε"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หมดเวลาฝึกซ้อมแล้ว"
+          }
         }
       }
     },
@@ -39614,6 +41312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ορισμός χρονομέτρου εξάσκησης"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตั้งเวลาฝึกซ้อม"
           }
         }
       }
@@ -39751,6 +41455,12 @@
             "state" : "translated",
             "value" : "απενεργοποίηση χρονομέτρου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดตัวตั้งเวลา"
+          }
         }
       }
     },
@@ -39886,6 +41596,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πατήστε το κουμπί χρονομέτρου δίπλα στην Έναρξη ή πείτε «timer 5 minutes». Μετρά αντίστροφα όσο παίζει το κλικ και μετά σταματά και ηχεί."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะปุ่มตัวตั้งเวลาข้างปุ่ม เริ่ม หรือพูดว่า “timer 5 minutes” ตัวตั้งเวลาจะนับถอยหลังขณะเสียงคลิกเล่น แล้วหยุดพร้อมส่งเสียงเตือน"
           }
         }
       }
@@ -40023,6 +41739,12 @@
             "state" : "translated",
             "value" : "Μετρά αντίστροφα όσο παίζει το κλικ και κάνει παύση όταν σταματήσετε. Όταν τελειώσει ο χρόνος, ο μετρονόμος σταματά και ηχεί. Πείτε «timer 5 minutes» ή «timer off» όποτε θέλετε."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "นับถอยหลังขณะเสียงคลิกเล่น และหยุดนับเมื่อคุณหยุด เมื่อหมดเวลา เมโทรนอมจะหยุดพร้อมส่งเสียงเตือน พูดว่า “timer 5 minutes” หรือ “timer off” ได้ทุกเมื่อ"
+          }
         }
       }
     },
@@ -40158,6 +41880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κοινοποίηση ανώνυμων στατιστικών χρήσης"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แชร์สถิติการใช้งานแบบไม่ระบุตัวตน"
           }
         }
       }
@@ -40295,6 +42023,12 @@
             "state" : "translated",
             "value" : "Απόρρητο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ความเป็นส่วนตัว"
+          }
         }
       }
     },
@@ -40430,6 +42164,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μετρήσεις, όπως πόσες συσκευές χρησιμοποιούν την εφαρμογή, και αναφορές κατάρρευσης. Χωρίς ήχο, ρυθμίσεις ή προσωπικές πληροφορίες. Ισχύει από την επόμενη εκκίνηση."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เป็นตัวเลขนับ เช่น จำนวนอุปกรณ์ที่ใช้แอป และรายงานข้อขัดข้อง ไม่มีเสียง การตั้งค่า หรือข้อมูลส่วนตัว มีผลตั้งแต่การเปิดแอปครั้งถัดไป"
           }
         }
       }
@@ -40568,6 +42308,12 @@
             "state" : "translated",
             "value" : "Ακόμα μεγαλύτερο κείμενο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวอักษรใหญ่ขึ้นอีก"
+          }
         }
       }
     },
@@ -40704,6 +42450,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Η οθόνη παραμένει ευανάγνωστη και τακτοποιημένη ακόμα και στα μεγαλύτερα μεγέθη κειμένου."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หน้าจอยังอ่านง่ายและเป็นระเบียบแม้ใช้ขนาดตัวอักษรใหญ่ที่สุด"
           }
         }
       }
@@ -40842,6 +42594,12 @@
             "state" : "translated",
             "value" : "Χρώματα που διακρίνονται πιο εύκολα"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สีที่มองเห็นง่ายขึ้น"
+          }
         }
       }
     },
@@ -40978,6 +42736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τα χρώματα χρόνων και ρυθμού παραμένουν ευδιάκριτα με την Αύξηση αντίθεσης ή αν είναι δύσκολο να ξεχωρίσετε τα χρώματα."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สีของจังหวะและความแม่นจังหวะยังชัดเจนเมื่อเปิดเพิ่มความคมชัด หรือเมื่อแยกสีได้ยาก"
           }
         }
       }
@@ -41116,6 +42880,12 @@
             "state" : "translated",
             "value" : "Έλεγχος από πληκτρολόγιο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ควบคุมด้วยคีย์บอร์ด"
+          }
         }
       }
     },
@@ -41252,6 +43022,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σε iPad με πληκτρολόγιο, ξεκινήστε, σταματήστε και αλλάξτε την ταχύτητα με πλήκτρα."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บน iPad ที่มีคีย์บอร์ด เริ่ม หยุด และเปลี่ยนความเร็วได้ด้วยปุ่ม"
           }
         }
       }
@@ -41390,6 +43166,12 @@
             "state" : "translated",
             "value" : "Τι νέο υπάρχει"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มีอะไรใหม่"
+          }
         }
       }
     },
@@ -41526,6 +43308,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μετά από μια ενημέρωση, δείτε τι νέο υπάρχει την πρώτη φορά που ανοίγετε την εφαρμογή."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หลังอัปเดต จะเห็นสิ่งใหม่ ๆ เมื่อเปิดแอปครั้งแรก"
           }
         }
       }
@@ -41664,6 +43452,12 @@
             "state" : "translated",
             "value" : "Απαντήσεις στα σχόλιά σας"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คำตอบถึงความคิดเห็นของคุณ"
+          }
         }
       }
     },
@@ -41800,6 +43594,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Διαβάστε τις απαντήσεις μας στα σχόλιά σας απευθείας στην εφαρμογή."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อ่านคำตอบของเราต่อความคิดเห็นของคุณได้ในแอปเลย"
           }
         }
       }
@@ -41938,6 +43738,12 @@
             "state" : "translated",
             "value" : "Δώρο Pro"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ส่ง Pro เป็นของขวัญ"
+          }
         }
       }
     },
@@ -42074,6 +43880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χαρίστε το Not My Tempo Pro σε έναν συμπαίκτη ή έναν μαθητή."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ส่ง Not My Tempo Pro ให้เพื่อนร่วมวงหรือลูกศิษย์"
           }
         }
       }
@@ -42212,6 +44024,12 @@
             "state" : "translated",
             "value" : "Γραφικό στοιχείο Αρχικής οθόνης"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วิดเจ็ตหน้าจอโฮม"
+          }
         }
       }
     },
@@ -42348,6 +44166,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ξεκινήστε το κλικ απευθείας από την Αρχική οθόνη χωρίς να ανοίξετε την εφαρμογή."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เริ่มเสียงคลิกจากหน้าจอโฮมได้เลยโดยไม่ต้องเปิดแอป"
           }
         }
       }
@@ -42486,6 +44310,12 @@
             "state" : "translated",
             "value" : "Siri και Συντομεύσεις"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri และคำสั่งลัด"
+          }
         }
       }
     },
@@ -42622,6 +44452,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ρωτήστε τη Siri ή εκτελέστε μια συντόμευση για να ξεκινήσει το κλικ στην ταχύτητά σας."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สั่ง Siri หรือรันคำสั่งลัดเพื่อเริ่มเสียงคลิกตามความเร็วของคุณ"
           }
         }
       }
@@ -42760,6 +44596,12 @@
             "state" : "translated",
             "value" : "Συγχρονισμός μεταξύ συσκευών"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ซิงก์ข้ามอุปกรณ์"
+          }
         }
       }
     },
@@ -42896,6 +44738,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Οι προεπιλογές και οι ρυθμίσεις σας σας ακολουθούν μεταξύ iPhone και iPad."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ค่าที่ตั้งไว้และการตั้งค่าของคุณตามไปทั้งบน iPhone และ iPad"
           }
         }
       }
@@ -43034,6 +44882,12 @@
             "state" : "translated",
             "value" : "Αντίγραφο ασφαλείας προεπιλογών"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สำรองค่าที่ตั้งไว้"
+          }
         }
       }
     },
@@ -43170,6 +45024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αποθηκεύστε τις προεπιλογές τόνων σε αρχείο και επαναφέρετέ τες όποτε θέλετε."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกค่าเสียงเน้นที่ตั้งไว้เป็นไฟล์ แล้วนำกลับมาได้ทุกเมื่อ"
           }
         }
       }
@@ -43308,6 +45168,12 @@
             "state" : "translated",
             "value" : "Υπενθυμίσεις εξάσκησης"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การเตือนฝึกซ้อม"
+          }
         }
       }
     },
@@ -43444,6 +45310,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Λάβετε μια διακριτική υπενθύμιση τη στιγμή που επιλέγετε να εξασκηθείτε."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รับการเตือนเบา ๆ ในเวลาที่คุณเลือกไว้สำหรับฝึกซ้อม"
           }
         }
       }
@@ -43582,6 +45454,12 @@
             "state" : "translated",
             "value" : "Διάταξη για αναδιπλούμενο iPhone"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลย์เอาต์สำหรับ iPhone แบบพับได้"
+          }
         }
       }
     },
@@ -43718,6 +45596,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σε αναδιπλούμενο iPhone, δείτε τον χρόνο και τα χειριστήρια δίπλα-δίπλα."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บน iPhone แบบพับได้ จะเห็นจังหวะและปุ่มควบคุมเคียงข้างกัน"
           }
         }
       }
@@ -43856,6 +45740,12 @@
             "state" : "translated",
             "value" : "Διαγραφή όλων των δεδομένων μου"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลบข้อมูลทั้งหมดของฉัน"
+          }
         }
       }
     },
@@ -43993,6 +45883,12 @@
             "state" : "translated",
             "value" : "Διαγράψτε όλες τις προεπιλογές και ρυθμίσεις σας στην εφαρμογή όποτε θέλετε."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ล้างค่าที่ตั้งไว้และการตั้งค่าทั้งหมดในแอปได้ทุกเมื่อ"
+          }
         }
       }
     },
@@ -44128,6 +46024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εξαργύρωση κωδικού προσφοράς"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แลกรหัสข้อเสนอ"
           }
         }
       }
@@ -44265,6 +46167,12 @@
             "state" : "translated",
             "value" : "Έχετε κωδικό για το Pro; Εισαγάγετε τον απευθείας στην εφαρμογή, στην οθόνη Pro ή στις Φωνητικές εντολές."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มีรหัสสำหรับ Pro ใช่ไหม ป้อนในแอปได้เลย ที่หน้าจอ Pro หรือในคำสั่งเสียง"
+          }
         }
       }
     },
@@ -44400,6 +46308,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πιο καθαρά με την Αύξηση αντίθεσης"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ชัดขึ้นเมื่อเพิ่มความคมชัด"
           }
         }
       }
@@ -44537,6 +46451,12 @@
             "state" : "translated",
             "value" : "Με ενεργή την Αύξηση αντίθεσης ή τη Μείωση διαφάνειας, οι χρόνοι, τα περιγράμματα και η επικάλυψη βοήθειας σχεδιάζονται πιο έντονα και συμπαγή."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อเปิดเพิ่มความคมชัดหรือลดความโปร่งใส จังหวะ เส้นขอบ และหน้าวิธีใช้จะหนาและทึบขึ้น"
+          }
         }
       }
     },
@@ -44672,6 +46592,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χώρος για το μεγαλύτερο κείμενο"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รองรับตัวอักษรขนาดใหญ่ที่สุด"
           }
         }
       }
@@ -44809,6 +46735,12 @@
             "state" : "translated",
             "value" : "Στα μεγαλύτερα μεγέθη κειμένου, τα κουμπιά και οι λίστες αναδιατάσσονται ώστε να μη κόβεται τίποτα."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อใช้ตัวอักษรขนาดใหญ่ที่สุด ปุ่มและรายการจะจัดเรียงใหม่เพื่อไม่ให้ถูกตัดขาด"
+          }
         }
       }
     },
@@ -44944,6 +46876,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Έκδοση %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เวอร์ชัน %@"
           }
         }
       }
@@ -45081,6 +47019,12 @@
             "state" : "translated",
             "value" : "Συνέχεια"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดำเนินการต่อ"
+          }
         }
       }
     },
@@ -45216,6 +47160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ένας μετρονόμος που του μιλάτε"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมโทรนอมที่คุณพูดด้วยได้"
           }
         }
       }
@@ -45353,6 +47303,12 @@
             "state" : "translated",
             "value" : "Πείτε «start», «stop», «faster» ή «tempo 120» και κρατήστε και τα δύο χέρια στο όργανό σας."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พูดว่า “start”, “stop”, “faster” หรือ “tempo 120” แล้วเก็บมือทั้งสองไว้บนเครื่องดนตรี"
+          }
         }
       }
     },
@@ -45488,6 +47444,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Οι εντολές είναι αγγλικές λέξεις"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คำสั่งเป็นคำภาษาอังกฤษ"
           }
         }
       }
@@ -45625,6 +47587,12 @@
             "state" : "translated",
             "value" : "Σε κάθε γλώσσα, ελέγχετε την εφαρμογή με σύντομες αγγλικές λέξεις. Πείτε «help» όποτε θέλετε για να τις δείτε όλες στην οθόνη."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ในทุกภาษา คุณควบคุมแอปด้วยคำภาษาอังกฤษสั้น ๆ พูดว่า “help” ได้ทุกเมื่อเพื่อดูทั้งหมดบนหน้าจอ"
+          }
         }
       }
     },
@@ -45760,6 +47728,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Το μικρόφωνο της εφαρμογής παραμένει απενεργοποιημένο, ώστε να μη συγκρούεται με τον Έλεγχο φωνής. Πείτε «Tap Start» ή «Tap Faster»."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไมค์ของแอปจะปิดอยู่เพื่อไม่ให้ชนกับการควบคุมด้วยเสียง ให้พูดว่า “Tap Start” หรือ “Tap Faster”"
           }
         }
       }
@@ -45897,6 +47871,12 @@
             "state" : "translated",
             "value" : "Επόμενο: το μικρόφωνο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ถัดไป: ไมโครโฟน"
+          }
         }
       }
     },
@@ -46032,6 +48012,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Το iOS θα ζητήσει πρόσβαση στο μικρόφωνο και στην αναγνώριση ομιλίας. Χρησιμοποιούνται μόνο για να ακούν τις εντολές σας. Η εφαρμογή δεν ηχογραφεί ούτε αποθηκεύει ποτέ όσα ακούει."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS จะขอสิทธิ์ใช้ไมโครโฟนและการรู้จำเสียงพูด ใช้เพื่อฟังคำสั่งของคุณเท่านั้น แอปไม่เคยบันทึกหรือเก็บสิ่งที่ได้ยิน"
           }
         }
       }
@@ -46169,6 +48155,12 @@
             "state" : "translated",
             "value" : "Παράλειψη"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้าม"
+          }
         }
       }
     },
@@ -46304,6 +48296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ας ξεκινήσουμε"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เริ่มต้นใช้งาน"
           }
         }
       }
@@ -46441,6 +48439,12 @@
             "state" : "translated",
             "value" : "Επόμενο"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ถัดไป"
+          }
         }
       }
     },
@@ -46576,6 +48580,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Η προεπιλογή αποθηκεύτηκε"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกค่าที่ตั้งไว้แล้ว"
           }
         }
       }
@@ -46713,6 +48723,12 @@
             "state" : "translated",
             "value" : "Δεν υπάρχουν ακόμα προεπιλογές"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยังไม่มีค่าที่ตั้งไว้"
+          }
         }
       }
     },
@@ -46848,6 +48864,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εξαργύρωση κωδικού προσφοράς"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แลกรหัสข้อเสนอ"
           }
         }
       }
@@ -46985,6 +49007,12 @@
             "state" : "translated",
             "value" : "Εμφάνιση της εισαγωγής ξανά"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงการแนะนำอีกครั้ง"
+          }
         }
       }
     },
@@ -47120,6 +49148,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εξαργύρωση κωδικού"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แลกรหัส"
           }
         }
       }
@@ -47257,6 +49291,12 @@
             "state" : "translated",
             "value" : "Εισαγωγή"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การแนะนำ"
+          }
         }
       }
     },
@@ -47392,6 +49432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εμφάνιση εισαγωγής"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงการแนะนำ"
           }
         }
       }
@@ -47529,6 +49575,12 @@
             "state" : "translated",
             "value" : "Κωδικός προσφοράς"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รหัสข้อเสนอ"
+          }
         }
       }
     },
@@ -47664,6 +49716,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εξαργύρωση κωδικού"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แลกรหัส"
           }
         }
       }
@@ -47801,6 +49859,12 @@
             "state" : "translated",
             "value" : "Τι νέο υπάρχει"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มีอะไรใหม่"
+          }
         }
       }
     },
@@ -47936,6 +50000,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Παράλειψη εισαγωγής"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้ามการแนะนำ"
           }
         }
       }
