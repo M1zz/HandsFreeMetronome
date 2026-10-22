@@ -926,6 +926,77 @@ https://m1zz.github.io/HandsFreeMetronome/nl/privacy.html
 
 https://m1zz.github.io/HandsFreeMetronome/nl/
 
+## pl
+
+### 이름
+
+Not My Tempo: Głosowy metronom
+
+### 부제
+
+Zmieniaj tempo bez rąk
+
+### 키워드
+
+bpm,tuner,ćwiczenia,gitara,pianino,perkusja,skrzypce,saksofon,trąbka,flet,chór,ukulele,akcenty,rytm
+
+### 프로모션 텍스트
+
+Ręce zostają na instrumencie. Powiedz „start”, „faster” lub „tempo 120”, a klik podąży za Tobą. Pełny metronom i sterowanie głosem są za darmo.
+
+### 설명
+
+Metronom, którym sterujesz głosem, więc ręce nigdy nie opuszczają instrumentu.
+Powiedz „start”, aby zacząć, i „faster”, aby przyspieszyć. Bez stukania, bez przerywania frazy.
+
+Zmiana tempa w trakcie gry zwykle oznacza oderwanie rąk od instrumentu i zgubienie wątku. Not My Tempo słucha przez własny mikrofon i rozpoznaje mowę na urządzeniu, więc działa od razu — bez włączania Sterowania głosowego iOS ani ustawień dostępności. Polecenia wypowiada się po angielsku.
+
+ROZMAWIAJ ZE SWOIM METRONOMEM
+„start” i „stop” — uruchamianie i zatrzymywanie
+„faster” i „slower” zmieniają tempo o 5 BPM, „up” i „down” o 1
+„tempo 120” albo samo liczba — od razu ustawia tę wartość
+„double” i „half” — podwajanie i zmniejszanie o połowę
+„quarter”, „eighth”, „triplet”, „sixteenth” — podział
+„louder”, „quieter”, „mute” — głośność
+Zapomniałeś polecenia? Powiedz „help”, a wszystkie frazy pojawią się na ekranie
+
+PEŁNY METRONOM JEST ZA DARMO
+Metra od 1 do 8 uderzeń, z mocniejszym kliknięciem na pierwszym
+Podziały na ósemki, triole i szesnastki
+Trzy sposoby podglądu rytmu: odbicie, orbita i pierścień
+Tap tempo: stukaj w rytm w duży numer, aby ustawić BPM
+Sprawdzanie rytmu: stukaj w pierścień orbity podczas gry i zobacz, jak blisko trafiasz
+Ekran pozostaje włączony podczas odtwarzania, a aplikacja pamięta ostatnie tempo i metrum
+
+START I STOP TWOIM INSTRUMENTEM
+Najpierw nagraj krótką frazę z 2–5 nut, a potem graj ją, aby uruchamiać lub zatrzymywać klik. Przytrzymaj każdą nutę przez około pół sekundy, aby szybkie nuty w Twojej grze go nie uruchamiały.
+
+NOT MY TEMPO PRO
+Tryb ćwiczeń: trener szybkości dodaje kilka BPM co kilka taktów, aż osiągniesz tempo docelowe
+Edytor akcentów: ustaw każde kliknięcie taktu jako wysokie, niskie lub ciche i zapisz preset dla każdego utworu
+Tuner chromatyczny: nastrój instrument przed grą, z dźwiękiem odniesienia A regulowanym od 430 do 450 Hz
+Pro to subskrypcja roczna z bezpłatnym okresem próbnym albo jednorazowy zakup na zawsze.
+
+DOSTĘPNOŚĆ
+Jeśli korzystasz ze Sterowania głosowego iOS, wyłącz mikrofon aplikacji i steruj nią, podając nazwy przycisków. Elementy sterujące mają etykiety VoiceOver.
+
+SZCZEGÓŁY SUBSKRYPCJI
+Subskrypcja roczna odnawia się automatycznie, o ile nie anulujesz jej co najmniej 24 godziny przed końcem bieżącego okresu. Zarządzaj nią lub anuluj w Ustawienia > Konto Apple > Subskrypcje. Zakup na zawsze to jednorazowa opłata.
+Warunki użytkowania (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Polityka prywatności: https://m1zz.github.io/HandsFreeMetronome/pl/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/pl/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/pl/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/pl/
+
 ## pt-BR
 
 ### 이름

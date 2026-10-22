@@ -77,6 +77,12 @@
             "state" : "translated",
             "value" : "%@ per jaar"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ rocznie"
+          }
         }
       }
     },
@@ -158,6 +164,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, %2$lld cent te laag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld centów za nisko"
           }
         }
       }
@@ -241,6 +253,12 @@
             "state" : "translated",
             "value" : "%1$@, %2$lld cent te hoog"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld centów za wysoko"
+          }
         }
       }
     },
@@ -317,6 +335,12 @@
             "state" : "translated",
             "value" : "%@, zuiver"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, stroi"
+          }
         }
       }
     },
@@ -391,6 +415,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -575,6 +605,36 @@
               }
             }
           }
+        },
+        "pl" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld uderzenie"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld uderzenia"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld uderzeń"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld uderzenia"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -665,6 +725,36 @@
             "state" : "translated",
             "value" : "%lld slagen per minuut"
           }
+        },
+        "pl" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld uderzenie na minutę"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld uderzenia na minutę"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld uderzeń na minutę"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld uderzenia na minutę"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -739,6 +829,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -827,6 +923,12 @@
             "state" : "translated",
             "value" : "%1$lld BPM, %2$@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld BPM, %2$@"
+          }
         }
       }
     },
@@ -911,6 +1013,12 @@
             "state" : "translated",
             "value" : "%1$lld perfect, %2$lld goed, %3$lld mis"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idealnie: %1$lld, dobrze: %2$lld, źle: %3$lld"
+          }
         }
       }
     },
@@ -988,6 +1096,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  tik op de stippen om het aantal tellen te kiezen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  dotknij kropek, aby ustawić liczbę uderzeń"
           }
         }
       }
@@ -1073,6 +1187,12 @@
             "state" : "translated",
             "value" : "%1$lld/4 · %2$@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/4 · %2$@"
+          }
         }
       }
     },
@@ -1148,6 +1268,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zestiende noten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szesnastki"
           }
         }
       }
@@ -1225,6 +1351,12 @@
             "state" : "translated",
             "value" : "Kwartnoten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ćwierćnuty"
+          }
         }
       }
     },
@@ -1301,6 +1433,12 @@
             "state" : "translated",
             "value" : "Achtste noten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ósemki"
+          }
         }
       }
     },
@@ -1373,6 +1511,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "A4 = %lld Hz"
@@ -1455,6 +1599,12 @@
             "state" : "translated",
             "value" : "Accenteditor"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edytor akcentów"
+          }
         }
       }
     },
@@ -1530,6 +1680,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accenteditor en presets"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edytor akcentów i presety"
           }
         }
       }
@@ -1609,6 +1765,12 @@
             "state" : "translated",
             "value" : "Accenten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akcenty"
+          }
         }
       }
     },
@@ -1685,6 +1847,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toegankelijkheid"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dostępność"
           }
         }
       }
@@ -1764,6 +1932,12 @@
             "state" : "translated",
             "value" : "%lld BPM erbij"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj %lld BPM"
+          }
         }
       }
     },
@@ -1841,6 +2015,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alle commando’s"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wszystkie polecenia"
           }
         }
       }
@@ -1920,6 +2100,12 @@
             "state" : "translated",
             "value" : "Past dit patroon, de maatsoort en de onderverdeling toe"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stosuje ten wzorzec, metrum i podział"
+          }
         }
       }
     },
@@ -1997,6 +2183,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terug"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wstecz"
           }
         }
       }
@@ -2076,6 +2268,12 @@
             "state" : "translated",
             "value" : "Terug naar de metronoom"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wróć do metronomu"
+          }
         }
       }
     },
@@ -2151,6 +2349,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mis"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Źle"
           }
         }
       }
@@ -2229,6 +2433,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tel %lld"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uderzenie %lld"
           }
         }
       }
@@ -2314,6 +2524,12 @@
             "state" : "translated",
             "value" : "Tel %1$lld, klik %2$lld"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uderzenie %1$lld, kliknięcie %2$lld"
+          }
         }
       }
     },
@@ -2397,6 +2613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tel %1$lld van %2$lld"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uderzenie %1$lld z %2$lld"
           }
         }
       }
@@ -2482,6 +2704,12 @@
             "state" : "translated",
             "value" : "Tel %1$lld van %2$lld, %3$@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uderzenie %1$lld z %2$lld, %3$@"
+          }
         }
       }
     },
@@ -2566,6 +2794,12 @@
             "state" : "translated",
             "value" : "Tel %1$lld, klik %2$lld"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uderzenie %1$lld, kliknięcie %2$lld"
+          }
         }
       }
     },
@@ -2642,6 +2876,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Telweergave"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widok uderzeń"
           }
         }
       }
@@ -2720,6 +2960,12 @@
             "state" : "translated",
             "value" : "Tellen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uderzenia"
+          }
         }
       }
     },
@@ -2796,6 +3042,12 @@
             "state" : "translated",
             "value" : "Stuiterweergave"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widok odbicia"
+          }
         }
       }
     },
@@ -2870,6 +3122,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -2952,6 +3210,12 @@
             "state" : "translated",
             "value" : "Bugmeldingen en functieverzoeken zijn welkom."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zgłoszenia błędów i pomysły na nowe funkcje są mile widziane."
+          }
         }
       }
     },
@@ -3029,6 +3293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eenmalig kopen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kup na zawsze"
           }
         }
       }
@@ -3108,6 +3378,12 @@
             "state" : "translated",
             "value" : "Eenmalig kopen voor %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kup na zawsze za %@"
+          }
         }
       }
     },
@@ -3185,6 +3461,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuleer"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anuluj"
           }
         }
       }
@@ -3264,6 +3546,12 @@
             "state" : "translated",
             "value" : "Weergave wijzigen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zmień widok"
+          }
         }
       }
     },
@@ -3342,6 +3630,12 @@
             "state" : "translated",
             "value" : "Timing controleren"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprawdź rytm"
+          }
         }
       }
     },
@@ -3417,6 +3711,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chromatische tuner"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuner chromatyczny"
           }
         }
       }
@@ -3495,6 +3795,12 @@
             "state" : "translated",
             "value" : "Sluit"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zamknij"
+          }
         }
       }
     },
@@ -3570,6 +3876,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "sluit een paneel of tip"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "zamknij panel lub podpowiedź"
           }
         }
       }
@@ -3649,6 +3961,12 @@
             "state" : "translated",
             "value" : "Contact met de ontwikkelaar"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontakt z twórcą"
+          }
         }
       }
     },
@@ -3727,6 +4045,12 @@
             "state" : "translated",
             "value" : "Bedien met je stem"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steruj głosem"
+          }
         }
       }
     },
@@ -3802,6 +4126,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kon de prijzen niet laden uit de App Store."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się wczytać cen z App Store."
           }
         }
       }
@@ -3881,6 +4211,12 @@
             "state" : "translated",
             "value" : "Accenten aanpassen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dostosuj akcenty"
+          }
         }
       }
     },
@@ -3956,6 +4292,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wisselt tussen hoog, laag en stil"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przełącza między wysokim, niskim i cichym"
           }
         }
       }
@@ -4035,6 +4377,12 @@
             "state" : "translated",
             "value" : "Tempo verlagen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zmniejsz tempo"
+          }
         }
       }
     },
@@ -4113,6 +4461,12 @@
             "state" : "translated",
             "value" : "Preset %@ verwijderen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usuń preset %@"
+          }
         }
       }
     },
@@ -4188,6 +4542,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stel elke klik van de maat in — hoog, laag of stil — en bewaar patronen per nummer."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ustaw każde kliknięcie taktu — wysokie, niskie lub ciche — i zapisuj wzorce dla każdego utworu."
           }
         }
       }
@@ -4265,6 +4625,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uitgebreide help"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szczegółowa pomoc"
           }
         }
       }
@@ -4344,6 +4710,12 @@
             "state" : "translated",
             "value" : "Sluit"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zamknij"
+          }
         }
       }
     },
@@ -4422,6 +4794,12 @@
             "state" : "translated",
             "value" : "Help sluiten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zamknij pomoc"
+          }
         }
       }
     },
@@ -4499,6 +4877,12 @@
             "state" : "translated",
             "value" : "Klaar"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gotowe"
+          }
         }
       }
     },
@@ -4574,6 +4958,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dubbel ×2"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podwój ×2"
           }
         }
       }
@@ -4653,6 +5043,12 @@
             "state" : "translated",
             "value" : "Tik hier twee keer om het accentenraster te openen: stel elke klik van de maat in op hoog, laag of stil en bewaar patronen als presets."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij dwukrotnie, aby otworzyć siatkę akcentów: ustaw każde kliknięcie taktu jako wysokie, niskie lub ciche i zapisz wzorce jako presety."
+          }
         }
       }
     },
@@ -4728,6 +5124,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tik twee keer op de onderverdelingskaart om de hele maat te bewerken: elke cel wisselt tussen hoog → laag → stil en patronen bewaar je als presets met een naam."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij dwukrotnie karty podziału, aby edytować cały takt: każda komórka przełącza się wysoki → niski → cichy, a wzorce zapiszesz jako presety z nazwą."
           }
         }
       }
@@ -4805,6 +5207,12 @@
             "state" : "translated",
             "value" : "Tik twee keer om Accenten te openen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij dwukrotnie, aby otworzyć akcenty"
+          }
         }
       }
     },
@@ -4881,6 +5289,12 @@
             "state" : "translated",
             "value" : "Omlaag −1"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W dół −1"
+          }
         }
       }
     },
@@ -4956,6 +5370,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sleep de temposchuif of tik op de knoppen − / +."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przeciągnij suwak tempa lub dotknij przycisków − / +."
           }
         }
       }
@@ -5035,6 +5455,12 @@
             "state" : "translated",
             "value" : "Accenten bewerken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edytuj akcenty"
+          }
         }
       }
     },
@@ -5110,6 +5536,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Achtste noten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ósemki"
           }
         }
       }
@@ -5187,6 +5619,12 @@
             "state" : "translated",
             "value" : "Achtsten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ósemki"
+          }
         }
       }
     },
@@ -5261,6 +5699,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "E-mail"
@@ -5342,6 +5786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mail de ontwikkelaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napisz do twórcy"
           }
         }
       }
@@ -5469,6 +5919,36 @@
             "state" : "translated",
             "value" : "Elke %lld maten"
           }
+        },
+        "pl" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Co %lld takt"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Co %lld takty"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Co %lld taktów"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Co %lld taktu"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -5544,6 +6024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Elke klik van de maat heeft een eigen cel — %lld klikken in totaal. Tik op een cel om te wisselen: hoog → laag → stil."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Każde kliknięcie taktu ma własną komórkę — łącznie %lld. Dotknij komórki, aby ją przełączyć: wysoki → niski → cichy."
           }
         }
       }
@@ -5623,6 +6109,12 @@
             "state" : "translated",
             "value" : "Alles hier werkt ook met je stem — zie de commando’s hieronder."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wszystko tutaj działa też głosem — polecenia znajdziesz poniżej."
+          }
         }
       }
     },
@@ -5701,6 +6193,12 @@
             "state" : "translated",
             "value" : "Sneller"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szybciej"
+          }
         }
       }
     },
@@ -5776,6 +6274,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sneller +5"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szybciej +5"
           }
         }
       }
@@ -5855,6 +6359,12 @@
             "state" : "translated",
             "value" : "Commando vergeten?"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapomniałeś polecenia?"
+          }
         }
       }
     },
@@ -5933,6 +6443,12 @@
             "state" : "translated",
             "value" : "Altijd gratis, zonder ontgrendelen:"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zawsze za darmo, bez odblokowywania:"
+          }
         }
       }
     },
@@ -6008,6 +6524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gratis proefperiode"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bezpłatny okres próbny"
           }
         }
       }
@@ -6085,6 +6607,12 @@
             "state" : "translated",
             "value" : "Goed"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dobrze"
+          }
         }
       }
     },
@@ -6161,6 +6689,12 @@
             "state" : "translated",
             "value" : "Half ÷2"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Połowa ÷2"
+          }
         }
       }
     },
@@ -6236,6 +6770,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gehoord: %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Słyszę: %@"
           }
         }
       }
@@ -6315,6 +6855,12 @@
             "state" : "translated",
             "value" : "Help"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomoc"
+          }
         }
       }
     },
@@ -6392,6 +6938,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navigeren in de help"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nawigacja w pomocy"
           }
         }
       }
@@ -6471,6 +7023,12 @@
             "state" : "translated",
             "value" : "Hoge toon"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wysoki dźwięk"
+          }
         }
       }
     },
@@ -6549,6 +7107,12 @@
             "state" : "translated",
             "value" : "Ik gebruik Spraakbediening van iOS"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Używam Sterowania głosowego iOS"
+          }
         }
       }
     },
@@ -6624,6 +7188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tik in de baanweergave tijdens het spelen op de ring: elke klik (ook onderverdelingen) is een doel. De bewegende stip laat een spoor achter waar je tik viel, en gekleurde tellers houden Perfect / Goed / Mis bij tot je stopt."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W widoku orbity dotykaj pierścienia podczas gry — celem jest każde kliknięcie, także podziały. Poruszający się punkt zostawia ślad tam, gdzie trafiłeś, a kolorowe liczniki zliczają Idealnie / Dobrze / Źle, dopóki nie zatrzymasz metronomu."
           }
         }
       }
@@ -6703,6 +7273,12 @@
             "state" : "translated",
             "value" : "Tempo verhogen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwiększ tempo"
+          }
         }
       }
     },
@@ -6777,6 +7353,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -6859,6 +7441,12 @@
             "state" : "translated",
             "value" : "Instagram-bericht"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wiadomość na Instagramie"
+          }
         }
       }
     },
@@ -6936,6 +7524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram-bericht (@lee25_ios)"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wiadomość na Instagramie (@lee25_ios)"
           }
         }
       }
@@ -7015,6 +7609,12 @@
             "state" : "translated",
             "value" : "Instrumentsignaal"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sygnał z instrumentu"
+          }
         }
       }
     },
@@ -7093,6 +7693,12 @@
             "state" : "translated",
             "value" : "hoort bij Pro: drie oefenhulpmiddelen, één keer ontgrendelen."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "należy do Pro — trzy narzędzia do ćwiczeń, jedno odblokowanie."
+          }
         }
       }
     },
@@ -7167,6 +7773,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Largo? Moderato?"
@@ -7249,6 +7861,12 @@
             "state" : "translated",
             "value" : "Levenslang"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na zawsze"
+          }
         }
       }
     },
@@ -7324,6 +7942,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Levenslang — eenmalig %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na zawsze — jednorazowo %@"
           }
         }
       }
@@ -7401,6 +8025,12 @@
             "state" : "translated",
             "value" : "toon de commando’s die je kunt zeggen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pokaż polecenia, które możesz wypowiedzieć"
+          }
         }
       }
     },
@@ -7477,6 +8107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Luister"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Słuchaj"
           }
         }
       }
@@ -7556,6 +8192,12 @@
             "state" : "translated",
             "value" : "Luister naar stem"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nasłuchuj głosu"
+          }
         }
       }
     },
@@ -7633,6 +8275,12 @@
             "state" : "translated",
             "value" : "Luistert"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Słucham"
+          }
         }
       }
     },
@@ -7708,6 +8356,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Luistert…"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Słucham…"
           }
         }
       }
@@ -7787,6 +8441,12 @@
             "state" : "translated",
             "value" : "Luistert… houd elke noot aan"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Słucham… przytrzymaj każdą nutę"
+          }
         }
       }
     },
@@ -7864,6 +8524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prijzen laden…"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wczytywanie cen…"
           }
         }
       }
@@ -7943,6 +8609,12 @@
             "state" : "translated",
             "value" : "Lage toon"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niski dźwięk"
+          }
         }
       }
     },
@@ -8020,6 +8692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gemaakt voor Spraakbediening"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stworzone dla Sterowania głosowego"
           }
         }
       }
@@ -8099,6 +8777,12 @@
             "state" : "translated",
             "value" : "Metronoommodus"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryb metronomu"
+          }
         }
       }
     },
@@ -8174,6 +8858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Microfoon/spraak geblokkeerd — zet aan in Instellingen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofon/mowa zablokowane — włącz w Ustawieniach"
           }
         }
       }
@@ -8253,6 +8943,12 @@
             "state" : "translated",
             "value" : "Min"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minus"
+          }
         }
       }
     },
@@ -8330,6 +9026,12 @@
             "state" : "translated",
             "value" : "Meer"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Więcej"
+          }
         }
       }
     },
@@ -8405,6 +9107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "verplaats deze lijst"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "przewiń tę listę"
           }
         }
       }
@@ -8482,6 +9190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dempen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wycisz"
           }
         }
       }
@@ -8561,6 +9275,12 @@
             "state" : "translated",
             "value" : "Spraakbediening dempen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wycisz sterowanie głosowe"
+          }
         }
       }
     },
@@ -8638,6 +9358,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naam (bijv. Bossa-intro)"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nazwa (np. Intro bossa novy)"
           }
         }
       }
@@ -8717,6 +9443,12 @@
             "state" : "translated",
             "value" : "Heeft de microfoon van deze app nodig — zet “Ik gebruik Spraakbediening van iOS” uit om dit te gebruiken."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wymaga mikrofonu tej aplikacji — wyłącz „Używam Sterowania głosowego iOS”, aby z tego korzystać."
+          }
         }
       }
     },
@@ -8792,6 +9524,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geen noot gehoord, speel een noot"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie wykryto nuty, zagraj nutę"
           }
         }
       }
@@ -8869,6 +9607,12 @@
             "state" : "translated",
             "value" : "Er is geen eerdere aankoop gevonden."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie znaleziono wcześniejszego zakupu."
+          }
         }
       }
     },
@@ -8941,6 +9685,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -9023,6 +9773,12 @@
             "state" : "translated",
             "value" : "Niet nu"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie teraz"
+          }
         }
       }
     },
@@ -9101,6 +9857,12 @@
             "state" : "translated",
             "value" : "Noot"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nuta"
+          }
         }
       }
     },
@@ -9177,6 +9939,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nuty"
           }
         }
       }
@@ -9256,6 +10024,12 @@
             "state" : "translated",
             "value" : "Op het scherm"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na ekranie"
+          }
         }
       }
     },
@@ -9332,6 +10106,12 @@
             "state" : "translated",
             "value" : "Open"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz"
+          }
         }
       }
     },
@@ -9407,6 +10187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accenteditor openen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz edytor akcentów"
           }
         }
       }
@@ -9486,6 +10272,12 @@
             "state" : "translated",
             "value" : "Accenten openen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz akcenty"
+          }
         }
       }
     },
@@ -9561,6 +10353,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open het via de telweergave hieronder of zeg “practice”."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz go w widoku uderzeń poniżej albo powiedz „practice”."
           }
         }
       }
@@ -9640,6 +10438,12 @@
             "state" : "translated",
             "value" : "Oefenen openen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz ćwiczenie"
+          }
         }
       }
     },
@@ -9718,6 +10522,12 @@
             "state" : "translated",
             "value" : "Oefenmodus openen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz tryb ćwiczeń"
+          }
         }
       }
     },
@@ -9793,6 +10603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "open de oefenmodus"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "otwórz tryb ćwiczeń"
           }
         }
       }
@@ -9870,6 +10686,12 @@
             "state" : "translated",
             "value" : "open de tuner"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "otwórz tuner"
+          }
         }
       }
     },
@@ -9945,6 +10767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Baanweergave"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widok orbity"
           }
         }
       }
@@ -10024,6 +10852,12 @@
             "state" : "translated",
             "value" : "Pauze"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pauza"
+          }
         }
       }
     },
@@ -10102,6 +10936,12 @@
             "state" : "translated",
             "value" : "Eén keer betalen, voor altijd van jou"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapłać raz, ciesz się na zawsze"
+          }
         }
       }
     },
@@ -10177,6 +11017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfect!"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idealnie!"
           }
         }
       }
@@ -10255,6 +11101,12 @@
             "state" : "translated",
             "value" : "Afspelen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odtwórz"
+          }
         }
       }
     },
@@ -10330,6 +11182,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "afspelen / pauze"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "odtwórz / pauza"
           }
         }
       }
@@ -10407,6 +11265,12 @@
             "state" : "translated",
             "value" : "Speel 2–5 noten, elk ongeveer een halve seconde."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zagraj 2–5 nut, każdą przez około pół sekundy."
+          }
         }
       }
     },
@@ -10482,6 +11346,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Speel een noot…"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zagraj nutę…"
           }
         }
       }
@@ -10561,6 +11431,12 @@
             "state" : "translated",
             "value" : "Speel je frase om de klik te starten of te stoppen, ook midden in een nummer. Houd elke noot ongeveer een halve seconde aan, zodat snelle noten in je spel de klik niet per ongeluk starten. Werkt zolang Luister aan staat."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zagraj swoją frazę, aby włączyć lub zatrzymać klik — nawet w środku utworu. Przytrzymaj każdą nutę przez około pół sekundy, żeby szybkie nuty w grze go nie uruchamiały. Działa, gdy włączone jest słuchanie."
+          }
         }
       }
     },
@@ -10639,6 +11515,12 @@
             "state" : "translated",
             "value" : "Afspelen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odtwarzanie"
+          }
         }
       }
     },
@@ -10713,6 +11595,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plus"
@@ -10794,6 +11682,12 @@
             "state" : "translated",
             "value" : "Oefenen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ćwiczenie"
+          }
         }
       }
     },
@@ -10871,6 +11765,12 @@
             "state" : "translated",
             "value" : "Oefenmodus"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryb ćwiczeń"
+          }
         }
       }
     },
@@ -10947,6 +11847,12 @@
             "state" : "translated",
             "value" : "Oefenmodus · accenteditor en presets · tuner"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryb ćwiczeń · edytor akcentów i presety · tuner"
+          }
         }
       }
     },
@@ -11021,6 +11927,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset %@"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preset %@"
@@ -11103,6 +12015,12 @@
             "state" : "translated",
             "value" : "Presets"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Presety"
+          }
         }
       }
     },
@@ -11181,6 +12099,12 @@
             "state" : "translated",
             "value" : "Privacybeleid"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polityka prywatności"
+          }
         }
       }
     },
@@ -11257,6 +12181,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/nl/privacy.html"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/pl/privacy.html"
+          }
         }
       }
     },
@@ -11329,6 +12259,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -11411,6 +12347,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -11486,6 +12428,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro ontgrendeld — bedankt!"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro odblokowane — dziękujemy!"
           }
         }
       }
@@ -11563,6 +12511,12 @@
             "state" : "translated",
             "value" : "Kwartnoten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ćwierćnuty"
+          }
         }
       }
     },
@@ -11639,6 +12593,12 @@
             "state" : "translated",
             "value" : "Kwarten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ćwierćnuty"
+          }
         }
       }
     },
@@ -11714,6 +12674,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Verhoog het tempo automatisch om de paar maten en breng een passage op snelheid, zonder je handen te gebruiken."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo rośnie samo co kilka taktów — rozpędzaj pasaż bez odrywania rąk od instrumentu."
           }
         }
       }
@@ -11793,6 +12759,12 @@
             "state" : "translated",
             "value" : "Verhoogt het tempo tijdens het spelen automatisch om de paar maten, zodat je een passage stap voor stap sneller maakt. Stopt bij het doel. Zeg op elk moment “practice” om dit te openen."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podczas gry automatycznie podnosi tempo co kilka taktów, aby stopniowo rozpędzać pasaż. Zatrzymuje się na tempie docelowym. Powiedz „practice” w dowolnej chwili, aby to otworzyć."
+          }
         }
       }
     },
@@ -11870,6 +12842,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Neem eerst een korte frase op."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Najpierw nagraj krótką frazę."
           }
         }
       }
@@ -11949,6 +12927,12 @@
             "state" : "translated",
             "value" : "Opnieuw opnemen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nagraj ponownie"
+          }
         }
       }
     },
@@ -12027,6 +13011,12 @@
             "state" : "translated",
             "value" : "Signaal opnemen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nagraj sygnał"
+          }
         }
       }
     },
@@ -12102,6 +13092,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stemtoon"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dźwięk odniesienia"
           }
         }
       }
@@ -12181,6 +13177,12 @@
             "state" : "translated",
             "value" : "Vereist Pro"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wymaga Pro"
+          }
         }
       }
     },
@@ -12258,6 +13260,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Herstel"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przywróć"
           }
         }
       }
@@ -12337,6 +13345,12 @@
             "state" : "translated",
             "value" : "Herstel"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przywróć"
+          }
         }
       }
     },
@@ -12414,6 +13428,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aankopen herstellen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przywróć zakupy"
           }
         }
       }
@@ -12493,6 +13513,12 @@
             "state" : "translated",
             "value" : "Aankopen herstellen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przywróć zakupy"
+          }
         }
       }
     },
@@ -12570,6 +13596,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Herstelt een eerdere Pro-aankoop"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przywraca wcześniejszy zakup Pro"
           }
         }
       }
@@ -12649,6 +13681,12 @@
             "state" : "translated",
             "value" : "Zet het standaardpatroon voor deze maatsoort terug"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przywraca domyślny wzorzec dla tego metrum"
+          }
         }
       }
     },
@@ -12726,6 +13764,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bewaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz"
           }
         }
       }
@@ -12805,6 +13849,12 @@
             "state" : "translated",
             "value" : "Bewaar een patroon per nummer — als je het oproept, komen ook de maatsoort en onderverdeling terug."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisuj wzorzec dla każdego utworu — po wywołaniu wróci też jego metrum i podział."
+          }
         }
       }
     },
@@ -12882,6 +13932,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Huidig patroon bewaren…"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz bieżący wzorzec…"
           }
         }
       }
@@ -12961,6 +14017,12 @@
             "state" : "translated",
             "value" : "Patroon bewaren"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz wzorzec"
+          }
         }
       }
     },
@@ -13038,6 +14100,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preset bewaren"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz preset"
           }
         }
       }
@@ -13117,6 +14185,12 @@
             "state" : "translated",
             "value" : "Bewaart dit patroon samen met de maatsoort en onderverdeling, zodat je het per nummer kunt oproepen."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisuje ten wzorzec razem z metrum i podziałem, abyś mógł go wywołać dla każdego utworu."
+          }
         }
       }
     },
@@ -13194,6 +14268,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "zeg"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "powiedz"
           }
         }
       }
@@ -13273,6 +14353,12 @@
             "state" : "translated",
             "value" : "Zeg “close” om te sluiten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „close”, aby wyjść"
+          }
         }
       }
     },
@@ -13348,6 +14434,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zeg “start”, “faster” of “help”"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „start”, „faster” lub „help”"
           }
         }
       }
@@ -13426,6 +14518,12 @@
             "state" : "translated",
             "value" : "Zeg een commando"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz polecenie"
+          }
         }
       }
     },
@@ -13501,6 +14599,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zeg “close” / “done” of tik op Klaar."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „close” / „done” albo dotknij Gotowe."
           }
         }
       }
@@ -13580,6 +14684,12 @@
             "state" : "translated",
             "value" : "Zeg “close” of tik om te sluiten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „close” lub dotknij, aby zamknąć"
+          }
         }
       }
     },
@@ -13658,6 +14768,12 @@
             "state" : "translated",
             "value" : "Zeg op elk moment “help” — of tik hier — om alle commando’s te zien, en daarna “close” om te sluiten."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „help” w dowolnej chwili — lub dotknij tutaj — aby zobaczyć wszystkie polecenia, a potem „close”, aby zamknąć."
+          }
         }
       }
     },
@@ -13734,6 +14850,12 @@
             "state" : "translated",
             "value" : "Zeg “help” of tik op de knop ?."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „help” albo dotknij przycisku ?."
+          }
         }
       }
     },
@@ -13809,6 +14931,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zeg “louder” / “quieter” / “mute” of “volume 60”."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „louder” / „quieter” / „mute” albo „volume 60”."
           }
         }
       }
@@ -13888,6 +15016,12 @@
             "state" : "translated",
             "value" : "Zeg “practice” om het tempo tijdens het spelen automatisch om de paar maten te verhogen — ideaal voor snelheidsoefeningen."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „practice”, aby tempo rosło samo co kilka taktów podczas gry — świetne do ćwiczeń szybkości."
+          }
         }
       }
     },
@@ -13964,6 +15098,12 @@
             "state" : "translated",
             "value" : "Zeg “scroll down” / “scroll up” of veeg."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „scroll down” / „scroll up” albo przesuń palcem."
+          }
         }
       }
     },
@@ -14039,6 +15179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zeg “tune” en speel: noot, cents en een zuivere zone."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „tune” i graj: nuta, centy i strefa czystego stroju."
           }
         }
       }
@@ -14118,6 +15264,12 @@
             "state" : "translated",
             "value" : "Zeg “tune” om de chromatische tuner te openen en “close” als je klaar bent."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „tune”, aby otworzyć tuner chromatyczny, a „close”, gdy skończysz."
+          }
         }
       }
     },
@@ -14193,6 +15345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Scrollen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przewiń"
           }
         }
       }
@@ -14270,6 +15428,12 @@
             "state" : "translated",
             "value" : "Omlaag scrollen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przewiń w dół"
+          }
         }
       }
     },
@@ -14345,6 +15509,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Omhoog scrollen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przewiń w górę"
           }
         }
       }
@@ -14424,6 +15594,12 @@
             "state" : "translated",
             "value" : "Scrollen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przewijanie"
+          }
         }
       }
     },
@@ -14499,6 +15675,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tellen instellen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ustaw uderzenia"
           }
         }
       }
@@ -14576,6 +15758,12 @@
             "state" : "translated",
             "value" : "stel percentage in"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ustaw procent"
+          }
         }
       }
     },
@@ -14652,6 +15840,12 @@
             "state" : "translated",
             "value" : "stel maatsoort in"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ustaw metrum"
+          }
         }
       }
     },
@@ -14727,6 +15921,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "stel waarde in"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ustaw wartość"
           }
         }
       }
@@ -14806,6 +16006,12 @@
             "state" : "translated",
             "value" : "Stelt de maatsoort in op %lld/4"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ustawia metrum %lld/4"
+          }
         }
       }
     },
@@ -14884,6 +16090,12 @@
             "state" : "translated",
             "value" : "Signaal: %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sygnał: %@"
+          }
         }
       }
     },
@@ -14959,6 +16171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "demp de klik"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "wycisz klik"
           }
         }
       }
@@ -15038,6 +16256,12 @@
             "state" : "translated",
             "value" : "Stil"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cichy"
+          }
         }
       }
     },
@@ -15114,6 +16338,12 @@
             "state" : "translated",
             "value" : "Zestiende noten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szesnastki"
+          }
         }
       }
     },
@@ -15189,6 +16419,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zestienden"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szesnastki"
           }
         }
       }
@@ -15268,6 +16504,12 @@
             "state" : "translated",
             "value" : "Langzamer"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wolniej"
+          }
         }
       }
     },
@@ -15344,6 +16586,12 @@
             "state" : "translated",
             "value" : "Langzamer −5"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wolniej −5"
+          }
         }
       }
     },
@@ -15419,6 +16667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spraakherkenning is hier niet beschikbaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rozpoznawanie mowy jest tu niedostępne"
           }
         }
       }
@@ -15497,6 +16751,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Snelheidstrainer"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trener szybkości"
           }
         }
       }
@@ -15580,6 +16840,12 @@
             "state" : "translated",
             "value" : "Snelheidstrainer · +%1$lld om de %2$lld maten → %3$lld"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trener szybkości · +%1$lld co %2$lld t. → %3$lld"
+          }
         }
       }
     },
@@ -15653,6 +16919,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start"
@@ -15735,6 +17007,12 @@
             "state" : "translated",
             "value" : "Start / stop met mijn instrument"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start / stop moim instrumentem"
+          }
         }
       }
     },
@@ -15812,6 +17090,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Begin met luisteren"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zacznij słuchać"
           }
         }
       }
@@ -15891,6 +17175,12 @@
             "state" : "translated",
             "value" : "Metronoom starten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uruchom metronom"
+          }
         }
       }
     },
@@ -15964,6 +17254,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stop"
@@ -16046,6 +17342,12 @@
             "state" : "translated",
             "value" : "Stop met luisteren"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przestań słuchać"
+          }
         }
       }
     },
@@ -16124,6 +17426,12 @@
             "state" : "translated",
             "value" : "Metronoom stoppen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatrzymaj metronom"
+          }
         }
       }
     },
@@ -16200,6 +17508,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Onderverdeling"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podział"
           }
         }
       }
@@ -16279,6 +17593,12 @@
             "state" : "translated",
             "value" : "Abonneren"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subskrybuj"
+          }
         }
       }
     },
@@ -16357,6 +17677,12 @@
             "state" : "translated",
             "value" : "Jaarlijks abonneren voor %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subskrybuj rocznie za %@"
+          }
         }
       }
     },
@@ -16432,6 +17758,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Support"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomoc techniczna"
           }
         }
       }
@@ -16509,6 +17841,12 @@
             "state" : "translated",
             "value" : "Naar stuiterweergave"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przełącz na widok odbicia"
+          }
         }
       }
     },
@@ -16584,6 +17922,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naar baanweergave"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przełącz na widok orbity"
           }
         }
       }
@@ -16663,6 +18007,12 @@
             "state" : "translated",
             "value" : "Naar ringweergave"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przełącz na widok pierścienia"
+          }
         }
       }
     },
@@ -16741,6 +18091,12 @@
             "state" : "translated",
             "value" : "Weergave wisselen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przełącz widok"
+          }
         }
       }
     },
@@ -16817,6 +18173,12 @@
             "state" : "translated",
             "value" : "wissel de weergave"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "zmień wizualizację"
+          }
         }
       }
     },
@@ -16892,6 +18254,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tik op 1/4, 1/8, triool of 1/16. Tik twee keer op de kaart om Accenten te openen en elke klik van de maat op hoog, laag of stil te zetten."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij 1/4, 1/8, trioli lub 1/16. Dotknij dwukrotnie karty, aby otworzyć akcenty i ustawić każde kliknięcie taktu jako wysokie, niskie lub ciche."
           }
         }
       }
@@ -16971,6 +18339,12 @@
             "state" : "translated",
             "value" : "Tik in het ritme om je timing te controleren"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stukaj w rytm, aby sprawdzić swój rytm"
+          }
         }
       }
     },
@@ -17046,6 +18420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tik op Luister om met je stem te bedienen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij Słuchaj, aby sterować głosem"
           }
         }
       }
@@ -17123,6 +18503,12 @@
             "state" : "translated",
             "value" : "Tik op Luister om de spraakbediening aan of uit te zetten."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij Słuchaj, aby włączyć lub wyłączyć sterowanie głosowe."
+          }
         }
       }
     },
@@ -17198,6 +18584,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tik onderaan op Start / Stop."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij Start / Stop na dole."
           }
         }
       }
@@ -17277,6 +18669,12 @@
             "state" : "translated",
             "value" : "Tap-tempo"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap tempo"
+          }
         }
       }
     },
@@ -17352,6 +18750,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tik in het ritme op het grote BPM-getal om het tempo in te stellen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stukaj w rytm w duży numer BPM, aby ustawić tempo."
           }
         }
       }
@@ -17429,6 +18833,12 @@
             "state" : "translated",
             "value" : "Tik op de stippen om de maatsoort te kiezen."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij kropek, aby wybrać metrum."
+          }
         }
       }
     },
@@ -17504,6 +18914,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tik op het weergavepictogram (rechtsboven op de telkaart): stuiter → baan → ring."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij ikony widoku (w prawym górnym rogu karty uderzeń): odbicie → orbita → pierścień."
           }
         }
       }
@@ -17583,6 +18999,12 @@
             "state" : "translated",
             "value" : "Tik om te wisselen tussen de stuiterende bal en de baanring — of zeg “bounce” / “orbit”."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij, aby przełączać między skaczącą kulką a pierścieniem orbity — lub powiedz „bounce” / „orbit”."
+          }
         }
       }
     },
@@ -17661,6 +19083,12 @@
             "state" : "translated",
             "value" : "Tik om te wisselen tussen de tempoaanduiding en BPM"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij, aby przełączać między nazwą tempa a BPM"
+          }
         }
       }
     },
@@ -17738,6 +19166,12 @@
             "state" : "translated",
             "value" : "Tempo"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
+          }
         }
       }
     },
@@ -17810,6 +19244,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo %lld"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo %lld"
@@ -17892,6 +19332,12 @@
             "state" : "translated",
             "value" : "Temposchuif"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suwak tempa"
+          }
         }
       }
     },
@@ -17969,6 +19415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gebruiksvoorwaarden (EULA)"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warunki użytkowania (EULA)"
           }
         }
       }
@@ -18048,6 +19500,12 @@
             "state" : "translated",
             "value" : "Dit is je tempo als klassieke term. Tik erop om naar het BPM-getal te wisselen en weer terug."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To Twoje tempo jako termin klasyczny. Dotknij, aby zobaczyć liczbę BPM, i jeszcze raz, aby wrócić."
+          }
         }
       }
     },
@@ -18125,6 +19583,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De eigen microfoon van de app staat uit, zodat hij Spraakbediening niet in de weg zit. Zeg “Tap Start”, “Tap Faster” of “Tap 3 beats”."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofon aplikacji jest wyłączony, aby nie kolidował ze Sterowaniem głosowym. Powiedz „Tap Start”, „Tap Faster” lub „Tap 3 beats”."
           }
         }
       }
@@ -18204,6 +19668,12 @@
             "state" : "translated",
             "value" : "De complete metronoom: elk tempo, elke maatsoort en onderverdeling, alle drie de weergaven, tap-tempo, timingcontrole en volledige handsfree spraakbediening."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pełny metronom: każde tempo, metrum i podział, wszystkie trzy widoki uderzeń, tap tempo, sprawdzanie rytmu i pełne sterowanie głosowe bez rąk."
+          }
         }
       }
     },
@@ -18281,6 +19751,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De microfoon luistert al — zeg “start”, “faster” of “help”. Gebruik je Spraakbediening van iOS? Open Spraakcommando’s om te wisselen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofon już słucha — powiedz „start”, „faster” lub „help”. Używasz Sterowania głosowego iOS? Otwórz Polecenia głosowe, aby przełączyć."
           }
         }
       }
@@ -18360,6 +19836,12 @@
             "state" : "translated",
             "value" : "Het jaarabonnement wordt automatisch verlengd voor %@ per jaar, tenzij je het minstens 24 uur vóór de verlenging opzegt in Instellingen > Apple Account > Abonnementen. Levenslang is een eenmalige betaling."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subskrypcja roczna odnawia się automatycznie za %@ rocznie, dopóki nie anulujesz jej co najmniej 24 godziny przed odnowieniem w Ustawienia > Konto Apple > Subskrypcje. Zakup na zawsze to jednorazowa opłata."
+          }
         }
       }
     },
@@ -18438,6 +19920,12 @@
             "state" : "translated",
             "value" : "Er is ook een tuner"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jest też tuner"
+          }
         }
       }
     },
@@ -18513,6 +20001,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timingcontrole"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprawdzanie rytmu"
           }
         }
       }
@@ -18592,6 +20086,12 @@
             "state" : "translated",
             "value" : "Tips"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wskazówki"
+          }
         }
       }
     },
@@ -18670,6 +20170,12 @@
             "state" : "translated",
             "value" : "Trainer"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trener"
+          }
         }
       }
     },
@@ -18746,6 +20252,12 @@
             "state" : "translated",
             "value" : "Triolen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triole"
+          }
         }
       }
     },
@@ -18821,6 +20333,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "triolen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "triole"
           }
         }
       }
@@ -18899,6 +20417,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Probeer opnieuw"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spróbuj ponownie"
           }
         }
       }
@@ -19024,6 +20548,36 @@
             "state" : "translated",
             "value" : "%lld dagen gratis proberen"
           }
+        },
+        "pl" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld dzień"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld dni"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld dni"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld dnia"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -19135,6 +20689,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld maanden gratis proberen"
+          }
+        },
+        "pl" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld miesiąc"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld miesiące"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld miesięcy"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld miesiąca"
+                }
+              }
+            }
           }
         }
       }
@@ -19260,6 +20844,36 @@
             "state" : "translated",
             "value" : "%lld weken gratis proberen"
           }
+        },
+        "pl" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld tydzień"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld tygodnie"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld tygodni"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wypróbuj za darmo przez %lld tygodnia"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -19335,6 +20949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Een maand gratis proberen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wypróbuj za darmo przez miesiąc"
           }
         }
       }
@@ -19412,6 +21032,12 @@
             "state" : "translated",
             "value" : "Een week gratis proberen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wypróbuj za darmo przez tydzień"
+          }
         }
       }
     },
@@ -19488,6 +21114,12 @@
             "state" : "translated",
             "value" : "Een jaar gratis proberen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wypróbuj za darmo przez rok"
+          }
         }
       }
     },
@@ -19561,6 +21193,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuner"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tuner"
@@ -19643,6 +21281,12 @@
             "state" : "translated",
             "value" : "Zet de eigen microfoon van de app uit; bedien de knoppen op naam"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyłącza mikrofon aplikacji; przyciskami steruje się po nazwie"
+          }
         }
       }
     },
@@ -19718,6 +21362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zet de microfoon van deze app uit, zodat ze elkaar niet in de weg zitten. Bedien de app met “Tap Start”, “Tap Faster” of “Tap 3 beats”."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyłącza mikrofon tej aplikacji, aby się nie zakłócały. Steruj, mówiąc „Tap Start”, „Tap Faster”, „Tap 3 beats”."
           }
         }
       }
@@ -19797,6 +21447,12 @@
             "state" : "translated",
             "value" : "Twee telweergaven"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dwa widoki uderzeń"
+          }
         }
       }
     },
@@ -19873,6 +21529,12 @@
             "state" : "translated",
             "value" : "Pro ontgrendelen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odblokuj Pro"
+          }
         }
       }
     },
@@ -19948,6 +21610,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Omhoog +1"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W górę +1"
           }
         }
       }
@@ -20027,6 +21695,12 @@
             "state" : "translated",
             "value" : "Tot %lld BPM"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do %lld BPM"
+          }
         }
       }
     },
@@ -20102,6 +21776,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naar Pro"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przejdź na Pro"
           }
         }
       }
@@ -20180,6 +21860,12 @@
             "state" : "translated",
             "value" : "Weergave"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widok"
+          }
         }
       }
     },
@@ -20255,6 +21941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stem"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Głos"
           }
         }
       }
@@ -20334,6 +22026,12 @@
             "state" : "translated",
             "value" : "Spraakcommando’s"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polecenia głosowe"
+          }
         }
       }
     },
@@ -20410,6 +22108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spraakcommando’s"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polecenia głosowe"
           }
         }
       }
@@ -20488,6 +22192,12 @@
             "state" : "translated",
             "value" : "Spraakbediening uit"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sterowanie głosowe wyłączone"
+          }
         }
       }
     },
@@ -20565,6 +22275,12 @@
             "state" : "translated",
             "value" : "Volume"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Głośność"
+          }
         }
       }
     },
@@ -20640,6 +22356,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volume %lld%%"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Głośność %lld%%"
           }
         }
       }
@@ -20717,6 +22439,12 @@
             "state" : "translated",
             "value" : "Zachter"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciszej"
+          }
         }
       }
     },
@@ -20792,6 +22520,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Luider"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Głośniej"
           }
         }
       }
@@ -20871,6 +22605,12 @@
             "state" : "translated",
             "value" : "Jaarlijks"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rocznie"
+          }
         }
       }
     },
@@ -20947,6 +22687,12 @@
             "state" : "translated",
             "value" : "Jaarlijks — %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rocznie — %@"
+          }
         }
       }
     },
@@ -21019,6 +22765,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -21099,6 +22851,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -21171,6 +22929,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -21251,6 +23015,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -21323,6 +23093,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ Stop"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ Stop"
@@ -21403,6 +23179,12 @@
             "state" : "translated",
             "value" : "▶ Start"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ Start"
+          }
         }
       }
     },
@@ -21478,6 +23260,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minutnik"
           }
         }
       }
@@ -21555,6 +23343,12 @@
             "state" : "translated",
             "value" : "Uit"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wył."
+          }
         }
       }
     },
@@ -21631,6 +23425,12 @@
             "state" : "translated",
             "value" : "Oefentimer"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minutnik ćwiczeń"
+          }
         }
       }
     },
@@ -21703,6 +23503,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld min"
@@ -21783,6 +23589,12 @@
             "state" : "translated",
             "value" : "Resterende tijd"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pozostały czas"
+          }
         }
       }
     },
@@ -21858,6 +23670,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer herstellen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zresetuj minutnik"
           }
         }
       }
@@ -21935,6 +23753,12 @@
             "state" : "translated",
             "value" : "Timer uit"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minutnik wyłączony"
+          }
         }
       }
     },
@@ -22010,6 +23834,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer %lld min"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minutnik: %lld min"
           }
         }
       }
@@ -22087,6 +23917,12 @@
             "state" : "translated",
             "value" : "Nog %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zostało: %@"
+          }
         }
       }
     },
@@ -22162,6 +23998,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De oefentijd is om"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czas ćwiczeń minął"
           }
         }
       }
@@ -22239,6 +24081,12 @@
             "state" : "translated",
             "value" : "stel een oefentimer in"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ustaw minutnik ćwiczeń"
+          }
         }
       }
     },
@@ -22314,6 +24162,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "zet de timer uit"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "wyłącz minutnik"
           }
         }
       }
@@ -22391,6 +24245,12 @@
             "state" : "translated",
             "value" : "Tik op de timerknop naast Start of zeg “timer 5 minutes”. Hij telt af terwijl de klik speelt, stopt daarna en laat een geluidje horen."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij przycisku minutnika obok Start albo powiedz „timer 5 minutes”. Odlicza, gdy gra klik, po czym zatrzymuje się i dzwoni."
+          }
         }
       }
     },
@@ -22466,6 +24326,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Telt af terwijl de klik speelt en pauzeert als je stopt. Als de tijd om is, stopt de metronoom met een geluidje. Zeg op elk moment “timer 5 minutes” of “timer off”."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odlicza, gdy gra klik, i pauzuje, gdy się zatrzymasz. Gdy czas minie, metronom zatrzyma się i zadzwoni. Powiedz „timer 5 minutes” lub „timer off” w dowolnej chwili."
           }
         }
       }
@@ -22543,6 +24409,12 @@
             "state" : "translated",
             "value" : "Anonieme gebruiksstatistieken delen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Udostępniaj anonimowe statystyki użycia"
+          }
         }
       }
     },
@@ -22619,6 +24491,12 @@
             "state" : "translated",
             "value" : "Privacy"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prywatność"
+          }
         }
       }
     },
@@ -22694,6 +24572,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tellingen zoals hoeveel apparaten de app gebruiken, plus crashrapporten. Geen audio, instellingen of persoonlijke gegevens. Geldt vanaf de volgende keer opstarten."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liczniki, np. ile urządzeń używa aplikacji, oraz raporty o awariach. Bez dźwięku, ustawień i danych osobowych. Obowiązuje od następnego uruchomienia."
           }
         }
       }
@@ -22772,6 +24656,12 @@
             "state" : "translated",
             "value" : "Nóg grotere tekst"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeszcze większy tekst"
+          }
         }
       }
     },
@@ -22848,6 +24738,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Het scherm blijft leesbaar en netjes, ook bij de allergrootste tekstgrootte."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekran pozostaje czytelny i uporządkowany nawet przy największym rozmiarze tekstu."
           }
         }
       }
@@ -22926,6 +24822,12 @@
             "state" : "translated",
             "value" : "Kleuren die makkelijker te zien zijn"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Łatwiejsze do odróżnienia kolory"
+          }
         }
       }
     },
@@ -23002,6 +24904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tel- en timingkleuren blijven duidelijk met Verhoog contrast, of als kleuren moeilijk te onderscheiden zijn."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kolory uderzeń i rytmu pozostają wyraźne po włączeniu opcji Zwiększ kontrast lub gdy trudno odróżnić kolory."
           }
         }
       }
@@ -23080,6 +24988,12 @@
             "state" : "translated",
             "value" : "Toetsenbordbediening"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sterowanie z klawiatury"
+          }
         }
       }
     },
@@ -23156,6 +25070,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Op een iPad met toetsenbord start, stop en wijzig je het tempo met toetsen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na iPadzie z klawiaturą możesz uruchamiać, zatrzymywać i zmieniać tempo klawiszami."
           }
         }
       }
@@ -23234,6 +25154,12 @@
             "state" : "translated",
             "value" : "Wat is er nieuw"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Co nowego"
+          }
         }
       }
     },
@@ -23310,6 +25236,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zie na een update wat er nieuw is wanneer je de app voor het eerst opent."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Po aktualizacji zobaczysz, co nowego, przy pierwszym otwarciu aplikacji."
           }
         }
       }
@@ -23388,6 +25320,12 @@
             "state" : "translated",
             "value" : "Antwoorden op je feedback"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odpowiedzi na Twoje opinie"
+          }
         }
       }
     },
@@ -23464,6 +25402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lees onze antwoorden op je feedback direct in de app."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czytaj nasze odpowiedzi na Twoje opinie prosto w aplikacji."
           }
         }
       }
@@ -23542,6 +25486,12 @@
             "state" : "translated",
             "value" : "Pro cadeau geven"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podaruj Pro"
+          }
         }
       }
     },
@@ -23618,6 +25568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geef Not My Tempo Pro aan een bandlid of een leerling."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podaruj Not My Tempo Pro koledze z zespołu lub uczniowi."
           }
         }
       }
@@ -23696,6 +25652,12 @@
             "state" : "translated",
             "value" : "Widget voor beginscherm"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widżet na ekranie początkowym"
+          }
         }
       }
     },
@@ -23772,6 +25734,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start de klik direct vanaf je beginscherm, zonder de app te openen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uruchom klik prosto z ekranu początkowego, bez otwierania aplikacji."
           }
         }
       }
@@ -23850,6 +25818,12 @@
             "state" : "translated",
             "value" : "Siri en Opdrachten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri i Skróty"
+          }
         }
       }
     },
@@ -23926,6 +25900,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vraag het aan Siri of voer een opdracht uit om de klik in jouw tempo te starten."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poproś Siri lub uruchom skrót, aby włączyć klik w Twoim tempie."
           }
         }
       }
@@ -24004,6 +25984,12 @@
             "state" : "translated",
             "value" : "Synchroniseren tussen apparaten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchronizacja między urządzeniami"
+          }
         }
       }
     },
@@ -24080,6 +26066,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Je presets en instellingen volgen je tussen iPhone en iPad."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Twoje presety i ustawienia podążają za Tobą między iPhone’em a iPadem."
           }
         }
       }
@@ -24158,6 +26150,12 @@
             "state" : "translated",
             "value" : "Back-up van je presets"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopia zapasowa presetów"
+          }
         }
       }
     },
@@ -24234,6 +26232,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bewaar je accentpresets in een bestand en haal ze op wanneer je wilt."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz presety akcentów do pliku i przywróć je w dowolnej chwili."
           }
         }
       }
@@ -24312,6 +26316,12 @@
             "state" : "translated",
             "value" : "Oefenherinneringen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przypomnienia o ćwiczeniach"
+          }
         }
       }
     },
@@ -24388,6 +26398,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Krijg een vriendelijke herinnering op het tijdstip dat jij kiest om te oefenen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otrzymuj delikatne przypomnienie o godzinie, którą wybierzesz na ćwiczenia."
           }
         }
       }
@@ -24466,6 +26482,12 @@
             "state" : "translated",
             "value" : "Indeling voor opvouwbare iPhone"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Układ dla składanego iPhone’a"
+          }
         }
       }
     },
@@ -24542,6 +26564,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Op een opvouwbare iPhone zie je de tellen en de knoppen naast elkaar."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na składanym iPhonie zobaczysz uderzenia i przyciski obok siebie."
           }
         }
       }
@@ -24620,6 +26648,12 @@
             "state" : "translated",
             "value" : "Wis al mijn gegevens"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usuń wszystkie moje dane"
+          }
         }
       }
     },
@@ -24697,6 +26731,12 @@
             "state" : "translated",
             "value" : "Wis al je presets en instellingen in de app wanneer je maar wilt."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usuń wszystkie presety i ustawienia w aplikacji, kiedy chcesz."
+          }
         }
       }
     },
@@ -24772,6 +26812,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aanbiedingscode inwisselen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrealizuj kod promocyjny"
           }
         }
       }
@@ -24849,6 +26895,12 @@
             "state" : "translated",
             "value" : "Heb je een code voor Pro? Voer hem direct in de app in, op het Pro-scherm of bij Spraakcommando’s."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masz kod do Pro? Wpisz go prosto w aplikacji — na ekranie Pro lub w Poleceniach głosowych."
+          }
         }
       }
     },
@@ -24924,6 +26976,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Duidelijker met Verhoog contrast"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyraźniej ze Zwiększonym kontrastem"
           }
         }
       }
@@ -25001,6 +27059,12 @@
             "state" : "translated",
             "value" : "Met Verhoog contrast of Verminder transparantie aan worden tellen, contouren en de helpoverlay steviger en ondoorzichtig getekend."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gdy włączone jest Zwiększ kontrast lub Zmniejsz przezroczystość, uderzenia, kontury i nakładka pomocy są rysowane grubiej i bez przezroczystości."
+          }
         }
       }
     },
@@ -25076,6 +27140,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ruimte voor de grootste tekst"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miejsce na największy tekst"
           }
         }
       }
@@ -25153,6 +27223,12 @@
             "state" : "translated",
             "value" : "Bij de grootste tekstgroottes schikken knoppen en lijsten zich anders, zodat niets wordt afgekapt."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przy największych rozmiarach tekstu przyciski i listy układają się inaczej, by nic nie zostało ucięte."
+          }
         }
       }
     },
@@ -25228,6 +27304,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Versie %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wersja %@"
           }
         }
       }
@@ -25305,6 +27387,12 @@
             "state" : "translated",
             "value" : "Ga door"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dalej"
+          }
         }
       }
     },
@@ -25380,6 +27468,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Een metronoom waar je tegen praat"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronom, z którym rozmawiasz"
           }
         }
       }
@@ -25457,6 +27551,12 @@
             "state" : "translated",
             "value" : "Zeg “start”, “stop”, “faster” of “tempo 120” en houd beide handen op je instrument."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz „start”, „stop”, „faster” lub „tempo 120” i trzymaj obie ręce na instrumencie."
+          }
         }
       }
     },
@@ -25532,6 +27632,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Commando’s zijn Engelse woorden"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polecenia to angielskie słowa"
           }
         }
       }
@@ -25609,6 +27715,12 @@
             "state" : "translated",
             "value" : "In elke taal bedien je de app met korte Engelse woorden. Zeg op elk moment “help” om ze allemaal op het scherm te zien."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W każdym języku aplikacją steruje się krótkimi angielskimi słowami. Powiedz „help” w dowolnej chwili, aby zobaczyć je wszystkie na ekranie."
+          }
         }
       }
     },
@@ -25684,6 +27796,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De eigen microfoon van de app blijft uit, zodat hij Spraakbediening niet in de weg zit. Zeg “Tap Start” of “Tap Faster”."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofon aplikacji pozostaje wyłączony, aby nie kolidował ze Sterowaniem głosowym. Powiedz „Tap Start” lub „Tap Faster”."
           }
         }
       }
@@ -25761,6 +27879,12 @@
             "state" : "translated",
             "value" : "Straks: de microfoon"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dalej: mikrofon"
+          }
         }
       }
     },
@@ -25836,6 +27960,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS vraagt toegang tot de microfoon en spraakherkenning. Die worden alleen gebruikt om je commando’s te horen. De app neemt nooit iets op en bewaart niets van wat hij hoort."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS poprosi o dostęp do mikrofonu i rozpoznawania mowy. Służą one tylko do usłyszenia Twoich poleceń. Aplikacja niczego nie nagrywa ani nie zapisuje."
           }
         }
       }
@@ -25913,6 +28043,12 @@
             "state" : "translated",
             "value" : "Sla over"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomiń"
+          }
         }
       }
     },
@@ -25988,6 +28124,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aan de slag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zaczynamy"
           }
         }
       }
@@ -26065,6 +28207,12 @@
             "state" : "translated",
             "value" : "Volgende"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dalej"
+          }
         }
       }
     },
@@ -26140,6 +28288,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preset bewaard"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset zapisany"
           }
         }
       }
@@ -26217,6 +28371,12 @@
             "state" : "translated",
             "value" : "Nog geen presets"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak presetów"
+          }
         }
       }
     },
@@ -26292,6 +28452,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aanbiedingscode inwisselen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrealizuj kod promocyjny"
           }
         }
       }
@@ -26369,6 +28535,12 @@
             "state" : "translated",
             "value" : "Toon de introductie opnieuw"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokaż wprowadzenie ponownie"
+          }
         }
       }
     },
@@ -26444,6 +28616,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Code inwisselen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrealizuj kod"
           }
         }
       }
@@ -26521,6 +28699,12 @@
             "state" : "translated",
             "value" : "Introductie"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wprowadzenie"
+          }
         }
       }
     },
@@ -26596,6 +28780,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toon introductie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokaż wprowadzenie"
           }
         }
       }
@@ -26673,6 +28863,12 @@
             "state" : "translated",
             "value" : "Aanbiedingscode"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kod promocyjny"
+          }
         }
       }
     },
@@ -26748,6 +28944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Code inwisselen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrealizuj kod"
           }
         }
       }
@@ -26825,6 +29027,12 @@
             "state" : "translated",
             "value" : "Wat is er nieuw"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Co nowego"
+          }
         }
       }
     },
@@ -26900,6 +29108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sla de introductie over"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomiń wprowadzenie"
           }
         }
       }
