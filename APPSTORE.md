@@ -1423,6 +1423,77 @@ https://m1zz.github.io/HandsFreeMetronome/cs/privacy.html
 
 https://m1zz.github.io/HandsFreeMetronome/cs/
 
+## id
+
+### 이름
+
+Not My Tempo: Metronom Suara
+
+### 부제
+
+Ubah tempo tanpa tangan
+
+### 키워드
+
+bpm,tuner,latihan,gitar,piano,drum,biola,saksofon,terompet,flute,vokal,ukulele,aksen,irama
+
+### 프로모션 텍스트
+
+Biarkan kedua tangan tetap di instrumen. Ucapkan “start”, “faster”, atau “tempo 120” dan klik mengikutimu. Metronom lengkap dan kontrol suara gratis.
+
+### 설명
+
+Metronom yang kamu kendalikan dengan suara, jadi tanganmu tidak perlu lepas dari instrumen.
+Ucapkan “start” untuk memulai, “faster” untuk mempercepat. Tanpa mengetuk, tanpa berhenti di tengah frase.
+
+Mengubah tempo saat bermain biasanya berarti melepas instrumen dan kehilangan alur. Not My Tempo mendengarkan lewat mikrofonnya sendiri dan mengenali ucapan langsung di perangkatmu, jadi langsung berfungsi — tanpa perlu menyalakan Kontrol Suara iOS atau pengaturan aksesibilitas apa pun. Perintah diucapkan dalam kata bahasa Inggris.
+
+BICARA DENGAN METRONOMMU
+“start” dan “stop” untuk memulai dan menghentikan
+“faster” dan “slower” mengubah 5 BPM, “up” dan “down” mengubah 1
+“tempo 120”, atau cukup sebuah angka, langsung melompat ke nilai itu
+“double” dan “half” untuk menggandakan atau membagi dua
+“quarter”, “eighth”, “triplet”, “sixteenth” untuk subdivisi
+“louder”, “quieter”, “mute” untuk volume
+Lupa perintah? Ucapkan “help” dan semua frasa yang bisa dipakai muncul di layar
+
+METRONOM LENGKAP GRATIS
+Birama 1 sampai 8 ketukan, dengan klik lebih kuat pada ketukan pertama
+Subdivisi not seperdelapan, triol, dan seperenambelas
+Tiga cara melihat ketukan: pantul, orbit, dan cincin
+Ketuk tempo: ketuk angka besar mengikuti irama untuk mengatur BPM
+Cek ketepatan: ketuk cincin orbit saat bermain dan lihat seberapa dekat ketukanmu
+Layar tetap menyala saat memutar, dan aplikasi mengingat tempo serta birama terakhirmu
+
+MULAI DAN BERHENTI DENGAN INSTRUMENMU
+Rekam dulu frase pendek 2–5 not, lalu mainkan untuk memulai atau menghentikan klik. Tahan tiap not sekitar setengah detik agar not-not cepat dalam permainanmu tidak memicunya.
+
+NOT MY TEMPO PRO
+Mode latihan: pelatih kecepatan yang menambah beberapa BPM setiap beberapa birama sampai mencapai tempo targetmu
+Editor aksen: atur setiap klik dalam birama menjadi tinggi, rendah, atau senyap, dan simpan preset untuk tiap lagu
+Tuner kromatik: stem dulu sebelum bermain, dengan nada acuan A yang dapat diatur dari 430 hingga 450 Hz
+Pro adalah langganan tahunan dengan uji coba gratis, atau pembelian seumur hidup sekali bayar.
+
+AKSESIBILITAS
+Jika kamu memakai Kontrol Suara iOS, matikan mikrofon aplikasi dan kendalikan dengan menyebut nama tombol. Semua kontrol memiliki label VoiceOver.
+
+RINCIAN LANGGANAN
+Langganan tahunan diperpanjang otomatis kecuali dibatalkan paling lambat 24 jam sebelum periode berjalan berakhir. Kelola atau batalkan di Pengaturan > Akun Apple > Langganan. Pembelian seumur hidup hanya sekali bayar.
+Ketentuan Penggunaan (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Kebijakan Privasi: https://m1zz.github.io/HandsFreeMetronome/id/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/id/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/id/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/id/
+
 ## pt-BR
 
 ### 이름

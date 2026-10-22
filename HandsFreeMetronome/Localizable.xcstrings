@@ -119,6 +119,12 @@
             "state" : "translated",
             "value" : "%@ ročně"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ per tahun"
+          }
         }
       }
     },
@@ -242,6 +248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, o %2$lld centů níže"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld sen terlalu rendah"
           }
         }
       }
@@ -367,6 +379,12 @@
             "state" : "translated",
             "value" : "%1$@, o %2$lld centů výše"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld sen terlalu tinggi"
+          }
         }
       }
     },
@@ -485,6 +503,12 @@
             "state" : "translated",
             "value" : "%@, čistě"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, sudah pas"
+          }
         }
       }
     },
@@ -601,6 +625,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -887,6 +917,12 @@
               }
             }
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ketukan"
+          }
         }
       }
     },
@@ -1043,6 +1079,12 @@
             "state" : "translated",
             "value" : "Úderů za minutu: %lld"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ketukan per menit"
+          }
         }
       }
     },
@@ -1159,6 +1201,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -1289,6 +1337,12 @@
             "state" : "translated",
             "value" : "%1$lld BPM, %2$@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld BPM, %2$@"
+          }
         }
       }
     },
@@ -1415,6 +1469,12 @@
             "state" : "translated",
             "value" : "Perfektně: %1$lld, dobře: %2$lld, špatně: %3$lld"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld sempurna, %2$lld bagus, %3$lld meleset"
+          }
         }
       }
     },
@@ -1534,6 +1594,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  klepnutím na tečky zvolte počet dob"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  ketuk titik untuk memilih jumlah ketukan"
           }
         }
       }
@@ -1661,6 +1727,12 @@
             "state" : "translated",
             "value" : "%1$lld/4 · %2$@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/4 · %2$@"
+          }
         }
       }
     },
@@ -1778,6 +1850,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Šestnáctinové noty"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not 1/16"
           }
         }
       }
@@ -1897,6 +1975,12 @@
             "state" : "translated",
             "value" : "Čtvrťové noty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not 1/4"
+          }
         }
       }
     },
@@ -2015,6 +2099,12 @@
             "state" : "translated",
             "value" : "Osminové noty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not 1/8"
+          }
         }
       }
     },
@@ -2129,6 +2219,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "A4 = %lld Hz"
@@ -2253,6 +2349,12 @@
             "state" : "translated",
             "value" : "Editor akcentů"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editor aksen"
+          }
         }
       }
     },
@@ -2370,6 +2472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Editor akcentů a předvolby"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editor aksen & preset"
           }
         }
       }
@@ -2491,6 +2599,12 @@
             "state" : "translated",
             "value" : "Akcenty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aksen"
+          }
         }
       }
     },
@@ -2609,6 +2723,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zpřístupnění"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aksesibilitas"
           }
         }
       }
@@ -2730,6 +2850,12 @@
             "state" : "translated",
             "value" : "Přidat %lld BPM"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah %lld BPM"
+          }
         }
       }
     },
@@ -2849,6 +2975,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Všechny příkazy"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semua perintah"
           }
         }
       }
@@ -2970,6 +3102,12 @@
             "state" : "translated",
             "value" : "Použije tento vzorec, takt a dělení"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menerapkan pola, birama, dan subdivisi ini"
+          }
         }
       }
     },
@@ -3089,6 +3227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zpět"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kembali"
           }
         }
       }
@@ -3210,6 +3354,12 @@
             "state" : "translated",
             "value" : "Zpět k metronomu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kembali ke metronom"
+          }
         }
       }
     },
@@ -3327,6 +3477,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Špatně"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meleset"
           }
         }
       }
@@ -3447,6 +3603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Doba %lld"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketukan %lld"
           }
         }
       }
@@ -3574,6 +3736,12 @@
             "state" : "translated",
             "value" : "Doba %1$lld, cvak %2$lld"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketukan %1$lld, klik %2$lld"
+          }
         }
       }
     },
@@ -3699,6 +3867,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Doba %1$lld z %2$lld"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketukan %1$lld dari %2$lld"
           }
         }
       }
@@ -3826,6 +4000,12 @@
             "state" : "translated",
             "value" : "Doba %1$lld z %2$lld, %3$@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketukan %1$lld dari %2$lld, %3$@"
+          }
         }
       }
     },
@@ -3952,6 +4132,12 @@
             "state" : "translated",
             "value" : "Doba %1$lld, cvak %2$lld"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketukan %1$lld, klik %2$lld"
+          }
         }
       }
     },
@@ -4070,6 +4256,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobrazení dob"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampilan ketukan"
           }
         }
       }
@@ -4190,6 +4382,12 @@
             "state" : "translated",
             "value" : "Doby"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketukan"
+          }
         }
       }
     },
@@ -4308,6 +4506,12 @@
             "state" : "translated",
             "value" : "Zobrazení odrazu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampilan pantul"
+          }
         }
       }
     },
@@ -4424,6 +4628,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -4548,6 +4758,12 @@
             "state" : "translated",
             "value" : "Hlášení chyb a přání nových funkcí jsou vítána."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laporan bug dan permintaan fitur sangat diterima."
+          }
         }
       }
     },
@@ -4667,6 +4883,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Koupit navždy"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beli seumur hidup"
           }
         }
       }
@@ -4788,6 +5010,12 @@
             "state" : "translated",
             "value" : "Koupit navždy za %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beli seumur hidup seharga %@"
+          }
         }
       }
     },
@@ -4907,6 +5135,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zrušit"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batal"
           }
         }
       }
@@ -5028,6 +5262,12 @@
             "state" : "translated",
             "value" : "Změnit zobrazení"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganti tampilan"
+          }
         }
       }
     },
@@ -5148,6 +5388,12 @@
             "state" : "translated",
             "value" : "Zkontrolovat rytmus"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cek ketepatan"
+          }
         }
       }
     },
@@ -5265,6 +5511,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chromatická ladička"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuner kromatik"
           }
         }
       }
@@ -5385,6 +5637,12 @@
             "state" : "translated",
             "value" : "Zavřít"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutup"
+          }
         }
       }
     },
@@ -5502,6 +5760,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "zavřít panel nebo tip"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tutup panel atau tips"
           }
         }
       }
@@ -5623,6 +5887,12 @@
             "state" : "translated",
             "value" : "Kontakt na vývojáře"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hubungi pengembang"
+          }
         }
       }
     },
@@ -5743,6 +6013,12 @@
             "state" : "translated",
             "value" : "Ovládejte ji hlasem"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kendalikan dengan suara"
+          }
         }
       }
     },
@@ -5860,6 +6136,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ceny se nepodařilo načíst z App Storu."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak dapat memuat harga dari App Store."
           }
         }
       }
@@ -5981,6 +6263,12 @@
             "state" : "translated",
             "value" : "Upravit akcenty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atur aksen"
+          }
         }
       }
     },
@@ -6098,6 +6386,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přepíná mezi vysokým, nízkým a tichým"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berganti antara tinggi, rendah, dan senyap"
           }
         }
       }
@@ -6219,6 +6513,12 @@
             "state" : "translated",
             "value" : "Snížit tempo"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurangi tempo"
+          }
         }
       }
     },
@@ -6339,6 +6639,12 @@
             "state" : "translated",
             "value" : "Smazat předvolbu %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus preset %@"
+          }
         }
       }
     },
@@ -6456,6 +6762,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nastavte každý cvak taktu – vysoký, nízký nebo tichý – a ukládejte vzorce pro jednotlivé skladby."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atur setiap klik dalam birama — tinggi, rendah, atau senyap — dan simpan pola untuk tiap lagu."
           }
         }
       }
@@ -6575,6 +6887,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Podrobná nápověda"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bantuan lengkap"
           }
         }
       }
@@ -6696,6 +7014,12 @@
             "state" : "translated",
             "value" : "Zavřít"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutup"
+          }
         }
       }
     },
@@ -6816,6 +7140,12 @@
             "state" : "translated",
             "value" : "Zavřít nápovědu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutup bantuan"
+          }
         }
       }
     },
@@ -6935,6 +7265,12 @@
             "state" : "translated",
             "value" : "Hotovo"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selesai"
+          }
         }
       }
     },
@@ -7052,6 +7388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dvojnásobek ×2"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganda ×2"
           }
         }
       }
@@ -7173,6 +7515,12 @@
             "state" : "translated",
             "value" : "Dvojitým klepnutím otevřete mřížku akcentů: nastavte každý cvak taktu jako vysoký, nízký nebo tichý a uložte vzorce jako předvolby."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk dua kali di sini untuk membuka kisi aksen: atur setiap klik dalam birama menjadi tinggi, rendah, atau senyap, lalu simpan pola sebagai preset."
+          }
         }
       }
     },
@@ -7290,6 +7638,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dvojitým klepnutím na kartu dělení upravíte celý takt: každé políčko se přepíná vysoký → nízký → tichý a vzorce lze uložit jako pojmenované předvolby."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk dua kali kartu subdivisi untuk mengedit seluruh birama: tiap sel berganti tinggi → rendah → senyap, dan pola dapat disimpan sebagai preset bernama."
           }
         }
       }
@@ -7409,6 +7763,12 @@
             "state" : "translated",
             "value" : "Dvojitým klepnutím otevřete akcenty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk dua kali untuk membuka aksen"
+          }
         }
       }
     },
@@ -7527,6 +7887,12 @@
             "state" : "translated",
             "value" : "Dolů −1"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turun −1"
+          }
         }
       }
     },
@@ -7644,6 +8010,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přetáhněte posuvník tempa nebo klepněte na tlačítka − / +."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geser penggeser tempo, atau ketuk tombol − / +."
           }
         }
       }
@@ -7765,6 +8137,12 @@
             "state" : "translated",
             "value" : "Upravit akcenty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit aksen"
+          }
         }
       }
     },
@@ -7883,6 +8261,12 @@
             "state" : "translated",
             "value" : "Osminové noty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not 1/8"
+          }
         }
       }
     },
@@ -8000,6 +8384,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Osminy"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seperdelapan"
           }
         }
       }
@@ -8121,6 +8511,12 @@
             "state" : "translated",
             "value" : "E-mail"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
         }
       }
     },
@@ -8240,6 +8636,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Napsat vývojáři"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kirim email ke pengembang"
           }
         }
       }
@@ -8433,6 +8835,12 @@
             "state" : "translated",
             "value" : "Takty mezi kroky: %lld"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setiap %lld birama"
+          }
         }
       }
     },
@@ -8550,6 +8958,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Každý cvak taktu má vlastní políčko – celkem jich je %lld. Klepnutím na políčko ho přepnete: vysoký → nízký → tichý."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setiap klik dalam birama punya selnya sendiri — total %lld klik. Ketuk sel untuk menggantinya: tinggi → rendah → senyap."
           }
         }
       }
@@ -8671,6 +9085,12 @@
             "state" : "translated",
             "value" : "Vše zde funguje i hlasem – příkazy najdete níže."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semua ini juga bisa dengan suara — lihat perintah di bawah."
+          }
         }
       }
     },
@@ -8791,6 +9211,12 @@
             "state" : "translated",
             "value" : "Rychleji"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lebih cepat"
+          }
         }
       }
     },
@@ -8908,6 +9334,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rychleji +5"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lebih cepat +5"
           }
         }
       }
@@ -9029,6 +9461,12 @@
             "state" : "translated",
             "value" : "Zapomněli jste příkaz?"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lupa perintah?"
+          }
         }
       }
     },
@@ -9149,6 +9587,12 @@
             "state" : "translated",
             "value" : "Navždy zdarma, bez odemykání:"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gratis selamanya, tanpa perlu membuka kunci:"
+          }
         }
       }
     },
@@ -9266,6 +9710,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bezplatná zkušební verze"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uji coba gratis"
           }
         }
       }
@@ -9385,6 +9835,12 @@
             "state" : "translated",
             "value" : "Dobře"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagus"
+          }
         }
       }
     },
@@ -9503,6 +9959,12 @@
             "state" : "translated",
             "value" : "Polovina ÷2"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setengah ÷2"
+          }
         }
       }
     },
@@ -9620,6 +10082,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slyším: %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terdengar: %@"
           }
         }
       }
@@ -9741,6 +10209,12 @@
             "state" : "translated",
             "value" : "Nápověda"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bantuan"
+          }
         }
       }
     },
@@ -9860,6 +10334,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navigace v nápovědě"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navigasi bantuan"
           }
         }
       }
@@ -9981,6 +10461,12 @@
             "state" : "translated",
             "value" : "Vysoký tón"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nada tinggi"
+          }
         }
       }
     },
@@ -10101,6 +10587,12 @@
             "state" : "translated",
             "value" : "Používám Ovládání hlasem v iOS"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saya memakai Kontrol Suara iOS"
+          }
         }
       }
     },
@@ -10218,6 +10710,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "V zobrazení oběžné dráhy během hraní klepejte na kruh – cílem je každý cvak, včetně dělení. Pohybující se tečka zanechá stopu tam, kam jste klepli, a barevná počítadla sčítají Perfektně / Dobře / Špatně, dokud nezastavíte."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di tampilan orbit, ketuk cincin saat bermain — setiap klik (termasuk subdivisi) adalah target. Titik yang bergerak meninggalkan jejak di tempat ketukanmu mendarat, dan penghitung berwarna menghitung Sempurna / Bagus / Meleset sampai kamu berhenti."
           }
         }
       }
@@ -10339,6 +10837,12 @@
             "state" : "translated",
             "value" : "Zvýšit tempo"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naikkan tempo"
+          }
         }
       }
     },
@@ -10455,6 +10959,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -10579,6 +11089,12 @@
             "state" : "translated",
             "value" : "Zpráva na Instagramu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DM Instagram"
+          }
         }
       }
     },
@@ -10698,6 +11214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zpráva na Instagramu (@lee25_ios)"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DM Instagram (@lee25_ios)"
           }
         }
       }
@@ -10819,6 +11341,12 @@
             "state" : "translated",
             "value" : "Signál nástrojem"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sinyal instrumen"
+          }
         }
       }
     },
@@ -10939,6 +11467,12 @@
             "state" : "translated",
             "value" : "je součástí Pro – tři nástroje na cvičení, jedno odemknutí."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "termasuk dalam Pro — tiga alat latihan, sekali buka."
+          }
         }
       }
     },
@@ -11055,6 +11589,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Largo? Moderato?"
@@ -11179,6 +11719,12 @@
             "state" : "translated",
             "value" : "Navždy"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seumur hidup"
+          }
         }
       }
     },
@@ -11296,6 +11842,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navždy – jednorázově %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seumur hidup — %@ sekali bayar"
           }
         }
       }
@@ -11415,6 +11967,12 @@
             "state" : "translated",
             "value" : "zobrazit příkazy, které můžete říct"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tampilkan perintah yang bisa diucapkan"
+          }
         }
       }
     },
@@ -11533,6 +12091,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poslouchat"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dengarkan"
           }
         }
       }
@@ -11654,6 +12218,12 @@
             "state" : "translated",
             "value" : "Poslouchat hlas"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dengarkan suara"
+          }
         }
       }
     },
@@ -11773,6 +12343,12 @@
             "state" : "translated",
             "value" : "Poslouchá"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mendengarkan"
+          }
         }
       }
     },
@@ -11890,6 +12466,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poslouchá…"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mendengarkan…"
           }
         }
       }
@@ -12011,6 +12593,12 @@
             "state" : "translated",
             "value" : "Poslouchá… držte každou notu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mendengarkan… tahan setiap not"
+          }
         }
       }
     },
@@ -12130,6 +12718,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Načítání cen…"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memuat harga…"
           }
         }
       }
@@ -12251,6 +12845,12 @@
             "state" : "translated",
             "value" : "Nízký tón"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nada rendah"
+          }
         }
       }
     },
@@ -12370,6 +12970,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vytvořeno pro Ovládání hlasem"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dibuat untuk Kontrol Suara"
           }
         }
       }
@@ -12491,6 +13097,12 @@
             "state" : "translated",
             "value" : "Režim metronomu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode metronom"
+          }
         }
       }
     },
@@ -12608,6 +13220,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon či řeč jsou zablokované – povolte v Nastavení"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofon/ucapan diblokir — aktifkan di Pengaturan"
           }
         }
       }
@@ -12729,6 +13347,12 @@
             "state" : "translated",
             "value" : "Minus"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurang"
+          }
         }
       }
     },
@@ -12848,6 +13472,12 @@
             "state" : "translated",
             "value" : "Více"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lainnya"
+          }
         }
       }
     },
@@ -12965,6 +13595,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "posunout tento seznam"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gulir daftar ini"
           }
         }
       }
@@ -13084,6 +13720,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ztlumit"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bisukan"
           }
         }
       }
@@ -13205,6 +13847,12 @@
             "state" : "translated",
             "value" : "Ztlumit hlasové ovládání"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bisukan kontrol suara"
+          }
         }
       }
     },
@@ -13324,6 +13972,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Název (např. Bossa intro)"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nama (mis. Intro bossa)"
           }
         }
       }
@@ -13445,6 +14099,12 @@
             "state" : "translated",
             "value" : "Potřebuje mikrofon této aplikace – vypněte „Používám Ovládání hlasem v iOS“."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memerlukan mikrofon aplikasi ini — matikan “Saya memakai Kontrol Suara iOS” untuk menggunakannya."
+          }
         }
       }
     },
@@ -13562,6 +14222,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nota nebyla rozpoznána, zahrajte notu"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not tidak terdeteksi, mainkan sebuah not"
           }
         }
       }
@@ -13681,6 +14347,12 @@
             "state" : "translated",
             "value" : "Nebyl nalezen žádný předchozí nákup."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ditemukan pembelian sebelumnya."
+          }
         }
       }
     },
@@ -13795,6 +14467,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -13919,6 +14597,12 @@
             "state" : "translated",
             "value" : "Teď ne"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nanti saja"
+          }
         }
       }
     },
@@ -14039,6 +14723,12 @@
             "state" : "translated",
             "value" : "Nota"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not"
+          }
         }
       }
     },
@@ -14157,6 +14847,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noty"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not"
           }
         }
       }
@@ -14278,6 +14974,12 @@
             "state" : "translated",
             "value" : "Na obrazovce"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di layar"
+          }
         }
       }
     },
@@ -14396,6 +15098,12 @@
             "state" : "translated",
             "value" : "Otevřít"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka"
+          }
         }
       }
     },
@@ -14513,6 +15221,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otevřít editor akcentů"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka editor aksen"
           }
         }
       }
@@ -14634,6 +15348,12 @@
             "state" : "translated",
             "value" : "Otevřít akcenty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka aksen"
+          }
         }
       }
     },
@@ -14751,6 +15471,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otevřete jej ze zobrazení dob níže nebo řekněte „practice“."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka dari tampilan ketukan di bawah, atau ucapkan “practice”."
           }
         }
       }
@@ -14872,6 +15598,12 @@
             "state" : "translated",
             "value" : "Otevřít cvičení"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka latihan"
+          }
         }
       }
     },
@@ -14992,6 +15724,12 @@
             "state" : "translated",
             "value" : "Otevřít režim cvičení"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka mode latihan"
+          }
         }
       }
     },
@@ -15109,6 +15847,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "otevřít režim cvičení"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "buka mode latihan"
           }
         }
       }
@@ -15228,6 +15972,12 @@
             "state" : "translated",
             "value" : "otevřít ladičku"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "buka tuner"
+          }
         }
       }
     },
@@ -15345,6 +16095,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobrazení oběžné dráhy"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampilan orbit"
           }
         }
       }
@@ -15466,6 +16222,12 @@
             "state" : "translated",
             "value" : "Pozastavit"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeda"
+          }
         }
       }
     },
@@ -15586,6 +16348,12 @@
             "state" : "translated",
             "value" : "Zaplaťte jednou, máte navždy"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bayar sekali, jadi milikmu selamanya"
+          }
         }
       }
     },
@@ -15703,6 +16471,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfektně!"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sempurna!"
           }
         }
       }
@@ -15823,6 +16597,12 @@
             "state" : "translated",
             "value" : "Přehrát"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Putar"
+          }
         }
       }
     },
@@ -15940,6 +16720,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "přehrát / pozastavit"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "putar / jeda"
           }
         }
       }
@@ -16059,6 +16845,12 @@
             "state" : "translated",
             "value" : "Zahrajte 2–5 not, každou zhruba půl sekundy."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mainkan 2–5 not, masing-masing sekitar setengah detik."
+          }
         }
       }
     },
@@ -16176,6 +16968,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zahrajte notu…"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mainkan sebuah not…"
           }
         }
       }
@@ -16297,6 +17095,12 @@
             "state" : "translated",
             "value" : "Zahrajte svou frázi a spusťte či zastavte klikání, i uprostřed skladby. Každou notu držte zhruba půl sekundy, aby rychlé noty ve vaší hře nespustily klikání omylem. Funguje při zapnutém poslouchání."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mainkan frasemu untuk memulai atau menghentikan klik, bahkan di tengah lagu. Tahan tiap not sekitar setengah detik agar not-not cepat dalam permainanmu tidak memicunya. Berfungsi saat Dengarkan aktif."
+          }
         }
       }
     },
@@ -16416,6 +17220,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přehrávání"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pemutaran"
           }
         }
       }
@@ -16537,6 +17347,12 @@
             "state" : "translated",
             "value" : "Plus"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah"
+          }
         }
       }
     },
@@ -16655,6 +17471,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cvičení"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latihan"
           }
         }
       }
@@ -16775,6 +17597,12 @@
             "state" : "translated",
             "value" : "Režim cvičení"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode latihan"
+          }
         }
       }
     },
@@ -16892,6 +17720,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Režim cvičení · editor akcentů a předvolby · ladička"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode latihan · editor aksen & preset · tuner"
           }
         }
       }
@@ -17013,6 +17847,12 @@
             "state" : "translated",
             "value" : "Předvolba %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset %@"
+          }
         }
       }
     },
@@ -17132,6 +17972,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Předvolby"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset"
           }
         }
       }
@@ -17253,6 +18099,12 @@
             "state" : "translated",
             "value" : "Zásady ochrany osobních údajů"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kebijakan Privasi"
+          }
         }
       }
     },
@@ -17371,6 +18223,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/cs/privacy.html"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/id/privacy.html"
+          }
         }
       }
     },
@@ -17485,6 +18343,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -17609,6 +18473,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -17726,6 +18596,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro je odemčeno – děkujeme!"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro terbuka — terima kasih!"
           }
         }
       }
@@ -17845,6 +18721,12 @@
             "state" : "translated",
             "value" : "Čtvrťové noty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not 1/4"
+          }
         }
       }
     },
@@ -17963,6 +18845,12 @@
             "state" : "translated",
             "value" : "Čtvrtky"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seperempat"
+          }
         }
       }
     },
@@ -18080,6 +18968,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo samo roste každých pár taktů – rozeženete pasáž, aniž byste pustili nástroj."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naikkan tempo otomatis setiap beberapa birama — percepat satu bagian tanpa melepas instrumen."
           }
         }
       }
@@ -18201,6 +19095,12 @@
             "state" : "translated",
             "value" : "Během hraní samo zvyšuje tempo každých pár taktů, abyste pasáž postupně zrychlovali. U cílového tempa se zastaví. Kdykoli řekněte „practice“, a otevřete to."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menaikkan tempo otomatis setiap beberapa birama saat kamu bermain — untuk mempercepat satu bagian secara bertahap. Berhenti di tempo target. Ucapkan “practice” kapan saja untuk membukanya."
+          }
         }
       }
     },
@@ -18320,6 +19220,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nejdřív nahrajte krátkou frázi."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rekam frase pendek terlebih dahulu."
           }
         }
       }
@@ -18441,6 +19347,12 @@
             "state" : "translated",
             "value" : "Nahrát znovu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rekam ulang"
+          }
         }
       }
     },
@@ -18561,6 +19473,12 @@
             "state" : "translated",
             "value" : "Nahrát signál"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rekam sinyal"
+          }
         }
       }
     },
@@ -18678,6 +19596,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Komorní tón"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nada acuan"
           }
         }
       }
@@ -18799,6 +19723,12 @@
             "state" : "translated",
             "value" : "Vyžaduje Pro"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memerlukan Pro"
+          }
         }
       }
     },
@@ -18918,6 +19848,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obnovit"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atur ulang"
           }
         }
       }
@@ -19039,6 +19975,12 @@
             "state" : "translated",
             "value" : "Obnovit"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulihkan"
+          }
         }
       }
     },
@@ -19158,6 +20100,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obnovit nákupy"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulihkan pembelian"
           }
         }
       }
@@ -19279,6 +20227,12 @@
             "state" : "translated",
             "value" : "Obnovit nákupy"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulihkan Pembelian"
+          }
         }
       }
     },
@@ -19398,6 +20352,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obnoví předchozí nákup Pro"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memulihkan pembelian Pro sebelumnya"
           }
         }
       }
@@ -19519,6 +20479,12 @@
             "state" : "translated",
             "value" : "Obnoví výchozí vzorec pro tento takt"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mengembalikan pola bawaan untuk birama ini"
+          }
         }
       }
     },
@@ -19638,6 +20604,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uložit"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
           }
         }
       }
@@ -19759,6 +20731,12 @@
             "state" : "translated",
             "value" : "Ukládejte vzorec pro každou skladbu – po vyvolání se obnoví i takt a dělení."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan satu pola untuk tiap lagu — saat dipanggil, birama dan subdivisinya ikut kembali."
+          }
         }
       }
     },
@@ -19878,6 +20856,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uložit aktuální vzorec…"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan pola saat ini…"
           }
         }
       }
@@ -19999,6 +20983,12 @@
             "state" : "translated",
             "value" : "Uložit vzorec"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan pola"
+          }
         }
       }
     },
@@ -20118,6 +21108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uložit předvolbu"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan preset"
           }
         }
       }
@@ -20239,6 +21235,12 @@
             "state" : "translated",
             "value" : "Uloží tento vzorec s taktem a dělením, abyste ho mohli vyvolat pro každou skladbu."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menyimpan pola ini beserta birama dan subdivisinya, sehingga bisa dipanggil untuk tiap lagu."
+          }
         }
       }
     },
@@ -20358,6 +21360,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "řekněte"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ucapkan"
           }
         }
       }
@@ -20479,6 +21487,12 @@
             "state" : "translated",
             "value" : "Řekněte „close“ pro zavření"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “close” untuk keluar"
+          }
         }
       }
     },
@@ -20596,6 +21610,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Řekněte „start“, „faster“ nebo „help“"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “start”, “faster”, atau “help”"
           }
         }
       }
@@ -20716,6 +21736,12 @@
             "state" : "translated",
             "value" : "Řekněte příkaz"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan perintah"
+          }
         }
       }
     },
@@ -20833,6 +21859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Řekněte „close“ / „done“ nebo klepněte na Hotovo."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “close” / “done”, atau ketuk Selesai."
           }
         }
       }
@@ -20954,6 +21986,12 @@
             "state" : "translated",
             "value" : "Řekněte „close“ nebo klepněte pro zavření"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “close” atau ketuk untuk menutup"
+          }
         }
       }
     },
@@ -21074,6 +22112,12 @@
             "state" : "translated",
             "value" : "Kdykoli řekněte „help“ – nebo klepněte sem – a uvidíte všechny příkazy, pak řekněte „close“ pro zavření."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “help” kapan saja — atau ketuk di sini — untuk melihat semua perintah yang bisa diucapkan, lalu “close” untuk menutup."
+          }
         }
       }
     },
@@ -21192,6 +22236,12 @@
             "state" : "translated",
             "value" : "Řekněte „help“ nebo klepněte na tlačítko ?."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “help” atau ketuk tombol ?."
+          }
         }
       }
     },
@@ -21309,6 +22359,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Řekněte „louder“ / „quieter“ / „mute“ nebo „volume 60“."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “louder” / “quieter” / “mute”, atau “volume 60”."
           }
         }
       }
@@ -21430,6 +22486,12 @@
             "state" : "translated",
             "value" : "Řekněte „practice“ a tempo bude během hraní samo růst každých pár taktů – skvělé na cvičení rychlosti."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “practice” untuk menaikkan tempo otomatis setiap beberapa birama saat bermain — cocok untuk latihan kecepatan."
+          }
         }
       }
     },
@@ -21548,6 +22610,12 @@
             "state" : "translated",
             "value" : "Řekněte „scroll down“ / „scroll up“ nebo přejeďte prstem."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “scroll down” / “scroll up”, atau gesek."
+          }
         }
       }
     },
@@ -21665,6 +22733,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Řekněte „tune“ a hrajte – nota, centy a zóna čistého ladění."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “tune” lalu bermain — not, sen, dan zona nada pas."
           }
         }
       }
@@ -21786,6 +22860,12 @@
             "state" : "translated",
             "value" : "Řekněte „tune“ pro otevření chromatické ladičky a „close“, až skončíte."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “tune” untuk membuka tuner kromatik, dan “close” setelah selesai."
+          }
         }
       }
     },
@@ -21903,6 +22983,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Posun"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gulir"
           }
         }
       }
@@ -22022,6 +23108,12 @@
             "state" : "translated",
             "value" : "Posunout dolů"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gulir ke bawah"
+          }
         }
       }
     },
@@ -22139,6 +23231,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Posunout nahoru"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gulir ke atas"
           }
         }
       }
@@ -22260,6 +23358,12 @@
             "state" : "translated",
             "value" : "Posouvání"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menggulir"
+          }
         }
       }
     },
@@ -22377,6 +23481,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nastavit doby"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atur ketukan"
           }
         }
       }
@@ -22496,6 +23606,12 @@
             "state" : "translated",
             "value" : "nastavit procenta"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "atur persen"
+          }
         }
       }
     },
@@ -22614,6 +23730,12 @@
             "state" : "translated",
             "value" : "nastavit takt"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "atur birama"
+          }
         }
       }
     },
@@ -22731,6 +23853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "nastavit hodnotu"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "atur nilai"
           }
         }
       }
@@ -22852,6 +23980,12 @@
             "state" : "translated",
             "value" : "Nastaví takt %lld/4"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mengatur birama %lld/4"
+          }
         }
       }
     },
@@ -22972,6 +24106,12 @@
             "state" : "translated",
             "value" : "Signál: %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sinyal: %@"
+          }
         }
       }
     },
@@ -23089,6 +24229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ztlumit klikání"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bisukan klik"
           }
         }
       }
@@ -23210,6 +24356,12 @@
             "state" : "translated",
             "value" : "Tichý"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senyap"
+          }
         }
       }
     },
@@ -23328,6 +24480,12 @@
             "state" : "translated",
             "value" : "Šestnáctinové noty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not 1/16"
+          }
         }
       }
     },
@@ -23445,6 +24603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Šestnáctiny"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seperenambelas"
           }
         }
       }
@@ -23566,6 +24730,12 @@
             "state" : "translated",
             "value" : "Pomaleji"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lebih lambat"
+          }
         }
       }
     },
@@ -23684,6 +24854,12 @@
             "state" : "translated",
             "value" : "Pomaleji −5"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lebih lambat −5"
+          }
         }
       }
     },
@@ -23801,6 +24977,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rozpoznávání řeči tu není dostupné"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengenalan ucapan tidak tersedia di sini"
           }
         }
       }
@@ -23921,6 +25103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trenér rychlosti"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pelatih kecepatan"
           }
         }
       }
@@ -24046,6 +25234,12 @@
             "state" : "translated",
             "value" : "Trenér rychlosti · +%1$lld po %2$lld taktech → %3$lld"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pelatih kecepatan · +%1$lld tiap %2$lld birama → %3$lld"
+          }
         }
       }
     },
@@ -24164,6 +25358,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai"
           }
         }
       }
@@ -24285,6 +25485,12 @@
             "state" : "translated",
             "value" : "Start / stop mým nástrojem"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai / berhenti dengan instrumenku"
+          }
         }
       }
     },
@@ -24404,6 +25610,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Začít poslouchat"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai mendengarkan"
           }
         }
       }
@@ -24525,6 +25737,12 @@
             "state" : "translated",
             "value" : "Spustit metronom"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai metronom"
+          }
         }
       }
     },
@@ -24643,6 +25861,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stop"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berhenti"
           }
         }
       }
@@ -24764,6 +25988,12 @@
             "state" : "translated",
             "value" : "Přestat poslouchat"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berhenti mendengarkan"
+          }
         }
       }
     },
@@ -24884,6 +26114,12 @@
             "state" : "translated",
             "value" : "Zastavit metronom"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hentikan metronom"
+          }
         }
       }
     },
@@ -25002,6 +26238,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dělení"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subdivisi"
           }
         }
       }
@@ -25123,6 +26365,12 @@
             "state" : "translated",
             "value" : "Odebírat"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berlangganan"
+          }
         }
       }
     },
@@ -25243,6 +26491,12 @@
             "state" : "translated",
             "value" : "Roční předplatné za %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berlangganan tahunan seharga %@"
+          }
         }
       }
     },
@@ -25360,6 +26614,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Podpora"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dukungan"
           }
         }
       }
@@ -25479,6 +26739,12 @@
             "state" : "translated",
             "value" : "Přepnout na zobrazení odrazu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beralih ke tampilan pantul"
+          }
         }
       }
     },
@@ -25596,6 +26862,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přepnout na zobrazení oběžné dráhy"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beralih ke tampilan orbit"
           }
         }
       }
@@ -25717,6 +26989,12 @@
             "state" : "translated",
             "value" : "Přepnout na zobrazení kruhu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beralih ke tampilan cincin"
+          }
         }
       }
     },
@@ -25837,6 +27115,12 @@
             "state" : "translated",
             "value" : "Přepnout zobrazení"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganti tampilan"
+          }
         }
       }
     },
@@ -25955,6 +27239,12 @@
             "state" : "translated",
             "value" : "přepnout vizualizaci"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ganti visualisasi"
+          }
         }
       }
     },
@@ -26072,6 +27362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klepněte na 1/4, 1/8, triolu nebo 1/16. Dvojitým klepnutím na kartu otevřete akcenty a nastavíte každý cvak taktu jako vysoký, nízký nebo tichý."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk 1/4, 1/8, triol, atau 1/16. Ketuk dua kali kartu untuk membuka aksen dan atur tiap klik dalam birama menjadi tinggi, rendah, atau senyap."
           }
         }
       }
@@ -26193,6 +27489,12 @@
             "state" : "translated",
             "value" : "Klepejte do rytmu a ověřte si svůj rytmus"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk mengikuti irama untuk mengecek ketepatanmu"
+          }
         }
       }
     },
@@ -26310,6 +27612,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klepněte na Poslouchat pro ovládání hlasem"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk Dengarkan untuk mengontrol dengan suara"
           }
         }
       }
@@ -26429,6 +27737,12 @@
             "state" : "translated",
             "value" : "Klepnutím na Poslouchat zapnete nebo vypnete hlasové ovládání."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk Dengarkan untuk menyalakan atau mematikan kontrol suara."
+          }
         }
       }
     },
@@ -26546,6 +27860,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klepněte dole na Start / Stop."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk Mulai / Berhenti di bagian bawah."
           }
         }
       }
@@ -26667,6 +27987,12 @@
             "state" : "translated",
             "value" : "Tap tempo"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk tempo"
+          }
         }
       }
     },
@@ -26784,6 +28110,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klepáním do rytmu na velké číslo BPM nastavíte tempo."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk angka BPM besar mengikuti irama untuk mengatur tempo."
           }
         }
       }
@@ -26903,6 +28235,12 @@
             "state" : "translated",
             "value" : "Klepnutím na tečky zvolte takt."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk titik untuk memilih birama."
+          }
         }
       }
     },
@@ -27020,6 +28358,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klepněte na ikonu zobrazení (vpravo nahoře na kartě dob): odraz → oběžná dráha → kruh."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk ikon tampilan (kanan atas kartu ketukan): pantul → orbit → cincin."
           }
         }
       }
@@ -27141,6 +28485,12 @@
             "state" : "translated",
             "value" : "Klepnutím přepnete mezi skákajícím míčkem a oběžným kruhem – nebo řekněte „bounce“ / „orbit“."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk untuk beralih antara bola memantul dan cincin orbit — atau ucapkan “bounce” / “orbit”."
+          }
         }
       }
     },
@@ -27261,6 +28611,12 @@
             "state" : "translated",
             "value" : "Klepnutím přepnete mezi názvem tempa a BPM"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk untuk beralih antara nama tempo dan BPM"
+          }
         }
       }
     },
@@ -27380,6 +28736,12 @@
             "state" : "translated",
             "value" : "Tempo"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
+          }
         }
       }
     },
@@ -27494,6 +28856,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo %lld"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo %lld"
@@ -27618,6 +28986,12 @@
             "state" : "translated",
             "value" : "Posuvník tempa"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penggeser tempo"
+          }
         }
       }
     },
@@ -27737,6 +29111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Podmínky použití (EULA)"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketentuan Penggunaan (EULA)"
           }
         }
       }
@@ -27858,6 +29238,12 @@
             "state" : "translated",
             "value" : "To je vaše tempo jako klasický termín. Klepnutím přepnete na číslo BPM a zpět."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Itu tempomu dalam istilah klasik. Ketuk untuk beralih ke angka BPM dan kembali."
+          }
         }
       }
     },
@@ -27977,6 +29363,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vlastní mikrofon aplikace je vypnutý, aby nekolidoval s Ovládáním hlasem. Řekněte „Tap Start“, „Tap Faster“ nebo „Tap 3 beats“."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofon aplikasi dimatikan agar tidak bentrok dengan Kontrol Suara. Ucapkan “Tap Start”, “Tap Faster”, atau “Tap 3 beats”."
           }
         }
       }
@@ -28098,6 +29490,12 @@
             "state" : "translated",
             "value" : "Plný metronom: každé tempo, takt i dělení, všechna tři zobrazení dob, tap tempo, kontrola rytmu a kompletní hlasové ovládání bez rukou."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronom lengkap — semua tempo, birama, dan subdivisi, ketiga tampilan ketukan, ketuk tempo, cek ketepatan, dan kontrol suara bebas tangan secara penuh."
+          }
         }
       }
     },
@@ -28217,6 +29615,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon už poslouchá – řekněte „start“, „faster“ nebo „help“. Používáte Ovládání hlasem v iOS? Přepněte v Hlasových příkazech."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofon sudah mendengarkan — ucapkan “start”, “faster”, atau “help”. Memakai Kontrol Suara iOS? Buka Perintah Suara untuk beralih."
           }
         }
       }
@@ -28338,6 +29742,12 @@
             "state" : "translated",
             "value" : "Roční předplatné se automaticky obnovuje za %@ ročně, pokud ho nezrušíte nejméně 24 hodin před obnovením v Nastavení > Účet Apple > Předplatné. Nákup navždy je jednorázová platba."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paket tahunan diperpanjang otomatis seharga %@/tahun kecuali dibatalkan paling lambat 24 jam sebelum perpanjangan di Pengaturan > Akun Apple > Langganan. Seumur hidup adalah sekali bayar."
+          }
         }
       }
     },
@@ -28458,6 +29868,12 @@
             "state" : "translated",
             "value" : "Je tu i ladička"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ada tuner juga"
+          }
         }
       }
     },
@@ -28575,6 +29991,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kontrola rytmu"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cek ketepatan"
           }
         }
       }
@@ -28696,6 +30118,12 @@
             "state" : "translated",
             "value" : "Tipy"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tips"
+          }
         }
       }
     },
@@ -28816,6 +30244,12 @@
             "state" : "translated",
             "value" : "Trenér"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pelatih"
+          }
         }
       }
     },
@@ -28934,6 +30368,12 @@
             "state" : "translated",
             "value" : "Trioly"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triol"
+          }
         }
       }
     },
@@ -29051,6 +30491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "trioly"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "triol"
           }
         }
       }
@@ -29171,6 +30617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zkusit znovu"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coba lagi"
           }
         }
       }
@@ -29398,6 +30850,12 @@
               }
             }
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coba gratis %lld hari"
+          }
         }
       }
     },
@@ -29611,6 +31069,12 @@
                 }
               }
             }
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coba gratis %lld bulan"
           }
         }
       }
@@ -29838,6 +31302,12 @@
               }
             }
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coba gratis %lld minggu"
+          }
         }
       }
     },
@@ -29955,6 +31425,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zdarma na měsíc"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coba gratis sebulan"
           }
         }
       }
@@ -30074,6 +31550,12 @@
             "state" : "translated",
             "value" : "Zdarma na týden"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coba gratis seminggu"
+          }
         }
       }
     },
@@ -30191,6 +31673,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zdarma na rok"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coba gratis setahun"
           }
         }
       }
@@ -30310,6 +31798,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ladička"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuner"
           }
         }
       }
@@ -30431,6 +31925,12 @@
             "state" : "translated",
             "value" : "Vypne vlastní mikrofon aplikace a ovládá tlačítka podle jmen"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mematikan mikrofon aplikasi dan mengendalikan tombol lewat nama"
+          }
         }
       }
     },
@@ -30548,6 +32048,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vypne mikrofon této aplikace, aby nekolidoval s Ovládáním hlasem. Ovládejte ji příkazy „Tap Start“, „Tap Faster“, „Tap 3 beats“."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mematikan mikrofon aplikasi ini agar keduanya tidak bentrok. Kendalikan dengan mengucapkan “Tap Start”, “Tap Faster”, “Tap 3 beats”."
           }
         }
       }
@@ -30669,6 +32175,12 @@
             "state" : "translated",
             "value" : "Dvě zobrazení dob"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dua tampilan ketukan"
+          }
         }
       }
     },
@@ -30787,6 +32299,12 @@
             "state" : "translated",
             "value" : "Odemknout Pro"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka Pro"
+          }
         }
       }
     },
@@ -30904,6 +32422,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nahoru +1"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naik +1"
           }
         }
       }
@@ -31025,6 +32549,12 @@
             "state" : "translated",
             "value" : "Až %lld BPM"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hingga %lld BPM"
+          }
         }
       }
     },
@@ -31142,6 +32672,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přejít na Pro"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tingkatkan"
           }
         }
       }
@@ -31262,6 +32798,12 @@
             "state" : "translated",
             "value" : "Zobrazení"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampilan"
+          }
         }
       }
     },
@@ -31379,6 +32921,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hlas"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suara"
           }
         }
       }
@@ -31500,6 +33048,12 @@
             "state" : "translated",
             "value" : "Hlasové příkazy"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perintah suara"
+          }
         }
       }
     },
@@ -31618,6 +33172,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hlasové příkazy"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perintah Suara"
           }
         }
       }
@@ -31738,6 +33298,12 @@
             "state" : "translated",
             "value" : "Hlasové ovládání vypnuto"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontrol suara mati"
+          }
         }
       }
     },
@@ -31857,6 +33423,12 @@
             "state" : "translated",
             "value" : "Hlasitost"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volume"
+          }
         }
       }
     },
@@ -31974,6 +33546,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hlasitost %lld %%"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volume %lld%%"
           }
         }
       }
@@ -32093,6 +33671,12 @@
             "state" : "translated",
             "value" : "Ztišit"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kecilkan volume"
+          }
         }
       }
     },
@@ -32210,6 +33794,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zesílit"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besarkan volume"
           }
         }
       }
@@ -32331,6 +33921,12 @@
             "state" : "translated",
             "value" : "Roční"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tahunan"
+          }
         }
       }
     },
@@ -32449,6 +34045,12 @@
             "state" : "translated",
             "value" : "Roční – %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tahunan — %@"
+          }
         }
       }
     },
@@ -32563,6 +34165,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -32685,6 +34293,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -32799,6 +34413,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -32921,6 +34541,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -33038,6 +34664,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ Stop"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ Berhenti"
           }
         }
       }
@@ -33157,6 +34789,12 @@
             "state" : "translated",
             "value" : "▶ Start"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ Mulai"
+          }
         }
       }
     },
@@ -33274,6 +34912,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Časovač"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer"
           }
         }
       }
@@ -33393,6 +35037,12 @@
             "state" : "translated",
             "value" : "Vyp."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mati"
+          }
         }
       }
     },
@@ -33510,6 +35160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Časovač cvičení"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer latihan"
           }
         }
       }
@@ -33629,6 +35285,12 @@
             "state" : "translated",
             "value" : "%lld min"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mnt"
+          }
         }
       }
     },
@@ -33746,6 +35408,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zbývá času"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sisa waktu"
           }
         }
       }
@@ -33865,6 +35533,12 @@
             "state" : "translated",
             "value" : "Vynulovat časovač"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atur ulang timer"
+          }
         }
       }
     },
@@ -33982,6 +35656,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Časovač vypnut"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer mati"
           }
         }
       }
@@ -34101,6 +35781,12 @@
             "state" : "translated",
             "value" : "Časovač %lld min"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer %lld mnt"
+          }
         }
       }
     },
@@ -34218,6 +35904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zbývá %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sisa %@"
           }
         }
       }
@@ -34337,6 +36029,12 @@
             "state" : "translated",
             "value" : "Čas cvičení vypršel"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waktu latihan habis"
+          }
         }
       }
     },
@@ -34454,6 +36152,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "nastavit časovač cvičení"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "atur timer latihan"
           }
         }
       }
@@ -34573,6 +36277,12 @@
             "state" : "translated",
             "value" : "vypnout časovač"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "matikan timer"
+          }
         }
       }
     },
@@ -34690,6 +36400,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klepněte na tlačítko časovače vedle Startu nebo řekněte „timer 5 minutes“. Odpočítává, dokud hraje klikání, pak se zastaví a zazvoní."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk tombol timer di samping Mulai, atau ucapkan “timer 5 minutes”. Timer menghitung mundur selama klik berbunyi, lalu berhenti dan berdenting."
           }
         }
       }
@@ -34809,6 +36525,12 @@
             "state" : "translated",
             "value" : "Odpočítává, dokud hraje klikání, a při zastavení se pozastaví. Když čas vyprší, metronom se zastaví a zazvoní. Kdykoli řekněte „timer 5 minutes“ nebo „timer off“."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menghitung mundur selama klik berbunyi dan berhenti sejenak saat kamu berhenti. Saat waktu habis, metronom berhenti dan berdenting. Ucapkan “timer 5 minutes” atau “timer off” kapan saja."
+          }
         }
       }
     },
@@ -34926,6 +36648,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sdílet anonymní statistiky používání"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagikan statistik penggunaan anonim"
           }
         }
       }
@@ -35045,6 +36773,12 @@
             "state" : "translated",
             "value" : "Soukromí"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privasi"
+          }
         }
       }
     },
@@ -35162,6 +36896,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Počty, například kolik zařízení aplikaci používá, a zprávy o pádech. Žádný zvuk, nastavení ani osobní údaje. Platí od příštího spuštění."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hitungan seperti jumlah perangkat yang memakai aplikasi dan laporan kerusakan. Tanpa audio, pengaturan, atau informasi pribadi. Berlaku mulai peluncuran berikutnya."
           }
         }
       }
@@ -35282,6 +37022,12 @@
             "state" : "translated",
             "value" : "Ještě větší text"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teks lebih besar lagi"
+          }
         }
       }
     },
@@ -35400,6 +37146,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obrazovka zůstane čitelná a přehledná i při největších velikostech textu."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layar tetap terbaca dan rapi bahkan pada ukuran teks terbesar."
           }
         }
       }
@@ -35520,6 +37272,12 @@
             "state" : "translated",
             "value" : "Lépe viditelné barvy"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warna yang lebih mudah dilihat"
+          }
         }
       }
     },
@@ -35638,6 +37396,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Barvy dob a rytmu zůstávají jasné při zapnutém Zvýšení kontrastu, nebo pokud jsou barvy těžko rozlišitelné."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warna ketukan dan ketepatan tetap jelas dengan Tingkatkan Kontras, atau jika warna sulit dibedakan."
           }
         }
       }
@@ -35758,6 +37522,12 @@
             "state" : "translated",
             "value" : "Ovládání klávesnicí"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontrol keyboard"
+          }
         }
       }
     },
@@ -35876,6 +37646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Na iPadu s klávesnicí spouštějte, zastavujte a měňte tempo klávesami."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di iPad dengan keyboard, mulai, hentikan, dan ubah tempo dengan tombol."
           }
         }
       }
@@ -35996,6 +37772,12 @@
             "state" : "translated",
             "value" : "Co je nového"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yang baru"
+          }
         }
       }
     },
@@ -36114,6 +37896,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Po aktualizaci uvidíte při prvním otevření aplikace, co je nového."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setelah pembaruan, lihat yang baru saat pertama kali membuka aplikasi."
           }
         }
       }
@@ -36234,6 +38022,12 @@
             "state" : "translated",
             "value" : "Odpovědi na vaši zpětnou vazbu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balasan atas masukanmu"
+          }
         }
       }
     },
@@ -36352,6 +38146,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Čtěte naše odpovědi na vaši zpětnou vazbu přímo v aplikaci."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baca balasan kami atas masukanmu langsung di aplikasi."
           }
         }
       }
@@ -36472,6 +38272,12 @@
             "state" : "translated",
             "value" : "Darovat Pro"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hadiahkan Pro"
+          }
         }
       }
     },
@@ -36590,6 +38396,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Darujte Not My Tempo Pro spoluhráči z kapely nebo žákovi."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hadiahkan Not My Tempo Pro kepada rekan band atau murid."
           }
         }
       }
@@ -36710,6 +38522,12 @@
             "state" : "translated",
             "value" : "Widget na ploše"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget Layar Utama"
+          }
         }
       }
     },
@@ -36828,6 +38646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spusťte klikání přímo z plochy, aniž byste otevírali aplikaci."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai klik langsung dari Layar Utama tanpa membuka aplikasi."
           }
         }
       }
@@ -36948,6 +38772,12 @@
             "state" : "translated",
             "value" : "Siri a Zkratky"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri dan Pintasan"
+          }
         }
       }
     },
@@ -37066,6 +38896,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Požádejte Siri nebo spusťte zkratku a klikání začne ve vašem tempu."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minta Siri atau jalankan pintasan untuk memulai klik pada tempomu."
           }
         }
       }
@@ -37186,6 +39022,12 @@
             "state" : "translated",
             "value" : "Synchronizace mezi zařízeními"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sinkronisasi antarperangkat"
+          }
         }
       }
     },
@@ -37304,6 +39146,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vaše předvolby a nastavení vás provázejí mezi iPhonem a iPadem."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset dan pengaturanmu ikut berpindah antara iPhone dan iPad."
           }
         }
       }
@@ -37424,6 +39272,12 @@
             "state" : "translated",
             "value" : "Záloha předvoleb"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cadangkan presetmu"
+          }
         }
       }
     },
@@ -37542,6 +39396,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uložte předvolby akcentů do souboru a kdykoli je obnovte."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan preset aksenmu ke file dan kembalikan kapan saja."
           }
         }
       }
@@ -37662,6 +39522,12 @@
             "state" : "translated",
             "value" : "Připomínky cvičení"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengingat latihan"
+          }
         }
       }
     },
@@ -37780,6 +39646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dostaňte jemnou připomínku v čase, který si zvolíte pro cvičení."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dapatkan pengingat lembut pada waktu yang kamu pilih untuk berlatih."
           }
         }
       }
@@ -37900,6 +39772,12 @@
             "state" : "translated",
             "value" : "Rozvržení pro skládací iPhone"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tata letak iPhone lipat"
+          }
         }
       }
     },
@@ -38018,6 +39896,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Na skládacím iPhonu uvidíte dobu a ovládací prvky vedle sebe."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di iPhone lipat, lihat ketukan dan kontrol berdampingan."
           }
         }
       }
@@ -38138,6 +40022,12 @@
             "state" : "translated",
             "value" : "Smazat všechna moje data"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus semua datamu"
+          }
         }
       }
     },
@@ -38257,6 +40147,12 @@
             "state" : "translated",
             "value" : "Vymažte všechny předvolby a nastavení v aplikaci, kdykoli budete chtít."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus semua preset dan pengaturan di aplikasi kapan pun kamu mau."
+          }
         }
       }
     },
@@ -38374,6 +40270,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uplatnit kód nabídky"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tukarkan kode penawaran"
           }
         }
       }
@@ -38493,6 +40395,12 @@
             "state" : "translated",
             "value" : "Máte kód pro Pro? Zadejte ho přímo v aplikaci, na obrazovce Pro nebo v Hlasových příkazech."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punya kode untuk Pro? Masukkan langsung di aplikasi, di layar Pro atau di Perintah Suara."
+          }
         }
       }
     },
@@ -38610,6 +40518,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zřetelnější se Zvýšením kontrastu"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lebih jelas dengan Tingkatkan Kontras"
           }
         }
       }
@@ -38729,6 +40643,12 @@
             "state" : "translated",
             "value" : "Při zapnutém Zvýšení kontrastu nebo Snížení průhlednosti se doby, obrysy i vrstva nápovědy kreslí výrazněji a neprůhledně."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saat Tingkatkan Kontras atau Kurangi Transparansi aktif, ketukan, garis tepi, dan lapisan bantuan digambar lebih tebal dan solid."
+          }
         }
       }
     },
@@ -38846,6 +40766,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Místo pro největší text"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ruang untuk teks terbesar"
           }
         }
       }
@@ -38965,6 +40891,12 @@
             "state" : "translated",
             "value" : "Při největších velikostech textu se tlačítka a seznamy přeskládají, aby se nic neořízlo."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pada ukuran teks terbesar, tombol dan daftar ditata ulang agar tidak ada yang terpotong."
+          }
         }
       }
     },
@@ -39082,6 +41014,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Verze %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versi %@"
           }
         }
       }
@@ -39201,6 +41139,12 @@
             "state" : "translated",
             "value" : "Pokračovat"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanjutkan"
+          }
         }
       }
     },
@@ -39318,6 +41262,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Metronom, se kterým mluvíte"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronom yang bisa kamu ajak bicara"
           }
         }
       }
@@ -39437,6 +41387,12 @@
             "state" : "translated",
             "value" : "Řekněte „start“, „stop“, „faster“ nebo „tempo 120“ a nechte obě ruce na nástroji."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ucapkan “start”, “stop”, “faster”, atau “tempo 120” dan biarkan kedua tangan tetap di instrumenmu."
+          }
         }
       }
     },
@@ -39554,6 +41510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Příkazy jsou anglická slova"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perintahnya kata-kata bahasa Inggris"
           }
         }
       }
@@ -39673,6 +41635,12 @@
             "state" : "translated",
             "value" : "V každém jazyce se aplikace ovládá krátkými anglickými slovy. Kdykoli řekněte „help“ a uvidíte je všechna na obrazovce."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di semua bahasa, kamu mengendalikan aplikasi dengan kata bahasa Inggris yang singkat. Ucapkan “help” kapan saja untuk melihat semuanya di layar."
+          }
         }
       }
     },
@@ -39790,6 +41758,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vlastní mikrofon aplikace zůstává vypnutý, aby nekolidoval s Ovládáním hlasem. Řekněte „Tap Start“ nebo „Tap Faster“."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofon aplikasi tetap mati agar tidak bentrok dengan Kontrol Suara. Ucapkan “Tap Start” atau “Tap Faster”."
           }
         }
       }
@@ -39909,6 +41883,12 @@
             "state" : "translated",
             "value" : "Dále: mikrofon"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berikutnya: mikrofon"
+          }
         }
       }
     },
@@ -40026,6 +42006,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS požádá o přístup k mikrofonu a rozpoznávání řeči. Slouží jen k zachycení vašich příkazů. Aplikace nikdy nenahrává ani neukládá, co slyší."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS akan meminta izin mikrofon dan pengenalan ucapan. Keduanya hanya dipakai untuk mendengar perintahmu. Aplikasi tidak pernah merekam atau menyimpan apa yang didengarnya."
           }
         }
       }
@@ -40145,6 +42131,12 @@
             "state" : "translated",
             "value" : "Přeskočit"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lewati"
+          }
         }
       }
     },
@@ -40262,6 +42254,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Začít"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai"
           }
         }
       }
@@ -40381,6 +42379,12 @@
             "state" : "translated",
             "value" : "Další"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanjut"
+          }
         }
       }
     },
@@ -40498,6 +42502,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Předvolba uložena"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset tersimpan"
           }
         }
       }
@@ -40617,6 +42627,12 @@
             "state" : "translated",
             "value" : "Zatím žádné předvolby"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belum ada preset"
+          }
         }
       }
     },
@@ -40734,6 +42750,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uplatnit kód nabídky"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tukarkan kode penawaran"
           }
         }
       }
@@ -40853,6 +42875,12 @@
             "state" : "translated",
             "value" : "Zobrazit úvod znovu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampilkan pengantar lagi"
+          }
         }
       }
     },
@@ -40970,6 +42998,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uplatnit kód"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tukarkan Kode"
           }
         }
       }
@@ -41089,6 +43123,12 @@
             "state" : "translated",
             "value" : "Úvod"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengantar"
+          }
         }
       }
     },
@@ -41206,6 +43246,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobrazit úvod"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampilkan pengantar"
           }
         }
       }
@@ -41325,6 +43371,12 @@
             "state" : "translated",
             "value" : "Kód nabídky"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kode penawaran"
+          }
         }
       }
     },
@@ -41442,6 +43494,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uplatnit kód"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tukarkan kode"
           }
         }
       }
@@ -41561,6 +43619,12 @@
             "state" : "translated",
             "value" : "Co je nového"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yang baru"
+          }
         }
       }
     },
@@ -41678,6 +43742,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přeskočit úvod"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lewati pengantar"
           }
         }
       }

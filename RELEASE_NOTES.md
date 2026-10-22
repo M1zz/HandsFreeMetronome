@@ -149,6 +149,13 @@ Kódy nabídek uplatníte v aplikaci
 Zvýšený kontrast zvýrazní doby
 Vejde se i největší velikost textu
 
+### App Store (id)
+
+Pengantar singkat saat pertama dibuka
+Tukarkan kode penawaran di aplikasi
+Kontras tinggi membuat ketukan jelas
+Layar muat meski teks terbesar
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)

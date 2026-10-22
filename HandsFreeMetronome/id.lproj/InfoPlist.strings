@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "Metronom mendengarkan perintah suaramu (seperti “start” dan “faster”) dan dapat mendeteksi tempo musik yang kamu mainkan di dekatnya, sehingga kamu bisa mengendalikannya tanpa menyentuh layar.";
+"NSSpeechRecognitionUsageDescription" = "Pengenalan ucapan dipakai untuk memahami perintah suara bebas tangan. Pengenalan berlangsung langsung di perangkatmu.";
