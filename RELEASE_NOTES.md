@@ -135,6 +135,13 @@ Løs inn tilbudskoder rett i appen
 Slagene synes tydeligere med Øk kontrast
 Alt får plass selv med størst tekst
 
+### App Store (fi)
+
+Lyhyt esittely ensimmäisellä avauksella
+Lunasta tarjouskoodit sovelluksessa
+Lisää kontrastia selkeyttää iskuja
+Kaikki mahtuu suurimmalle tekstille
+
 ## 1.0.9
 
 ### 앱스토어 (한국어)

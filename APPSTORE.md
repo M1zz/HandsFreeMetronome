@@ -1281,6 +1281,77 @@ https://m1zz.github.io/HandsFreeMetronome/nb/privacy.html
 
 https://m1zz.github.io/HandsFreeMetronome/nb/
 
+## fi
+
+### 이름
+
+Not My Tempo: Äänimetronomi
+
+### 부제
+
+Vaihda tempoa ilman käsiä
+
+### 키워드
+
+bpm,viritin,harjoittelu,kitara,piano,rummut,viulu,saksofoni,trumpetti,kuoro,ukulele,painotus,rytmi
+
+### 프로모션 텍스트
+
+Pidä kädet soittimella. Sano ”start”, ”faster” tai ”tempo 120”, niin naksahdus seuraa. Täysi metronomi ja ääniohjaus ovat ilmaisia.
+
+### 설명
+
+Metronomi, jota ohjaat äänellä, joten kätesi pysyvät soittimella.
+Sano ”start” aloittaaksesi ja ”faster” kiihdyttääksesi. Ei napauttelua, ei pysähtelyä kesken fraasin.
+
+Tempon vaihtaminen soiton aikana tarkoittaa yleensä käsien irrottamista soittimesta ja langan kadottamista. Not My Tempo kuuntelee omalla mikrofonillaan ja tunnistaa puheen laitteellasi, joten se toimii heti – iOS:n Ääniohjausta tai mitään saavutettavuusasetusta ei tarvitse ottaa käyttöön. Komennot sanotaan englanniksi.
+
+PUHU METRONOMILLE
+”start” ja ”stop” käynnistävät ja pysäyttävät
+”faster” ja ”slower” muuttavat 5 BPM, ”up” ja ”down” 1
+”tempo 120” tai pelkkä luku hyppää suoraan siihen
+”double” ja ”half” kaksinkertaistavat tai puolittavat
+”quarter”, ”eighth”, ”triplet”, ”sixteenth” valitsevat jaon
+”louder”, ”quieter”, ”mute” säätävät äänenvoimakkuutta
+Unohtuiko komento? Sano ”help”, niin kaikki käytettävissä olevat fraasit näkyvät näytöllä
+
+TÄYSI METRONOMI ON ILMAINEN
+Tahtilajit 1–8 iskua, ensimmäisellä iskulla voimakkaampi naksahdus
+Kahdeksasosa-, trioli- ja kuudestoistaosajaot
+Kolme tapaa nähdä isku: pomppu, rata ja rengas
+Napautustempo: aseta BPM napauttamalla suurta lukua rytmissä
+Rytmin tarkistus: napauta ratarengasta soittaessasi ja katso, kuinka lähelle osuit
+Näyttö pysyy päällä toiston aikana, ja sovellus muistaa viimeisen tempon ja tahtilajin
+
+KÄYNNISTÄ JA PYSÄYTÄ SOITTIMELLASI
+Nauhoita ensin lyhyt 2–5 nuotin fraasi ja soita se käynnistääksesi tai pysäyttääksesi naksahduksen. Pidä jokaista nuottia noin puoli sekuntia, jotta soitossasi olevat nopeat nuotit eivät käynnistä sitä.
+
+NOT MY TEMPO PRO
+Harjoitustila: nopeusvalmentaja lisää muutaman BPM:n muutaman tahdin välein, kunnes saavutat tavoitetempon
+Painotuseditori: aseta tahdin jokainen naksahdus korkeaksi, matalaksi tai hiljaiseksi ja tallenna esiasetus kappaleittain
+Kromaattinen vireenmittaaja: virittele ennen aloitusta, vertailuääni A säädettävissä 430–450 Hz
+Pro on vuositilaus ilmaisella kokeilulla tai kertaostos ikuisesti.
+
+SAAVUTETTAVUUS
+Jos käytät iOS:n Ääniohjausta, sammuta sovelluksen oma mikrofoni ja ohjaa sanomalla painikkeiden nimet. Säätimissä on VoiceOver-selitteet.
+
+TILAUKSEN TIEDOT
+Vuositilaus uusiutuu automaattisesti, ellei sitä peruuteta vähintään 24 tuntia ennen kuluvan jakson päättymistä. Hallitse tai peruuta tilaus kohdassa Asetukset > Apple-tili > Tilaukset. Ikuinen osto on kertamaksu.
+Käyttöehdot (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Tietosuojakäytäntö: https://m1zz.github.io/HandsFreeMetronome/fi/privacy.html
+
+### 지원 URL
+
+https://m1zz.github.io/HandsFreeMetronome/fi/
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/HandsFreeMetronome/fi/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/HandsFreeMetronome/fi/
+
 ## pt-BR
 
 ### 이름

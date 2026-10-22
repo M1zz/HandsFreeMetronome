@@ -107,6 +107,12 @@
             "state" : "translated",
             "value" : "%@ per år"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ vuodessa"
+          }
         }
       }
     },
@@ -218,6 +224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, %2$lld cent for lav"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld senttiä liian matala"
           }
         }
       }
@@ -331,6 +343,12 @@
             "state" : "translated",
             "value" : "%1$@, %2$lld cent for høy"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$lld senttiä liian korkea"
+          }
         }
       }
     },
@@ -437,6 +455,12 @@
             "state" : "translated",
             "value" : "%@, ren"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, puhdas"
+          }
         }
       }
     },
@@ -541,6 +565,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -779,6 +809,24 @@
             "state" : "translated",
             "value" : "%lld slag"
           }
+        },
+        "fi" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld isku"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld iskua"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -923,6 +971,12 @@
             "state" : "translated",
             "value" : "%lld slag per minutt"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld iskua minuutissa"
+          }
         }
       }
     },
@@ -1027,6 +1081,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -1145,6 +1205,12 @@
             "state" : "translated",
             "value" : "%1$lld BPM, %2$@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld BPM, %2$@"
+          }
         }
       }
     },
@@ -1259,6 +1325,12 @@
             "state" : "translated",
             "value" : "%1$lld perfekte, %2$lld gode, %3$lld dårlige"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld täydellistä, %2$lld hyvää, %3$lld huonoa"
+          }
         }
       }
     },
@@ -1366,6 +1438,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld/4  ·  trykk på prikkene for å velge antall slag"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/4  ·  valitse iskujen määrä napauttamalla pisteitä"
           }
         }
       }
@@ -1481,6 +1559,12 @@
             "state" : "translated",
             "value" : "%1$lld/4 · %2$@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/4 · %2$@"
+          }
         }
       }
     },
@@ -1586,6 +1670,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sekstendedeler"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuudestoistaosat"
           }
         }
       }
@@ -1693,6 +1783,12 @@
             "state" : "translated",
             "value" : "Firedeler"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neljäsosat"
+          }
         }
       }
     },
@@ -1799,6 +1895,12 @@
             "state" : "translated",
             "value" : "Åttedeler"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kahdeksasosat"
+          }
         }
       }
     },
@@ -1901,6 +2003,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A4 = %lld Hz"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "A4 = %lld Hz"
@@ -2013,6 +2121,12 @@
             "state" : "translated",
             "value" : "Aksenteditor"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Painotuseditori"
+          }
         }
       }
     },
@@ -2118,6 +2232,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aksenteditor og forhåndsinnstillinger"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Painotuseditori ja esiasetukset"
           }
         }
       }
@@ -2227,6 +2347,12 @@
             "state" : "translated",
             "value" : "Aksenter"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Painotukset"
+          }
         }
       }
     },
@@ -2333,6 +2459,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tilgjengelighet"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käytettävyys"
           }
         }
       }
@@ -2442,6 +2574,12 @@
             "state" : "translated",
             "value" : "Legg til %lld BPM"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lisää %lld BPM"
+          }
         }
       }
     },
@@ -2549,6 +2687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alle kommandoer"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaikki komennot"
           }
         }
       }
@@ -2658,6 +2802,12 @@
             "state" : "translated",
             "value" : "Bruker dette mønsteret, taktarten og underdelingen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ottaa käyttöön tämän kuvion, tahtilajin ja jaon"
+          }
         }
       }
     },
@@ -2765,6 +2915,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tilbake"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Takaisin"
           }
         }
       }
@@ -2874,6 +3030,12 @@
             "state" : "translated",
             "value" : "Tilbake til metronomen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Takaisin metronomiin"
+          }
         }
       }
     },
@@ -2979,6 +3141,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dårlig"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huono"
           }
         }
       }
@@ -3087,6 +3255,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slag %lld"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isku %lld"
           }
         }
       }
@@ -3202,6 +3376,12 @@
             "state" : "translated",
             "value" : "Slag %1$lld, klikk %2$lld"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isku %1$lld, naksahdus %2$lld"
+          }
         }
       }
     },
@@ -3315,6 +3495,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slag %1$lld av %2$lld"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isku %1$lld / %2$lld"
           }
         }
       }
@@ -3430,6 +3616,12 @@
             "state" : "translated",
             "value" : "Slag %1$lld av %2$lld, %3$@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isku %1$lld / %2$lld, %3$@"
+          }
         }
       }
     },
@@ -3544,6 +3736,12 @@
             "state" : "translated",
             "value" : "Slag %1$lld, klikk %2$lld"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isku %1$lld, naksahdus %2$lld"
+          }
         }
       }
     },
@@ -3650,6 +3848,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slagvisning"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iskunäkymä"
           }
         }
       }
@@ -3758,6 +3962,12 @@
             "state" : "translated",
             "value" : "Slag"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iskut"
+          }
         }
       }
     },
@@ -3864,6 +4074,12 @@
             "state" : "translated",
             "value" : "Sprettvisning"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomppunäkymä"
+          }
         }
       }
     },
@@ -3968,6 +4184,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BPM"
@@ -4080,6 +4302,12 @@
             "state" : "translated",
             "value" : "Feilrapporter og ønsker om nye funksjoner er velkomne."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Virheraportit ja toiveet uusista ominaisuuksista ovat tervetulleita."
+          }
         }
       }
     },
@@ -4187,6 +4415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kjøp for alltid"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Osta ikuisesti"
           }
         }
       }
@@ -4296,6 +4530,12 @@
             "state" : "translated",
             "value" : "Kjøp for alltid for %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Osta ikuisesti hintaan %@"
+          }
         }
       }
     },
@@ -4403,6 +4643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avbryt"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peruuta"
           }
         }
       }
@@ -4512,6 +4758,12 @@
             "state" : "translated",
             "value" : "Bytt visning"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihda näkymää"
+          }
         }
       }
     },
@@ -4620,6 +4872,12 @@
             "state" : "translated",
             "value" : "Sjekk timingen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarkista rytmi"
+          }
         }
       }
     },
@@ -4725,6 +4983,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kromatisk stemmeapparat"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kromaattinen vireenmittaaja"
           }
         }
       }
@@ -4833,6 +5097,12 @@
             "state" : "translated",
             "value" : "Lukk"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sulje"
+          }
         }
       }
     },
@@ -4938,6 +5208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "lukk et panel eller et tips"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sulje paneeli tai vinkki"
           }
         }
       }
@@ -5047,6 +5323,12 @@
             "state" : "translated",
             "value" : "Kontakt utvikleren"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ota yhteyttä kehittäjään"
+          }
         }
       }
     },
@@ -5155,6 +5437,12 @@
             "state" : "translated",
             "value" : "Styr den med stemmen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohjaa äänellä"
+          }
         }
       }
     },
@@ -5260,6 +5548,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kunne ikke hente priser fra App Store."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hintoja ei voitu ladata App Storesta."
           }
         }
       }
@@ -5369,6 +5663,12 @@
             "state" : "translated",
             "value" : "Tilpass aksenter"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muokkaa painotuksia"
+          }
         }
       }
     },
@@ -5474,6 +5774,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bytter mellom høy, lav og stille"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihtaa korkean, matalan ja hiljaisen välillä"
           }
         }
       }
@@ -5583,6 +5889,12 @@
             "state" : "translated",
             "value" : "Senk tempoet"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pienennä tempoa"
+          }
         }
       }
     },
@@ -5691,6 +6003,12 @@
             "state" : "translated",
             "value" : "Slett forhåndsinnstillingen %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista esiasetus %@"
+          }
         }
       }
     },
@@ -5796,6 +6114,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Still inn hvert klikk i takten – høyt, lavt eller stille – og lagre mønstre for hver sang."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aseta tahdin jokainen naksahdus korkeaksi, matalaksi tai hiljaiseksi ja tallenna kuviot kappaleittain."
           }
         }
       }
@@ -5903,6 +6227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Detaljert hjelp"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yksityiskohtainen ohje"
           }
         }
       }
@@ -6012,6 +6342,12 @@
             "state" : "translated",
             "value" : "Lukk"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sulje"
+          }
         }
       }
     },
@@ -6120,6 +6456,12 @@
             "state" : "translated",
             "value" : "Lukk hjelpen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sulje ohje"
+          }
         }
       }
     },
@@ -6227,6 +6569,12 @@
             "state" : "translated",
             "value" : "Ferdig"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valmis"
+          }
         }
       }
     },
@@ -6332,6 +6680,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dobbelt ×2"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaksinkertainen ×2"
           }
         }
       }
@@ -6441,6 +6795,12 @@
             "state" : "translated",
             "value" : "Dobbelttrykk her for å åpne aksentrutenettet: sett hvert klikk i takten til høyt, lavt eller stille, og lagre mønstre som forhåndsinnstillinger."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa painotusruudukko kaksoisnapauttamalla: aseta tahdin jokainen naksahdus korkeaksi, matalaksi tai hiljaiseksi ja tallenna kuviot esiasetuksiksi."
+          }
         }
       }
     },
@@ -6546,6 +6906,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dobbelttrykk på underdelingskortet for å redigere hele takten: hver rute bytter mellom høy → lav → stille, og mønstre kan lagres som forhåndsinnstillinger med navn."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muokkaa koko tahtia kaksoisnapauttamalla jakokorttia: jokainen ruutu vaihtuu korkea → matala → hiljainen, ja kuviot voi tallentaa nimettyinä esiasetuksina."
           }
         }
       }
@@ -6653,6 +7019,12 @@
             "state" : "translated",
             "value" : "Dobbelttrykk for å åpne aksenter"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa painotukset kaksoisnapauttamalla"
+          }
         }
       }
     },
@@ -6759,6 +7131,12 @@
             "state" : "translated",
             "value" : "Ned −1"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alas −1"
+          }
         }
       }
     },
@@ -6864,6 +7242,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dra i tempoglidebryteren, eller trykk på knappene − / +."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vedä tempon liukusäädintä tai napauta painikkeita − / +."
           }
         }
       }
@@ -6973,6 +7357,12 @@
             "state" : "translated",
             "value" : "Rediger aksenter"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muokkaa painotuksia"
+          }
         }
       }
     },
@@ -7079,6 +7469,12 @@
             "state" : "translated",
             "value" : "Åttedeler"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kahdeksasosat"
+          }
         }
       }
     },
@@ -7184,6 +7580,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åttedeler"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kahdeksasosat"
           }
         }
       }
@@ -7293,6 +7695,12 @@
             "state" : "translated",
             "value" : "E-post"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sähköposti"
+          }
         }
       }
     },
@@ -7400,6 +7808,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Send e-post til utvikleren"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lähetä kehittäjälle sähköpostia"
           }
         }
       }
@@ -7581,6 +7995,12 @@
             "state" : "translated",
             "value" : "Hver %lld. takt"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Joka %lld. tahti"
+          }
         }
       }
     },
@@ -7686,6 +8106,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hvert klikk i takten har sin egen rute – %lld klikk til sammen. Trykk på en rute for å bytte: høy → lav → stille."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tahdin jokaisella naksahduksella on oma ruutunsa – yhteensä %lld naksahdusta. Vaihda ruutua napauttamalla: korkea → matala → hiljainen."
           }
         }
       }
@@ -7795,6 +8221,12 @@
             "state" : "translated",
             "value" : "Alt her fungerer også med stemmen – se kommandoene nedenfor."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaikki tämä toimii myös äänellä – komennot ovat alla."
+          }
         }
       }
     },
@@ -7903,6 +8335,12 @@
             "state" : "translated",
             "value" : "Raskere"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nopeammin"
+          }
         }
       }
     },
@@ -8008,6 +8446,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Raskere +5"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nopeammin +5"
           }
         }
       }
@@ -8117,6 +8561,12 @@
             "state" : "translated",
             "value" : "Glemt en kommando?"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unohtuiko komento?"
+          }
         }
       }
     },
@@ -8225,6 +8675,12 @@
             "state" : "translated",
             "value" : "Gratis for alltid, ingen opplåsing nødvendig:"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aina ilmainen, ei avausta tarvita:"
+          }
         }
       }
     },
@@ -8330,6 +8786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gratis prøveperiode"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ilmainen kokeilu"
           }
         }
       }
@@ -8437,6 +8899,12 @@
             "state" : "translated",
             "value" : "Bra"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hyvä"
+          }
         }
       }
     },
@@ -8543,6 +9011,12 @@
             "state" : "translated",
             "value" : "Halv ÷2"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puolet ÷2"
+          }
         }
       }
     },
@@ -8648,6 +9122,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hørte: %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuultu: %@"
           }
         }
       }
@@ -8757,6 +9237,12 @@
             "state" : "translated",
             "value" : "Hjelp"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohje"
+          }
         }
       }
     },
@@ -8864,6 +9350,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navigering i hjelpen"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohjeessa liikkuminen"
           }
         }
       }
@@ -8973,6 +9465,12 @@
             "state" : "translated",
             "value" : "Høy tone"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korkea ääni"
+          }
         }
       }
     },
@@ -9081,6 +9579,12 @@
             "state" : "translated",
             "value" : "Jeg bruker Stemmestyring i iOS"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käytän iOS:n Ääniohjausta"
+          }
         }
       }
     },
@@ -9186,6 +9690,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "I banevisningen trykker du på ringen mens du spiller – hvert klikk (også underdelinger) er et mål. Den bevegelige prikken legger igjen et spor der trykket ditt traff, og fargede tellere summerer Perfekt / Bra / Dårlig til du stopper."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta ratanäkymässä rengasta soittaessasi – jokainen naksahdus (myös jaot) on kohde. Liikkuva piste jättää jäljen siihen, mihin napautuksesi osui, ja värilliset laskurit laskevat Täydellinen / Hyvä / Huono, kunnes pysäytät."
           }
         }
       }
@@ -9295,6 +9805,12 @@
             "state" : "translated",
             "value" : "Øk tempoet"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suurenna tempoa"
+          }
         }
       }
     },
@@ -9399,6 +9915,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram"
@@ -9511,6 +10033,12 @@
             "state" : "translated",
             "value" : "Instagram-melding"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-viesti"
+          }
         }
       }
     },
@@ -9618,6 +10146,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instagram-melding (@lee25_ios)"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram-viesti (@lee25_ios)"
           }
         }
       }
@@ -9727,6 +10261,12 @@
             "state" : "translated",
             "value" : "Instrumentsignal"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soittimen merkki"
+          }
         }
       }
     },
@@ -9835,6 +10375,12 @@
             "state" : "translated",
             "value" : "er en del av Pro – tre øveverktøy, én opplåsing."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kuuluu Prohon – kolme harjoitustyökalua, yksi avaus."
+          }
         }
       }
     },
@@ -9939,6 +10485,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Largo? Moderato?"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Largo? Moderato?"
@@ -10051,6 +10603,12 @@
             "state" : "translated",
             "value" : "For alltid"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikuinen"
+          }
         }
       }
     },
@@ -10156,6 +10714,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "For alltid – %@ én gang"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikuinen – %@ kerran"
           }
         }
       }
@@ -10263,6 +10827,12 @@
             "state" : "translated",
             "value" : "vis kommandoene du kan si"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "näytä komennot, jotka voit sanoa"
+          }
         }
       }
     },
@@ -10369,6 +10939,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lytt"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuuntele"
           }
         }
       }
@@ -10478,6 +11054,12 @@
             "state" : "translated",
             "value" : "Lytt etter stemme"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuuntele ääntä"
+          }
         }
       }
     },
@@ -10585,6 +11167,12 @@
             "state" : "translated",
             "value" : "Lytter"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuuntelee"
+          }
         }
       }
     },
@@ -10690,6 +11278,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lytter …"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuuntelee…"
           }
         }
       }
@@ -10799,6 +11393,12 @@
             "state" : "translated",
             "value" : "Lytter … hold hver tone"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuuntelee… pidä jokaista nuottia"
+          }
         }
       }
     },
@@ -10906,6 +11506,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Henter priser …"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ladataan hintoja…"
           }
         }
       }
@@ -11015,6 +11621,12 @@
             "state" : "translated",
             "value" : "Lav tone"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matala ääni"
+          }
         }
       }
     },
@@ -11122,6 +11734,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Laget for Stemmestyring"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tehty Ääniohjausta varten"
           }
         }
       }
@@ -11231,6 +11849,12 @@
             "state" : "translated",
             "value" : "Metronommodus"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronomitila"
+          }
         }
       }
     },
@@ -11336,6 +11960,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofon/tale blokkert – slå på i Innstillinger"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofoni/puhe estetty – ota käyttöön Asetuksissa"
           }
         }
       }
@@ -11445,6 +12075,12 @@
             "state" : "translated",
             "value" : "Minus"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miinus"
+          }
         }
       }
     },
@@ -11552,6 +12188,12 @@
             "state" : "translated",
             "value" : "Mer"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lisää"
+          }
         }
       }
     },
@@ -11657,6 +12299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "flytt denne listen"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vieritä tätä luetteloa"
           }
         }
       }
@@ -11764,6 +12412,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Demp"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mykistä"
           }
         }
       }
@@ -11873,6 +12527,12 @@
             "state" : "translated",
             "value" : "Slå av stemmestyringen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mykistä ääniohjaus"
+          }
         }
       }
     },
@@ -11980,6 +12640,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navn (f.eks. Bossa-intro)"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nimi (esim. Bossa-intro)"
           }
         }
       }
@@ -12089,6 +12755,12 @@
             "state" : "translated",
             "value" : "Trenger appens mikrofon – slå av «Jeg bruker Stemmestyring i iOS» for å bruke den."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarvitsee sovelluksen mikrofonin – poista käytöstä ”Käytän iOS:n Ääniohjausta”, jotta voit käyttää sitä."
+          }
         }
       }
     },
@@ -12194,6 +12866,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen tone registrert, spill en tone"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nuottia ei havaittu, soita nuotti"
           }
         }
       }
@@ -12301,6 +12979,12 @@
             "state" : "translated",
             "value" : "Fant ingen tidligere kjøp."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aiempaa ostosta ei löytynyt."
+          }
         }
       }
     },
@@ -12403,6 +13087,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo Pro"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo Pro"
@@ -12515,6 +13205,12 @@
             "state" : "translated",
             "value" : "Ikke nå"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei nyt"
+          }
         }
       }
     },
@@ -12623,6 +13319,12 @@
             "state" : "translated",
             "value" : "Tone"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nuotti"
+          }
         }
       }
     },
@@ -12729,6 +13431,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toner"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nuotit"
           }
         }
       }
@@ -12838,6 +13546,12 @@
             "state" : "translated",
             "value" : "På skjermen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytöllä"
+          }
         }
       }
     },
@@ -12944,6 +13658,12 @@
             "state" : "translated",
             "value" : "Åpne"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa"
+          }
         }
       }
     },
@@ -13049,6 +13769,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åpne aksenteditoren"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa painotuseditori"
           }
         }
       }
@@ -13158,6 +13884,12 @@
             "state" : "translated",
             "value" : "Åpne aksenter"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa painotukset"
+          }
         }
       }
     },
@@ -13263,6 +13995,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åpne den fra slagvisningen nedenfor, eller si «practice»."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa se alla olevasta iskunäkymästä tai sano ”practice”."
           }
         }
       }
@@ -13372,6 +14110,12 @@
             "state" : "translated",
             "value" : "Åpne øving"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa harjoitus"
+          }
         }
       }
     },
@@ -13480,6 +14224,12 @@
             "state" : "translated",
             "value" : "Åpne øvingsmodus"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa harjoitustila"
+          }
         }
       }
     },
@@ -13585,6 +14335,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "åpne øvingsmodus"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "avaa harjoitustila"
           }
         }
       }
@@ -13692,6 +14448,12 @@
             "state" : "translated",
             "value" : "åpne stemmeapparatet"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "avaa vireenmittaaja"
+          }
         }
       }
     },
@@ -13797,6 +14559,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Banevisning"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ratanäkymä"
           }
         }
       }
@@ -13906,6 +14674,12 @@
             "state" : "translated",
             "value" : "Pause"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tauko"
+          }
         }
       }
     },
@@ -14014,6 +14788,12 @@
             "state" : "translated",
             "value" : "Betal én gang, behold for alltid"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maksa kerran, omasi ikuisesti"
+          }
         }
       }
     },
@@ -14119,6 +14899,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfekt!"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Täydellinen!"
           }
         }
       }
@@ -14227,6 +15013,12 @@
             "state" : "translated",
             "value" : "Spill av"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toista"
+          }
         }
       }
     },
@@ -14332,6 +15124,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "spill av / pause"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "toista / tauko"
           }
         }
       }
@@ -14439,6 +15237,12 @@
             "state" : "translated",
             "value" : "Spill 2–5 toner, hver i omtrent et halvt sekund."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soita 2–5 nuottia, kukin noin puoli sekuntia."
+          }
         }
       }
     },
@@ -14544,6 +15348,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spill en tone …"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soita nuotti…"
           }
         }
       }
@@ -14653,6 +15463,12 @@
             "state" : "translated",
             "value" : "Spill frasen din for å starte eller stoppe klikket, også midt i en sang. Hold hver tone i omtrent et halvt sekund, slik at raske toner i spillet ditt ikke utløser det ved en feil. Fungerer mens Lytt er på."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soita fraasisi käynnistääksesi tai pysäyttääksesi naksahduksen, vaikka kesken kappaleen. Pidä jokaista nuottia noin puoli sekuntia, jotta soitossasi olevat nopeat nuotit eivät käynnistä sitä vahingossa. Toimii, kun Kuuntele on päällä."
+          }
         }
       }
     },
@@ -14760,6 +15576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avspilling"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toisto"
           }
         }
       }
@@ -14869,6 +15691,12 @@
             "state" : "translated",
             "value" : "Pluss"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus"
+          }
         }
       }
     },
@@ -14975,6 +15803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Øving"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harjoitus"
           }
         }
       }
@@ -15083,6 +15917,12 @@
             "state" : "translated",
             "value" : "Øvingsmodus"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harjoitustila"
+          }
         }
       }
     },
@@ -15188,6 +16028,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Øvingsmodus · aksenteditor og forhåndsinnstillinger · stemmeapparat"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harjoitustila · painotuseditori ja esiasetukset · vireenmittaaja"
           }
         }
       }
@@ -15297,6 +16143,12 @@
             "state" : "translated",
             "value" : "Forhåndsinnstilling %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esiasetus %@"
+          }
         }
       }
     },
@@ -15404,6 +16256,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Forhåndsinnstillinger"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esiasetukset"
           }
         }
       }
@@ -15513,6 +16371,12 @@
             "state" : "translated",
             "value" : "Personvernerklæring"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tietosuojakäytäntö"
+          }
         }
       }
     },
@@ -15619,6 +16483,12 @@
             "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/nb/privacy.html"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/fi/privacy.html"
+          }
         }
       }
     },
@@ -15721,6 +16591,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro"
@@ -15833,6 +16709,12 @@
             "state" : "translated",
             "value" : "PRO"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO"
+          }
         }
       }
     },
@@ -15938,6 +16820,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pro er låst opp – takk!"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro avattu – kiitos!"
           }
         }
       }
@@ -16045,6 +16933,12 @@
             "state" : "translated",
             "value" : "Firedeler"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neljäsosat"
+          }
         }
       }
     },
@@ -16151,6 +17045,12 @@
             "state" : "translated",
             "value" : "Firedeler"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neljäsosat"
+          }
         }
       }
     },
@@ -16256,6 +17156,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Øk tempoet automatisk for hver få takter – få opp farten i et parti uten å slippe instrumentet."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nosta tempoa automaattisesti muutaman tahdin välein ja vauhdita kohtaa päästämättä irti soittimesta."
           }
         }
       }
@@ -16365,6 +17271,12 @@
             "state" : "translated",
             "value" : "Øker tempoet automatisk for hver få takter mens du spiller – slik at du steg for steg øker farten i et parti. Stopper ved målet. Si «practice» når som helst for å åpne dette."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nostaa tempoa automaattisesti muutaman tahdin välein soittaessasi, jotta voit vauhdittaa kohtaa vähitellen. Pysähtyy tavoitteeseen. Avaa tämä sanomalla milloin tahansa ”practice”."
+          }
         }
       }
     },
@@ -16472,6 +17384,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ta først opp en kort frase."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nauhoita ensin lyhyt fraasi."
           }
         }
       }
@@ -16581,6 +17499,12 @@
             "state" : "translated",
             "value" : "Ta opp på nytt"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nauhoita uudelleen"
+          }
         }
       }
     },
@@ -16689,6 +17613,12 @@
             "state" : "translated",
             "value" : "Ta opp signal"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nauhoita merkki"
+          }
         }
       }
     },
@@ -16794,6 +17724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stemmetone"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertailuääni"
           }
         }
       }
@@ -16903,6 +17839,12 @@
             "state" : "translated",
             "value" : "Krever Pro"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaatii Pron"
+          }
         }
       }
     },
@@ -17010,6 +17952,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tilbakestill"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nollaa"
           }
         }
       }
@@ -17119,6 +18067,12 @@
             "state" : "translated",
             "value" : "Gjenopprett"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palauta"
+          }
         }
       }
     },
@@ -17226,6 +18180,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gjenopprett kjøp"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palauta ostokset"
           }
         }
       }
@@ -17335,6 +18295,12 @@
             "state" : "translated",
             "value" : "Gjenopprett kjøp"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palauta ostokset"
+          }
         }
       }
     },
@@ -17442,6 +18408,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gjenoppretter et tidligere Pro-kjøp"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palauttaa aiemman Pro-ostoksen"
           }
         }
       }
@@ -17551,6 +18523,12 @@
             "state" : "translated",
             "value" : "Gjenoppretter standardmønsteret for denne taktarten"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palauttaa tämän tahtilajin oletuskuvion"
+          }
         }
       }
     },
@@ -17658,6 +18636,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lagre"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna"
           }
         }
       }
@@ -17767,6 +18751,12 @@
             "state" : "translated",
             "value" : "Lagre et mønster for hver sang – når du henter det frem, gjenopprettes også taktart og underdeling."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna kuvio kappaletta kohti – kuvion palautus palauttaa myös tahtilajin ja jaon."
+          }
         }
       }
     },
@@ -17874,6 +18864,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lagre gjeldende mønster …"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna nykyinen kuvio…"
           }
         }
       }
@@ -17983,6 +18979,12 @@
             "state" : "translated",
             "value" : "Lagre mønster"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna kuvio"
+          }
         }
       }
     },
@@ -18090,6 +19092,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lagre forhåndsinnstilling"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna esiasetus"
           }
         }
       }
@@ -18199,6 +19207,12 @@
             "state" : "translated",
             "value" : "Lagrer dette mønsteret med taktart og underdeling, slik at du kan hente det frem for hver sang."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallentaa tämän kuvion tahtilajeineen ja jakoineen, jotta voit hakea sen kappaleittain."
+          }
         }
       }
     },
@@ -18306,6 +19320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "si"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sano"
           }
         }
       }
@@ -18415,6 +19435,12 @@
             "state" : "translated",
             "value" : "Si «close» for å lukke"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sulje sanomalla ”close”"
+          }
         }
       }
     },
@@ -18520,6 +19546,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Si «start», «faster» eller «help»"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano ”start”, ”faster” tai ”help”"
           }
         }
       }
@@ -18628,6 +19660,12 @@
             "state" : "translated",
             "value" : "Si en kommando"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano komento"
+          }
         }
       }
     },
@@ -18733,6 +19771,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Si «close» / «done», eller trykk på Ferdig."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano ”close” / ”done” tai napauta Valmis."
           }
         }
       }
@@ -18842,6 +19886,12 @@
             "state" : "translated",
             "value" : "Si «close», eller trykk for å lukke"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano ”close” tai sulje napauttamalla"
+          }
         }
       }
     },
@@ -18950,6 +20000,12 @@
             "state" : "translated",
             "value" : "Si «help» når som helst – eller trykk her – for å se alle kommandoene du kan si, og deretter «close» for å lukke."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano ”help” milloin tahansa – tai napauta tästä – nähdäksesi kaikki komennot ja sulje sitten sanomalla ”close”."
+          }
         }
       }
     },
@@ -19056,6 +20112,12 @@
             "state" : "translated",
             "value" : "Si «help», eller trykk på ?-knappen."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano ”help” tai napauta ?-painiketta."
+          }
         }
       }
     },
@@ -19161,6 +20223,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Si «louder» / «quieter» / «mute» eller «volume 60»."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano ”louder” / ”quieter” / ”mute” tai ”volume 60”."
           }
         }
       }
@@ -19270,6 +20338,12 @@
             "state" : "translated",
             "value" : "Si «practice» for å øke tempoet automatisk for hver få takter mens du spiller – flott til hastighetsøvelser."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano ”practice”, niin tempo nousee automaattisesti muutaman tahdin välein soittaessasi – loistava nopeusharjoituksiin."
+          }
         }
       }
     },
@@ -19376,6 +20450,12 @@
             "state" : "translated",
             "value" : "Si «scroll down» / «scroll up», eller sveip."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano ”scroll down” / ”scroll up” tai pyyhkäise."
+          }
         }
       }
     },
@@ -19481,6 +20561,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Si «tune» og spill – tone, cent og en sone for ren stemming."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano ”tune” ja soita – nuotti, sentit ja puhtaan vireen alue."
           }
         }
       }
@@ -19590,6 +20676,12 @@
             "state" : "translated",
             "value" : "Si «tune» for å åpne det kromatiske stemmeapparatet, og «close» når du er ferdig."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa kromaattinen vireenmittaaja sanomalla ”tune” ja sulje se sanomalla ”close”."
+          }
         }
       }
     },
@@ -19695,6 +20787,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rull"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vieritä"
           }
         }
       }
@@ -19802,6 +20900,12 @@
             "state" : "translated",
             "value" : "Rull ned"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vieritä alas"
+          }
         }
       }
     },
@@ -19907,6 +21011,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rull opp"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vieritä ylös"
           }
         }
       }
@@ -20016,6 +21126,12 @@
             "state" : "translated",
             "value" : "Rulling"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vieritys"
+          }
         }
       }
     },
@@ -20121,6 +21237,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Velg slag"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aseta iskut"
           }
         }
       }
@@ -20228,6 +21350,12 @@
             "state" : "translated",
             "value" : "angi prosent"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "aseta prosentti"
+          }
         }
       }
     },
@@ -20334,6 +21462,12 @@
             "state" : "translated",
             "value" : "angi taktart"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "aseta tahtilaji"
+          }
         }
       }
     },
@@ -20439,6 +21573,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "angi verdi"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "aseta arvo"
           }
         }
       }
@@ -20548,6 +21688,12 @@
             "state" : "translated",
             "value" : "Setter %lld/4-takt"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Asettaa tahtilajiksi %lld/4"
+          }
         }
       }
     },
@@ -20656,6 +21802,12 @@
             "state" : "translated",
             "value" : "Signal: %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merkki: %@"
+          }
         }
       }
     },
@@ -20761,6 +21913,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "gjør klikket stille"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vaienna naksahdus"
           }
         }
       }
@@ -20870,6 +22028,12 @@
             "state" : "translated",
             "value" : "Stille"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiljainen"
+          }
         }
       }
     },
@@ -20976,6 +22140,12 @@
             "state" : "translated",
             "value" : "Sekstendedeler"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuudestoistaosat"
+          }
         }
       }
     },
@@ -21081,6 +22251,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sekstendedeler"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuudestoistaosat"
           }
         }
       }
@@ -21190,6 +22366,12 @@
             "state" : "translated",
             "value" : "Saktere"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hitaammin"
+          }
         }
       }
     },
@@ -21296,6 +22478,12 @@
             "state" : "translated",
             "value" : "Saktere −5"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hitaammin −5"
+          }
         }
       }
     },
@@ -21401,6 +22589,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Talegjenkjenning er ikke tilgjengelig her"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puheentunnistus ei ole käytettävissä täällä"
           }
         }
       }
@@ -21509,6 +22703,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hastighetstrener"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nopeusvalmentaja"
           }
         }
       }
@@ -21622,6 +22822,12 @@
             "state" : "translated",
             "value" : "Hastighetstrener · +%1$lld hver %2$lld. takt → %3$lld"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nopeusvalmentaja · +%1$lld joka %2$lld. tahti → %3$lld"
+          }
         }
       }
     },
@@ -21728,6 +22934,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käynnistä"
           }
         }
       }
@@ -21837,6 +23049,12 @@
             "state" : "translated",
             "value" : "Start / stopp med instrumentet mitt"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käynnistä / pysäytä soittimellani"
+          }
         }
       }
     },
@@ -21944,6 +23162,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Begynn å lytte"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aloita kuuntelu"
           }
         }
       }
@@ -22053,6 +23277,12 @@
             "state" : "translated",
             "value" : "Start metronomen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käynnistä metronomi"
+          }
         }
       }
     },
@@ -22159,6 +23389,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stopp"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pysäytä"
           }
         }
       }
@@ -22268,6 +23504,12 @@
             "state" : "translated",
             "value" : "Slutt å lytte"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lopeta kuuntelu"
+          }
         }
       }
     },
@@ -22376,6 +23618,12 @@
             "state" : "translated",
             "value" : "Stopp metronomen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pysäytä metronomi"
+          }
         }
       }
     },
@@ -22482,6 +23730,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Underdeling"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jako"
           }
         }
       }
@@ -22591,6 +23845,12 @@
             "state" : "translated",
             "value" : "Abonner"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilaa"
+          }
         }
       }
     },
@@ -22699,6 +23959,12 @@
             "state" : "translated",
             "value" : "Abonner årlig for %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilaa vuodeksi hintaan %@"
+          }
         }
       }
     },
@@ -22804,6 +24070,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Støtte"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuki"
           }
         }
       }
@@ -22911,6 +24183,12 @@
             "state" : "translated",
             "value" : "Bytt til sprettvisning"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihda pomppunäkymään"
+          }
         }
       }
     },
@@ -23016,6 +24294,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bytt til banevisning"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihda ratanäkymään"
           }
         }
       }
@@ -23125,6 +24409,12 @@
             "state" : "translated",
             "value" : "Bytt til ringvisning"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihda rengasnäkymään"
+          }
         }
       }
     },
@@ -23233,6 +24523,12 @@
             "state" : "translated",
             "value" : "Bytt visning"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihda näkymää"
+          }
         }
       }
     },
@@ -23339,6 +24635,12 @@
             "state" : "translated",
             "value" : "bytt visualisering"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vaihda visualisointia"
+          }
         }
       }
     },
@@ -23444,6 +24746,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trykk på 1/4, 1/8, trio eller 1/16. Dobbelttrykk på kortet for å åpne aksenter og sette hvert klikk i takten til høyt, lavt eller stille."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta 1/4, 1/8, trioli tai 1/16. Avaa painotukset kaksoisnapauttamalla korttia ja aseta tahdin jokainen naksahdus korkeaksi, matalaksi tai hiljaiseksi."
           }
         }
       }
@@ -23553,6 +24861,12 @@
             "state" : "translated",
             "value" : "Trykk i rytme for å sjekke timingen din"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta rytmissä tarkistaaksesi ajoituksesi"
+          }
         }
       }
     },
@@ -23658,6 +24972,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trykk på Lytt for å styre med stemmen"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohjaa äänellä napauttamalla Kuuntele"
           }
         }
       }
@@ -23765,6 +25085,12 @@
             "state" : "translated",
             "value" : "Trykk på Lytt for å slå stemmestyring på eller av."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta Kuuntele kytkeäksesi ääniohjauksen päälle tai pois."
+          }
         }
       }
     },
@@ -23870,6 +25196,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trykk på Start / Stopp nederst."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta alhaalla Käynnistä / Pysäytä."
           }
         }
       }
@@ -23979,6 +25311,12 @@
             "state" : "translated",
             "value" : "Tapp tempo"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napautustempo"
+          }
         }
       }
     },
@@ -24084,6 +25422,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trykk i rytme på det store BPM-tallet for å stille inn tempoet."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aseta tempo napauttamalla suurta BPM-lukua rytmissä."
           }
         }
       }
@@ -24191,6 +25535,12 @@
             "state" : "translated",
             "value" : "Trykk på prikkene for å velge taktart."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse tahtilaji napauttamalla pisteitä."
+          }
         }
       }
     },
@@ -24296,6 +25646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trykk på visningsikonet (øverst til høyre på slagkortet): sprett → bane → ring."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta näkymäkuvaketta (iskukortin oikeassa yläkulmassa): pomppu → rata → rengas."
           }
         }
       }
@@ -24405,6 +25761,12 @@
             "state" : "translated",
             "value" : "Trykk for å bytte mellom den spretten ballen og banering – eller si «bounce» / «orbit»."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihda pomppivan pallon ja ratarenkaan välillä napauttamalla – tai sano ”bounce” / ”orbit”."
+          }
         }
       }
     },
@@ -24513,6 +25875,12 @@
             "state" : "translated",
             "value" : "Trykk for å bytte mellom tempobetegnelse og BPM"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaihda tempon nimen ja BPM:n välillä napauttamalla"
+          }
         }
       }
     },
@@ -24620,6 +25988,12 @@
             "state" : "translated",
             "value" : "Tempo"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo"
+          }
         }
       }
     },
@@ -24722,6 +26096,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo %lld"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempo %lld"
@@ -24834,6 +26214,12 @@
             "state" : "translated",
             "value" : "Tempoglidebryter"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempon liukusäädin"
+          }
         }
       }
     },
@@ -24941,6 +26327,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bruksvilkår (EULA)"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käyttöehdot (EULA)"
           }
         }
       }
@@ -25050,6 +26442,12 @@
             "state" : "translated",
             "value" : "Dette er tempoet ditt som klassisk betegnelse. Trykk for å bytte til BPM-tallet og tilbake."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tämä on tempo klassisena termina. Napauta nähdäksesi BPM-luvun ja napauta uudelleen palataksesi."
+          }
         }
       }
     },
@@ -25157,6 +26555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appens egen mikrofon er av, slik at den ikke kolliderer med Stemmestyring. Si «Tap Start», «Tap Faster» eller «Tap 3 beats»."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sovelluksen oma mikrofoni on pois päältä, jotta se ei häiritse Ääniohjausta. Sano ”Tap Start”, ”Tap Faster” tai ”Tap 3 beats”."
           }
         }
       }
@@ -25266,6 +26670,12 @@
             "state" : "translated",
             "value" : "Hele metronomen – alle tempi, taktarter og underdelinger, alle tre slagvisninger, tapp tempo, timingsjekk og full håndfri stemmestyring."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Täysi metronomi: kaikki tempot, tahtilajit ja jaot, kaikki kolme iskunäkymää, napautustempo, rytmin tarkistus ja täydellinen käsiä vapauttava ääniohjaus."
+          }
         }
       }
     },
@@ -25373,6 +26783,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mikrofonen lytter allerede – si «start», «faster» eller «help». Bruker du Stemmestyring i iOS? Åpne Stemmekommandoer for å bytte."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikrofoni kuuntelee jo – sano ”start”, ”faster” tai ”help”. Käytätkö iOS:n Ääniohjausta? Vaihda avaamalla Äänikomennot."
           }
         }
       }
@@ -25482,6 +26898,12 @@
             "state" : "translated",
             "value" : "Årsabonnementet fornyes automatisk for %@ per år, med mindre du sier det opp minst 24 timer før fornyelsen i Innstillinger > Apple-konto > Abonnementer. Kjøp for alltid er en enkelt engangsbetaling."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vuositilaus uusiutuu automaattisesti hintaan %@ vuodessa, ellet peruuta sitä vähintään 24 tuntia ennen uusiutumista kohdassa Asetukset > Apple-tili > Tilaukset. Ikuinen osto on kertamaksu."
+          }
         }
       }
     },
@@ -25590,6 +27012,12 @@
             "state" : "translated",
             "value" : "Det finnes også et stemmeapparat"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mukana on myös vireenmittaaja"
+          }
         }
       }
     },
@@ -25695,6 +27123,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timingsjekk"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rytmin tarkistus"
           }
         }
       }
@@ -25804,6 +27238,12 @@
             "state" : "translated",
             "value" : "Tips"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vinkit"
+          }
         }
       }
     },
@@ -25912,6 +27352,12 @@
             "state" : "translated",
             "value" : "Trener"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valmentaja"
+          }
         }
       }
     },
@@ -26018,6 +27464,12 @@
             "state" : "translated",
             "value" : "Trioler"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triolit"
+          }
         }
       }
     },
@@ -26123,6 +27575,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "trioler"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "triolit"
           }
         }
       }
@@ -26231,6 +27689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prøv igjen"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yritä uudelleen"
           }
         }
       }
@@ -26410,6 +27874,24 @@
             "state" : "translated",
             "value" : "Prøv gratis i %lld dager"
           }
+        },
+        "fi" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Kokeile ilmaiseksi %lld päivä"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Kokeile ilmaiseksi %lld päivää"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -26575,6 +28057,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prøv gratis i %lld måneder"
+          }
+        },
+        "fi" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Kokeile ilmaiseksi %lld kuukausi"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Kokeile ilmaiseksi %lld kuukautta"
+                }
+              }
+            }
           }
         }
       }
@@ -26754,6 +28254,24 @@
             "state" : "translated",
             "value" : "Prøv gratis i %lld uker"
           }
+        },
+        "fi" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Kokeile ilmaiseksi %lld viikko"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Kokeile ilmaiseksi %lld viikkoa"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -26859,6 +28377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prøv gratis i en måned"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kokeile ilmaiseksi kuukausi"
           }
         }
       }
@@ -26966,6 +28490,12 @@
             "state" : "translated",
             "value" : "Prøv gratis i en uke"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kokeile ilmaiseksi viikko"
+          }
         }
       }
     },
@@ -27071,6 +28601,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prøv gratis i ett år"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kokeile ilmaiseksi vuosi"
           }
         }
       }
@@ -27178,6 +28714,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stemmeapparat"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vireenmittaaja"
           }
         }
       }
@@ -27287,6 +28829,12 @@
             "state" : "translated",
             "value" : "Slår av appens egen mikrofon og styrer knappene med navn"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poistaa sovelluksen oman mikrofonin käytöstä ja ohjaa painikkeita nimillä"
+          }
         }
       }
     },
@@ -27392,6 +28940,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slår av appens mikrofon slik at de to ikke kolliderer. Styr appen ved å si «Tap Start», «Tap Faster», «Tap 3 beats»."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poistaa tämän sovelluksen mikrofonin käytöstä, jottei se häiritse Ääniohjausta. Ohjaa sanomalla ”Tap Start”, ”Tap Faster”, ”Tap 3 beats”."
           }
         }
       }
@@ -27501,6 +29055,12 @@
             "state" : "translated",
             "value" : "To slagvisninger"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaksi iskunäkymää"
+          }
         }
       }
     },
@@ -27607,6 +29167,12 @@
             "state" : "translated",
             "value" : "Lås opp Pro"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa Pro"
+          }
         }
       }
     },
@@ -27712,6 +29278,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opp +1"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ylös +1"
           }
         }
       }
@@ -27821,6 +29393,12 @@
             "state" : "translated",
             "value" : "Opp til %lld BPM"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enintään %lld BPM"
+          }
         }
       }
     },
@@ -27926,6 +29504,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oppgrader"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivitä Prohon"
           }
         }
       }
@@ -28034,6 +29618,12 @@
             "state" : "translated",
             "value" : "Visning"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näkymä"
+          }
         }
       }
     },
@@ -28139,6 +29729,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stemme"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ääni"
           }
         }
       }
@@ -28248,6 +29844,12 @@
             "state" : "translated",
             "value" : "Stemmekommandoer"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Äänikomennot"
+          }
         }
       }
     },
@@ -28354,6 +29956,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stemmekommandoer"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Äänikomennot"
           }
         }
       }
@@ -28462,6 +30070,12 @@
             "state" : "translated",
             "value" : "Stemmestyring av"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ääniohjaus pois päältä"
+          }
         }
       }
     },
@@ -28569,6 +30183,12 @@
             "state" : "translated",
             "value" : "Volum"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Äänenvoimakkuus"
+          }
         }
       }
     },
@@ -28674,6 +30294,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Volum %lld %%"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Äänenvoimakkuus %lld %%"
           }
         }
       }
@@ -28781,6 +30407,12 @@
             "state" : "translated",
             "value" : "Lavere volum"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiljennä"
+          }
         }
       }
     },
@@ -28886,6 +30518,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Høyere volum"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voimista"
           }
         }
       }
@@ -28995,6 +30633,12 @@
             "state" : "translated",
             "value" : "Årlig"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vuosittain"
+          }
         }
       }
     },
@@ -29101,6 +30745,12 @@
             "state" : "translated",
             "value" : "Årlig – %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vuosittain – %@"
+          }
         }
       }
     },
@@ -29203,6 +30853,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±1 BPM"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±1 BPM"
@@ -29313,6 +30969,12 @@
             "state" : "translated",
             "value" : "±10%"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±10%"
+          }
         }
       }
     },
@@ -29415,6 +31077,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±5 BPM"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "±5 BPM"
@@ -29525,6 +31193,12 @@
             "state" : "translated",
             "value" : "×2 / ÷2"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×2 / ÷2"
+          }
         }
       }
     },
@@ -29630,6 +31304,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "■ Stopp"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "■ Pysäytä"
           }
         }
       }
@@ -29737,6 +31417,12 @@
             "state" : "translated",
             "value" : "▶ Start"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "▶ Käynnistä"
+          }
         }
       }
     },
@@ -29842,6 +31528,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajastin"
           }
         }
       }
@@ -29949,6 +31641,12 @@
             "state" : "translated",
             "value" : "Av"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pois"
+          }
         }
       }
     },
@@ -30055,6 +31753,12 @@
             "state" : "translated",
             "value" : "Øvingstimer"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harjoitusajastin"
+          }
         }
       }
     },
@@ -30157,6 +31861,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld min"
@@ -30267,6 +31977,12 @@
             "state" : "translated",
             "value" : "Tid igjen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aikaa jäljellä"
+          }
         }
       }
     },
@@ -30372,6 +32088,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nullstill timeren"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nollaa ajastin"
           }
         }
       }
@@ -30479,6 +32201,12 @@
             "state" : "translated",
             "value" : "Timer av"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajastin pois"
+          }
         }
       }
     },
@@ -30584,6 +32312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timer %lld min"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajastin %lld min"
           }
         }
       }
@@ -30691,6 +32425,12 @@
             "state" : "translated",
             "value" : "%@ igjen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ jäljellä"
+          }
         }
       }
     },
@@ -30796,6 +32536,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Øvingstiden er over"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harjoitusaika on päättynyt"
           }
         }
       }
@@ -30903,6 +32649,12 @@
             "state" : "translated",
             "value" : "still inn en øvingstimer"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "aseta harjoitusajastin"
+          }
         }
       }
     },
@@ -31008,6 +32760,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "slå av timeren"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sammuta ajastin"
           }
         }
       }
@@ -31115,6 +32873,12 @@
             "state" : "translated",
             "value" : "Trykk på timerknappen ved siden av Start, eller si «timer 5 minutes». Den teller ned mens klikket spilles, og stopper deretter med et lydsignal."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta Käynnistä-painikkeen vieressä olevaa ajastinta tai sano ”timer 5 minutes”. Se laskee alaspäin naksahduksen soidessa, pysähtyy ja kilahtaa."
+          }
         }
       }
     },
@@ -31220,6 +32984,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teller ned mens klikket spilles, og settes på pause når du stopper. Når tiden er ute, stopper metronomen med et lydsignal. Si «timer 5 minutes» eller «timer off» når som helst."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laskee alaspäin naksahduksen soidessa ja pysähtyy, kun pysäytät metronomin. Kun aika loppuu, metronomi pysähtyy ja kilahtaa. Sano milloin tahansa ”timer 5 minutes” tai ”timer off”."
           }
         }
       }
@@ -31327,6 +33097,12 @@
             "state" : "translated",
             "value" : "Del anonym bruksstatistikk"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jaa nimettömiä käyttötilastoja"
+          }
         }
       }
     },
@@ -31433,6 +33209,12 @@
             "state" : "translated",
             "value" : "Personvern"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tietosuoja"
+          }
         }
       }
     },
@@ -31538,6 +33320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tellere, for eksempel hvor mange enheter som bruker appen, og krasjrapporter. Ingen lyd, innstillinger eller personlig informasjon. Gjelder fra neste oppstart."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laskureita, kuten kuinka moni laite käyttää sovellusta, sekä kaatumisraportteja. Ei ääntä, asetuksia eikä henkilötietoja. Tulee voimaan seuraavasta käynnistyksestä."
           }
         }
       }
@@ -31646,6 +33434,12 @@
             "state" : "translated",
             "value" : "Enda større tekst"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vielä suurempi teksti"
+          }
         }
       }
     },
@@ -31752,6 +33546,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skjermen er fortsatt lesbar og ryddig, selv med de aller største tekststørrelsene."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näyttö pysyy luettavana ja siistinä suurimmillakin tekstikoilla."
           }
         }
       }
@@ -31860,6 +33660,12 @@
             "state" : "translated",
             "value" : "Farger som er lettere å se"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helpommin erottuvat värit"
+          }
         }
       }
     },
@@ -31966,6 +33772,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slag- og timingfarger forblir tydelige med Øk kontrast, eller hvis farger er vanskelige å skille."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isku- ja rytmivärit pysyvät selkeinä, kun Lisää kontrastia on päällä tai jos värejä on vaikea erottaa."
           }
         }
       }
@@ -32074,6 +33886,12 @@
             "state" : "translated",
             "value" : "Tastaturstyring"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näppäimistöohjaus"
+          }
         }
       }
     },
@@ -32180,6 +33998,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "På iPad med tastatur kan du starte, stoppe og endre tempoet med taster."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPadilla, jossa on näppäimistö, voit käynnistää, pysäyttää ja vaihtaa tempoa näppäimillä."
           }
         }
       }
@@ -32288,6 +34112,12 @@
             "state" : "translated",
             "value" : "Nytt"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uutta"
+          }
         }
       }
     },
@@ -32394,6 +34224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Etter en oppdatering ser du hva som er nytt første gang du åpner appen."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivityksen jälkeen näet, mitä uutta on, kun avaat sovelluksen ensimmäisen kerran."
           }
         }
       }
@@ -32502,6 +34338,12 @@
             "state" : "translated",
             "value" : "Svar på tilbakemeldingene dine"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vastaukset palautteeseesi"
+          }
         }
       }
     },
@@ -32608,6 +34450,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Les svarene våre på tilbakemeldingene dine rett i appen."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lue vastauksemme palautteeseesi suoraan sovelluksessa."
           }
         }
       }
@@ -32716,6 +34564,12 @@
             "state" : "translated",
             "value" : "Gi bort Pro"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lahjoita Pro"
+          }
         }
       }
     },
@@ -32822,6 +34676,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gi Not My Tempo Pro til en bandkamerat eller en elev."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lahjoita Not My Tempo Pro bändikaverille tai oppilaalle."
           }
         }
       }
@@ -32930,6 +34790,12 @@
             "state" : "translated",
             "value" : "Hjem-skjerm-widget"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koti-valikon widget"
+          }
         }
       }
     },
@@ -33036,6 +34902,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Start klikket rett fra Hjem-skjermen uten å åpne appen."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käynnistä naksahdus suoraan Koti-valikosta avaamatta sovellusta."
           }
         }
       }
@@ -33144,6 +35016,12 @@
             "state" : "translated",
             "value" : "Siri og Snarveier"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri ja Oikotiet"
+          }
         }
       }
     },
@@ -33250,6 +35128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Be Siri eller kjør en snarvei for å starte klikket i ditt tempo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pyydä Siriä tai suorita oikotie käynnistääksesi naksahduksen omassa tempossasi."
           }
         }
       }
@@ -33358,6 +35242,12 @@
             "state" : "translated",
             "value" : "Synkronisering mellom enheter"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synkronointi laitteiden välillä"
+          }
         }
       }
     },
@@ -33464,6 +35354,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Forhåndsinnstillingene og innstillingene dine følger deg mellom iPhone og iPad."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esiasetuksesi ja asetuksesi seuraavat sinua iPhonen ja iPadin välillä."
           }
         }
       }
@@ -33572,6 +35468,12 @@
             "state" : "translated",
             "value" : "Sikkerhetskopier forhåndsinnstillingene"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Varmuuskopioi esiasetuksesi"
+          }
         }
       }
     },
@@ -33678,6 +35580,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lagre aksentforhåndsinnstillingene dine i en fil og hent dem tilbake når du vil."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna painotusesiasetuksesi tiedostoon ja palauta ne milloin haluat."
           }
         }
       }
@@ -33786,6 +35694,12 @@
             "state" : "translated",
             "value" : "Øvingspåminnelser"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harjoitusmuistutukset"
+          }
         }
       }
     },
@@ -33892,6 +35806,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Få en vennlig påminnelse til tidspunktet du velger for å øve."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saat lempeän muistutuksen valitsemanasi harjoitusaikana."
           }
         }
       }
@@ -34000,6 +35920,12 @@
             "state" : "translated",
             "value" : "Oppsett for foldbar iPhone"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taittuvan iPhonen asettelu"
+          }
         }
       }
     },
@@ -34106,6 +36032,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "På en foldbar iPhone ser du slaget og kontrollene side ved side."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taittuvalla iPhonella näet iskun ja säätimet vierekkäin."
           }
         }
       }
@@ -34214,6 +36146,12 @@
             "state" : "translated",
             "value" : "Slett alle dataene mine"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista kaikki tietoni"
+          }
         }
       }
     },
@@ -34321,6 +36259,12 @@
             "state" : "translated",
             "value" : "Fjern alle forhåndsinnstillinger og innstillinger i appen når du vil."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tyhjennä kaikki esiasetukset ja asetukset sovelluksessa, kun haluat."
+          }
         }
       }
     },
@@ -34426,6 +36370,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Løs inn en tilbudskode"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lunasta tarjouskoodi"
           }
         }
       }
@@ -34533,6 +36483,12 @@
             "state" : "translated",
             "value" : "Har du en kode for Pro? Skriv den inn rett i appen, på Pro-skjermen eller under Stemmekommandoer."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onko sinulla koodi Prohon? Syötä se suoraan sovelluksessa Pro-näytöllä tai kohdassa Äänikomennot."
+          }
         }
       }
     },
@@ -34638,6 +36594,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tydeligere med Øk kontrast"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selkeämpi Lisää kontrastia -asetuksella"
           }
         }
       }
@@ -34745,6 +36707,12 @@
             "state" : "translated",
             "value" : "Med Øk kontrast eller Reduser gjennomsiktighet på tegnes slag, konturer og hjelpelaget tykkere og ugjennomsiktig."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kun Lisää kontrastia tai Vähennä läpinäkyvyyttä on päällä, iskut, ääriviivat ja ohjekerros piirretään lihavampina ja läpinäkymättöminä."
+          }
         }
       }
     },
@@ -34850,6 +36818,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plass til den største teksten"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilaa suurimmalle tekstille"
           }
         }
       }
@@ -34957,6 +36931,12 @@
             "state" : "translated",
             "value" : "Ved de største tekststørrelsene ordnes knapper og lister om slik at ingenting blir kuttet."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suurimmilla tekstikoilla painikkeet ja luettelot järjestyvät uudelleen, jottei mitään leikkaudu pois."
+          }
         }
       }
     },
@@ -35062,6 +37042,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Versjon %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versio %@"
           }
         }
       }
@@ -35169,6 +37155,12 @@
             "state" : "translated",
             "value" : "Fortsett"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jatka"
+          }
         }
       }
     },
@@ -35274,6 +37266,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "En metronom du snakker med"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metronomi, jolle puhut"
           }
         }
       }
@@ -35381,6 +37379,12 @@
             "state" : "translated",
             "value" : "Si «start», «stop», «faster» eller «tempo 120», og ha begge hendene på instrumentet."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sano ”start”, ”stop”, ”faster” tai ”tempo 120” ja pidä molemmat kädet soittimellasi."
+          }
         }
       }
     },
@@ -35486,6 +37490,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kommandoene er engelske ord"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Komennot ovat englanninkielisiä sanoja"
           }
         }
       }
@@ -35593,6 +37603,12 @@
             "state" : "translated",
             "value" : "På alle språk styrer du appen med korte engelske ord. Si «help» når som helst for å se dem alle på skjermen."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaikilla kielillä sovellusta ohjataan lyhyillä englanninkielisillä sanoilla. Sano milloin tahansa ”help”, niin näet ne kaikki näytöllä."
+          }
         }
       }
     },
@@ -35698,6 +37714,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Appens egen mikrofon forblir av, slik at den ikke kolliderer med Stemmestyring. Si «Tap Start» eller «Tap Faster»."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sovelluksen oma mikrofoni pysyy pois päältä, jottei se häiritse Ääniohjausta. Sano ”Tap Start” tai ”Tap Faster”."
           }
         }
       }
@@ -35805,6 +37827,12 @@
             "state" : "translated",
             "value" : "Neste: mikrofonen"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seuraavaksi: mikrofoni"
+          }
         }
       }
     },
@@ -35910,6 +37938,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS ber om tilgang til mikrofonen og talegjenkjenning. De brukes bare for å høre kommandoene dine. Appen tar aldri opp eller lagrer det den hører."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS pyytää lupaa mikrofoniin ja puheentunnistukseen. Niitä käytetään vain komentojesi kuulemiseen. Sovellus ei koskaan nauhoita tai tallenna kuulemaansa."
           }
         }
       }
@@ -36017,6 +38051,12 @@
             "state" : "translated",
             "value" : "Hopp over"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohita"
+          }
         }
       }
     },
@@ -36122,6 +38162,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kom i gang"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aloita"
           }
         }
       }
@@ -36229,6 +38275,12 @@
             "state" : "translated",
             "value" : "Neste"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seuraava"
+          }
         }
       }
     },
@@ -36334,6 +38386,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Forhåndsinnstilling lagret"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esiasetus tallennettu"
           }
         }
       }
@@ -36441,6 +38499,12 @@
             "state" : "translated",
             "value" : "Ingen forhåndsinnstillinger ennå"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei vielä esiasetuksia"
+          }
         }
       }
     },
@@ -36546,6 +38610,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Løs inn tilbudskode"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lunasta tarjouskoodi"
           }
         }
       }
@@ -36653,6 +38723,12 @@
             "state" : "translated",
             "value" : "Vis introduksjonen på nytt"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä esittely uudelleen"
+          }
         }
       }
     },
@@ -36758,6 +38834,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Løs inn kode"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lunasta koodi"
           }
         }
       }
@@ -36865,6 +38947,12 @@
             "state" : "translated",
             "value" : "Introduksjon"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esittely"
+          }
         }
       }
     },
@@ -36970,6 +39058,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vis introduksjonen"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä esittely"
           }
         }
       }
@@ -37077,6 +39171,12 @@
             "state" : "translated",
             "value" : "Tilbudskode"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarjouskoodi"
+          }
         }
       }
     },
@@ -37182,6 +39282,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Løs inn kode"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lunasta koodi"
           }
         }
       }
@@ -37289,6 +39395,12 @@
             "state" : "translated",
             "value" : "Nytt"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uutta"
+          }
         }
       }
     },
@@ -37394,6 +39506,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hopp over introduksjonen"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohita esittely"
           }
         }
       }

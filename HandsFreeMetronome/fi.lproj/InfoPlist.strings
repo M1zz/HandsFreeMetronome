@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "Metronomi kuuntelee äänikomentojasi (kuten ”start” ja ”faster”) ja tunnistaa lähellä soittamasi musiikin tempon, joten voit ohjata sitä koskematta näyttöön.";
+"NSSpeechRecognitionUsageDescription" = "Puheentunnistusta käytetään käsiä vapauttavien äänikomentojen ymmärtämiseen. Tunnistus tapahtuu suoraan laitteellasi.";
