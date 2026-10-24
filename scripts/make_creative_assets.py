@@ -8,7 +8,7 @@
   docs/screenshots/creative/<스토어 로케일>/search.png   3840x2560  검색 결과 (없으면 스크린샷이 대신 보인다)
 
 기기 화면은 docs/screenshots/raw/creative/<앱언어>/ 의 시뮬레이터 캡처다(scripts/capture_raw_screenshots.sh).
-한국어는 앱 번역이 없어 영어 화면을 쓰고, 스페인어 화면 한 벌이 es-ES · es-MX 를 맡는다.
+영어(영국)은 영국식 화면(en-GB)을 따로 쓰고, 스페인어 화면 한 벌이 es-ES · es-MX 를 맡는다.
 
 ⚠️ 안전 영역 밖은 기기에 따라 잘린다. 글은 **반드시** 안전 영역 안에 둔다(배경 · 기기 그림은 넘쳐도 된다).
    수치는 Apple 공식 PSD 템플릿에서 잰 값이다(https://developer.apple.com/app-store/asset-best-practices/).
@@ -25,9 +25,9 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 # 문구 언어 → App Store Connect 로케일
 STORE = {"en": "en-US", "de": "de-DE", "es": "es-ES", "es-MX": "es-MX", "fr": "fr-FR"}
-# 문구 언어 → 기기 화면 캡처 폴더 (앱이 영어 한 벌)
-SCREEN = {"ko": "en", "en": "en", "ja": "ja", "de": "de", "es": "es", "es-MX": "es",
-          "fr": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it", "en-GB": "en",
+# 문구 언어 → 기기 화면 캡처 폴더
+SCREEN = {"ko": "ko", "en": "en", "ja": "ja", "de": "de", "es": "es", "es-MX": "es",
+          "fr": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it", "en-GB": "en-GB",
           "ru": "ru", "nl": "nl", "pl": "pl", "tr": "tr", "sv": "sv", "da": "da", "nb": "nb", "fi": "fi", "cs": "cs", "el": "el", "th": "th", "vi": "vi", "id": "id"}
 
 # (가로, 세로, 안전 영역 left, top, right, bottom)

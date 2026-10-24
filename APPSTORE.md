@@ -739,7 +739,7 @@ Keep both hands on your instrument. Say "start," "faster," or "tempo 120" and th
 A metronome you run with your voice, so your hands never leave the instrument.
 Say "start" to begin, "faster" to speed up. No tapping, no stopping mid-phrase.
 
-The app listens through its own microphone and recognizes speech on your device, so it works right away. There is no need to turn on iOS Voice Control or any Accessibility setting.
+The app listens through its own microphone and recognises speech on your device, so it works right away. There is no need to turn on iOS Voice Control or any Accessibility setting.
 
 TALK TO YOUR METRONOME
 "start" and "stop"
@@ -1506,7 +1506,7 @@ Not My Tempo: Máy gõ nhịp
 
 ### 키워드
 
-bpm,tuner,luyện,tập,guitar,piano,trống,violin,saxophone,trumpet,sáo,ukulele,nhấn,nhịp,bass,cello,hát
+bpm,tuner,metronome,luyện,tập,guitar,piano,trống,violin,saxophone,trumpet,sáo,ukulele,nhấn,bass,hát
 
 ### 프로모션 텍스트
 

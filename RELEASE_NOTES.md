@@ -4,6 +4,7 @@
 
 ### 앱스토어 (한국어)
 
+앱 화면이 이제 한국어로 나와요
 처음 여는 분께 짧은 안내가 생겼어요
 오퍼 코드를 앱 안에서 바로 쓸 수 있어요
 대비 증가를 켜면 박자가 더 또렷해요
@@ -11,6 +12,7 @@
 
 ### App Store (English)
 
+Now available in 17 more languages
 A short intro for first-time users
 Redeem offer codes right in the app
 Beats stand out with Increase Contrast
@@ -18,6 +20,7 @@ Screens fit even the largest text sizes
 
 ### 앱스토어 (ja)
 
+新たに17の言語に対応しました
 初めての方向けに短い紹介が加わりました
 オファーコードをアプリ内で使えます
 コントラストを上げると拍がより見やすく
@@ -25,6 +28,7 @@ Screens fit even the largest text sizes
 
 ### 앱스토어 (de-DE)
 
+Jetzt in 17 weiteren Sprachen
 Neue kurze Einführung beim ersten Start
 Angebotscodes direkt in der App einlösen
 Deutlichere Schläge mit mehr Kontrast
@@ -32,6 +36,7 @@ Alles passt auch bei größter Schrift
 
 ### 앱스토어 (es-ES)
 
+Ahora disponible en 17 idiomas más
 Nueva introducción breve al empezar
 Canjea códigos de oferta en la app
 Tiempos más visibles con más contraste
@@ -39,6 +44,7 @@ Todo cabe con el texto más grande
 
 ### 앱스토어 (es-MX)
 
+Ahora disponible en 17 idiomas más
 Nueva introducción breve al empezar
 Canjea códigos de oferta desde la app
 Tiempos más visibles con más contraste
@@ -46,6 +52,7 @@ Todo cabe con el texto más grande
 
 ### 앱스토어 (fr-FR)
 
+Disponible dans 17 nouvelles langues
 Courte présentation au premier lancement
 Utilise tes codes promo dans l’app
 Temps plus nets avec plus de contraste
@@ -53,6 +60,7 @@ Tout tient même en très grand texte
 
 ### 앱스토어 (zh-Hans)
 
+新增支持 17 种语言
 首次打开时会有简短介绍
 可在 App 内直接兑换优惠码
 开启增强对比度后节拍更清晰
@@ -60,6 +68,7 @@ Tout tient même en très grand texte
 
 ### 앱스토어 (pt-BR)
 
+Agora disponível em mais 17 idiomas
 Nova introdução rápida no primeiro uso
 Resgate códigos de oferta no app
 Tempos mais visíveis com mais contraste
@@ -67,13 +76,15 @@ Tudo cabe mesmo com o maior texto
 
 ### 앱스토어 (zh-Hant)
 
+App 現在支援繁體中文
 首次開啟時會有簡短介紹
 可在 App 內直接兌換優惠代碼
 開啟提高對比後，節拍更清楚
 最大字級下，畫面也不會被截斷
 
-### 앱스토어 (it)
+### 앱스토어 (이탈리아어)
 
+L’app ora è disponibile in italiano
 Nuova breve introduzione al primo avvio
 Riscatta i codici nell’app
 Più contrasto, movimenti più nitidi
@@ -81,97 +92,111 @@ Tutto entra anche col testo più grande
 
 ### App Store (en-GB)
 
+Now in British English
 A short intro for first-time users
 Redeem offer codes right in the app
 Beats stand out with Increase Contrast
 Screens fit even the largest text sizes
 
-### App Store (ru)
+### 앱스토어 (러시아어)
 
+Приложение теперь на русском языке
 Короткое знакомство при первом запуске
 Промокоды теперь вводятся в приложении
 Увеличение контраста делает доли чётче
 Всё влезает и при самом крупном тексте
 
-### App Store (nl)
+### 앱스토어 (네덜란드어)
 
+De app is nu in het Nederlands
 Korte intro bij de eerste keer openen
 Wissel aanbiedingscodes in de app in
 Met meer contrast zie je de tellen beter
 Alles past ook bij de grootste tekst
 
-### App Store (pl)
+### 앱스토어 (폴란드어)
 
+Aplikacja jest teraz po polsku
 Krótki start przy pierwszym uruchomieniu
 Kody promocyjne zrealizujesz w aplikacji
 Większy kontrast uwydatnia uderzenia
 Mieści się nawet największy tekst
 
-### App Store (tr)
+### 앱스토어 (튀르키예어)
 
+Uygulama artık Türkçe
 İlk açılışta kısa bir tanıtım eklendi
 Teklif kodlarını uygulamada kullanın
 Kontrast artınca vuruşlar daha net
 En büyük yazıda bile ekran düzgün
 
-### App Store (sv)
+### 앱스토어 (스웨덴어)
 
+Appen finns nu på svenska
 Kort introduktion vid första start
 Lös in erbjudandekoder direkt i appen
 Slagen syns tydligare med Öka kontrast
 Allt ryms även med den största texten
 
-### App Store (da)
+### 앱스토어 (덴마크어)
 
+Appen findes nu på dansk
 Kort introduktion ved første åbning
 Indløs tilbudskoder direkte i appen
 Slagene ses tydeligere med Øg kontrast
 Alt passer også med den største tekst
 
-### App Store (nb)
+### 앱스토어 (노르웨이어(보크말))
 
+Appen er nå på norsk
 Kort introduksjon første gang du åpner
 Løs inn tilbudskoder rett i appen
 Slagene synes tydeligere med Øk kontrast
 Alt får plass selv med størst tekst
 
-### App Store (fi)
+### 앱스토어 (핀란드어)
 
+Sovellus on nyt suomeksi
 Lyhyt esittely ensimmäisellä avauksella
 Lunasta tarjouskoodit sovelluksessa
 Lisää kontrastia selkeyttää iskuja
 Kaikki mahtuu suurimmalle tekstille
 
-### App Store (cs)
+### 앱스토어 (체코어)
 
+Aplikace je nyní v češtině
 Krátký úvod při prvním spuštění
 Kódy nabídek uplatníte v aplikaci
 Zvýšený kontrast zvýrazní doby
 Vejde se i největší velikost textu
 
-### App Store (id)
+### 앱스토어 (인도네시아어)
 
+Aplikasi kini berbahasa Indonesia
 Pengantar singkat saat pertama dibuka
 Tukarkan kode penawaran di aplikasi
 Kontras tinggi membuat ketukan jelas
 Layar muat meski teks terbesar
 
-### App Store (vi)
+### 앱스토어 (베트남어)
 
+Ứng dụng nay đã có tiếng Việt
 Có phần giới thiệu ngắn khi mở lần đầu
 Đổi mã ưu đãi ngay trong ứng dụng
 Tăng tương phản giúp phách rõ hơn
 Chữ lớn nhất vẫn vừa màn hình
 
-### App Store (el)
+### 앱스토어 (그리스어)
 
+Η εφαρμογή είναι πλέον στα ελληνικά
 Σύντομη εισαγωγή στην πρώτη εκκίνηση
 Εξαργυρώστε κωδικούς μέσα στην εφαρμογή
 Με αντίθεση οι χρόνοι φαίνονται καλύτερα
 Χωράνε όλα ακόμα και με μεγάλο κείμενο
 
-### App Store (th)
+### 앱스토어 (태국어)
 
+แอปรองรับภาษาไทยแล้ว
 มีการแนะนำสั้น ๆ เมื่อเปิดครั้งแรก
 แลกรหัสข้อเสนอได้ในแอป
 เพิ่มความคมชัดให้เห็นจังหวะชัดขึ้น

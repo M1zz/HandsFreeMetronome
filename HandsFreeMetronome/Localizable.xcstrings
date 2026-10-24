@@ -7637,7 +7637,7 @@
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Design every click of the measure — high, low, or silent — and save patterns per song."
+            "value" : "Design every click of the bar — high, low, or silent — and save patterns per song."
           }
         },
         "ru" : {
@@ -8497,7 +8497,7 @@
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Double-tap here to open the accent grid — set every click of the measure high, low, or silent, and save patterns as presets."
+            "value" : "Double-tap here to open the accent grid — set every click of the bar high, low, or silent, and save patterns as presets."
           }
         },
         "ru" : {
@@ -8639,7 +8639,7 @@
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Double-tap the subdivision card to edit the full measure — each cell cycles high → low → silent, and patterns can be saved as named presets."
+            "value" : "Double-tap the subdivision card to edit the full bar — each cell cycles high → low → silent, and patterns can be saved as named presets."
           }
         },
         "ru" : {
@@ -10139,7 +10139,7 @@
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Every click of the measure is its own cell — %lld clicks in all. Tap a cell to cycle it: high → low → silent."
+            "value" : "Every click of the bar is its own cell — %lld clicks in all. Tap a cell to cycle it: high → low → silent."
           }
         },
         "ru" : {
@@ -31189,7 +31189,7 @@
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tap 1/4, 1/8, Trip, or 1/16. Double-tap the card to open Accents and set every click of the measure high, low, or silent."
+            "value" : "Tap 1/4, 1/8, Trip, or 1/16. Double-tap the card to open Accents and set every click of the bar high, low, or silent."
           }
         },
         "ru" : {

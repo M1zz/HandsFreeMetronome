@@ -12,10 +12,10 @@ import subprocess, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RAW = ROOT / "docs" / "screenshots" / "raw"
-# 스토어 로케일 → 앱 화면 언어. 한국어 페이지는 앱 번역이 없어 영어 화면을 쓰고,
+# 스토어 로케일 → 앱 화면 언어. 영어(영국)은 영국식 화면(en-GB)을 따로 찍고,
 # 스페인어 한 벌이 es-ES · es-MX 두 페이지를 맡는다.
-SCREEN = {"en-US": "en", "ko": "en", "ja": "ja", "de-DE": "de", "es-ES": "es", "es-MX": "es",
-          "fr-FR": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it", "en-GB": "en",
+SCREEN = {"en-US": "en", "ko": "ko", "ja": "ja", "de-DE": "de", "es-ES": "es", "es-MX": "es",
+          "fr-FR": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it", "en-GB": "en-GB",
           "ru": "ru", "nl": "nl", "pl": "pl", "tr": "tr", "sv": "sv", "da": "da", "nb": "nb", "fi": "fi", "cs": "cs", "el": "el", "th": "th", "vi": "vi", "id": "id"}
 OUT = ROOT / "docs" / "screenshots" / "marketing"
 WORK = pathlib.Path("/tmp") / "nmt-marketing"
