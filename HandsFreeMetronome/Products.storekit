@@ -23,6 +23,26 @@
       "productID" : "com.leeo.HandsFreeMetronome.pro.lifetime",
       "referenceName" : "Pro Lifetime",
       "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "B7E1C4D2-8A3F-4E6B-9C5D-1F2A3B4C5D6E",
+      "localizations" : [
+        {
+          "description" : "Give Pro to someone else with a gift code.",
+          "displayName" : "Gift Not My Tempo Pro",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "다른 사람에게 Pro 를 선물합니다. 코드를 보내 주세요.",
+          "displayName" : "낫마템포 Pro 선물",
+          "locale" : "ko"
+        }
+      ],
+      "productID" : "com.leeo.HandsFreeMetronome.gift.pro",
+      "referenceName" : "Gift Pro",
+      "type" : "Consumable"
     }
   ],
   "settings" : {

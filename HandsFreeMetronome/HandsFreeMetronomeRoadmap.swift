@@ -33,7 +33,7 @@ extension HandsFreeMetronomeSpec {
         .init(id: "feedback.reply", status: .planned,
               title: String(localized: "Replies to your feedback", comment: "Roadmap item: feedback.reply"),
               detail: String(localized: "Read our replies to your feedback right in the app.", comment: "Roadmap item detail: feedback.reply")),
-        .init(id: "gift", status: .planned,
+        .init(id: "gift", status: .building,
               title: String(localized: "Gift Pro", comment: "Roadmap item: gift"),
               detail: String(localized: "Give Not My Tempo Pro to a bandmate or a student.", comment: "Roadmap item detail: gift")),
         .init(id: "widgets", status: .planned,

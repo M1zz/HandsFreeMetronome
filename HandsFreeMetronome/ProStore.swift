@@ -58,6 +58,9 @@ final class ProStore: ObservableObject {
     static let yearlyID = "com.leeo.HandsFreeMetronome.pro.yearly"
     static let lifetimeID = "com.leeo.HandsFreeMetronome.pro.lifetime"
     static let allProductIDs = [yearlyID, lifetimeID]
+    /// Pro 선물(소모성). 받는 사람은 `lifetimeID` 를 산 것과 같아진다.
+    /// ⚠️ `allProductIDs` 에 넣지 않는다. 넣으면 선물을 산 사람 자신이 Pro 가 된다.
+    static let giftID = "com.leeo.HandsFreeMetronome.gift.pro"
 
     /// The app was PAID up front through 1.0.4 (builds 1 and 2). Anyone whose
     /// original download predates the freemium switch already paid for the whole
@@ -142,6 +145,10 @@ final class ProStore: ObservableObject {
     /// True while a verified entitlement (either product), the paid-era
     /// grandfather clause, or the DEBUG dev unlock is active.
     var isPro: Bool { store.hasPro }
+
+    /// Pro 선물하기 엔진. 상품은 앱이 뜬 뒤에 오고 이 파사드는 그 변화를 알리지 않으므로,
+    /// 화면은 이 객체를 따로 관찰한다(`GiftRows`).
+    var gift: LeeoGiftStore? { store.gift }
 
     /// Whether `feature` is open right now — the Spec's gate (`proOnly`) read
     /// against the same entitlement as `isPro` (purchase, grandfather, dev unlock).
