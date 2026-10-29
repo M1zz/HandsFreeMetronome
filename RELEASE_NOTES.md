@@ -1,5 +1,207 @@
 # Release Notes — Not My Tempo
 
+## 1.0.11
+
+### 앱스토어 (한국어)
+
+친구에게 Pro를 선물할 수 있어요
+고마울 때 개발자에게 작은 팁을 보낼 수 있어요
+도움말 화면에서 튜너를 바로 열 수 있어요
+VoiceOver와 음성 제어로 더 쉽게 쓸 수 있어요
+색 구별이 어려워도 선택한 칸이 잘 보여요
+
+### App Store (English)
+
+You can now gift Pro to a friend
+Send the developer a small tip of thanks
+Open the tuner from the help screen
+Improved VoiceOver and Voice Control
+Choices stand out even without color
+
+### 앱스토어 (ja)
+
+友だちに Pro をプレゼントできます
+開発者にちょっとしたチップを送れるようになりました
+ヘルプ画面からチューナーを開けるようになりました
+VoiceOverや音声コントロールで使いやすくなりました
+色の区別が難しくても選択中の項目がわかります
+
+### 앱스토어 (de-DE)
+
+Du kannst Pro jetzt verschenken
+Du kannst dem Entwickler Trinkgeld geben
+Stimmgerät jetzt über die Hilfe öffnen
+Besser mit VoiceOver und Sprachsteuerung
+Auswahl auch ohne Farbe gut erkennbar
+
+### 앱스토어 (es-ES)
+
+Ya puedes regalar Pro a un amigo
+Puedes dar propina al desarrollador
+Abre el afinador desde la ayuda
+Mejor con VoiceOver y Control por voz
+Lo elegido se ve sin depender del color
+
+### 앱스토어 (es-MX)
+
+Ya puedes regalar Pro a un amigo
+Puedes dar propina al desarrollador
+Abre el afinador desde la ayuda
+Mejor con VoiceOver y Control por voz
+Lo elegido se ve sin depender del color
+
+### 앱스토어 (fr-FR)
+
+Offrez Pro à un ami
+Offrez un petit pourboire au développeur
+Ouvrez l'accordeur depuis l'aide
+VoiceOver et Commande vocale améliorés
+La sélection se voit même sans couleurs
+
+### 앱스토어 (zh-Hans)
+
+可以把 Pro 送给朋友了
+现在可以给开发者送上一点小费表达感谢
+可以从帮助页面直接打开调音器
+VoiceOver 和语音控制更好用了
+即使难以分辨颜色也能看清选中项
+
+### 앱스토어 (pt-BR)
+
+Dê o Pro de presente a um amigo
+Dê uma gorjetinha ao desenvolvedor
+Abra o afinador direto pela ajuda
+Melhor com VoiceOver e Controle por Voz
+A seleção aparece mesmo sem cores
+
+### 앱스토어 (zh-Hant)
+
+可以把 Pro 送給朋友了
+現在可以給開發者一點小費表達感謝
+可以從說明頁面直接開啟調音器
+VoiceOver 與語音控制更好用了
+即使難以分辨顏色也能看清選取項目
+
+### 앱스토어 (이탈리아어)
+
+Ora puoi regalare Pro a un amico
+Puoi dare una mancia allo sviluppatore
+Apri l'accordatore dalla guida
+Meglio con VoiceOver e Controllo vocale
+La selezione si vede anche senza colori
+
+### App Store (en-GB)
+
+You can now gift Pro to a friend
+Send the developer a small tip of thanks
+Open the tuner from the help screen
+Improved VoiceOver and Voice Control
+Choices stand out even without colour
+
+### 앱스토어 (러시아어)
+
+Теперь Pro можно подарить другу
+Можно отправить разработчику чаевые
+Тюнер теперь открывается из справки
+Лучше с VoiceOver и управлением голосом
+Выбор заметен даже без различения цвета
+
+### 앱스토어 (네덜란드어)
+
+Geef Pro cadeau aan een vriend
+Geef de ontwikkelaar een kleine fooi
+Open de tuner vanuit de hulp
+Beter met VoiceOver en Stembediening
+Selectie zichtbaar, ook zonder kleur
+
+### 앱스토어 (폴란드어)
+
+Możesz teraz podarować Pro znajomemu
+Możesz dać twórcy aplikacji napiwek
+Otwórz tuner prosto z pomocy
+Lepiej z VoiceOver i Sterowaniem głosem
+Wybór widać także bez kolorów
+
+### 앱스토어 (튀르키예어)
+
+Pro'yu arkadaşınıza hediye edebilirsiniz
+Geliştiriciye bahşiş gönderebilirsiniz
+Akort aletini yardım ekranından açın
+VoiceOver ve Sesle Denetim ile daha iyi
+Seçim renk olmadan da belli oluyor
+
+### 앱스토어 (스웨덴어)
+
+Nu kan du ge bort Pro i present
+Du kan ge utvecklaren lite dricks
+Öppna stämapparaten från hjälpen
+Bättre med VoiceOver och Röststyrning
+Valet syns även utan färger
+
+### 앱스토어 (덴마크어)
+
+Nu kan du give Pro i gave til en ven
+Du kan give udvikleren lidt drikkepenge
+Åbn stemmeapparatet fra hjælpen
+Bedre med VoiceOver og Stemmestyring
+Valget ses tydeligt, også uden farver
+
+### 앱스토어 (노르웨이어(보크말))
+
+Nå kan du gi Pro i gave til en venn
+Du kan gi utvikleren litt tips
+Åpne stemmeapparatet fra hjelpen
+Bedre med VoiceOver og Stemmekontroll
+Valget synes også uten farger
+
+### 앱스토어 (핀란드어)
+
+Voit nyt antaa Pron lahjaksi ystävälle
+Voit nyt antaa kehittäjälle pienen tipin
+Avaa vireenmittaaja suoraan ohjeesta
+Parempi VoiceOverilla ja puheohjauksella
+Valinta näkyy myös ilman värejä
+
+### 앱스토어 (체코어)
+
+Pro teď můžete darovat příteli
+Můžete poslat vývojáři malé spropitné
+Ladičku otevřete přímo z nápovědy
+Lepší s VoiceOverem a Ovládáním hlasem
+Výběr je vidět i bez rozlišení barev
+
+### 앱스토어 (인도네시아어)
+
+Kini bisa menghadiahkan Pro ke teman
+Kini bisa kirim tip untuk pengembang
+Buka tuner langsung dari layar bantuan
+VoiceOver dan Kontrol Suara makin nyaman
+Pilihan terlihat jelas tanpa warna
+
+### 앱스토어 (베트남어)
+
+Giờ bạn có thể tặng Pro cho bạn bè
+Gửi chút tiền tip cho nhà phát triển
+Mở máy lên dây ngay từ phần trợ giúp
+Dùng tốt hơn với VoiceOver và Khẩu lệnh
+Ô đang chọn vẫn rõ dù khó phân biệt màu
+
+### 앱스토어 (그리스어)
+
+Τώρα μπορείτε να χαρίσετε το Pro σε φίλο
+Δώστε ένα φιλοδώρημα στον δημιουργό
+Ανοίξτε το κουρδιστήρι από τη βοήθεια
+Καλύτερο VoiceOver και Φωνητικός έλεγχος
+Η επιλογή φαίνεται και χωρίς χρώματα
+
+### 앱스토어 (태국어)
+
+มอบ Pro เป็นของขวัญให้เพื่อนได้แล้ว
+ส่งทิปเล็กๆ ให้นักพัฒนาได้แล้ว
+เปิดเครื่องตั้งสายจากหน้าวิธีใช้ได้ทันที
+ใช้ VoiceOver และสั่งงานด้วยเสียงได้ดีขึ้น
+เห็นช่องที่เลือกชัดแม้แยกสีได้ยาก
+
 ## 1.0.10
 
 ### 앱스토어 (한국어)
