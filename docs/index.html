@@ -45,6 +45,25 @@
   <link rel="stylesheet" href="demo.css">
   <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
   <script>document.documentElement.classList.add("js")</script>
+  <script>(function () {
+    var P = {"en": "", "ko": "ko/", "ja": "ja/", "de": "de/", "es": "es/", "fr": "fr/", "zh-Hans": "zh-Hans/", "pt-BR": "pt-BR/", "zh-Hant": "zh-Hant/", "it": "it/", "ru": "ru/", "nl": "nl/", "pl": "pl/", "tr": "tr/", "sv": "sv/", "da": "da/", "nb": "nb/", "fi": "fi/", "cs": "cs/", "id": "id/", "vi": "vi/", "el": "el/", "th": "th/"}, here = "en", want;
+    try { want = localStorage.getItem("sitegen-lang"); } catch (e) {}
+    function match(tag) {
+      var t = (tag || "").toLowerCase(), b = t.split("-")[0], ks = Object.keys(P), i;
+      for (i = 0; i < ks.length; i++) if (ks[i].toLowerCase() === t) return ks[i];
+      if (b === "zh") return /hant|tw|hk|mo/.test(t) ? (P["zh-Hant"] !== undefined ? "zh-Hant" : null) : (P["zh-Hans"] !== undefined ? "zh-Hans" : null);
+      if (b === "no" || b === "nn") b = "nb";
+      if (P[b] !== undefined) return b;
+      for (i = 0; i < ks.length; i++) if (ks[i].toLowerCase().split("-")[0] === b) return ks[i];
+      return null;
+    }
+    if (!(want in P)) {
+      want = null;
+      var ls = navigator.languages || [navigator.language];
+      for (var i = 0; i < ls.length && !want; i++) want = match(ls[i]);
+    }
+    if (want && want !== here) location.replace(P[want] + location.hash);
+  })();</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -184,6 +203,9 @@
       if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
     }), { rootMargin: "0px 0px -10% 0px" });
     document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+    document.querySelectorAll(".langs a").forEach(a => a.addEventListener("click", () => {
+      try { localStorage.setItem("sitegen-lang", a.hreflang) } catch (e) {}
+    }));
   </script>
   <script src="demo.js"></script>
 </body>
