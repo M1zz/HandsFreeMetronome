@@ -180,7 +180,11 @@ struct ContentView: View {
         // The tuner engine follows the page's visibility (it used to be the
         // sheet's onDismiss) — stopped on ANY path that closes it.
         .onChange(of: showTuner) { open in
-            if !open { tuner.stop() }
+            if !open {
+                tuner.stop()
+                // Voice Control mode: the mic was only borrowed for tuning.
+                if usesVoiceControl && voice.isListening { voice.stop() }
+            }
             noteSignal.setSuspended(open)   // tuning a string must not fire the signal
         }
         .sheet(isPresented: $showTrainer) { trainerSheet }
@@ -1070,6 +1074,7 @@ struct ContentView: View {
                 .accessibilityLabel("Tempo")
                 .accessibilityValue("\(metronome.bpm) BPM, \(MetronomeEngine.tempoName(for: metronome.bpm))")
                 .accessibilityHint("Tap to switch between the tempo name and BPM")
+                .accessibilityAddTraits(.isButton)
                 .accessibilityInputLabels(["Tempo"])
                 .accessibilityAction(named: "Tap tempo") { tapTempo() }   // VoiceOver keeps tap-tempo
             Text(tempoSubtitle)
@@ -1130,6 +1135,13 @@ struct ContentView: View {
                         .padding(.vertical, 12)
                         .background(RoundedRectangle(cornerRadius: 12)
                             .fill(selected ? cue.opacity(0.14) : .clear))
+                        // Differentiate Without Color / Increase Contrast: the faint tint
+                        // alone is too weak a "selected" cue — outline it as well.
+                        .overlay {
+                            if selected && (differentiateWithoutColor || contrast == .increased) {
+                                RoundedRectangle(cornerRadius: 12).strokeBorder(cue, lineWidth: 2)
+                            }
+                        }
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel(opt.name)
@@ -1263,7 +1275,7 @@ struct ContentView: View {
                                           style: StrokeStyle(lineWidth: 1.2, dash: [4, 3]))
                     } else {
                         Capsule()
-                            .fill(level == .high ? Color.white : Color(.systemGray2))
+                            .fill(level == .high ? Color.onCue : Color(.systemGray2))
                             .frame(width: 4, height: level == .high ? 22 : 10)
                     }
                 }
@@ -1585,7 +1597,7 @@ struct ContentView: View {
                 HStack(spacing: 12) {
                     Label("Say \u{201C}close\u{201D} or tap to dismiss", systemImage: "xmark.circle")
                         .font(.footnote.weight(.medium)).foregroundStyle(.white)
-                        .lineLimit(1).minimumScaleFactor(0.8)
+                        .lineLimit(2).minimumScaleFactor(0.8)
                     Spacer(minLength: 8)
                     Button { dismissHelpMarks(); showCommands = true } label: {
                         Text("All commands")
@@ -1773,6 +1785,19 @@ struct ContentView: View {
                     .id(helpSections[3])
                     Section("Tuner") {
                         commandRow("\"tune\"", "open the tuner")
+                        // The tuner has no on-screen button — VoiceOver, Switch Control and
+                        // iOS Voice Control users reach it here.
+                        Button {
+                            openTuner()
+                        } label: {
+                            HStack {
+                                Label("Open tuner", systemImage: "tuningfork")
+                                    .font(.subheadline.weight(.semibold))
+                                    .foregroundStyle(cue)
+                                if !pro.isPro { proLockBadge }
+                            }
+                        }
+                        .accessibilityInputLabels(["Tuner", "Open tuner"])
                     }
                     .id(helpSections[4])
                     Section("Scrolling") {
@@ -2016,6 +2041,7 @@ struct ContentView: View {
         VStack(spacing: 0) {
             ZStack {
                 Text("Tuner").font(.headline)
+                    .accessibilityAddTraits(.isHeader)
                 HStack {
                     Button { closeTuner() } label: {
                         Label("Back", systemImage: "chevron.left")
@@ -2301,6 +2327,7 @@ struct ContentView: View {
     private func openTuner() {
         guard requirePro(.tuner) else { return }
         metronome.stop()        // clicks would corrupt pitch detection
+        if !voice.isListening { voice.toggle() }   // the tuner hears through the app's mic
         showCommands = false
         showAccents = false
         tuner.start()

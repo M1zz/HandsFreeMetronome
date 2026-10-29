@@ -1781,3 +1781,15 @@ https://m1zz.github.io/HandsFreeMetronome/pt-BR/privacy.html
 ### 마케팅 URL
 
 https://m1zz.github.io/HandsFreeMetronome/pt-BR/
+
+## 손쉬운 사용
+
+<!-- DeployBar 가 App Store Connect '앱의 손쉬운 사용' 에 올린다. 실제로 확인한 것만 적는다. -->
+
+### iPhone
+voiceOver
+voiceControl
+darkInterface
+differentiateWithoutColor
+sufficientContrast
+reducedMotion
