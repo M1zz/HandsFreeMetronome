@@ -1,0 +1,43 @@
+/* 낫마템포 웹 데모. 박 점의 색은 앱과 같다: 첫 박 빨강, 나머지 키 색. */
+.demo-card { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5); align-items: center; }
+.demo-stage { position: relative; background: var(--bg); border-radius: var(--r-inner);
+              padding: var(--s7) var(--s5); text-align: center; }
+.demo-dots { display: flex; justify-content: center; gap: var(--s3); min-height: 28px; margin-bottom: var(--s5); }
+.demo-dots i { width: 22px; height: 22px; border-radius: 50%; background: var(--accent); opacity: .3;
+               transition: opacity .25s var(--ease), transform .25s var(--ease); }
+.demo-dots i.first { background: #E63833; }
+.demo-dots i.on { opacity: 1; transform: scale(1.35); transition-duration: 0s; }
+.demo-name { font-size: clamp(2.5rem, 6vw, 3.5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
+.demo-name.bump { animation: bump .45s var(--ease); }
+@keyframes bump { 0% { transform: scale(.92); opacity: .5; } 100% { transform: none; opacity: 1; } }
+.demo-bpm { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.demo-bubble { position: absolute; left: 50%; top: var(--s3); transform: translate(-50%, 8px); opacity: 0;
+               background: var(--surface); color: var(--text); font-weight: 600; white-space: nowrap;
+               padding: var(--s2) var(--s4); border-radius: 999px; box-shadow: 0 6px 20px rgb(0 0 0 / .12);
+               transition: opacity .25s var(--ease), transform .25s var(--ease); pointer-events: none; }
+.demo-bubble.show { opacity: 1; transform: translate(-50%, 0); }
+.demo-bubble.miss { color: var(--muted); }
+
+.demo-chips { display: flex; flex-wrap: wrap; gap: var(--s2); margin-bottom: var(--s5); }
+.chip { font: inherit; font-weight: 600; color: var(--accent); background: var(--bg); border: 0;
+        border-radius: 999px; padding: var(--s2) var(--s4); min-height: 44px; cursor: pointer;
+        transition: transform .15s var(--ease), background .15s var(--ease); }
+.chip:hover { background: color-mix(in srgb, var(--accent) 14%, var(--bg)); }
+.chip:active { transform: scale(.95); }
+.chip.hint { background: var(--accent); color: var(--on-accent); animation: hint 1.6s var(--ease) infinite; }
+@keyframes hint { 50% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 22%, transparent); } }
+
+.mic { display: inline-flex; align-items: center; gap: var(--s2); font: inherit; font-weight: 600;
+       min-height: 48px; padding: 0 var(--s5); border-radius: 999px; cursor: pointer;
+       color: var(--text); background: transparent; border: 2px solid var(--line);
+       transition: border-color .2s var(--ease), color .2s var(--ease); }
+.mic:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.mic[aria-pressed="true"] { border-color: #E63833; color: #E63833; animation: hint 1.6s var(--ease) infinite; }
+.mic:disabled { cursor: default; opacity: .6; }
+.demo-note { margin-top: var(--s3); }
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-name.bump, .chip.hint, .mic[aria-pressed="true"] { animation: none; }
+}
+@media (max-width: 760px) { .demo-card { grid-template-columns: 1fr; } }

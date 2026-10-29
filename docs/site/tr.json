@@ -1,0 +1,148 @@
+{
+  "title": "Not My Tempo: çalarken konuştuğunuz metronom",
+  "description": "start, faster veya tempo 120 deyin, tık sizi takip etsin; elleriniz enstrümandan ayrılmasın. Tam metronom ve sesli denetim ücretsiz.",
+  "hero": {
+    "headline": "Eller enstrümanda,\ntempo sesinizde",
+    "lead": "Cümlenin ortasında `faster` deyin, metronom hızlansın. Ekrana uzanmak da, tempoyu değiştirmek için durmak da yok. Komutlar İngilizce sözcüklerle söylenir.",
+    "cta": "App Store’dan ücretsiz indirin",
+    "note": "Tam metronom ve sesli denetim ücretsiz."
+  },
+  "demo": {
+    "title": "Sesli deneyin",
+    "lead": "Bir ifadeye dokunun ya da mikrofonu açıp İngilizce söyleyin. Sesi açın, metronom tıklıyor.",
+    "mic": "Mikrofona söyleyin",
+    "micOn": "Dinliyor. “faster” demeyi deneyin",
+    "micNone": "Bu tarayıcı konuşma tanımıyor. Bunun yerine bir ifadeye dokunun.",
+    "note": "Bu web denemesi tarayıcınızın konuşma tanımasını kullanır. Uygulama konuşmayı cihazınızda tanır."
+  },
+  "problem": {
+    "title": "Tempoyu biraz değiştireyim derken akışı kaybettiniz mi?",
+    "text": "Yayı bırakırsınız, penayı dişlerinizin arasına alırsınız, ekrana iki kez dokunursunuz ve az önce yakaladığınız his gider. Not My Tempo, tempoyu tek bir sözcükle değiştirir; siz çaldığınız duruşu hiç bozmazsınız."
+  },
+  "features": [
+    {
+      "title": "Söyleyin, tık takip etsin",
+      "text": "`start`, `faster`, `tempo 120` gibi kısa İngilizce sözcükler. Uygulama açılır açılmaz dinler; iOS Sesle Denetim’i ya da bir erişilebilirlik ayarını açmanız gerekmez.\nBir komutu mu unuttunuz? `help` deyin, kullanabileceğiniz tüm ifadeler ekranda belirsin.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "Vuruşu gözle de izleyin",
+      "text": "Zıplama, yörünge veya halka arasından seçin. Ölçünün ilk vuruşu kırmızı görünür ve daha güçlü tıklar.\nYörüngede ritme uyarak dokunun, ne kadar isabetli vurduğunuzu görün.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Her şarkı için vurguları kaydedin",
+      "text": "Ölçüdeki her tıkı tiz, pes veya sessiz yapın ve hazır ayar olarak saklayın. Bossa nova ya da samba kalıbını bir kez kurun, sonra yalnızca seçin. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "Üç adımda başlayın",
+    "items": [
+      {
+        "title": "Uygulamayı açın",
+        "text": "Hemen dinlemeye başlar."
+      },
+      {
+        "title": "Mikrofona izin verin",
+        "text": "Mikrofon ve konuşma tanıma iznini yalnızca bir kez sorar."
+      },
+      {
+        "title": "Konuşun ya da dokunun",
+        "text": "Her komutun ekranda bir düğmesi de var."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Neler söyleyebilirsiniz",
+    "rows": [
+      ["start · stop", "başlat, durdur"],
+      ["faster · slower", "5 BPM hızlandır veya yavaşlat"],
+      ["up · down", "1 BPM hızlandır veya yavaşlat"],
+      ["tempo 120", "doğrudan o tempoya geç"],
+      ["double · half", "iki kat hızlı, yarı hızda"],
+      ["three beats", "ölçüyü değiştir"],
+      ["quarter · eighth · triplet · sixteenth", "4'lük, 8'lik, üçleme, 16'lık"],
+      ["louder · quieter · mute", "tık sesini artır, azalt, kapat"],
+      ["volume 60", "ses düzeyini yüzde olarak ayarla"],
+      ["bounce · orbit", "vuruş görünümünü değiştir"],
+      ["timer 5 minutes", "çalışma zamanlayıcısı kur"],
+      ["practice", "çalışırken tempoyu adım adım artır (Pro)"],
+      ["tune", "akort aletini aç (Pro)"],
+      ["help", "tüm komutları göster"],
+      ["close · done", "açık paneli kapat"]
+    ],
+    "note": "Konuşma tanıma İngilizce (ABD) çalışır, bu yüzden komutlar İngilizce sözcüklerle söylenir. Uygulama Türkçedir ve her komut dokunarak da kullanılabilir."
+  },
+  "pricing": {
+    "title": "Metronom ücretsiz, daha fazlası için Pro",
+    "free": {
+      "name": "Ücretsiz",
+      "items": [
+        "Tüm sesli komutlar",
+        "1 ile 8 vuruş arası ölçüler, vurgulu ilk vuruş",
+        "4'lük, 8'lik, üçleme ve 16'lık alt bölümler",
+        "Zıplama, yörünge ve halka görünümleri",
+        "Tempo vurma ve zamanlama denetimi",
+        "Çalışma zamanlayıcısı"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Çalışma modu: hedef tempoya ulaşana kadar birkaç ölçüde bir birkaç BPM ekler",
+        "Şarkı başına hazır ayarlarla vurgu düzenleyici",
+        "Kromatik akort aleti"
+      ],
+      "note": "Ücretsiz denemeli yıllık abonelik ya da tek seferlik ömür boyu satın alım"
+    },
+    "note": "Sesli denetim ve erişilebilirlik özellikleri herkes için ücretsiz kalacak. Uygulamayı Pro çıkmadan önce satın aldıysanız tüm Pro özellikleri zaten sizin."
+  },
+  "faq": {
+    "title": "Sık sorulan sorular",
+    "items": [
+      {
+        "q": "Türkçe konuşabilir miyim?",
+        "a": "Konuşma tanıma İngilizce (ABD) çalışır, bu yüzden komutlar `start` ve `faster` gibi kısa İngilizce sözcüklerdir. Çabucak alışırsınız; ayrıca her komut düğmeyle de kullanılabilir."
+      },
+      {
+        "q": "Uygulama beni duymuyor.",
+        "a": "Mikrofon durumunun Dinliyor olarak göründüğünü kontrol edin. Kapalıysa Dinle’ye dokunun. Gürültülü bir odada ya da hoparlörden yüksek sesle çalarken kulaklık kullanın; böylece tık sesi mikrofona karışmaz."
+      },
+      {
+        "q": "Dinleme kendiliğinden kapandı.",
+        "a": "Pil tasarrufu için birkaç dakika komut gelmezse dinleme kapanır. Yeniden açmak için Dinle’ye dokunun."
+      },
+      {
+        "q": "Tempo yarı ya da iki kat çıktı.",
+        "a": "Düzeltmek için `double` veya `half` deyin."
+      },
+      {
+        "q": "Akort aletini nasıl kullanırım?",
+        "a": "`tune` deyin ya da tempo kartındaki dalga düğmesine dokunun. Bir nota çalın; gösterge yeşil bölgeye girdiğinde akort tamamdır. Çıkmak için `close` deyin."
+      },
+      {
+        "q": "Zaten iOS Sesle Denetim kullanıyorum.",
+        "a": "Uygulamanın kendi mikrofonunu kapatın ve düğme adlarıyla yönetin. Her denetimin bir VoiceOver etiketi vardır."
+      },
+      {
+        "q": "Sesim bir yere gönderiliyor mu?",
+        "a": "Hayır. Konuşma cihazınızda tanınır; asla kaydedilmez, saklanmaz veya gönderilmez. Metronom, sesli denetim ve akort aleti internet olmadan çalışır."
+      },
+      {
+        "q": "Aboneliği nasıl iptal ederim?",
+        "a": "Ayarlar > Apple Hesabı > Abonelikler bölümünden. Yıllık plan, geçerli dönemin bitiminden en az 24 saat önce iptal edilmedikçe otomatik olarak yenilenir. Ömür boyu seçeneği tek seferlik bir ödemedir."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Bugünkü çalışmadan itibaren\neller enstrümanda",
+    "cta": "App Store’dan ücretsiz indirin"
+  },
+  "ui": {
+    "skip": "İçeriğe geç",
+    "languages": "Dil",
+    "privacy": "Gizlilik Politikası",
+    "contact": "Soru ve görüşleriniz için {email} adresine yazın."
+  }
+}

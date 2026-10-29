@@ -1,0 +1,148 @@
+{
+  "title": "Not My Tempo: metronom yang kamu ajak bicara sambil bermain",
+  "description": "Ucapkan start, faster, atau tempo 120 dan klik langsung mengikuti, tanpa melepas tangan dari instrumen. Metronom lengkap dan kontrol suara gratis.",
+  "hero": {
+    "headline": "Tangan di instrumen,\ntempo lewat suara",
+    "lead": "Ucapkan `faster` di tengah permainan dan klik langsung lebih cepat. Tidak perlu meraih layar, tidak perlu berhenti untuk mengubah tempo.",
+    "cta": "Unduh gratis di App Store",
+    "note": "Metronom lengkap dan kontrol suara gratis."
+  },
+  "demo": {
+    "title": "Coba ucapkan langsung",
+    "lead": "Ketuk salah satu tombol, atau nyalakan mikrofon dan ucapkan dalam bahasa Inggris. Ada bunyi kliknya, jadi cek dulu volumenya.",
+    "mic": "Coba lewat mikrofon",
+    "micOn": "Mendengarkan. Coba ucapkan “faster”",
+    "micNone": "Browser ini tidak mendukung pengenalan suara. Ketuk tombolnya saja.",
+    "note": "Demo web ini memakai pengenalan suara dari browser. Di aplikasi, ucapan dikenali langsung di perangkatmu."
+  },
+  "problem": {
+    "title": "Pernah kehilangan rasa permainan cuma gara-gara mau ubah tempo?",
+    "text": "Taruh penggesek, gigit pick, ketuk layar dua kali, dan rasa yang baru saja kamu temukan langsung hilang. Not My Tempo mengubah tempo cukup dengan satu kata, tanpa mengubah posisi bermainmu."
+  },
+  "features": [
+    {
+      "title": "Ucapkan, langsung diikuti",
+      "text": "Cukup kata bahasa Inggris pendek seperti `start`, `faster`, dan `tempo 120`. Aplikasi langsung mendengarkan begitu dibuka, tanpa perlu menyalakan Kontrol Suara iOS atau pengaturan aksesibilitas apa pun.\nLupa perintah? Ucapkan `help` dan semua frasa yang bisa dipakai muncul di layar.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "Ketukan juga terlihat",
+      "text": "Pilih tampilan pantul, orbit, atau cincin. Ketukan pertama tiap birama tampil merah dan berbunyi lebih keras.\nKetuk mengikuti irama di tampilan orbit, dan kamu bisa melihat seberapa tepat ketukanmu.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Simpan aksen untuk tiap lagu",
+      "text": "Atur setiap klik dalam birama menjadi tinggi, rendah, atau senyap, lalu simpan sebagai preset untuk tiap lagu. Pola bossa nova atau samba cukup dibuat sekali, berikutnya tinggal pilih. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "Mulai dalam tiga langkah",
+    "items": [
+      {
+        "title": "Buka aplikasinya",
+        "text": "Aplikasi langsung mulai mendengarkan."
+      },
+      {
+        "title": "Izinkan mikrofon",
+        "text": "Izin mikrofon dan pengenalan ucapan hanya diminta sekali."
+      },
+      {
+        "title": "Ucapkan atau ketuk",
+        "text": "Setiap perintah juga punya tombol di layar."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Perintah yang bisa diucapkan",
+    "rows": [
+      ["start · stop", "putar, jeda"],
+      ["faster · slower", "naik atau turun 5 BPM"],
+      ["up · down", "naik atau turun 1 BPM"],
+      ["tempo 120", "langsung ke tempo yang diinginkan"],
+      ["double · half", "dua kali lebih cepat, setengah kecepatan"],
+      ["three beats", "ubah jumlah ketukan per birama"],
+      ["quarter · eighth · triplet · sixteenth", "subdivisi ketukan"],
+      ["louder · quieter · mute", "klik lebih keras, lebih pelan, senyap"],
+      ["volume 60", "atur volume dalam persen"],
+      ["bounce · orbit", "ganti tampilan ketukan"],
+      ["timer 5 minutes", "pasang timer latihan"],
+      ["practice", "naikkan tempo sedikit demi sedikit selama latihan (Pro)"],
+      ["tune", "buka tuner (Pro)"],
+      ["help", "tampilkan semua perintah"],
+      ["close · done", "tutup panel yang terbuka"]
+    ],
+    "note": "Pengenalan suara berjalan dalam bahasa Inggris (AS), jadi perintah diucapkan dalam kata bahasa Inggris. Perintah dalam bahasa Indonesia belum didukung. Tampilan aplikasi tetap berbahasa Indonesia, dan setiap perintah juga bisa dilakukan dengan mengetuk."
+  },
+  "pricing": {
+    "title": "Metronomnya gratis. Pro ada kalau kamu butuh lebih.",
+    "free": {
+      "name": "Gratis",
+      "items": [
+        "Semua perintah suara",
+        "Birama 1 sampai 8 ketukan, dengan aksen di ketukan pertama",
+        "Subdivisi seperempat, seperdelapan, triol, dan seperenambelas",
+        "Tampilan pantul, orbit, dan cincin",
+        "Ketuk tempo dan cek ketepatan",
+        "Timer latihan"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Mode latihan: menambah beberapa BPM setiap beberapa birama sampai tempo targetmu",
+        "Editor aksen dengan preset untuk tiap lagu",
+        "Tuner kromatik"
+      ],
+      "note": "Langganan tahunan dengan uji coba gratis, atau beli seumur hidup sekali bayar"
+    },
+    "note": "Kontrol suara dan fitur aksesibilitas akan tetap gratis untuk semua orang. Sudah membeli aplikasi ini sebelum ada Pro? Semua fitur Pro sudah jadi milikmu."
+  },
+  "faq": {
+    "title": "Pertanyaan umum",
+    "items": [
+      {
+        "q": "Bisakah saya bicara dalam bahasa Indonesia?",
+        "a": "Pengenalan suara berjalan dalam bahasa Inggris (AS), jadi perintahnya berupa kata bahasa Inggris seperti `start` dan `faster`. Semuanya kata pendek, jadi cepat terbiasa, dan setiap perintah juga bisa dilakukan dengan mengetuk tombol."
+      },
+      {
+        "q": "Aplikasi tidak mendengar saya.",
+        "a": "Pastikan status mikrofon menunjukkan “Mendengarkan”. Kalau mati, ketuk “Dengarkan”. Di ruangan bising atau saat memakai speaker keras, pakai earphone supaya bunyi klik tidak masuk ke mikrofon. Ucapanmu akan jauh lebih mudah dikenali."
+      },
+      {
+        "q": "Mendengarkan mati sendiri.",
+        "a": "Untuk menghemat baterai, aplikasi berhenti mendengarkan setelah beberapa menit tanpa perintah. Ketuk “Dengarkan” untuk menyalakannya lagi."
+      },
+      {
+        "q": "Temponya terbaca setengah atau dua kali lipat.",
+        "a": "Ucapkan `double` atau `half` untuk langsung membetulkannya."
+      },
+      {
+        "q": "Bagaimana cara memakai tuner?",
+        "a": "Ucapkan `tune` atau ketuk tombol gelombang di kartu tempo. Mainkan satu nada; saat penunjuk masuk ke area hijau, nadamu sudah pas. Ucapkan `close` untuk keluar."
+      },
+      {
+        "q": "Saya sudah memakai Kontrol Suara iOS.",
+        "a": "Matikan mikrofon aplikasi dan kendalikan dengan menyebut nama tombol. Semua kontrol punya label VoiceOver."
+      },
+      {
+        "q": "Apakah suara saya dikirim ke suatu tempat?",
+        "a": "Tidak. Ucapan dikenali di perangkatmu dan tidak pernah direkam, disimpan, atau diunggah. Metronom, kontrol suara, dan tuner tetap berfungsi tanpa internet."
+      },
+      {
+        "q": "Bagaimana cara membatalkan langganan?",
+        "a": "Buka Pengaturan > Akun Apple > Langganan. Langganan tahunan diperpanjang otomatis kecuali dibatalkan paling lambat 24 jam sebelum periode berjalan berakhir. Pembelian seumur hidup hanya sekali bayar."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Mulai latihan hari ini\ntanpa melepas instrumen",
+    "cta": "Unduh gratis di App Store"
+  },
+  "ui": {
+    "skip": "Langsung ke konten",
+    "languages": "Bahasa",
+    "privacy": "Kebijakan Privasi",
+    "contact": "Ada pertanyaan atau masukan? Kirim ke {email}."
+  }
+}

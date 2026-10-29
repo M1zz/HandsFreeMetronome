@@ -1,134 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Not My Tempo — metronom a ladička bez rukou</title>
-  <meta name="description" content="Not My Tempo je metronom, který za hraní ovládáte výhradně hlasem, s vestavěnou chromatickou ladičkou." />
-  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/" />
-  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/" />
-  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/" />
-  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/" />
-  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/" />
-  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/" />
-  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/" />
-  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/" />
-  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/" />
-  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/" />
-  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/" />
-  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not My Tempo: metronom, na který mluvíte při hraní</title>
+  <meta name="description" content="Řekněte start, faster nebo tempo 120 a klikání se přizpůsobí, aniž byste pustili nástroj. Plný metronom i hlasové ovládání jsou zdarma.">
+  <meta name="theme-color" content="#0A7EA4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6781537149">
+  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not My Tempo: metronom, na který mluvíte při hraní">
+  <meta property="og:description" content="Řekněte start, faster nebo tempo 120 a klikání se přizpůsobí, aniž byste pustili nástroj. Plný metronom i hlasové ovládání jsou zdarma.">
+  <meta property="og:url" content="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <meta property="og:image" content="https://m1zz.github.io/HandsFreeMetronome/img/cs/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="langs" aria-label="Jazyk">
-      <a href="../" hreflang="en" lang="en">English</a>
-      <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
-      <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
-      <a href="../de/" hreflang="de" lang="de">Deutsch</a>
-      <a href="../es/" hreflang="es" lang="es">Español</a>
-      <a href="../fr/" hreflang="fr" lang="fr">Français</a>
-      <a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-      <a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-      <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-      <a href="../it/" hreflang="it" lang="it">Italiano</a>
-      <a href="../ru/" hreflang="ru" lang="ru">Русский</a>
-      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
-      <a href="../pl/" hreflang="pl" lang="pl">Polski</a>
-      <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
-      <a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
-      <a href="../da/" hreflang="da" lang="da">Dansk</a>
-      <a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
-      <a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
-      <a href="./" hreflang="cs" lang="cs" aria-current="true">Čeština</a>
-      <a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
-      <a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
-      <a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
-      <a href="../th/" hreflang="th" lang="th">ไทย</a>
-    </nav>
+  <a class="skip" href="#main">Přeskočit na obsah</a>
+  <header class="bar">
+    <a class="brand" href="../cs/"><img src="../icon.png" alt="" width="32" height="32">Not My Tempo</a>
+    <a class="lang-link" href="#languages">Jazyk</a>
+  </header>
 
-    <header>
-      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <h1>Not My Tempo</h1>
-      <div class="sub">Metronom a ladička bez rukou — Podpora</div>
-      <a class="store-btn" href="https://apps.apple.com/cz/app/not-ma-tempo/id6781537149">Stáhnout z App&nbsp;Storu</a>
-      <div class="sale">Plný metronom a kompletní hlasové ovládání bez rukou jsou <strong>zdarma</strong>.
-        <strong>Not My Tempo Pro</strong> přidává režim cvičení, editor akcentů s předvolbami a chromatickou ladičku –
-        jako roční předplatné s bezplatnou zkušební dobou, nebo jednorázový nákup navždy.</div>
-      <div class="price-note">Hlasové ovládání a funkce zpřístupnění zůstávají zdarma pro všechny, vždy.
-        Koupili jste aplikaci před příchodem Pro? Všechny funkce Pro už máte.</div>
-    </header>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Ruce na nástroji,<br>tempo hlasem</h1>
+        <p class="lead">Řekněte uprostřed fráze <code>faster</code> a metronom zrychlí. Nemusíte sahat po displeji ani přestávat hrát. Příkazy se říkají anglicky.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6781537149">Stáhnout zdarma v App Storu</a><a class="try" href="#try">Zkuste to nahlas ↓</a></div>
+        <p class="muted small">Plný metronom i hlasové ovládání jsou zdarma.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/01-playing.jpg" alt="Ruce na nástroji, tempo hlasem" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <h2>Co to je</h2>
-    <p>Not My Tempo je metronom, který za hraní ovládáte výhradně hlasem –
-       bez klepání na displej a bez zapínání Ovládání hlasem v iOS či jiného
-       nastavení zpřístupnění. Obsahuje také vestavěnou chromatickou ladičku.</p>
 
-    <h2>Jak začít</h2>
-    <div class="card">
-      <p>1. Otevřete aplikaci – hned začne <strong>poslouchat</strong>.<br>
-         2. Při prvním spuštění povolte mikrofon a rozpoznávání řeči.<br>
-         3. Řekněte příkaz nebo klepněte na ovládací prvky.</p>
-      <p class="sub">Tip: používejte sluchátka, aby klikání neproniklo do mikrofonu –
-         rozpoznávání řeči i ladička pak zůstanou přesné.</p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Zkuste to nahlas</h2>
+      <p class="muted">Klepněte na frázi, nebo zapněte mikrofon a řekněte ji anglicky. Zesilte zvuk, metronom kliká.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Zkuste to nahlas&quot;, &quot;lead&quot;: &quot;Klepněte na frázi, nebo zapněte mikrofon a řekněte ji anglicky. Zesilte zvuk, metronom kliká.&quot;, &quot;mic&quot;: &quot;Mluvit do mikrofonu&quot;, &quot;micOn&quot;: &quot;Poslouchám. Řekněte „faster“&quot;, &quot;micNone&quot;: &quot;Tento prohlížeč neumí rozpoznávat řeč. Klepněte na některou frázi.&quot;, &quot;note&quot;: &quot;Webová ukázka používá rozpoznávání řeči v prohlížeči. Aplikace rozpoznává řeč přímo v zařízení.&quot;}"></div>
+    </section>
 
-    <h2>Hlasové příkazy</h2>
-    <div class="card">
-      <table>
-        <tr><td class="cmd">"start" / "stop"</td><td>přehrát / pozastavit</td></tr>
-        <tr><td class="cmd">"faster" / "slower"</td><td>±5 BPM</td></tr>
-        <tr><td class="cmd">"up" / "down"</td><td>±1 BPM</td></tr>
-        <tr><td class="cmd">"tempo 120"</td><td>nastavit přesnou hodnotu</td></tr>
-        <tr><td class="cmd">"double" / "half"</td><td>×2 / ÷2</td></tr>
-        <tr><td class="cmd">"three beats"</td><td>nastavit takt</td></tr>
-        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>dělení</td></tr>
-        <tr><td class="cmd">"louder" / "quieter" / "mute"</td><td>hlasitost klikání</td></tr>
-        <tr><td class="cmd">"volume 60"</td><td>nastavit hlasitost v procentech</td></tr>
-        <tr><td class="cmd">"bounce" / "orbit"</td><td>přepnout zobrazení dob</td></tr>
-        <tr><td class="cmd">"practice"</td><td>tempo při cvičení samo roste (Pro)</td></tr>
-        <tr><td class="cmd">"tune"</td><td>otevřít ladičku (Pro)</td></tr>
-        <tr><td class="cmd">"help"</td><td>zobrazit seznam příkazů</td></tr>
-        <tr><td class="cmd">"close" / "done"</td><td>zavřít panel</td></tr>
-      </table>
-      <p class="sub">Příkazy se říkají anglicky (rozpoznávání používá americkou angličtinu).
-         Každý příkaz lze zadat i ovládacími prvky na obrazovce.</p>
-    </div>
+    <section class="problem reveal">
+      <h2>Ztratili jste groove jen kvůli malé změně tempa?</h2>
+      <p>Odložit smyčec, vzít trsátko do zubů, dvakrát klepnout na displej, a pocit, který jste právě chytili, je pryč. Not My Tempo změní tempo jediným slovem a vy hrajete dál ve stejné pozici.</p>
+    </section>
 
-    <h2>Ladička</h2>
-    <p>Řekněte <code>tune</code> (nebo klepněte na tlačítko s vlnou na kartě tempa). Zahrajte notu:
-       jakmile ukazatel vstoupí do zelené zóny, ladíte čistě. Řekněte <code>close</code> a ladička se zavře.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Řeknete a klikání poslechne</h2>
+        <p>Krátká anglická slova jako <code>start</code>, <code>faster</code> nebo <code>tempo 120</code>. Aplikace poslouchá hned po otevření, bez zapínání Ovládání hlasem v iOS či nastavení zpřístupnění.<br>Zapomněli jste příkaz? Řekněte <code>help</code> a všechny fráze se ukážou na obrazovce.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/04-voice.jpg" alt="Řeknete a klikání poslechne" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Baterie</h2>
-    <p>Aby se šetřila baterie, poslouchání se samo vypne, pokud několik minut nezazní žádný příkaz.
-       Klepnutím na <strong>Poslouchat</strong> ho znovu zapnete.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Dobu vidíte i očima</h2>
+        <p>Vyberte si odraz, oběžnou dráhu nebo kruh. První doba svítí červeně a kliká hlasitěji.<br>Klepejte do rytmu na oběžnou dráhu a uvidíte, jak přesně trefujete.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/02-orbit.jpg" alt="Dobu vidíte i očima" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Řešení potíží</h2>
-    <div class="card">
-      <p><strong>Neslyší mě.</strong> Zkontrolujte, zda stav mikrofonu je „Poslouchá“.
-         Pokud je vypnutý, klepněte na „Poslouchat“. V hlučné místnosti nebo při hraní přes reproduktor používejte sluchátka.</p>
-      <p><strong>Rozpoznané tempo je poloviční nebo dvojnásobné.</strong> Opravte to příkazem „double“ nebo „half“.</p>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Akcenty uložené pro každou skladbu</h2>
+        <p>Nastavte každý cvak v taktu jako vysoký, nízký nebo tichý a uložte ho jako předvolbu. Rytmus bossa novy nebo samby sestavíte jednou a příště ho jen vyberete. (Pro)</p>
+      </div>
+      <div class="phone"><img src="../img/cs/05-accents.jpg" alt="Akcenty uložené pro každou skladbu" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Kontakt</h2>
-    <p>Dotazy nebo zpětná vazba: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    <section class="reveal">
+      <h2>Začnete ve třech krocích</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Otevřete aplikaci</h3><p>Hned začne poslouchat.</p></li>
+<li class="card"><span class="n">2</span><h3>Povolte mikrofon</h3><p>O přístup k mikrofonu a rozpoznávání řeči požádá jen jednou.</p></li>
+<li class="card"><span class="n">3</span><h3>Mluvte nebo klepejte</h3><p>Každý příkaz má i tlačítko na obrazovce.</p></li></ol>
+    </section>
 
-    <footer>
-      <a href="privacy.html">Zásady ochrany osobních údajů</a> · © 2026 Not My Tempo
-    </footer>
-  </div>
+    <section class="reveal" id="commands">
+      <h2>Co můžete říct</h2>
+      <div class="card table">
+        <dl><div><dt>start · stop</dt><dd>spustit, zastavit</dd></div><div><dt>faster · slower</dt><dd>rychleji nebo pomaleji o 5 BPM</dd></div><div><dt>up · down</dt><dd>rychleji nebo pomaleji o 1 BPM</dd></div><div><dt>tempo 120</dt><dd>rovnou zvolené tempo</dd></div><div><dt>double · half</dt><dd>dvakrát rychleji, dvakrát pomaleji</dd></div><div><dt>three beats</dt><dd>změnit takt</dd></div><div><dt>quarter · eighth · triplet · sixteenth</dt><dd>čtvrťové noty, osminy, trioly, šestnáctiny</dd></div><div><dt>louder · quieter · mute</dt><dd>klikání hlasitěji, tišeji, ztlumit</dd></div><div><dt>volume 60</dt><dd>hlasitost v procentech</dd></div><div><dt>bounce · orbit</dt><dd>přepnout zobrazení doby</dd></div><div><dt>timer 5 minutes</dt><dd>časovač cvičení</dd></div><div><dt>practice</dt><dd>postupně zvyšovat tempo během cvičení (Pro)</dd></div><div><dt>tune</dt><dd>otevřít ladičku (Pro)</dd></div><div><dt>help</dt><dd>zobrazit všechny příkazy</dd></div><div><dt>close · done</dt><dd>zavřít otevřený panel</dd></div></dl>
+      </div>
+      <p class="muted">Rozpoznávání řeči funguje v angličtině (USA), proto se příkazy říkají anglickými slovy. Aplikace je v češtině a každý příkaz funguje i klepnutím.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Metronom je zdarma, Pro když chcete víc</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Zdarma</h3>
+          <ul><li>Všechny hlasové příkazy</li><li>Takty od 1 do 8 dob se zdůrazněnou první dobou</li><li>Čtvrťové noty, osminy, trioly a šestnáctiny</li><li>Odraz, oběžná dráha a kruh</li><li>Tap tempo a kontrola rytmu</li><li>Časovač cvičení</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Not My Tempo Pro</h3>
+          <ul><li>Režim cvičení: přidává pár BPM každých pár taktů, dokud nedosáhnete cílového tempa</li><li>Editor akcentů s předvolbami pro každou skladbu</li><li>Chromatická ladička</li></ul>
+          <p class="muted">Roční předplatné s bezplatnou zkušební dobou, nebo jednorázový nákup navždy</p>
+        </div>
+      </div>
+      <p class="muted">Hlasové ovládání a funkce zpřístupnění zůstanou zdarma pro všechny. Pokud jste aplikaci koupili ještě před příchodem Pro, všechny funkce Pro už máte.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Časté otázky</h2>
+      <div class="faq"><details><summary>Můžu mluvit česky?</summary><p>Rozpoznávání řeči funguje v angličtině (USA), takže příkazy jsou krátká anglická slova jako <code>start</code> nebo <code>faster</code>. Rychle si je zapamatujete a každý příkaz funguje i tlačítkem.</p></details>
+<details><summary>Aplikace mě neslyší.</summary><p>Zkontrolujte, že u mikrofonu svítí „Poslouchá“. Pokud ne, klepněte na „Poslouchat“. V hlučné místnosti nebo při hraní přes reproduktory použijte sluchátka, aby se klikání nedostávalo do mikrofonu.</p></details>
+<details><summary>Poslouchání se samo vypnulo.</summary><p>Kvůli úspoře baterie se poslouchání vypne, když pár minut nezazní žádný příkaz. Klepnutím na „Poslouchat“ ho znovu zapnete.</p></details>
+<details><summary>Tempo vyšlo poloviční nebo dvojnásobné.</summary><p>Řekněte <code>double</code> nebo <code>half</code> a je to opravené.</p></details>
+<details><summary>Jak se používá ladička?</summary><p>Řekněte <code>tune</code> nebo klepněte na tlačítko s vlnou na kartě tempa. Zahrajte tón: když ukazatel dopadne do zeleného pásma, máte naladěno. Ven se dostanete slovem <code>close</code>.</p></details>
+<details><summary>Už používám Ovládání hlasem v iOS.</summary><p>Vypněte mikrofon aplikace a ovládejte ji názvy tlačítek. Každý ovládací prvek má popisek pro VoiceOver.</p></details>
+<details><summary>Posílá se můj hlas někam?</summary><p>Ne. Řeč se rozpoznává v zařízení a nikdy se nenahrává, neukládá ani neodesílá. Metronom, hlasové ovládání i ladička fungují bez internetu.</p></details>
+<details><summary>Jak zrušit předplatné?</summary><p>V Nastavení &gt; Účet Apple &gt; Předplatné. Roční předplatné se obnovuje automaticky, pokud ho nezrušíte nejméně 24 hodin před koncem aktuálního období. Nákup navždy je jednorázová platba.</p></details></div>
+      <p class="contact">Dotazy a připomínky posílejte na <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Od dnešního cvičení<br>nechte ruce na nástroji</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6781537149">Stáhnout zdarma v App Storu</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Jazyk"><a href="../" hreflang="en" lang="en">English</a>
+<a href="../ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../cs/" hreflang="cs" lang="cs" aria-current="page">Čeština</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a></nav>
+    <p><a href="privacy.html">Zásady ochrany osobních údajů</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Not My Tempo</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

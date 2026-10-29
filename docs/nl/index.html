@@ -1,134 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Not My Tempo — handsfree metronoom en tuner</title>
-  <meta name="description" content="Not My Tempo is een metronoom die je tijdens het spelen volledig met je stem bedient, met een ingebouwde chromatische tuner." />
-  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/" />
-  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/" />
-  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/" />
-  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/" />
-  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/" />
-  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/" />
-  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/" />
-  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/" />
-  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/" />
-  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/" />
-  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/" />
-  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not My Tempo: de metronoom die je met je stem bedient terwijl je speelt</title>
+  <meta name="description" content="Zeg start, faster of tempo 120 in het Engels en de klik volgt. Je handen blijven op je instrument. De metronoom en spraakbediening zijn gratis.">
+  <meta name="theme-color" content="#0A7EA4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6781537149">
+  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not My Tempo: de metronoom die je met je stem bedient terwijl je speelt">
+  <meta property="og:description" content="Zeg start, faster of tempo 120 in het Engels en de klik volgt. Je handen blijven op je instrument. De metronoom en spraakbediening zijn gratis.">
+  <meta property="og:url" content="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <meta property="og:image" content="https://m1zz.github.io/HandsFreeMetronome/img/nl/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="langs" aria-label="Taal">
-      <a href="../" hreflang="en" lang="en">English</a>
-      <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
-      <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
-      <a href="../de/" hreflang="de" lang="de">Deutsch</a>
-      <a href="../es/" hreflang="es" lang="es">Español</a>
-      <a href="../fr/" hreflang="fr" lang="fr">Français</a>
-      <a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-      <a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-      <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-      <a href="../it/" hreflang="it" lang="it">Italiano</a>
-      <a href="../ru/" hreflang="ru" lang="ru">Русский</a>
-      <a href="./" hreflang="nl" lang="nl" aria-current="true">Nederlands</a>
-      <a href="../pl/" hreflang="pl" lang="pl">Polski</a>
-      <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
-      <a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
-      <a href="../da/" hreflang="da" lang="da">Dansk</a>
-      <a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
-      <a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
-      <a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
-      <a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
-      <a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
-      <a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
-      <a href="../th/" hreflang="th" lang="th">ไทย</a>
-    </nav>
+  <a class="skip" href="#main">Naar de inhoud</a>
+  <header class="bar">
+    <a class="brand" href="../nl/"><img src="../icon.png" alt="" width="32" height="32">Not My Tempo</a>
+    <a class="lang-link" href="#languages">Taal</a>
+  </header>
 
-    <header>
-      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <h1>Not My Tempo</h1>
-      <div class="sub">Handsfree metronoom en tuner — Support</div>
-      <a class="store-btn" href="https://apps.apple.com/nl/app/not-ma-tempo/id6781537149">Download in de App&nbsp;Store</a>
-      <div class="sale">De complete metronoom en volledige handsfree spraakbediening zijn <strong>gratis</strong>.
-        <strong>Not My Tempo Pro</strong> voegt de oefenmodus, de accenteditor met presets en de chromatische tuner toe —
-        als jaarabonnement met gratis proefperiode, of als eenmalige aankoop voor altijd.</div>
-      <div class="price-note">Spraakbediening en toegankelijkheidsfuncties blijven voor iedereen altijd gratis.
-        Had je de app al vóór Pro? Dan heb je alle Pro-functies al.</div>
-    </header>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Handen op je instrument.<br>Tempo met je stem.</h1>
+        <p class="lead">Zeg midden in een frase <code>faster</code> en de klik gaat sneller. Niet stoppen, niet naar het scherm grijpen. De commando’s zijn korte Engelse woorden.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6781537149">Gratis downloaden in de App Store</a><a class="try" href="#try">Probeer het hardop ↓</a></div>
+        <p class="muted small">De complete metronoom en spraakbediening zijn gratis.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/01-playing.jpg" alt="Handen op je instrument. Tempo met je stem." width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <h2>Wat is het</h2>
-    <p>Not My Tempo is een metronoom die je tijdens het spelen volledig met je stem bedient —
-       zonder te tikken op het scherm en zonder Spraakbediening van iOS of een andere
-       toegankelijkheidsinstelling aan te zetten. Er zit ook een chromatische tuner in.</p>
 
-    <h2>Aan de slag</h2>
-    <div class="card">
-      <p>1. Open de app — hij begint meteen te <strong>luisteren</strong>.<br>
-         2. Geef de eerste keer toegang tot microfoon en spraakherkenning.<br>
-         3. Zeg een commando of tik op de knoppen.</p>
-      <p class="sub">Tip: gebruik oordopjes, zodat de klik niet in de microfoon lekt —
-         dat houdt spraakherkenning en tuner nauwkeurig.</p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Probeer het hardop</h2>
+      <p class="muted">Tik op een commando, of zet de microfoon aan en zeg het in het Engels. Zet je volume hoger, hij klikt.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Probeer het hardop&quot;, &quot;lead&quot;: &quot;Tik op een commando, of zet de microfoon aan en zeg het in het Engels. Zet je volume hoger, hij klikt.&quot;, &quot;mic&quot;: &quot;Praat ertegen&quot;, &quot;micOn&quot;: &quot;Luistert. Zeg eens “faster”&quot;, &quot;micNone&quot;: &quot;Deze browser herkent geen spraak. Tik dan op een commando.&quot;, &quot;note&quot;: &quot;Deze webdemo gebruikt de spraakherkenning van je browser. De app herkent spraak op je apparaat zelf.&quot;}"></div>
+    </section>
 
-    <h2>Spraakcommando’s</h2>
-    <div class="card">
-      <table>
-        <tr><td class="cmd">"start" / "stop"</td><td>afspelen / pauze</td></tr>
-        <tr><td class="cmd">"faster" / "slower"</td><td>±5 BPM</td></tr>
-        <tr><td class="cmd">"up" / "down"</td><td>±1 BPM</td></tr>
-        <tr><td class="cmd">"tempo 120"</td><td>een exacte waarde instellen</td></tr>
-        <tr><td class="cmd">"double" / "half"</td><td>×2 / ÷2</td></tr>
-        <tr><td class="cmd">"three beats"</td><td>de maatsoort instellen</td></tr>
-        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>onderverdeling</td></tr>
-        <tr><td class="cmd">"louder" / "quieter" / "mute"</td><td>volume van de klik</td></tr>
-        <tr><td class="cmd">"volume 60"</td><td>volume in procenten instellen</td></tr>
-        <tr><td class="cmd">"bounce" / "orbit"</td><td>telweergave wisselen</td></tr>
-        <tr><td class="cmd">"practice"</td><td>tempo loopt vanzelf op terwijl je oefent (Pro)</td></tr>
-        <tr><td class="cmd">"tune"</td><td>de tuner openen (Pro)</td></tr>
-        <tr><td class="cmd">"help"</td><td>de lijst met commando’s tonen</td></tr>
-        <tr><td class="cmd">"close" / "done"</td><td>een paneel sluiten</td></tr>
-      </table>
-      <p class="sub">Commando’s zeg je in het Engels (de herkenning gebruikt Amerikaans Engels).
-         Elk commando kan ook met de knoppen op het scherm.</p>
-    </div>
+    <section class="problem reveal">
+      <h2>Ooit de groove kwijtgeraakt alleen om het tempo bij te stellen?</h2>
+      <p>Strijkstok neerleggen, plectrum tussen je tanden, twee keer op het scherm tikken, en het gevoel dat je net te pakken had is weg. Met Not My Tempo verander je het tempo met één woord, zonder je houding los te laten.</p>
+    </section>
 
-    <h2>Tuner</h2>
-    <p>Zeg <code>tune</code> (of tik op de golfknop op de tempokaart). Speel een noot:
-       als de indicator in de groene zone komt, ben je zuiver. Zeg <code>close</code> om te sluiten.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Zeg het, en hij volgt</h2>
+        <p>Korte Engelse woorden als <code>start</code>, <code>faster</code> en <code>tempo 120</code>. De app luistert zodra je hem opent, zonder dat je Spraakbediening van iOS of een toegankelijkheidsinstelling hoeft aan te zetten.<br>Commando vergeten? Zeg <code>help</code> en alles wat je kunt zeggen staat op het scherm.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/04-voice.jpg" alt="Zeg het, en hij volgt" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Batterij</h2>
-    <p>Om batterij te sparen stopt het luisteren vanzelf als er een paar minuten geen commando komt.
-       Tik op <strong>Luister</strong> om het weer aan te zetten.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Zie de tel ook</h2>
+        <p>Kies tussen stuiteren, baan of ring. De eerste tel is rood en klikt harder.<br>Tik mee op de baan en je ziet hoe dicht je erbij zat.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/02-orbit.jpg" alt="Zie de tel ook" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Problemen oplossen</h2>
-    <div class="card">
-      <p><strong>Hij hoort me niet.</strong> Controleer of de microfoonstatus “Luistert” is.
-         Als hij uit staat, tik je op “Luister”. Gebruik oordopjes in een rumoerige ruimte of als je via de speaker speelt.</p>
-      <p><strong>Het herkende tempo is de helft of het dubbele.</strong> Zeg “double” of “half” om het te corrigeren.</p>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Bewaar de accenten per nummer</h2>
+        <p>Zet elke klik in de maat op hoog, laag of stil en bewaar het als preset. Bouw je bossanova- of sambapatroon één keer en kies het de volgende keer gewoon uit de lijst. (Pro)</p>
+      </div>
+      <div class="phone"><img src="../img/nl/05-accents.jpg" alt="Bewaar de accenten per nummer" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Vragen of feedback: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    <section class="reveal">
+      <h2>In drie stappen aan de slag</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Open de app</h3><p>Hij luistert meteen.</p></li>
+<li class="card"><span class="n">2</span><h3>Geef de microfoon toegang</h3><p>De eerste keer vraagt hij om microfoon en spraakherkenning.</p></li>
+<li class="card"><span class="n">3</span><h3>Praat of tik</h3><p>Elk commando heeft ook een knop op het scherm.</p></li></ol>
+    </section>
 
-    <footer>
-      <a href="privacy.html">Privacybeleid</a> · © 2026 Not My Tempo
-    </footer>
-  </div>
+    <section class="reveal" id="commands">
+      <h2>Wat je kunt zeggen</h2>
+      <div class="card table">
+        <dl><div><dt>start · stop</dt><dd>afspelen, pauzeren</dd></div><div><dt>faster · slower</dt><dd>5 BPM sneller of langzamer</dd></div><div><dt>up · down</dt><dd>1 BPM sneller of langzamer</dd></div><div><dt>tempo 120</dt><dd>direct naar een tempo</dd></div><div><dt>double · half</dt><dd>twee keer zo snel, half zo snel</dd></div><div><dt>three beats</dt><dd>maatsoort wijzigen</dd></div><div><dt>quarter · eighth · triplet · sixteenth</dt><dd>onderverdeling in kwarten, achtsten, triolen, zestienden</dd></div><div><dt>louder · quieter · mute</dt><dd>klik harder, zachter, dempen</dd></div><div><dt>volume 60</dt><dd>volume in procenten instellen</dd></div><div><dt>bounce · orbit</dt><dd>telweergave wisselen</dd></div><div><dt>timer 5 minutes</dt><dd>oefentimer instellen</dd></div><div><dt>practice</dt><dd>tempo loopt op terwijl je oefent (Pro)</dd></div><div><dt>tune</dt><dd>de tuner openen (Pro)</dd></div><div><dt>help</dt><dd>alle commando’s tonen</dd></div><div><dt>close · done</dt><dd>een paneel sluiten</dd></div></dl>
+      </div>
+      <p class="muted">De spraakherkenning werkt in Amerikaans Engels, dus je zegt de commando’s in het Engels. De app zelf is in het Nederlands en elk commando kan ook met een tik.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>De metronoom is gratis. Wil je meer, dan is er Pro.</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Gratis</h3>
+          <ul><li>Alle spraakcommando’s</li><li>Maatsoorten van 1 tot 8 tellen, met een sterkere eerste tel</li><li>Onderverdeling in kwarten, achtsten, triolen en zestienden</li><li>Drie weergaven: stuiteren, baan en ring</li><li>Tap-tempo en timingcontrole</li><li>Oefentimer</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Not My Tempo Pro</h3>
+          <ul><li>Oefenmodus: om de paar maten een paar BPM erbij tot je je doeltempo haalt</li><li>Accenteditor met presets per nummer</li><li>Chromatische tuner</li></ul>
+          <p class="muted">Jaarabonnement met gratis proefperiode, of een eenmalige aankoop voor altijd</p>
+        </div>
+      </div>
+      <p class="muted">Spraakbediening en toegankelijkheidsfuncties blijven voor iedereen gratis. Had je de app al vóór Pro? Dan heb je alle Pro-functies al.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Veelgestelde vragen</h2>
+      <div class="faq"><details><summary>Kan ik Nederlands spreken?</summary><p>De spraakherkenning werkt in Amerikaans Engels, dus de commando’s zijn korte Engelse woorden zoals <code>start</code> en <code>faster</code>. Die heb je snel onder de knie, en elk commando kan ook met een tik. De rest van de app is in het Nederlands.</p></details>
+<details><summary>Hij hoort me niet.</summary><p>Controleer of de microfoonstatus “Luistert” is. Staat hij uit, tik dan op “Luister”. In een rumoerige ruimte of als je via de speaker speelt, helpen oordopjes: dan lekt de klik niet in de microfoon.</p></details>
+<details><summary>Het luisteren ging vanzelf uit.</summary><p>Om batterij te sparen stopt het luisteren als er een paar minuten geen commando komt. Tik op “Luister” om het weer aan te zetten.</p></details>
+<details><summary>Het tempo is de helft of het dubbele.</summary><p>Zeg <code>double</code> of <code>half</code> om het te corrigeren.</p></details>
+<details><summary>Hoe gebruik ik de tuner?</summary><p>Zeg <code>tune</code> of tik op de golfknop op de tempokaart. Speel een noot: komt de indicator in de groene zone, dan ben je zuiver. Zeg <code>close</code> om te sluiten.</p></details>
+<details><summary>Ik gebruik al Spraakbediening van iOS.</summary><p>Zet de eigen microfoon van de app uit en bedien hem met de namen van de knoppen. Elke knop heeft een VoiceOver-label.</p></details>
+<details><summary>Wordt mijn stem ergens naartoe gestuurd?</summary><p>Nee. Spraak wordt op je apparaat herkend en nooit opgenomen, bewaard of verstuurd. De metronoom, spraakbediening en tuner werken ook zonder internet.</p></details>
+<details><summary>Hoe zeg ik mijn abonnement op?</summary><p>Via Instellingen &gt; Apple Account &gt; Abonnementen. Het jaarabonnement wordt automatisch verlengd, tenzij je het minstens 24 uur voor het einde van de periode opzegt. Levenslang betaal je één keer.</p></details></div>
+      <p class="contact">Vragen of feedback? Mail naar <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Houd je handen<br>op je instrument</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6781537149">Gratis downloaden in de App Store</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Taal"><a href="../" hreflang="en" lang="en">English</a>
+<a href="../ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../nl/" hreflang="nl" lang="nl" aria-current="page">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a></nav>
+    <p><a href="privacy.html">Privacybeleid</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Not My Tempo</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

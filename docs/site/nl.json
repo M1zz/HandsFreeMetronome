@@ -1,0 +1,115 @@
+{
+  "title": "Not My Tempo: de metronoom die je met je stem bedient terwijl je speelt",
+  "description": "Zeg start, faster of tempo 120 in het Engels en de klik volgt. Je handen blijven op je instrument. De metronoom en spraakbediening zijn gratis.",
+  "hero": {
+    "headline": "Handen op je instrument.\nTempo met je stem.",
+    "lead": "Zeg midden in een frase `faster` en de klik gaat sneller. Niet stoppen, niet naar het scherm grijpen. De commando’s zijn korte Engelse woorden.",
+    "cta": "Gratis downloaden in de App Store",
+    "note": "De complete metronoom en spraakbediening zijn gratis."
+  },
+  "demo": {
+    "title": "Probeer het hardop",
+    "lead": "Tik op een commando, of zet de microfoon aan en zeg het in het Engels. Zet je volume hoger, hij klikt.",
+    "mic": "Praat ertegen",
+    "micOn": "Luistert. Zeg eens “faster”",
+    "micNone": "Deze browser herkent geen spraak. Tik dan op een commando.",
+    "note": "Deze webdemo gebruikt de spraakherkenning van je browser. De app herkent spraak op je apparaat zelf."
+  },
+  "problem": {
+    "title": "Ooit de groove kwijtgeraakt alleen om het tempo bij te stellen?",
+    "text": "Strijkstok neerleggen, plectrum tussen je tanden, twee keer op het scherm tikken, en het gevoel dat je net te pakken had is weg. Met Not My Tempo verander je het tempo met één woord, zonder je houding los te laten."
+  },
+  "features": [
+    {
+      "title": "Zeg het, en hij volgt",
+      "text": "Korte Engelse woorden als `start`, `faster` en `tempo 120`. De app luistert zodra je hem opent, zonder dat je Spraakbediening van iOS of een toegankelijkheidsinstelling hoeft aan te zetten.\nCommando vergeten? Zeg `help` en alles wat je kunt zeggen staat op het scherm.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "Zie de tel ook",
+      "text": "Kies tussen stuiteren, baan of ring. De eerste tel is rood en klikt harder.\nTik mee op de baan en je ziet hoe dicht je erbij zat.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Bewaar de accenten per nummer",
+      "text": "Zet elke klik in de maat op hoog, laag of stil en bewaar het als preset. Bouw je bossanova- of sambapatroon één keer en kies het de volgende keer gewoon uit de lijst. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "In drie stappen aan de slag",
+    "items": [
+      {"title": "Open de app", "text": "Hij luistert meteen."},
+      {"title": "Geef de microfoon toegang", "text": "De eerste keer vraagt hij om microfoon en spraakherkenning."},
+      {"title": "Praat of tik", "text": "Elk commando heeft ook een knop op het scherm."}
+    ]
+  },
+  "reference": {
+    "title": "Wat je kunt zeggen",
+    "rows": [
+      ["start · stop", "afspelen, pauzeren"],
+      ["faster · slower", "5 BPM sneller of langzamer"],
+      ["up · down", "1 BPM sneller of langzamer"],
+      ["tempo 120", "direct naar een tempo"],
+      ["double · half", "twee keer zo snel, half zo snel"],
+      ["three beats", "maatsoort wijzigen"],
+      ["quarter · eighth · triplet · sixteenth", "onderverdeling in kwarten, achtsten, triolen, zestienden"],
+      ["louder · quieter · mute", "klik harder, zachter, dempen"],
+      ["volume 60", "volume in procenten instellen"],
+      ["bounce · orbit", "telweergave wisselen"],
+      ["timer 5 minutes", "oefentimer instellen"],
+      ["practice", "tempo loopt op terwijl je oefent (Pro)"],
+      ["tune", "de tuner openen (Pro)"],
+      ["help", "alle commando’s tonen"],
+      ["close · done", "een paneel sluiten"]
+    ],
+    "note": "De spraakherkenning werkt in Amerikaans Engels, dus je zegt de commando’s in het Engels. De app zelf is in het Nederlands en elk commando kan ook met een tik."
+  },
+  "pricing": {
+    "title": "De metronoom is gratis. Wil je meer, dan is er Pro.",
+    "free": {
+      "name": "Gratis",
+      "items": [
+        "Alle spraakcommando’s",
+        "Maatsoorten van 1 tot 8 tellen, met een sterkere eerste tel",
+        "Onderverdeling in kwarten, achtsten, triolen en zestienden",
+        "Drie weergaven: stuiteren, baan en ring",
+        "Tap-tempo en timingcontrole",
+        "Oefentimer"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Oefenmodus: om de paar maten een paar BPM erbij tot je je doeltempo haalt",
+        "Accenteditor met presets per nummer",
+        "Chromatische tuner"
+      ],
+      "note": "Jaarabonnement met gratis proefperiode, of een eenmalige aankoop voor altijd"
+    },
+    "note": "Spraakbediening en toegankelijkheidsfuncties blijven voor iedereen gratis. Had je de app al vóór Pro? Dan heb je alle Pro-functies al."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "items": [
+      {"q": "Kan ik Nederlands spreken?", "a": "De spraakherkenning werkt in Amerikaans Engels, dus de commando’s zijn korte Engelse woorden zoals `start` en `faster`. Die heb je snel onder de knie, en elk commando kan ook met een tik. De rest van de app is in het Nederlands."},
+      {"q": "Hij hoort me niet.", "a": "Controleer of de microfoonstatus “Luistert” is. Staat hij uit, tik dan op “Luister”. In een rumoerige ruimte of als je via de speaker speelt, helpen oordopjes: dan lekt de klik niet in de microfoon."},
+      {"q": "Het luisteren ging vanzelf uit.", "a": "Om batterij te sparen stopt het luisteren als er een paar minuten geen commando komt. Tik op “Luister” om het weer aan te zetten."},
+      {"q": "Het tempo is de helft of het dubbele.", "a": "Zeg `double` of `half` om het te corrigeren."},
+      {"q": "Hoe gebruik ik de tuner?", "a": "Zeg `tune` of tik op de golfknop op de tempokaart. Speel een noot: komt de indicator in de groene zone, dan ben je zuiver. Zeg `close` om te sluiten."},
+      {"q": "Ik gebruik al Spraakbediening van iOS.", "a": "Zet de eigen microfoon van de app uit en bedien hem met de namen van de knoppen. Elke knop heeft een VoiceOver-label."},
+      {"q": "Wordt mijn stem ergens naartoe gestuurd?", "a": "Nee. Spraak wordt op je apparaat herkend en nooit opgenomen, bewaard of verstuurd. De metronoom, spraakbediening en tuner werken ook zonder internet."},
+      {"q": "Hoe zeg ik mijn abonnement op?", "a": "Via Instellingen > Apple Account > Abonnementen. Het jaarabonnement wordt automatisch verlengd, tenzij je het minstens 24 uur voor het einde van de periode opzegt. Levenslang betaal je één keer."}
+    ]
+  },
+  "closing": {
+    "headline": "Houd je handen\nop je instrument",
+    "cta": "Gratis downloaden in de App Store"
+  },
+  "ui": {
+    "skip": "Naar de inhoud",
+    "languages": "Taal",
+    "privacy": "Privacybeleid",
+    "contact": "Vragen of feedback? Mail naar {email}."
+  }
+}

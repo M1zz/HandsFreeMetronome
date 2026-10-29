@@ -1,135 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>낫마템포 — 손 없이 쓰는 메트로놈 · 튜너</title>
-  <meta name="description" content="낫마템포는 연주하면서 목소리만으로 조작하는 메트로놈입니다. 크로매틱 튜너도 들어 있습니다." />
-  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/" />
-  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/" />
-  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/" />
-  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/" />
-  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/" />
-  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/" />
-  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/" />
-  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/" />
-  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/" />
-  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/" />
-  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/" />
-  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>낫마템포: 연주하면서 말로 바꾸는 메트로놈</title>
+  <meta name="description" content="악기에서 손을 떼지 않고 start, faster, tempo 120이라고 말하면 템포가 바뀌는 메트로놈입니다. 메트로놈과 음성 조작은 무료입니다.">
+  <meta name="theme-color" content="#0A7EA4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6781537149">
+  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="낫마템포: 연주하면서 말로 바꾸는 메트로놈">
+  <meta property="og:description" content="악기에서 손을 떼지 않고 start, faster, tempo 120이라고 말하면 템포가 바뀌는 메트로놈입니다. 메트로놈과 음성 조작은 무료입니다.">
+  <meta property="og:url" content="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <meta property="og:image" content="https://m1zz.github.io/HandsFreeMetronome/img/ko/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="langs" aria-label="언어">
-      <a href="../" hreflang="en" lang="en">English</a>
-      <a href="./" hreflang="ko" lang="ko" aria-current="true">한국어</a>
-      <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
-      <a href="../de/" hreflang="de" lang="de">Deutsch</a>
-      <a href="../es/" hreflang="es" lang="es">Español</a>
-      <a href="../fr/" hreflang="fr" lang="fr">Français</a>
-      <a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-      <a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-      <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-      <a href="../it/" hreflang="it" lang="it">Italiano</a>
-      <a href="../ru/" hreflang="ru" lang="ru">Русский</a>
-      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
-      <a href="../pl/" hreflang="pl" lang="pl">Polski</a>
-      <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
-      <a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
-      <a href="../da/" hreflang="da" lang="da">Dansk</a>
-      <a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
-      <a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
-      <a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
-      <a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
-      <a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
-      <a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
-      <a href="../th/" hreflang="th" lang="th">ไทย</a>
-    </nav>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header class="bar">
+    <a class="brand" href="../ko/"><img src="../icon.png" alt="" width="32" height="32">낫마템포</a>
+    <a class="lang-link" href="#languages">언어</a>
+  </header>
 
-    <header>
-      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <h1>낫마템포</h1>
-      <div class="sub">손 없이 쓰는 메트로놈 · 튜너 — 도움말</div>
-      <a class="store-btn" href="https://apps.apple.com/kr/app/not-ma-tempo/id6781537149">App&nbsp;Store에서 받기</a>
-      <div class="sale">메트로놈의 모든 기능과 손 없이 쓰는 음성 조작은 <strong>무료</strong>입니다.
-        <strong>Not My Tempo Pro</strong>에는 연습 모드, 악센트 에디터·프리셋, 크로매틱 튜너가 들어 있고,
-        무료 체험이 있는 연간 구독이나 한 번 결제로 평생 쓸 수 있습니다.</div>
-      <div class="price-note">음성 조작과 접근성 기능은 앞으로도 누구에게나 무료입니다.
-        Pro가 생기기 전에 앱을 구매하셨다면 Pro 기능을 이미 모두 쓰실 수 있습니다.</div>
-    </header>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>두 손은 악기에,<br>템포는 말로</h1>
+        <p class="lead">연주하다가 <code>faster</code>라고 말하면 메트로놈이 빨라집니다. 템포를 바꾸려고 연주를 멈출 필요가 없습니다.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6781537149">App Store에서 무료로 받기</a><a class="try" href="#try">직접 말해 보세요 ↓</a></div>
+        <p class="muted small">메트로놈과 음성 조작은 무료입니다.</p>
+      </div>
+      <div class="phone"><img src="../img/ko/01-playing.jpg" alt="두 손은 악기에, 템포는 말로" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <h2>어떤 앱인가요</h2>
-    <p>낫마템포는 연주하는 동안 목소리만으로 조작하는 메트로놈입니다.
-       화면을 누를 필요도 없고, iOS의 음성 제어나 손쉬운 사용 설정을 따로 켤 필요도 없습니다.
-       크로매틱 튜너도 함께 들어 있습니다.</p>
 
-    <h2>시작하기</h2>
-    <div class="card">
-      <p>1. 앱을 열면 바로 <strong>듣기</strong>가 시작됩니다.<br>
-         2. 처음 한 번 마이크와 음성 인식 권한을 허용해 주세요.<br>
-         3. 명령을 말하거나 화면의 버튼을 누르면 됩니다.</p>
-      <p class="sub">팁: 이어폰을 쓰면 클릭 소리가 마이크로 새어 들어가지 않아
-         음성 인식과 튜너가 더 정확해집니다.</p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>직접 말해 보세요</h2>
+      <p class="muted">버튼을 누르거나 마이크를 켜고 영어로 말해 보세요. 소리가 나니 볼륨을 확인해 주세요.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;직접 말해 보세요&quot;, &quot;lead&quot;: &quot;버튼을 누르거나 마이크를 켜고 영어로 말해 보세요. 소리가 나니 볼륨을 확인해 주세요.&quot;, &quot;mic&quot;: &quot;마이크로 말해 보기&quot;, &quot;micOn&quot;: &quot;듣는 중이에요. faster라고 말해 보세요&quot;, &quot;micNone&quot;: &quot;이 브라우저는 음성 인식을 지원하지 않아요. 버튼을 눌러 보세요.&quot;, &quot;note&quot;: &quot;웹 체험은 브라우저의 음성 인식을 씁니다. 앱에서는 기기 안에서 알아듣습니다.&quot;}"></div>
+    </section>
 
-    <h2>음성 명령</h2>
-    <div class="card">
-      <table>
-        <tr><td class="cmd">"start" / "stop"</td><td>재생 / 멈춤</td></tr>
-        <tr><td class="cmd">"faster" / "slower"</td><td>5 BPM씩 올리기 / 내리기</td></tr>
-        <tr><td class="cmd">"up" / "down"</td><td>1 BPM씩 올리기 / 내리기</td></tr>
-        <tr><td class="cmd">"tempo 120"</td><td>원하는 템포로 바로 맞추기</td></tr>
-        <tr><td class="cmd">"double" / "half"</td><td>두 배 / 절반</td></tr>
-        <tr><td class="cmd">"three beats"</td><td>박자 바꾸기</td></tr>
-        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>4분 · 8분 · 셋잇단 · 16분 분할</td></tr>
-        <tr><td class="cmd">"louder" / "quieter" / "mute"</td><td>클릭 소리 크게 / 작게 / 음소거</td></tr>
-        <tr><td class="cmd">"volume 60"</td><td>음량을 퍼센트로 맞추기</td></tr>
-        <tr><td class="cmd">"bounce" / "orbit"</td><td>박 표시 방식 바꾸기</td></tr>
-        <tr><td class="cmd">"practice"</td><td>연습하는 동안 템포를 자동으로 올리기 (Pro)</td></tr>
-        <tr><td class="cmd">"tune"</td><td>튜너 열기 (Pro)</td></tr>
-        <tr><td class="cmd">"help"</td><td>명령 목록 보기</td></tr>
-        <tr><td class="cmd">"close" / "done"</td><td>열린 화면 닫기</td></tr>
-      </table>
-      <p class="sub">음성 인식은 영어(미국)로 동작하므로 명령은 위처럼 영어로 말해 주세요.
-         모든 명령은 화면의 버튼으로도 할 수 있습니다.</p>
-    </div>
+    <section class="problem reveal">
+      <h2>템포 하나 바꾸려다 흐름이 끊긴 적 있나요?</h2>
+      <p>활을 내려놓고, 피크를 입에 물고, 화면을 두 번 누르고 나면 방금 잡은 감이 사라집니다. 낫마템포는 연주하던 자세 그대로, 말 한마디로 템포를 바꿉니다.</p>
+    </section>
 
-    <h2>튜너</h2>
-    <p><code>tune</code>이라고 말하거나 템포 카드의 파형 버튼을 누르세요.
-       음을 하나 연주해서 표시가 초록색 구간 안에 들어오면 음이 맞은 것입니다.
-       나갈 때는 <code>close</code>라고 말하면 됩니다.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>말하면 바로 따라옵니다</h2>
+        <p><code>start</code>, <code>faster</code>, <code>tempo 120</code>처럼 짧은 영어 단어로 말합니다. iOS 음성 제어나 손쉬운 사용 설정을 켤 필요 없이, 앱을 열면 바로 듣습니다.<br>명령이 기억나지 않으면 <code>help</code>라고 말하세요. 말할 수 있는 말이 화면 위에 바로 나옵니다.</p>
+      </div>
+      <div class="phone"><img src="../img/ko/04-voice.jpg" alt="말하면 바로 따라옵니다" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>배터리</h2>
-    <p>배터리를 아끼기 위해 몇 분 동안 명령이 없으면 듣기가 자동으로 꺼집니다.
-       다시 켜려면 <strong>Listen</strong>을 누르세요.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>박을 눈으로도 따라갑니다</h2>
+        <p>튀는 공, 원 궤도, 링 세 가지 화면 중에서 고릅니다. 마디 첫 박은 빨간색으로 보이고 더 크게 울립니다.<br>원 궤도 화면에서 박에 맞춰 두드리면 얼마나 정확했는지 보여 줍니다.</p>
+      </div>
+      <div class="phone"><img src="../img/ko/02-orbit.jpg" alt="박을 눈으로도 따라갑니다" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>문제 해결</h2>
-    <div class="card">
-      <p><strong>제 말을 못 알아들어요.</strong> 마이크 상태가 "Listening"으로 표시되는지 확인해 주세요.
-         꺼져 있다면 Listen을 누르면 됩니다. 시끄러운 곳이나 스피커로 소리를 크게 틀 때는 이어폰을 쓰세요.</p>
-      <p><strong>템포가 절반이나 두 배로 잡혀요.</strong> "double"이나 "half"라고 말해서 바로잡을 수 있습니다.</p>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>곡마다 악센트를 저장합니다</h2>
+        <p>마디 안의 클릭 하나하나를 강하게, 약하게, 소리 없이로 정하고 곡마다 프리셋으로 남겨 둡니다. 보사노바든 삼바든 한 번 만들면 다음에는 고르기만 하면 됩니다. (Pro)</p>
+      </div>
+      <div class="phone"><img src="../img/ko/05-accents.jpg" alt="곡마다 악센트를 저장합니다" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>문의</h2>
-    <p>궁금한 점이나 의견은 <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>으로 보내 주세요.</p>
+    <section class="reveal">
+      <h2>시작은 세 단계면 됩니다</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>앱을 엽니다</h3><p>열자마자 듣기가 시작됩니다.</p></li>
+<li class="card"><span class="n">2</span><h3>마이크를 허용합니다</h3><p>처음 한 번만 마이크와 음성 인식 권한을 묻습니다.</p></li>
+<li class="card"><span class="n">3</span><h3>말하거나 누릅니다</h3><p>모든 명령은 화면의 버튼으로도 할 수 있습니다.</p></li></ol>
+    </section>
 
-    <footer>
-      <a href="privacy.html">개인정보처리방침</a> · © 2026 Not My Tempo
-    </footer>
-  </div>
+    <section class="reveal" id="commands">
+      <h2>말할 수 있는 명령</h2>
+      <div class="card table">
+        <dl><div><dt>start · stop</dt><dd>재생, 멈춤</dd></div><div><dt>faster · slower</dt><dd>5 BPM씩 올리기, 내리기</dd></div><div><dt>up · down</dt><dd>1 BPM씩 올리기, 내리기</dd></div><div><dt>tempo 120</dt><dd>원하는 템포로 바로 맞추기</dd></div><div><dt>double · half</dt><dd>두 배, 절반</dd></div><div><dt>three beats</dt><dd>박자 바꾸기</dd></div><div><dt>quarter · eighth · triplet · sixteenth</dt><dd>4분, 8분, 셋잇단, 16분으로 나누기</dd></div><div><dt>louder · quieter · mute</dt><dd>클릭 소리 크게, 작게, 끄기</dd></div><div><dt>volume 60</dt><dd>음량을 퍼센트로 맞추기</dd></div><div><dt>bounce · orbit</dt><dd>박 표시 화면 바꾸기</dd></div><div><dt>timer 5 minutes</dt><dd>연습 타이머 맞추기</dd></div><div><dt>practice</dt><dd>연습하는 동안 템포를 조금씩 올리기 (Pro)</dd></div><div><dt>tune</dt><dd>튜너 열기 (Pro)</dd></div><div><dt>help</dt><dd>명령 목록 보기</dd></div><div><dt>close · done</dt><dd>열린 화면 닫기</dd></div></dl>
+      </div>
+      <p class="muted">음성 인식은 영어(미국)로 동작해서 명령은 영어 단어로 말합니다. 앱 화면은 한국어로 나옵니다.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>메트로놈은 무료, 더 필요하면 Pro</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>무료</h3>
+          <ul><li>음성 조작 전부</li><li>1박부터 8박까지, 첫 박 강조</li><li>4분, 8분, 셋잇단, 16분 나누기</li><li>튀는 공, 원 궤도, 링 세 가지 화면</li><li>탭 템포와 타이밍 체크</li><li>연습 타이머</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Not My Tempo Pro</h3>
+          <ul><li>연습 모드: 몇 마디마다 템포를 올려 목표 속도까지</li><li>악센트 에디터와 곡별 프리셋</li><li>크로매틱 튜너</li></ul>
+          <p class="muted">무료 체험이 있는 연간 구독, 또는 한 번 결제로 평생 이용</p>
+        </div>
+      </div>
+      <p class="muted">음성 조작과 접근성 기능은 앞으로도 누구에게나 무료입니다. Pro가 생기기 전에 앱을 사셨다면 Pro 기능을 이미 모두 쓰실 수 있습니다.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>자주 묻는 질문</h2>
+      <div class="faq"><details><summary>한국어로 말해도 되나요?</summary><p>음성 인식이 영어(미국)로 동작해서 명령은 <code>start</code>, <code>faster</code> 같은 영어 단어로 말합니다. 명령이 짧은 단어라 금방 익숙해지고, 모든 명령은 버튼으로도 할 수 있습니다.</p></details>
+<details><summary>제 말을 못 알아들어요.</summary><p>마이크 상태가 Listening으로 표시되는지 확인해 주세요. 꺼져 있다면 Listen을 누르면 됩니다. 시끄러운 곳이나 스피커로 크게 틀 때는 이어폰을 쓰면 클릭 소리가 마이크로 새지 않아 훨씬 잘 알아듣습니다.</p></details>
+<details><summary>듣기가 저절로 꺼졌어요.</summary><p>배터리를 아끼려고 몇 분 동안 명령이 없으면 듣기가 꺼집니다. Listen을 누르면 다시 켜집니다.</p></details>
+<details><summary>템포가 절반이나 두 배로 잡혀요.</summary><p><code>double</code>이나 <code>half</code>라고 말하면 바로 고쳐집니다.</p></details>
+<details><summary>튜너는 어떻게 쓰나요?</summary><p><code>tune</code>이라고 말하거나 템포 카드의 파형 버튼을 누릅니다. 음을 하나 연주해서 표시가 초록색 구간에 들어오면 음이 맞은 것입니다. 나갈 때는 <code>close</code>라고 말하세요.</p></details>
+<details><summary>iOS 음성 제어를 쓰고 있어요.</summary><p>앱의 마이크를 끄고 버튼 이름으로 조작하면 됩니다. 버튼마다 VoiceOver 이름이 붙어 있습니다.</p></details>
+<details><summary>제 목소리가 어딘가로 보내지나요?</summary><p>아니요. 음성은 기기 안에서 알아듣고, 녹음하거나 저장하거나 보내지 않습니다. 메트로놈, 음성 조작, 튜너는 인터넷 없이도 동작합니다.</p></details>
+<details><summary>구독은 어떻게 해지하나요?</summary><p>설정 앱의 Apple 계정 &gt; 구독에서 해지할 수 있습니다. 현재 기간이 끝나기 24시간 전까지 해지하지 않으면 자동으로 갱신됩니다. 평생 이용권은 한 번만 결제합니다.</p></details></div>
+      <p class="contact">궁금한 점이나 의견은 <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>로 보내 주세요.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>오늘 연습부터<br>손을 떼지 마세요</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6781537149">App Store에서 무료로 받기</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="언어"><a href="../" hreflang="en" lang="en">English</a>
+<a href="../ko/" hreflang="ko" lang="ko" aria-current="page">한국어</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a></nav>
+    <p><a href="privacy.html">개인정보처리방침</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Not My Tempo</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

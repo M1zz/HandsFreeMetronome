@@ -1,0 +1,115 @@
+{
+  "title": "Not My Tempo: metronomen, du taler til, mens du spiller",
+  "description": "Sig start, faster eller tempo 120 på engelsk, så følger klikket med, uden at du slipper instrumentet. Hele metronomen og stemmestyringen er gratis.",
+  "hero": {
+    "headline": "Hænderne på instrumentet.\nTempoet med stemmen.",
+    "lead": "Sig `faster` midt i frasen, så speeder klikket op. Du skal hverken stoppe eller række ud efter skærmen. Kommandoerne er korte engelske ord.",
+    "cta": "Hent gratis i App Store",
+    "note": "Hele metronomen og stemmestyringen er gratis."
+  },
+  "demo": {
+    "title": "Prøv det højt",
+    "lead": "Tryk på en kommando, eller slå mikrofonen til og sig den på engelsk. Skru op for lyden, den klikker.",
+    "mic": "Tal til den",
+    "micOn": "Lytter. Prøv at sige “faster”",
+    "micNone": "Denne browser kan ikke genkende tale. Tryk på en kommando i stedet.",
+    "note": "Webdemoen bruger browserens talegenkendelse. Appen genkender tale direkte på din enhed."
+  },
+  "problem": {
+    "title": "Har du mistet grooven bare for at justere tempoet?",
+    "text": "Læg buen fra dig, hold plekteret i munden, tryk to gange på skærmen, og den fornemmelse, du lige havde fundet, er væk. Med Not My Tempo skifter du tempo med et enkelt ord, lige der, hvor du står."
+  },
+  "features": [
+    {
+      "title": "Sig det, så følger den med",
+      "text": "Korte engelske ord som `start`, `faster` og `tempo 120`. Appen lytter, så snart du åbner den, uden at du skal slå Stemmestyring i iOS eller en tilgængelighedsindstilling til.\nGlemt en kommando? Sig `help`, så vises alt, hvad du kan sige, på skærmen.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "Se slaget også",
+      "text": "Vælg mellem hop, kredsløb og ring. Første slag er rødt og klikker kraftigere.\nTryk med på kredsløbet, og se, hvor tæt du ramte.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Gem accenterne til hver sang",
+      "text": "Sæt hvert klik i takten til højt, lavt eller lydløst, og gem det som en forudindstilling. Byg dit bossanova- eller sambamønster én gang, og vælg det bare næste gang. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "Tre trin, så er du i gang",
+    "items": [
+      {"title": "Åbn appen", "text": "Den begynder straks at lytte."},
+      {"title": "Giv adgang til mikrofonen", "text": "Den spørger én gang om mikrofon og talegenkendelse."},
+      {"title": "Tal eller tryk", "text": "Alle kommandoer har også en knap på skærmen."}
+    ]
+  },
+  "reference": {
+    "title": "Det kan du sige",
+    "rows": [
+      ["start · stop", "afspil, pause"],
+      ["faster · slower", "5 BPM hurtigere eller langsommere"],
+      ["up · down", "1 BPM hurtigere eller langsommere"],
+      ["tempo 120", "spring direkte til et tempo"],
+      ["double · half", "dobbelt så hurtigt, halvt så hurtigt"],
+      ["three beats", "skift taktart"],
+      ["quarter · eighth · triplet · sixteenth", "underdeling i fjerdedele, ottendedele, trioler, sekstendedele"],
+      ["louder · quieter · mute", "klikket højere, lavere, slå lyden fra"],
+      ["volume 60", "indstil lydstyrken i procent"],
+      ["bounce · orbit", "skift slagvisning"],
+      ["timer 5 minutes", "indstil en øvetimer"],
+      ["practice", "tempoet stiger, mens du øver (Pro)"],
+      ["tune", "åbn stemmeapparatet (Pro)"],
+      ["help", "vis alle kommandoer"],
+      ["close · done", "luk et panel"]
+    ],
+    "note": "Talegenkendelsen bruger amerikansk engelsk, så kommandoerne siger du på engelsk. Resten af appen er på dansk, og alle kommandoer kan også gives med et tryk."
+  },
+  "pricing": {
+    "title": "Metronomen er gratis. Pro er der, når du vil have mere.",
+    "free": {
+      "name": "Gratis",
+      "items": [
+        "Alle stemmekommandoer",
+        "Taktarter fra 1 til 8 slag, med betonet første slag",
+        "Underdeling i fjerdedele, ottendedele, trioler og sekstendedele",
+        "Tre visninger: hop, kredsløb og ring",
+        "Tap-tempo og timingtjek",
+        "Øvetimer"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Øvetilstand: lægger et par BPM til med få takters mellemrum, til du når dit måltempo",
+        "Accenteditor med forudindstillinger til hver sang",
+        "Kromatisk stemmeapparat"
+      ],
+      "note": "Årligt abonnement med gratis prøveperiode, eller et engangskøb for evigt"
+    },
+    "note": "Stemmestyring og tilgængelighedsfunktioner forbliver gratis for alle. Købte du appen, før Pro fandtes? Så har du allerede alle Pro-funktionerne."
+  },
+  "faq": {
+    "title": "Ofte stillede spørgsmål",
+    "items": [
+      {"q": "Kan jeg tale dansk?", "a": "Talegenkendelsen bruger amerikansk engelsk, så kommandoerne er korte engelske ord som `start` og `faster`. Dem lærer du hurtigt, og alle kommandoer kan også gives med et tryk. Resten af appen er på dansk."},
+      {"q": "Den kan ikke høre mig.", "a": "Tjek, at mikrofonstatussen er “Lytter”. Hvis den er slået fra, skal du trykke på “Lyt”. I et støjende rum, eller hvis du spiller gennem en højttaler, hjælper hovedtelefoner, så klikket ikke siver ind i mikrofonen."},
+      {"q": "Lytningen slog sig selv fra.", "a": "For at spare på batteriet holder lytningen op, hvis der ikke kommer en kommando i nogle minutter. Tryk på “Lyt” for at slå den til igen."},
+      {"q": "Tempoet blev det halve eller det dobbelte.", "a": "Sig `double` eller `half` for at rette det."},
+      {"q": "Hvordan bruger jeg stemmeapparatet?", "a": "Sig `tune`, eller tryk på bølgeknappen på tempokortet. Spil en tone: Når indikatoren kommer ind i den grønne zone, er du stemt rent. Sig `close` for at lukke."},
+      {"q": "Jeg bruger allerede Stemmestyring i iOS.", "a": "Slå appens egen mikrofon fra, og styr den med knappernes navne. Alle knapper har VoiceOver-etiketter."},
+      {"q": "Bliver min stemme sendt nogen steder hen?", "a": "Nej. Tale genkendes på din enhed og bliver aldrig optaget, gemt eller sendt videre. Metronomen, stemmestyringen og stemmeapparatet virker uden internet."},
+      {"q": "Hvordan opsiger jeg abonnementet?", "a": "I Indstillinger > Apple-konto > Abonnementer. Det årlige abonnement fornyes automatisk, medmindre du opsiger det mindst 24 timer før periodens udløb. Køb for evigt betales én gang."}
+    ]
+  },
+  "closing": {
+    "headline": "Hold hænderne\npå instrumentet",
+    "cta": "Hent gratis i App Store"
+  },
+  "ui": {
+    "skip": "Gå til indhold",
+    "languages": "Sprog",
+    "privacy": "Privatlivspolitik",
+    "contact": "Spørgsmål eller feedback? Skriv til {email}."
+  }
+}

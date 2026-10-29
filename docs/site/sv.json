@@ -1,0 +1,115 @@
+{
+  "title": "Not My Tempo: metronomen du pratar med medan du spelar",
+  "description": "Säg start, faster eller tempo 120 på engelska så följer klicket med, utan att du släpper instrumentet. Hela metronomen och röststyrningen är gratis.",
+  "hero": {
+    "headline": "Händerna på instrumentet.\nTempot med rösten.",
+    "lead": "Säg `faster` mitt i frasen så går klicket snabbare. Du behöver varken sluta spela eller sträcka dig efter skärmen. Kommandona är korta engelska ord.",
+    "cta": "Hämta gratis i App Store",
+    "note": "Hela metronomen och röststyrningen är gratis."
+  },
+  "demo": {
+    "title": "Testa högt",
+    "lead": "Tryck på ett kommando, eller slå på mikrofonen och säg det på engelska. Höj volymen, det klickar.",
+    "mic": "Prata med den",
+    "micOn": "Lyssnar. Säg ”faster”",
+    "micNone": "Den här webbläsaren kan inte känna igen tal. Tryck på ett kommando i stället.",
+    "note": "Webbdemon använder webbläsarens taligenkänning. Appen känner igen tal direkt på din enhet."
+  },
+  "problem": {
+    "title": "Har du tappat flytet bara för att justera tempot?",
+    "text": "Lägg ifrån dig stråken, bit i plektrumet, tryck två gånger på skärmen, och känslan du just hittade är borta. Med Not My Tempo byter du tempo med ett enda ord, precis där du står."
+  },
+  "features": [
+    {
+      "title": "Säg det, så följer den med",
+      "text": "Korta engelska ord som `start`, `faster` och `tempo 120`. Appen lyssnar så fort du öppnar den, utan att du behöver slå på röststyrning i iOS eller någon tillgänglighetsinställning.\nGlömt ett kommando? Säg `help` så visas allt du kan säga på skärmen.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "Se slaget också",
+      "text": "Välj mellan studs, omlopp och ring. Första slaget är rött och klickar starkare.\nTryck i takt på omloppet så ser du hur nära du hamnade.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Spara accenterna för varje låt",
+      "text": "Ställ in varje klick i takten som högt, lågt eller tyst och spara det som en förinställning. Bygg bossa nova- eller sambamönstret en gång och välj det bara nästa gång. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "Tre steg för att komma igång",
+    "items": [
+      {"title": "Öppna appen", "text": "Den börjar lyssna direkt."},
+      {"title": "Tillåt mikrofonen", "text": "Den frågar en gång om mikrofon och taligenkänning."},
+      {"title": "Prata eller tryck", "text": "Varje kommando har också en kontroll på skärmen."}
+    ]
+  },
+  "reference": {
+    "title": "Det här kan du säga",
+    "rows": [
+      ["start · stop", "spela, pausa"],
+      ["faster · slower", "5 BPM snabbare eller långsammare"],
+      ["up · down", "1 BPM snabbare eller långsammare"],
+      ["tempo 120", "hoppa direkt till ett tempo"],
+      ["double · half", "dubbelt så snabbt, hälften så snabbt"],
+      ["three beats", "byt taktart"],
+      ["quarter · eighth · triplet · sixteenth", "underdelning i fjärdedelar, åttondelar, trioler, sextondelar"],
+      ["louder · quieter · mute", "klicket starkare, svagare, tyst"],
+      ["volume 60", "ställ in volymen i procent"],
+      ["bounce · orbit", "byt slagvy"],
+      ["timer 5 minutes", "ställ in en övningstimer"],
+      ["practice", "tempot ökar medan du övar (Pro)"],
+      ["tune", "öppna stämapparaten (Pro)"],
+      ["help", "visa alla kommandon"],
+      ["close · done", "stäng en panel"]
+    ],
+    "note": "Taligenkänningen använder amerikansk engelska, så kommandona säger du på engelska. Appen i övrigt är på svenska, och alla kommandon går också att ge med ett tryck."
+  },
+  "pricing": {
+    "title": "Metronomen är gratis. Pro finns när du vill ha mer.",
+    "free": {
+      "name": "Gratis",
+      "items": [
+        "Alla röstkommandon",
+        "Taktarter från 1 till 8 slag, med betonat första slag",
+        "Underdelning i fjärdedelar, åttondelar, trioler och sextondelar",
+        "Tre vyer: studs, omlopp och ring",
+        "Tapptempo och timingkontroll",
+        "Övningstimer"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Övningsläge: några BPM till med några takters mellanrum tills du når ditt måltempo",
+        "Accenteditor med förinställningar per låt",
+        "Kromatisk stämapparat"
+      ],
+      "note": "Årsprenumeration med gratis provperiod, eller ett engångsköp för alltid"
+    },
+    "note": "Röststyrning och tillgänglighetsfunktioner förblir gratis för alla. Köpte du appen innan Pro fanns? Då har du redan alla Pro-funktioner."
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "items": [
+      {"q": "Kan jag prata svenska?", "a": "Taligenkänningen använder amerikansk engelska, så kommandona är korta engelska ord som `start` och `faster`. De sitter snabbt, och alla kommandon går också att ge med ett tryck. Resten av appen är på svenska."},
+      {"q": "Den hör mig inte.", "a": "Kontrollera att mikrofonstatusen är ”Lyssnar”. Om den är av trycker du på ”Lyssna”. I ett bullrigt rum eller när du spelar via högtalare hjälper hörlurar, så att klicket inte läcker in i mikrofonen."},
+      {"q": "Lyssningen stängdes av av sig själv.", "a": "För att spara batteri slutar appen lyssna om inget kommando kommer på några minuter. Tryck på ”Lyssna” för att slå på den igen."},
+      {"q": "Tempot blev hälften eller dubbelt.", "a": "Säg `double` eller `half` för att rätta till det."},
+      {"q": "Hur använder jag stämapparaten?", "a": "Säg `tune` eller tryck på vågknappen på tempokortet. Spela en ton: när indikatorn hamnar i den gröna zonen är du rent stämd. Säg `close` för att stänga."},
+      {"q": "Jag använder redan röststyrning i iOS.", "a": "Stäng av appens egen mikrofon och styr med knapparnas namn i stället. Alla kontroller har VoiceOver-etiketter."},
+      {"q": "Skickas min röst någonstans?", "a": "Nej. Talet känns igen på din enhet och spelas aldrig in, sparas eller laddas upp. Metronomen, röststyrningen och stämapparaten fungerar utan internet."},
+      {"q": "Hur säger jag upp prenumerationen?", "a": "I Inställningar > Apple-konto > Prenumerationer. Årsprenumerationen förnyas automatiskt om du inte säger upp den minst 24 timmar innan perioden går ut. Köp för alltid betalas en gång."}
+    ]
+  },
+  "closing": {
+    "headline": "Ha händerna kvar\npå instrumentet",
+    "cta": "Hämta gratis i App Store"
+  },
+  "ui": {
+    "skip": "Hoppa till innehållet",
+    "languages": "Språk",
+    "privacy": "Integritetspolicy",
+    "contact": "Frågor eller synpunkter? Skriv till {email}."
+  }
+}

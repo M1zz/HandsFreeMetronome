@@ -1,133 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Not My Tempo — เมโทรนอมและเครื่องตั้งสายแบบไม่ใช้มือ</title>
-  <meta name="description" content="Not My Tempo คือเมโทรนอมที่ควบคุมด้วยเสียงทั้งหมดขณะเล่นดนตรี พร้อมเครื่องตั้งสายโครมาติกในตัว" />
-  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/" />
-  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/" />
-  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/" />
-  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/" />
-  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/" />
-  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/" />
-  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/" />
-  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/" />
-  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/" />
-  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/" />
-  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/" />
-  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not My Tempo: เมโทรนอมที่สั่งด้วยเสียงได้ระหว่างเล่น</title>
+  <meta name="description" content="พูดว่า start, faster หรือ tempo 120 แล้วเสียงคลิกจะตามทันที โดยไม่ต้องละมือจากเครื่องดนตรี เมโทรนอมเต็มรูปแบบและการควบคุมด้วยเสียงใช้ฟรี">
+  <meta name="theme-color" content="#0A7EA4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6781537149">
+  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not My Tempo: เมโทรนอมที่สั่งด้วยเสียงได้ระหว่างเล่น">
+  <meta property="og:description" content="พูดว่า start, faster หรือ tempo 120 แล้วเสียงคลิกจะตามทันที โดยไม่ต้องละมือจากเครื่องดนตรี เมโทรนอมเต็มรูปแบบและการควบคุมด้วยเสียงใช้ฟรี">
+  <meta property="og:url" content="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <meta property="og:image" content="https://m1zz.github.io/HandsFreeMetronome/img/th/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="langs" aria-label="ภาษา">
-      <a href="../" hreflang="en" lang="en">English</a>
-      <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
-      <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
-      <a href="../de/" hreflang="de" lang="de">Deutsch</a>
-      <a href="../es/" hreflang="es" lang="es">Español</a>
-      <a href="../fr/" hreflang="fr" lang="fr">Français</a>
-      <a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-      <a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-      <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-      <a href="../it/" hreflang="it" lang="it">Italiano</a>
-      <a href="../ru/" hreflang="ru" lang="ru">Русский</a>
-      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
-      <a href="../pl/" hreflang="pl" lang="pl">Polski</a>
-      <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
-      <a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
-      <a href="../da/" hreflang="da" lang="da">Dansk</a>
-      <a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
-      <a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
-      <a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
-      <a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
-      <a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
-      <a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
-      <a href="./" hreflang="th" lang="th" aria-current="true">ไทย</a>
-    </nav>
+  <a class="skip" href="#main">ข้ามไปที่เนื้อหา</a>
+  <header class="bar">
+    <a class="brand" href="../th/"><img src="../icon.png" alt="" width="32" height="32">Not My Tempo</a>
+    <a class="lang-link" href="#languages">ภาษา</a>
+  </header>
 
-    <header>
-      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <h1>Not My Tempo</h1>
-      <div class="sub">เมโทรนอมและเครื่องตั้งสายแบบไม่ใช้มือ — ช่วยเหลือ</div>
-      <a class="store-btn" href="https://apps.apple.com/th/app/not-ma-tempo/id6781537149">ดาวน์โหลดบน App&nbsp;Store</a>
-      <div class="sale">เมโทรนอมเต็มรูปแบบและการควบคุมด้วยเสียงแบบไม่ใช้มือ<strong>ใช้ฟรี</strong>
-        <strong>Not My Tempo Pro</strong> เพิ่มโหมดฝึกซ้อม ตัวแก้ไขเสียงเน้นพร้อมค่าที่ตั้งไว้ และเครื่องตั้งสายโครมาติก
-        ผ่านการสมัครรายปีพร้อมทดลองใช้ฟรี หรือซื้อแบบตลอดชีพครั้งเดียว</div>
-      <div class="price-note">การควบคุมด้วยเสียงและฟีเจอร์การช่วยการเข้าถึงใช้ฟรีสำหรับทุกคนตลอดไป
-        ซื้อแอปก่อนมี Pro ใช่ไหม ฟีเจอร์ Pro ทั้งหมดเป็นของคุณแล้ว</div>
-    </header>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>มืออยู่บนเครื่องดนตรี<br>ความเร็วสั่งด้วยเสียง</h1>
+        <p class="lead">เล่นอยู่แล้วพูดว่า <code>faster</code> เสียงคลิกก็เร็วขึ้นทันที ไม่ต้องเอื้อมไปแตะจอ ไม่ต้องหยุดเล่นเพื่อเปลี่ยนความเร็ว</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6781537149">ดาวน์โหลดฟรีบน App Store</a><a class="try" href="#try">ลองพูดดูเลย ↓</a></div>
+        <p class="muted small">เมโทรนอมเต็มรูปแบบและการควบคุมด้วยเสียงใช้ฟรี</p>
+      </div>
+      <div class="phone"><img src="../img/th/01-playing.jpg" alt="มืออยู่บนเครื่องดนตรี ความเร็วสั่งด้วยเสียง" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <h2>แอปนี้คืออะไร</h2>
-    <p>Not My Tempo คือเมโทรนอมที่คุณควบคุมด้วยเสียงทั้งหมดขณะเล่นดนตรี
-       ไม่ต้องแตะหน้าจอ และไม่ต้องเปิดการควบคุมด้วยเสียงของ iOS หรือ
-       การตั้งค่าการช่วยการเข้าถึงใด ๆ ในแอปยังมีเครื่องตั้งสายโครมาติกให้ด้วย</p>
 
-    <h2>เริ่มต้นใช้งาน</h2>
-    <div class="card">
-      <p>1. เปิดแอป แอปจะเริ่ม<strong>ฟัง</strong>ทันที<br>
-         2. อนุญาตการเข้าถึงไมโครโฟนและการรู้จำเสียงพูดในครั้งแรก<br>
-         3. พูดคำสั่ง หรือแตะปุ่มควบคุม</p>
-      <p class="sub">เคล็ดลับ: ใช้หูฟังเพื่อไม่ให้เสียงคลิกเข้าไมค์ จะช่วยให้การรู้จำเสียงพูดและเครื่องตั้งสายแม่นยำ</p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>ลองพูดดูเลย</h2>
+      <p class="muted">แตะปุ่ม หรือเปิดไมค์แล้วพูดเป็นภาษาอังกฤษ มีเสียงคลิกดังออกมา อย่าลืมเช็กระดับเสียง</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;ลองพูดดูเลย&quot;, &quot;lead&quot;: &quot;แตะปุ่ม หรือเปิดไมค์แล้วพูดเป็นภาษาอังกฤษ มีเสียงคลิกดังออกมา อย่าลืมเช็กระดับเสียง&quot;, &quot;mic&quot;: &quot;ลองพูดผ่านไมค์&quot;, &quot;micOn&quot;: &quot;กำลังฟัง ลองพูดว่า “faster”&quot;, &quot;micNone&quot;: &quot;เบราว์เซอร์นี้ไม่รองรับการรู้จำเสียงพูด ลองแตะปุ่มแทน&quot;, &quot;note&quot;: &quot;การทดลองบนเว็บใช้การรู้จำเสียงพูดของเบราว์เซอร์ ส่วนในแอปจะรู้จำเสียงบนอุปกรณ์ของคุณ&quot;}"></div>
+    </section>
 
-    <h2>คำสั่งเสียง</h2>
-    <div class="card">
-      <table>
-        <tr><td class="cmd">"start" / "stop"</td><td>เล่น / หยุดชั่วคราว</td></tr>
-        <tr><td class="cmd">"faster" / "slower"</td><td>±5 BPM</td></tr>
-        <tr><td class="cmd">"up" / "down"</td><td>±1 BPM</td></tr>
-        <tr><td class="cmd">"tempo 120"</td><td>ตั้งค่าที่ต้องการ</td></tr>
-        <tr><td class="cmd">"double" / "half"</td><td>×2 / ÷2</td></tr>
-        <tr><td class="cmd">"three beats"</td><td>ตั้งอัตราจังหวะ</td></tr>
-        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>การแบ่งจังหวะย่อย</td></tr>
-        <tr><td class="cmd">"louder" / "quieter" / "mute"</td><td>ระดับเสียงคลิก</td></tr>
-        <tr><td class="cmd">"volume 60"</td><td>ตั้งระดับเสียงเป็นเปอร์เซ็นต์</td></tr>
-        <tr><td class="cmd">"bounce" / "orbit"</td><td>สลับมุมมองจังหวะ</td></tr>
-        <tr><td class="cmd">"practice"</td><td>เพิ่มความเร็วอัตโนมัติขณะฝึกซ้อม (Pro)</td></tr>
-        <tr><td class="cmd">"tune"</td><td>เปิดเครื่องตั้งสาย (Pro)</td></tr>
-        <tr><td class="cmd">"help"</td><td>แสดงรายการคำสั่ง</td></tr>
-        <tr><td class="cmd">"close" / "done"</td><td>ปิดแผง</td></tr>
-      </table>
-      <p class="sub">คำสั่งใช้คำภาษาอังกฤษ (การรู้จำใช้ภาษาอังกฤษแบบอเมริกัน)
-         และสั่งงานได้ด้วยการแตะปุ่มควบคุมบนหน้าจอเช่นกัน</p>
-    </div>
+    <section class="problem reveal">
+      <h2>แค่อยากปรับความเร็วนิดเดียว แต่ฟีลหลุดหมด?</h2>
+      <p>วางคันชัก คาบปิ๊กไว้ในปาก แตะจอสองครั้ง แล้วฟีลที่เพิ่งจับได้ก็หายไป Not My Tempo เปลี่ยนความเร็วได้ด้วยคำเดียว ในท่าที่คุณกำลังเล่นอยู่</p>
+    </section>
 
-    <h2>เครื่องตั้งสาย</h2>
-    <p>พูดว่า <code>tune</code> (หรือแตะปุ่มรูปคลื่นบนการ์ดความเร็ว) แล้วเล่นโน้ตหนึ่งตัว
-       เมื่อเข็มเข้าโซนสีเขียว แสดงว่าเสียงตรงแล้ว พูดว่า <code>close</code> เพื่อออก</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>พูดปุ๊บ ตามปั๊บ</h2>
+        <p>ใช้คำภาษาอังกฤษสั้น ๆ อย่าง <code>start</code>, <code>faster</code> และ <code>tempo 120</code> แอปเริ่มฟังทันทีที่เปิด โดยไม่ต้องเปิดการควบคุมด้วยเสียงของ iOS หรือการตั้งค่าการช่วยการเข้าถึงใด ๆ<br>ลืมคำสั่งใช่ไหม พูดว่า <code>help</code> แล้วทุกคำที่ใช้ได้จะขึ้นบนหน้าจอ</p>
+      </div>
+      <div class="phone"><img src="../img/th/04-voice.jpg" alt="พูดปุ๊บ ตามปั๊บ" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>แบตเตอรี่</h2>
-    <p>เพื่อประหยัดแบตเตอรี่ การฟังจะปิดเองหากไม่มีคำสั่งเป็นเวลาไม่กี่นาที
-       แตะ<strong>ฟัง</strong>เพื่อเปิดใหม่</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>ดูจังหวะด้วยตาได้ด้วย</h2>
+        <p>เลือกได้สามแบบ ทั้งลูกบอลเด้ง วงโคจร และวงแหวน จังหวะแรกของห้องจะเป็นสีแดงและคลิกดังกว่า<br>แตะตามจังหวะบนวงโคจรแล้วแอปจะบอกว่าคุณตรงจังหวะแค่ไหน</p>
+      </div>
+      <div class="phone"><img src="../img/th/02-orbit.jpg" alt="ดูจังหวะด้วยตาได้ด้วย" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>การแก้ปัญหา</h2>
-    <div class="card">
-      <p><strong>แอปไม่ได้ยินเสียงฉัน</strong> ตรวจสอบว่าสถานะไมค์เป็น “กำลังฟัง”
-         หากปิดอยู่ ให้แตะ “ฟัง” ในห้องที่มีเสียงดังหรือเมื่อเล่นผ่านลำโพง ให้ใช้หูฟัง</p>
-      <p><strong>ความเร็วที่ตรวจพบเป็นครึ่งหนึ่งหรือสองเท่า</strong> พูดว่า “double” หรือ “half” เพื่อแก้ไข</p>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>บันทึกเสียงเน้นแยกตามเพลง</h2>
+        <p>กำหนดเสียงคลิกแต่ละครั้งในห้องให้เป็นสูง ต่ำ หรือเงียบ แล้วเก็บไว้เป็นพรีเซ็ตของแต่ละเพลง จะบอสซาโนวาหรือแซมบ้า ทำครั้งเดียว ครั้งหน้าแค่เลือก (Pro)</p>
+      </div>
+      <div class="phone"><img src="../img/th/05-accents.jpg" alt="บันทึกเสียงเน้นแยกตามเพลง" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>ติดต่อ</h2>
-    <p>คำถามหรือข้อเสนอแนะ: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    <section class="reveal">
+      <h2>เริ่มได้ในสามขั้นตอน</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>เปิดแอป</h3><p>แอปเริ่มฟังทันทีที่เปิด</p></li>
+<li class="card"><span class="n">2</span><h3>อนุญาตไมค์</h3><p>แอปจะขอสิทธิ์ใช้ไมค์และการรู้จำเสียงพูดเพียงครั้งแรกครั้งเดียว</p></li>
+<li class="card"><span class="n">3</span><h3>พูดหรือแตะ</h3><p>ทุกคำสั่งมีปุ่มบนหน้าจอให้แตะได้เหมือนกัน</p></li></ol>
+    </section>
 
-    <footer>
-      <a href="privacy.html">นโยบายความเป็นส่วนตัว</a> · © 2026 Not My Tempo
-    </footer>
-  </div>
+    <section class="reveal" id="commands">
+      <h2>คำสั่งที่พูดได้</h2>
+      <div class="card table">
+        <dl><div><dt>start · stop</dt><dd>เล่น หยุด</dd></div><div><dt>faster · slower</dt><dd>เพิ่มหรือลดครั้งละ 5 BPM</dd></div><div><dt>up · down</dt><dd>เพิ่มหรือลดครั้งละ 1 BPM</dd></div><div><dt>tempo 120</dt><dd>ตั้งความเร็วที่ต้องการทันที</dd></div><div><dt>double · half</dt><dd>เร็วขึ้นสองเท่า ช้าลงครึ่งหนึ่ง</dd></div><div><dt>three beats</dt><dd>เปลี่ยนอัตราจังหวะ</dd></div><div><dt>quarter · eighth · triplet · sixteenth</dt><dd>แบ่งจังหวะย่อย</dd></div><div><dt>louder · quieter · mute</dt><dd>เสียงคลิกดังขึ้น เบาลง ปิดเสียง</dd></div><div><dt>volume 60</dt><dd>ตั้งระดับเสียงเป็นเปอร์เซ็นต์</dd></div><div><dt>bounce · orbit</dt><dd>เปลี่ยนมุมมองจังหวะ</dd></div><div><dt>timer 5 minutes</dt><dd>ตั้งตัวจับเวลาซ้อม</dd></div><div><dt>practice</dt><dd>ค่อย ๆ เพิ่มความเร็วระหว่างซ้อม (Pro)</dd></div><div><dt>tune</dt><dd>เปิดเครื่องตั้งสาย (Pro)</dd></div><div><dt>help</dt><dd>แสดงคำสั่งทั้งหมด</dd></div><div><dt>close · done</dt><dd>ปิดแผงที่เปิดอยู่</dd></div></dl>
+      </div>
+      <p class="muted">การรู้จำเสียงทำงานเป็นภาษาอังกฤษ (สหรัฐอเมริกา) จึงต้องพูดคำสั่งเป็นคำภาษาอังกฤษ ยังไม่รองรับคำสั่งภาษาไทย หน้าจอแอปแสดงเป็นภาษาไทย และทุกคำสั่งแตะปุ่มแทนได้</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>เมโทรนอมใช้ฟรี อยากได้มากกว่านั้นมี Pro</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>ฟรี</h3>
+          <ul><li>คำสั่งเสียงทั้งหมด</li><li>อัตราจังหวะ 1 ถึง 8 จังหวะ พร้อมเน้นจังหวะแรก</li><li>แบ่งจังหวะย่อยแบบตัวดำ ตัวเขบ็ต ทริปเปิล และตัวเขบ็ต 2 ชั้น</li><li>มุมมองลูกบอลเด้ง วงโคจร และวงแหวน</li><li>แตะหาความเร็วและตรวจความแม่นจังหวะ</li><li>ตัวจับเวลาซ้อม</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Not My Tempo Pro</h3>
+          <ul><li>โหมดฝึกซ้อม: เพิ่ม BPM ทีละนิดทุกไม่กี่ห้อง จนถึงความเร็วเป้าหมาย</li><li>ตัวแก้ไขเสียงเน้นพร้อมพรีเซ็ตแยกตามเพลง</li><li>เครื่องตั้งสายโครมาติก</li></ul>
+          <p class="muted">สมัครรายปีพร้อมทดลองใช้ฟรี หรือซื้อแบบตลอดชีพครั้งเดียว</p>
+        </div>
+      </div>
+      <p class="muted">การควบคุมด้วยเสียงและฟีเจอร์การช่วยการเข้าถึงจะฟรีสำหรับทุกคนตลอดไป ถ้าคุณซื้อแอปไว้ก่อนมี Pro คุณใช้ฟีเจอร์ Pro ได้ครบทุกอย่างแล้ว</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>คำถามที่พบบ่อย</h2>
+      <div class="faq"><details><summary>พูดภาษาไทยได้ไหม</summary><p>การรู้จำเสียงทำงานเป็นภาษาอังกฤษ (สหรัฐอเมริกา) คำสั่งจึงเป็นคำภาษาอังกฤษอย่าง <code>start</code> และ <code>faster</code> คำสั่งสั้น ๆ ทั้งนั้น ใช้ไม่นานก็คล่อง และทุกคำสั่งแตะปุ่มแทนได้</p></details>
+<details><summary>แอปไม่ได้ยินที่ฉันพูด</summary><p>ดูว่าสถานะไมค์ขึ้นว่า “กำลังฟัง” หรือไม่ ถ้าปิดอยู่ให้แตะ “ฟัง” ถ้าอยู่ในที่เสียงดังหรือเปิดลำโพงดัง ๆ ให้ใช้หูฟัง เสียงคลิกจะได้ไม่เข้าไมค์ และแอปจะฟังได้แม่นขึ้นมาก</p></details>
+<details><summary>การฟังปิดไปเอง</summary><p>เพื่อประหยัดแบตเตอรี่ แอปจะหยุดฟังเมื่อไม่มีคำสั่งไปสักไม่กี่นาที แตะ “ฟัง” เพื่อเปิดอีกครั้ง</p></details>
+<details><summary>ความเร็วออกมาเป็นครึ่งหนึ่งหรือสองเท่า</summary><p>พูดว่า <code>double</code> หรือ <code>half</code> ก็แก้ได้ทันที</p></details>
+<details><summary>ใช้เครื่องตั้งสายยังไง</summary><p>พูดว่า <code>tune</code> หรือแตะปุ่มรูปคลื่นเสียงบนการ์ดความเร็ว เล่นโน้ตหนึ่งตัว เมื่อตัวชี้เข้าไปอยู่ในช่วงสีเขียวแปลว่าเสียงตรงแล้ว พูดว่า <code>close</code> เพื่อปิด</p></details>
+<details><summary>ฉันใช้การควบคุมด้วยเสียงของ iOS อยู่แล้ว</summary><p>ปิดไมค์ของแอป แล้วสั่งงานด้วยการพูดชื่อปุ่มแทน ปุ่มควบคุมทุกปุ่มมีป้ายกำกับสำหรับ VoiceOver</p></details>
+<details><summary>เสียงของฉันถูกส่งไปที่ไหนหรือเปล่า</summary><p>ไม่ แอปรู้จำเสียงบนอุปกรณ์ของคุณ ไม่บันทึก ไม่จัดเก็บ และไม่ส่งออกไปไหน เมโทรนอม การควบคุมด้วยเสียง และเครื่องตั้งสายใช้ได้แม้ไม่มีอินเทอร์เน็ต</p></details>
+<details><summary>ยกเลิกการสมัครยังไง</summary><p>ไปที่ การตั้งค่า &gt; บัญชี Apple &gt; การสมัครสมาชิก แผนรายปีจะต่ออายุอัตโนมัติ เว้นแต่จะยกเลิกอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดรอบปัจจุบัน ส่วนแบบตลอดชีพชำระครั้งเดียว</p></details></div>
+      <p class="contact">มีคำถามหรือข้อเสนอแนะ ส่งมาที่ <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>ซ้อมวันนี้<br>ไม่ต้องละมือจากเครื่องดนตรี</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6781537149">ดาวน์โหลดฟรีบน App Store</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="ภาษา"><a href="../" hreflang="en" lang="en">English</a>
+<a href="../ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../th/" hreflang="th" lang="th" aria-current="page">ไทย</a></nav>
+    <p><a href="privacy.html">นโยบายความเป็นส่วนตัว</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Not My Tempo</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

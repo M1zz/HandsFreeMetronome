@@ -1,0 +1,115 @@
+{
+  "title": "Not My Tempo: das Metronom, das du beim Spielen per Stimme steuerst",
+  "description": "Sag start, faster oder tempo 120 auf Englisch, und der Klick folgt. Die Hände bleiben am Instrument. Metronom und Sprachsteuerung sind gratis.",
+  "hero": {
+    "headline": "Hände am Instrument.\nTempo per Zuruf.",
+    "lead": "Sag mitten in der Phrase `faster`, und der Klick zieht an. Kein Griff zum Display, keine Pause, nur um das Tempo zu ändern. Die Befehle sind kurze englische Wörter.",
+    "cta": "Gratis im App Store laden",
+    "note": "Das komplette Metronom und die Sprachsteuerung sind gratis."
+  },
+  "demo": {
+    "title": "Probier es laut aus",
+    "lead": "Tippe auf einen Befehl oder schalte das Mikrofon ein und sprich ihn auf Englisch. Mach den Ton lauter, es klickt.",
+    "mic": "Mit dem Mikrofon sprechen",
+    "micOn": "Hört zu. Sag mal „faster“",
+    "micNone": "Dieser Browser erkennt keine Sprache. Tippe stattdessen auf einen Befehl.",
+    "note": "Diese Web-Demo nutzt die Spracherkennung deines Browsers. Die App erkennt Sprache direkt auf deinem Gerät."
+  },
+  "problem": {
+    "title": "Schon mal den Groove verloren, nur um das Tempo anzupassen?",
+    "text": "Bogen ablegen, Plektrum zwischen die Zähne, zweimal aufs Display tippen, und das Gefühl, das du gerade gefunden hattest, ist weg. Mit Not My Tempo änderst du das Tempo mit einem einzigen Wort, ohne deine Haltung aufzugeben."
+  },
+  "features": [
+    {
+      "title": "Ein Wort, und der Klick folgt",
+      "text": "Kurze englische Wörter wie `start`, `faster` oder `tempo 120`. Die App hört zu, sobald du sie öffnest. Du musst weder die iOS-Sprachsteuerung noch andere Bedienungshilfen einschalten.\nBefehl vergessen? Sag `help`, und alle Befehle erscheinen auf dem Bildschirm.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "Den Beat auch sehen",
+      "text": "Wähl zwischen Ball, Orbit und Ring. Die Eins leuchtet rot und klickt lauter.\nTippst du auf dem Orbit im Takt mit, siehst du, wie genau du getroffen hast.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Akzente für jeden Song speichern",
+      "text": "Stell jeden Klick im Takt auf hoch, tief oder stumm und sichere das Muster als Preset. Bossa Nova oder Samba baust du einmal und wählst sie danach nur noch aus. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "In drei Schritten startklar",
+    "items": [
+      {"title": "App öffnen", "text": "Sie hört sofort zu."},
+      {"title": "Mikrofon erlauben", "text": "Beim ersten Start fragt sie einmal nach Mikrofon und Spracherkennung."},
+      {"title": "Sprechen oder tippen", "text": "Jeden Befehl gibt es auch als Bedienelement auf dem Bildschirm."}
+    ]
+  },
+  "reference": {
+    "title": "Das kannst du sagen",
+    "rows": [
+      ["start · stop", "abspielen, pausieren"],
+      ["faster · slower", "5 BPM schneller oder langsamer"],
+      ["up · down", "1 BPM schneller oder langsamer"],
+      ["tempo 120", "direkt zu einem Tempo springen"],
+      ["double · half", "doppelt so schnell, halb so schnell"],
+      ["three beats", "Taktart wechseln"],
+      ["quarter · eighth · triplet · sixteenth", "Unterteilung in Viertel, Achtel, Triolen, Sechzehntel"],
+      ["louder · quieter · mute", "Klick lauter, leiser, stumm"],
+      ["volume 60", "Lautstärke in Prozent einstellen"],
+      ["bounce · orbit", "Beat-Ansicht wechseln"],
+      ["timer 5 minutes", "Übungstimer stellen"],
+      ["practice", "Tempo beim Üben schrittweise steigern (Pro)"],
+      ["tune", "Stimmgerät öffnen (Pro)"],
+      ["help", "alle Befehle anzeigen"],
+      ["close · done", "Fenster schließen"]
+    ],
+    "note": "Die Spracherkennung läuft auf Englisch (USA), deshalb sprichst du die Befehle auf Englisch, auch wenn dein iPhone auf Deutsch eingestellt ist. Jeder Befehl geht auch per Tippen."
+  },
+  "pricing": {
+    "title": "Das Metronom ist gratis. Pro, wenn du mehr willst.",
+    "free": {
+      "name": "Gratis",
+      "items": [
+        "Alle Sprachbefehle",
+        "Taktarten von 1 bis 8 Schlägen, mit betonter Eins",
+        "Unterteilung in Viertel, Achtel, Triolen und Sechzehntel",
+        "Drei Ansichten: Ball, Orbit und Ring",
+        "Tap-Tempo und Timing-Check",
+        "Übungstimer"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Übungsmodus: alle paar Takte ein paar BPM mehr, bis du dein Zieltempo erreichst",
+        "Akzent-Editor mit Presets pro Song",
+        "Chromatisches Stimmgerät"
+      ],
+      "note": "Jahresabo mit kostenlosem Testzeitraum oder einmaliger Kauf auf Lebenszeit"
+    },
+    "note": "Sprachsteuerung und Bedienungshilfen bleiben für alle gratis. Du hast die App schon vor Pro gekauft? Dann gehören dir alle Pro-Funktionen bereits."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {"q": "Kann ich Deutsch sprechen?", "a": "Die Spracherkennung läuft auf Englisch (USA), deshalb sind die Befehle kurze englische Wörter wie `start` oder `faster`. Die hast du schnell drauf, und jeder Befehl geht auch per Tippen. Der Rest der App ist auf Deutsch."},
+      {"q": "Die App hört mich nicht.", "a": "Prüf, ob beim Mikrofon „Hört zu“ steht. Falls nicht, tippe auf „Zuhören“. In lauten Räumen oder mit Lautsprechern helfen Kopfhörer, weil der Klick dann nicht ins Mikrofon gelangt."},
+      {"q": "Das Zuhören hat sich von selbst ausgeschaltet.", "a": "Um Akku zu sparen, schaltet sich das Zuhören nach ein paar Minuten ohne Befehl aus. Tippe auf „Zuhören“, um es wieder einzuschalten."},
+      {"q": "Das Tempo ist halb oder doppelt so schnell.", "a": "Sag `double` oder `half`, um es zu korrigieren."},
+      {"q": "Wie benutze ich das Stimmgerät?", "a": "Sag `tune` oder tippe auf die Wellenform-Taste auf der Tempo-Karte. Spiel einen Ton: Landet die Anzeige im grünen Bereich, bist du gestimmt. Mit `close` schließt du es wieder."},
+      {"q": "Ich nutze schon die iOS-Sprachsteuerung.", "a": "Schalte das Mikrofon der App aus und steuere sie über die Namen der Tasten. Alle Bedienelemente haben VoiceOver-Beschriftungen."},
+      {"q": "Wird meine Stimme irgendwohin geschickt?", "a": "Nein. Sprache wird direkt auf deinem Gerät erkannt und weder aufgenommen noch gespeichert oder hochgeladen. Metronom, Sprachsteuerung und Stimmgerät funktionieren auch ohne Internet."},
+      {"q": "Wie kündige ich das Abo?", "a": "Unter Einstellungen > Apple Account > Abonnements. Das Jahresabo verlängert sich automatisch, wenn du nicht spätestens 24 Stunden vor Ende des Zeitraums kündigst. Der Kauf auf Lebenszeit wird nur einmal berechnet."}
+    ]
+  },
+  "closing": {
+    "headline": "Lass die Hände\nam Instrument",
+    "cta": "Gratis im App Store laden"
+  },
+  "ui": {
+    "skip": "Zum Inhalt springen",
+    "languages": "Sprache",
+    "privacy": "Datenschutzerklärung",
+    "contact": "Fragen oder Feedback? Schreib an {email}."
+  }
+}

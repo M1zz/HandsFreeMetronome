@@ -1,0 +1,193 @@
+{
+  "title": "Not My Tempo: el metrónomo que manejas con la voz mientras tocas",
+  "description": "Di start, faster o tempo 120 en inglés y el clic te sigue, sin soltar el instrumento. El metrónomo completo y el control por voz son gratis.",
+  "hero": {
+    "headline": "Las manos en el instrumento,\nel tempo con la voz",
+    "lead": "Di `faster` en mitad de la frase y el clic acelera. Los comandos son palabras cortas en inglés, y no tienes que parar para cambiar el tempo.",
+    "cta": "Descárgalo gratis en el App Store",
+    "note": "El metrónomo completo y el control por voz son gratis."
+  },
+  "demo": {
+    "title": "Pruébalo en voz alta",
+    "lead": "Toca una frase o activa el micrófono y dila en inglés. Sube el volumen, que suena el clic.",
+    "mic": "Hablarle",
+    "micOn": "Escuchando. Prueba a decir “faster”",
+    "micNone": "Este navegador no reconoce la voz. Toca una de las frases.",
+    "note": "Esta demo web usa el reconocimiento de voz del navegador. La app reconoce la voz en el propio dispositivo."
+  },
+  "problem": {
+    "title": "¿Alguna vez has perdido el groove solo por tocar el tempo?",
+    "text": "Dejas el arco, te pones la púa entre los dientes, tocas la pantalla dos veces y lo que acababas de pillar ya se ha ido. Not My Tempo cambia el tempo con una sola palabra, sin moverte de donde estás."
+  },
+  "features": [
+    {
+      "title": "Lo dices y te sigue",
+      "text": "Palabras cortas en inglés como `start`, `faster` o `tempo 120`. Escucha en cuanto abres la app, sin activar Control por voz de iOS ni ningún ajuste de accesibilidad.\n¿Se te olvida un comando? Di `help` y verás en pantalla todo lo que puedes decir.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "El pulso también se ve",
+      "text": "Elige entre rebote, órbita o anillo. El primer tiempo del compás sale en rojo y suena más fuerte.\nSi pulsas al ritmo en la órbita, te enseña lo cerca que has caído.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Los acentos de cada canción, guardados",
+      "text": "Pon cada clic del compás en agudo, grave o silencio y guárdalo como preajuste. Montas el patrón de bossa nova o de samba una vez y la próxima solo tienes que elegirlo. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "Empieza en tres pasos",
+    "items": [
+      {
+        "title": "Abre la app",
+        "text": "Empieza a escuchar al momento."
+      },
+      {
+        "title": "Permite el micrófono",
+        "text": "Solo la primera vez pide acceso al micrófono y al reconocimiento de voz."
+      },
+      {
+        "title": "Habla o toca",
+        "text": "Todos los comandos tienen también su botón en pantalla."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Lo que puedes decir",
+    "rows": [
+      [
+        "start · stop",
+        "reproducir, pausar"
+      ],
+      [
+        "faster · slower",
+        "subir o bajar 5 BPM"
+      ],
+      [
+        "up · down",
+        "subir o bajar 1 BPM"
+      ],
+      [
+        "tempo 120",
+        "ir directo a un tempo"
+      ],
+      [
+        "double · half",
+        "el doble, la mitad"
+      ],
+      [
+        "three beats",
+        "cambiar el compás"
+      ],
+      [
+        "quarter · eighth · triplet · sixteenth",
+        "negras, corcheas, tresillos, semicorcheas"
+      ],
+      [
+        "louder · quieter · mute",
+        "clic más fuerte, más suave o en silencio"
+      ],
+      [
+        "volume 60",
+        "fijar el volumen en porcentaje"
+      ],
+      [
+        "bounce · orbit",
+        "cambiar la vista del pulso"
+      ],
+      [
+        "timer 5 minutes",
+        "poner un temporizador de práctica"
+      ],
+      [
+        "practice",
+        "subir el tempo poco a poco mientras practicas (Pro)"
+      ],
+      [
+        "tune",
+        "abrir el afinador (Pro)"
+      ],
+      [
+        "help",
+        "ver todos los comandos"
+      ],
+      [
+        "close · done",
+        "cerrar un panel"
+      ]
+    ],
+    "note": "El reconocimiento de voz funciona en inglés (Estados Unidos), así que los comandos se dicen en inglés. El resto de la app está en español y todo se puede hacer también tocando."
+  },
+  "pricing": {
+    "title": "El metrónomo es gratis. Pro, cuando quieras más.",
+    "free": {
+      "name": "Gratis",
+      "items": [
+        "Todos los comandos de voz",
+        "Compases de 1 a 8 tiempos, con el primero acentuado",
+        "Subdivisiones en negras, corcheas, tresillos y semicorcheas",
+        "Vistas de rebote, órbita y anillo",
+        "Tempo por toques y prueba de precisión",
+        "Temporizador de práctica"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Modo práctica: suma unos BPM cada pocos compases hasta llegar a tu objetivo",
+        "Editor de acentos con preajustes por canción",
+        "Afinador cromático"
+      ],
+      "note": "Suscripción anual con prueba gratuita, o compra única de por vida"
+    },
+    "note": "El control por voz y las funciones de accesibilidad seguirán siendo gratis para todos. ¿Compraste la app antes de que existiera Pro? Ya tienes todas las funciones Pro."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "¿Puedo hablarle en español?",
+        "a": "El reconocimiento de voz funciona en inglés (Estados Unidos), así que los comandos son palabras cortas en inglés como `start` o `faster`. Se aprenden enseguida, y todos tienen también su botón en pantalla."
+      },
+      {
+        "q": "No me oye.",
+        "a": "Comprueba que el estado del micrófono diga Escuchando. Si está apagado, toca Escuchar. En sitios ruidosos o con altavoces a todo volumen, usa auriculares para que el clic no se cuele en el micrófono."
+      },
+      {
+        "q": "La escucha se ha apagado sola.",
+        "a": "Para ahorrar batería, la escucha se apaga tras unos minutos sin comandos. Toca Escuchar para volver a activarla."
+      },
+      {
+        "q": "El tempo sale al doble o a la mitad.",
+        "a": "Di `double` o `half` y queda corregido."
+      },
+      {
+        "q": "¿Cómo se usa el afinador?",
+        "a": "Di `tune` o toca el botón de la onda en la tarjeta del tempo. Toca una nota: cuando el indicador cae en la zona verde, estás afinado. Di `close` para salir."
+      },
+      {
+        "q": "Ya uso Control por voz de iOS.",
+        "a": "Apaga el micrófono propio de la app y manéjala por el nombre de cada botón. Todos los controles tienen etiqueta de VoiceOver."
+      },
+      {
+        "q": "¿Se envía mi voz a algún sitio?",
+        "a": "No. La voz se reconoce en el propio dispositivo y nunca se graba, se guarda ni se envía. El metrónomo, el control por voz y el afinador funcionan sin conexión."
+      },
+      {
+        "q": "¿Cómo cancelo la suscripción?",
+        "a": "En Ajustes > Cuenta de Apple > Suscripciones. El plan anual se renueva automáticamente salvo que lo canceles al menos 24 horas antes de que termine el periodo. La opción de por vida es un único pago."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Desde el ensayo de hoy,\nno sueltes el instrumento",
+    "cta": "Descárgalo gratis en el App Store"
+  },
+  "ui": {
+    "skip": "Saltar al contenido",
+    "languages": "Idioma",
+    "privacy": "Política de privacidad",
+    "contact": "¿Dudas o comentarios? Escríbenos a {email}."
+  }
+}

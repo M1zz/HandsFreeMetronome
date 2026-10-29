@@ -1,134 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Not My Tempo — eller serbest metronom ve akort aleti</title>
-  <meta name="description" content="Not My Tempo, çalarken tamamen sesinizle yönettiğiniz, kromatik akort aleti de içeren bir metronomdur." />
-  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/" />
-  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/" />
-  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/" />
-  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/" />
-  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/" />
-  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/" />
-  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/" />
-  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/" />
-  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/" />
-  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/" />
-  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/" />
-  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not My Tempo: çalarken konuştuğunuz metronom</title>
+  <meta name="description" content="start, faster veya tempo 120 deyin, tık sizi takip etsin; elleriniz enstrümandan ayrılmasın. Tam metronom ve sesli denetim ücretsiz.">
+  <meta name="theme-color" content="#0A7EA4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6781537149">
+  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not My Tempo: çalarken konuştuğunuz metronom">
+  <meta property="og:description" content="start, faster veya tempo 120 deyin, tık sizi takip etsin; elleriniz enstrümandan ayrılmasın. Tam metronom ve sesli denetim ücretsiz.">
+  <meta property="og:url" content="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <meta property="og:image" content="https://m1zz.github.io/HandsFreeMetronome/img/tr/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="langs" aria-label="Dil">
-      <a href="../" hreflang="en" lang="en">English</a>
-      <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
-      <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
-      <a href="../de/" hreflang="de" lang="de">Deutsch</a>
-      <a href="../es/" hreflang="es" lang="es">Español</a>
-      <a href="../fr/" hreflang="fr" lang="fr">Français</a>
-      <a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-      <a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-      <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-      <a href="../it/" hreflang="it" lang="it">Italiano</a>
-      <a href="../ru/" hreflang="ru" lang="ru">Русский</a>
-      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
-      <a href="../pl/" hreflang="pl" lang="pl">Polski</a>
-      <a href="./" hreflang="tr" lang="tr" aria-current="true">Türkçe</a>
-      <a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
-      <a href="../da/" hreflang="da" lang="da">Dansk</a>
-      <a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
-      <a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
-      <a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
-      <a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
-      <a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
-      <a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
-      <a href="../th/" hreflang="th" lang="th">ไทย</a>
-    </nav>
+  <a class="skip" href="#main">İçeriğe geç</a>
+  <header class="bar">
+    <a class="brand" href="../tr/"><img src="../icon.png" alt="" width="32" height="32">Not My Tempo</a>
+    <a class="lang-link" href="#languages">Dil</a>
+  </header>
 
-    <header>
-      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <h1>Not My Tempo</h1>
-      <div class="sub">Eller serbest metronom ve akort aleti — Destek</div>
-      <a class="store-btn" href="https://apps.apple.com/tr/app/not-ma-tempo/id6781537149">App&nbsp;Store’dan İndirin</a>
-      <div class="sale">Metronomun tamamı ve eller serbest sesli kontrolün hepsi <strong>ücretsizdir</strong>.
-        <strong>Not My Tempo Pro</strong>; alıştırma modu, hazır ayarlı vurgu düzenleyici ve kromatik akort aletini ekler.
-        Ücretsiz deneme süreli yıllık abonelik ya da tek seferlik ömür boyu satın alma olarak sunulur.</div>
-      <div class="price-note">Sesli kontrol ve erişilebilirlik özellikleri herkes için her zaman ücretsiz kalır.
-        Uygulamayı Pro’dan önce mi satın aldınız? O zaman tüm Pro özelliklerine zaten sahipsiniz.</div>
-    </header>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Eller enstrümanda,<br>tempo sesinizde</h1>
+        <p class="lead">Cümlenin ortasında <code>faster</code> deyin, metronom hızlansın. Ekrana uzanmak da, tempoyu değiştirmek için durmak da yok. Komutlar İngilizce sözcüklerle söylenir.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6781537149">App Store’dan ücretsiz indirin</a><a class="try" href="#try">Sesli deneyin ↓</a></div>
+        <p class="muted small">Tam metronom ve sesli denetim ücretsiz.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/01-playing.jpg" alt="Eller enstrümanda, tempo sesinizde" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <h2>Nedir</h2>
-    <p>Not My Tempo, çalarken tamamen sesinizle yönettiğiniz bir metronomdur.
-       Ekrana dokunmanız, iOS Sesle Denetim’i ya da herhangi bir erişilebilirlik ayarını açmanız gerekmez.
-       İçinde kromatik bir akort aleti de bulunur.</p>
 
-    <h2>Başlarken</h2>
-    <div class="card">
-      <p>1. Uygulamayı açın; hemen <strong>dinlemeye</strong> başlar.<br>
-         2. İlk seferde mikrofon ve konuşma tanıma iznini verin.<br>
-         3. Bir komut söyleyin ya da ekrandaki kontrollere dokunun.</p>
-      <p class="sub">İpucu: Tık sesi mikrofona karışmasın diye kulaklık kullanın;
-         böylece konuşma tanıma ve akort aleti daha isabetli çalışır.</p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Sesli deneyin</h2>
+      <p class="muted">Bir ifadeye dokunun ya da mikrofonu açıp İngilizce söyleyin. Sesi açın, metronom tıklıyor.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Sesli deneyin&quot;, &quot;lead&quot;: &quot;Bir ifadeye dokunun ya da mikrofonu açıp İngilizce söyleyin. Sesi açın, metronom tıklıyor.&quot;, &quot;mic&quot;: &quot;Mikrofona söyleyin&quot;, &quot;micOn&quot;: &quot;Dinliyor. “faster” demeyi deneyin&quot;, &quot;micNone&quot;: &quot;Bu tarayıcı konuşma tanımıyor. Bunun yerine bir ifadeye dokunun.&quot;, &quot;note&quot;: &quot;Bu web denemesi tarayıcınızın konuşma tanımasını kullanır. Uygulama konuşmayı cihazınızda tanır.&quot;}"></div>
+    </section>
 
-    <h2>Sesli komutlar</h2>
-    <div class="card">
-      <table>
-        <tr><td class="cmd">"start" / "stop"</td><td>çal / durdur</td></tr>
-        <tr><td class="cmd">"faster" / "slower"</td><td>±5 BPM</td></tr>
-        <tr><td class="cmd">"up" / "down"</td><td>±1 BPM</td></tr>
-        <tr><td class="cmd">"tempo 120"</td><td>tam bir değere ayarla</td></tr>
-        <tr><td class="cmd">"double" / "half"</td><td>×2 / ÷2</td></tr>
-        <tr><td class="cmd">"three beats"</td><td>ölçü birimini ayarla</td></tr>
-        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>alt bölüm</td></tr>
-        <tr><td class="cmd">"louder" / "quieter" / "mute"</td><td>tık sesi düzeyi</td></tr>
-        <tr><td class="cmd">"volume 60"</td><td>ses düzeyini yüzde olarak ayarla</td></tr>
-        <tr><td class="cmd">"bounce" / "orbit"</td><td>vuruş görünümünü değiştir</td></tr>
-        <tr><td class="cmd">"practice"</td><td>çalıştıkça tempo kendiliğinden artar (Pro)</td></tr>
-        <tr><td class="cmd">"tune"</td><td>akort aletini aç (Pro)</td></tr>
-        <tr><td class="cmd">"help"</td><td>komut listesini göster</td></tr>
-        <tr><td class="cmd">"close" / "done"</td><td>paneli kapat</td></tr>
-      </table>
-      <p class="sub">Komutlar İngilizce söylenir (tanıma Amerikan İngilizcesi kullanır).
-         Tüm komutları ekrandaki kontrollerle de verebilirsiniz.</p>
-    </div>
+    <section class="problem reveal">
+      <h2>Tempoyu biraz değiştireyim derken akışı kaybettiniz mi?</h2>
+      <p>Yayı bırakırsınız, penayı dişlerinizin arasına alırsınız, ekrana iki kez dokunursunuz ve az önce yakaladığınız his gider. Not My Tempo, tempoyu tek bir sözcükle değiştirir; siz çaldığınız duruşu hiç bozmazsınız.</p>
+    </section>
 
-    <h2>Akort aleti</h2>
-    <p><code>tune</code> deyin (ya da tempo kartındaki dalga düğmesine dokunun). Bir nota çalın:
-       gösterge yeşil bölgeye geldiğinde akordunuz tamdır. Kapatmak için <code>close</code> deyin.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Söyleyin, tık takip etsin</h2>
+        <p><code>start</code>, <code>faster</code>, <code>tempo 120</code> gibi kısa İngilizce sözcükler. Uygulama açılır açılmaz dinler; iOS Sesle Denetim’i ya da bir erişilebilirlik ayarını açmanız gerekmez.<br>Bir komutu mu unuttunuz? <code>help</code> deyin, kullanabileceğiniz tüm ifadeler ekranda belirsin.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/04-voice.jpg" alt="Söyleyin, tık takip etsin" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Pil</h2>
-    <p>Pilden tasarruf etmek için birkaç dakika komut gelmezse dinleme kendiliğinden durur.
-       Yeniden açmak için <strong>Dinle</strong>’ye dokunun.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Vuruşu gözle de izleyin</h2>
+        <p>Zıplama, yörünge veya halka arasından seçin. Ölçünün ilk vuruşu kırmızı görünür ve daha güçlü tıklar.<br>Yörüngede ritme uyarak dokunun, ne kadar isabetli vurduğunuzu görün.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/02-orbit.jpg" alt="Vuruşu gözle de izleyin" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Sorun giderme</h2>
-    <div class="card">
-      <p><strong>Beni duymuyor.</strong> Mikrofon durumunun “Dinliyor” olduğundan emin olun.
-         Kapalıysa “Dinle”ye dokunun. Gürültülü bir odada ya da hoparlörden çalarken kulaklık kullanın.</p>
-      <p><strong>Algılanan tempo yarısı ya da iki katı çıkıyor.</strong> Düzeltmek için “double” ya da “half” deyin.</p>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Her şarkı için vurguları kaydedin</h2>
+        <p>Ölçüdeki her tıkı tiz, pes veya sessiz yapın ve hazır ayar olarak saklayın. Bossa nova ya da samba kalıbını bir kez kurun, sonra yalnızca seçin. (Pro)</p>
+      </div>
+      <div class="phone"><img src="../img/tr/05-accents.jpg" alt="Her şarkı için vurguları kaydedin" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>İletişim</h2>
-    <p>Sorularınız ve geri bildirimleriniz için: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    <section class="reveal">
+      <h2>Üç adımda başlayın</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Uygulamayı açın</h3><p>Hemen dinlemeye başlar.</p></li>
+<li class="card"><span class="n">2</span><h3>Mikrofona izin verin</h3><p>Mikrofon ve konuşma tanıma iznini yalnızca bir kez sorar.</p></li>
+<li class="card"><span class="n">3</span><h3>Konuşun ya da dokunun</h3><p>Her komutun ekranda bir düğmesi de var.</p></li></ol>
+    </section>
 
-    <footer>
-      <a href="privacy.html">Gizlilik Politikası</a> · © 2026 Not My Tempo
-    </footer>
-  </div>
+    <section class="reveal" id="commands">
+      <h2>Neler söyleyebilirsiniz</h2>
+      <div class="card table">
+        <dl><div><dt>start · stop</dt><dd>başlat, durdur</dd></div><div><dt>faster · slower</dt><dd>5 BPM hızlandır veya yavaşlat</dd></div><div><dt>up · down</dt><dd>1 BPM hızlandır veya yavaşlat</dd></div><div><dt>tempo 120</dt><dd>doğrudan o tempoya geç</dd></div><div><dt>double · half</dt><dd>iki kat hızlı, yarı hızda</dd></div><div><dt>three beats</dt><dd>ölçüyü değiştir</dd></div><div><dt>quarter · eighth · triplet · sixteenth</dt><dd>4'lük, 8'lik, üçleme, 16'lık</dd></div><div><dt>louder · quieter · mute</dt><dd>tık sesini artır, azalt, kapat</dd></div><div><dt>volume 60</dt><dd>ses düzeyini yüzde olarak ayarla</dd></div><div><dt>bounce · orbit</dt><dd>vuruş görünümünü değiştir</dd></div><div><dt>timer 5 minutes</dt><dd>çalışma zamanlayıcısı kur</dd></div><div><dt>practice</dt><dd>çalışırken tempoyu adım adım artır (Pro)</dd></div><div><dt>tune</dt><dd>akort aletini aç (Pro)</dd></div><div><dt>help</dt><dd>tüm komutları göster</dd></div><div><dt>close · done</dt><dd>açık paneli kapat</dd></div></dl>
+      </div>
+      <p class="muted">Konuşma tanıma İngilizce (ABD) çalışır, bu yüzden komutlar İngilizce sözcüklerle söylenir. Uygulama Türkçedir ve her komut dokunarak da kullanılabilir.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Metronom ücretsiz, daha fazlası için Pro</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Ücretsiz</h3>
+          <ul><li>Tüm sesli komutlar</li><li>1 ile 8 vuruş arası ölçüler, vurgulu ilk vuruş</li><li>4'lük, 8'lik, üçleme ve 16'lık alt bölümler</li><li>Zıplama, yörünge ve halka görünümleri</li><li>Tempo vurma ve zamanlama denetimi</li><li>Çalışma zamanlayıcısı</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Not My Tempo Pro</h3>
+          <ul><li>Çalışma modu: hedef tempoya ulaşana kadar birkaç ölçüde bir birkaç BPM ekler</li><li>Şarkı başına hazır ayarlarla vurgu düzenleyici</li><li>Kromatik akort aleti</li></ul>
+          <p class="muted">Ücretsiz denemeli yıllık abonelik ya da tek seferlik ömür boyu satın alım</p>
+        </div>
+      </div>
+      <p class="muted">Sesli denetim ve erişilebilirlik özellikleri herkes için ücretsiz kalacak. Uygulamayı Pro çıkmadan önce satın aldıysanız tüm Pro özellikleri zaten sizin.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Sık sorulan sorular</h2>
+      <div class="faq"><details><summary>Türkçe konuşabilir miyim?</summary><p>Konuşma tanıma İngilizce (ABD) çalışır, bu yüzden komutlar <code>start</code> ve <code>faster</code> gibi kısa İngilizce sözcüklerdir. Çabucak alışırsınız; ayrıca her komut düğmeyle de kullanılabilir.</p></details>
+<details><summary>Uygulama beni duymuyor.</summary><p>Mikrofon durumunun Dinliyor olarak göründüğünü kontrol edin. Kapalıysa Dinle’ye dokunun. Gürültülü bir odada ya da hoparlörden yüksek sesle çalarken kulaklık kullanın; böylece tık sesi mikrofona karışmaz.</p></details>
+<details><summary>Dinleme kendiliğinden kapandı.</summary><p>Pil tasarrufu için birkaç dakika komut gelmezse dinleme kapanır. Yeniden açmak için Dinle’ye dokunun.</p></details>
+<details><summary>Tempo yarı ya da iki kat çıktı.</summary><p>Düzeltmek için <code>double</code> veya <code>half</code> deyin.</p></details>
+<details><summary>Akort aletini nasıl kullanırım?</summary><p><code>tune</code> deyin ya da tempo kartındaki dalga düğmesine dokunun. Bir nota çalın; gösterge yeşil bölgeye girdiğinde akort tamamdır. Çıkmak için <code>close</code> deyin.</p></details>
+<details><summary>Zaten iOS Sesle Denetim kullanıyorum.</summary><p>Uygulamanın kendi mikrofonunu kapatın ve düğme adlarıyla yönetin. Her denetimin bir VoiceOver etiketi vardır.</p></details>
+<details><summary>Sesim bir yere gönderiliyor mu?</summary><p>Hayır. Konuşma cihazınızda tanınır; asla kaydedilmez, saklanmaz veya gönderilmez. Metronom, sesli denetim ve akort aleti internet olmadan çalışır.</p></details>
+<details><summary>Aboneliği nasıl iptal ederim?</summary><p>Ayarlar &gt; Apple Hesabı &gt; Abonelikler bölümünden. Yıllık plan, geçerli dönemin bitiminden en az 24 saat önce iptal edilmedikçe otomatik olarak yenilenir. Ömür boyu seçeneği tek seferlik bir ödemedir.</p></details></div>
+      <p class="contact">Soru ve görüşleriniz için <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> adresine yazın.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Bugünkü çalışmadan itibaren<br>eller enstrümanda</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6781537149">App Store’dan ücretsiz indirin</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Dil"><a href="../" hreflang="en" lang="en">English</a>
+<a href="../ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../tr/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a></nav>
+    <p><a href="privacy.html">Gizlilik Politikası</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Not My Tempo</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

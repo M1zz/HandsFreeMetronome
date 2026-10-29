@@ -1,134 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Not My Tempo — μετρονόμος και κουρδιστήρι χωρίς χέρια</title>
-  <meta name="description" content="Το Not My Tempo είναι ένας μετρονόμος που ελέγχετε εξ ολοκλήρου με τη φωνή σας ενώ παίζετε, με ενσωματωμένο χρωματικό κουρδιστήρι." />
-  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/" />
-  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/" />
-  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/" />
-  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/" />
-  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/" />
-  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/" />
-  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/" />
-  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/" />
-  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/" />
-  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/" />
-  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/" />
-  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not My Tempo: ο μετρονόμος που του μιλάτε ενώ παίζετε</title>
+  <meta name="description" content="Πείτε start, faster ή tempo 120 και το κλικ ακολουθεί, χωρίς να αφήσετε το όργανο. Ο πλήρης μετρονόμος και ο φωνητικός έλεγχος είναι δωρεάν.">
+  <meta name="theme-color" content="#0A7EA4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6781537149">
+  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not My Tempo: ο μετρονόμος που του μιλάτε ενώ παίζετε">
+  <meta property="og:description" content="Πείτε start, faster ή tempo 120 και το κλικ ακολουθεί, χωρίς να αφήσετε το όργανο. Ο πλήρης μετρονόμος και ο φωνητικός έλεγχος είναι δωρεάν.">
+  <meta property="og:url" content="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <meta property="og:image" content="https://m1zz.github.io/HandsFreeMetronome/img/el/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="langs" aria-label="Γλώσσα">
-      <a href="../" hreflang="en" lang="en">English</a>
-      <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
-      <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
-      <a href="../de/" hreflang="de" lang="de">Deutsch</a>
-      <a href="../es/" hreflang="es" lang="es">Español</a>
-      <a href="../fr/" hreflang="fr" lang="fr">Français</a>
-      <a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-      <a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-      <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-      <a href="../it/" hreflang="it" lang="it">Italiano</a>
-      <a href="../ru/" hreflang="ru" lang="ru">Русский</a>
-      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
-      <a href="../pl/" hreflang="pl" lang="pl">Polski</a>
-      <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
-      <a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
-      <a href="../da/" hreflang="da" lang="da">Dansk</a>
-      <a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
-      <a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
-      <a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
-      <a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
-      <a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
-      <a href="./" hreflang="el" lang="el" aria-current="true">Ελληνικά</a>
-      <a href="../th/" hreflang="th" lang="th">ไทย</a>
-    </nav>
+  <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+  <header class="bar">
+    <a class="brand" href="../el/"><img src="../icon.png" alt="" width="32" height="32">Not My Tempo</a>
+    <a class="lang-link" href="#languages">Γλώσσα</a>
+  </header>
 
-    <header>
-      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <h1>Not My Tempo</h1>
-      <div class="sub">Μετρονόμος και κουρδιστήρι χωρίς χέρια — Υποστήριξη</div>
-      <a class="store-btn" href="https://apps.apple.com/gr/app/not-ma-tempo/id6781537149">Λήψη από το App&nbsp;Store</a>
-      <div class="sale">Ο πλήρης μετρονόμος και ο πλήρης φωνητικός έλεγχος χωρίς χέρια είναι <strong>δωρεάν</strong>.
-        Το <strong>Not My Tempo Pro</strong> προσθέτει τη λειτουργία εξάσκησης, την επεξεργασία τόνων με προεπιλογές και το χρωματικό κουρδιστήρι —
-        ως ετήσια συνδρομή με δωρεάν δοκιμή ή ως εφάπαξ αγορά για πάντα.</div>
-      <div class="price-note">Ο φωνητικός έλεγχος και οι λειτουργίες προσβασιμότητας παραμένουν δωρεάν για όλους, πάντα.
-        Αγοράσατε την εφαρμογή πριν από το Pro; Όλες οι λειτουργίες Pro είναι ήδη δικές σας.</div>
-    </header>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Τα χέρια στο όργανο,<br>ο ρυθμός με τη φωνή</h1>
+        <p class="lead">Πείτε <code>faster</code> στη μέση της φράσης και ο μετρονόμος επιταχύνει. Δεν χρειάζεται να απλώσετε το χέρι στην οθόνη ούτε να σταματήσετε. Οι εντολές λέγονται στα αγγλικά.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6781537149">Δωρεάν λήψη από το App Store</a><a class="try" href="#try">Δοκιμάστε το φωναχτά ↓</a></div>
+        <p class="muted small">Ο πλήρης μετρονόμος και ο φωνητικός έλεγχος είναι δωρεάν.</p>
+      </div>
+      <div class="phone"><img src="../img/el/01-playing.jpg" alt="Τα χέρια στο όργανο, ο ρυθμός με τη φωνή" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <h2>Τι είναι</h2>
-    <p>Το Not My Tempo είναι ένας μετρονόμος που ελέγχετε εξ ολοκλήρου με τη φωνή σας ενώ παίζετε —
-       χωρίς πατήματα στην οθόνη και χωρίς να χρειάζεται να ενεργοποιήσετε τον Έλεγχο φωνής του iOS ή
-       κάποια ρύθμιση προσβασιμότητας. Περιλαμβάνει επίσης ενσωματωμένο χρωματικό κουρδιστήρι.</p>
 
-    <h2>Πρώτα βήματα</h2>
-    <div class="card">
-      <p>1. Ανοίξτε την εφαρμογή — αρχίζει αμέσως να <strong>ακούει</strong>.<br>
-         2. Δώστε άδεια για Μικρόφωνο και Αναγνώριση ομιλίας την πρώτη φορά.<br>
-         3. Πείτε μια εντολή ή πατήστε τα χειριστήρια.</p>
-      <p class="sub">Συμβουλή: χρησιμοποιήστε ακουστικά ώστε το κλικ να μη διαρρέει στο μικρόφωνο —
-         έτσι η αναγνώριση ομιλίας και το κουρδιστήρι παραμένουν ακριβή.</p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Δοκιμάστε το φωναχτά</h2>
+      <p class="muted">Πατήστε μια φράση ή ανοίξτε το μικρόφωνο και πείτε την στα αγγλικά. Δυναμώστε την ένταση, ο μετρονόμος κάνει κλικ.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Δοκιμάστε το φωναχτά&quot;, &quot;lead&quot;: &quot;Πατήστε μια φράση ή ανοίξτε το μικρόφωνο και πείτε την στα αγγλικά. Δυναμώστε την ένταση, ο μετρονόμος κάνει κλικ.&quot;, &quot;mic&quot;: &quot;Μιλήστε στο μικρόφωνο&quot;, &quot;micOn&quot;: &quot;Ακούει. Δοκιμάστε να πείτε «faster»&quot;, &quot;micNone&quot;: &quot;Αυτό το πρόγραμμα περιήγησης δεν αναγνωρίζει ομιλία. Πατήστε μια φράση.&quot;, &quot;note&quot;: &quot;Η δοκιμή στον ιστό χρησιμοποιεί την αναγνώριση ομιλίας του προγράμματος περιήγησης. Η εφαρμογή αναγνωρίζει την ομιλία στη συσκευή σας.&quot;}"></div>
+    </section>
 
-    <h2>Φωνητικές εντολές</h2>
-    <div class="card">
-      <table>
-        <tr><td class="cmd">"start" / "stop"</td><td>αναπαραγωγή / παύση</td></tr>
-        <tr><td class="cmd">"faster" / "slower"</td><td>±5 BPM</td></tr>
-        <tr><td class="cmd">"up" / "down"</td><td>±1 BPM</td></tr>
-        <tr><td class="cmd">"tempo 120"</td><td>ορισμός ακριβούς τιμής</td></tr>
-        <tr><td class="cmd">"double" / "half"</td><td>×2 / ÷2</td></tr>
-        <tr><td class="cmd">"three beats"</td><td>ορισμός μέτρου</td></tr>
-        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>υποδιαίρεση</td></tr>
-        <tr><td class="cmd">"louder" / "quieter" / "mute"</td><td>ένταση του κλικ</td></tr>
-        <tr><td class="cmd">"volume 60"</td><td>ορισμός έντασης σε ποσοστό</td></tr>
-        <tr><td class="cmd">"bounce" / "orbit"</td><td>αλλαγή προβολής χρόνων</td></tr>
-        <tr><td class="cmd">"practice"</td><td>η ταχύτητα αυξάνεται αυτόματα όσο εξασκείστε (Pro)</td></tr>
-        <tr><td class="cmd">"tune"</td><td>άνοιγμα κουρδιστηριού (Pro)</td></tr>
-        <tr><td class="cmd">"help"</td><td>εμφάνιση της λίστας εντολών</td></tr>
-        <tr><td class="cmd">"close" / "done"</td><td>κλείσιμο πίνακα</td></tr>
-      </table>
-      <p class="sub">Οι εντολές λέγονται στα αγγλικά (η αναγνώριση χρησιμοποιεί αμερικανικά αγγλικά).
-         Κάθε εντολή μπορεί να δοθεί και πατώντας τα χειριστήρια στην οθόνη.</p>
-    </div>
+    <section class="problem reveal">
+      <h2>Χάσατε τη ροή μόνο και μόνο για να αλλάξετε λίγο την ταχύτητα;</h2>
+      <p>Αφήνετε το δοξάρι, κρατάτε την πένα στα δόντια, πατάτε δύο φορές την οθόνη και η αίσθηση που μόλις βρήκατε χάνεται. Το Not My Tempo αλλάζει την ταχύτητα με μία λέξη, ενώ εσείς μένετε στη θέση που παίζατε.</p>
+    </section>
 
-    <h2>Κουρδιστήρι</h2>
-    <p>Πείτε <code>tune</code> (ή πατήστε το κουμπί με το κύμα στην κάρτα ταχύτητας). Παίξτε μια νότα:
-       όταν ο δείκτης μπει στην πράσινη ζώνη, το κούρδισμα είναι σωστό. Πείτε <code>close</code> για έξοδο.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Το λέτε και ακολουθεί</h2>
+        <p>Σύντομες αγγλικές λέξεις, όπως <code>start</code>, <code>faster</code> και <code>tempo 120</code>. Ακούει μόλις την ανοίξετε, χωρίς να ενεργοποιήσετε τον Έλεγχο φωνής του iOS ή κάποια ρύθμιση προσβασιμότητας.<br>Ξεχάσατε μια εντολή; Πείτε <code>help</code> και όλες οι φράσεις εμφανίζονται στην οθόνη.</p>
+      </div>
+      <div class="phone"><img src="../img/el/04-voice.jpg" alt="Το λέτε και ακολουθεί" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Μπαταρία</h2>
-    <p>Για εξοικονόμηση μπαταρίας, η ακρόαση απενεργοποιείται μόνη της αν δεν δοθεί εντολή για μερικά λεπτά.
-       Πατήστε <strong>Ακρόαση</strong> για να την ενεργοποιήσετε ξανά.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Βλέπετε και τον χρόνο</h2>
+        <p>Διαλέξτε αναπήδηση, τροχιά ή δακτύλιο. Ο πρώτος χρόνος του μέτρου φαίνεται κόκκινος και ακούγεται πιο δυνατά.<br>Πατήστε στον ρυθμό πάνω στην τροχιά και δείτε πόσο κοντά πέσατε.</p>
+      </div>
+      <div class="phone"><img src="../img/el/02-orbit.jpg" alt="Βλέπετε και τον χρόνο" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Αντιμετώπιση προβλημάτων</h2>
-    <div class="card">
-      <p><strong>Δεν με ακούει.</strong> Ελέγξτε ότι η κατάσταση του μικροφώνου είναι «Ακούει».
-         Αν είναι απενεργοποιημένο, πατήστε «Ακρόαση». Σε θορυβώδες δωμάτιο ή όταν παίζετε από ηχείο, χρησιμοποιήστε ακουστικά.</p>
-      <p><strong>Η ταχύτητα που εντοπίστηκε είναι η μισή ή η διπλάσια.</strong> Πείτε «double» ή «half» για διόρθωση.</p>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Οι τόνοι κάθε κομματιού αποθηκευμένοι</h2>
+        <p>Ορίστε κάθε κλικ του μέτρου ως υψηλό, χαμηλό ή σιωπηλό και κρατήστε το ως προεπιλογή. Φτιάχνετε μία φορά το μοτίβο της μπόσα νόβα ή της σάμπα και την επόμενη φορά απλώς το διαλέγετε. (Pro)</p>
+      </div>
+      <div class="phone"><img src="../img/el/05-accents.jpg" alt="Οι τόνοι κάθε κομματιού αποθηκευμένοι" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Επικοινωνία</h2>
-    <p>Ερωτήσεις ή σχόλια: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    <section class="reveal">
+      <h2>Τρία βήματα για να ξεκινήσετε</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Ανοίξτε την εφαρμογή</h3><p>Αρχίζει να ακούει αμέσως.</p></li>
+<li class="card"><span class="n">2</span><h3>Επιτρέψτε το μικρόφωνο</h3><p>Ζητά πρόσβαση στο μικρόφωνο και στην αναγνώριση ομιλίας μόνο μία φορά.</p></li>
+<li class="card"><span class="n">3</span><h3>Μιλήστε ή πατήστε</h3><p>Κάθε εντολή έχει και κουμπί στην οθόνη.</p></li></ol>
+    </section>
 
-    <footer>
-      <a href="privacy.html">Πολιτική απορρήτου</a> · © 2026 Not My Tempo
-    </footer>
-  </div>
+    <section class="reveal" id="commands">
+      <h2>Τι μπορείτε να πείτε</h2>
+      <div class="card table">
+        <dl><div><dt>start · stop</dt><dd>έναρξη, διακοπή</dd></div><div><dt>faster · slower</dt><dd>5 BPM πιο γρήγορα ή πιο αργά</dd></div><div><dt>up · down</dt><dd>1 BPM πιο γρήγορα ή πιο αργά</dd></div><div><dt>tempo 120</dt><dd>κατευθείαν στην ταχύτητα που θέλετε</dd></div><div><dt>double · half</dt><dd>διπλάσια, μισή ταχύτητα</dd></div><div><dt>three beats</dt><dd>αλλαγή μέτρου</dd></div><div><dt>quarter · eighth · triplet · sixteenth</dt><dd>τέταρτα, όγδοα, τρίολες, δεκαεξαδικά</dd></div><div><dt>louder · quieter · mute</dt><dd>κλικ πιο δυνατά, πιο σιγά, σίγαση</dd></div><div><dt>volume 60</dt><dd>ένταση σε ποσοστό</dd></div><div><dt>bounce · orbit</dt><dd>αλλαγή προβολής χρόνου</dd></div><div><dt>timer 5 minutes</dt><dd>χρονόμετρο εξάσκησης</dd></div><div><dt>practice</dt><dd>σταδιακή αύξηση ταχύτητας κατά την εξάσκηση (Pro)</dd></div><div><dt>tune</dt><dd>άνοιγμα κουρδιστηριού (Pro)</dd></div><div><dt>help</dt><dd>εμφάνιση όλων των εντολών</dd></div><div><dt>close · done</dt><dd>κλείσιμο ανοιχτού πίνακα</dd></div></dl>
+      </div>
+      <p class="muted">Η αναγνώριση ομιλίας λειτουργεί στα αγγλικά (ΗΠΑ), γι' αυτό οι εντολές λέγονται με αγγλικές λέξεις. Η εφαρμογή είναι στα ελληνικά και κάθε εντολή λειτουργεί και με πάτημα.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Ο μετρονόμος είναι δωρεάν, το Pro όταν θέλετε περισσότερα</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Δωρεάν</h3>
+          <ul><li>Όλες οι φωνητικές εντολές</li><li>Μέτρα από 1 έως 8 χρόνους, με τονισμένο τον πρώτο</li><li>Υποδιαιρέσεις σε τέταρτα, όγδοα, τρίολες και δεκαεξαδικά</li><li>Αναπήδηση, τροχιά και δακτύλιος</li><li>Tap tempo και έλεγχος ρυθμού</li><li>Χρονόμετρο εξάσκησης</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Not My Tempo Pro</h3>
+          <ul><li>Λειτουργία εξάσκησης: προσθέτει μερικά BPM κάθε λίγα μέτρα μέχρι να φτάσετε τον στόχο σας</li><li>Επεξεργασία τόνων με προεπιλογές ανά κομμάτι</li><li>Χρωματικό κουρδιστήρι</li></ul>
+          <p class="muted">Ετήσια συνδρομή με δωρεάν δοκιμή ή εφάπαξ αγορά για πάντα</p>
+        </div>
+      </div>
+      <p class="muted">Ο φωνητικός έλεγχος και οι λειτουργίες προσβασιμότητας θα μείνουν δωρεάν για όλους. Αν αγοράσατε την εφαρμογή πριν υπάρξει το Pro, έχετε ήδη όλες τις λειτουργίες Pro.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Συχνές ερωτήσεις</h2>
+      <div class="faq"><details><summary>Μπορώ να μιλάω ελληνικά;</summary><p>Η αναγνώριση ομιλίας λειτουργεί στα αγγλικά (ΗΠΑ), οπότε οι εντολές είναι σύντομες αγγλικές λέξεις, όπως <code>start</code> και <code>faster</code>. Τις μαθαίνετε γρήγορα και κάθε εντολή λειτουργεί και με κουμπί.</p></details>
+<details><summary>Δεν με ακούει.</summary><p>Ελέγξτε ότι η κατάσταση του μικροφώνου γράφει «Ακούει». Αν όχι, πατήστε «Ακρόαση». Σε θορυβώδη χώρο ή όταν παίζετε από ηχεία, βάλτε ακουστικά ώστε το κλικ να μη φτάνει στο μικρόφωνο.</p></details>
+<details><summary>Η ακρόαση έκλεισε μόνη της.</summary><p>Για εξοικονόμηση μπαταρίας, η ακρόαση κλείνει αν δεν ακουστεί εντολή για λίγα λεπτά. Πατήστε «Ακρόαση» για να ανοίξει ξανά.</p></details>
+<details><summary>Η ταχύτητα βγήκε μισή ή διπλάσια.</summary><p>Πείτε <code>double</code> ή <code>half</code> και διορθώνεται.</p></details>
+<details><summary>Πώς χρησιμοποιώ το κουρδιστήρι;</summary><p>Πείτε <code>tune</code> ή πατήστε το κουμπί με την κυματομορφή στην κάρτα ταχύτητας. Παίξτε μια νότα· όταν ο δείκτης μπει στην πράσινη ζώνη, είστε κουρδισμένοι. Για έξοδο πείτε <code>close</code>.</p></details>
+<details><summary>Χρησιμοποιώ ήδη τον Έλεγχο φωνής του iOS.</summary><p>Απενεργοποιήστε το μικρόφωνο της εφαρμογής και χειριστείτε την με τα ονόματα των κουμπιών. Κάθε χειριστήριο έχει ετικέτα VoiceOver.</p></details>
+<details><summary>Στέλνεται κάπου η φωνή μου;</summary><p>Όχι. Η ομιλία αναγνωρίζεται στη συσκευή σας και δεν ηχογραφείται, δεν αποθηκεύεται και δεν αποστέλλεται ποτέ. Ο μετρονόμος, ο φωνητικός έλεγχος και το κουρδιστήρι λειτουργούν χωρίς σύνδεση.</p></details>
+<details><summary>Πώς ακυρώνω τη συνδρομή;</summary><p>Στις Ρυθμίσεις &gt; Λογαριασμός Apple &gt; Συνδρομές. Η ετήσια συνδρομή ανανεώνεται αυτόματα, εκτός αν ακυρωθεί τουλάχιστον 24 ώρες πριν από τη λήξη της τρέχουσας περιόδου. Η αγορά για πάντα είναι εφάπαξ χρέωση.</p></details></div>
+      <p class="contact">Ερωτήσεις ή σχόλια; Γράψτε μας στο <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Από τη σημερινή εξάσκηση,<br>τα χέρια στο όργανο</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6781537149">Δωρεάν λήψη από το App Store</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Γλώσσα"><a href="../" hreflang="en" lang="en">English</a>
+<a href="../ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../el/" hreflang="el" lang="el" aria-current="page">Ελληνικά</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a></nav>
+    <p><a href="privacy.html">Πολιτική απορρήτου</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Not My Tempo</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

@@ -1,134 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Not My Tempo — metronom dan tuner bebas tangan</title>
-  <meta name="description" content="Not My Tempo adalah metronom yang sepenuhnya kamu kendalikan dengan suara saat bermain, dengan tuner kromatik bawaan." />
-  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/" />
-  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/" />
-  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/" />
-  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/" />
-  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/" />
-  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/" />
-  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/" />
-  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/" />
-  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/" />
-  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/" />
-  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/" />
-  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not My Tempo: metronom yang kamu ajak bicara sambil bermain</title>
+  <meta name="description" content="Ucapkan start, faster, atau tempo 120 dan klik langsung mengikuti, tanpa melepas tangan dari instrumen. Metronom lengkap dan kontrol suara gratis.">
+  <meta name="theme-color" content="#0A7EA4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6781537149">
+  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not My Tempo: metronom yang kamu ajak bicara sambil bermain">
+  <meta property="og:description" content="Ucapkan start, faster, atau tempo 120 dan klik langsung mengikuti, tanpa melepas tangan dari instrumen. Metronom lengkap dan kontrol suara gratis.">
+  <meta property="og:url" content="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <meta property="og:image" content="https://m1zz.github.io/HandsFreeMetronome/img/id/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="langs" aria-label="Bahasa">
-      <a href="../" hreflang="en" lang="en">English</a>
-      <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
-      <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
-      <a href="../de/" hreflang="de" lang="de">Deutsch</a>
-      <a href="../es/" hreflang="es" lang="es">Español</a>
-      <a href="../fr/" hreflang="fr" lang="fr">Français</a>
-      <a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-      <a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-      <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-      <a href="../it/" hreflang="it" lang="it">Italiano</a>
-      <a href="../ru/" hreflang="ru" lang="ru">Русский</a>
-      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
-      <a href="../pl/" hreflang="pl" lang="pl">Polski</a>
-      <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
-      <a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
-      <a href="../da/" hreflang="da" lang="da">Dansk</a>
-      <a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
-      <a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
-      <a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
-      <a href="./" hreflang="id" lang="id" aria-current="true">Bahasa Indonesia</a>
-      <a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
-      <a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
-      <a href="../th/" hreflang="th" lang="th">ไทย</a>
-    </nav>
+  <a class="skip" href="#main">Langsung ke konten</a>
+  <header class="bar">
+    <a class="brand" href="../id/"><img src="../icon.png" alt="" width="32" height="32">Not My Tempo</a>
+    <a class="lang-link" href="#languages">Bahasa</a>
+  </header>
 
-    <header>
-      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <h1>Not My Tempo</h1>
-      <div class="sub">Metronom dan tuner bebas tangan — Dukungan</div>
-      <a class="store-btn" href="https://apps.apple.com/id/app/not-ma-tempo/id6781537149">Unduh di App&nbsp;Store</a>
-      <div class="sale">Metronom lengkap dan kontrol suara bebas tangan sepenuhnya <strong>gratis</strong>.
-        <strong>Not My Tempo Pro</strong> menambahkan mode latihan, editor aksen dengan preset, dan tuner kromatik —
-        sebagai langganan tahunan dengan uji coba gratis, atau pembelian seumur hidup sekali bayar.</div>
-      <div class="price-note">Kontrol suara dan fitur aksesibilitas tetap gratis untuk semua orang, selamanya.
-        Membeli aplikasi sebelum ada Pro? Semua fitur Pro sudah menjadi milikmu.</div>
-    </header>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Tangan di instrumen,<br>tempo lewat suara</h1>
+        <p class="lead">Ucapkan <code>faster</code> di tengah permainan dan klik langsung lebih cepat. Tidak perlu meraih layar, tidak perlu berhenti untuk mengubah tempo.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6781537149">Unduh gratis di App Store</a><a class="try" href="#try">Coba ucapkan langsung ↓</a></div>
+        <p class="muted small">Metronom lengkap dan kontrol suara gratis.</p>
+      </div>
+      <div class="phone"><img src="../img/id/01-playing.jpg" alt="Tangan di instrumen, tempo lewat suara" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <h2>Apa itu</h2>
-    <p>Not My Tempo adalah metronom yang sepenuhnya kamu kendalikan dengan suara saat bermain —
-       tanpa mengetuk layar, dan tanpa perlu menyalakan Kontrol Suara iOS atau
-       pengaturan aksesibilitas lainnya. Aplikasi ini juga memiliki tuner kromatik bawaan.</p>
 
-    <h2>Mulai menggunakan</h2>
-    <div class="card">
-      <p>1. Buka aplikasi — langsung mulai <strong>mendengarkan</strong>.<br>
-         2. Izinkan akses Mikrofon dan Pengenalan Ucapan saat pertama kali.<br>
-         3. Ucapkan perintah, atau ketuk kontrolnya.</p>
-      <p class="sub">Tips: pakai earphone agar suara klik tidak masuk ke mikrofon —
-         ini menjaga pengenalan ucapan dan tuner tetap akurat.</p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Coba ucapkan langsung</h2>
+      <p class="muted">Ketuk salah satu tombol, atau nyalakan mikrofon dan ucapkan dalam bahasa Inggris. Ada bunyi kliknya, jadi cek dulu volumenya.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Coba ucapkan langsung&quot;, &quot;lead&quot;: &quot;Ketuk salah satu tombol, atau nyalakan mikrofon dan ucapkan dalam bahasa Inggris. Ada bunyi kliknya, jadi cek dulu volumenya.&quot;, &quot;mic&quot;: &quot;Coba lewat mikrofon&quot;, &quot;micOn&quot;: &quot;Mendengarkan. Coba ucapkan “faster”&quot;, &quot;micNone&quot;: &quot;Browser ini tidak mendukung pengenalan suara. Ketuk tombolnya saja.&quot;, &quot;note&quot;: &quot;Demo web ini memakai pengenalan suara dari browser. Di aplikasi, ucapan dikenali langsung di perangkatmu.&quot;}"></div>
+    </section>
 
-    <h2>Perintah suara</h2>
-    <div class="card">
-      <table>
-        <tr><td class="cmd">"start" / "stop"</td><td>putar / jeda</td></tr>
-        <tr><td class="cmd">"faster" / "slower"</td><td>±5 BPM</td></tr>
-        <tr><td class="cmd">"up" / "down"</td><td>±1 BPM</td></tr>
-        <tr><td class="cmd">"tempo 120"</td><td>atur nilai tertentu</td></tr>
-        <tr><td class="cmd">"double" / "half"</td><td>×2 / ÷2</td></tr>
-        <tr><td class="cmd">"three beats"</td><td>atur birama</td></tr>
-        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>subdivisi</td></tr>
-        <tr><td class="cmd">"louder" / "quieter" / "mute"</td><td>volume klik</td></tr>
-        <tr><td class="cmd">"volume 60"</td><td>atur volume dalam persen</td></tr>
-        <tr><td class="cmd">"bounce" / "orbit"</td><td>ganti tampilan ketukan</td></tr>
-        <tr><td class="cmd">"practice"</td><td>tempo naik otomatis saat berlatih (Pro)</td></tr>
-        <tr><td class="cmd">"tune"</td><td>buka tuner (Pro)</td></tr>
-        <tr><td class="cmd">"help"</td><td>tampilkan daftar perintah</td></tr>
-        <tr><td class="cmd">"close" / "done"</td><td>tutup panel</td></tr>
-      </table>
-      <p class="sub">Perintah diucapkan dalam bahasa Inggris (pengenalan memakai bahasa Inggris Amerika).
-         Setiap perintah juga bisa diberikan dengan mengetuk kontrol di layar.</p>
-    </div>
+    <section class="problem reveal">
+      <h2>Pernah kehilangan rasa permainan cuma gara-gara mau ubah tempo?</h2>
+      <p>Taruh penggesek, gigit pick, ketuk layar dua kali, dan rasa yang baru saja kamu temukan langsung hilang. Not My Tempo mengubah tempo cukup dengan satu kata, tanpa mengubah posisi bermainmu.</p>
+    </section>
 
-    <h2>Tuner</h2>
-    <p>Ucapkan <code>tune</code> (atau ketuk tombol gelombang di kartu tempo). Mainkan sebuah not:
-       saat penunjuk masuk ke zona hijau, nadamu sudah pas. Ucapkan <code>close</code> untuk keluar.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Ucapkan, langsung diikuti</h2>
+        <p>Cukup kata bahasa Inggris pendek seperti <code>start</code>, <code>faster</code>, dan <code>tempo 120</code>. Aplikasi langsung mendengarkan begitu dibuka, tanpa perlu menyalakan Kontrol Suara iOS atau pengaturan aksesibilitas apa pun.<br>Lupa perintah? Ucapkan <code>help</code> dan semua frasa yang bisa dipakai muncul di layar.</p>
+      </div>
+      <div class="phone"><img src="../img/id/04-voice.jpg" alt="Ucapkan, langsung diikuti" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Baterai</h2>
-    <p>Untuk menghemat baterai, fitur mendengarkan mati sendiri jika tidak ada perintah selama beberapa menit.
-       Ketuk <strong>Dengarkan</strong> untuk menyalakannya lagi.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Ketukan juga terlihat</h2>
+        <p>Pilih tampilan pantul, orbit, atau cincin. Ketukan pertama tiap birama tampil merah dan berbunyi lebih keras.<br>Ketuk mengikuti irama di tampilan orbit, dan kamu bisa melihat seberapa tepat ketukanmu.</p>
+      </div>
+      <div class="phone"><img src="../img/id/02-orbit.jpg" alt="Ketukan juga terlihat" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Pemecahan masalah</h2>
-    <div class="card">
-      <p><strong>Tidak mendengar saya.</strong> Pastikan status mikrofon “Mendengarkan”.
-         Jika mati, ketuk “Dengarkan”. Di ruangan bising atau saat bermain lewat speaker, gunakan earphone.</p>
-      <p><strong>Tempo yang terdeteksi setengah atau dua kali lipat.</strong> Ucapkan “double” atau “half” untuk memperbaikinya.</p>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Simpan aksen untuk tiap lagu</h2>
+        <p>Atur setiap klik dalam birama menjadi tinggi, rendah, atau senyap, lalu simpan sebagai preset untuk tiap lagu. Pola bossa nova atau samba cukup dibuat sekali, berikutnya tinggal pilih. (Pro)</p>
+      </div>
+      <div class="phone"><img src="../img/id/05-accents.jpg" alt="Simpan aksen untuk tiap lagu" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Kontak</h2>
-    <p>Pertanyaan atau masukan: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    <section class="reveal">
+      <h2>Mulai dalam tiga langkah</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Buka aplikasinya</h3><p>Aplikasi langsung mulai mendengarkan.</p></li>
+<li class="card"><span class="n">2</span><h3>Izinkan mikrofon</h3><p>Izin mikrofon dan pengenalan ucapan hanya diminta sekali.</p></li>
+<li class="card"><span class="n">3</span><h3>Ucapkan atau ketuk</h3><p>Setiap perintah juga punya tombol di layar.</p></li></ol>
+    </section>
 
-    <footer>
-      <a href="privacy.html">Kebijakan Privasi</a> · © 2026 Not My Tempo
-    </footer>
-  </div>
+    <section class="reveal" id="commands">
+      <h2>Perintah yang bisa diucapkan</h2>
+      <div class="card table">
+        <dl><div><dt>start · stop</dt><dd>putar, jeda</dd></div><div><dt>faster · slower</dt><dd>naik atau turun 5 BPM</dd></div><div><dt>up · down</dt><dd>naik atau turun 1 BPM</dd></div><div><dt>tempo 120</dt><dd>langsung ke tempo yang diinginkan</dd></div><div><dt>double · half</dt><dd>dua kali lebih cepat, setengah kecepatan</dd></div><div><dt>three beats</dt><dd>ubah jumlah ketukan per birama</dd></div><div><dt>quarter · eighth · triplet · sixteenth</dt><dd>subdivisi ketukan</dd></div><div><dt>louder · quieter · mute</dt><dd>klik lebih keras, lebih pelan, senyap</dd></div><div><dt>volume 60</dt><dd>atur volume dalam persen</dd></div><div><dt>bounce · orbit</dt><dd>ganti tampilan ketukan</dd></div><div><dt>timer 5 minutes</dt><dd>pasang timer latihan</dd></div><div><dt>practice</dt><dd>naikkan tempo sedikit demi sedikit selama latihan (Pro)</dd></div><div><dt>tune</dt><dd>buka tuner (Pro)</dd></div><div><dt>help</dt><dd>tampilkan semua perintah</dd></div><div><dt>close · done</dt><dd>tutup panel yang terbuka</dd></div></dl>
+      </div>
+      <p class="muted">Pengenalan suara berjalan dalam bahasa Inggris (AS), jadi perintah diucapkan dalam kata bahasa Inggris. Perintah dalam bahasa Indonesia belum didukung. Tampilan aplikasi tetap berbahasa Indonesia, dan setiap perintah juga bisa dilakukan dengan mengetuk.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Metronomnya gratis. Pro ada kalau kamu butuh lebih.</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Gratis</h3>
+          <ul><li>Semua perintah suara</li><li>Birama 1 sampai 8 ketukan, dengan aksen di ketukan pertama</li><li>Subdivisi seperempat, seperdelapan, triol, dan seperenambelas</li><li>Tampilan pantul, orbit, dan cincin</li><li>Ketuk tempo dan cek ketepatan</li><li>Timer latihan</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Not My Tempo Pro</h3>
+          <ul><li>Mode latihan: menambah beberapa BPM setiap beberapa birama sampai tempo targetmu</li><li>Editor aksen dengan preset untuk tiap lagu</li><li>Tuner kromatik</li></ul>
+          <p class="muted">Langganan tahunan dengan uji coba gratis, atau beli seumur hidup sekali bayar</p>
+        </div>
+      </div>
+      <p class="muted">Kontrol suara dan fitur aksesibilitas akan tetap gratis untuk semua orang. Sudah membeli aplikasi ini sebelum ada Pro? Semua fitur Pro sudah jadi milikmu.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Pertanyaan umum</h2>
+      <div class="faq"><details><summary>Bisakah saya bicara dalam bahasa Indonesia?</summary><p>Pengenalan suara berjalan dalam bahasa Inggris (AS), jadi perintahnya berupa kata bahasa Inggris seperti <code>start</code> dan <code>faster</code>. Semuanya kata pendek, jadi cepat terbiasa, dan setiap perintah juga bisa dilakukan dengan mengetuk tombol.</p></details>
+<details><summary>Aplikasi tidak mendengar saya.</summary><p>Pastikan status mikrofon menunjukkan “Mendengarkan”. Kalau mati, ketuk “Dengarkan”. Di ruangan bising atau saat memakai speaker keras, pakai earphone supaya bunyi klik tidak masuk ke mikrofon. Ucapanmu akan jauh lebih mudah dikenali.</p></details>
+<details><summary>Mendengarkan mati sendiri.</summary><p>Untuk menghemat baterai, aplikasi berhenti mendengarkan setelah beberapa menit tanpa perintah. Ketuk “Dengarkan” untuk menyalakannya lagi.</p></details>
+<details><summary>Temponya terbaca setengah atau dua kali lipat.</summary><p>Ucapkan <code>double</code> atau <code>half</code> untuk langsung membetulkannya.</p></details>
+<details><summary>Bagaimana cara memakai tuner?</summary><p>Ucapkan <code>tune</code> atau ketuk tombol gelombang di kartu tempo. Mainkan satu nada; saat penunjuk masuk ke area hijau, nadamu sudah pas. Ucapkan <code>close</code> untuk keluar.</p></details>
+<details><summary>Saya sudah memakai Kontrol Suara iOS.</summary><p>Matikan mikrofon aplikasi dan kendalikan dengan menyebut nama tombol. Semua kontrol punya label VoiceOver.</p></details>
+<details><summary>Apakah suara saya dikirim ke suatu tempat?</summary><p>Tidak. Ucapan dikenali di perangkatmu dan tidak pernah direkam, disimpan, atau diunggah. Metronom, kontrol suara, dan tuner tetap berfungsi tanpa internet.</p></details>
+<details><summary>Bagaimana cara membatalkan langganan?</summary><p>Buka Pengaturan &gt; Akun Apple &gt; Langganan. Langganan tahunan diperpanjang otomatis kecuali dibatalkan paling lambat 24 jam sebelum periode berjalan berakhir. Pembelian seumur hidup hanya sekali bayar.</p></details></div>
+      <p class="contact">Ada pertanyaan atau masukan? Kirim ke <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Mulai latihan hari ini<br>tanpa melepas instrumen</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6781537149">Unduh gratis di App Store</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Bahasa"><a href="../" hreflang="en" lang="en">English</a>
+<a href="../ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../id/" hreflang="id" lang="id" aria-current="page">Bahasa Indonesia</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a></nav>
+    <p><a href="privacy.html">Kebijakan Privasi</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Not My Tempo</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

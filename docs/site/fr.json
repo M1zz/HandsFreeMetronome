@@ -1,0 +1,193 @@
+{
+  "title": "Not My Tempo : le métronome qu’on pilote à la voix en jouant",
+  "description": "Dis start, faster ou tempo 120 en anglais et le clic suit, sans lâcher ton instrument. Le métronome complet et la commande vocale sont gratuits.",
+  "hero": {
+    "headline": "Les mains sur l’instrument,\nle tempo à la voix",
+    "lead": "Dis `faster` en pleine phrase et le clic accélère. Les commandes sont de petits mots anglais, et tu n’as plus besoin de t’arrêter pour changer le tempo.",
+    "cta": "Gratuit sur l’App Store",
+    "note": "Le métronome complet et la commande vocale sont gratuits."
+  },
+  "demo": {
+    "title": "Essaie à voix haute",
+    "lead": "Touche une phrase, ou active le micro et dis-la en anglais. Monte le son : le clic se fait entendre.",
+    "mic": "Lui parler",
+    "micOn": "À l’écoute. Essaie de dire « faster »",
+    "micNone": "Ce navigateur ne reconnaît pas la voix. Touche plutôt une phrase.",
+    "note": "Cette démo web utilise la reconnaissance vocale du navigateur. L’app, elle, reconnaît ta voix directement sur l’appareil."
+  },
+  "problem": {
+    "title": "Déjà perdu le groove juste pour retoucher le tempo ?",
+    "text": "Tu poses l’archet, tu coinces le médiator entre les dents, tu touches l’écran deux fois, et le feeling que tu venais de trouver s’est envolé. Not My Tempo change le tempo en un seul mot, sans que tu bouges."
+  },
+  "features": [
+    {
+      "title": "Tu le dis, il suit",
+      "text": "De petits mots anglais comme `start`, `faster` ou `tempo 120`. L’app écoute dès que tu l’ouvres, sans activer le Contrôle vocal d’iOS ni aucun réglage d’accessibilité.\nUne commande t’échappe ? Dis `help` et tout ce que tu peux dire s’affiche à l’écran.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "Le temps se voit aussi",
+      "text": "Choisis entre rebond, orbite ou anneau. Le premier temps de la mesure s’affiche en rouge et sonne plus fort.\nTape en rythme sur l’orbite et vois si tu tombes pile.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Les accents de chaque morceau, enregistrés",
+      "text": "Règle chaque clic de la mesure en aigu, grave ou muet, puis garde-le en préréglage. Tu montes ton motif de bossa nova ou de samba une fois, et la prochaine fois tu n’as qu’à le choisir. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "Trois étapes pour commencer",
+    "items": [
+      {
+        "title": "Ouvre l’app",
+        "text": "Elle se met à l’écoute toute seule."
+      },
+      {
+        "title": "Autorise le micro",
+        "text": "La première fois seulement, elle demande l’accès au micro et à la reconnaissance vocale."
+      },
+      {
+        "title": "Parle ou touche",
+        "text": "Chaque commande a aussi son bouton à l’écran."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Ce que tu peux dire",
+    "rows": [
+      [
+        "start · stop",
+        "lecture, pause"
+      ],
+      [
+        "faster · slower",
+        "plus ou moins 5 BPM"
+      ],
+      [
+        "up · down",
+        "plus ou moins 1 BPM"
+      ],
+      [
+        "tempo 120",
+        "aller droit au tempo voulu"
+      ],
+      [
+        "double · half",
+        "deux fois plus vite, deux fois moins vite"
+      ],
+      [
+        "three beats",
+        "changer la mesure"
+      ],
+      [
+        "quarter · eighth · triplet · sixteenth",
+        "noires, croches, triolets, doubles croches"
+      ],
+      [
+        "louder · quieter · mute",
+        "clic plus fort, plus doux ou coupé"
+      ],
+      [
+        "volume 60",
+        "régler le volume en pourcentage"
+      ],
+      [
+        "bounce · orbit",
+        "changer la vue des temps"
+      ],
+      [
+        "timer 5 minutes",
+        "lancer un minuteur de travail"
+      ],
+      [
+        "practice",
+        "faire monter le tempo pendant le travail (Pro)"
+      ],
+      [
+        "tune",
+        "ouvrir l’accordeur (Pro)"
+      ],
+      [
+        "help",
+        "afficher toutes les commandes"
+      ],
+      [
+        "close · done",
+        "fermer un panneau"
+      ]
+    ],
+    "note": "La reconnaissance vocale fonctionne en anglais américain : les commandes se disent donc en anglais. Le reste de l’app est en français, et tout marche aussi en touchant l’écran."
+  },
+  "pricing": {
+    "title": "Le métronome est gratuit. Pro, quand tu veux aller plus loin.",
+    "free": {
+      "name": "Gratuit",
+      "items": [
+        "Toutes les commandes vocales",
+        "Mesures de 1 à 8 temps, premier temps marqué",
+        "Subdivisions en noires, croches, triolets et doubles croches",
+        "Vues rebond, orbite et anneau",
+        "Tap tempo et test de précision",
+        "Minuteur de travail"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Mode entraînement : le tempo monte de quelques BPM toutes les X mesures, jusqu’à ton objectif",
+        "Éditeur d’accents avec préréglages par morceau",
+        "Accordeur chromatique"
+      ],
+      "note": "Abonnement annuel avec essai gratuit, ou achat unique à vie"
+    },
+    "note": "La commande vocale et les fonctions d’accessibilité restent gratuites pour tout le monde. Tu as acheté l’app avant l’arrivée de Pro ? Toutes les fonctions Pro sont déjà à toi."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "q": "Je peux lui parler en français ?",
+        "a": "La reconnaissance vocale fonctionne en anglais américain, donc les commandes sont de petits mots anglais comme `start` ou `faster`. On les retient vite, et chaque commande a aussi son bouton à l’écran."
+      },
+      {
+        "q": "L’app ne m’entend pas.",
+        "a": "Vérifie que l’état du micro indique À l’écoute. Si l’écoute est coupée, touche Écoute. Dans une pièce bruyante ou avec des haut-parleurs à fond, mets des écouteurs pour que le clic ne repasse pas dans le micro."
+      },
+      {
+        "q": "L’écoute s’est coupée toute seule.",
+        "a": "Pour économiser la batterie, l’écoute se coupe après quelques minutes sans commande. Touche Écoute pour la réactiver."
+      },
+      {
+        "q": "Le tempo est deux fois trop lent ou trop rapide.",
+        "a": "Dis `double` ou `half` pour le corriger."
+      },
+      {
+        "q": "Comment utiliser l’accordeur ?",
+        "a": "Dis `tune` ou touche le bouton en forme d’onde sur la carte du tempo. Joue une note : quand l’indicateur tombe dans la zone verte, tu es juste. Dis `close` pour quitter."
+      },
+      {
+        "q": "J’utilise déjà le Contrôle vocal d’iOS.",
+        "a": "Coupe le micro de l’app et pilote-la par le nom des boutons. Toutes les commandes ont un libellé VoiceOver."
+      },
+      {
+        "q": "Ma voix est-elle envoyée quelque part ?",
+        "a": "Non. La voix est reconnue directement sur l’appareil, sans jamais être enregistrée, stockée ni envoyée. Le métronome, la commande vocale et l’accordeur fonctionnent hors connexion."
+      },
+      {
+        "q": "Comment résilier l’abonnement ?",
+        "a": "Dans Réglages > Compte Apple > Abonnements. L’abonnement annuel se renouvelle automatiquement, sauf résiliation au moins 24 heures avant la fin de la période en cours. L’achat à vie est facturé une seule fois."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Dès ta prochaine séance,\ngarde les mains sur l’instrument",
+    "cta": "Gratuit sur l’App Store"
+  },
+  "ui": {
+    "skip": "Aller au contenu",
+    "languages": "Langue",
+    "privacy": "Politique de confidentialité",
+    "contact": "Une question, une remarque ? Écris à {email}."
+  }
+}

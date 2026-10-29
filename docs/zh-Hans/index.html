@@ -1,134 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hans">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Not My Tempo — 免手动节拍器与调音器</title>
-  <meta name="description" content="Not My Tempo 是一款边演奏边用语音操控的节拍器，还内置半音阶调音器。" />
-  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/" />
-  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/" />
-  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/" />
-  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/" />
-  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/" />
-  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/" />
-  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/" />
-  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/" />
-  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/" />
-  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/" />
-  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/" />
-  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not My Tempo：边弹边开口调速的节拍器</title>
+  <meta name="description" content="双手不离乐器，说一声 start、faster 或 tempo 120，节拍马上跟上。完整的节拍器功能和语音控制全部免费。">
+  <meta name="theme-color" content="#0A7EA4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6781537149">
+  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not My Tempo：边弹边开口调速的节拍器">
+  <meta property="og:description" content="双手不离乐器，说一声 start、faster 或 tempo 120，节拍马上跟上。完整的节拍器功能和语音控制全部免费。">
+  <meta property="og:url" content="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <meta property="og:image" content="https://m1zz.github.io/HandsFreeMetronome/img/zh-Hans/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="langs" aria-label="语言">
-      <a href="../" hreflang="en" lang="en">English</a>
-      <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
-      <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
-      <a href="../de/" hreflang="de" lang="de">Deutsch</a>
-      <a href="../es/" hreflang="es" lang="es">Español</a>
-      <a href="../fr/" hreflang="fr" lang="fr">Français</a>
-      <a href="./" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">简体中文</a>
-      <a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-      <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-      <a href="../it/" hreflang="it" lang="it">Italiano</a>
-      <a href="../ru/" hreflang="ru" lang="ru">Русский</a>
-      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
-      <a href="../pl/" hreflang="pl" lang="pl">Polski</a>
-      <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
-      <a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
-      <a href="../da/" hreflang="da" lang="da">Dansk</a>
-      <a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
-      <a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
-      <a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
-      <a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
-      <a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
-      <a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
-      <a href="../th/" hreflang="th" lang="th">ไทย</a>
-    </nav>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="bar">
+    <a class="brand" href="../zh-Hans/"><img src="../icon.png" alt="" width="32" height="32">Not My Tempo</a>
+    <a class="lang-link" href="#languages">语言</a>
+  </header>
 
-    <header>
-      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <h1>Not My Tempo</h1>
-      <div class="sub">免手动节拍器与调音器 — 支持</div>
-      <a class="store-btn" href="https://apps.apple.com/app/not-ma-tempo/id6781537149">在 App&nbsp;Store 下载</a>
-      <div class="sale">完整的节拍器功能和全套免手动语音控制均<strong>免费</strong>。
-        <strong>Not My Tempo Pro</strong> 增加练习模式、带预设的重音编辑器和半音阶调音器，
-        可选择含免费试用的年度订阅，或一次性买断永久使用。</div>
-      <div class="price-note">语音控制和辅助功能将始终对所有人免费。
-        在推出 Pro 之前就已购买本 App？所有 Pro 功能已经归你所有。</div>
-    </header>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>双手留在乐器上，<br>速度张口就改</h1>
+        <p class="lead">弹到一半说一声 <code>faster</code>，节拍就快起来。改速度不用再停下来。</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6781537149">在 App Store 免费下载</a><a class="try" href="#try">开口试试 ↓</a></div>
+        <p class="muted small">完整的节拍器功能和语音控制全部免费。</p>
+      </div>
+      <div class="phone"><img src="../img/zh-Hans/01-playing.jpg" alt="双手留在乐器上， 速度张口就改" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <h2>这是什么</h2>
-    <p>Not My Tempo 是一款边演奏边完全用语音操控的节拍器，
-       无需点屏幕，也无需开启 iOS 系统的语音控制或任何辅助功能设置。
-       它还内置一个半音阶调音器。</p>
 
-    <h2>快速上手</h2>
-    <div class="card">
-      <p>1. 打开 App，它会自动开始<strong>聆听</strong>。<br>
-         2. 首次使用时允许访问麦克风和语音识别。<br>
-         3. 直接说出指令，或轻点屏幕上的控件。</p>
-      <p class="sub">提示：建议戴上耳机，避免节拍声被麦克风收进去，
-         这样语音识别和调音器都会更准确。</p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>开口试试</h2>
+      <p class="muted">点一下按钮，或者打开麦克风用英文说。会发出声音，请留意音量。</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;开口试试&quot;, &quot;lead&quot;: &quot;点一下按钮，或者打开麦克风用英文说。会发出声音，请留意音量。&quot;, &quot;mic&quot;: &quot;用麦克风说说看&quot;, &quot;micOn&quot;: &quot;正在聆听，试着说“faster”&quot;, &quot;micNone&quot;: &quot;这个浏览器不支持语音识别，请点按钮试试。&quot;, &quot;note&quot;: &quot;网页体验用的是浏览器的语音识别，App 里则是在设备上完成识别。&quot;}"></div>
+    </section>
 
-    <h2>语音指令</h2>
-    <div class="card">
-      <table>
-        <tr><td class="cmd">"start" / "stop"</td><td>播放 / 暂停</td></tr>
-        <tr><td class="cmd">"faster" / "slower"</td><td>±5 BPM</td></tr>
-        <tr><td class="cmd">"up" / "down"</td><td>±1 BPM</td></tr>
-        <tr><td class="cmd">"tempo 120"</td><td>设定精确数值</td></tr>
-        <tr><td class="cmd">"double" / "half"</td><td>×2 / ÷2</td></tr>
-        <tr><td class="cmd">"three beats"</td><td>设定拍号</td></tr>
-        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>细分</td></tr>
-        <tr><td class="cmd">"louder" / "quieter" / "mute"</td><td>节拍音量</td></tr>
-        <tr><td class="cmd">"volume 60"</td><td>设定音量百分比</td></tr>
-        <tr><td class="cmd">"bounce" / "orbit"</td><td>切换节拍视图</td></tr>
-        <tr><td class="cmd">"practice"</td><td>练习时自动逐步提速（Pro）</td></tr>
-        <tr><td class="cmd">"tune"</td><td>打开调音器（Pro）</td></tr>
-        <tr><td class="cmd">"help"</td><td>显示指令列表</td></tr>
-        <tr><td class="cmd">"close" / "done"</td><td>关闭面板</td></tr>
-      </table>
-      <p class="sub">语音指令需用英文说出（识别语言为美式英语）。每条指令也都可以通过
-         轻点屏幕上的控件完成。</p>
-    </div>
+    <section class="problem reveal">
+      <h2>只想调一下速度，结果状态全没了？</h2>
+      <p>放下琴弓，把拨片叼在嘴里，再点两下屏幕，刚找到的感觉就没了。Not My Tempo 让你保持演奏的姿势，一句话就能改速度。</p>
+    </section>
 
-    <h2>调音器</h2>
-    <p>说 <code>tune</code>（或轻点速度卡片上的波形按钮）。弹奏一个音，
-       指示针落入绿色区域就表示音准了。说 <code>close</code> 退出。</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>说完马上跟上</h2>
+        <p>用 <code>start</code>、<code>faster</code>、<code>tempo 120</code> 这样简短的英文单词来说。无需开启 iOS 语音控制或任何辅助功能设置，打开 App 就开始聆听。<br>忘了指令？说一声 <code>help</code>，所有能说的指令都会显示在屏幕上。</p>
+      </div>
+      <div class="phone"><img src="../img/zh-Hans/04-voice.jpg" alt="说完马上跟上" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>电池</h2>
-    <p>为了省电，如果几分钟内没有收到指令，聆听会自动关闭。
-       轻点<strong>聆听</strong>即可重新开启。</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>节拍也能用眼睛跟</h2>
+        <p>弹跳、轨道、环形三种视图任选。每小节第一拍显示为红色，声音也更重。<br>在轨道视图里跟着节拍轻点，就能看出自己踩得有多准。</p>
+      </div>
+      <div class="phone"><img src="../img/zh-Hans/02-orbit.jpg" alt="节拍也能用眼睛跟" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>故障排除</h2>
-    <div class="card">
-      <p><strong>它听不到我说话。</strong>请确认麦克风状态显示为“正在聆听”。
-         如果已关闭，请轻点“聆听”。在嘈杂的房间或使用扬声器外放时，请戴上耳机。</p>
-      <p><strong>识别出的速度刚好是一半或两倍。</strong>说“double”或“half”即可纠正。</p>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>每首曲子的重音都能保存</h2>
+        <p>小节里的每一击都可以设为高音、低音或静音，并按曲目存成预设。波萨诺瓦也好，桑巴也好，做一次，下次直接选就行。（Pro）</p>
+      </div>
+      <div class="phone"><img src="../img/zh-Hans/05-accents.jpg" alt="每首曲子的重音都能保存" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>联系我们</h2>
-    <p>问题或反馈：<a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    <section class="reveal">
+      <h2>三步就能开始</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>打开 App</h3><p>一打开就开始聆听。</p></li>
+<li class="card"><span class="n">2</span><h3>允许使用麦克风</h3><p>只在第一次询问麦克风和语音识别权限。</p></li>
+<li class="card"><span class="n">3</span><h3>开口说或点一下</h3><p>每条指令在屏幕上都有对应的按钮。</p></li></ol>
+    </section>
 
-    <footer>
-      <a href="privacy.html">隐私政策</a> · © 2026 Not My Tempo
-    </footer>
-  </div>
+    <section class="reveal" id="commands">
+      <h2>可以说的指令</h2>
+      <div class="card table">
+        <dl><div><dt>start · stop</dt><dd>开始、停止</dd></div><div><dt>faster · slower</dt><dd>每次加快或放慢 5 BPM</dd></div><div><dt>up · down</dt><dd>每次加快或放慢 1 BPM</dd></div><div><dt>tempo 120</dt><dd>直接切到指定速度</dd></div><div><dt>double · half</dt><dd>速度加倍、减半</dd></div><div><dt>three beats</dt><dd>更改拍号</dd></div><div><dt>quarter · eighth · triplet · sixteenth</dt><dd>四分、八分、三连音、十六分细分</dd></div><div><dt>louder · quieter · mute</dt><dd>节拍声调大、调小、静音</dd></div><div><dt>volume 60</dt><dd>按百分比设定音量</dd></div><div><dt>bounce · orbit</dt><dd>切换节拍视图</dd></div><div><dt>timer 5 minutes</dt><dd>设定练习计时器</dd></div><div><dt>practice</dt><dd>练习时逐步提高速度（Pro）</dd></div><div><dt>tune</dt><dd>打开调音器（Pro）</dd></div><div><dt>help</dt><dd>显示所有指令</dd></div><div><dt>close · done</dt><dd>关闭当前面板</dd></div></dl>
+      </div>
+      <p class="muted">语音识别使用美式英语，所以指令要用英文单词说，暂不支持中文指令。App 界面会以中文显示，每条指令也都能点按钮完成。</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>节拍器免费，想要更多再升级 Pro</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>免费</h3>
+          <ul><li>全部语音控制</li><li>1 到 8 拍，第一拍重音</li><li>四分、八分、三连音、十六分细分</li><li>弹跳、轨道、环形三种视图</li><li>敲击定速和准度检测</li><li>练习计时器</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Not My Tempo Pro</h3>
+          <ul><li>练习模式：每隔几小节加几 BPM，一路提到目标速度</li><li>重音编辑器和按曲目保存的预设</li><li>半音阶调音器</li></ul>
+          <p class="muted">含免费试用的年度订阅，或一次性买断永久使用</p>
+        </div>
+      </div>
+      <p class="muted">语音控制和辅助功能今后也永远对所有人免费。如果你在 Pro 推出前就买了这个 App，所有 Pro 功能已经可以直接使用。</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>常见问题</h2>
+      <div class="faq"><details><summary>可以说中文吗？</summary><p>语音识别使用美式英语，所以指令要说 <code>start</code>、<code>faster</code> 这样的英文单词。指令都是短词，很快就能上手，而且每条指令也都能用按钮完成。</p></details>
+<details><summary>它听不清我说的话。</summary><p>先看看麦克风状态是否显示“正在聆听”。如果是关闭的，点一下“聆听”即可。环境嘈杂或用扬声器大声外放时，戴上耳机能让节拍声不漏进麦克风，识别会准确得多。</p></details>
+<details><summary>聆听自己关掉了。</summary><p>为了省电，几分钟内没有指令就会停止聆听。点一下“聆听”就能重新打开。</p></details>
+<details><summary>速度被识别成了一半或两倍。</summary><p>说 <code>double</code> 或 <code>half</code> 马上就能改过来。</p></details>
+<details><summary>调音器怎么用？</summary><p>说 <code>tune</code>，或点速度卡片上的波形按钮。弹一个音，指示进入绿色区域就说明音准了。要退出时说 <code>close</code>。</p></details>
+<details><summary>我平时用 iOS 语音控制。</summary><p>关闭本 App 的麦克风，改为说出按钮名称来操作即可。所有按钮都配有 VoiceOver 标签。</p></details>
+<details><summary>我的声音会被上传吗？</summary><p>不会。语音在设备上完成识别，不会被录音、保存或上传。节拍器、语音控制和调音器在没有网络时也能使用。</p></details>
+<details><summary>怎么取消订阅？</summary><p>在“设置 &gt; Apple 账户 &gt; 订阅”中取消。年度订阅会自动续订，除非在当前订阅期结束前至少 24 小时取消。永久版为一次性付费。</p></details></div>
+      <p class="contact">有任何问题或建议，请发邮件至 <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>。</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>从今天的练习开始，<br>双手不离乐器</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6781537149">在 App Store 免费下载</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="语言"><a href="../" hreflang="en" lang="en">English</a>
+<a href="../ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体中文</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a></nav>
+    <p><a href="privacy.html">隐私政策</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Not My Tempo</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

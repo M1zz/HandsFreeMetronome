@@ -1,0 +1,148 @@
+{
+  "title": "Not My Tempo: metronom, na který mluvíte při hraní",
+  "description": "Řekněte start, faster nebo tempo 120 a klikání se přizpůsobí, aniž byste pustili nástroj. Plný metronom i hlasové ovládání jsou zdarma.",
+  "hero": {
+    "headline": "Ruce na nástroji,\ntempo hlasem",
+    "lead": "Řekněte uprostřed fráze `faster` a metronom zrychlí. Nemusíte sahat po displeji ani přestávat hrát. Příkazy se říkají anglicky.",
+    "cta": "Stáhnout zdarma v App Storu",
+    "note": "Plný metronom i hlasové ovládání jsou zdarma."
+  },
+  "demo": {
+    "title": "Zkuste to nahlas",
+    "lead": "Klepněte na frázi, nebo zapněte mikrofon a řekněte ji anglicky. Zesilte zvuk, metronom kliká.",
+    "mic": "Mluvit do mikrofonu",
+    "micOn": "Poslouchám. Řekněte „faster“",
+    "micNone": "Tento prohlížeč neumí rozpoznávat řeč. Klepněte na některou frázi.",
+    "note": "Webová ukázka používá rozpoznávání řeči v prohlížeči. Aplikace rozpoznává řeč přímo v zařízení."
+  },
+  "problem": {
+    "title": "Ztratili jste groove jen kvůli malé změně tempa?",
+    "text": "Odložit smyčec, vzít trsátko do zubů, dvakrát klepnout na displej, a pocit, který jste právě chytili, je pryč. Not My Tempo změní tempo jediným slovem a vy hrajete dál ve stejné pozici."
+  },
+  "features": [
+    {
+      "title": "Řeknete a klikání poslechne",
+      "text": "Krátká anglická slova jako `start`, `faster` nebo `tempo 120`. Aplikace poslouchá hned po otevření, bez zapínání Ovládání hlasem v iOS či nastavení zpřístupnění.\nZapomněli jste příkaz? Řekněte `help` a všechny fráze se ukážou na obrazovce.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "Dobu vidíte i očima",
+      "text": "Vyberte si odraz, oběžnou dráhu nebo kruh. První doba svítí červeně a kliká hlasitěji.\nKlepejte do rytmu na oběžnou dráhu a uvidíte, jak přesně trefujete.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Akcenty uložené pro každou skladbu",
+      "text": "Nastavte každý cvak v taktu jako vysoký, nízký nebo tichý a uložte ho jako předvolbu. Rytmus bossa novy nebo samby sestavíte jednou a příště ho jen vyberete. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "Začnete ve třech krocích",
+    "items": [
+      {
+        "title": "Otevřete aplikaci",
+        "text": "Hned začne poslouchat."
+      },
+      {
+        "title": "Povolte mikrofon",
+        "text": "O přístup k mikrofonu a rozpoznávání řeči požádá jen jednou."
+      },
+      {
+        "title": "Mluvte nebo klepejte",
+        "text": "Každý příkaz má i tlačítko na obrazovce."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Co můžete říct",
+    "rows": [
+      ["start · stop", "spustit, zastavit"],
+      ["faster · slower", "rychleji nebo pomaleji o 5 BPM"],
+      ["up · down", "rychleji nebo pomaleji o 1 BPM"],
+      ["tempo 120", "rovnou zvolené tempo"],
+      ["double · half", "dvakrát rychleji, dvakrát pomaleji"],
+      ["three beats", "změnit takt"],
+      ["quarter · eighth · triplet · sixteenth", "čtvrťové noty, osminy, trioly, šestnáctiny"],
+      ["louder · quieter · mute", "klikání hlasitěji, tišeji, ztlumit"],
+      ["volume 60", "hlasitost v procentech"],
+      ["bounce · orbit", "přepnout zobrazení doby"],
+      ["timer 5 minutes", "časovač cvičení"],
+      ["practice", "postupně zvyšovat tempo během cvičení (Pro)"],
+      ["tune", "otevřít ladičku (Pro)"],
+      ["help", "zobrazit všechny příkazy"],
+      ["close · done", "zavřít otevřený panel"]
+    ],
+    "note": "Rozpoznávání řeči funguje v angličtině (USA), proto se příkazy říkají anglickými slovy. Aplikace je v češtině a každý příkaz funguje i klepnutím."
+  },
+  "pricing": {
+    "title": "Metronom je zdarma, Pro když chcete víc",
+    "free": {
+      "name": "Zdarma",
+      "items": [
+        "Všechny hlasové příkazy",
+        "Takty od 1 do 8 dob se zdůrazněnou první dobou",
+        "Čtvrťové noty, osminy, trioly a šestnáctiny",
+        "Odraz, oběžná dráha a kruh",
+        "Tap tempo a kontrola rytmu",
+        "Časovač cvičení"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Režim cvičení: přidává pár BPM každých pár taktů, dokud nedosáhnete cílového tempa",
+        "Editor akcentů s předvolbami pro každou skladbu",
+        "Chromatická ladička"
+      ],
+      "note": "Roční předplatné s bezplatnou zkušební dobou, nebo jednorázový nákup navždy"
+    },
+    "note": "Hlasové ovládání a funkce zpřístupnění zůstanou zdarma pro všechny. Pokud jste aplikaci koupili ještě před příchodem Pro, všechny funkce Pro už máte."
+  },
+  "faq": {
+    "title": "Časté otázky",
+    "items": [
+      {
+        "q": "Můžu mluvit česky?",
+        "a": "Rozpoznávání řeči funguje v angličtině (USA), takže příkazy jsou krátká anglická slova jako `start` nebo `faster`. Rychle si je zapamatujete a každý příkaz funguje i tlačítkem."
+      },
+      {
+        "q": "Aplikace mě neslyší.",
+        "a": "Zkontrolujte, že u mikrofonu svítí „Poslouchá“. Pokud ne, klepněte na „Poslouchat“. V hlučné místnosti nebo při hraní přes reproduktory použijte sluchátka, aby se klikání nedostávalo do mikrofonu."
+      },
+      {
+        "q": "Poslouchání se samo vypnulo.",
+        "a": "Kvůli úspoře baterie se poslouchání vypne, když pár minut nezazní žádný příkaz. Klepnutím na „Poslouchat“ ho znovu zapnete."
+      },
+      {
+        "q": "Tempo vyšlo poloviční nebo dvojnásobné.",
+        "a": "Řekněte `double` nebo `half` a je to opravené."
+      },
+      {
+        "q": "Jak se používá ladička?",
+        "a": "Řekněte `tune` nebo klepněte na tlačítko s vlnou na kartě tempa. Zahrajte tón: když ukazatel dopadne do zeleného pásma, máte naladěno. Ven se dostanete slovem `close`."
+      },
+      {
+        "q": "Už používám Ovládání hlasem v iOS.",
+        "a": "Vypněte mikrofon aplikace a ovládejte ji názvy tlačítek. Každý ovládací prvek má popisek pro VoiceOver."
+      },
+      {
+        "q": "Posílá se můj hlas někam?",
+        "a": "Ne. Řeč se rozpoznává v zařízení a nikdy se nenahrává, neukládá ani neodesílá. Metronom, hlasové ovládání i ladička fungují bez internetu."
+      },
+      {
+        "q": "Jak zrušit předplatné?",
+        "a": "V Nastavení > Účet Apple > Předplatné. Roční předplatné se obnovuje automaticky, pokud ho nezrušíte nejméně 24 hodin před koncem aktuálního období. Nákup navždy je jednorázová platba."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Od dnešního cvičení\nnechte ruce na nástroji",
+    "cta": "Stáhnout zdarma v App Storu"
+  },
+  "ui": {
+    "skip": "Přeskočit na obsah",
+    "languages": "Jazyk",
+    "privacy": "Zásady ochrany osobních údajů",
+    "contact": "Dotazy a připomínky posílejte na {email}."
+  }
+}

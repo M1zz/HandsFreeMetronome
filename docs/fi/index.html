@@ -1,134 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Not My Tempo — käsiä vapauttava metronomi ja viritin</title>
-  <meta name="description" content="Not My Tempo on metronomi, jota ohjaat kokonaan äänelläsi soittaessasi, ja siinä on kromaattinen vireenmittaaja." />
-  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/" />
-  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/" />
-  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/" />
-  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/" />
-  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/" />
-  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/" />
-  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/" />
-  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/" />
-  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/" />
-  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/" />
-  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/" />
-  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not My Tempo: metronomi, jolle puhut soittaessasi</title>
+  <meta name="description" content="Sano englanniksi start, faster tai tempo 120, niin naksahdus seuraa. Kädet pysyvät soittimella. Täysi metronomi ja ääniohjaus ovat ilmaisia.">
+  <meta name="theme-color" content="#0A7EA4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6781537149">
+  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not My Tempo: metronomi, jolle puhut soittaessasi">
+  <meta property="og:description" content="Sano englanniksi start, faster tai tempo 120, niin naksahdus seuraa. Kädet pysyvät soittimella. Täysi metronomi ja ääniohjaus ovat ilmaisia.">
+  <meta property="og:url" content="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <meta property="og:image" content="https://m1zz.github.io/HandsFreeMetronome/img/fi/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="langs" aria-label="Kieli">
-      <a href="../" hreflang="en" lang="en">English</a>
-      <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
-      <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
-      <a href="../de/" hreflang="de" lang="de">Deutsch</a>
-      <a href="../es/" hreflang="es" lang="es">Español</a>
-      <a href="../fr/" hreflang="fr" lang="fr">Français</a>
-      <a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-      <a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-      <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-      <a href="../it/" hreflang="it" lang="it">Italiano</a>
-      <a href="../ru/" hreflang="ru" lang="ru">Русский</a>
-      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
-      <a href="../pl/" hreflang="pl" lang="pl">Polski</a>
-      <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
-      <a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
-      <a href="../da/" hreflang="da" lang="da">Dansk</a>
-      <a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
-      <a href="./" hreflang="fi" lang="fi" aria-current="true">Suomi</a>
-      <a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
-      <a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
-      <a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
-      <a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
-      <a href="../th/" hreflang="th" lang="th">ไทย</a>
-    </nav>
+  <a class="skip" href="#main">Siirry sisältöön</a>
+  <header class="bar">
+    <a class="brand" href="../fi/"><img src="../icon.png" alt="" width="32" height="32">Not My Tempo</a>
+    <a class="lang-link" href="#languages">Kieli</a>
+  </header>
 
-    <header>
-      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <h1>Not My Tempo</h1>
-      <div class="sub">Käsiä vapauttava metronomi ja vireenmittaaja — Tuki</div>
-      <a class="store-btn" href="https://apps.apple.com/fi/app/not-ma-tempo/id6781537149">Lataa App&nbsp;Storesta</a>
-      <div class="sale">Täysi metronomi ja täydellinen käsiä vapauttava ääniohjaus ovat <strong>ilmaisia</strong>.
-        <strong>Not My Tempo Pro</strong> lisää harjoitustilan, painotuseditorin esiasetuksineen ja kromaattisen vireenmittaajan –
-        vuositilauksena ilmaisella kokeilulla tai kertaostoksena ikuisesti.</div>
-      <div class="price-note">Ääniohjaus ja käytettävyysominaisuudet pysyvät ilmaisina kaikille aina.
-        Ostitko sovelluksen ennen Proa? Silloin kaikki Pro-ominaisuudet ovat jo sinun.</div>
-    </header>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Kädet soittimella.<br>Tempo äänellä.</h1>
+        <p class="lead">Sano kesken fraasin <code>faster</code>, niin naksahdus nopeutuu. Soittoa ei tarvitse keskeyttää eikä kurottaa näytölle. Komennot ovat lyhyitä englanninkielisiä sanoja.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6781537149">Lataa ilmaiseksi App Storesta</a><a class="try" href="#try">Kokeile ääneen ↓</a></div>
+        <p class="muted small">Täysi metronomi ja ääniohjaus ovat ilmaisia.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/01-playing.jpg" alt="Kädet soittimella. Tempo äänellä." width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <h2>Mikä se on</h2>
-    <p>Not My Tempo on metronomi, jota ohjaat kokonaan äänelläsi soittaessasi –
-       ei napautuksia eikä tarvetta ottaa käyttöön iOS:n Ääniohjausta tai muita
-       käytettävyysasetuksia. Mukana on myös kromaattinen vireenmittaaja.</p>
 
-    <h2>Alkuun pääseminen</h2>
-    <div class="card">
-      <p>1. Avaa sovellus – se alkaa heti <strong>kuunnella</strong>.<br>
-         2. Anna ensimmäisellä kerralla lupa mikrofoniin ja puheentunnistukseen.<br>
-         3. Sano komento tai napauta säätimiä.</p>
-      <p class="sub">Vinkki: käytä kuulokkeita, jotta naksahdus ei kuulu mikrofoniin –
-         se pitää puheentunnistuksen ja vireenmittaajan tarkkoina.</p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Kokeile ääneen</h2>
+      <p class="muted">Napauta komentoa tai laita mikrofoni päälle ja sano se englanniksi. Laita äänet kuuluviin, se naksuttaa.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Kokeile ääneen&quot;, &quot;lead&quot;: &quot;Napauta komentoa tai laita mikrofoni päälle ja sano se englanniksi. Laita äänet kuuluviin, se naksuttaa.&quot;, &quot;mic&quot;: &quot;Puhu sille&quot;, &quot;micOn&quot;: &quot;Kuuntelee. Sano vaikka ”faster”&quot;, &quot;micNone&quot;: &quot;Tämä selain ei tunnista puhetta. Napauta komentoa sen sijaan.&quot;, &quot;note&quot;: &quot;Verkkokokeilu käyttää selaimesi puheentunnistusta. Sovellus tunnistaa puheen suoraan laitteellasi.&quot;}"></div>
+    </section>
 
-    <h2>Äänikomennot</h2>
-    <div class="card">
-      <table>
-        <tr><td class="cmd">"start" / "stop"</td><td>toista / tauko</td></tr>
-        <tr><td class="cmd">"faster" / "slower"</td><td>±5 BPM</td></tr>
-        <tr><td class="cmd">"up" / "down"</td><td>±1 BPM</td></tr>
-        <tr><td class="cmd">"tempo 120"</td><td>aseta tarkka arvo</td></tr>
-        <tr><td class="cmd">"double" / "half"</td><td>×2 / ÷2</td></tr>
-        <tr><td class="cmd">"three beats"</td><td>aseta tahtilaji</td></tr>
-        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>jako</td></tr>
-        <tr><td class="cmd">"louder" / "quieter" / "mute"</td><td>naksahduksen äänenvoimakkuus</td></tr>
-        <tr><td class="cmd">"volume 60"</td><td>aseta äänenvoimakkuus prosentteina</td></tr>
-        <tr><td class="cmd">"bounce" / "orbit"</td><td>vaihda iskunäkymää</td></tr>
-        <tr><td class="cmd">"practice"</td><td>tempo nousee itsestään harjoitellessa (Pro)</td></tr>
-        <tr><td class="cmd">"tune"</td><td>avaa vireenmittaaja (Pro)</td></tr>
-        <tr><td class="cmd">"help"</td><td>näytä komentoluettelo</td></tr>
-        <tr><td class="cmd">"close" / "done"</td><td>sulje paneeli</td></tr>
-      </table>
-      <p class="sub">Komennot sanotaan englanniksi (tunnistus käyttää amerikanenglantia).
-         Jokaisen komennon voi antaa myös näytön säätimillä.</p>
-    </div>
+    <section class="problem reveal">
+      <h2>Katosiko soiton tuntuma vain siksi, että piti säätää tempoa?</h2>
+      <p>Jousi alas, plektra hampaisiin, kaksi napautusta näyttöön, ja juuri löytynyt tuntuma on poissa. Not My Tempolla vaihdat tempon yhdellä sanalla soittoasentoa muuttamatta.</p>
+    </section>
 
-    <h2>Vireenmittaaja</h2>
-    <p>Sano <code>tune</code> (tai napauta aaltopainiketta tempokortissa). Soita nuotti:
-       kun osoitin siirtyy vihreälle alueelle, soitin on vireessä. Poistu sanomalla <code>close</code>.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Sano, niin se seuraa</h2>
+        <p>Lyhyitä englanninkielisiä sanoja, kuten <code>start</code>, <code>faster</code> ja <code>tempo 120</code>. Sovellus kuuntelee heti, kun avaat sen, eikä iOS:n Ääniohjausta tai mitään saavutettavuusasetusta tarvitse ottaa käyttöön.<br>Unohtuiko komento? Sano <code>help</code>, niin kaikki komennot näkyvät näytöllä.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/04-voice.jpg" alt="Sano, niin se seuraa" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Akku</h2>
-    <p>Akun säästämiseksi kuuntelu sammuu itsestään, jos komentoja ei tule muutamaan minuuttiin.
-       Kytke se takaisin päälle napauttamalla <strong>Kuuntele</strong>.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Näe myös isku</h2>
+        <p>Valitse pomppu, rata tai rengas. Ensimmäinen isku näkyy punaisena ja naksahtaa kovempaa.<br>Napauta rataa tahdissa, niin näet, kuinka lähelle osuit.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/02-orbit.jpg" alt="Näe myös isku" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Vianmääritys</h2>
-    <div class="card">
-      <p><strong>Se ei kuule minua.</strong> Tarkista, että mikrofonin tila on ”Kuuntelee”.
-         Jos se on pois päältä, napauta ”Kuuntele”. Käytä kuulokkeita meluisassa huoneessa tai kun soitat kaiuttimen kautta.</p>
-      <p><strong>Tunnistettu tempo on puolet tai kaksinkertainen.</strong> Korjaa sanomalla ”double” tai ”half”.</p>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Tallenna painotukset joka kappaleelle</h2>
+        <p>Aseta tahdin jokainen naksahdus korkeaksi, matalaksi tai hiljaiseksi ja tallenna se esiasetukseksi. Tee bossa nova- tai sambakuvio kerran, niin ensi kerralla riittää valita se. (Pro)</p>
+      </div>
+      <div class="phone"><img src="../img/fi/05-accents.jpg" alt="Tallenna painotukset joka kappaleelle" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Yhteystiedot</h2>
-    <p>Kysymykset tai palaute: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    <section class="reveal">
+      <h2>Alkuun kolmessa vaiheessa</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Avaa sovellus</h3><p>Se alkaa kuunnella heti.</p></li>
+<li class="card"><span class="n">2</span><h3>Salli mikrofoni</h3><p>Se pyytää kerran luvan mikrofoniin ja puheentunnistukseen.</p></li>
+<li class="card"><span class="n">3</span><h3>Puhu tai napauta</h3><p>Jokaiselle komennolle on myös säädin näytöllä.</p></li></ol>
+    </section>
 
-    <footer>
-      <a href="privacy.html">Tietosuojakäytäntö</a> · © 2026 Not My Tempo
-    </footer>
-  </div>
+    <section class="reveal" id="commands">
+      <h2>Mitä voit sanoa</h2>
+      <div class="card table">
+        <dl><div><dt>start · stop</dt><dd>toista, tauko</dd></div><div><dt>faster · slower</dt><dd>5 BPM nopeammin tai hitaammin</dd></div><div><dt>up · down</dt><dd>1 BPM nopeammin tai hitaammin</dd></div><div><dt>tempo 120</dt><dd>hyppää suoraan haluamaasi tempoon</dd></div><div><dt>double · half</dt><dd>tempo kaksinkertaiseksi tai puoleen</dd></div><div><dt>three beats</dt><dd>vaihda tahtilaji</dd></div><div><dt>quarter · eighth · triplet · sixteenth</dt><dd>jako neljäsosiin, kahdeksasosiin, trioleihin, kuudestoistaosiin</dd></div><div><dt>louder · quieter · mute</dt><dd>naksahdus kovemmalle, hiljemmalle, mykistä</dd></div><div><dt>volume 60</dt><dd>aseta äänenvoimakkuus prosentteina</dd></div><div><dt>bounce · orbit</dt><dd>vaihda iskunäkymää</dd></div><div><dt>timer 5 minutes</dt><dd>aseta harjoitusajastin</dd></div><div><dt>practice</dt><dd>tempo nousee harjoitellessa (Pro)</dd></div><div><dt>tune</dt><dd>avaa vireenmittaaja (Pro)</dd></div><div><dt>help</dt><dd>näytä kaikki komennot</dd></div><div><dt>close · done</dt><dd>sulje paneeli</dd></div></dl>
+      </div>
+      <p class="muted">Puheentunnistus käyttää amerikanenglantia, joten komennot sanotaan englanniksi. Muuten sovellus on suomeksi, ja jokaisen komennon voi antaa myös napauttamalla.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Metronomi on ilmainen. Pro, kun haluat enemmän.</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Ilmainen</h3>
+          <ul><li>Kaikki äänikomennot</li><li>Tahtilajit 1–8 iskua, ensimmäinen isku korostettuna</li><li>Jako neljäsosiin, kahdeksasosiin, trioleihin ja kuudestoistaosiin</li><li>Kolme näkymää: pomppu, rata ja rengas</li><li>Napautustempo ja rytmin tarkistus</li><li>Harjoitusajastin</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Not My Tempo Pro</h3>
+          <ul><li>Harjoitustila: muutama BPM lisää muutaman tahdin välein, kunnes saavutat tavoitetempon</li><li>Painotuseditori ja esiasetukset kappaleittain</li><li>Kromaattinen vireenmittaaja</li></ul>
+          <p class="muted">Vuositilaus ilmaisella kokeilulla tai kertaostos ikuisesti</p>
+        </div>
+      </div>
+      <p class="muted">Ääniohjaus ja saavutettavuusominaisuudet pysyvät ilmaisina kaikille. Ostitko sovelluksen ennen kuin Pro oli olemassa? Silloin kaikki Pro-ominaisuudet ovat jo sinun.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Usein kysyttyä</h2>
+      <div class="faq"><details><summary>Voinko puhua suomea?</summary><p>Puheentunnistus käyttää amerikanenglantia, joten komennot ovat lyhyitä englanninkielisiä sanoja, kuten <code>start</code> ja <code>faster</code>. Ne oppii nopeasti, ja jokaisen komennon voi antaa myös napauttamalla. Muuten sovellus on suomeksi.</p></details>
+<details><summary>Se ei kuule minua.</summary><p>Tarkista, että mikrofonin tila on ”Kuuntelee”. Jos se on pois päältä, napauta ”Kuuntele”. Meluisassa huoneessa tai kaiuttimen kautta soittaessa kannattaa käyttää kuulokkeita, jotta naksahdus ei kuulu mikrofoniin.</p></details>
+<details><summary>Kuuntelu sammui itsestään.</summary><p>Akun säästämiseksi kuuntelu sammuu, jos komentoja ei tule muutamaan minuuttiin. Kytke se takaisin päälle napauttamalla ”Kuuntele”.</p></details>
+<details><summary>Tempo on puolet tai kaksinkertainen.</summary><p>Korjaa sanomalla <code>double</code> tai <code>half</code>.</p></details>
+<details><summary>Miten käytän vireenmittaajaa?</summary><p>Sano <code>tune</code> tai napauta aaltopainiketta tempokortissa. Soita nuotti: kun osoitin siirtyy vihreälle alueelle, soitin on vireessä. Poistu sanomalla <code>close</code>.</p></details>
+<details><summary>Käytän jo iOS:n Ääniohjausta.</summary><p>Sammuta sovelluksen oma mikrofoni ja ohjaa sitä painikkeiden nimillä. Jokaisessa säätimessä on VoiceOver-selite.</p></details>
+<details><summary>Lähteekö ääneni jonnekin?</summary><p>Ei. Puhe tunnistetaan laitteellasi, eikä sitä nauhoiteta, tallenneta tai lähetetä minnekään. Metronomi, ääniohjaus ja vireenmittaaja toimivat ilman verkkoyhteyttä.</p></details>
+<details><summary>Miten peruutan tilauksen?</summary><p>Kohdassa Asetukset &gt; Apple-tili &gt; Tilaukset. Vuositilaus uusiutuu automaattisesti, ellei sitä peruuteta vähintään 24 tuntia ennen jakson päättymistä. Ikuinen osto maksetaan vain kerran.</p></details></div>
+      <p class="contact">Kysyttävää tai palautetta? Kirjoita osoitteeseen <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Pidä kädet<br>soittimella</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6781537149">Lataa ilmaiseksi App Storesta</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Kieli"><a href="../" hreflang="en" lang="en">English</a>
+<a href="../ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../fi/" hreflang="fi" lang="fi" aria-current="page">Suomi</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a></nav>
+    <p><a href="privacy.html">Tietosuojakäytäntö</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Not My Tempo</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

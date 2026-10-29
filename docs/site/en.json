@@ -1,0 +1,193 @@
+{
+  "title": "Not My Tempo: the metronome you talk to while you play",
+  "description": "Say start, faster or tempo 120 and the click follows, without taking your hands off the instrument. The full metronome and voice control are free.",
+  "hero": {
+    "headline": "Hands on the instrument.\nTempo by voice.",
+    "lead": "Say `faster` mid-phrase and the click speeds up. No reaching for the screen, no stopping to change the tempo.",
+    "cta": "Get it free on the App Store",
+    "note": "The full metronome and voice control are free."
+  },
+  "demo": {
+    "title": "Try it out loud",
+    "lead": "Tap a phrase, or turn on the mic and say it. Turn your volume up, it clicks.",
+    "mic": "Talk to it",
+    "micOn": "Listening. Try saying “faster”",
+    "micNone": "This browser can't recognize speech. Tap a phrase instead.",
+    "note": "This web demo uses your browser's speech recognition. The app recognizes speech on your device."
+  },
+  "problem": {
+    "title": "Ever lost the groove just to nudge the tempo?",
+    "text": "Put the bow down, clamp the pick in your teeth, tap the screen twice, and the feel you just found is gone. Not My Tempo changes the tempo with a single word, right where you are."
+  },
+  "features": [
+    {
+      "title": "Say it, and it follows",
+      "text": "Short English words like `start`, `faster` and `tempo 120`. It listens the moment you open it, with no need to turn on iOS Voice Control or any Accessibility setting.\nForget a command? Say `help` and every phrase you can use shows up on screen.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "See the beat, too",
+      "text": "Pick a bouncing ball, an orbit or a ring. Beat one shows in red and clicks louder.\nTap along on the orbit and it shows how close you landed.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Save the accents for every song",
+      "text": "Set each click in the bar to high, low or silent, then keep it as a preset. Build the bossa nova or samba pattern once and just pick it next time. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "Three steps to start",
+    "items": [
+      {
+        "title": "Open the app",
+        "text": "It starts listening right away."
+      },
+      {
+        "title": "Allow the mic",
+        "text": "It asks for microphone and speech access once."
+      },
+      {
+        "title": "Talk or tap",
+        "text": "Every command also has an on-screen control."
+      }
+    ]
+  },
+  "reference": {
+    "title": "What you can say",
+    "rows": [
+      [
+        "start · stop",
+        "play, pause"
+      ],
+      [
+        "faster · slower",
+        "up or down 5 BPM"
+      ],
+      [
+        "up · down",
+        "up or down 1 BPM"
+      ],
+      [
+        "tempo 120",
+        "jump straight to a tempo"
+      ],
+      [
+        "double · half",
+        "twice as fast, half as fast"
+      ],
+      [
+        "three beats",
+        "change the meter"
+      ],
+      [
+        "quarter · eighth · triplet · sixteenth",
+        "subdivide the beat"
+      ],
+      [
+        "louder · quieter · mute",
+        "click volume"
+      ],
+      [
+        "volume 60",
+        "set the volume in percent"
+      ],
+      [
+        "bounce · orbit",
+        "switch the beat view"
+      ],
+      [
+        "timer 5 minutes",
+        "set a practice timer"
+      ],
+      [
+        "practice",
+        "climb the tempo as you drill (Pro)"
+      ],
+      [
+        "tune",
+        "open the tuner (Pro)"
+      ],
+      [
+        "help",
+        "show every command"
+      ],
+      [
+        "close · done",
+        "close a panel"
+      ]
+    ],
+    "note": "Voice recognition runs in US English. Every command also works by tapping."
+  },
+  "pricing": {
+    "title": "The metronome is free. Pro is there when you want more.",
+    "free": {
+      "name": "Free",
+      "items": [
+        "Every voice command",
+        "Meters from 1 to 8, with an accented beat one",
+        "Quarter, eighth, triplet and sixteenth subdivisions",
+        "Bounce, orbit and ring views",
+        "Tap tempo and timing check",
+        "Practice timer"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Practice mode: adds a few BPM every few bars until you hit your target",
+        "Accent editor with presets per song",
+        "Chromatic tuner"
+      ],
+      "note": "Yearly with a free trial, or a one-time lifetime purchase"
+    },
+    "note": "Voice control and accessibility features stay free for everyone. Bought the app before Pro existed? Every Pro feature is already yours."
+  },
+  "faq": {
+    "title": "Questions",
+    "items": [
+      {
+        "q": "Which language do I speak?",
+        "a": "Voice recognition runs in US English, so commands are short English words like `start` and `faster`. The rest of the app is in your language, and every command also works by tapping."
+      },
+      {
+        "q": "It isn't hearing me.",
+        "a": "Check that the mic status reads Listening. If it's off, tap Listen. In a noisy room or on loudspeakers, use earphones so the click doesn't leak into the mic."
+      },
+      {
+        "q": "Listening turned itself off.",
+        "a": "To save battery, listening switches off after a few minutes without a command. Tap Listen to turn it back on."
+      },
+      {
+        "q": "The tempo came out half or double.",
+        "a": "Say `double` or `half` to fix it."
+      },
+      {
+        "q": "How do I use the tuner?",
+        "a": "Say `tune` or tap the waveform button on the tempo card. Play a note; when the indicator lands in the green zone, you're in tune. Say `close` to leave."
+      },
+      {
+        "q": "I already use iOS Voice Control.",
+        "a": "Turn the app's own mic off and drive it by button name. Every control has a VoiceOver label."
+      },
+      {
+        "q": "Is my voice sent anywhere?",
+        "a": "No. Speech is recognized on your device and never recorded, stored or uploaded. The metronome, voice control and tuner all work offline."
+      },
+      {
+        "q": "How do I cancel the subscription?",
+        "a": "In Settings > Apple Account > Subscriptions. The yearly plan renews automatically unless you cancel at least 24 hours before the period ends. Lifetime is a single charge."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Keep your hands\non the instrument",
+    "cta": "Get it free on the App Store"
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "languages": "Language",
+    "privacy": "Privacy Policy",
+    "contact": "Questions or feedback? Write to {email}."
+  }
+}

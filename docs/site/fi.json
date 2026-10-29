@@ -1,0 +1,115 @@
+{
+  "title": "Not My Tempo: metronomi, jolle puhut soittaessasi",
+  "description": "Sano englanniksi start, faster tai tempo 120, niin naksahdus seuraa. Kädet pysyvät soittimella. Täysi metronomi ja ääniohjaus ovat ilmaisia.",
+  "hero": {
+    "headline": "Kädet soittimella.\nTempo äänellä.",
+    "lead": "Sano kesken fraasin `faster`, niin naksahdus nopeutuu. Soittoa ei tarvitse keskeyttää eikä kurottaa näytölle. Komennot ovat lyhyitä englanninkielisiä sanoja.",
+    "cta": "Lataa ilmaiseksi App Storesta",
+    "note": "Täysi metronomi ja ääniohjaus ovat ilmaisia."
+  },
+  "demo": {
+    "title": "Kokeile ääneen",
+    "lead": "Napauta komentoa tai laita mikrofoni päälle ja sano se englanniksi. Laita äänet kuuluviin, se naksuttaa.",
+    "mic": "Puhu sille",
+    "micOn": "Kuuntelee. Sano vaikka ”faster”",
+    "micNone": "Tämä selain ei tunnista puhetta. Napauta komentoa sen sijaan.",
+    "note": "Verkkokokeilu käyttää selaimesi puheentunnistusta. Sovellus tunnistaa puheen suoraan laitteellasi."
+  },
+  "problem": {
+    "title": "Katosiko soiton tuntuma vain siksi, että piti säätää tempoa?",
+    "text": "Jousi alas, plektra hampaisiin, kaksi napautusta näyttöön, ja juuri löytynyt tuntuma on poissa. Not My Tempolla vaihdat tempon yhdellä sanalla soittoasentoa muuttamatta."
+  },
+  "features": [
+    {
+      "title": "Sano, niin se seuraa",
+      "text": "Lyhyitä englanninkielisiä sanoja, kuten `start`, `faster` ja `tempo 120`. Sovellus kuuntelee heti, kun avaat sen, eikä iOS:n Ääniohjausta tai mitään saavutettavuusasetusta tarvitse ottaa käyttöön.\nUnohtuiko komento? Sano `help`, niin kaikki komennot näkyvät näytöllä.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "Näe myös isku",
+      "text": "Valitse pomppu, rata tai rengas. Ensimmäinen isku näkyy punaisena ja naksahtaa kovempaa.\nNapauta rataa tahdissa, niin näet, kuinka lähelle osuit.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Tallenna painotukset joka kappaleelle",
+      "text": "Aseta tahdin jokainen naksahdus korkeaksi, matalaksi tai hiljaiseksi ja tallenna se esiasetukseksi. Tee bossa nova- tai sambakuvio kerran, niin ensi kerralla riittää valita se. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "Alkuun kolmessa vaiheessa",
+    "items": [
+      {"title": "Avaa sovellus", "text": "Se alkaa kuunnella heti."},
+      {"title": "Salli mikrofoni", "text": "Se pyytää kerran luvan mikrofoniin ja puheentunnistukseen."},
+      {"title": "Puhu tai napauta", "text": "Jokaiselle komennolle on myös säädin näytöllä."}
+    ]
+  },
+  "reference": {
+    "title": "Mitä voit sanoa",
+    "rows": [
+      ["start · stop", "toista, tauko"],
+      ["faster · slower", "5 BPM nopeammin tai hitaammin"],
+      ["up · down", "1 BPM nopeammin tai hitaammin"],
+      ["tempo 120", "hyppää suoraan haluamaasi tempoon"],
+      ["double · half", "tempo kaksinkertaiseksi tai puoleen"],
+      ["three beats", "vaihda tahtilaji"],
+      ["quarter · eighth · triplet · sixteenth", "jako neljäsosiin, kahdeksasosiin, trioleihin, kuudestoistaosiin"],
+      ["louder · quieter · mute", "naksahdus kovemmalle, hiljemmalle, mykistä"],
+      ["volume 60", "aseta äänenvoimakkuus prosentteina"],
+      ["bounce · orbit", "vaihda iskunäkymää"],
+      ["timer 5 minutes", "aseta harjoitusajastin"],
+      ["practice", "tempo nousee harjoitellessa (Pro)"],
+      ["tune", "avaa vireenmittaaja (Pro)"],
+      ["help", "näytä kaikki komennot"],
+      ["close · done", "sulje paneeli"]
+    ],
+    "note": "Puheentunnistus käyttää amerikanenglantia, joten komennot sanotaan englanniksi. Muuten sovellus on suomeksi, ja jokaisen komennon voi antaa myös napauttamalla."
+  },
+  "pricing": {
+    "title": "Metronomi on ilmainen. Pro, kun haluat enemmän.",
+    "free": {
+      "name": "Ilmainen",
+      "items": [
+        "Kaikki äänikomennot",
+        "Tahtilajit 1–8 iskua, ensimmäinen isku korostettuna",
+        "Jako neljäsosiin, kahdeksasosiin, trioleihin ja kuudestoistaosiin",
+        "Kolme näkymää: pomppu, rata ja rengas",
+        "Napautustempo ja rytmin tarkistus",
+        "Harjoitusajastin"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Harjoitustila: muutama BPM lisää muutaman tahdin välein, kunnes saavutat tavoitetempon",
+        "Painotuseditori ja esiasetukset kappaleittain",
+        "Kromaattinen vireenmittaaja"
+      ],
+      "note": "Vuositilaus ilmaisella kokeilulla tai kertaostos ikuisesti"
+    },
+    "note": "Ääniohjaus ja saavutettavuusominaisuudet pysyvät ilmaisina kaikille. Ostitko sovelluksen ennen kuin Pro oli olemassa? Silloin kaikki Pro-ominaisuudet ovat jo sinun."
+  },
+  "faq": {
+    "title": "Usein kysyttyä",
+    "items": [
+      {"q": "Voinko puhua suomea?", "a": "Puheentunnistus käyttää amerikanenglantia, joten komennot ovat lyhyitä englanninkielisiä sanoja, kuten `start` ja `faster`. Ne oppii nopeasti, ja jokaisen komennon voi antaa myös napauttamalla. Muuten sovellus on suomeksi."},
+      {"q": "Se ei kuule minua.", "a": "Tarkista, että mikrofonin tila on ”Kuuntelee”. Jos se on pois päältä, napauta ”Kuuntele”. Meluisassa huoneessa tai kaiuttimen kautta soittaessa kannattaa käyttää kuulokkeita, jotta naksahdus ei kuulu mikrofoniin."},
+      {"q": "Kuuntelu sammui itsestään.", "a": "Akun säästämiseksi kuuntelu sammuu, jos komentoja ei tule muutamaan minuuttiin. Kytke se takaisin päälle napauttamalla ”Kuuntele”."},
+      {"q": "Tempo on puolet tai kaksinkertainen.", "a": "Korjaa sanomalla `double` tai `half`."},
+      {"q": "Miten käytän vireenmittaajaa?", "a": "Sano `tune` tai napauta aaltopainiketta tempokortissa. Soita nuotti: kun osoitin siirtyy vihreälle alueelle, soitin on vireessä. Poistu sanomalla `close`."},
+      {"q": "Käytän jo iOS:n Ääniohjausta.", "a": "Sammuta sovelluksen oma mikrofoni ja ohjaa sitä painikkeiden nimillä. Jokaisessa säätimessä on VoiceOver-selite."},
+      {"q": "Lähteekö ääneni jonnekin?", "a": "Ei. Puhe tunnistetaan laitteellasi, eikä sitä nauhoiteta, tallenneta tai lähetetä minnekään. Metronomi, ääniohjaus ja vireenmittaaja toimivat ilman verkkoyhteyttä."},
+      {"q": "Miten peruutan tilauksen?", "a": "Kohdassa Asetukset > Apple-tili > Tilaukset. Vuositilaus uusiutuu automaattisesti, ellei sitä peruuteta vähintään 24 tuntia ennen jakson päättymistä. Ikuinen osto maksetaan vain kerran."}
+    ]
+  },
+  "closing": {
+    "headline": "Pidä kädet\nsoittimella",
+    "cta": "Lataa ilmaiseksi App Storesta"
+  },
+  "ui": {
+    "skip": "Siirry sisältöön",
+    "languages": "Kieli",
+    "privacy": "Tietosuojakäytäntö",
+    "contact": "Kysyttävää tai palautetta? Kirjoita osoitteeseen {email}."
+  }
+}

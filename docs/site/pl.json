@@ -1,0 +1,148 @@
+{
+  "title": "Not My Tempo: metronom, do którego mówisz w trakcie gry",
+  "description": "Powiedz start, faster albo tempo 120, a klik dostosuje się, choć ręce nie opuszczają instrumentu. Pełny metronom i sterowanie głosem są za darmo.",
+  "hero": {
+    "headline": "Ręce na instrumencie,\ntempo głosem",
+    "lead": "Powiedz `faster` w środku frazy, a metronom przyspieszy. Bez sięgania do ekranu i bez przerywania gry. Polecenia wypowiada się po angielsku.",
+    "cta": "Pobierz za darmo z App Store",
+    "note": "Pełny metronom i sterowanie głosem są za darmo."
+  },
+  "demo": {
+    "title": "Spróbuj na głos",
+    "lead": "Stuknij frazę albo włącz mikrofon i powiedz ją po angielsku. Podkręć głośność, bo metronom klika.",
+    "mic": "Powiedz do mikrofonu",
+    "micOn": "Słucham. Powiedz „faster”",
+    "micNone": "Ta przeglądarka nie rozpoznaje mowy. Stuknij którąś frazę.",
+    "note": "Wersja w przeglądarce korzysta z jej rozpoznawania mowy. Aplikacja rozpoznaje mowę na urządzeniu."
+  },
+  "problem": {
+    "title": "Zgubiłeś groove tylko po to, żeby trochę zmienić tempo?",
+    "text": "Odkładasz smyczek, bierzesz kostkę w zęby, dwa razy stukasz w ekran i to, co właśnie złapałeś, znika. Not My Tempo zmienia tempo jednym słowem, a Ty grasz dalej w tej samej pozycji."
+  },
+  "features": [
+    {
+      "title": "Mówisz, a klik słucha",
+      "text": "Krótkie angielskie słowa, takie jak `start`, `faster` czy `tempo 120`. Aplikacja słucha od razu po otwarciu, bez włączania Sterowania głosowego iOS ani ustawień dostępności.\nNie pamiętasz polecenia? Powiedz `help`, a wszystkie frazy pojawią się na ekranie.",
+      "shot": "04-voice"
+    },
+    {
+      "title": "Rytm widać też na ekranie",
+      "text": "Wybierz odbicie, orbitę albo pierścień. Pierwsze uderzenie taktu jest czerwone i klika głośniej.\nStukaj w rytm w orbitę, a zobaczysz, jak blisko trafiasz.",
+      "shot": "02-orbit"
+    },
+    {
+      "title": "Akcenty zapisane dla każdego utworu",
+      "text": "Ustaw każde kliknięcie w takcie jako wysokie, niskie albo ciche i zapisz je jako preset. Wzór bossa novy czy samby budujesz raz, a potem tylko go wybierasz. (Pro)",
+      "shot": "05-accents"
+    }
+  ],
+  "steps": {
+    "title": "Trzy kroki na start",
+    "items": [
+      {
+        "title": "Otwórz aplikację",
+        "text": "Od razu zaczyna słuchać."
+      },
+      {
+        "title": "Zezwól na mikrofon",
+        "text": "O dostęp do mikrofonu i rozpoznawania mowy pyta tylko raz."
+      },
+      {
+        "title": "Mów albo stukaj",
+        "text": "Każde polecenie ma też przycisk na ekranie."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Co możesz powiedzieć",
+    "rows": [
+      ["start · stop", "start, pauza"],
+      ["faster · slower", "szybciej lub wolniej o 5 BPM"],
+      ["up · down", "szybciej lub wolniej o 1 BPM"],
+      ["tempo 120", "od razu wybrane tempo"],
+      ["double · half", "dwa razy szybciej, dwa razy wolniej"],
+      ["three beats", "zmiana metrum"],
+      ["quarter · eighth · triplet · sixteenth", "ćwierćnuty, ósemki, triole, szesnastki"],
+      ["louder · quieter · mute", "klik głośniej, ciszej, wyciszenie"],
+      ["volume 60", "głośność w procentach"],
+      ["bounce · orbit", "zmiana widoku rytmu"],
+      ["timer 5 minutes", "minutnik ćwiczeń"],
+      ["practice", "stopniowe podnoszenie tempa podczas ćwiczeń (Pro)"],
+      ["tune", "otwarcie tunera (Pro)"],
+      ["help", "lista wszystkich poleceń"],
+      ["close · done", "zamknięcie otwartego panelu"]
+    ],
+    "note": "Rozpoznawanie mowy działa po angielsku (USA), dlatego polecenia wypowiada się angielskimi słowami. Aplikacja jest po polsku, a każde polecenie działa też po stuknięciu."
+  },
+  "pricing": {
+    "title": "Metronom jest za darmo, a Pro czeka, gdy zechcesz więcej",
+    "free": {
+      "name": "Za darmo",
+      "items": [
+        "Wszystkie polecenia głosowe",
+        "Metrum od 1 do 8 uderzeń, z akcentem na pierwszym",
+        "Ćwierćnuty, ósemki, triole i szesnastki",
+        "Odbicie, orbita i pierścień",
+        "Tap tempo i sprawdzanie rytmu",
+        "Minutnik ćwiczeń"
+      ]
+    },
+    "pro": {
+      "name": "Not My Tempo Pro",
+      "items": [
+        "Tryb ćwiczeń: dodaje kilka BPM co kilka taktów, aż dojdziesz do tempa docelowego",
+        "Edytor akcentów z presetami dla każdego utworu",
+        "Tuner chromatyczny"
+      ],
+      "note": "Subskrypcja roczna z bezpłatnym okresem próbnym albo jednorazowy zakup na zawsze"
+    },
+    "note": "Sterowanie głosem i funkcje dostępności zostaną bezpłatne dla wszystkich. Jeśli kupiłeś aplikację, zanim pojawiło się Pro, wszystkie funkcje Pro już masz."
+  },
+  "faq": {
+    "title": "Pytania",
+    "items": [
+      {
+        "q": "Czy mogę mówić po polsku?",
+        "a": "Rozpoznawanie mowy działa po angielsku (USA), więc polecenia to krótkie angielskie słowa, takie jak `start` czy `faster`. Szybko wchodzą w nawyk, a każde polecenie działa też przyciskiem."
+      },
+      {
+        "q": "Aplikacja mnie nie słyszy.",
+        "a": "Sprawdź, czy przy mikrofonie widnieje „Słucham”. Jeśli nie, stuknij „Słuchaj”. W głośnym pomieszczeniu albo przy graniu przez głośniki użyj słuchawek, żeby klik nie trafiał do mikrofonu."
+      },
+      {
+        "q": "Słuchanie samo się wyłączyło.",
+        "a": "Żeby oszczędzać baterię, słuchanie wyłącza się po kilku minutach bez poleceń. Stuknij „Słuchaj”, aby je włączyć."
+      },
+      {
+        "q": "Tempo wyszło o połowę wolniejsze albo dwa razy szybsze.",
+        "a": "Powiedz `double` albo `half`, żeby to poprawić."
+      },
+      {
+        "q": "Jak korzystać z tunera?",
+        "a": "Powiedz `tune` albo stuknij przycisk z falą na karcie tempa. Zagraj dźwięk: gdy wskaźnik trafi w zielone pole, instrument jest nastrojony. Aby wyjść, powiedz `close`."
+      },
+      {
+        "q": "Używam już Sterowania głosowego iOS.",
+        "a": "Wyłącz mikrofon aplikacji i steruj nią, podając nazwy przycisków. Każdy element ma etykietę VoiceOver."
+      },
+      {
+        "q": "Czy mój głos jest gdzieś wysyłany?",
+        "a": "Nie. Mowa jest rozpoznawana na urządzeniu i nigdy nie jest nagrywana, zapisywana ani wysyłana. Metronom, sterowanie głosem i tuner działają bez internetu."
+      },
+      {
+        "q": "Jak anulować subskrypcję?",
+        "a": "W Ustawienia > Konto Apple > Subskrypcje. Subskrypcja roczna odnawia się automatycznie, jeśli nie anulujesz jej co najmniej 24 godziny przed końcem bieżącego okresu. Zakup na zawsze to jednorazowa opłata."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Od dzisiejszych ćwiczeń\nręce zostają na instrumencie",
+    "cta": "Pobierz za darmo z App Store"
+  },
+  "ui": {
+    "skip": "Przejdź do treści",
+    "languages": "Język",
+    "privacy": "Polityka prywatności",
+    "contact": "Pytania lub uwagi? Napisz na {email}."
+  }
+}

@@ -1,137 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Not My Tempo — Metrônomo e afinador sem usar as mãos</title>
-  <meta name="description" content="Not My Tempo é um metrônomo que você controla só com a voz enquanto toca, com afinador cromático incluído." />
-  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/" />
-  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/" />
-  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/" />
-  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/" />
-  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/" />
-  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/" />
-  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/" />
-  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/" />
-  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/" />
-  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/" />
-  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/" />
-  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/" />
-  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/" />
-  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/" />
-  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/" />
-  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/" />
-  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/" />
-  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/" />
-  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/" />
-  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/" />
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not My Tempo: o metrônomo que você comanda pela voz enquanto toca</title>
+  <meta name="description" content="Diga start, faster ou tempo 120 em inglês e o clique obedece, sem tirar as mãos do instrumento. O metrônomo completo e o controle por voz são grátis.">
+  <meta name="theme-color" content="#0A7EA4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6781537149">
+  <link rel="canonical" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/HandsFreeMetronome/ko/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/HandsFreeMetronome/ja/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/HandsFreeMetronome/de/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/HandsFreeMetronome/es/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/HandsFreeMetronome/fr/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hans/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/HandsFreeMetronome/zh-Hant/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/HandsFreeMetronome/it/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/HandsFreeMetronome/ru/">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/HandsFreeMetronome/nl/">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/HandsFreeMetronome/pl/">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/HandsFreeMetronome/tr/">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/HandsFreeMetronome/sv/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/HandsFreeMetronome/da/">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/HandsFreeMetronome/nb/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/HandsFreeMetronome/fi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/HandsFreeMetronome/cs/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/HandsFreeMetronome/id/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/HandsFreeMetronome/vi/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/HandsFreeMetronome/el/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/HandsFreeMetronome/th/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/HandsFreeMetronome/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not My Tempo: o metrônomo que você comanda pela voz enquanto toca">
+  <meta property="og:description" content="Diga start, faster ou tempo 120 em inglês e o clique obedece, sem tirar as mãos do instrumento. O metrônomo completo e o controle por voz são grátis.">
+  <meta property="og:url" content="https://m1zz.github.io/HandsFreeMetronome/pt-BR/">
+  <meta property="og:image" content="https://m1zz.github.io/HandsFreeMetronome/img/pt-BR/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#0A7EA4}@media (prefers-color-scheme:dark){:root{--accent:#22D3EE}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="langs" aria-label="Idioma">
-      <a href="../" hreflang="en" lang="en">English</a>
-      <a href="../ko/" hreflang="ko" lang="ko">한국어</a>
-      <a href="../ja/" hreflang="ja" lang="ja">日本語</a>
-      <a href="../de/" hreflang="de" lang="de">Deutsch</a>
-      <a href="../es/" hreflang="es" lang="es">Español</a>
-      <a href="../fr/" hreflang="fr" lang="fr">Français</a>
-      <a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-      <a href="./" hreflang="pt-BR" lang="pt-BR" aria-current="true">Português (Brasil)</a>
-      <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
-      <a href="../it/" hreflang="it" lang="it">Italiano</a>
-      <a href="../ru/" hreflang="ru" lang="ru">Русский</a>
-      <a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
-      <a href="../pl/" hreflang="pl" lang="pl">Polski</a>
-      <a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
-      <a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
-      <a href="../da/" hreflang="da" lang="da">Dansk</a>
-      <a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
-      <a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
-      <a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
-      <a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
-      <a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
-      <a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
-      <a href="../th/" hreflang="th" lang="th">ไทย</a>
-    </nav>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <header class="bar">
+    <a class="brand" href="../pt-BR/"><img src="../icon.png" alt="" width="32" height="32">Not My Tempo</a>
+    <a class="lang-link" href="#languages">Idioma</a>
+  </header>
 
-    <header>
-      <div class="dots"><span class="dot first"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <h1>Not My Tempo</h1>
-      <div class="sub">Metrônomo e afinador sem usar as mãos — Suporte</div>
-      <a class="store-btn" href="https://apps.apple.com/br/app/not-ma-tempo/id6781537149">Baixar na App&nbsp;Store</a>
-      <div class="sale">O metrônomo completo e o controle total por voz são <strong>grátis</strong>.
-        O <strong>Not My Tempo Pro</strong> acrescenta o modo de estudo, o editor de acentos com presets e o afinador cromático —
-        como assinatura anual com teste grátis ou compra vitalícia com pagamento único.</div>
-      <div class="price-note">O controle por voz e os recursos de acessibilidade continuam grátis para todos, sempre.
-        Comprou o app antes do Pro? Todos os recursos Pro já são seus.</div>
-    </header>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>As mãos no instrumento,<br>o andamento na voz</h1>
+        <p class="lead">Diga <code>faster</code> no meio da frase e o clique acelera. Os comandos são palavras curtas em inglês, e você não precisa parar de tocar para mudar o andamento.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6781537149">Baixe grátis na App Store</a><a class="try" href="#try">Teste falando ↓</a></div>
+        <p class="muted small">O metrônomo completo e o controle por voz são grátis.</p>
+      </div>
+      <div class="phone"><img src="../img/pt-BR/01-playing.jpg" alt="As mãos no instrumento, o andamento na voz" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <h2>O que é</h2>
-    <p>Not My Tempo é um metrônomo que você controla só com a voz enquanto toca —
-       sem tocar na tela e sem precisar ativar o Controle por Voz do iOS nem nenhum
-       ajuste de Acessibilidade. Ele também traz um afinador cromático.</p>
 
-    <h2>Primeiros passos</h2>
-    <div class="card">
-      <p>1. Abra o app — ele já começa a <strong>ouvir</strong> sozinho.<br>
-         2. Na primeira vez, permita o acesso ao Microfone e ao Reconhecimento de Fala.<br>
-         3. É só dizer um comando ou tocar nos controles.</p>
-      <p class="sub">Dica: use fones de ouvido para o clique não vazar no microfone — assim
-         o reconhecimento de voz e o afinador ficam mais precisos.</p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Teste falando</h2>
+      <p class="muted">Toque em uma frase ou ligue o microfone e fale em inglês. Aumente o volume, porque o clique toca de verdade.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Teste falando&quot;, &quot;lead&quot;: &quot;Toque em uma frase ou ligue o microfone e fale em inglês. Aumente o volume, porque o clique toca de verdade.&quot;, &quot;mic&quot;: &quot;Falar com ele&quot;, &quot;micOn&quot;: &quot;Ouvindo. Tente dizer “faster”&quot;, &quot;micNone&quot;: &quot;Este navegador não reconhece fala. Toque em uma das frases.&quot;, &quot;note&quot;: &quot;Esta demonstração na web usa o reconhecimento de fala do navegador. O app reconhece a fala no próprio aparelho.&quot;}"></div>
+    </section>
 
-    <h2>Comandos de voz</h2>
-    <div class="card">
-      <table>
-        <tr><td class="cmd">"start" / "stop"</td><td>tocar / pausar</td></tr>
-        <tr><td class="cmd">"faster" / "slower"</td><td>±5 BPM</td></tr>
-        <tr><td class="cmd">"up" / "down"</td><td>±1 BPM</td></tr>
-        <tr><td class="cmd">"tempo 120"</td><td>definir um valor exato</td></tr>
-        <tr><td class="cmd">"double" / "half"</td><td>×2 / ÷2</td></tr>
-        <tr><td class="cmd">"three beats"</td><td>definir o compasso</td></tr>
-        <tr><td class="cmd">"quarter / eighth / triplet / sixteenth"</td><td>subdivisão</td></tr>
-        <tr><td class="cmd">"louder" / "quieter" / "mute"</td><td>volume do clique</td></tr>
-        <tr><td class="cmd">"volume 60"</td><td>definir o volume em porcentagem</td></tr>
-        <tr><td class="cmd">"bounce" / "orbit"</td><td>trocar o visual da batida</td></tr>
-        <tr><td class="cmd">"practice"</td><td>subir o andamento aos poucos enquanto você estuda (Pro)</td></tr>
-        <tr><td class="cmd">"tune"</td><td>abrir o afinador (Pro)</td></tr>
-        <tr><td class="cmd">"help"</td><td>mostrar a lista de comandos</td></tr>
-        <tr><td class="cmd">"close" / "done"</td><td>fechar um painel</td></tr>
-      </table>
-      <p class="sub">Os comandos de voz são falados em inglês (EUA), do jeito que aparecem acima.
-         Todos eles também funcionam pelos controles na tela.</p>
-    </div>
+    <section class="problem reveal">
+      <h2>Já perdeu o groove só para mexer no andamento?</h2>
+      <p>Você larga o arco, prende a palheta nos dentes, toca duas vezes na tela e a levada que tinha acabado de encaixar some. O Not My Tempo muda o andamento com uma palavra, sem você sair da posição.</p>
+    </section>
 
-    <h2>Afinador</h2>
-    <p>Diga <code>tune</code> (ou toque no botão de onda no cartão de andamento). Toque uma
-       nota — quando o indicador cair dentro da faixa verde, você está afinado. Diga
-       <code>close</code> para sair.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Falou, ele acompanha</h2>
+        <p>Palavras curtas em inglês, como <code>start</code>, <code>faster</code> e <code>tempo 120</code>. Ele já escuta assim que você abre o app, sem ativar o Controle por Voz do iOS nem nenhum ajuste de Acessibilidade.<br>Esqueceu um comando? Diga <code>help</code> e tudo o que dá para falar aparece na tela.</p>
+      </div>
+      <div class="phone"><img src="../img/pt-BR/04-voice.jpg" alt="Falou, ele acompanha" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Bateria</h2>
-    <p>Para economizar bateria, o app para de ouvir sozinho depois de alguns minutos sem
-       comandos. Toque em <strong>Ouvir</strong> para ligar de novo.</p>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>A batida também na tela</h2>
+        <p>Escolha entre bola quicando, órbita ou anel. O primeiro tempo do compasso aparece em vermelho e soa mais forte.<br>Toque no ritmo na órbita e veja o quanto você chegou perto.</p>
+      </div>
+      <div class="phone"><img src="../img/pt-BR/02-orbit.jpg" alt="A batida também na tela" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Solução de problemas</h2>
-    <div class="card">
-      <p><strong>Ele não está me ouvindo.</strong> Veja se o status do microfone mostra
-         "Ouvindo". Se estiver desligado, toque em Ouvir. Em lugares barulhentos ou com
-         caixas de som, use fones de ouvido.</p>
-      <p><strong>A detecção de andamento deu o dobro ou a metade.</strong> Diga "double" ou
-         "half" para corrigir.</p>
-    </div>
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Os acentos de cada música, salvos</h2>
+        <p>Deixe cada clique do compasso agudo, grave ou mudo e salve como preset. Monte a levada de bossa nova ou de samba uma vez e, na próxima, é só escolher. (Pro)</p>
+      </div>
+      <div class="phone"><img src="../img/pt-BR/05-accents.jpg" alt="Os acentos de cada música, salvos" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
 
-    <h2>Contato</h2>
-    <p>Dúvidas ou sugestões: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    <section class="reveal">
+      <h2>Comece em três passos</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Abra o app</h3><p>Ele já começa a ouvir sozinho.</p></li>
+<li class="card"><span class="n">2</span><h3>Libere o microfone</h3><p>Só na primeira vez ele pede acesso ao microfone e ao reconhecimento de fala.</p></li>
+<li class="card"><span class="n">3</span><h3>Fale ou toque</h3><p>Todo comando também tem um botão na tela.</p></li></ol>
+    </section>
 
-    <footer>
-      <a href="privacy.html">Política de Privacidade</a> · © 2026 Not My Tempo
-    </footer>
-  </div>
+    <section class="reveal" id="commands">
+      <h2>O que você pode dizer</h2>
+      <div class="card table">
+        <dl><div><dt>start · stop</dt><dd>tocar, pausar</dd></div><div><dt>faster · slower</dt><dd>subir ou descer 5 BPM</dd></div><div><dt>up · down</dt><dd>subir ou descer 1 BPM</dd></div><div><dt>tempo 120</dt><dd>ir direto para um andamento</dd></div><div><dt>double · half</dt><dd>o dobro, a metade</dd></div><div><dt>three beats</dt><dd>mudar o compasso</dd></div><div><dt>quarter · eighth · triplet · sixteenth</dt><dd>semínimas, colcheias, tercinas, semicolcheias</dd></div><div><dt>louder · quieter · mute</dt><dd>clique mais alto, mais baixo ou mudo</dd></div><div><dt>volume 60</dt><dd>definir o volume em porcentagem</dd></div><div><dt>bounce · orbit</dt><dd>trocar o visual da batida</dd></div><div><dt>timer 5 minutes</dt><dd>definir um timer de estudo</dd></div><div><dt>practice</dt><dd>subir o andamento aos poucos enquanto você estuda (Pro)</dd></div><div><dt>tune</dt><dd>abrir o afinador (Pro)</dd></div><div><dt>help</dt><dd>ver todos os comandos</dd></div><div><dt>close · done</dt><dd>fechar um painel</dd></div></dl>
+      </div>
+      <p class="muted">O reconhecimento de voz funciona em inglês (EUA), então os comandos são falados em inglês. O resto do app fala português, e tudo também funciona pelos botões.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>O metrônomo é grátis. O Pro fica para quando você quiser mais.</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Grátis</h3>
+          <ul><li>Todos os comandos de voz</li><li>Compassos de 1 a 8 tempos, com o primeiro acentuado</li><li>Subdivisões em semínimas, colcheias, tercinas e semicolcheias</li><li>Visuais de bola quicando, órbita e anel</li><li>Tap tempo e teste de timing</li><li>Timer de estudo</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Not My Tempo Pro</h3>
+          <ul><li>Modo de estudo: sobe alguns BPM a cada poucos compassos até chegar na sua meta</li><li>Editor de acentos com presets para cada música</li><li>Afinador cromático</li></ul>
+          <p class="muted">Assinatura anual com teste grátis, ou compra vitalícia com pagamento único</p>
+        </div>
+      </div>
+      <p class="muted">O controle por voz e os recursos de acessibilidade continuam grátis para todos. Comprou o app antes do Pro? Todos os recursos Pro já são seus.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Perguntas frequentes</h2>
+      <div class="faq"><details><summary>Posso falar em português?</summary><p>O reconhecimento de voz funciona em inglês (EUA), então os comandos são palavras curtas em inglês, como <code>start</code> e <code>faster</code>. Dá para pegar o jeito rapidinho, e todo comando também tem um botão na tela.</p></details>
+<details><summary>Ele não está me ouvindo.</summary><p>Veja se o status do microfone mostra Ouvindo. Se estiver desligado, toque em Ouvir. Em lugares barulhentos ou com caixa de som alta, use fones de ouvido para o clique não vazar no microfone.</p></details>
+<details><summary>O app parou de ouvir sozinho.</summary><p>Para economizar bateria, ele para de ouvir depois de alguns minutos sem comandos. Toque em Ouvir para ligar de novo.</p></details>
+<details><summary>O andamento saiu no dobro ou na metade.</summary><p>Diga <code>double</code> ou <code>half</code> para corrigir na hora.</p></details>
+<details><summary>Como uso o afinador?</summary><p>Diga <code>tune</code> ou toque no botão de onda no cartão de andamento. Toque uma nota: quando o indicador cair na faixa verde, você está afinado. Diga <code>close</code> para sair.</p></details>
+<details><summary>Eu já uso o Controle por Voz do iOS.</summary><p>Desligue o microfone do app e comande pelos nomes dos botões. Todos os controles têm rótulos para o VoiceOver.</p></details>
+<details><summary>Minha voz é enviada para algum lugar?</summary><p>Não. A fala é reconhecida no próprio aparelho e nunca é gravada, armazenada nem enviada. O metrônomo, o controle por voz e o afinador funcionam sem internet.</p></details>
+<details><summary>Como cancelo a assinatura?</summary><p>Em Ajustes &gt; Conta Apple &gt; Assinaturas. O plano anual é renovado automaticamente, a menos que seja cancelado com pelo menos 24 horas de antecedência do fim do período. O vitalício é uma cobrança única.</p></details></div>
+      <p class="contact">Dúvidas ou sugestões? Escreva para <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>No estudo de hoje,<br>não tire as mãos do instrumento</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6781537149">Baixe grátis na App Store</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Idioma"><a href="../" hreflang="en" lang="en">English</a>
+<a href="../ko/" hreflang="ko" lang="ko">한국어</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR" aria-current="page">Português (Brasil)</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a></nav>
+    <p><a href="privacy.html">Política de Privacidade</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Not My Tempo</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>
