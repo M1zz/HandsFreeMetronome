@@ -72,6 +72,7 @@ struct ContentView: View {
     @State private var showOfferCode = false        // App Store offer-code redemption sheet
     @State private var playStartedAt: Date?         // a run long enough to count as practice
     @State private var showReviewGate = false       // "Enjoying Not My Tempo?" right after practice
+    @State private var practiceJustEnded = false    // 연습을 막 마쳤다 — 팁 부탁이 설 수 있는 자리
 
     // Landscape on iPhone reports a compact height → switch to a two-column layout.
     @Environment(\.verticalSizeClass) private var vSizeClass
@@ -202,14 +203,20 @@ struct ContentView: View {
                 withAnimation(.easeInOut(duration: 0.4)) { hintDismissed = true }
                 timingStats = TimingStats()   // fresh tap-accuracy tally for each run
                 playStartedAt = Date()
+                practiceJustEnded = false
             } else {
                 currentBeat = -1   // reset so the next start floats at centre first
                 // A real practice run (not a quick test click) feeds the review
                 // prompt's "was this useful?" signal.
-                if let started = playStartedAt,
-                   Date().timeIntervalSince(started) >= PracticeMoment.minimumRun {
-                    LeeoEngagement.shared.registerSignificantEvent()
-                    askForReviewAfterPractice()
+                if let started = playStartedAt {
+                    let run = Date().timeIntervalSince(started)
+                    NotMyTempoTipMoments.record(practice: run)
+                    if run >= PracticeMoment.minimumRun {
+                        LeeoEngagement.shared.registerSignificantEvent()
+                        // 리뷰를 물을 차례면 팁은 묻지 않는다 — 한 번에 하나만 부탁한다.
+                        practiceJustEnded = !LeeoReviewRequest.shouldRequest()
+                        askForReviewAfterPractice()
+                    }
                 }
                 playStartedAt = nil
             }
@@ -437,6 +444,7 @@ struct ContentView: View {
                     tempoCard
                     if !metronome.isPlaying {
                         subdivisionCard.transition(.opacity)
+                        tipAsk
                     }
                 }
                 .padding(.horizontal, 16)
@@ -457,6 +465,15 @@ struct ContentView: View {
         .animation(.easeInOut(duration: 0.35), value: metronome.isPlaying)
     }
 
+    /// 연습을 막 마친 자리의 팁 부탁(`NotMyTempoTipMoments`). 이미 Pro 를 가진 사람에게만 —
+    /// 아직 안 산 사람에게는 페이월이 맞는 길이다. 드물게 묻는 규칙은 LeeoKit 이 지킨다.
+    @ViewBuilder private var tipAsk: some View {
+        if practiceJustEnded, pro.isPro, let tipJar = pro.tipJar {
+            LeeoTipAskSlot<HandsFreeMetronomeSpec>(tipJar: tipJar, reached: NotMyTempoTipMoments.reachedNow)
+                .transition(.opacity)
+        }
+    }
+
     /// Landscape (compact height): two columns so everything stays on one screen.
     /// Left holds the beats + tempo; right holds subdivision, voice status, transport.
     private var landscapeLayout: some View {
@@ -470,6 +487,7 @@ struct ContentView: View {
                 if !metronome.isPlaying {
                     subdivisionCard.transition(.opacity)
                     voiceCard.transition(.opacity)
+                    tipAsk
                 }
                 Spacer(minLength: 0)
                 transportBar
@@ -1672,6 +1690,10 @@ struct ContentView: View {
                     if let gift = pro.gift {
                         GiftRows(gift: gift, isPro: pro.isPro)
                     }
+                    // 개발자 응원하기(팁). 상품이 App Store 에서 와야 줄이 선다.
+                    if let tipJar = pro.tipJar {
+                        Section { LeeoTipJarLink<HandsFreeMetronomeSpec>(tipJar: tipJar) }
+                    }
                     Section {
                         usageRow("circle.grid.3x3", "Set beats", "Tap the dots to choose the time signature.")
                         usageRow("hand.tap", "Tap tempo", "Tap the big BPM number in rhythm to set the tempo.")
@@ -2510,6 +2532,34 @@ private struct TransportLabelStyle: LabelStyle {
 /// (`LeeoEngagement`) — a few seconds of trying the click out does not.
 enum PracticeMoment {
     static let minimumRun: TimeInterval = 60
+}
+
+/// 이 앱이 그 사람에게 도움이 됐다는 숫자 — 클릭에 맞춰 연습한 시간. 팁 부탁 카드가 이 숫자를 말한다.
+enum NotMyTempoTipMoments {
+    /// 연습한 시간(시간). 큰 것부터.
+    static let hours = [100, 30, 10]
+    private static let secondsKey = "practice.totalSeconds"
+
+    /// 클릭이 멈출 때마다 그 시간을 더한다.
+    static func record(practice seconds: TimeInterval) {
+        guard seconds > 0 else { return }
+        let total = UserDefaults.standard.double(forKey: secondsKey) + seconds
+        UserDefaults.standard.set(total, forKey: secondsKey)
+    }
+
+    /// 넘어선 순간, 인상적인 것부터.
+    static func reached(practiceSeconds: TimeInterval) -> [LeeoTipMoment] {
+        let h = Int(practiceSeconds / 3600)
+        return hours.filter { h >= $0 }.map { threshold in
+            LeeoTipMoment(id: "hours.\(threshold)",
+                          message: String(localized: "\(h) hours practiced with the click so far",
+                                          comment: "Tip ask card: total hours practiced with the metronome running"))
+        }
+    }
+
+    static var reachedNow: [LeeoTipMoment] {
+        reached(practiceSeconds: UserDefaults.standard.double(forKey: secondsKey))
+    }
 }
 
 struct TimingStats: Equatable {

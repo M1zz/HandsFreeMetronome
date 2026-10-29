@@ -34,7 +34,9 @@ enum HandsFreeMetronomeSpec: LeeoAppSpec {
             gift: LeeoGiftConfig(
                 productID: ProStore.giftID,
                 grantsProductID: ProStore.lifetimeID,
-                containerIdentifier: "iCloud.com.Ysoup.FeedbackHub")))
+                containerIdentifier: "iCloud.com.Ysoup.FeedbackHub"),
+            // 개발자 응원하기(팁). 이미 Pro 를 가진 사람이 조금 더 내고 싶을 때. 기능을 열지 않는다.
+            tipJar: LeeoTipJarConfig(productIDs: ProStore.tipIDs)))
 }
 
 // MARK: - Usage statistics

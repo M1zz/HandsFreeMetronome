@@ -43,6 +43,66 @@
       "productID" : "com.leeo.HandsFreeMetronome.gift.pro",
       "referenceName" : "Gift Pro",
       "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "9FAAB607-EB40-4308-8923-3779DFCC2D1A",
+      "localizations" : [
+        {
+          "description" : "Buy the developer a coffee.",
+          "displayName" : "Small Tip",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "개발자에게 커피 한 잔을 보냅니다.",
+          "displayName" : "작은 응원",
+          "locale" : "ko"
+        }
+      ],
+      "productID" : "com.leeo.HandsFreeMetronome.tip.small",
+      "referenceName" : "Tip Small",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "1A1832F7-FB09-41DD-9C73-531BDF7961A0",
+      "localizations" : [
+        {
+          "description" : "Help keep Not My Tempo improving.",
+          "displayName" : "Medium Tip",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "낫마템포를 계속 다듬을 수 있게 힘을 보탭니다.",
+          "displayName" : "든든한 응원",
+          "locale" : "ko"
+        }
+      ],
+      "productID" : "com.leeo.HandsFreeMetronome.tip.medium",
+      "referenceName" : "Tip Medium",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "CBC05BA6-1BA7-4FF6-BF96-CACF4BDF1783",
+      "localizations" : [
+        {
+          "description" : "Help build what comes next.",
+          "displayName" : "Large Tip",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "낫마템포의 다음 기능을 함께 만듭니다.",
+          "displayName" : "큰 응원",
+          "locale" : "ko"
+        }
+      ],
+      "productID" : "com.leeo.HandsFreeMetronome.tip.large",
+      "referenceName" : "Tip Large",
+      "type" : "Consumable"
     }
   ],
   "settings" : {

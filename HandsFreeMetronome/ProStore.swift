@@ -61,6 +61,11 @@ final class ProStore: ObservableObject {
     /// Pro 선물(소모성). 받는 사람은 `lifetimeID` 를 산 것과 같아진다.
     /// ⚠️ `allProductIDs` 에 넣지 않는다. 넣으면 선물을 산 사람 자신이 Pro 가 된다.
     static let giftID = "com.leeo.HandsFreeMetronome.gift.pro"
+    /// 팁(소모성, 작은 것부터). 기능을 열지 않는다.
+    /// ⚠️ 이것도 `allProductIDs` 에 넣지 않는다. 넣으면 팁을 낸 사람이 Pro 가 된다.
+    static let tipIDs = ["com.leeo.HandsFreeMetronome.tip.small",
+                         "com.leeo.HandsFreeMetronome.tip.medium",
+                         "com.leeo.HandsFreeMetronome.tip.large"]
 
     /// The app was PAID up front through 1.0.4 (builds 1 and 2). Anyone whose
     /// original download predates the freemium switch already paid for the whole
@@ -149,6 +154,9 @@ final class ProStore: ObservableObject {
     /// Pro 선물하기 엔진. 상품은 앱이 뜬 뒤에 오고 이 파사드는 그 변화를 알리지 않으므로,
     /// 화면은 이 객체를 따로 관찰한다(`GiftRows`).
     var gift: LeeoGiftStore? { store.gift }
+
+    /// 팁 엔진. 선물처럼 화면이 따로 관찰한다(`LeeoTipJarLink` · `LeeoTipAskSlot`).
+    var tipJar: LeeoTipJar? { store.tipJar }
 
     /// Whether `feature` is open right now — the Spec's gate (`proOnly`) read
     /// against the same entitlement as `isPro` (purchase, grandfather, dev unlock).
