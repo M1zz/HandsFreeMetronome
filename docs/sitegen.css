@@ -1,4 +1,4 @@
-/* 앱 소개 페이지 공용 디자인. sitegen.py 가 각 레포 docs/ 로 복사한다 — 여기서만 고친다.
+/* 앱 소개 페이지 공용 디자인. sitegen.py 가 각 레포 docs/sitegen.css 로 복사한다(앱의 다른 css 와 이름이 겹치지 않게). 여기서만 고친다.
    앱마다 다른 것은 --accent 하나(페이지 <style> 에서 넣는다). */
 
 :root {
@@ -22,6 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 :lang(ko) { word-break: keep-all; }
+:lang(ja) { word-break: auto-phrase; }   /* 일본어: 단어 가운데서 줄이 바뀌지 않게 (지원하는 브라우저만) */
 h1, h2, h3 { text-wrap: balance; margin: 0; line-height: 1.15; letter-spacing: -0.02em; }
 p, li, dd, summary { text-wrap: pretty; }
 h1 { font-size: clamp(2.25rem, 6vw, 3.75rem); font-weight: 700; }
