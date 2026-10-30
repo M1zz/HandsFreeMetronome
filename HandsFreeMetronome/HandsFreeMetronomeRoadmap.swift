@@ -73,7 +73,7 @@ struct RoadmapScreen: View {
                     LeeoFeedbackView<HandsFreeMetronomeSpec>(initialType: .feature)
                         .toolbar {
                             ToolbarItem(placement: .confirmationAction) {
-                                Button("Done") { showFeedback = false }
+                                Button { showFeedback = false } label: { Label("Done", systemImage: "checkmark") }
                             }
                         }
                 }

@@ -28,6 +28,8 @@ struct HandsFreeMetronomeApp: App {
             // The satisfaction prompt is asked right after practice (ContentView),
             // not on launch.
             ContentView()
+                // iPhone Duo: measures the fold and keeps sheets and alerts off it (LeeoKit Fold).
+                .foldAware()
         }
     }
 }

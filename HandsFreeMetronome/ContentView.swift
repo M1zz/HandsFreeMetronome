@@ -76,6 +76,8 @@ struct ContentView: View {
 
     // Landscape on iPhone reports a compact height → switch to a two-column layout.
     @Environment(\.verticalSizeClass) private var vSizeClass
+    // iPhone Duo unfolded: controls on one side of the fold, the beat on the other (LeeoKit Fold).
+    @Environment(\.foldLayout) private var fold
     // Accessibility preferences we honour throughout the UI.
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.accessibilityDifferentiateWithoutColor) private var differentiateWithoutColor
@@ -117,11 +119,22 @@ struct ContentView: View {
 
             Group {
                 if assistiveAccess {
-                    assistiveAccessLayout
-                } else if vSizeClass == .compact {
-                    landscapeLayout
+                    assistiveAccessLayout.foldConfined()
                 } else {
-                    portraitLayout
+                    // Folded (or any ordinary phone) this is the same single screen as before.
+                    // Unfolded on iPhone Duo: the controls stay on the choose side (left /
+                    // bottom) and the beat moves to the result side (right / top), so the
+                    // pulse sits where the eyes are while the hands work the controls.
+                    FoldSplitView {
+                        if vSizeClass == .compact && !fold.isUnfolded {
+                            landscapeLayout
+                        } else {
+                            portraitLayout
+                        }
+                    } result: {
+                        beatDots
+                            .padding(16)
+                    }
                 }
             }
             // Cube page-turn, outgoing face: main + tuner are two sides of one
@@ -138,6 +151,7 @@ struct ContentView: View {
             // the whole screen "turns" into it like a box face — not a sheet.
             if showTuner {
                 tunerScreen
+                    .foldConfined()
                     .transition(reduceMotion ? .opacity : .cubeFromTrailing)
                     .zIndex(2)
             }
@@ -150,18 +164,21 @@ struct ContentView: View {
                 PaywallView(store: pro, feature: feature) {
                     withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = nil }
                 }
+                .foldConfined()
                 .transition(reduceMotion ? .opacity : .move(edge: .bottom))
                 .zIndex(3)
             }
 
             if showWhatsNew {
                 WhatsNewView { closeWhatsNew() }
+                    .foldConfined()
                     .transition(reduceMotion ? .opacity : .move(edge: .bottom))
                     .zIndex(4)
             }
 
             if showOnboarding {
                 NotMyTempoOnboardingView(usesVoiceControl: usesVoiceControl) { finishOnboarding() }
+                    .foldConfined()
                     .transition(.opacity)
                     .zIndex(5)
             }
@@ -176,7 +193,7 @@ struct ContentView: View {
         }
         // Support Dynamic Type, but cap growth so the single-screen layout holds.
         .dynamicTypeSize(...DynamicTypeSize.accessibility2)
-        .fullScreenCover(isPresented: $showCommands) { commandsSheet }
+        .fullScreenCover(isPresented: $showCommands) { commandsSheet.foldConfined() }
         // The tuner engine follows the page's visibility (it used to be the
         // sheet's onDismiss) — stopped on ANY path that closes it.
         .onChange(of: showTuner) { open in
@@ -444,7 +461,10 @@ struct ContentView: View {
         VStack(spacing: 8) {
             ScrollView {
                 VStack(spacing: 8) {
-                    beatDots         // tap to set time signature; circles wave on the beat
+                    // Unfolded, the beat stands on the other side of the fold instead.
+                    if !fold.isUnfolded {
+                        beatDots     // tap to set time signature; circles wave on the beat
+                    }
                     tempoCard
                     if !metronome.isPlaying {
                         subdivisionCard.transition(.opacity)
@@ -593,8 +613,9 @@ struct ContentView: View {
         // screen — a clear switch to a focused "performance" view. In landscape
         // (compact height) the card flexes to whatever the column has left instead,
         // so the tempo card below it is never pushed off screen.
-        .frame(height: vSizeClass == .compact ? nil : (playing ? 340 : 200))
-        .frame(maxHeight: vSizeClass == .compact ? .infinity : nil)
+        // Unfolded it has a whole pane of its own, so it fills that too.
+        .frame(height: beatFillsPane ? nil : (playing ? 340 : 200))
+        .frame(maxHeight: beatFillsPane ? .infinity : nil)
         .frame(maxWidth: .infinity)
         .padding(.vertical, 6)
         .background(card)
@@ -616,6 +637,9 @@ struct ContentView: View {
         }
         .coachAnchor("beat")
     }
+
+    /// The beat card flexes to its space instead of a fixed height: landscape, or its own pane on an unfolded Duo.
+    private var beatFillsPane: Bool { vSizeClass == .compact || fold.isUnfolded }
 
     /// Small toggle that cycles bounce → orbit → sweep; its icon previews the NEXT view.
     private var vizModeButton: some View {
@@ -1219,11 +1243,13 @@ struct ContentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Reset") { metronome.resetAccents() }
+                    Button { metronome.resetAccents() } label: {
+                        Label("Reset", systemImage: "arrow.counterclockwise")
+                    }
                         .accessibilityHint("Restores the default pattern for this meter")
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { showAccents = false }
+                    Button { showAccents = false } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
             .alert("Save preset", isPresented: $showSavePreset) {
@@ -1838,7 +1864,7 @@ struct ContentView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { showCommands = false }
+                    Button { showCommands = false } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
         }
@@ -1949,7 +1975,7 @@ struct ContentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { showTrainer = false }
+                    Button { showTrainer = false } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
         }
@@ -2002,7 +2028,7 @@ struct ContentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { showTimer = false }
+                    Button { showTimer = false } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
         }
@@ -2840,7 +2866,7 @@ struct GiftRows: View {
                                                              initialCategory: .purchase)
                         .toolbar {
                             ToolbarItem(placement: .confirmationAction) {
-                                Button("Done") { showSupport = false }
+                                Button { showSupport = false } label: { Label("Done", systemImage: "checkmark") }
                             }
                         }
                 }
