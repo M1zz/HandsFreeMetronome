@@ -6,6 +6,10 @@ import LeeoKit
 @main
 struct HandsFreeMetronomeApp: App {
     init() {
+        // 백업 금고는 무엇보다 먼저 — 예약된 복원을 설정(UserDefaults) · TipKit 저장소가 열리기 전에 적용한다.
+        // 아래 Telemetry.start() 의 bootstrap 이 다시 부르지만, 한 번만 켜진다.
+        LeeoVault.start(HandsFreeMetronomeSpec.self)
+
         // Crash-loop guard first — two launches in a row that never reached the
         // first screen open this one in safe mode (→ Operations.swift).
         LaunchGuard.begin()
