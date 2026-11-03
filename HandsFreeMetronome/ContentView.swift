@@ -4,7 +4,7 @@ import TipKit
 import LeeoKit
 
 struct ContentView: View {
-    @StateObject private var metronome = MetronomeEngine()
+    @StateObject private var metronome = MetronomeEngine.shared
     @StateObject private var voice = VoiceController()
     @StateObject private var tuner = TunerEngine()
     @StateObject private var noteSignal = NoteSignalDetector()

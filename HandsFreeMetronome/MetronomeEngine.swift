@@ -7,6 +7,9 @@ private let engineLog = Logger(subsystem: "com.handsfree.metronome", category: "
 /// Sample-accurate metronome driven by AVAudioEngine.
 /// Generates a short click programmatically — no audio assets required.
 final class MetronomeEngine: ObservableObject {
+    /// 화면과 Siri 인텐트가 같은 메트로놈을 쓴다 (→ MetronomeIntents.swift).
+    static let shared = MetronomeEngine()
+
     @Published private(set) var isPlaying = false
     // NOTE: never re-assign these inside their own didSet. They are bound directly
     // to a Slider / segmented Picker, so a self-assignment would publish a change
