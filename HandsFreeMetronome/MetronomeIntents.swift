@@ -34,6 +34,7 @@ struct SetTempoIntent: AppIntent {
     static let openAppWhenRun = true
 
     @Parameter(title: LocalizedStringResource("BPM", comment: "Siri: beats per minute parameter"),
+               description: LocalizedStringResource("The tempo in beats per minute, from 20 to 300.", comment: "Siri: BPM parameter description"),
                inclusiveRange: (20, 300),
                requestValueDialog: IntentDialog(LocalizedStringResource("What tempo?", comment: "Siri: ask for the BPM")))
     var bpm: Int

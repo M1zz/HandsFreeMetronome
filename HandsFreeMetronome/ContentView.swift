@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import AppIntents
 import TipKit
 import LeeoKit
 
@@ -221,6 +222,8 @@ struct ContentView: View {
         .leeoReviewGate(HandsFreeMetronomeSpec.self, isPresented: $showReviewGate)
         .onChange(of: metronome.isPlaying) { playing in
             if playing {
+                // Tell Siri the player started the click, so it learns this app does that.
+                IntentDonationManager.shared.donate(intent: StartMetronomeIntent())
                 withAnimation(.easeInOut(duration: 0.4)) { hintDismissed = true }
                 timingStats = TimingStats()   // fresh tap-accuracy tally for each run
                 playStartedAt = Date()
