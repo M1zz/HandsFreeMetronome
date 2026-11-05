@@ -51940,6 +51940,716 @@
           }
         }
       }
+    },
+    "Page-turn pedal: right is faster, left is slower. Keyboard: → ← and Space to start or stop." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ページめくりペダル：右で速く、左で遅く。キーボード：→ ← で調整、スペースでスタート／ストップ。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blätterpedal: rechts schneller, links langsamer. Tastatur: → ← und Leertaste zum Starten und Stoppen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pedal de pasar página: derecha más rápido, izquierda más lento. Teclado: → ← y espacio para iniciar o detener."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻页踏板：右踩加快，左踩放慢。键盘：→ ← 调速，空格键开始或停止。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pedal de virar página: direita acelera, esquerda desacelera. Teclado: → ← e Espaço para iniciar ou parar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pédale tourne-page : droite plus vite, gauche plus lent. Clavier : → ← et Espace pour démarrer ou arrêter."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "페이지 넘김 페달: 오른쪽은 빠르게, 왼쪽은 느리게. 키보드: → ← 그리고 스페이스로 시작·정지."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻頁踏板：右踩加快，左踩放慢。鍵盤：→ ← 調速，空白鍵開始或停止。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pedale voltapagina: destro più veloce, sinistro più lento. Tastiera: → ← e Spazio per avviare o fermare."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page-turn pedal: right is faster, left is slower. Keyboard: → ← and Space to start or stop."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Педаль перелистывания: правая быстрее, левая медленнее. Клавиатура: → ← и пробел — старт и стоп."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bladeromslagpedaal: rechts sneller, links langzamer. Toetsenbord: → ← en spatie om te starten of te stoppen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pedał do przewracania stron: prawy szybciej, lewy wolniej. Klawiatura: → ← i spacja, by uruchomić lub zatrzymać."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sayfa çevirme pedalı: sağ hızlandırır, sol yavaşlatır. Klavye: → ← ve başlatıp durdurmak için Boşluk."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bladvändarpedal: höger snabbare, vänster långsammare. Tangentbord: → ← och mellanslag för att starta eller stoppa."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bladvenderpedal: højre er hurtigere, venstre langsommere. Tastatur: → ← og mellemrum for at starte eller stoppe."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bladvenderpedal: høyre er raskere, venstre saktere. Tastatur: → ← og mellomrom for å starte eller stoppe."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sivunkääntöpoljin: oikea nopeuttaa, vasen hidastaa. Näppäimistö: → ← ja välilyönti käynnistää tai pysäyttää."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pedál pro otáčení stránek: pravý zrychlí, levý zpomalí. Klávesnice: → ← a mezerník pro spuštění či zastavení."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pedal pembalik halaman: kanan lebih cepat, kiri lebih lambat. Keyboard: → ← dan Spasi untuk mulai atau berhenti."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bàn đạp lật trang: phải nhanh hơn, trái chậm hơn. Bàn phím: → ← và phím cách để bắt đầu hoặc dừng."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Πεντάλ γυρίσματος σελίδας: δεξί πιο γρήγορα, αριστερό πιο αργά. Πληκτρολόγιο: → ← και διάστημα για έναρξη ή διακοπή."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แป้นเหยียบพลิกหน้า: ขวาเร็วขึ้น ซ้ายช้าลง คีย์บอร์ด: → ← และ Space เพื่อเริ่มหรือหยุด"
+          }
+        }
+      }
+    },
+    "iPad on your music stand" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "譜面台の上のiPad"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad auf dem Notenständer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El iPad en el atril"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放在谱架上的 iPad"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad na estante de partitura"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’iPad sur le pupitre"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보면대 위의 iPad"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放在譜架上的 iPad"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’iPad sul leggio"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad on your music stand"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad на пюпитре"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad op je muziekstandaard"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad na pulpicie"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nota sehpasında iPad"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad på notstället"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad på nodestativet"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad på notestativet"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad nuottitelineellä"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad na notovém stojanu"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad di stand partitur"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad trên giá nhạc"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το iPad στο αναλόγιο"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad บนแท่นวางโน้ต"
+          }
+        }
+      }
+    },
+    "A big beat and tempo you can read from a metre away, next to your score app. Change the tempo with a page-turn pedal." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1メートル離れても読める大きな拍とテンポを、楽譜アプリの隣に。ページめくりペダルでテンポを変えられます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Großer Takt und großes Tempo, aus einem Meter lesbar – direkt neben deiner Noten-App. Das Tempo änderst du mit dem Blätterpedal."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un pulso y un tempo grandes que se leen a un metro, junto a tu app de partituras. Cambia el tempo con un pedal de pasar página."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一米外也看得清的大节拍和速度，就放在乐谱 App 旁边。用翻页踏板就能调速。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulsação e andamento grandes, legíveis a um metro, ao lado do seu app de partituras. Mude o andamento com um pedal de virar página."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une pulsation et un tempo bien visibles à un mètre, à côté de votre app de partitions. Changez le tempo avec une pédale tourne-page."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1미터 떨어져도 읽히는 큰 박자와 템포를 악보 앱 옆에 띄워요. 페이지 넘김 페달로 템포를 바꿔요."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一公尺外也看得清的大節拍和速度，就放在樂譜 App 旁邊。用翻頁踏板就能調速。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Battito e tempo grandi, leggibili a un metro, accanto alla tua app di spartiti. Cambia il tempo con un pedale voltapagina."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A big beat and tempo you can read from a metre away, next to your score app. Change the tempo with a page-turn pedal."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Крупные доли и темп видны с метра — прямо рядом с приложением для нот. Темп меняется педалью перелистывания."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een grote tel en een groot tempo, leesbaar op een meter afstand, naast je bladmuziekapp. Wijzig het tempo met een bladeromslagpedaal."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duży puls i tempo czytelne z metra, obok aplikacji z nutami. Tempo zmienisz pedałem do przewracania stron."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bir metre öteden okunan büyük vuruş ve tempo, nota uygulamanın hemen yanında. Tempoyu sayfa çevirme pedalıyla değiştir."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stort slag och tempo som syns på en meters håll, bredvid notappen. Ändra tempot med en bladvändarpedal."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stort slag og tempo, der kan ses på en meters afstand, ved siden af din node-app. Skift tempo med en bladvenderpedal."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stort slag og tempo som synes på en meters avstand, ved siden av note-appen. Endre tempoet med en bladvenderpedal."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iso syke ja tempo, jotka näkee metrin päästä, nuottisovelluksen vieressä. Vaihda tempoa sivunkääntöpolkimella."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velká doba a tempo čitelné z metru, hned vedle aplikace s notami. Tempo změníte pedálem pro otáčení stránek."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketukan dan tempo besar yang terbaca dari jarak satu meter, di samping app partitur. Ubah tempo dengan pedal pembalik halaman."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhịp và tốc độ cỡ lớn, đọc được từ xa một mét, ngay cạnh ứng dụng bản nhạc. Đổi tốc độ bằng bàn đạp lật trang."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μεγάλος παλμός και ταχύτητα που διαβάζονται από ένα μέτρο, δίπλα στην εφαρμογή παρτιτούρας. Αλλάξτε ταχύτητα με πεντάλ γυρίσματος σελίδας."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จังหวะและความเร็วตัวใหญ่ อ่านได้จากระยะหนึ่งเมตร วางข้างแอปโน้ตเพลง เปลี่ยนความเร็วด้วยแป้นเหยียบพลิกหน้า"
+          }
+        }
+      }
+    },
+    "Apple Watch" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch"
+          }
+        }
+      }
+    },
+    "Feel the beat as silent taps on your wrist and turn the Digital Crown to change the tempo, even without your iPhone." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "音を出さずに手首の振動で拍を感じ、Digital Crownでテンポを変えられます。iPhoneがなくても使えます。"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spür den Takt als lautloses Tippen am Handgelenk und ändere das Tempo mit der Digital Crown – auch ohne iPhone."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siente el pulso como toques silenciosos en la muñeca y gira la Digital Crown para cambiar el tempo, incluso sin el iPhone."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手腕上无声的轻触带你感受节拍，转动数码表冠即可调速，不带 iPhone 也能用。"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sinta a pulsação em toques silenciosos no pulso e gire a Digital Crown para mudar o andamento, mesmo sem o iPhone."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sentez la pulsation en tapotements silencieux au poignet et tournez la Digital Crown pour changer le tempo, même sans iPhone."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소리 없이 손목 진동으로 박자를 느끼고, Digital Crown을 돌려 템포를 바꿔요. iPhone 없이도 돼요."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手腕上無聲的輕觸帶你感受節拍，轉動數位錶冠即可調速，不帶 iPhone 也能用。"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senti il battito come tocchi silenziosi sul polso e ruota la Digital Crown per cambiare tempo, anche senza iPhone."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feel the beat as silent taps on your wrist and turn the Digital Crown to change the tempo, even without your iPhone."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чувствуйте доли беззвучными касаниями на запястье и меняйте темп колёсиком Digital Crown — даже без iPhone."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voel de tel als stille tikjes op je pols en draai aan de Digital Crown om het tempo te wijzigen, ook zonder iPhone."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czuj puls jako ciche stuknięcia na nadgarstku i zmieniaj tempo pokrętłem Digital Crown, nawet bez iPhone’a."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vuruşu bileğinde sessiz dokunuşlarla hisset, tempoyu Digital Crown’u çevirerek değiştir. iPhone’un yanında olmasa da olur."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Känn slaget som tysta knackningar på handleden och vrid på Digital Crown för att ändra tempot, även utan iPhone."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mærk slaget som lydløse bank på håndleddet, og drej på Digital Crown for at skifte tempo, også uden din iPhone."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kjenn slaget som lydløse dunk på håndleddet, og vri på Digital Crown for å endre tempoet, også uten iPhone."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tunne syke äänettöminä napautuksina ranteessa ja vaihda tempoa Digital Crownia kääntämällä, myös ilman iPhonea."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vnímejte dobu jako tiché ťuknutí na zápěstí a tempo měňte otočením Digital Crown, i bez iPhonu."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rasakan ketukan sebagai getaran senyap di pergelangan tangan dan putar Digital Crown untuk mengubah tempo, bahkan tanpa iPhone."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cảm nhận nhịp qua những cú chạm im lặng trên cổ tay và xoay Digital Crown để đổi tốc độ, kể cả khi không có iPhone."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Νιώστε τον παλμό ως αθόρυβα χτυπήματα στον καρπό και γυρίστε το Digital Crown για να αλλάξετε ταχύτητα, ακόμη και χωρίς iPhone."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รู้สึกจังหวะเป็นการแตะเงียบๆ ที่ข้อมือ และหมุน Digital Crown เพื่อเปลี่ยนความเร็ว ใช้ได้แม้ไม่มี iPhone"
+          }
+        }
+      }
     }
   },
   "version" : "1.1"

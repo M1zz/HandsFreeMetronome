@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- 손목을 내려도 박 진동이 이어지게: 마음 챙기기 세션(최대 1시간) 동안 앱이 맨 앞에 남는다. -->
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>mindfulness</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.leeo.HandsFreeMetronome.watchkitapp</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>notmytempo-watch</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

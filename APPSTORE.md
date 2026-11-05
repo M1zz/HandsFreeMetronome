@@ -29,6 +29,10 @@ start라고 말하면 시작하고, faster라고 말하면 빨라집니다. 화�
 
 연주 중에 템포를 바꾸려고 손을 떼면 흐름이 끊깁니다. 낫마템포는 앱이 직접 마이크로 듣고 기기 안에서 음성을 알아듣기 때문에, iOS 음성 제어나 손쉬운 사용 설정을 켜지 않아도 바로 쓸 수 있습니다. 음성 명령은 영어 단어로 말합니다.
 
+iPad와 Apple Watch
+iPad는 보면대 위에 세워 두세요. 1미터 밖에서도 박자와 템포가 크게 보이고, 악보 앱과 Split View로 나란히 띄워도 박이 그대로 보입니다. 블루투스 페이지 넘김 페달로 템포를 바꾸고 시작하거나 멈춥니다.
+Apple Watch는 소리 없이 손목 진동으로 박을 줍니다. 마디 첫 박은 더 세게 울리고, Digital Crown을 돌려 템포를 바꿉니다. iPhone 없이도 돌고, 컴플리케이션을 누르면 마지막 템포로 바로 시작합니다. 손목 진동은 200 BPM까지입니다.
+
 말로 하는 메트로놈
 start, stop으로 켜고 끕니다
 faster, slower로 5씩, up, down으로 1씩 바꿉니다
@@ -96,6 +100,10 @@ A metronome you run with your voice, so your hands never leave the instrument.
 Say "start" to begin, "faster" to speed up. No tapping, no stopping mid-phrase.
 
 The app listens through its own microphone and recognizes speech on your device, so it works right away. There is no need to turn on iOS Voice Control or any Accessibility setting.
+
+ON IPAD AND APPLE WATCH
+On iPad, stand it on your music stand: the beat and tempo are big enough to read from a metre away, and the beat stays in view next to your score app in Split View. A Bluetooth page-turn pedal changes the tempo and starts or stops the click.
+On Apple Watch, feel the beat as silent taps on your wrist, with a stronger tap on beat one. Turn the Digital Crown to change the tempo. It runs without your iPhone, and the complication starts your last tempo with one tap. Wrist taps go up to 200 BPM.
 
 TALK TO YOUR METRONOME
 "start" and "stop"
@@ -165,6 +173,10 @@ BPM,リズム,練習,ドラム,ギター,ピアノ,ベース,チューナー,ク
 
 演奏中にテンポを変えようと手を離すと、流れが止まってしまいます。Not My Tempoはアプリ自身のマイクで聞き取り、端末上で音声を認識するので、iOSの音声コントロールやアクセシビリティの設定をオンにしなくてもすぐに使えます。音声コマンドは英語で話します。
 
+iPadとApple Watch
+iPadは譜面台に立てて。1メートル離れても拍とテンポが大きく見え、楽譜アプリとSplit Viewで並べても拍が見えたままです。Bluetoothのページめくりペダルでテンポを変え、スタート・ストップもできます。
+Apple Watchは音を出さず、手首の振動で拍を伝えます。小節の1拍目はより強く。Digital Crownを回してテンポを変えます。iPhoneがなくても動き、コンプリケーションをタップすれば前回のテンポですぐに始まります。手首の振動は200 BPMまでです。
+
 話しかけて使うメトロノーム
 「start」「stop」で開始と停止
 「faster」「slower」で5ずつ、「up」「down」で1ずつテンポを変更
@@ -233,6 +245,10 @@ Ein Metronom, das du mit deiner Stimme steuerst, damit deine Hände am Instrumen
 Sag „start“ zum Loslegen, „faster“ für mehr Tempo. Kein Antippen, kein Abbrechen mitten in der Phrase.
 
 Die App hört über ihr eigenes Mikrofon zu und erkennt Sprache direkt auf deinem Gerät, deshalb funktioniert sie sofort. Du musst weder die iOS-Sprachsteuerung noch andere Bedienungshilfen einschalten.
+
+AUF DEM IPAD UND DER APPLE WATCH
+Stell das iPad auf den Notenständer: Takt und Tempo sind so groß, dass du sie aus einem Meter liest, und der Takt bleibt neben deiner Noten-App in Split View sichtbar. Ein Bluetooth-Blätterpedal ändert das Tempo und startet oder stoppt den Klick.
+Auf der Apple Watch spürst du den Takt als lautloses Tippen am Handgelenk, auf der Eins etwas kräftiger. Mit der Digital Crown änderst du das Tempo. Sie läuft ohne iPhone, und die Komplikation startet dein letztes Tempo mit einem Tippen. Das Handgelenk-Tippen geht bis 200 BPM.
 
 Wichtig: Die Sprachbefehle sind englische Wörter. Du sagst sie auf Englisch, auch wenn dein iPhone auf Deutsch eingestellt ist. Es sind nur ein paar kurze Wörter, die du schnell drauf hast.
 
@@ -307,6 +323,10 @@ Un metrónomo que manejas con la voz, para que tus manos no se separen del instr
 Di “start” para empezar y “faster” para acelerar. Sin tocar la pantalla, sin cortar la frase.
 
 La app escucha con su propio micrófono y reconoce la voz en el propio iPhone, así que funciona al momento. No hace falta activar Control por voz de iOS ni ningún ajuste de accesibilidad.
+
+EN IPAD Y APPLE WATCH
+En el iPad, ponlo en el atril: el pulso y el tempo se leen a un metro, y el pulso sigue a la vista junto a tu app de partituras en Split View. Un pedal Bluetooth de pasar página cambia el tempo e inicia o detiene el clic.
+En el Apple Watch, siente el pulso como toques silenciosos en la muñeca, más fuerte en el primer tiempo. Gira la Digital Crown para cambiar el tempo. Funciona sin el iPhone, y la complicación arranca tu último tempo con un toque. Los toques en la muñeca llegan hasta 200 BPM.
 
 Los comandos de voz se dicen en inglés: son palabras cortas y fáciles de recordar.
 
@@ -383,6 +403,10 @@ Di “start” para arrancar y “faster” para subir la velocidad. Sin tocar e
 
 La app escucha con su propio micrófono y reconoce la voz directamente en tu iPhone, así que funciona de inmediato. No necesitas activar Control por voz de iOS ni ninguna opción de accesibilidad.
 
+EN IPAD Y APPLE WATCH
+En el iPad, ponlo en el atril: el pulso y el tempo se leen a un metro, y el pulso sigue a la vista junto a tu app de partituras en Split View. Un pedal Bluetooth de pasar página cambia el tempo e inicia o detiene el clic.
+En el Apple Watch, siente el pulso como toques silenciosos en la muñeca, más fuerte en el primer tiempo. Gira la Digital Crown para cambiar el tempo. Funciona sin el iPhone, y la complicación arranca tu último tempo con un toque. Los toques en la muñeca llegan hasta 200 BPM.
+
 Los comandos de voz se dicen en inglés: son palabras cortas y fáciles de recordar.
 
 PLATICA CON TU METRÓNOMO
@@ -458,6 +482,10 @@ Dis « start » pour lancer, « faster » pour accélérer. Pas besoin de to
 
 L’app écoute avec son propre micro et reconnaît ta voix directement sur l’appareil : elle marche tout de suite, sans activer le Contrôle vocal d’iOS ni aucun réglage d’accessibilité. Les commandes vocales se disent en anglais, avec quelques mots simples.
 
+SUR IPAD ET APPLE WATCH
+Sur iPad, pose-le sur le pupitre : la pulsation et le tempo se lisent à un mètre, et la pulsation reste visible à côté de ton app de partitions en Split View. Une pédale tourne-page Bluetooth change le tempo et lance ou arrête le clic.
+Sur Apple Watch, sens la pulsation en tapotements silencieux au poignet, plus marqués sur le premier temps. Tourne la Digital Crown pour changer le tempo. Elle fonctionne sans iPhone, et la complication relance ton dernier tempo d’un geste. Les tapotements vont jusqu’à 200 BPM.
+
 PARLE À TON MÉTRONOME
 « start » et « stop » pour lancer et arrêter
 « faster » et « slower » changent de 5 BPM, « up » et « down » de 1
@@ -527,6 +555,10 @@ Not My Tempo: 语音节拍器
 说“start”开始，说“faster”加快。不用点屏幕，也不用停下正在弹的乐句。
 
 演奏途中想改速度，手一离开乐器，节奏就断了。Not My Tempo 用自己的麦克风聆听，在设备上完成语音识别，打开就能用，无需开启 iOS 语音控制或任何辅助功能设置。语音指令需用英文单词说出。
+
+iPad 与 Apple Watch
+iPad 立在谱架上，一米外也能看清节拍和速度；与乐谱 App 分屏并排时，节拍依然看得见。用蓝牙翻页踏板就能调速、开始或停止。
+Apple Watch 不出声，用手腕振动打拍子，小节第一拍更重。转动数码表冠即可调速。没有 iPhone 也能用，轻点表盘复杂功能就以上次的速度开始。手腕振动最快 200 BPM。
 
 开口就能控制
 “start”和“stop”开始、停止
@@ -599,6 +631,10 @@ Not My Tempo: 語音節拍器
 
 演奏到一半想改速度，手一離開樂器，節奏就斷了。Not My Tempo 使用自己的麥克風聆聽，並在裝置上完成語音辨識，開啟就能用，不需要開啟 iOS 語音控制或任何輔助使用設定。語音指令需用英文單字說出。
 
+iPad 與 Apple Watch
+iPad 立在譜架上，一公尺外也能看清節拍和速度；與樂譜 App 分割畫面並排時，節拍依然看得見。用藍牙翻頁踏板就能調速、開始或停止。
+Apple Watch 不出聲，用手腕震動打拍子，小節第一拍更重。轉動數位錶冠即可調速。沒有 iPhone 也能用，輕點錶面複雜功能就以上次的速度開始。手腕震動最快 200 BPM。
+
 開口就能控制
 「start」和「stop」開始、停止
 「faster」和「slower」每次調整 5 BPM，「up」和「down」每次調整 1 BPM
@@ -669,6 +705,10 @@ Un metronomo che controlli con la voce, così le mani non lasciano mai lo strume
 Dì “start” per partire, “faster” per accelerare. Niente tocchi, niente interruzioni a metà frase.
 
 Cambiare tempo mentre suoni di solito significa staccare le mani dallo strumento e perdere il filo. Not My Tempo ascolta con il proprio microfono e riconosce la voce direttamente sul dispositivo, quindi funziona subito, senza attivare il Controllo vocale di iOS né alcuna impostazione di accessibilità. I comandi si dicono con parole inglesi.
+
+SU IPAD E APPLE WATCH
+Su iPad, mettilo sul leggio: battito e tempo si leggono a un metro, e il battito resta visibile accanto alla tua app di spartiti in Split View. Un pedale voltapagina Bluetooth cambia il tempo e avvia o ferma il clic.
+Su Apple Watch senti il battito come tocchi silenziosi sul polso, più forti sul primo tempo. Ruota la Digital Crown per cambiare tempo. Funziona senza iPhone e la complicazione avvia l’ultimo tempo con un tocco. I tocchi al polso arrivano fino a 200 BPM.
 
 PARLA AL TUO METRONOMO
 “start” e “stop” per avviare e fermare
@@ -741,6 +781,10 @@ Say "start" to begin, "faster" to speed up. No tapping, no stopping mid-phrase.
 
 The app listens through its own microphone and recognises speech on your device, so it works right away. There is no need to turn on iOS Voice Control or any Accessibility setting.
 
+ON IPAD AND APPLE WATCH
+On iPad, stand it on your music stand: the beat and tempo are big enough to read from a metre away, and the beat stays in view next to your score app in Split View. A Bluetooth page-turn pedal changes the tempo and starts or stops the click.
+On Apple Watch, feel the beat as silent taps on your wrist, with a stronger tap on beat one. Turn the Digital Crown to change the tempo. It runs without your iPhone, and the complication starts your last tempo with one tap. Wrist taps go up to 200 BPM.
+
 TALK TO YOUR METRONOME
 "start" and "stop"
 "faster" and "slower" move 5 BPM, "up" and "down" move 1
@@ -808,6 +852,10 @@ bpm,тюнер,тренировка,гитара,пианино,барабаны
 Скажите «start», чтобы начать, и «faster», чтобы ускориться. Никаких нажатий и остановок посреди фразы.
 
 Менять темп во время игры обычно значит отпускать инструмент и терять нить. Not My Tempo слушает через собственный микрофон и распознаёт речь прямо на устройстве, поэтому работает сразу — без «Управления голосом» iOS и настроек универсального доступа. Команды произносятся английскими словами.
+
+НА IPAD И APPLE WATCH
+Поставьте iPad на пюпитр: доли и темп видны с метра, а рядом с приложением для нот в Split View доли остаются на виду. Bluetooth-педаль перелистывания меняет темп, запускает и останавливает метроном.
+Apple Watch отбивает доли беззвучными касаниями на запястье, первая доля — сильнее. Темп меняется колёсиком Digital Crown. Часы работают без iPhone, а нажатие на расширение циферблата сразу запускает последний темп. Вибрация — до 200 BPM.
 
 ГОВОРИТЕ СО СВОИМ МЕТРОНОМОМ
 «start» и «stop» — запуск и остановка
@@ -880,6 +928,10 @@ Zeg “start” om te beginnen, “faster” om te versnellen. Geen getik, nooit
 
 Het tempo aanpassen terwijl je speelt betekent meestal je instrument loslaten en de draad kwijtraken. Not My Tempo luistert via zijn eigen microfoon en herkent spraak op je apparaat, dus het werkt meteen, zonder Spraakbediening van iOS of een toegankelijkheidsinstelling aan te zetten. De commando’s zijn Engelse woorden.
 
+OP IPAD EN APPLE WATCH
+Zet je iPad op de muziekstandaard: tel en tempo zijn op een meter afstand te lezen, en de tel blijft zichtbaar naast je bladmuziekapp in Split View. Een bluetooth-bladeromslagpedaal wijzigt het tempo en start of stopt de klik.
+Op Apple Watch voel je de tel als stille tikjes op je pols, de eerste tel iets steviger. Draai aan de Digital Crown om het tempo te wijzigen. Hij werkt zonder iPhone, en de complicatie start je laatste tempo met één tik. Polstikjes gaan tot 200 BPM.
+
 PRAAT MET JE METRONOOM
 “start” en “stop” om te beginnen en te stoppen
 “faster” en “slower” veranderen 5 BPM, “up” en “down” 1
@@ -950,6 +1002,10 @@ Metronom, którym sterujesz głosem, więc ręce nigdy nie opuszczają instrumen
 Powiedz „start”, aby zacząć, i „faster”, aby przyspieszyć. Bez stukania, bez przerywania frazy.
 
 Zmiana tempa w trakcie gry zwykle oznacza oderwanie rąk od instrumentu i zgubienie wątku. Not My Tempo słucha przez własny mikrofon i rozpoznaje mowę na urządzeniu, więc działa od razu — bez włączania Sterowania głosowego iOS ani ustawień dostępności. Polecenia wypowiada się po angielsku.
+
+NA IPADZIE I APPLE WATCH
+Postaw iPada na pulpicie: puls i tempo przeczytasz z metra, a puls zostaje widoczny obok aplikacji z nutami w Split View. Pedał Bluetooth do przewracania stron zmienia tempo oraz uruchamia i zatrzymuje klik.
+Na Apple Watch czujesz puls jako ciche stuknięcia na nadgarstku, mocniejsze na raz. Tempo zmieniasz pokrętłem Digital Crown. Działa bez iPhone’a, a komplikacja jednym stuknięciem startuje ostatnie tempo. Stuknięcia działają do 200 BPM.
 
 ROZMAWIAJ ZE SWOIM METRONOMEM
 „start” i „stop” — uruchamianie i zatrzymywanie
@@ -1022,6 +1078,10 @@ Başlamak için “start”, hızlanmak için “faster” deyin. Dokunmak yok, 
 
 Çalarken temposu değiştirmek genellikle elinizi enstrümandan çekip akışı kaybetmek demektir. Not My Tempo kendi mikrofonuyla dinler ve konuşmayı cihazınızda tanır; bu yüzden iOS Sesle Denetim’i veya herhangi bir erişilebilirlik ayarını açmadan hemen çalışır. Komutlar İngilizce sözcüklerle söylenir.
 
+IPAD VE APPLE WATCH'TA
+iPad'i nota sehpasına koyun: vuruş ve tempo bir metre öteden okunur, nota uygulamanızla Split View'da yan yana açtığınızda da vuruş görünür kalır. Bluetooth sayfa çevirme pedalı tempoyu değiştirir, tıklamayı başlatır ya da durdurur.
+Apple Watch'ta vuruşu bileğinizde sessiz dokunuşlarla hissedersiniz, ilk vuruş daha güçlüdür. Tempoyu Digital Crown'u çevirerek değiştirin. iPhone olmadan çalışır, komplikasyona dokununca son tempo hemen başlar. Bilek dokunuşları en fazla 200 BPM'dir.
+
 METRONOMUNUZLA KONUŞUN
 “start” ve “stop” ile başlatın, durdurun
 “faster” ve “slower” 5 BPM, “up” ve “down” 1 BPM değiştirir
@@ -1092,6 +1152,10 @@ En metronom du styr med rösten, så att händerna aldrig lämnar instrumentet.
 Säg ”start” för att börja och ”faster” för att öka farten. Inga tryck, inga avbrott mitt i frasen.
 
 Att ändra tempot medan du spelar betyder oftast att släppa instrumentet och tappa tråden. Not My Tempo lyssnar med sin egen mikrofon och känner igen tal på din enhet, så den fungerar direkt – utan att du behöver slå på röststyrning i iOS eller någon tillgänglighetsinställning. Kommandona säger du på engelska.
+
+PÅ IPAD OCH APPLE WATCH
+Ställ iPad på notstället: slag och tempo syns på en meters håll, och slaget syns kvar bredvid notappen i Split View. En Bluetooth-bladvändarpedal ändrar tempot och startar eller stoppar klicket.
+På Apple Watch känner du slaget som tysta knackningar på handleden, lite starkare på ettan. Vrid på Digital Crown för att ändra tempot. Den fungerar utan iPhone, och komplikationen startar ditt senaste tempo med ett tryck. Handledsslagen går upp till 200 BPM.
 
 PRATA MED DIN METRONOM
 ”start” och ”stop” för att starta och stoppa
@@ -1164,6 +1228,10 @@ Sig “start” for at begynde og “faster” for at speede op. Ingen tryk, ing
 
 At ændre tempoet, mens du spiller, betyder som regel at slippe instrumentet og miste tråden. Not My Tempo lytter med sin egen mikrofon og genkender tale på din enhed, så den virker med det samme – uden at du skal slå Stemmestyring i iOS eller en tilgængelighedsindstilling til. Kommandoerne siger du på engelsk.
 
+PÅ IPAD OG APPLE WATCH
+Stil iPad på nodestativet: slag og tempo kan læses på en meters afstand, og slaget bliver ved med at være synligt ved siden af din node-app i Split View. En Bluetooth-bladvenderpedal skifter tempo og starter eller stopper klikket.
+På Apple Watch mærker du slaget som lydløse bank på håndleddet, lidt kraftigere på et-slaget. Drej på Digital Crown for at skifte tempo. Det virker uden iPhone, og komplikationen starter dit seneste tempo med ét tryk. Slagene på håndleddet går op til 200 BPM.
+
 TAL MED DIN METRONOM
 “start” og “stop” for at starte og stoppe
 “faster” og “slower” ændrer med 5 BPM, “up” og “down” med 1
@@ -1234,6 +1302,10 @@ En metronom du styrer med stemmen, slik at hendene aldri forlater instrumentet.
 Si «start» for å begynne og «faster» for å øke farten. Ingen trykking, ingen stopp midt i frasen.
 
 Å endre tempoet mens du spiller betyr vanligvis å slippe instrumentet og miste tråden. Not My Tempo lytter med sin egen mikrofon og gjenkjenner tale på enheten din, så den fungerer med en gang – uten at du må slå på Stemmestyring i iOS eller en tilgjengelighetsinnstilling. Kommandoene sier du på engelsk.
+
+PÅ IPAD OG APPLE WATCH
+Sett iPad på notestativet: slag og tempo kan leses på en meters avstand, og slaget er synlig ved siden av note-appen i Split View. En Bluetooth-bladvenderpedal endrer tempoet og starter eller stopper klikket.
+På Apple Watch kjenner du slaget som lydløse dunk på håndleddet, litt kraftigere på ener’n. Vri på Digital Crown for å endre tempoet. Den virker uten iPhone, og komplikasjonen starter siste tempo med ett trykk. Slagene på håndleddet går opptil 200 BPM.
 
 SNAKK MED METRONOMEN
 «start» og «stop» for å starte og stoppe
@@ -1306,6 +1378,10 @@ Sano ”start” aloittaaksesi ja ”faster” kiihdyttääksesi. Ei napauttelua
 
 Tempon vaihtaminen soiton aikana tarkoittaa yleensä käsien irrottamista soittimesta ja langan kadottamista. Not My Tempo kuuntelee omalla mikrofonillaan ja tunnistaa puheen laitteellasi, joten se toimii heti – iOS:n Ääniohjausta tai mitään saavutettavuusasetusta ei tarvitse ottaa käyttöön. Komennot sanotaan englanniksi.
 
+IPADILLA JA APPLE WATCHILLA
+Nosta iPad nuottitelineelle: syke ja tempo näkyvät metrin päähän, ja syke pysyy näkyvissä nuottisovelluksen vieressä Split Viewssä. Bluetooth-sivunkääntöpoljin vaihtaa tempoa ja käynnistää tai pysäyttää naksutuksen.
+Apple Watchilla tunnet sykkeen äänettöminä napautuksina ranteessa, ykkösisku hieman vahvempana. Vaihda tempoa Digital Crownia kääntämällä. Se toimii ilman iPhonea, ja komplikaatio käynnistää viimeisimmän tempon yhdellä napautuksella. Rannenapautukset toimivat 200 BPM:ään asti.
+
 PUHU METRONOMILLE
 ”start” ja ”stop” käynnistävät ja pysäyttävät
 ”faster” ja ”slower” muuttavat 5 BPM, ”up” ja ”down” 1
@@ -1376,6 +1452,10 @@ Metronom, který ovládáte hlasem, takže ruce nikdy neopustí nástroj.
 Řekněte „start“ a začnete, „faster“ a zrychlíte. Žádné klepání, žádné přerušování uprostřed fráze.
 
 Změna tempa za hraní obvykle znamená pustit nástroj a ztratit nit. Not My Tempo poslouchá vlastním mikrofonem a řeč rozpoznává přímo ve vašem zařízení, takže funguje hned – bez zapínání Ovládání hlasem v iOS či nastavení zpřístupnění. Příkazy se říkají anglicky.
+
+NA IPADU A APPLE WATCH
+Postavte iPad na notový stojan: dobu i tempo přečtete z metru a doba zůstane vidět i vedle aplikace s notami ve Split View. Bluetooth pedál pro otáčení stránek mění tempo a spouští či zastavuje klikání.
+Na Apple Watch cítíte dobu jako tiché ťuknutí na zápěstí, první dobu silněji. Tempo měníte otočením Digital Crown. Funguje i bez iPhonu a komplikace jedním klepnutím spustí poslední tempo. Ťukání na zápěstí jde do 200 BPM.
 
 MLUVTE NA SVŮJ METRONOM
 „start“ a „stop“ – spuštění a zastavení
@@ -1448,6 +1528,10 @@ Ucapkan “start” untuk memulai, “faster” untuk mempercepat. Tanpa mengetu
 
 Mengubah tempo saat bermain biasanya berarti melepas instrumen dan kehilangan alur. Not My Tempo mendengarkan lewat mikrofonnya sendiri dan mengenali ucapan langsung di perangkatmu, jadi langsung berfungsi — tanpa perlu menyalakan Kontrol Suara iOS atau pengaturan aksesibilitas apa pun. Perintah diucapkan dalam kata bahasa Inggris.
 
+DI IPAD DAN APPLE WATCH
+Taruh iPad di stand partitur: ketukan dan tempo terbaca dari jarak satu meter, dan ketukan tetap terlihat di samping app partiturmu dalam Split View. Pedal pembalik halaman Bluetooth mengubah tempo serta memulai atau menghentikan klik.
+Di Apple Watch, rasakan ketukan sebagai getaran senyap di pergelangan tangan, ketukan pertama lebih kuat. Putar Digital Crown untuk mengubah tempo. Bisa jalan tanpa iPhone, dan komplikasi langsung memulai tempo terakhirmu dengan sekali ketuk. Getaran di pergelangan hingga 200 BPM.
+
 BICARA DENGAN METRONOMMU
 “start” dan “stop” untuk memulai dan menghentikan
 “faster” dan “slower” mengubah 5 BPM, “up” dan “down” mengubah 1
@@ -1518,6 +1602,10 @@ Máy gõ nhịp bạn điều khiển bằng giọng nói, để đôi tay khôn
 Nói “start” để bắt đầu, “faster” để nhanh hơn. Không cần chạm, không phải dừng giữa câu nhạc.
 
 Đổi tốc độ khi đang chơi thường nghĩa là phải rời tay khỏi nhạc cụ và mất mạch. Not My Tempo nghe bằng micrô riêng và nhận dạng giọng nói ngay trên thiết bị, nên dùng được ngay — không cần bật Điều khiển bằng giọng nói của iOS hay bất kỳ cài đặt trợ năng nào. Các lệnh được nói bằng từ tiếng Anh.
+
+TRÊN IPAD VÀ APPLE WATCH
+Đặt iPad lên giá nhạc: nhịp và tốc độ đọc được từ xa một mét, và nhịp vẫn hiện bên cạnh ứng dụng bản nhạc khi dùng Split View. Bàn đạp lật trang Bluetooth đổi tốc độ, bắt đầu hoặc dừng tiếng gõ.
+Trên Apple Watch, bạn cảm nhận nhịp qua những cú rung im lặng trên cổ tay, phách đầu mạnh hơn. Xoay Digital Crown để đổi tốc độ. Đồng hồ chạy được khi không có iPhone, và chạm vào tổ hợp là bắt đầu ngay với tốc độ gần nhất. Rung cổ tay tối đa 200 BPM.
 
 TRÒ CHUYỆN VỚI MÁY GÕ NHỊP
 “start” và “stop” để bắt đầu và dừng
@@ -1590,6 +1678,10 @@ bpm,κουρδιστήρι,εξάσκηση,κιθάρα,πιάνο,ντραμς
 
 Η αλλαγή ταχύτητας ενώ παίζετε συνήθως σημαίνει ότι αφήνετε το όργανο και χάνετε το νήμα. Το Not My Tempo ακούει από το δικό του μικρόφωνο και αναγνωρίζει την ομιλία στη συσκευή σας, οπότε λειτουργεί αμέσως — χωρίς να χρειάζεται να ενεργοποιήσετε τον Έλεγχο φωνής του iOS ή κάποια ρύθμιση προσβασιμότητας. Οι εντολές λέγονται στα αγγλικά.
 
+ΣΤΟ IPAD ΚΑΙ ΣΤΟ APPLE WATCH
+Στήστε το iPad στο αναλόγιο: ο παλμός και η ταχύτητα διαβάζονται από ένα μέτρο, και ο παλμός μένει ορατός δίπλα στην εφαρμογή παρτιτούρας σε Split View. Ένα πεντάλ γυρίσματος σελίδας Bluetooth αλλάζει την ταχύτητα και ξεκινά ή σταματά τον χτύπο.
+Στο Apple Watch νιώθετε τον παλμό ως αθόρυβα χτυπήματα στον καρπό, πιο δυνατά στον πρώτο χρόνο. Γυρίστε το Digital Crown για να αλλάξετε ταχύτητα. Λειτουργεί χωρίς iPhone, και η επιπλοκή ξεκινά την τελευταία ταχύτητα με ένα πάτημα. Τα χτυπήματα στον καρπό φτάνουν έως 200 BPM.
+
 ΜΙΛΗΣΤΕ ΣΤΟΝ ΜΕΤΡΟΝΟΜΟ ΣΑΣ
 «start» και «stop» για έναρξη και διακοπή
 «faster» και «slower» αλλάζουν 5 BPM, «up» και «down» αλλάζουν 1
@@ -1661,6 +1753,10 @@ bpm,เครื่องตั้งสาย,ซ้อม,กีตาร์,�
 
 การเปลี่ยนความเร็วระหว่างเล่นมักหมายถึงต้องละมือจากเครื่องดนตรีและเสียสมาธิ Not My Tempo ฟังผ่านไมค์ของตัวเองและรู้จำเสียงพูดบนอุปกรณ์ของคุณ จึงใช้ได้ทันที โดยไม่ต้องเปิดการควบคุมด้วยเสียงของ iOS หรือการตั้งค่าการช่วยการเข้าถึงใด ๆ คำสั่งใช้คำภาษาอังกฤษ
 
+บน iPad และ Apple Watch
+ตั้ง iPad บนแท่นวางโน้ต จังหวะและความเร็วตัวใหญ่ อ่านได้จากระยะหนึ่งเมตร และยังเห็นจังหวะอยู่ข้างแอปโน้ตเพลงใน Split View แป้นเหยียบพลิกหน้าแบบบลูทูธใช้เปลี่ยนความเร็ว เริ่มหรือหยุดเสียงคลิกได้
+บน Apple Watch รู้สึกจังหวะเป็นการสั่นเงียบๆ ที่ข้อมือ จังหวะแรกของห้องจะแรงกว่า หมุน Digital Crown เพื่อเปลี่ยนความเร็ว ใช้ได้แม้ไม่มี iPhone และแตะคอมพลิเคชันเพื่อเริ่มที่ความเร็วล่าสุดได้ทันที การสั่นที่ข้อมือรองรับได้ถึง 200 BPM
+
 พูดกับเมโทรนอมของคุณ
 “start” และ “stop” เพื่อเริ่มและหยุด
 “faster” และ “slower” ปรับครั้งละ 5 BPM ส่วน “up” และ “down” ปรับครั้งละ 1
@@ -1731,6 +1827,10 @@ Um metrônomo que você comanda pela voz, sem tirar as mãos do instrumento.
 Diga “start” para começar e “faster” para acelerar. Nada de parar no meio da frase para mexer no celular.
 
 O app escuta pelo próprio microfone e reconhece a fala no seu aparelho, então funciona na hora. Não precisa ativar o Controle por Voz do iOS nem nenhum ajuste de Acessibilidade.
+
+NO IPAD E NO APPLE WATCH
+No iPad, coloque-o na estante de partitura: pulsação e andamento são lidos a um metro, e a pulsação continua à vista ao lado do seu app de partituras no Split View. Um pedal Bluetooth de virar página muda o andamento e inicia ou para o clique.
+No Apple Watch, sinta a pulsação em toques silenciosos no pulso, mais fortes no primeiro tempo. Gire a Digital Crown para mudar o andamento. Funciona sem o iPhone, e a complicação começa no último andamento com um toque. Os toques no pulso vão até 200 BPM.
 
 Os comandos de voz são palavras em inglês. O resto do app fala português.
 

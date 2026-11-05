@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		20AD40C92E06CF81D30A9880 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A372D671513D27A0DD4B28E8 /* Foundation.framework */; };
+		24546D8309C4C9AE9A4C3187 /* NotMyTempoWatchWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4301708F6901E6246898494A /* NotMyTempoWatchWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		245516F9CF19CB726BC69B61 /* HandsFreeMetronomeRoadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119F36266B8695EE44FDBD9E /* HandsFreeMetronomeRoadmap.swift */; };
+		3A531859101CC3632AD81B79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043867189E703B3B50A9A8FB /* Foundation.framework */; };
 		4B3561E38821E3618B5B3D74 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5C792597780977588B1FF8A5 /* LeeoKit */; };
+		4D69F4473BCE1BB0E7705E3D /* NotMyTempoWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FD2E0A85FC56EC68ACB00D /* NotMyTempoWatchApp.swift */; };
 		506803D79B3951241A9A7D63 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4B18BBB9A42BEB9767B23 /* WhatsNewView.swift */; };
 		5300980113BE13788779778E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A372D671513D27A0DD4B28E8 /* Foundation.framework */; };
+		5C4755C0D903F21F6E55FE44 /* NotMyTempoWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8BA722D55AB244F03C471251 /* NotMyTempoWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		670E49A4D704914CCA1C8758 /* WristMetronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702B725AC53E17617245A942 /* WristMetronome.swift */; };
 		67E78858EA0DCFC0A13EA9B0 /* HandsFreeMetronomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F7A6E714C5218EC6FC1DD /* HandsFreeMetronomeTests.swift */; };
 		6A896E540343E7FF97CBAC6B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3352ADFF3E467A373977D842 /* OnboardingView.swift */; };
 		7CCD5424009AF04C54233BD0 /* AppShortcuts.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BA89BB79A553C1FA896E81AD /* AppShortcuts.xcstrings */; };
+		819985C0D464F2AA5DF9C188 /* TempoComplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F2476DEABA43EF70712A58 /* TempoComplication.swift */; };
+		917A1CC34BA7E954A38C38D6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5DD1EC696EC91EC82B800B96 /* Localizable.xcstrings */; };
+		92D950BE619702133C37BF0D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5DD1EC696EC91EC82B800B96 /* Localizable.xcstrings */; };
 		A1000011 /* HandsFreeMetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001 /* HandsFreeMetronomeApp.swift */; };
 		A1000012 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002 /* ContentView.swift */; };
 		A1000013 /* MetronomeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000003 /* MetronomeEngine.swift */; };
@@ -28,11 +36,17 @@
 		A1000311 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000301 /* PaywallView.swift */; };
 		A1000F01 /* NoteSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000F02 /* NoteSignal.swift */; };
 		A1000F03 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000F04 /* Palette.swift */; };
+		A1B8F2031D454456052595A5 /* WristTempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF6919714BA6444BEDA4613 /* WristTempo.swift */; };
+		A5B7CAE583A6D3D8C675B209 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043867189E703B3B50A9A8FB /* Foundation.framework */; };
 		AB0866CD1F227854441AC07D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A04C8D5D5269C68D20C4B1A1 /* PrivacyInfo.xcprivacy */; };
 		B7BE3F9B9E9439C74267E6A9 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587DE833F8E9313F80F10675 /* Operations.swift */; };
+		CA9DF93CCFC823CD1718F430 /* WristTempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF6919714BA6444BEDA4613 /* WristTempo.swift */; };
 		CC22D8B983C92CE776DDB015 /* HandsFreeMetronomeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */; };
 		D77BF4D721149A4AD59CD704 /* HandsFreeMetronomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B18107DE839F33D532A939 /* HandsFreeMetronomeUITests.swift */; };
+		E1AEC619D6F3AEA6B5595634 /* PedalKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BF1C2C3492034113AAFE8 /* PedalKeys.swift */; };
+		E79EB1EC92B89DDE40E51E65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23AC08324EC0F868B56CD8AD /* Assets.xcassets */; };
 		F451953683C0264C2811DCDA /* MetronomeIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16574F776304B810DD92D44A /* MetronomeIntents.swift */; };
+		FE909E70AAD61B44399F471C /* WristDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DAD4D39CB38E1F77BB2FD /* WristDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +57,13 @@
 			remoteGlobalIDString = A1000040;
 			remoteInfo = HandsFreeMetronome;
 		};
+		6AC599BAA49CCA9FA8C8CC41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1000070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BF6EE3857F9DF77C7976CBD;
+			remoteInfo = NotMyTempoWatch;
+		};
 		F0A2E60724C2489566DC2BD4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A1000070 /* Project object */;
@@ -50,17 +71,63 @@
 			remoteGlobalIDString = A1000040;
 			remoteInfo = HandsFreeMetronome;
 		};
+		F3B3022466F0DD9EA4BFC364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1000070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06EF88C945FFC6F138DE6669;
+			remoteInfo = NotMyTempoWatchWidget;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		59C8D2FF546FB7BAC74B8576 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				5C4755C0D903F21F6E55FE44 /* NotMyTempoWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7C1EC9DB706B5D258CFD0C8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				24546D8309C4C9AE9A4C3187 /* NotMyTempoWatchWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		043867189E703B3B50A9A8FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		119F36266B8695EE44FDBD9E /* HandsFreeMetronomeRoadmap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeRoadmap.swift; sourceTree = "<group>"; };
 		16574F776304B810DD92D44A /* MetronomeIntents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MetronomeIntents.swift; sourceTree = "<group>"; };
+		1E9869B30CFA52DE3B0C591C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2297C2A4752E1FC4601B08E1 /* HandsFreeMetronomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsFreeMetronomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23AC08324EC0F868B56CD8AD /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeSpec.swift; sourceTree = "<group>"; };
 		3352ADFF3E467A373977D842 /* OnboardingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		38FD2E0A85FC56EC68ACB00D /* NotMyTempoWatchApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotMyTempoWatchApp.swift; sourceTree = "<group>"; };
+		4301708F6901E6246898494A /* NotMyTempoWatchWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotMyTempoWatchWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		499DAD4D39CB38E1F77BB2FD /* WristDemo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WristDemo.swift; sourceTree = "<group>"; };
 		51B18107DE839F33D532A939 /* HandsFreeMetronomeUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeUITests.swift; sourceTree = "<group>"; };
 		587DE833F8E9313F80F10675 /* Operations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		5DD1EC696EC91EC82B800B96 /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5E9407ABD7196CE30569B829 /* NotMyTempoWatchWidget.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = NotMyTempoWatchWidget.entitlements; sourceTree = "<group>"; };
 		6C8F7A6E714C5218EC6FC1DD /* HandsFreeMetronomeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeTests.swift; sourceTree = "<group>"; };
+		6E2BF1C2C3492034113AAFE8 /* PedalKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PedalKeys.swift; sourceTree = "<group>"; };
+		702B725AC53E17617245A942 /* WristMetronome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WristMetronome.swift; sourceTree = "<group>"; };
+		8BA722D55AB244F03C471251 /* NotMyTempoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotMyTempoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC9C24777FED121C2F9C136 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BF6919714BA6444BEDA4613 /* WristTempo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WristTempo.swift; sourceTree = "<group>"; };
+		9FE74E3A12EC052C15F7D848 /* NotMyTempoWatch.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = NotMyTempoWatch.entitlements; sourceTree = "<group>"; };
 		A04C8D5D5269C68D20C4B1A1 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		A1000001 /* HandsFreeMetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeApp.swift; sourceTree = "<group>"; };
 		A1000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +169,7 @@
 		A1000F02 /* NoteSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSignal.swift; sourceTree = "<group>"; };
 		A1000F04 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		A372D671513D27A0DD4B28E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B7F2476DEABA43EF70712A58 /* TempoComplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TempoComplication.swift; sourceTree = "<group>"; };
 		BA89BB79A553C1FA896E81AD /* AppShortcuts.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json.xcstrings; path = AppShortcuts.xcstrings; sourceTree = "<group>"; };
 		D7A4B18BBB9A42BEB9767B23 /* WhatsNewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
 		EFB1C9764327C94ECAA99F25 /* HandsFreeMetronomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandsFreeMetronomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +181,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				20AD40C92E06CF81D30A9880 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E7FAD625F76090ABD7451C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A531859101CC3632AD81B79 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,9 +208,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D99AB604616E31B4C3883B40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B7CAE583A6D3D8C675B209 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FA9AB49FD32BF8E23F3C6D0 /* NotMyTempoWatch */ = {
+			isa = PBXGroup;
+			children = (
+				38FD2E0A85FC56EC68ACB00D /* NotMyTempoWatchApp.swift */,
+				702B725AC53E17617245A942 /* WristMetronome.swift */,
+				9BF6919714BA6444BEDA4613 /* WristTempo.swift */,
+				499DAD4D39CB38E1F77BB2FD /* WristDemo.swift */,
+				23AC08324EC0F868B56CD8AD /* Assets.xcassets */,
+				5DD1EC696EC91EC82B800B96 /* Localizable.xcstrings */,
+				9FE74E3A12EC052C15F7D848 /* NotMyTempoWatch.entitlements */,
+				9BC9C24777FED121C2F9C136 /* Info.plist */,
+			);
+			name = NotMyTempoWatch;
+			path = NotMyTempoWatch;
+			sourceTree = "<group>";
+		};
 		6E9E82D279715357AE331863 /* HandsFreeMetronomeUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +260,8 @@
 				FE4609CAFE5094B3506C5476 /* Frameworks */,
 				E88E292D20A2A150C98C9895 /* HandsFreeMetronomeTests */,
 				6E9E82D279715357AE331863 /* HandsFreeMetronomeUITests */,
+				1FA9AB49FD32BF8E23F3C6D0 /* NotMyTempoWatch */,
+				CAC69A6867B54604487D5EE5 /* NotMyTempoWatchWidget */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +271,8 @@
 				A1000010 /* HandsFreeMetronome.app */,
 				2297C2A4752E1FC4601B08E1 /* HandsFreeMetronomeTests.xctest */,
 				EFB1C9764327C94ECAA99F25 /* HandsFreeMetronomeUITests.xctest */,
+				8BA722D55AB244F03C471251 /* NotMyTempoWatch.app */,
+				4301708F6901E6246898494A /* NotMyTempoWatchWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,8 +303,28 @@
 				A04C8D5D5269C68D20C4B1A1 /* PrivacyInfo.xcprivacy */,
 				16574F776304B810DD92D44A /* MetronomeIntents.swift */,
 				BA89BB79A553C1FA896E81AD /* AppShortcuts.xcstrings */,
+				6E2BF1C2C3492034113AAFE8 /* PedalKeys.swift */,
 			);
 			path = HandsFreeMetronome;
+			sourceTree = "<group>";
+		};
+		CAC69A6867B54604487D5EE5 /* NotMyTempoWatchWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B7F2476DEABA43EF70712A58 /* TempoComplication.swift */,
+				1E9869B30CFA52DE3B0C591C /* Info.plist */,
+				5E9407ABD7196CE30569B829 /* NotMyTempoWatchWidget.entitlements */,
+			);
+			name = NotMyTempoWatchWidget;
+			path = NotMyTempoWatchWidget;
+			sourceTree = "<group>";
+		};
+		CE49865E146AF559620FDD4E /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				043867189E703B3B50A9A8FB /* Foundation.framework */,
+			);
+			name = watchOS;
 			sourceTree = "<group>";
 		};
 		E88E292D20A2A150C98C9895 /* HandsFreeMetronomeTests */ = {
@@ -216,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				75BA4D6A9F50F3EC1D4CECA4 /* iOS */,
+				CE49865E146AF559620FDD4E /* watchOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -223,6 +348,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		06EF88C945FFC6F138DE6669 /* NotMyTempoWatchWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B449E29060A52873F0C24414 /* Build configuration list for PBXNativeTarget "NotMyTempoWatchWidget" */;
+			buildPhases = (
+				C92B30F902FFE73A47563E13 /* Sources */,
+				D99AB604616E31B4C3883B40 /* Frameworks */,
+				95D0B54041762FA379BBA13F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotMyTempoWatchWidget;
+			productName = NotMyTempoWatchWidget;
+			productReference = 4301708F6901E6246898494A /* NotMyTempoWatchWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		0BF6EE3857F9DF77C7976CBD /* NotMyTempoWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 510F5F9F3BF91ADC00559F11 /* Build configuration list for PBXNativeTarget "NotMyTempoWatch" */;
+			buildPhases = (
+				7D245A4CDA949C45B2F8ED39 /* Sources */,
+				2E7FAD625F76090ABD7451C6 /* Frameworks */,
+				254BF032FE9CEB454CDF8DB4 /* Resources */,
+				A7C1EC9DB706B5D258CFD0C8 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD9749DEAEE7D6691E93299C /* PBXTargetDependency */,
+			);
+			name = NotMyTempoWatch;
+			productName = NotMyTempoWatch;
+			productReference = 8BA722D55AB244F03C471251 /* NotMyTempoWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A1000040 /* HandsFreeMetronome */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1000060 /* Build configuration list for PBXNativeTarget "HandsFreeMetronome" */;
@@ -230,10 +391,12 @@
 				A1000050 /* Sources */,
 				A1000020 /* Frameworks */,
 				A1000051 /* Resources */,
+				59C8D2FF546FB7BAC74B8576 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CDD72E69D9255D25ACDAE427 /* PBXTargetDependency */,
 			);
 			name = HandsFreeMetronome;
 			packageProductDependencies = (
@@ -336,6 +499,8 @@
 				A1000040 /* HandsFreeMetronome */,
 				A2619B6C4F44C03CD570E7B4 /* HandsFreeMetronomeTests */,
 				C1892AEDF163BC975703A4A6 /* HandsFreeMetronomeUITests */,
+				0BF6EE3857F9DF77C7976CBD /* NotMyTempoWatch */,
+				06EF88C945FFC6F138DE6669 /* NotMyTempoWatchWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -348,10 +513,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		254BF032FE9CEB454CDF8DB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E79EB1EC92B89DDE40E51E65 /* Assets.xcassets in Resources */,
+				917A1CC34BA7E954A38C38D6 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		810F5E651FC93F924C2B2138 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D0B54041762FA379BBA13F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92D950BE619702133C37BF0D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +561,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D245A4CDA949C45B2F8ED39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D69F4473BCE1BB0E7705E3D /* NotMyTempoWatchApp.swift in Sources */,
+				670E49A4D704914CCA1C8758 /* WristMetronome.swift in Sources */,
+				CA9DF93CCFC823CD1718F430 /* WristTempo.swift in Sources */,
+				FE909E70AAD61B44399F471C /* WristDemo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1000050 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,6 +591,7 @@
 				506803D79B3951241A9A7D63 /* WhatsNewView.swift in Sources */,
 				6A896E540343E7FF97CBAC6B /* OnboardingView.swift in Sources */,
 				F451953683C0264C2811DCDA /* MetronomeIntents.swift in Sources */,
+				E1AEC619D6F3AEA6B5595634 /* PedalKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +603,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C92B30F902FFE73A47563E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819985C0D464F2AA5DF9C188 /* TempoComplication.swift in Sources */,
+				A1B8F2031D454456052595A5 /* WristTempo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -417,6 +620,18 @@
 			name = HandsFreeMetronome;
 			target = A1000040 /* HandsFreeMetronome */;
 			targetProxy = 1C245F816A9413050BC21A26 /* PBXContainerItemProxy */;
+		};
+		CD9749DEAEE7D6691E93299C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NotMyTempoWatchWidget;
+			target = 06EF88C945FFC6F138DE6669 /* NotMyTempoWatchWidget */;
+			targetProxy = F3B3022466F0DD9EA4BFC364 /* PBXContainerItemProxy */;
+		};
+		CDD72E69D9255D25ACDAE427 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NotMyTempoWatch;
+			target = 0BF6EE3857F9DF77C7976CBD /* NotMyTempoWatch */;
+			targetProxy = 6AC599BAA49CCA9FA8C8CC41 /* PBXContainerItemProxy */;
 		};
 		D178DF1A2F4F91F09ECB48E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -461,6 +676,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2B546C5D39CBC3B78D5DF1D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NotMyTempoWatch/NotMyTempoWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotMyTempoWatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Not My Tempo";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leeo.HandsFreeMetronome;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronome.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 		48032DE639CFE6D5350CAC36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -476,6 +726,65 @@
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = HandsFreeMetronome;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		704DC602834A8EBB7AAA86FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = NotMyTempoWatchWidget/NotMyTempoWatchWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotMyTempoWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Not My Tempo";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronome.watchkitapp.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		81ECFD8E01F1BAE71762C40A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = NotMyTempoWatchWidget/NotMyTempoWatchWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotMyTempoWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Not My Tempo";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronome.watchkitapp.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -557,6 +866,7 @@
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This metronome listens for your voice commands (like \"start\" and \"faster\") and can detect the tempo of music you play nearby, so you can control it without touching the screen.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition is used to understand hands-free voice commands. Recognition runs on-device.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -569,7 +879,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -590,6 +900,7 @@
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This metronome listens for your voice commands (like \"start\" and \"faster\") and can detect the tempo of music you play nearby, so you can control it without touching the screen.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition is used to understand hands-free voice commands. Recognition runs on-device.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,7 +913,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -641,6 +952,40 @@
 			};
 			name = Debug;
 		};
+		EC593AFEDCA69EC8112AC80B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NotMyTempoWatch/NotMyTempoWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotMyTempoWatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Not My Tempo";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leeo.HandsFreeMetronome;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.HandsFreeMetronome.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -662,6 +1007,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		510F5F9F3BF91ADC00559F11 /* Build configuration list for PBXNativeTarget "NotMyTempoWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B546C5D39CBC3B78D5DF1D6 /* Release */,
+				EC593AFEDCA69EC8112AC80B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A1000060 /* Build configuration list for PBXNativeTarget "HandsFreeMetronome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -676,6 +1030,15 @@
 			buildConfigurations = (
 				A1000061 /* Debug */,
 				A1000062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B449E29060A52873F0C24414 /* Build configuration list for PBXNativeTarget "NotMyTempoWatchWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81ECFD8E01F1BAE71762C40A /* Release */,
+				704DC602834A8EBB7AAA86FB /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

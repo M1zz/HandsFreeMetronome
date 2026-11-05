@@ -77,6 +77,7 @@ struct ContentView: View {
 
     // Landscape on iPhone reports a compact height → switch to a two-column layout.
     @Environment(\.verticalSizeClass) private var vSizeClass
+    @Environment(\.horizontalSizeClass) private var hSizeClass
     // iPhone Duo unfolded: controls on one side of the fold, the beat on the other (LeeoKit Fold).
     @Environment(\.foldLayout) private var fold
     // Accessibility preferences we honour throughout the UI.
@@ -94,6 +95,7 @@ struct ContentView: View {
 
     // Dynamic Type: scale the big fixed-size displays with the user's text setting.
     @ScaledMetric(relativeTo: .largeTitle) private var bpmFontSize: CGFloat = 52
+    @ScaledMetric(relativeTo: .largeTitle) private var standTempoSize: CGFloat = 128   // iPad on a music stand, read from ~1 m
     @ScaledMetric(relativeTo: .largeTitle) private var noteFontSize: CGFloat = 96
     @ScaledMetric(relativeTo: .title) private var stepIconSize: CGFloat = 30
 
@@ -129,6 +131,8 @@ struct ContentView: View {
                     FoldSplitView {
                         if vSizeClass == .compact && !fold.isUnfolded {
                             landscapeLayout
+                        } else if isStand {
+                            standLayout
                         } else {
                             portraitLayout
                         }
@@ -194,6 +198,9 @@ struct ContentView: View {
         }
         // Support Dynamic Type, but cap growth so the single-screen layout holds.
         .dynamicTypeSize(...DynamicTypeSize.accessibility2)
+        // Bluetooth page-turn pedal or keyboard: tempo and start/stop (→ PedalKeys.swift).
+        .pedalKeys(enabled: !showOnboarding && !showWhatsNew && paywallFeature == nil && !showTuner && !showCommands,
+                   nudge: { metronome.nudge($0) }, toggle: { metronome.toggle() })
         .fullScreenCover(isPresented: $showCommands) { commandsSheet.foldConfined() }
         // The tuner engine follows the page's visibility (it used to be the
         // sheet's onDismiss) — stopped on ANY path that closes it.
@@ -492,6 +499,104 @@ struct ContentView: View {
         .animation(.easeInOut(duration: 0.35), value: metronome.isPlaying)
     }
 
+
+    // MARK: iPad on a music stand
+
+    /// iPad with room in both directions (full screen, or a wide Split View pane). A narrow
+    /// Split View / Slide Over window is compact width and keeps the phone layout, whose
+    /// beat card stays on top — so the pulse is never lost next to a score app.
+    private var isStand: Bool {
+        hSizeClass == .regular && vSizeClass == .regular && !fold.isUnfolded
+    }
+
+    /// Read from about a metre away, with the eyes on the score: the beat takes most of the
+    /// screen and the tempo is a huge number; everything else stays on this one screen.
+    /// Landscape: beat | tempo + controls. Portrait: beat on top, tempo and controls below.
+    private var standLayout: some View {
+        GeometryReader { outer in
+            #if DEBUG
+            // -landscape: lay the stand screen out on its side, so the landscape arrangement
+            // can be checked on a simulator that has no window to rotate.
+            let turned = ProcessInfo.processInfo.arguments.contains("-landscape")
+            #else
+            let turned = false
+            #endif
+            let size = turned ? CGSize(width: outer.size.height, height: outer.size.width) : outer.size
+            standArrangement(size)
+                .frame(width: size.width, height: size.height)
+                .rotationEffect(.degrees(turned ? 90 : 0))
+                .position(x: outer.size.width / 2, y: outer.size.height / 2)
+        }
+    }
+
+    private func standArrangement(_ size: CGSize) -> some View {
+        let wide = size.width > size.height
+        return Group {
+            if wide {
+                HStack(alignment: .top, spacing: 20) {
+                    standBeat
+                    VStack(spacing: 14) {
+                        // Playing, the tempo sits mid-column, level with the beat.
+                        if metronome.isPlaying { Spacer(minLength: 0) }
+                        tempoCard
+                        if !metronome.isPlaying {
+                            subdivisionCard.transition(.opacity)
+                            voiceCard.transition(.opacity)
+                            pedalHint.transition(.opacity)
+                            tipAsk
+                        }
+                        Spacer(minLength: 0)
+                        transportBar
+                    }
+                    .frame(width: min(460, size.width * 0.4))
+                }
+            } else {
+                VStack(spacing: 14) {
+                    standBeat
+                    tempoCard
+                    if !metronome.isPlaying {
+                        HStack(alignment: .top, spacing: 14) {
+                            subdivisionCard
+                            voiceCard
+                        }
+                        .transition(.opacity)
+                        pedalHint.transition(.opacity)
+                        tipAsk
+                    }
+                    transportBar
+                }
+                .frame(maxWidth: 820)
+                .frame(maxWidth: .infinity)
+            }
+        }
+        .padding(.horizontal, 24)
+        .padding(.vertical, 16)
+        .animation(.easeInOut(duration: 0.35), value: metronome.isPlaying)
+    }
+
+    /// The beat card blown up to fill its space: drawn at a phone-like size, then scaled,
+    /// so the balls, ring and count all grow together and stay in proportion.
+    private var standBeat: some View {
+        GeometryReader { g in
+            let k = min(2.6, max(1, min(g.size.width / 400, g.size.height / 340)))
+            beatDots
+                .frame(width: g.size.width / k, height: g.size.height / k)
+                .scaleEffect(k)
+                .position(x: g.size.width / 2, y: g.size.height / 2)
+        }
+    }
+
+    /// What the pedal does — page-turn pedals send these keys.
+    private var pedalHint: some View {
+        Label("Page-turn pedal: right is faster, left is slower. Keyboard: → ← and Space to start or stop.",
+              systemImage: "keyboard")
+            .font(.footnote)
+            .foregroundStyle(Color(.label).opacity(0.7))
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 4)
+    }
+
     /// 연습을 막 마친 자리의 팁 부탁(`NotMyTempoTipMoments`). 이미 Pro 를 가진 사람에게만 —
     /// 아직 안 산 사람에게는 페이월이 맞는 길이다. 드물게 묻는 규칙은 LeeoKit 이 지킨다.
     @ViewBuilder private var tipAsk: some View {
@@ -642,7 +747,7 @@ struct ContentView: View {
     }
 
     /// The beat card flexes to its space instead of a fixed height: landscape, or its own pane on an unfolded Duo.
-    private var beatFillsPane: Bool { vSizeClass == .compact || fold.isUnfolded }
+    private var beatFillsPane: Bool { vSizeClass == .compact || fold.isUnfolded || isStand }
 
     /// Small toggle that cycles bounce → orbit → sweep; its icon previews the NEXT view.
     private var vizModeButton: some View {
@@ -1086,7 +1191,7 @@ struct ContentView: View {
             // The big display shows the Italian tempo term (Largo, Moderato…) by
             // default; tap to flip it to the raw BPM number and back.
             Text(tempoAsNumber ? "\(metronome.bpm)" : MetronomeEngine.tempoName(for: metronome.bpm))
-                .font(.system(size: bpmFontSize, weight: .bold, design: .rounded))
+                .font(.system(size: isStand ? standTempoSize : bpmFontSize, weight: .bold, design: .rounded))
                 .lineLimit(1)
                 .allowsTightening(true)   // "Prestissimo" tightens before it shrinks
                 .minimumScaleFactor(0.5)
@@ -1105,7 +1210,7 @@ struct ContentView: View {
                 .accessibilityInputLabels(["Tempo"])
                 .accessibilityAction(named: "Tap tempo") { tapTempo() }   // VoiceOver keeps tap-tempo
             Text(tempoSubtitle)
-                .font(.subheadline)
+                .font(isStand ? .system(size: standTempoSize * 0.3, weight: .semibold, design: .rounded) : .subheadline)
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
                 .fixedSize(horizontal: false, vertical: true)
@@ -2546,6 +2651,10 @@ struct ContentView: View {
         haptic.impactOccurred(intensity: beat == 0 ? 1.0 : 0.6)
         // Reduce Motion: skip the bounce AND the flash — the lit dot still marks the beat.
         guard !reduceMotion else { return }
+        #if DEBUG
+        // A screenshot must not freeze the beat flash mid-fade (the whole page turns pink).
+        if ProcessInfo.processInfo.arguments.contains("-shot") { return }
+        #endif
         flashIsDownbeat = beat == 0
         flashOpacity = beat == 0 ? 0.18 : 0.08     // downbeat pops, the rest whisper
         withAnimation(.easeOut(duration: 0.30)) { flashOpacity = 0 }
