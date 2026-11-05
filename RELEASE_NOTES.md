@@ -7,7 +7,6 @@
 iPad에서 멀리서도 박자와 템포가 크게 보여요
 페이지 넘김 페달로 템포를 바꾸고 시작해요
 Apple Watch가 손목 진동으로 박자를 알려 줘요
-친구에게 Pro를 선물할 수 있어요
 VoiceOver와 음성 제어로 더 쉽게 쓸 수 있어요
 
 ### App Store (English)
@@ -15,7 +14,6 @@ VoiceOver와 음성 제어로 더 쉽게 쓸 수 있어요
 Now on iPad, easy to read on a stand
 Change tempo with a page-turn pedal
 Apple Watch taps the beat on your wrist
-You can now gift Pro to a friend
 Improved VoiceOver and Voice Control
 
 ### 앱스토어 (ja)
@@ -23,7 +21,6 @@ Improved VoiceOver and Voice Control
 iPadで譜面台からでも大きく見えます
 ページめくりペダルでテンポを変えられます
 Apple Watchが手首の振動で拍を刻みます
-友だちに Pro をプレゼントできます
 VoiceOverや音声コントロールで使いやすくなりました
 
 ### 앱스토어 (de-DE)
@@ -31,7 +28,6 @@ VoiceOverや音声コントロールで使いやすくなりました
 Jetzt auf dem iPad, groß am Notenständer
 Tempo per Blätterpedal ändern
 Apple Watch gibt den Takt am Handgelenk
-Du kannst Pro jetzt verschenken
 Besser mit VoiceOver und Sprachsteuerung
 
 ### 앱스토어 (es-ES)
@@ -39,7 +35,6 @@ Besser mit VoiceOver und Sprachsteuerung
 Ya en iPad, grande para leer en el atril
 Cambia el tempo con un pedal de página
 Apple Watch marca el pulso en tu muñeca
-Ya puedes regalar Pro a un amigo
 Mejor con VoiceOver y Control por voz
 
 ### 앱스토어 (es-MX)
@@ -47,7 +42,6 @@ Mejor con VoiceOver y Control por voz
 Ya en iPad, grande para leer en el atril
 Cambia el tempo con un pedal de página
 Apple Watch marca el pulso en tu muñeca
-Ya puedes regalar Pro a un amigo
 Mejor con VoiceOver y Control por voz
 
 ### 앱스토어 (fr-FR)
@@ -55,7 +49,6 @@ Mejor con VoiceOver y Control por voz
 Sur iPad, lisible de loin sur le pupitre
 Changez le tempo avec une pédale
 L'Apple Watch bat la mesure au poignet
-Offrez Pro à un ami
 VoiceOver et Commande vocale améliorés
 
 ### 앱스토어 (zh-Hans)
@@ -63,7 +56,6 @@ VoiceOver et Commande vocale améliorés
 iPad 上放在谱架上也看得清
 用翻页踏板调节速度
 Apple Watch 用手腕振动打拍子
-可以把 Pro 送给朋友了
 VoiceOver 和语音控制更好用了
 
 ### 앱스토어 (pt-BR)
@@ -71,7 +63,6 @@ VoiceOver 和语音控制更好用了
 Agora no iPad, fácil de ler na estante
 Mude o andamento com um pedal de página
 O Apple Watch marca o tempo no pulso
-Dê o Pro de presente a um amigo
 Melhor com VoiceOver e Controle por Voz
 
 ### 앱스토어 (zh-Hant)
@@ -79,7 +70,6 @@ Melhor com VoiceOver e Controle por Voz
 iPad 上放在譜架上也看得清
 用翻頁踏板調整速度
 Apple Watch 用手腕震動打拍子
-可以把 Pro 送給朋友了
 VoiceOver 與語音控制更好用了
 
 ### 앱스토어 (이탈리아어)
@@ -87,7 +77,6 @@ VoiceOver 與語音控制更好用了
 Ora su iPad, leggibile sul leggio
 Cambia tempo con un pedale voltapagina
 Apple Watch batte il tempo sul polso
-Ora puoi regalare Pro a un amico
 Meglio con VoiceOver e Controllo vocale
 
 ### App Store (en-GB)
@@ -95,7 +84,6 @@ Meglio con VoiceOver e Controllo vocale
 Now on iPad, easy to read on a stand
 Change tempo with a page-turn pedal
 Apple Watch taps the beat on your wrist
-You can now gift Pro to a friend
 Improved VoiceOver and Voice Control
 
 ### 앱스토어 (러시아어)
@@ -103,7 +91,6 @@ Improved VoiceOver and Voice Control
 Теперь на iPad: крупно, видно с пюпитра
 Темп меняется педалью перелистывания
 Apple Watch отбивает доли на запястье
-Теперь Pro можно подарить другу
 Лучше с VoiceOver и управлением голосом
 
 ### 앱스토어 (네덜란드어)
@@ -111,7 +98,6 @@ Apple Watch отбивает доли на запястье
 Nu op iPad, groot op je muziekstandaard
 Wijzig het tempo met een bladerpedaal
 Apple Watch tikt de maat op je pols
-Geef Pro cadeau aan een vriend
 Beter met VoiceOver en Stembediening
 
 ### 앱스토어 (폴란드어)
@@ -119,7 +105,6 @@ Beter met VoiceOver en Stembediening
 Teraz na iPadzie, czytelnie z pulpitu
 Zmieniaj tempo pedałem do nut
 Apple Watch wystukuje puls na nadgarstku
-Możesz teraz podarować Pro znajomemu
 Lepiej z VoiceOver i Sterowaniem głosem
 
 ### 앱스토어 (튀르키예어)
@@ -127,7 +112,6 @@ Lepiej z VoiceOver i Sterowaniem głosem
 Artık iPad'de, nota sehpasından okunur
 Tempoyu sayfa çevirme pedalıyla değiştir
 Apple Watch vuruşu bileğinde hissettirir
-Pro'yu arkadaşınıza hediye edebilirsiniz
 VoiceOver ve Sesle Denetim ile daha iyi
 
 ### 앱스토어 (스웨덴어)
@@ -135,7 +119,6 @@ VoiceOver ve Sesle Denetim ile daha iyi
 Nu på iPad, tydligt på notstället
 Ändra tempot med en bladvändarpedal
 Apple Watch knackar takten på handleden
-Nu kan du ge bort Pro i present
 Bättre med VoiceOver och Röststyrning
 
 ### 앱스토어 (덴마크어)
@@ -143,7 +126,6 @@ Bättre med VoiceOver och Röststyrning
 Nu på iPad, tydeligt på nodestativet
 Skift tempo med en bladvenderpedal
 Apple Watch banker takten på håndleddet
-Nu kan du give Pro i gave til en ven
 Bedre med VoiceOver og Stemmestyring
 
 ### 앱스토어 (노르웨이어(보크말))
@@ -151,7 +133,6 @@ Bedre med VoiceOver og Stemmestyring
 Nå på iPad, stort og tydelig på stativet
 Endre tempoet med en bladvenderpedal
 Apple Watch banker takten på håndleddet
-Nå kan du gi Pro i gave til en venn
 Bedre med VoiceOver og Stemmekontroll
 
 ### 앱스토어 (핀란드어)
@@ -159,7 +140,6 @@ Bedre med VoiceOver og Stemmekontroll
 Nyt iPadilla, iso ja luettava telineeltä
 Vaihda tempoa sivunkääntöpolkimella
 Apple Watch napauttaa sykkeen ranteeseen
-Voit nyt antaa Pron lahjaksi ystävälle
 Parempi VoiceOverilla ja puheohjauksella
 
 ### 앱스토어 (체코어)
@@ -167,7 +147,6 @@ Parempi VoiceOverilla ja puheohjauksella
 Nově na iPadu, čitelné ze stojanu
 Tempo měňte pedálem na otáčení stránek
 Apple Watch ťuká dobu na zápěstí
-Pro teď můžete darovat příteli
 Lepší s VoiceOverem a Ovládáním hlasem
 
 ### 앱스토어 (인도네시아어)
@@ -175,7 +154,6 @@ Lepší s VoiceOverem a Ovládáním hlasem
 Kini di iPad, besar dan jelas di stand
 Ubah tempo dengan pedal pembalik halaman
 Apple Watch mengetuk ketukan di tangan
-Kini bisa menghadiahkan Pro ke teman
 VoiceOver dan Kontrol Suara makin nyaman
 
 ### 앱스토어 (베트남어)
@@ -183,7 +161,6 @@ VoiceOver dan Kontrol Suara makin nyaman
 Đã có trên iPad, nhìn rõ từ giá nhạc
 Đổi tốc độ bằng bàn đạp lật trang
 Apple Watch rung theo nhịp trên cổ tay
-Giờ bạn có thể tặng Pro cho bạn bè
 Dùng tốt hơn với VoiceOver và Khẩu lệnh
 
 ### 앱스토어 (그리스어)
@@ -191,7 +168,6 @@ Dùng tốt hơn với VoiceOver và Khẩu lệnh
 Τώρα στο iPad, ευανάγνωστο στο αναλόγιο
 Αλλάξτε ταχύτητα με πεντάλ σελίδας
 Ο ρυθμός στον καρπό με το Apple Watch
-Τώρα μπορείτε να χαρίσετε το Pro σε φίλο
 Καλύτερο VoiceOver και Φωνητικός έλεγχος
 
 ### 앱스토어 (태국어)
@@ -199,7 +175,6 @@ Dùng tốt hơn với VoiceOver và Khẩu lệnh
 ใช้บน iPad ได้แล้ว อ่านง่ายจากแท่นโน้ต
 เปลี่ยนความเร็วด้วยแป้นเหยียบพลิกหน้า
 Apple Watch สั่นบอกจังหวะที่ข้อมือ
-มอบ Pro เป็นของขวัญให้เพื่อนได้แล้ว
 ใช้ VoiceOver และสั่งงานด้วยเสียงได้ดีขึ้น
 
 ## 1.0.10
