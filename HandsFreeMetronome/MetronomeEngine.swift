@@ -202,6 +202,26 @@ final class MetronomeEngine: ObservableObject {
                   AVAudioSession.InterruptionType(rawValue: raw) == .began else { return }
             self?.stop()
         }
+        // Headphones, AirPods or a car connecting changes the output, and iOS stops
+        // the engine. Without this the screen kept saying "playing" in silence.
+        NotificationCenter.default.addObserver(
+            forName: .AVAudioEngineConfigurationChange, object: engine, queue: .main
+        ) { [weak self] _ in
+            self?.resumeAfterRouteChange()
+        }
+    }
+
+    /// Bring the click back on the new output, or stop cleanly if it can't.
+    private func resumeAfterRouteChange() {
+        guard isPlaying else { return }
+        timerQueue.sync {}   // no scheduleBuffer in flight while the graph restarts
+        do { try engine.start() } catch {
+            engineLog.error("Audio engine restart failed: \(error.localizedDescription, privacy: .public)")
+            stop()
+            return
+        }
+        guard engine.isRunning else { stop(); return }
+        player.play()
     }
 
     private func configureSession() {

@@ -1,5 +1,6 @@
 import Foundation
 import AVFoundation
+import Accelerate
 
 /// Chromatic tuner. It does NOT open its own microphone — it is fed the mic
 /// buffers that VoiceController already captures, then estimates pitch (YIN-style
@@ -60,8 +61,7 @@ final class TunerEngine: ObservableObject {
         guard active, let ch = buffer.floatChannelData?[0] else { return }
         let n = Int(buffer.frameLength)
         let sr = buffer.format.sampleRate
-        var samples = [Float](repeating: 0, count: n)
-        for i in 0..<n { samples[i] = ch[i] }
+        let samples = Array(UnsafeBufferPointer(start: ch, count: n))
 
         analysisQueue.async { [weak self] in
             guard let self, self.active else { return }
@@ -99,23 +99,33 @@ final class TunerEngine: ObservableObject {
         guard n > 1024, sampleRate > 0 else { return nil }
 
         // Ignore silence.
-        var energy: Float = 0
-        for v in x { energy += v * v }
-        if sqrtf(energy / Float(n)) < 0.012 { return nil }
+        var rms: Float = 0
+        vDSP_rmsqv(x, 1, &rms, vDSP_Length(n))
+        if rms < 0.012 { return nil }
 
         let minF = 50.0, maxF = 1000.0
         let minLag = max(2, Int(sampleRate / maxF))
         let maxLag = min(n - 1, Int(sampleRate / minF))
         guard maxLag > minLag else { return nil }
 
-        // Difference function d(lag).
+        // Difference function d(lag) = Σ (x[i] − x[i+lag])²  over i < m,
+        // expanded to  E(0) + E(lag) − 2·Σ x[i]·x[i+lag]  so each lag is one vectorised
+        // dot product instead of a scalar loop — the tuner and the instrument signal
+        // run this on every window while the mic is open.
         let m = n - maxLag
         var d = [Float](repeating: 0, count: maxLag + 1)
-        for lag in minLag...maxLag {
-            var sum: Float = 0
-            var i = 0
-            while i < m { let diff = x[i] - x[i + lag]; sum += diff * diff; i += 1 }
-            d[lag] = sum
+        // Energy of x[k ..< k+m] for any k, from running sums of squares (Double: no drift).
+        var prefix = [Double](repeating: 0, count: n + 1)
+        for i in 0..<n { prefix[i + 1] = prefix[i] + Double(x[i]) * Double(x[i]) }
+        let e0 = prefix[m] - prefix[0]
+        x.withUnsafeBufferPointer { p in
+            guard let base = p.baseAddress else { return }
+            for lag in minLag...maxLag {
+                var cross: Float = 0
+                vDSP_dotpr(base, 1, base + lag, 1, &cross, vDSP_Length(m))
+                let el = prefix[lag + m] - prefix[lag]
+                d[lag] = Float(max(0, e0 + el - 2 * Double(cross)))
+            }
         }
 
         // Cumulative mean normalized difference.

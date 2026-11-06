@@ -226,3 +226,74 @@ final class VoiceVocabularyTests: XCTestCase {
         XCTAssertEqual(parser.command(in: "beat 120"), .setTempo(120))
     }
 }
+
+/// The vectorised pitch detector must read the same notes as the plain loop it replaced.
+final class VectorisedPitchTests: XCTestCase {
+
+    /// The pre-Accelerate difference function, kept as the reference.
+    private func referencePitch(_ x: [Float], sampleRate: Double) -> Double? {
+        let n = x.count
+        let minF = 50.0, maxF = 1000.0
+        let minLag = max(2, Int(sampleRate / maxF)), maxLag = min(n - 1, Int(sampleRate / minF))
+        let m = n - maxLag
+        var d = [Float](repeating: 0, count: maxLag + 1)
+        for lag in minLag...maxLag {
+            var sum: Float = 0
+            for i in 0..<m { let diff = x[i] - x[i + lag]; sum += diff * diff }
+            d[lag] = sum
+        }
+        var cmnd = [Float](repeating: 1, count: maxLag + 1)
+        var running: Float = 0
+        for lag in minLag...maxLag {
+            running += d[lag]
+            cmnd[lag] = running > 0 ? d[lag] * Float(lag - minLag + 1) / running : 1
+        }
+        var tau = -1, lag = minLag
+        while lag <= maxLag {
+            if cmnd[lag] < 0.15 {
+                while lag + 1 <= maxLag && cmnd[lag + 1] < cmnd[lag] { lag += 1 }
+                tau = lag; break
+            }
+            lag += 1
+        }
+        guard tau > 0 else { return nil }
+        var period = Double(tau)
+        if tau > minLag && tau < maxLag {
+            let a = d[tau - 1], b = d[tau], c = d[tau + 1]
+            let denom = a + c - 2 * b
+            if denom != 0 { period += Double((a - c) / (2 * denom)) }
+        }
+        return sampleRate / period
+    }
+
+    /// A plucked-string-like tone: fundamental plus decaying harmonics.
+    private func tone(_ f: Double, sampleRate: Double, count: Int = 4096) -> [Float] {
+        (0..<count).map { i in
+            let t = Double(i) / sampleRate
+            let s = sin(2 * .pi * f * t) + 0.5 * sin(4 * .pi * f * t) + 0.25 * sin(6 * .pi * f * t)
+            return Float(0.3 * s)
+        }
+    }
+
+    func testMatchesTheOldLoopAcrossTheRange() throws {
+        for sr in [44_100.0, 48_000.0] {
+            for f in [82.41, 110.0, 196.0, 261.63, 329.63, 440.0, 659.25, 880.0] {
+                let x = tone(f, sampleRate: sr)
+                let new = try XCTUnwrap(TunerEngine.detectPitch(x, sampleRate: sr), "\(f) Hz @ \(sr)")
+                let old = try XCTUnwrap(referencePitch(x, sampleRate: sr))
+                XCTAssertEqual(new, old, accuracy: 0.05, "\(f) Hz @ \(sr)")
+                XCTAssertEqual(new, f, accuracy: f * 0.003, "\(f) Hz @ \(sr)")   // within ~5 cents
+                XCTAssertEqual(TunerEngine.noteInfo(new).0, TunerEngine.noteInfo(f).0)
+            }
+        }
+    }
+
+    func testIsFasterThanTheOldLoop() {
+        let x = tone(110, sampleRate: 48_000)
+        let clock = ContinuousClock()
+        let new = clock.measure { for _ in 0..<3 { _ = TunerEngine.detectPitch(x, sampleRate: 48_000) } }
+        let old = clock.measure { for _ in 0..<3 { _ = referencePitch(x, sampleRate: 48_000) } }
+        print("PITCH new \(new / 3) vs old \(old / 3) per window")
+        XCTAssertLessThan(new, old)
+    }
+}

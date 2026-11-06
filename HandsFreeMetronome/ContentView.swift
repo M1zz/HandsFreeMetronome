@@ -800,6 +800,10 @@ struct ContentView: View {
 
     /// Continuous phase (beats since the measure's beat 0) interpolated between the
     /// audio-accurate beat callbacks, so motion stays glued to the click.
+    /// The beat views only move while the click plays (`beatPhase` is 0 otherwise), so
+    /// the frame clock stops with it — an idle screen no longer redraws at 120 Hz.
+    private var vizPaused: Bool { reduceMotion || showHelpMarks || !metronome.isPlaying }
+
     private func beatPhase(now: Date) -> Double {
         guard metronome.isPlaying, currentBeat >= 0 else { return 0 }
         let beatDuration = 60.0 / Double(metronome.bpm)
@@ -820,7 +824,7 @@ struct ContentView: View {
             // Swing as wide as the card allows — the full ±110 in portrait, tighter in
             // landscape — keeping the popped ball (~55pt) inside the card's bounds.
             let amp = min(110, max(36, geo.size.height / 2 - 34))
-            TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
+            TimelineView(.animation(paused: vizPaused)) { timeline in
                 let phase = beatPhase(now: timeline.date)
                 // Gate on isPlaying too: right after a stop this view lingers for its
                 // fade-out while `currentBeat` still holds the last beat but the phase
@@ -920,7 +924,7 @@ struct ContentView: View {
     private var orbitViz: some View {
         let beats = metronome.beatsPerMeasure
         let sub = max(1, metronome.subdivision)
-        return TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
+        return TimelineView(.animation(paused: vizPaused)) { timeline in
             let phase = beatPhase(now: timeline.date)
             GeometryReader { geo in
                 let side = min(geo.size.width, geo.size.height)
@@ -1082,7 +1086,7 @@ struct ContentView: View {
 
     private var sweepViz: some View {
         let beats = metronome.beatsPerMeasure
-        return TimelineView(.animation(paused: reduceMotion || showHelpMarks)) { timeline in
+        return TimelineView(.animation(paused: vizPaused)) { timeline in
             let phase = beatPhase(now: timeline.date)
             // Same guard as the bounce view: while fading out after a stop the phase
             // is already 0 but `currentBeat` isn't reset yet, so an unclamped `f`
@@ -1518,7 +1522,7 @@ struct ContentView: View {
     private var voiceCard: some View {
         HStack(spacing: 10) {
             if voice.isListening {
-                voiceWaveform.frame(width: 40, height: 16)
+                VoiceWaveform(level: voice.level, color: cue).frame(width: 40, height: 16)
             } else {
                 Image(systemName: "mic.slash.fill")
                     .font(.footnote)
@@ -1565,20 +1569,6 @@ struct ContentView: View {
         // The tuner is voice-first ("tune"), so its tip sits on the voice strip.
         .popoverTip(featureTips.currentTip as? TunerTip)
         .coachAnchor("voice")
-    }
-
-    private var voiceWaveform: some View {
-        let level = CGFloat(voice.audioLevel)
-        let factors: [CGFloat] = [0.45, 0.8, 1.0, 0.6, 0.95, 0.55, 0.85]
-        return HStack(alignment: .center, spacing: 4) {
-            ForEach(factors.indices, id: \.self) { i in
-                Capsule()
-                    .fill(cue)
-                    .frame(width: 4, height: max(4, 4 + level * 26 * factors[i]))
-            }
-        }
-        .animation(.easeOut(duration: 0.08), value: voice.audioLevel)
-        .accessibilityHidden(true)   // purely decorative level meter
     }
 
     // MARK: Transport
@@ -3143,4 +3133,25 @@ extension AnyTransition {
 
 #Preview {
     ContentView()
+}
+
+/// The live mic level beside "Listening". A view of its own that watches only
+/// `MicLevel`, so the level's ~20 Hz updates never redraw the main screen.
+private struct VoiceWaveform: View {
+    @ObservedObject var level: MicLevel
+    let color: Color
+    private static let factors: [CGFloat] = [0.45, 0.8, 1.0, 0.6, 0.95, 0.55, 0.85]
+
+    var body: some View {
+        let value = CGFloat(level.value)
+        HStack(alignment: .center, spacing: 4) {
+            ForEach(Self.factors.indices, id: \.self) { i in
+                Capsule()
+                    .fill(color)
+                    .frame(width: 4, height: max(4, 4 + value * 26 * Self.factors[i]))
+            }
+        }
+        .animation(.easeOut(duration: 0.08), value: level.value)
+        .accessibilityHidden(true)   // purely decorative level meter
+    }
 }

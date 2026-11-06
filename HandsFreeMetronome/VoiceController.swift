@@ -1,6 +1,7 @@
 import Foundation
 import Speech
 import AVFoundation
+import Accelerate
 
 /// In-app continuous speech recognition. This is the app's OWN microphone
 /// listener — it does NOT require the user to turn on iOS system Voice Control
@@ -43,8 +44,9 @@ final class VoiceController: ObservableObject {
     /// the UI can restart the Listen-button auto-mute countdown.
     @Published private(set) var activityToken = 0
 
-    /// Smoothed mic input level (0…1) that drives the live waveform.
-    @Published private(set) var audioLevel: Float = 0
+    /// Smoothed mic input level (0…1) for the live waveform. Its own observable, so the
+    /// ~20 Hz updates redraw only the waveform — not every view that watches this controller.
+    let level = MicLevel()
 
     /// The words the mic listens for, and the recognizer that hears them.
     /// Swapped by `setLanguage` — English, or the app language's own words.
@@ -67,6 +69,20 @@ final class VoiceController: ObservableObject {
     private var levelTick = 0
 
     var isListening: Bool { status == .listening }
+
+    init() {
+        // A headset or Bluetooth mic changes the input format, and iOS stops the engine.
+        // The tap was installed with the OLD format, and restarting with it raises an
+        // uncatchable Objective-C exception — so listening is rebuilt from scratch:
+        // `start()` reads the new format and reinstalls the tap.
+        NotificationCenter.default.addObserver(
+            forName: .AVAudioEngineConfigurationChange, object: audioEngine, queue: .main
+        ) { [weak self] _ in
+            guard let self, self.status == .listening else { return }
+            self.stop()
+            self.start()
+        }
+    }
 
     /// Thread-safe access to `request` — read on the audio (tap) thread,
     /// swapped on the main thread.
@@ -239,7 +255,7 @@ final class VoiceController: ObservableObject {
         setRequest(nil)
         smoothedLevel = 0
         lastPublishedLevel = -1
-        audioLevel = 0
+        level.value = 0
         if status == .listening { status = .idle }
     }
 
@@ -248,9 +264,8 @@ final class VoiceController: ObservableObject {
         guard let ch = buffer.floatChannelData?[0] else { return }
         let n = Int(buffer.frameLength)
         guard n > 0 else { return }
-        var sum: Float = 0
-        for i in 0..<n { sum += ch[i] * ch[i] }
-        let rms = sqrtf(sum / Float(n))
+        var rms: Float = 0
+        vDSP_rmsqv(ch, 1, &rms, vDSP_Length(n))
         let target = min(1, rms * 12)
         // Fast attack, slow release so the bars linger briefly after a word.
         smoothedLevel += (target > smoothedLevel ? 0.6 : 0.12) * (target - smoothedLevel)
@@ -261,7 +276,7 @@ final class VoiceController: ObservableObject {
         // Publish only on meaningful change (no churn while silent).
         if abs(level - lastPublishedLevel) > 0.02 || (level < 0.03 && lastPublishedLevel >= 0.03) {
             lastPublishedLevel = level
-            DispatchQueue.main.async { self.audioLevel = level }
+            DispatchQueue.main.async { self.level.value = level }
         }
     }
 
@@ -286,4 +301,9 @@ final class VoiceController: ObservableObject {
     private func command(in text: String) -> Command? {
         VoiceCommandParser(vocabulary: vocabulary).command(in: text)
     }
+}
+
+/// The mic level alone, observed only by the waveform (→ `VoiceController.level`).
+final class MicLevel: ObservableObject {
+    @Published var value: Float = 0
 }
