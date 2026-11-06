@@ -28889,149 +28889,6 @@
         }
       }
     },
-    "Redeem offer code" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uplatnit kód nabídky"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Indløs tilbudskode"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Angebotscode einlösen"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Εξαργύρωση κωδικού προσφοράς"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Redeem offer code"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Canjear código de oferta"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lunasta tarjouskoodi"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utiliser un code promo"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tukarkan kode penawaran"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Riscatta un codice promozionale"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "オファーコードを使う"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "오퍼 코드 사용"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Løs inn tilbudskode"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aanbiedingscode inwisselen"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zrealizuj kod promocyjny"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resgatar código de oferta"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Активировать промокод"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lös in erbjudandekod"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "แลกรหัสข้อเสนอ"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Teklif kodu kullan"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Đổi mã ưu đãi"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "兑换优惠码"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "兌換優惠代碼"
-          }
-        }
-      }
-    },
     "Reference pitch" : {
       "localizations" : {
         "cs" : {
@@ -50969,150 +50826,143 @@
       }
     },
     "privacy-policy-url" : {
-      "extractionState" : "extracted_with_value",
       "localizations" : {
-        "cs" : {
+        "ja" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/cs/privacy.html"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/da/privacy.html"
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/ja/privacy.html"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/de/privacy.html"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/el/privacy.html"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/privacy.html"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "privacy-policy-url"
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/es/privacy.html"
           }
         },
-        "fi" : {
+        "zh-Hans" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/fi/privacy.html"
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hans/privacy.html"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/pt-BR/privacy.html"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/fr/privacy.html"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/id/privacy.html"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/it/privacy.html"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/ja/privacy.html"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/ko/privacy.html"
           }
         },
-        "nb" : {
+        "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/nb/privacy.html"
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hant/privacy.html"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/it/privacy.html"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "privacy-policy-url"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/ru/privacy.html"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/nl/privacy.html"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/pl/privacy.html"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/pt-BR/privacy.html"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/ru/privacy.html"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/sv/privacy.html"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/th/privacy.html"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/tr/privacy.html"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/sv/privacy.html"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/da/privacy.html"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/nb/privacy.html"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/fi/privacy.html"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/cs/privacy.html"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/id/privacy.html"
           }
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/vi/privacy.html"
           }
         },
-        "zh-Hans" : {
+        "el" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hans/privacy.html"
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/el/privacy.html"
           }
         },
-        "zh-Hant" : {
+        "th" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hant/privacy.html"
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/th/privacy.html"
           }
         }
       }
