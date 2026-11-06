@@ -46,7 +46,10 @@ final class VoiceController: ObservableObject {
     /// Smoothed mic input level (0…1) that drives the live waveform.
     @Published private(set) var audioLevel: Float = 0
 
-    private let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
+    /// The words the mic listens for, and the recognizer that hears them.
+    /// Swapped by `setLanguage` — English, or the app language's own words.
+    private(set) var vocabulary = VoiceVocabulary.current
+    private var recognizer = SFSpeechRecognizer(locale: VoiceVocabulary.current.recognizerLocale)
     private let audioEngine = AVAudioEngine()
     /// The live recognition request. Swapped on the main thread (refresh) while
     /// the mic tap reads it on the audio thread — an unguarded strong-property
@@ -79,6 +82,19 @@ final class VoiceController: ObservableObject {
     }
 
     func toggle() { isListening ? stop() : requestAndStart() }
+
+    /// Switch the command language. A running mic restarts with the new recognizer.
+    func setLanguage(_ language: VoiceLanguage) {
+        let next = language == .native ? (VoiceVocabulary.native ?? .english) : .english
+        guard next.id != vocabulary.id else { return }
+        vocabulary = next
+        recognizer = SFSpeechRecognizer(locale: next.recognizerLocale)
+        DispatchQueue.main.async { self.lastHeard = "" }
+        if isListening {
+            stop()
+            start()
+        }
+    }
 
     private func requestAndStart() {
         SFSpeechRecognizer.requestAuthorization { [weak self] speechAuth in
@@ -175,7 +191,7 @@ final class VoiceController: ObservableObject {
 
         let request = SFSpeechAudioBufferRecognitionRequest()
         request.shouldReportPartialResults = true
-        // Only force on-device recognition when the en-US model is actually present.
+        // Only force on-device recognition when the language's model is actually present.
         // On devices without it, forcing it makes recognition return no result and
         // no error — the mic appears dead. Fall back to server recognition instead.
         request.requiresOnDeviceRecognition = recognizer.supportsOnDeviceRecognition
@@ -253,7 +269,7 @@ final class VoiceController: ObservableObject {
 
     private func parse(_ full: String) {
         guard !awaitingRestart else { return }   // a command already fired this utterance
-        let lower = full.lowercased()
+        let lower = full.lowercased(with: Locale(identifier: vocabulary.defaultLocale))
         DispatchQueue.main.async { self.lastHeard = lower }
 
         guard let cmd = command(in: lower) else { return }
@@ -266,98 +282,8 @@ final class VoiceController: ObservableObject {
         refresh()
     }
 
-    /// Match a command anywhere in the current transcription. Longer/compound
-    /// phrases ("speed up") are checked before short ones ("up").
+    /// The current language's parser (→ VoiceVocabulary.swift).
     private func command(in text: String) -> Command? {
-        if contains(text, ["help"]) { return .help }
-        if contains(text, ["tune", "tuner"]) { return .tuner }
-        // Practice timer — "timer 5 minutes", "ten minutes", "timer off". Checked
-        // before "practice" ("practice timer") and before start/stop ("stop timer").
-        if contains(text, ["timer", "minute"]) {
-            if contains(text, ["off", "cancel", "clear", "no timer", "stop timer"]) { return .timerOff }
-            if let n = minutes(in: text) { return .setTimer(n) }
-            if contains(text, ["timer"]) { return .timer }
-        }
-        // Open the practice-mode modal (auto tempo climb). Checked before "up"/numbers.
-        if contains(text, ["practice", "trainer"]) { return .practice }
-        // Beat visualization. Specific styles before the generic "view" toggle.
-        if contains(text, ["orbit", "circle", "circular"]) { return .orbitView }
-        if contains(text, ["bounce", "vertical"]) { return .bounceView }
-        if contains(text, ["switch view", "change view", "view", "visual"]) { return .toggleView }
-        // Volume. "volume 60" sets a percent; louder/quieter nudge; mute silences.
-        if contains(text, ["mute", "silent", "silence"]) { return .mute }
-        if contains(text, ["volume", "louder", "quieter", "softer"]) {
-            if contains(text, ["volume"]), let n = firstNumber(in: text) { return .setVolume(n) }
-            if contains(text, ["louder"]) || (contains(text, ["volume"]) && contains(text, ["up"])) { return .volumeUp }
-            if contains(text, ["quieter", "softer"]) || (contains(text, ["volume"]) && contains(text, ["down"])) { return .volumeDown }
-        }
-        // Time signature — "three beats", "4 beats". Requires the word "beat" so it
-        // never collides with tempo numbers or subdivisions.
-        if contains(text, ["beat"]), let n = beatsCount(in: text) { return .setBeats(n) }
-        // Scroll the help list by voice — checked before up/down (tempo) and
-        // before close words so "scroll down" doesn't change tempo or close.
-        if contains(text, ["scroll"]) {
-            return contains(text, ["up"]) ? .scrollUp : .scrollDown
-        }
-        // Closes whichever panel is open. "done" is easily misheard as "down",
-        // so offer clearer alternatives too.
-        if contains(text, ["done", "close", "okay", "exit", "dismiss"]) { return .dismiss }
-        if contains(text, ["double"]) { return .double }
-        if contains(text, ["half"]) { return .half }
-        if contains(text, ["faster", "speed up"]) { return .faster }
-        if contains(text, ["slower", "slow down"]) { return .slower }
-        if contains(text, ["sixteenth", "16th"]) { return .setSubdivision(4) }
-        if contains(text, ["triplet"]) { return .setSubdivision(3) }
-        if contains(text, ["eighth", "8th"]) { return .setSubdivision(2) }
-        if contains(text, ["quarter"]) { return .setSubdivision(1) }
-        if contains(text, ["start", "play", "go", "begin"]) { return .start }
-        if contains(text, ["stop", "pause", "halt"]) { return .stop }
-        if contains(text, ["up", "higher"]) { return .up }
-        if contains(text, ["down", "lower"]) { return .down }
-        if let n = firstNumber(in: text) { return .setTempo(n) }
-        return nil
-    }
-
-    /// A time-signature count (1…8) as a digit or a spelled-out word.
-    private func beatsCount(in text: String) -> Int? {
-        let words: [(String, Int)] = [("one", 1), ("two", 2), ("three", 3), ("four", 4),
-                                      ("five", 5), ("six", 6), ("seven", 7), ("eight", 8)]
-        for (w, n) in words where text.contains(w) { return n }
-        if let r = text.range(of: "[1-8]", options: .regularExpression) { return Int(text[r]) }
-        return nil
-    }
-
-    /// A practice length in minutes, as digits ("5", "15") or words ("five",
-    /// "twenty five"). Whole-word matching, so "fifteen" never reads as "five".
-    private func minutes(in text: String) -> Int? {
-        if let r = text.range(of: "\\d{1,3}", options: .regularExpression), let n = Int(text[r]), n > 0 {
-            return n
-        }
-        if contains(text, ["half an hour"]) { return 30 }
-        if contains(text, ["an hour", "one hour"]) { return 60 }
-        let units = ["one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
-                     "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12,
-                     "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen": 16,
-                     "seventeen": 17, "eighteen": 18, "nineteen": 19]
-        let tens = ["twenty": 20, "thirty": 30, "forty": 40, "fifty": 50, "sixty": 60]
-        let tokens = text.split { !$0.isLetter }.map(String.init)
-        for (i, word) in tokens.enumerated() {
-            if let t = tens[word] {
-                if i + 1 < tokens.count, let u = units[tokens[i + 1]], u < 10 { return t + u }
-                return t
-            }
-            if let u = units[word] { return u }
-        }
-        return nil
-    }
-
-    private func contains(_ text: String, _ words: [String]) -> Bool {
-        words.contains { text.contains($0) }
-    }
-
-    private func firstNumber(in text: String) -> Int? {
-        let pattern = "\\d{2,3}"
-        guard let range = text.range(of: pattern, options: .regularExpression) else { return nil }
-        return Int(text[range])
+        VoiceCommandParser(vocabulary: vocabulary).command(in: text)
     }
 }

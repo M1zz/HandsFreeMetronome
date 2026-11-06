@@ -24,7 +24,7 @@ enum ProFeature: String, Identifiable, CaseIterable {
         switch self {
         case .practice: return String(localized: "Raise the tempo automatically every few bars — push a passage faster, hands-free.")
         case .accents:  return String(localized: "Design every click of the measure — high, low, or silent — and save patterns per song.")
-        case .tuner:    return String(localized: "Say \u{201C}tune\u{201D} and play — note, cents, and an in-tune zone.")
+        case .tuner:    return String(localized: "Say \u{201C}\(voiceWord(.tune))\u{201D} and play — note, cents, and an in-tune zone.")
         }
     }
 

@@ -7,6 +7,9 @@ import LeeoKit
 struct ContentView: View {
     @StateObject private var metronome = MetronomeEngine.shared
     @StateObject private var voice = VoiceController()
+    /// English or the app language's own command words (→ VoiceVocabulary.swift).
+    /// Also redraws every quoted command on screen when it changes.
+    @AppStorage(VoiceLanguage.storageKey) private var voiceLanguage = VoiceLanguage.english.rawValue
     @StateObject private var tuner = TunerEngine()
     @StateObject private var noteSignal = NoteSignalDetector()
     @StateObject private var pro = ProStore()
@@ -17,6 +20,7 @@ struct ContentView: View {
     @State private var beatScale: CGFloat = 1.0
     @State private var currentBeat = -1   // which beat (0-based) is sounding now
     @State private var showCommands = false
+    @State private var showSettings = false   // accessibility · Pro · support (→ settingsSheet)
     @State private var showTuner = false
     @State private var showTrainer = false   // practice-mode modal
     @State private var showTimer = false     // practice-timer modal
@@ -198,11 +202,15 @@ struct ContentView: View {
         // Support Dynamic Type, but cap growth so the single-screen layout holds.
         .dynamicTypeSize(...DynamicTypeSize.accessibility2)
         // Bluetooth page-turn pedal or keyboard: tempo and start/stop (→ PedalKeys.swift).
-        .pedalKeys(enabled: !showOnboarding && !showWhatsNew && paywallFeature == nil && !showTuner && !showCommands,
+        .pedalKeys(enabled: !showOnboarding && !showWhatsNew && paywallFeature == nil && !showTuner && !showCommands && !showSettings,
                    nudge: { metronome.nudge($0) }, toggle: { metronome.toggle() })
         .fullScreenCover(isPresented: $showCommands) { commandsSheet.foldConfined() }
+        .sheet(isPresented: $showSettings) { settingsSheet.foldConfined() }
         // The tuner engine follows the page's visibility (it used to be the
         // sheet's onDismiss) — stopped on ANY path that closes it.
+        .onChange(of: voiceLanguage) { raw in
+            voice.setLanguage(VoiceLanguage(rawValue: raw) ?? .english)
+        }
         .onChange(of: showTuner) { open in
             if !open {
                 tuner.stop()
@@ -383,7 +391,7 @@ struct ContentView: View {
         Task { @MainActor in
             try? await Task.sleep(for: .seconds(1.5))
             let busy = metronome.isPlaying || paywallFeature != nil || showOnboarding || showWhatsNew
-                || showCommands || showTuner || showTrainer || showTimer || showAccents || showSavePreset
+                || showCommands || showSettings || showTuner || showTrainer || showTimer || showAccents || showSavePreset
                 || showReviewGate
             // Both a timer run-out and the stop it causes land here; the first one asks.
             guard !busy, LeeoReviewRequest.shouldRequest() else { return }
@@ -451,12 +459,14 @@ struct ContentView: View {
     /// Replay from the help sheet.
     private func replayOnboarding() {
         showCommands = false
+        showSettings = false
         AppTips.snoozed = true
         withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.3)) { showOnboarding = true }
     }
 
     private func reopenWhatsNew() {
         showCommands = false
+        showSettings = false
         AppTips.snoozed = true
         withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.3)) { showWhatsNew = true }
     }
@@ -474,6 +484,7 @@ struct ContentView: View {
                     if !fold.isUnfolded {
                         beatDots     // tap to set time signature; circles wave on the beat
                     }
+                    timerRow
                     tempoCard
                     if !metronome.isPlaying {
                         subdivisionCard.transition(.opacity)
@@ -533,7 +544,10 @@ struct ContentView: View {
         return Group {
             if wide {
                 HStack(alignment: .top, spacing: 20) {
-                    standBeat
+                    VStack(spacing: 14) {
+                        standBeat
+                        timerRow
+                    }
                     VStack(spacing: 14) {
                         // Playing, the tempo sits mid-column, level with the beat.
                         if metronome.isPlaying { Spacer(minLength: 0) }
@@ -552,6 +566,7 @@ struct ContentView: View {
             } else {
                 VStack(spacing: 14) {
                     standBeat
+                    timerRow
                     tempoCard
                     if !metronome.isPlaying {
                         HStack(alignment: .top, spacing: 14) {
@@ -611,6 +626,7 @@ struct ContentView: View {
         HStack(alignment: .top, spacing: 12) {
             VStack(spacing: 10) {
                 beatDots             // tap to set time signature; dots bounce on the beat
+                timerRow
                 tempoCard
             }
             .frame(maxWidth: .infinity)
@@ -1530,6 +1546,13 @@ struct ContentView: View {
             .accessibilityLabel("Help")
             .accessibilityInputLabels(["Help", "Tips", "Voice commands"])
             .popoverTip(HelpVoiceTip())
+            Button { showSettings = true } label: {
+                Image(systemName: "gearshape.fill")
+                    .font(.title3)
+                    .foregroundStyle(.secondary)
+            }
+            .accessibilityLabel("Settings")
+            .accessibilityInputLabels(["Settings", "Pro", "Unlock Pro"])
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 11)
@@ -1595,8 +1618,6 @@ struct ContentView: View {
                 : ["Listen", "Start listening"])
             .popoverTip(MicListeningTip())   // first-run guidance for plain mic users
 
-            timerButton
-
             Button { metronome.toggle() } label: {
                 transportLabel(metronome.isPlaying ? String(localized: "Stop") : String(localized: "Start"),
                                icon: metronome.isPlaying ? "stop.fill" : "play.fill",
@@ -1613,36 +1634,42 @@ struct ContentView: View {
         }
     }
 
-    /// Practice timer: a compact square that shows the time left once a timer is
-    /// set, so the countdown stays in view while playing. Tap to set it up.
-    private var timerButton: some View {
+    /// Practice timer: a slim row right under the beat card, so the time left stays
+    /// in view next to the pulse while playing. Tap to set it up.
+    private var timerRow: some View {
         let on = metronome.practiceTimerOn
         return Button { openTimer() } label: {
-            Group {
-                if on {
-                    Label(timerText(metronome.practiceTimerRemaining), systemImage: "timer")
-                        .monospacedDigit()
-                        .contentTransition(.numericText(countsDown: true))
-                } else {
-                    Label("Timer", systemImage: "timer").labelStyle(.iconOnly)
-                }
+            HStack(spacing: 10) {
+                Label("Practice timer", systemImage: "timer")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(on ? cue : Color(.label).opacity(0.7))
+                Spacer(minLength: 8)
+                Text(on ? timerText(metronome.practiceTimerRemaining) : String(localized: "Off"))
+                    .font(.subheadline.weight(on ? .bold : .regular))
+                    .monospacedDigit()
+                    .contentTransition(.numericText(countsDown: true))
+                    .foregroundStyle(on ? cue : .secondary)
+                Image(systemName: "chevron.right")
+                    .font(.footnote.weight(.semibold))
+                    .foregroundStyle(.tertiary)
+                    .accessibilityHidden(true)
             }
-            .font(.headline)
             .lineLimit(1)
-            .foregroundStyle(on ? cue : .secondary)
             .padding(.horizontal, 14)
-            .padding(.vertical, 15)
-            .frame(minWidth: 56)
-            .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill((on ? cue : Color.secondary).opacity(0.15)))
-            .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .stroke((on ? cue : Color.secondary).opacity(outlineOpacity), lineWidth: 1.5))
+            .padding(.vertical, 10)
+            .frame(maxWidth: .infinity)
+            .background(RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .fill((on ? cue : Color.secondary).opacity(on ? 0.15 : 0.1)))
+            .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .stroke((on ? cue : Color.secondary).opacity(outlineOpacity), lineWidth: 1))
+            .contentShape(Rectangle())
             .animation(.default, value: metronome.practiceTimerRemaining)
         }
         .buttonStyle(.plain)
-        .fixedSize()
+        .accessibilityElement(children: .ignore)
         .accessibilityLabel("Practice timer")
         .accessibilityValue(on ? timerSpokenValue : String(localized: "Off"))
+        .accessibilityAddTraits(.isButton)
         .accessibilityInputLabels(["Timer", "Practice timer"])
         .coachAnchor("timer")
     }
@@ -1686,12 +1713,12 @@ struct ContentView: View {
     /// the current screen.
     private func helpPhrase(for id: String) -> String {
         switch id {
-        case "beat":  return "\u{201C}bounce\u{201D} / \u{201C}orbit\u{201D}"
-        case "tempo": return "\u{201C}faster\u{201D} · \u{201C}tempo 120\u{201D}"
-        case "sub":   return "\u{201C}quarter\u{201D} · \u{201C}eighth\u{201D} · \u{201C}triplet\u{201D} · \u{201C}sixteenth\u{201D}"
-        case "voice": return "\u{201C}help\u{201D} · \u{201C}close\u{201D}"
-        case "start": return metronome.isPlaying ? "\u{201C}stop\u{201D}" : "\u{201C}start\u{201D}"
-        case "timer": return "\u{201C}timer 5 minutes\u{201D}"
+        case "beat":  return "\u{201C}\(voiceWord(.bounce))\u{201D} / \u{201C}\(voiceWord(.orbit))\u{201D}"
+        case "tempo": return "\u{201C}\(voiceWord(.faster))\u{201D} · \u{201C}\(voiceWord(.tempo120))\u{201D}"
+        case "sub":   return "\u{201C}\(voiceWord(.quarter))\u{201D} · \u{201C}\(voiceWord(.eighth))\u{201D} · \u{201C}\(voiceWord(.triplet))\u{201D} · \u{201C}\(voiceWord(.sixteenth))\u{201D}"
+        case "voice": return "\u{201C}\(voiceWord(.help))\u{201D} · \u{201C}\(voiceWord(.close))\u{201D}"
+        case "start": return metronome.isPlaying ? "\u{201C}\(voiceWord(.stop))\u{201D}" : "\u{201C}\(voiceWord(.start))\u{201D}"
+        case "timer": return "\u{201C}\(voiceWord(.timer5))\u{201D}"
         default:      return ""
         }
     }
@@ -1728,7 +1755,7 @@ struct ContentView: View {
             // Persistent instructions + escape hatches, pinned near the TOP edge.
             VStack {
                 HStack(spacing: 12) {
-                    Label("Say \u{201C}close\u{201D} or tap to dismiss", systemImage: "xmark.circle")
+                    Label("Say \u{201C}\(voiceWord(.close))\u{201D} or tap to dismiss", systemImage: "xmark.circle")
                         .font(.footnote.weight(.medium)).foregroundStyle(.white)
                         .lineLimit(2).minimumScaleFactor(0.8)
                     Spacer(minLength: 8)
@@ -1774,73 +1801,25 @@ struct ContentView: View {
         NavigationStack {
             ScrollViewReader { proxy in
                 List {
-                    Section {
-                        Toggle(isOn: $usesVoiceControl) {
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text("I use iOS Voice Control").font(.subheadline.weight(.semibold))
-                                Text("Turns off this app\u{2019}s mic so the two don\u{2019}t clash. Control it by saying \u{201C}Tap Start\u{201D}, \u{201C}Tap Faster\u{201D}, \u{201C}Tap 3 beats\u{201D}.")
-                                    .font(.footnote).foregroundStyle(.secondary)
-                            }
+                    // The words to say — only when the app's language has its own.
+                    if VoiceVocabulary.native != nil {
+                        Section {
+                            VoiceLanguagePicker()
+                        } header: {
+                            Text("Command language")
                         }
-                        .tint(cue)
-                        .accessibilityHint("Turns off the app's own microphone and drives controls by name")
-                    } header: {
-                        Text("Accessibility")
-                    }
-                    // Can be switched off remotely (→ NotMyTempoFlag.instrumentSignal).
-                    if NoteSignalDetector.isAvailable { noteSignalSection }
-                    Section {
-                        if pro.isPro {
-                            HStack(spacing: 12) {
-                                Image(systemName: "checkmark.seal.fill")
-                                    .foregroundStyle(cue)
-                                    .frame(width: 22)
-                                Text("Pro unlocked — thank you!")
-                                    .font(.subheadline.weight(.semibold))
-                            }
-                            .accessibilityElement(children: .combine)
-                        } else {
-                            Button {
-                                showCommands = false
-                                withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = .practice }
-                            } label: {
-                                HStack(spacing: 12) {
-                                    Image(systemName: "crown.fill")
-                                        .foregroundStyle(cue)
-                                        .frame(width: 22)
-                                    VStack(alignment: .leading, spacing: 2) {
-                                        Text("Unlock Pro")
-                                            .font(.subheadline.weight(.semibold))
-                                            .foregroundStyle(.primary)
-                                        Text("Practice mode · accent editor & presets · tuner")
-                                            .font(.footnote).foregroundStyle(.secondary)
-                                    }
-                                }
-                            }
-                            .accessibilityInputLabels(["Unlock Pro", "Pro", "Upgrade"])
-                        }
-                    } header: {
-                        Text("Not My Tempo Pro")
-                    }
-                    // Pro 선물 보내기 · App Store 코드 넣기 (→ GiftRows)
-                    if let gift = pro.gift {
-                        GiftRows(gift: gift, isPro: pro.isPro)
-                    }
-                    // 개발자 응원하기(팁). 상품이 App Store 에서 와야 줄이 선다.
-                    if let tipJar = pro.tipJar {
-                        Section { LeeoTipJarLink<HandsFreeMetronomeSpec>(tipJar: tipJar) }
                     }
                     Section {
                         usageRow("circle.grid.3x3", "Set beats", "Tap the dots to choose the time signature.")
                         usageRow("hand.tap", "Tap tempo", "Tap the big BPM number in rhythm to set the tempo.")
                         usageRow("slider.horizontal.3", "Tempo", "Drag the tempo slider, or tap the − / + buttons.")
-                        usageRow("speaker.wave.2.fill", "Volume", "Say \u{201C}louder\u{201D} / \u{201C}quieter\u{201D} / \u{201C}mute\u{201D}, or \u{201C}volume 60\u{201D}.")
+                        usageRow("speaker.wave.2.fill", "Volume", "Say \u{201C}\(voiceWord(.louder))\u{201D} / \u{201C}\(voiceWord(.quieter))\u{201D} / \u{201C}\(voiceWord(.mute))\u{201D}, or \u{201C}\(voiceWord(.volume60))\u{201D}.")
                         usageRow("music.note", "Subdivision", "Tap 1/4, 1/8, Trip, or 1/16. Double-tap the card to open Accents and set every click of the measure high, low, or silent.")
                         usageRow("circle.circle", "Switch view", "Tap the view icon (top-right of the beat card) — bounce → orbit → ring sweep.")
                         usageRow("target", "Timing check", "In orbit view, tap the ring while playing — every click (including subdivisions) is a target. The moving dot leaves a ghost where your tap landed, and coloured counters tally Perfect / Good / Bad until you stop.")
-                        usageRow("chart.line.uptrend.xyaxis", "Practice mode", "Open it from Beat view below, or say \u{201C}practice\u{201D}.")
+                        usageRow("chart.line.uptrend.xyaxis", "Practice mode", "Open it from Beat view below, or say \u{201C}\(voiceWord(.practice))\u{201D}.")
                         usageRow("play.fill", "Play", "Tap Start / Stop at the bottom.")
-                        usageRow("timer", "Practice timer", "Tap the timer button next to Start, or say \u{201C}timer 5 minutes\u{201D}. It counts down while the click plays, then stops and chimes.")
+                        usageRow("timer", "Practice timer", "Tap Practice timer under the beat, or say \u{201C}\(voiceWord(.timer5))\u{201D}. It counts down while the click plays, then stops and chimes.")
                         usageRow("mic.fill", "Voice", "Tap Listen to turn voice control on or off.")
                     } header: {
                         Text("On-screen")
@@ -1849,32 +1828,32 @@ struct ContentView: View {
                     }
                     .id(helpSections[0])
                     Section("Help navigation") {
-                        usageRow("questionmark.circle", "Open", "Say \u{201C}help\u{201D} or tap the ? button.")
-                        usageRow("xmark.circle", "Close", "Say \u{201C}close\u{201D} / \u{201C}done\u{201D}, or tap Done.")
-                        usageRow("hand.draw", "Scroll", "Say \u{201C}scroll down\u{201D} / \u{201C}scroll up\u{201D}, or swipe.")
+                        usageRow("questionmark.circle", "Open", "Say \u{201C}\(voiceWord(.help))\u{201D} or tap the ? button.")
+                        usageRow("xmark.circle", "Close", "Say \u{201C}\(voiceWord(.close))\u{201D} / \u{201C}\(voiceWord(.done))\u{201D}, or tap Done.")
+                        usageRow("hand.draw", "Scroll", "Say \u{201C}\(voiceWord(.scrollDown))\u{201D} / \u{201C}\(voiceWord(.scrollUp))\u{201D}, or swipe.")
                     }
                     Section("Playback") {
-                        commandRow("\"start\" / \"stop\"", "play / pause")
-                        commandRow("\"timer 5 minutes\"", "set a practice timer")
-                        commandRow("\"timer off\"", "turn the timer off")
+                        commandRow("\"\(voiceWord(.start))\" / \"\(voiceWord(.stop))\"", "play / pause")
+                        commandRow("\"\(voiceWord(.timer5))\"", "set a practice timer")
+                        commandRow("\"\(voiceWord(.timerOff))\"", "turn the timer off")
                     }
                     .id(helpSections[1])
                     Section("Tempo") {
-                        commandRow("\"faster\" / \"slower\"", "±5 BPM")
-                        commandRow("\"up\" / \"down\"", "±1 BPM")
-                        commandRow("\"tempo 120\"", "set value")
-                        commandRow("\"double\" / \"half\"", "×2 / ÷2")
-                        commandRow("\"three beats\"", "set time signature")
+                        commandRow("\"\(voiceWord(.faster))\" / \"\(voiceWord(.slower))\"", "±5 BPM")
+                        commandRow("\"\(voiceWord(.up))\" / \"\(voiceWord(.down))\"", "±1 BPM")
+                        commandRow("\"\(voiceWord(.tempo120))\"", "set value")
+                        commandRow("\"\(voiceWord(.double))\" / \"\(voiceWord(.half))\"", "×2 / ÷2")
+                        commandRow("\"\(voiceWord(.threeBeats))\"", "set time signature")
                     }
                     .id(helpSections[2])
                     Section("Volume") {
-                        commandRow("\"louder\" / \"quieter\"", "±10%")
-                        commandRow("\"volume 60\"", "set percent")
-                        commandRow("\"mute\"", "silence the click")
+                        commandRow("\"\(voiceWord(.louder))\" / \"\(voiceWord(.quieter))\"", "±10%")
+                        commandRow("\"\(voiceWord(.volume60))\"", "set percent")
+                        commandRow("\"\(voiceWord(.mute))\"", "silence the click")
                     }
                     Section("Beat view") {
-                        commandRow("\"bounce\" / \"orbit\"", "switch visualization")
-                        commandRow("\"practice\"", "open practice mode")
+                        commandRow("\"\(voiceWord(.bounce))\" / \"\(voiceWord(.orbit))\"", "switch visualization")
+                        commandRow("\"\(voiceWord(.practice))\"", "open practice mode")
                         Button {
                             openPractice()
                         } label: {
@@ -1888,10 +1867,10 @@ struct ContentView: View {
                         .accessibilityInputLabels(["Practice mode", "Open practice"])
                     }
                     Section("Subdivision") {
-                        commandRow("\"quarter\"", "1/4 notes")
-                        commandRow("\"eighth\"", "1/8 notes")
-                        commandRow("\"triplet\"", "triplets")
-                        commandRow("\"sixteenth\"", "1/16 notes")
+                        commandRow("\"\(voiceWord(.quarter))\"", "1/4 notes")
+                        commandRow("\"\(voiceWord(.eighth))\"", "1/8 notes")
+                        commandRow("\"\(voiceWord(.triplet))\"", "triplets")
+                        commandRow("\"\(voiceWord(.sixteenth))\"", "1/16 notes")
                         usageRow("hand.tap", "Double-tap to open Accents",
                                  "Double-tap the subdivision card to edit the full measure — each cell cycles high → low → silent, and patterns can be saved as named presets.")
                         Button {
@@ -1908,7 +1887,7 @@ struct ContentView: View {
                     }
                     .id(helpSections[3])
                     Section("Tuner") {
-                        commandRow("\"tune\"", "open the tuner")
+                        commandRow("\"\(voiceWord(.tune))\"", "open the tuner")
                         // The tuner has no on-screen button — VoiceOver, Switch Control and
                         // iOS Voice Control users reach it here.
                         Button {
@@ -1925,30 +1904,11 @@ struct ContentView: View {
                     }
                     .id(helpSections[4])
                     Section("Scrolling") {
-                        commandRow("\"scroll down\" / \"scroll up\"", "move this list")
-                        commandRow("\"help\"", "list the commands you can say")
-                        commandRow("\"done\" / \"close\"", "close a panel or tip")
+                        commandRow("\"\(voiceWord(.scrollDown))\" / \"\(voiceWord(.scrollUp))\"", "move this list")
+                        commandRow("\"\(voiceWord(.help))\"", "list the commands you can say")
+                        commandRow("\"\(voiceWord(.done))\" / \"\(voiceWord(.close))\"", "close a panel or tip")
                     }
                     .id(helpSections[5])
-                    Section {
-                        LeeoSupportSection<HandsFreeMetronomeSpec>()
-                        // 앞으로 만들 기능 — 원본은 HandsFreeMetronomeRoadmap.swift
-                        NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
-                        Button { reopenWhatsNew() } label: {
-                            Label("What\u{2019}s new", systemImage: "sparkles")
-                        }
-                        .accessibilityInputLabels(["What's new"])
-                        Button { replayOnboarding() } label: {
-                            Label("Show the introduction again", systemImage: "play.rectangle")
-                        }
-                        .accessibilityInputLabels(["Introduction", "Show introduction"])
-                        // Other apps by the same developer.
-                        LeeoFamilySettingsRow<HandsFreeMetronomeSpec>()
-                    } header: {
-                        Text("Support")
-                    }
-                    UsageStatsSection()
-                    DeveloperContactSection(accent: cue)
                 }
                 .onChange(of: helpIndex) { idx in
                     guard helpSections.indices.contains(idx) else { return }
@@ -1960,6 +1920,101 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button { showCommands = false } label: { Label("Done", systemImage: "checkmark") }
+                }
+            }
+        }
+    }
+
+    // MARK: Settings sheet
+
+    /// Everything that is a setting rather than something to say: accessibility, the
+    /// instrument signal, Pro (with gifts and tips) and support. Voice Commands keeps
+    /// only the commands, so neither list hides the other.
+    private var settingsSheet: some View {
+        NavigationStack {
+            List {
+                Section {
+                    Toggle(isOn: $usesVoiceControl) {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("I use iOS Voice Control").font(.subheadline.weight(.semibold))
+                            Text("Turns off this app\u{2019}s mic so the two don\u{2019}t clash. Control it by saying \u{201C}Tap Start\u{201D}, \u{201C}Tap Faster\u{201D}, \u{201C}Tap 3 beats\u{201D}.")
+                                .font(.footnote).foregroundStyle(.secondary)
+                        }
+                    }
+                    .tint(cue)
+                    .accessibilityHint("Turns off the app's own microphone and drives controls by name")
+                } header: {
+                    Text("Accessibility")
+                }
+                // Can be switched off remotely (→ NotMyTempoFlag.instrumentSignal).
+                if NoteSignalDetector.isAvailable { noteSignalSection }
+                Section {
+                    if pro.isPro {
+                        HStack(spacing: 12) {
+                            Image(systemName: "checkmark.seal.fill")
+                                .foregroundStyle(cue)
+                                .frame(width: 22)
+                            Text("Pro unlocked — thank you!")
+                                .font(.subheadline.weight(.semibold))
+                        }
+                        .accessibilityElement(children: .combine)
+                    } else {
+                        Button {
+                            showSettings = false
+                            withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = .practice }
+                        } label: {
+                            HStack(spacing: 12) {
+                                Image(systemName: "crown.fill")
+                                    .foregroundStyle(cue)
+                                    .frame(width: 22)
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text("Unlock Pro")
+                                        .font(.subheadline.weight(.semibold))
+                                        .foregroundStyle(.primary)
+                                    Text("Practice mode · accent editor & presets · tuner")
+                                        .font(.footnote).foregroundStyle(.secondary)
+                                }
+                            }
+                        }
+                        .accessibilityInputLabels(["Unlock Pro", "Pro", "Upgrade"])
+                    }
+                    // 개발자 응원하기(팁) — 인앱 상품은 한 칸에 모아 둔다(심사 2.1(b): 찾을 수 있어야 한다).
+                    // 상품이 App Store 에서 와야 줄이 선다.
+                    if let tipJar = pro.tipJar {
+                        LeeoTipJarLink<HandsFreeMetronomeSpec>(tipJar: tipJar)
+                    }
+                } header: {
+                    Text("Not My Tempo Pro")
+                }
+                // Pro 선물 보내기 · App Store 코드 넣기 (→ GiftRows)
+                if let gift = pro.gift {
+                    GiftRows(gift: gift, isPro: pro.isPro)
+                }
+                Section {
+                    LeeoSupportSection<HandsFreeMetronomeSpec>()
+                    // 앞으로 만들 기능 — 원본은 HandsFreeMetronomeRoadmap.swift
+                    NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
+                    Button { reopenWhatsNew() } label: {
+                        Label("What\u{2019}s new", systemImage: "sparkles")
+                    }
+                    .accessibilityInputLabels(["What's new"])
+                    Button { replayOnboarding() } label: {
+                        Label("Show the introduction again", systemImage: "play.rectangle")
+                    }
+                    .accessibilityInputLabels(["Introduction", "Show introduction"])
+                    // Other apps by the same developer.
+                    LeeoFamilySettingsRow<HandsFreeMetronomeSpec>()
+                } header: {
+                    Text("Support")
+                }
+                UsageStatsSection()
+                DeveloperContactSection(accent: cue)
+            }
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button { showSettings = false } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
         }
@@ -2063,7 +2118,7 @@ struct ContentView: View {
                     Stepper("Every \(metronome.trainerBars) bars", value: $metronome.trainerBars, in: 1...16)
                     Stepper("Up to \(metronome.trainerTarget) BPM", value: $metronome.trainerTarget, in: 40...260, step: 5)
                 } footer: {
-                    Text("Raises the tempo automatically every few bars while you play — for gradually pushing a passage faster. Stops at the target. Say \u{201C}practice\u{201D} anytime to open this.")
+                    Text("Raises the tempo automatically every few bars while you play — for gradually pushing a passage faster. Stops at the target. Say \u{201C}\(voiceWord(.practice))\u{201D} anytime to open this.")
                 }
             }
             .navigationTitle("Practice")
@@ -2101,7 +2156,7 @@ struct ContentView: View {
                         }
                     }
                 } footer: {
-                    Text("Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say \u{201C}timer 5 minutes\u{201D} or \u{201C}timer off\u{201D} anytime.")
+                    Text("Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say \u{201C}\(voiceWord(.timer5))\u{201D} or \u{201C}\(voiceWord(.timerOff))\u{201D} anytime.")
                         .font(.body)
                 }
                 if metronome.practiceTimerOn {
@@ -2430,6 +2485,8 @@ struct ContentView: View {
             switch scene {
             case "playing", "orbit", "count": metronome.start()
             case "voice": showHelp()
+            case "commands": showCommands = true
+            case "settings": showSettings = true
             case "accents":
                 metronome.setLevelsForScreenshot([2, 1, 2, 1,  2, 0, 1, 1,  2, 1, 2, 1,  2, 0, 1, 2])
                 // Show saved presets, not the empty state — genre names read the
@@ -2450,6 +2507,7 @@ struct ContentView: View {
         metronome.stop()        // clicks would corrupt pitch detection
         if !voice.isListening { voice.toggle() }   // the tuner hears through the app's mic
         showCommands = false
+        showSettings = false
         showAccents = false
         tuner.start()
         withAnimation(tunerPageAnimation) { showTuner = true }
@@ -2484,6 +2542,7 @@ struct ContentView: View {
 
     private func closePanels() {
         showCommands = false
+        showSettings = false
         closeTuner()            // slides the page out; onChange stops the engine
         showTrainer = false
         showTimer = false
@@ -2561,6 +2620,7 @@ struct ContentView: View {
     /// The practice timer is part of the free core — no Pro gate.
     private func openTimer() {
         showCommands = false
+        showSettings = false
         withAnimation(tunerPageAnimation) { showTuner = false }
         showTrainer = false
         showAccents = false
@@ -2570,6 +2630,7 @@ struct ContentView: View {
     private func openPractice() {
         guard requirePro(.practice) else { return }
         showCommands = false
+        showSettings = false
         withAnimation(tunerPageAnimation) { showTuner = false }
         showAccents = false
         showTimer = false
@@ -2580,6 +2641,7 @@ struct ContentView: View {
     private func openAccents() {
         guard requirePro(.accents) else { return }
         showCommands = false
+        showSettings = false
         withAnimation(tunerPageAnimation) { showTuner = false }
         showTrainer = false
         showTimer = false
@@ -2816,7 +2878,7 @@ struct TempoDisplayTip: Tip {
 /// Guided-tour stop: two beat visualizations to choose from.
 struct VizModeTip: Tip {
     var title: Text { Text("Two beat views") }
-    var message: Text? { Text("Tap to switch between the bouncing ball and the orbit ring — or say \u{201C}bounce\u{201D} / \u{201C}orbit\u{201D}.") }
+    var message: Text? { Text("Tap to switch between the bouncing ball and the orbit ring — or say \u{201C}\(voiceWord(.bounce))\u{201D} / \u{201C}\(voiceWord(.orbit))\u{201D}.") }
     var image: Image? { Image(systemName: "circle.circle") }
     var rules: [Rule] { #Rule(AppTips.$snoozed) { $0 == false } }
 }
@@ -2824,7 +2886,7 @@ struct VizModeTip: Tip {
 /// Guided-tour stop: the speed trainer, which is voice-first and easy to miss.
 struct PracticeTip: Tip {
     var title: Text { Text("Speed trainer") }
-    var message: Text? { Text("Say \u{201C}practice\u{201D} to raise the tempo automatically every few bars while you play — great for speed drills.") }
+    var message: Text? { Text("Say \u{201C}\(voiceWord(.practice))\u{201D} to raise the tempo automatically every few bars while you play — great for speed drills.") }
     var image: Image? { Image(systemName: "chart.line.uptrend.xyaxis") }
     var rules: [Rule] { #Rule(AppTips.$snoozed) { $0 == false } }
 }
@@ -2832,7 +2894,7 @@ struct PracticeTip: Tip {
 /// Guided-tour stop: there's a chromatic tuner behind a voice command.
 struct TunerTip: Tip {
     var title: Text { Text("There\u{2019}s a tuner too") }
-    var message: Text? { Text("Say \u{201C}tune\u{201D} to open the chromatic tuner, and \u{201C}close\u{201D} when you\u{2019}re done.") }
+    var message: Text? { Text("Say \u{201C}\(voiceWord(.tune))\u{201D} to open the chromatic tuner, and \u{201C}\(voiceWord(.close))\u{201D} when you\u{2019}re done.") }
     var image: Image? { Image(systemName: "tuningfork") }
     var rules: [Rule] { #Rule(AppTips.$snoozed) { $0 == false } }
 }
@@ -2840,7 +2902,7 @@ struct TunerTip: Tip {
 /// One-time hint that the voice "help" command exists.
 struct HelpVoiceTip: Tip {
     var title: Text { Text("Forget a command?") }
-    var message: Text? { Text("Say \u{201C}help\u{201D} anytime — or tap here — to see every command you can say, then \u{201C}close\u{201D} to dismiss.") }
+    var message: Text? { Text("Say \u{201C}\(voiceWord(.help))\u{201D} anytime — or tap here — to see every command you can say, then \u{201C}\(voiceWord(.close))\u{201D} to dismiss.") }
     var image: Image? { Image(systemName: "questionmark.circle.fill") }
     var rules: [Rule] { #Rule(AppTips.$snoozed) { $0 == false } }
 }
@@ -2859,7 +2921,7 @@ enum AppTips {
 struct MicListeningTip: Tip {
     var title: Text { Text("Control it by voice") }
     var message: Text? {
-        Text("The mic is already listening — say \u{201C}start\u{201D}, \u{201C}faster\u{201D}, or \u{201C}help\u{201D}. Use iOS Voice Control? Open Voice Commands to switch.")
+        Text("The mic is already listening — say \u{201C}\(voiceWord(.start))\u{201D}, \u{201C}\(voiceWord(.faster))\u{201D}, or \u{201C}\(voiceWord(.help))\u{201D}. Use iOS Voice Control? Open Voice Commands to switch.")
     }
     var image: Image? { Image(systemName: "mic.fill") }
     var rules: [Rule] {

@@ -31,10 +31,14 @@ enum HandsFreeMetronomeSpec: LeeoAppSpec {
             // Pro 선물하기. 보내는 사람은 소모성 선물 상품을 사고, 받는 사람은 평생 Pro 를 산 것과 같아진다.
             // 선물 기록은 피드백과 같은 허브 컨테이너의 공개 DB 에 둔다. entitlements 에 이미 있다.
             // ⚠️ 선물 상품은 productIDs · entitlementIDs 에 넣지 않는다. 넣으면 선물을 산 사람이 Pro 가 된다.
+            // 판매 열림: 산 사람의 앱이 공개 DB 의 App Store 오퍼 코드 묶음에서 한 장을 가져가 사용 링크로 보낸다.
+            // Pro 를 여는 것은 App Store 다(심사 3.1.1). 묶음은 FeedbackHub 의 "선물 코드 묶음"이 채운다 —
+            // ⚠️ 묶음이 비면 산 사람이 "준비 중" 에서 기다린다. 심사 제출 전에 묶음이 찼는지 본다.
             gift: LeeoGiftConfig(
                 productID: ProStore.giftID,
                 grantsProductID: ProStore.lifetimeID,
-                containerIdentifier: "iCloud.com.Ysoup.FeedbackHub"),
+                containerIdentifier: "iCloud.com.Ysoup.FeedbackHub",
+                sellsGifts: true),
             // 개발자 응원하기(팁). 이미 Pro 를 가진 사람이 조금 더 내고 싶을 때. 기능을 열지 않는다.
             tipJar: LeeoTipJarConfig(productIDs: ProStore.tipIDs)))
 }

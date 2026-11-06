@@ -26,17 +26,27 @@ struct NotMyTempoOnboardingView: View {
         let symbol: String
         let title: String
         let body: String
+        /// Shows the English / own-language switch under the text.
+        var picksLanguage = false
     }
 
     private var pages: [Page] {[
         Page(symbol: "metronome",
              title: String(localized: "A metronome you talk to", comment: "Onboarding page 1 title"),
-             body: String(localized: "Say \u{201C}start\u{201D}, \u{201C}stop\u{201D}, \u{201C}faster\u{201D} or \u{201C}tempo 120\u{201D} and keep both hands on your instrument.",
-                          comment: "Onboarding page 1 body. The quoted words are English voice commands; keep them in English")),
-        Page(symbol: "character.bubble",
-             title: String(localized: "Commands are English words", comment: "Onboarding page 2 title"),
-             body: String(localized: "In every language, you control the app with short English words. Say \u{201C}help\u{201D} anytime to see them all on screen.",
-                          comment: "Onboarding page 2 body. \u{201C}help\u{201D} is an English voice command; keep it in English")),
+             body: String(localized: "Say \u{201C}\(voiceWord(.start))\u{201D}, \u{201C}\(voiceWord(.stop))\u{201D}, \u{201C}\(voiceWord(.faster))\u{201D} or \u{201C}\(voiceWord(.tempo120))\u{201D} and keep both hands on your instrument.",
+                          comment: "Onboarding page 1 body. Each %@ is a voice command in the language the user chose; keep the quotes around them")),
+        // The app's language has its own command words → let the user pick them here.
+        VoiceVocabulary.native.map { _ in
+            Page(symbol: "character.bubble",
+                 title: String(localized: "Speak English or your own language",
+                               comment: "Onboarding page 2 title when the app language has its own voice commands. Name your language itself, e.g. 영어로도, 한국어로도 말할 수 있어요"),
+                 body: String(localized: "Pick the words you\u{2019}ll say. You can change this anytime in Voice Commands.",
+                              comment: "Onboarding page 2 body above the English / own-language switch"),
+                 picksLanguage: true)
+        } ?? Page(symbol: "character.bubble",
+                  title: String(localized: "Commands are English words", comment: "Onboarding page 2 title"),
+                  body: String(localized: "In every language, you control the app with short English words. Say \u{201C}\(voiceWord(.help))\u{201D} anytime to see them all on screen.",
+                               comment: "Onboarding page 2 body. %@ is the voice command for help")),
         usesVoiceControl
         ? Page(symbol: "waveform",
                title: String(localized: "Made for Voice Control", comment: "Onboarding page 3 title, Voice Control users"),
@@ -115,6 +125,10 @@ struct NotMyTempoOnboardingView: View {
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
+                if p.picksLanguage {
+                    VoiceLanguagePicker()
+                        .padding(.top, 8)
+                }
             }
             .padding(.horizontal, 32)
             .padding(.top, dynamicTypeSize.isAccessibilitySize ? 8 : 48)

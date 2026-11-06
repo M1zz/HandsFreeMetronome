@@ -44,6 +44,7 @@
 		CC22D8B983C92CE776DDB015 /* HandsFreeMetronomeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D65D08EE9A378F3D56766 /* HandsFreeMetronomeSpec.swift */; };
 		D77BF4D721149A4AD59CD704 /* HandsFreeMetronomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B18107DE839F33D532A939 /* HandsFreeMetronomeUITests.swift */; };
 		E1AEC619D6F3AEA6B5595634 /* PedalKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BF1C2C3492034113AAFE8 /* PedalKeys.swift */; };
+		B1B7BB5215CDCE44D785BDB7 /* VoiceVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A20B926E10B548A8852CEF /* VoiceVocabulary.swift */; };
 		E79EB1EC92B89DDE40E51E65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23AC08324EC0F868B56CD8AD /* Assets.xcassets */; };
 		F451953683C0264C2811DCDA /* MetronomeIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16574F776304B810DD92D44A /* MetronomeIntents.swift */; };
 		FE909E70AAD61B44399F471C /* WristDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DAD4D39CB38E1F77BB2FD /* WristDemo.swift */; };
@@ -123,6 +124,7 @@
 		5E9407ABD7196CE30569B829 /* NotMyTempoWatchWidget.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = NotMyTempoWatchWidget.entitlements; sourceTree = "<group>"; };
 		6C8F7A6E714C5218EC6FC1DD /* HandsFreeMetronomeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeTests.swift; sourceTree = "<group>"; };
 		6E2BF1C2C3492034113AAFE8 /* PedalKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PedalKeys.swift; sourceTree = "<group>"; };
+		A1A20B926E10B548A8852CEF /* VoiceVocabulary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VoiceVocabulary.swift; sourceTree = "<group>"; };
 		702B725AC53E17617245A942 /* WristMetronome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WristMetronome.swift; sourceTree = "<group>"; };
 		8BA722D55AB244F03C471251 /* NotMyTempoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotMyTempoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC9C24777FED121C2F9C136 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				16574F776304B810DD92D44A /* MetronomeIntents.swift */,
 				BA89BB79A553C1FA896E81AD /* AppShortcuts.xcstrings */,
 				6E2BF1C2C3492034113AAFE8 /* PedalKeys.swift */,
+				A1A20B926E10B548A8852CEF /* VoiceVocabulary.swift */,
 			);
 			path = HandsFreeMetronome;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				6A896E540343E7FF97CBAC6B /* OnboardingView.swift in Sources */,
 				F451953683C0264C2811DCDA /* MetronomeIntents.swift in Sources */,
 				E1AEC619D6F3AEA6B5595634 /* PedalKeys.swift in Sources */,
+				B1B7BB5215CDCE44D785BDB7 /* VoiceVocabulary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

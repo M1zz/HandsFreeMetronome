@@ -180,3 +180,49 @@ final class OperationsTests: XCTestCase {
         XCTAssertEqual(NotMyTempoFlag.instrumentSignal.rawValue, "instrumentSignal")
     }
 }
+
+/// Every phrase a screen quotes must do what the screen says — in every language.
+/// A word that hides inside an earlier slot's word ("16분음표" holding "분") fails here.
+final class VoiceVocabularyTests: XCTestCase {
+    private let expected: [VoiceVocabulary.Phrase: VoiceController.Command] = [
+        .help: .help, .close: .dismiss, .done: .dismiss, .practice: .practice,
+        .louder: .volumeUp, .quieter: .volumeDown, .mute: .mute, .volume60: .setVolume(60),
+        .scrollDown: .scrollDown, .scrollUp: .scrollUp, .start: .start, .stop: .stop,
+        .faster: .faster, .slower: .slower, .tempo120: .setTempo(120), .tune: .tuner,
+        .timer5: .setTimer(5), .timerOff: .timerOff, .bounce: .bounceView, .orbit: .orbitView,
+        .up: .up, .down: .down, .double: .double, .half: .half, .threeBeats: .setBeats(3),
+        .quarter: .setSubdivision(1), .eighth: .setSubdivision(2),
+        .triplet: .setSubdivision(3), .sixteenth: .setSubdivision(4),
+    ]
+
+    func testEveryShownPhraseParsesToItsCommand() {
+        for vocabulary in VoiceVocabulary.all {
+            let parser = VoiceCommandParser(vocabulary: vocabulary)
+            for phrase in VoiceVocabulary.Phrase.allCases {
+                let text = vocabulary.say(phrase)
+                XCTAssertNotNil(vocabulary.phrases[phrase], "\(vocabulary.id) has no \(phrase)")
+                XCTAssertEqual(parser.command(in: text), expected[phrase],
+                               "\(vocabulary.id): “\(text)” should be \(phrase)")
+            }
+        }
+    }
+
+    func testEveryAppLanguageHasItsOwnWords() {
+        let tables = Set(VoiceVocabulary.all.map(\.id))
+        for language in ["ko", "ja", "de", "es", "fr", "zh-Hans", "zh-Hant", "pt-BR", "it", "ru", "nl",
+                         "pl", "tr", "sv", "da", "nb", "fi", "cs", "id", "vi", "el", "th"] {
+            XCTAssertTrue(tables.contains(language), "\(language) has no voice words")
+        }
+    }
+
+    func testEnglishKeepsItsOldBehaviour() {
+        let parser = VoiceCommandParser(vocabulary: .english)
+        XCTAssertEqual(parser.command(in: "timer twenty five minutes"), .setTimer(25))
+        XCTAssertEqual(parser.command(in: "timer half an hour"), .setTimer(30))
+        XCTAssertEqual(parser.command(in: "fifteen minutes"), .setTimer(15))
+        XCTAssertEqual(parser.command(in: "speed up"), .faster)
+        XCTAssertEqual(parser.command(in: "volume up"), .volumeUp)
+        XCTAssertEqual(parser.command(in: "4 beats"), .setBeats(4))
+        XCTAssertEqual(parser.command(in: "beat 120"), .setTempo(120))
+    }
+}
