@@ -210,7 +210,7 @@ final class MetronomeEngine: ObservableObject {
         do {
             try session.setCategory(.playAndRecord,
                                     mode: .default,
-                                    options: [.mixWithOthers, .defaultToSpeaker, .allowBluetooth])
+                                    options: [.mixWithOthers, .defaultToSpeaker, .allowBluetoothHFP])
             try session.setActive(true)
         } catch {
             // Non-fatal: the click may be quieter or route oddly, but the app still

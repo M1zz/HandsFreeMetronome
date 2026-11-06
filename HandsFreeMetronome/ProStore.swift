@@ -55,15 +55,15 @@ enum ProFeature: String, Identifiable, CaseIterable {
 /// Connect) or a one-time lifetime purchase.
 @MainActor
 final class ProStore: ObservableObject {
-    static let yearlyID = "com.leeo.HandsFreeMetronome.pro.yearly"
-    static let lifetimeID = "com.leeo.HandsFreeMetronome.pro.lifetime"
-    static let allProductIDs = [yearlyID, lifetimeID]
+    nonisolated static let yearlyID = "com.leeo.HandsFreeMetronome.pro.yearly"
+    nonisolated static let lifetimeID = "com.leeo.HandsFreeMetronome.pro.lifetime"
+    nonisolated static let allProductIDs = [yearlyID, lifetimeID]
     /// Pro 선물(소모성). 받는 사람은 `lifetimeID` 를 산 것과 같아진다.
     /// ⚠️ `allProductIDs` 에 넣지 않는다. 넣으면 선물을 산 사람 자신이 Pro 가 된다.
-    static let giftID = "com.leeo.HandsFreeMetronome.gift.pro"
+    nonisolated static let giftID = "com.leeo.HandsFreeMetronome.gift.pro"
     /// 팁(소모성, 작은 것부터). 기능을 열지 않는다.
     /// ⚠️ 이것도 `allProductIDs` 에 넣지 않는다. 넣으면 팁을 낸 사람이 Pro 가 된다.
-    static let tipIDs = ["com.leeo.HandsFreeMetronome.tip.small",
+    nonisolated static let tipIDs = ["com.leeo.HandsFreeMetronome.tip.small",
                          "com.leeo.HandsFreeMetronome.tip.medium",
                          "com.leeo.HandsFreeMetronome.tip.large"]
 

@@ -98,7 +98,7 @@ final class VoiceController: ObservableObject {
 
     private func requestAndStart() {
         SFSpeechRecognizer.requestAuthorization { [weak self] speechAuth in
-            AVAudioSession.sharedInstance().requestRecordPermission { micAuth in
+            AVAudioApplication.requestRecordPermission { micAuth in
                 DispatchQueue.main.async {
                     guard speechAuth == .authorized, micAuth else {
                         self?.status = .denied
@@ -121,7 +121,7 @@ final class VoiceController: ObservableObject {
         // the user grants both permissions.
         let session = AVAudioSession.sharedInstance()
         try? session.setCategory(.playAndRecord, mode: .default,
-                                 options: [.mixWithOthers, .defaultToSpeaker, .allowBluetooth])
+                                 options: [.mixWithOthers, .defaultToSpeaker, .allowBluetoothHFP])
         try? session.setActive(true)
         // Set up the mic + tap ONCE and keep them running for the whole listening
         // session. Only the lightweight recognition request/task is recycled after

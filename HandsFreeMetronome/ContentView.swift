@@ -208,10 +208,10 @@ struct ContentView: View {
         .sheet(isPresented: $showSettings) { settingsSheet.foldConfined() }
         // The tuner engine follows the page's visibility (it used to be the
         // sheet's onDismiss) — stopped on ANY path that closes it.
-        .onChange(of: voiceLanguage) { raw in
+        .onChange(of: voiceLanguage) { _, raw in
             voice.setLanguage(VoiceLanguage(rawValue: raw) ?? .english)
         }
-        .onChange(of: showTuner) { open in
+        .onChange(of: showTuner) { _, open in
             if !open {
                 tuner.stop()
                 // Voice Control mode: the mic was only borrowed for tuning.
@@ -224,7 +224,7 @@ struct ContentView: View {
         // Practice timer ran out (the engine already stopped and chimed): a firm
         // haptic for players who can't hear the chime over their instrument, and
         // a spoken cue for VoiceOver.
-        .onChange(of: metronome.practiceTimerFinished) { _ in
+        .onChange(of: metronome.practiceTimerFinished) {
             UINotificationFeedbackGenerator().notificationOccurred(.success)
             UIAccessibility.post(notification: .announcement,
                                  argument: String(localized: "Practice time is up"))
@@ -234,7 +234,7 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showAccents) { accentsSheet }
         .leeoReviewGate(HandsFreeMetronomeSpec.self, isPresented: $showReviewGate)
-        .onChange(of: metronome.isPlaying) { playing in
+        .onChange(of: metronome.isPlaying) { _, playing in
             if playing {
                 // Tell Siri the player started the click, so it learns this app does that.
                 IntentDonationManager.shared.donate(intent: StartMetronomeIntent())
@@ -263,8 +263,8 @@ struct ContentView: View {
             UIApplication.shared.isIdleTimerDisabled = playing
         }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
-        .onChange(of: voice.activityToken) { _ in restartMuteCountdown() }
-        .onChange(of: voice.isListening) { listening in
+        .onChange(of: voice.activityToken) { restartMuteCountdown() }
+        .onChange(of: voice.isListening) { _, listening in
             if !listening { muteProgress = 1 }
         }
         .onAppear {
@@ -315,7 +315,7 @@ struct ContentView: View {
             }
         }
         // Turning Voice Control mode on/off flips whether we hold the mic.
-        .onChange(of: usesVoiceControl) { on in
+        .onChange(of: usesVoiceControl) { _, on in
             AppTips.usesVoiceControl = on
             if on {
                 voice.stop()                     // release the mic for the system recognizer
@@ -1910,7 +1910,7 @@ struct ContentView: View {
                     }
                     .id(helpSections[5])
                 }
-                .onChange(of: helpIndex) { idx in
+                .onChange(of: helpIndex) { _, idx in
                     guard helpSections.indices.contains(idx) else { return }
                     withAnimation { proxy.scrollTo(helpSections[idx], anchor: .top) }
                 }

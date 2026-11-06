@@ -55,7 +55,7 @@ struct PaywallView: View {
         }
         // A successful purchase (or restore) closes the paywall by itself,
         // dropping the user straight into the feature they reached for.
-        .onChange(of: store.isPro) { unlocked in
+        .onChange(of: store.isPro) { _, unlocked in
             if unlocked { onClose() }
         }
         // Promo / giveaway codes. A redeemed code lands as a transaction, which
