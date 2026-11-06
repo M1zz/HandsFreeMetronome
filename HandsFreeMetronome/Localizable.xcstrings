@@ -9512,153 +9512,148 @@
     },
     "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “%@” or “%@” anytime." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “%1$@” or “%2$@” anytime."
-          }
-        }
-      }
-    },
-    "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “%@” or “timer off” anytime." : {
-      "extractionState" : "stale",
-      "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Odpočítává, dokud hraje klikání, a při zastavení se pozastaví. Když čas vyprší, metronom se zastaví a zazvoní. Kdykoli řekněte „%@“ nebo „timer off“."
+            "value" : "Odpočítává, dokud hraje klikání, a při zastavení se pozastaví. Když čas vyprší, metronom se zastaví a zazvoní. Kdykoli řekněte „%1$@“ nebo „%2$@“."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tæller ned, mens klikket spiller, og sættes på pause, når du stopper. Når tiden er gået, stopper metronomen med en lyd. Sig “%@” eller “timer off” når som helst."
+            "value" : "Tæller ned, mens klikket spiller, og sættes på pause, når du stopper. Når tiden er gået, stopper metronomen med en lyd. Sig “%1$@” eller “%2$@” når som helst."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Läuft, solange der Klick spielt, und pausiert beim Stoppen. Ist die Zeit um, stoppt das Metronom mit einem Gong. Sag jederzeit „%@“ oder „timer off“."
+            "value" : "Läuft, solange der Klick spielt, und pausiert beim Stoppen. Ist die Zeit um, stoppt das Metronom mit einem Gong. Sag jederzeit „%1$@“ oder „%2$@“."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Μετρά αντίστροφα όσο παίζει το κλικ και κάνει παύση όταν σταματήσετε. Όταν τελειώσει ο χρόνος, ο μετρονόμος σταματά και ηχεί. Πείτε «%@» ή «timer off» όποτε θέλετε."
+            "value" : "Μετρά αντίστροφα όσο παίζει το κλικ και κάνει παύση όταν σταματήσετε. Όταν τελειώσει ο χρόνος, ο μετρονόμος σταματά και ηχεί. Πείτε «%1$@» ή «%2$@» όποτε θέλετε."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “%1$@” or “%2$@” anytime."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “%@” or “timer off” anytime."
+            "value" : "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “%1$@” or “%2$@” anytime."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cuenta atrás mientras suena el clic y se pausa al detenerlo. Cuando se acaba el tiempo, el metrónomo se detiene con un aviso sonoro. Di “%@” o “timer off” cuando quieras."
+            "value" : "Cuenta atrás mientras suena el clic y se pausa al detenerlo. Cuando se acaba el tiempo, el metrónomo se detiene con un aviso sonoro. Di “%1$@” o “%2$@” cuando quieras."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Laskee alaspäin naksahduksen soidessa ja pysähtyy, kun pysäytät metronomin. Kun aika loppuu, metronomi pysähtyy ja kilahtaa. Sano milloin tahansa ”%@” tai ”timer off”."
+            "value" : "Laskee alaspäin naksahduksen soidessa ja pysähtyy, kun pysäytät metronomin. Kun aika loppuu, metronomi pysähtyy ja kilahtaa. Sano milloin tahansa ”%1$@” tai ”%2$@”."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Décompte pendant que le clic joue et se met en pause à l’arrêt. À la fin, le métronome s’arrête avec un carillon. Dites « %@ » ou « timer off » à tout moment."
+            "value" : "Décompte pendant que le clic joue et se met en pause à l’arrêt. À la fin, le métronome s’arrête avec un carillon. Dites « %1$@ » ou « %2$@ » à tout moment."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Menghitung mundur selama klik berbunyi dan berhenti sejenak saat kamu berhenti. Saat waktu habis, metronom berhenti dan berdenting. Ucapkan “%@” atau “timer off” kapan saja."
+            "value" : "Menghitung mundur selama klik berbunyi dan berhenti sejenak saat kamu berhenti. Saat waktu habis, metronom berhenti dan berdenting. Ucapkan “%1$@” atau “%2$@” kapan saja."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Il conto alla rovescia procede mentre suona il click e si mette in pausa quando ti fermi. Allo scadere il metronomo si ferma con un suono. Dì “%@” o “timer off” in qualsiasi momento."
+            "value" : "Il conto alla rovescia procede mentre suona il click e si mette in pausa quando ti fermi. Allo scadere il metronomo si ferma con un suono. Dì “%1$@” o “%2$@” in qualsiasi momento."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "クリックが鳴っている間カウントダウンし、停止すると一時停止します。時間になるとメトロノームが止まり、チャイムが鳴ります。いつでも“%@”や“timer off”と言えます。"
+            "value" : "クリックが鳴っている間カウントダウンし、停止すると一時停止します。時間になるとメトロノームが止まり、チャイムが鳴ります。いつでも“%1$@”や“%2$@”と言えます。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "클릭이 울리는 동안 카운트다운하고, 멈추면 일시정지돼요. 시간이 다 되면 메트로놈이 멈추고 알림음이 울려요. 언제든 “%@” 또는 “timer off”라고 말하세요."
+            "value" : "클릭이 울리는 동안 카운트다운하고, 멈추면 일시정지돼요. 시간이 다 되면 메트로놈이 멈추고 알림음이 울려요. 언제든 “%1$@” 또는 “%2$@”라고 말하세요."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Teller ned mens klikket spilles, og settes på pause når du stopper. Når tiden er ute, stopper metronomen med et lydsignal. Si «%@» eller «timer off» når som helst."
+            "value" : "Teller ned mens klikket spilles, og settes på pause når du stopper. Når tiden er ute, stopper metronomen med et lydsignal. Si «%1$@» eller «%2$@» når som helst."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Telt af terwijl de klik speelt en pauzeert als je stopt. Als de tijd om is, stopt de metronoom met een geluidje. Zeg op elk moment “%@” of “timer off”."
+            "value" : "Telt af terwijl de klik speelt en pauzeert als je stopt. Als de tijd om is, stopt de metronoom met een geluidje. Zeg op elk moment “%1$@” of “%2$@”."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Odlicza, gdy gra klik, i pauzuje, gdy się zatrzymasz. Gdy czas minie, metronom zatrzyma się i zadzwoni. Powiedz „%@” lub „timer off” w dowolnej chwili."
+            "value" : "Odlicza, gdy gra klik, i pauzuje, gdy się zatrzymasz. Gdy czas minie, metronom zatrzyma się i zadzwoni. Powiedz „%1$@” lub „%2$@” w dowolnej chwili."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Conta enquanto o clique toca e pausa quando você para. Quando o tempo acaba, o metrônomo para com um aviso sonoro. Diga “%@” ou “timer off” a qualquer momento."
+            "value" : "Conta enquanto o clique toca e pausa quando você para. Quando o tempo acaba, o metrônomo para com um aviso sonoro. Diga “%1$@” ou “%2$@” a qualquer momento."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Отсчёт идёт, пока звучит клик, и ставится на паузу, когда вы останавливаетесь. Когда время выйдет, метроном остановится и прозвенит. Скажите «%@» или «timer off» в любой момент."
+            "value" : "Отсчёт идёт, пока звучит клик, и ставится на паузу, когда вы останавливаетесь. Когда время выйдет, метроном остановится и прозвенит. Скажите «%1$@» или «%2$@» в любой момент."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Räknar ner medan klicket spelas och pausar när du stoppar. När tiden är slut stoppar metronomen med en ljudsignal. Säg ”%@” eller ”timer off” när som helst."
+            "value" : "Räknar ner medan klicket spelas och pausar när du stoppar. När tiden är slut stoppar metronomen med en ljudsignal. Säg ”%1$@” eller ”%2$@” när som helst."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "นับถอยหลังขณะเสียงคลิกเล่น และหยุดนับเมื่อคุณหยุด เมื่อหมดเวลา เมโทรนอมจะหยุดพร้อมส่งเสียงเตือน พูดว่า “%@” หรือ “timer off” ได้ทุกเมื่อ"
+            "value" : "นับถอยหลังขณะเสียงคลิกเล่น และหยุดนับเมื่อคุณหยุด เมื่อหมดเวลา เมโทรนอมจะหยุดพร้อมส่งเสียงเตือน พูดว่า “%1$@” หรือ “%2$@” ได้ทุกเมื่อ"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tık çalarken geri sayar, durdurduğunuzda duraklar. Süre dolunca metronom durur ve zil çalar. İstediğiniz an “%@” veya “timer off” deyin."
+            "value" : "Tık çalarken geri sayar, durdurduğunuzda duraklar. Süre dolunca metronom durur ve zil çalar. İstediğiniz an “%1$@” veya “%2$@” deyin."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đếm lùi khi tiếng gõ phát và tạm dừng khi bạn dừng. Hết giờ, máy gõ nhịp dừng và reo chuông. Hãy nói “%@” hoặc “timer off” bất cứ lúc nào."
+            "value" : "Đếm lùi khi tiếng gõ phát và tạm dừng khi bạn dừng. Hết giờ, máy gõ nhịp dừng và reo chuông. Hãy nói “%1$@” hoặc “%2$@” bất cứ lúc nào."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "节拍播放时倒计时，停止时暂停。时间到后节拍器停止并响起提示音。随时说“%@”或“timer off”。"
+            "value" : "节拍播放时倒计时，停止时暂停。时间到后节拍器停止并响起提示音。随时说“%1$@”或“%2$@”。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "點擊聲播放時倒數，停止時暫停。時間到，節拍器會停止並響起提示音。隨時說「%@」或「timer off」都可以。"
+            "value" : "點擊聲播放時倒數，停止時暫停。時間到，節拍器會停止並響起提示音。隨時說「%1$@」或「%2$@」都可以。"
           }
         }
       }
@@ -50839,150 +50834,143 @@
       }
     },
     "privacy-policy-url" : {
-      "extractionState" : "extracted_with_value",
       "localizations" : {
-        "cs" : {
+        "ja" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/cs/privacy.html"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/da/privacy.html"
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/ja/privacy.html"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/de/privacy.html"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/el/privacy.html"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/privacy.html"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "privacy-policy-url"
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/es/privacy.html"
           }
         },
-        "fi" : {
+        "zh-Hans" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/fi/privacy.html"
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hans/privacy.html"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/pt-BR/privacy.html"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/fr/privacy.html"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/id/privacy.html"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/it/privacy.html"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/ja/privacy.html"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/ko/privacy.html"
           }
         },
-        "nb" : {
+        "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/nb/privacy.html"
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hant/privacy.html"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/it/privacy.html"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "privacy-policy-url"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/ru/privacy.html"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/nl/privacy.html"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/pl/privacy.html"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/pt-BR/privacy.html"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/ru/privacy.html"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/sv/privacy.html"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/th/privacy.html"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/tr/privacy.html"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/sv/privacy.html"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/da/privacy.html"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/nb/privacy.html"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/fi/privacy.html"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/cs/privacy.html"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/id/privacy.html"
           }
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/vi/privacy.html"
           }
         },
-        "zh-Hans" : {
+        "el" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hans/privacy.html"
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/el/privacy.html"
           }
         },
-        "zh-Hant" : {
+        "th" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hant/privacy.html"
+            "state" : "translated",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/th/privacy.html"
           }
         }
       }
