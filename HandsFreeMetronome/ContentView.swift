@@ -1977,6 +1977,30 @@ struct ContentView: View {
                             }
                         }
                         .accessibilityInputLabels(["Unlock Pro", "Pro", "Upgrade"])
+                        // 새 기기 · 다시 설치한 사람이 페이월을 거치지 않고도 되찾는 길.
+                        // 되찾으면 이 칸이 "Pro unlocked" 로 바뀌고, 없으면 이유가 아래에 남는다.
+                        Button {
+                            Task { await pro.restore() }
+                        } label: {
+                            HStack(spacing: 12) {
+                                Image(systemName: "arrow.clockwise")
+                                    .foregroundStyle(cue)
+                                    .frame(width: 22)
+                                Text("Restore Purchases")
+                                    .font(.subheadline.weight(.semibold))
+                                    .foregroundStyle(.primary)
+                                Spacer(minLength: 0)
+                                if pro.isRestoring { ProgressView() }
+                            }
+                        }
+                        .disabled(pro.isRestoring)
+                        .accessibilityHint("Restores a previous Pro purchase")
+                        .accessibilityInputLabels(["Restore", "Restore purchases"])
+                        if let error = pro.lastError, !pro.isRestoring {
+                            Text(error)
+                                .font(.footnote)
+                                .foregroundStyle(.secondary)
+                        }
                     }
                     // 개발자 응원하기(팁) — 인앱 상품은 한 칸에 모아 둔다(심사 2.1(b): 찾을 수 있어야 한다).
                     // 상품이 App Store 에서 와야 줄이 선다.
