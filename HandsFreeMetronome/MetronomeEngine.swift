@@ -182,7 +182,6 @@ final class MetronomeEngine: ObservableObject {
            let decoded = try? JSONDecoder().decode([AccentPreset].self, from: data) {
             accentPresets = decoded
         }
-        AudioSession.activate()
         // Clean, pure-tone clicks. Distinct pitches mark accent / beat / subdivision.
         accentClick = makeClick(freq: 2000, volume: 1.0)
         beatClick = makeClick(freq: 1500, volume: 0.9)
@@ -209,6 +208,10 @@ final class MetronomeEngine: ObservableObject {
         ) { [weak self] _ in
             self?.resumeAfterRouteChange()
         }
+        // Last, once the graph above is built: the session is set up on its own queue,
+        // and doing that while the graph is still being wired can stall the audio
+        // server long enough to abort the app.
+        AudioSession.activate()
     }
 
     /// Bring the click back on the new output, or stop cleanly if it can't.

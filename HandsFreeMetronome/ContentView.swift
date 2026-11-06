@@ -1623,36 +1623,40 @@ struct ContentView: View {
         }
     }
 
-    /// Practice timer: a slim strip just above the transport, drawn exactly like the
-    /// voice strip, so the time left stays in view while playing. Tap to set it up.
+    /// Practice timer: a card just above the transport, styled like the tempo and
+    /// subdivision cards. The time left is large enough to read from the music stand
+    /// while playing. Tap to set it up.
     private var timerRow: some View {
         let on = metronome.practiceTimerOn
         return Button { openTimer() } label: {
-            HStack(spacing: 10) {
+            HStack(spacing: 12) {
                 Image(systemName: "timer")
-                    .font(.footnote)
-                    .foregroundStyle(on ? cue : .secondary)
+                    .font(.title2.weight(.semibold))
+                    .foregroundStyle(on ? cue : Color(.label).opacity(0.7))
                     .accessibilityHidden(true)
                 Text("Practice timer")
-                    .font(.subheadline)
+                    .font(.headline)
                     .foregroundStyle(.primary)
+                    .minimumScaleFactor(0.8)
                 Spacer(minLength: 8)
                 Text(on ? timerText(metronome.practiceTimerRemaining) : String(localized: "Off"))
-                    .font(.subheadline.weight(on ? .bold : .regular))
+                    // Running: big enough to read at a glance. Off: just a quiet word.
+                    .font(on ? .system(size: isStand ? 56 : 36, weight: .bold, design: .rounded)
+                             : .headline.weight(.regular))
                     .monospacedDigit()
                     .contentTransition(.numericText(countsDown: true))
-                    .foregroundStyle(on ? cue : .secondary)
+                    .foregroundStyle(on ? cue : Color(.label).opacity(0.7))
+                    .minimumScaleFactor(0.6)
                 Image(systemName: "chevron.right")
-                    .font(.footnote.weight(.semibold))
+                    .font(.body.weight(.semibold))
                     .foregroundStyle(.tertiary)
                     .accessibilityHidden(true)
             }
             .lineLimit(1)
-            .padding(.horizontal, 14)
-            .padding(.vertical, 11)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
             .frame(maxWidth: .infinity)
-            .background(RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .fill(Color(.secondarySystemGroupedBackground)))
+            .background(card)
             .contentShape(Rectangle())
             .animation(.default, value: metronome.practiceTimerRemaining)
         }
@@ -2499,6 +2503,7 @@ struct ContentView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             switch scene {
             case "playing", "orbit", "count": metronome.start()
+            case "timer": metronome.setPracticeTimer(minutes: 15); metronome.start()
             case "voice": showHelp()
             case "commands": showCommands = true
             case "settings": showSettings = true
