@@ -133,12 +133,13 @@ final class VoiceController: ObservableObject {
         }
         // Re-assert a record-capable session HERE, not only at metronome-engine
         // init: on a first launch that init runs before the mic permission exists,
-        // and its early setActive can fail — leaving recording illegal even after
-        // the user grants both permissions.
-        let session = AVAudioSession.sharedInstance()
-        try? session.setCategory(.playAndRecord, mode: .default,
-                                 options: [.mixWithOthers, .defaultToSpeaker, .allowBluetoothHFP])
-        try? session.setActive(true)
+        // and its early activation can fail — leaving recording illegal even after
+        // the user grants both permissions. The mic starts once the session is ready.
+        AudioSession.activate { [weak self] in self?.startListening() }
+    }
+
+    private func startListening() {
+        guard status != .listening else { return }   // a second start raced this one
         // Set up the mic + tap ONCE and keep them running for the whole listening
         // session. Only the lightweight recognition request/task is recycled after
         // this (see refresh). Repeatedly stopping/starting the audio engine while

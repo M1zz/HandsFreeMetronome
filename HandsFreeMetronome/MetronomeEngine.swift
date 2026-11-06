@@ -182,7 +182,7 @@ final class MetronomeEngine: ObservableObject {
            let decoded = try? JSONDecoder().decode([AccentPreset].self, from: data) {
             accentPresets = decoded
         }
-        configureSession()
+        AudioSession.activate()
         // Clean, pure-tone clicks. Distinct pitches mark accent / beat / subdivision.
         accentClick = makeClick(freq: 2000, volume: 1.0)
         beatClick = makeClick(freq: 1500, volume: 0.9)
@@ -222,21 +222,6 @@ final class MetronomeEngine: ObservableObject {
         }
         guard engine.isRunning else { stop(); return }
         player.play()
-    }
-
-    private func configureSession() {
-        let session = AVAudioSession.sharedInstance()
-        // .playAndRecord lets the click coexist with speech recognition.
-        do {
-            try session.setCategory(.playAndRecord,
-                                    mode: .default,
-                                    options: [.mixWithOthers, .defaultToSpeaker, .allowBluetoothHFP])
-            try session.setActive(true)
-        } catch {
-            // Non-fatal: the click may be quieter or route oddly, but the app still
-            // runs. Surface it in the log so a silent-metronome report is diagnosable.
-            engineLog.error("Audio session setup failed: \(error.localizedDescription, privacy: .public)")
-        }
     }
 
     /// A loud pitched click: a sine with a smooth attack and a decay that fully
@@ -695,5 +680,32 @@ final class FeedbackSound {
         str("data"); u32(UInt32(dataSize))
         samples.withUnsafeBufferPointer { d.append(Data(buffer: $0)) }
         return d
+    }
+}
+
+/// The one place the shared audio session is set up, for the click and the mic alike.
+/// Setting the category and activating the session can block for a moment, so it runs on
+/// its own serial queue — never on the main thread, where it would stall the UI.
+enum AudioSession {
+    private static let queue = DispatchQueue(label: "com.handsfree.audio-session", qos: .userInitiated)
+
+    /// `.playAndRecord` so the click coexists with speech recognition. `then` runs on the
+    /// main thread once the session is ready (or failed — the engines still try to run).
+    static func activate(then: (@MainActor () -> Void)? = nil) {
+        queue.async {
+            let session = AVAudioSession.sharedInstance()
+            let options: AVAudioSession.CategoryOptions = [.mixWithOthers, .defaultToSpeaker, .allowBluetoothHFP]
+            do {
+                if session.category != .playAndRecord || session.categoryOptions != options {
+                    try session.setCategory(.playAndRecord, mode: .default, options: options)
+                }
+                try session.setActive(true)
+            } catch {
+                // Non-fatal: the click may be quieter or route oddly, but the app still
+                // runs. Logged so a silent-metronome report is diagnosable.
+                engineLog.error("Audio session setup failed: \(error.localizedDescription, privacy: .public)")
+            }
+            if let then { DispatchQueue.main.async { then() } }
+        }
     }
 }
