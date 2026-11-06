@@ -484,7 +484,6 @@ struct ContentView: View {
                     if !fold.isUnfolded {
                         beatDots     // tap to set time signature; circles wave on the beat
                     }
-                    timerRow
                     tempoCard
                     if !metronome.isPlaying {
                         subdivisionCard.transition(.opacity)
@@ -495,8 +494,10 @@ struct ContentView: View {
                 .padding(.top, 2)
             }
             .scrollBounceBehavior(.basedOnSize)   // don't bounce when it already fits
-            // Voice status is pinned just above the transport so "Listening" and the
-            // last heard command are always in view — never buried below the scroll.
+            // The timer and voice strips are pinned just above the transport, so the time
+            // left, "Listening" and the last heard command are never buried below the scroll.
+            timerRow
+                .padding(.horizontal, 16)
             if !metronome.isPlaying {
                 voiceCard
                     .padding(.horizontal, 16)
@@ -544,10 +545,7 @@ struct ContentView: View {
         return Group {
             if wide {
                 HStack(alignment: .top, spacing: 20) {
-                    VStack(spacing: 14) {
-                        standBeat
-                        timerRow
-                    }
+                    standBeat
                     VStack(spacing: 14) {
                         // Playing, the tempo sits mid-column, level with the beat.
                         if metronome.isPlaying { Spacer(minLength: 0) }
@@ -559,6 +557,7 @@ struct ContentView: View {
                             tipAsk
                         }
                         Spacer(minLength: 0)
+                        timerRow
                         transportBar
                     }
                     .frame(width: min(460, size.width * 0.4))
@@ -566,7 +565,6 @@ struct ContentView: View {
             } else {
                 VStack(spacing: 14) {
                     standBeat
-                    timerRow
                     tempoCard
                     if !metronome.isPlaying {
                         HStack(alignment: .top, spacing: 14) {
@@ -577,6 +575,7 @@ struct ContentView: View {
                         pedalHint.transition(.opacity)
                         tipAsk
                     }
+                    timerRow
                     transportBar
                 }
                 .frame(maxWidth: 820)
@@ -626,7 +625,6 @@ struct ContentView: View {
         HStack(alignment: .top, spacing: 12) {
             VStack(spacing: 10) {
                 beatDots             // tap to set time signature; dots bounce on the beat
-                timerRow
                 tempoCard
             }
             .frame(maxWidth: .infinity)
@@ -637,6 +635,7 @@ struct ContentView: View {
                     tipAsk
                 }
                 Spacer(minLength: 0)
+                timerRow
                 transportBar
             }
             .frame(maxWidth: .infinity)
@@ -1624,15 +1623,19 @@ struct ContentView: View {
         }
     }
 
-    /// Practice timer: a slim row right under the beat card, so the time left stays
-    /// in view next to the pulse while playing. Tap to set it up.
+    /// Practice timer: a slim strip just above the transport, drawn exactly like the
+    /// voice strip, so the time left stays in view while playing. Tap to set it up.
     private var timerRow: some View {
         let on = metronome.practiceTimerOn
         return Button { openTimer() } label: {
             HStack(spacing: 10) {
-                Label("Practice timer", systemImage: "timer")
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(on ? cue : Color(.label).opacity(0.7))
+                Image(systemName: "timer")
+                    .font(.footnote)
+                    .foregroundStyle(on ? cue : .secondary)
+                    .accessibilityHidden(true)
+                Text("Practice timer")
+                    .font(.subheadline)
+                    .foregroundStyle(.primary)
                 Spacer(minLength: 8)
                 Text(on ? timerText(metronome.practiceTimerRemaining) : String(localized: "Off"))
                     .font(.subheadline.weight(on ? .bold : .regular))
@@ -1646,12 +1649,10 @@ struct ContentView: View {
             }
             .lineLimit(1)
             .padding(.horizontal, 14)
-            .padding(.vertical, 10)
+            .padding(.vertical, 11)
             .frame(maxWidth: .infinity)
             .background(RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .fill((on ? cue : Color.secondary).opacity(on ? 0.15 : 0.1)))
-            .overlay(RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .stroke((on ? cue : Color.secondary).opacity(outlineOpacity), lineWidth: 1))
+                .fill(Color(.secondarySystemGroupedBackground)))
             .contentShape(Rectangle())
             .animation(.default, value: metronome.practiceTimerRemaining)
         }
@@ -1809,7 +1810,7 @@ struct ContentView: View {
                         usageRow("target", "Timing check", "In orbit view, tap the ring while playing — every click (including subdivisions) is a target. The moving dot leaves a ghost where your tap landed, and coloured counters tally Perfect / Good / Bad until you stop.")
                         usageRow("chart.line.uptrend.xyaxis", "Practice mode", "Open it from Beat view below, or say \u{201C}\(voiceWord(.practice))\u{201D}.")
                         usageRow("play.fill", "Play", "Tap Start / Stop at the bottom.")
-                        usageRow("timer", "Practice timer", "Tap Practice timer under the beat, or say \u{201C}\(voiceWord(.timer5))\u{201D}. It counts down while the click plays, then stops and chimes.")
+                        usageRow("timer", "Practice timer", "Tap Practice timer above Start, or say \u{201C}\(voiceWord(.timer5))\u{201D}. It counts down while the click plays, then stops and chimes.")
                         usageRow("mic.fill", "Voice", "Tap Listen to turn voice control on or off.")
                     } header: {
                         Text("On-screen")

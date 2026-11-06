@@ -8655,16 +8655,16 @@
     },
     "Command language" : {
       "localizations" : {
-        "ko" : {
+        "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "명령 언어"
+            "value" : "Jazyk příkazů"
           }
         },
-        "ja" : {
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "コマンドの言語"
+            "value" : "Kommandosprog"
           }
         },
         "de" : {
@@ -8673,10 +8673,28 @@
             "value" : "Befehlssprache"
           }
         },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γλώσσα εντολών"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Command language"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Idioma de los comandos"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Komentojen kieli"
           }
         },
         "fr" : {
@@ -8685,22 +8703,10 @@
             "value" : "Langue des commandes"
           }
         },
-        "zh-Hans" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "指令语言"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "指令語言"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Idioma dos comandos"
+            "value" : "Bahasa perintah"
           }
         },
         "it" : {
@@ -8709,10 +8715,22 @@
             "value" : "Lingua dei comandi"
           }
         },
-        "ru" : {
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Язык команд"
+            "value" : "コマンドの言語"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "명령 언어"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommandospråk"
           }
         },
         "nl" : {
@@ -8727,10 +8745,16 @@
             "value" : "Język poleceń"
           }
         },
-        "tr" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Komut dili"
+            "value" : "Idioma dos comandos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык команд"
           }
         },
         "sv" : {
@@ -8739,34 +8763,16 @@
             "value" : "Kommandospråk"
           }
         },
-        "da" : {
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kommandosprog"
+            "value" : "ภาษาของคำสั่ง"
           }
         },
-        "nb" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kommandospråk"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Komentojen kieli"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jazyk příkazů"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bahasa perintah"
+            "value" : "Komut dili"
           }
         },
         "vi" : {
@@ -8775,22 +8781,16 @@
             "value" : "Ngôn ngữ lệnh"
           }
         },
-        "el" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Γλώσσα εντολών"
+            "value" : "指令语言"
           }
         },
-        "th" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ภาษาของคำสั่ง"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Command language"
+            "value" : "指令語言"
           }
         }
       }
@@ -9510,7 +9510,18 @@
         }
       }
     },
+    "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “%@” or “%@” anytime." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “%1$@” or “%2$@” anytime."
+          }
+        }
+      }
+    },
     "Counts down while the click plays and pauses when you stop. When time is up the metronome stops and chimes. Say “%@” or “timer off” anytime." : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -16447,7 +16458,7 @@
       }
     },
     "In every language, you control the app with short English words. Say “%@” anytime to see them all on screen." : {
-      "comment" : "Onboarding page 2 body. “help” is an English voice command; keep it in English",
+      "comment" : "Onboarding page 2 body. %@ is the voice command for help",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -24462,17 +24473,18 @@
       }
     },
     "Pick the words you’ll say. You can change this anytime in Voice Commands." : {
+      "comment" : "Onboarding page 2 body above the English / own-language switch",
       "localizations" : {
-        "ko" : {
+        "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "말할 단어를 고르세요. 음성 명령에서 언제든 바꿀 수 있어요."
+            "value" : "Vyberte slova, která budete říkat. Kdykoli to změníte v Hlasových příkazech."
           }
         },
-        "ja" : {
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "話す言葉を選んでください。音声コマンドでいつでも変更できます。"
+            "value" : "Vælg de ord, du vil sige. Du kan altid ændre det under Stemmekommandoer."
           }
         },
         "de" : {
@@ -24481,10 +24493,28 @@
             "value" : "Wähle die Wörter, die du sagst. Du kannst das jederzeit in den Sprachbefehlen ändern."
           }
         },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαλέξτε τις λέξεις που θα λέτε. Μπορείτε να το αλλάξετε όποτε θέλετε στις Φωνητικές εντολές."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick the words you’ll say. You can change this anytime in Voice Commands."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Elige las palabras que vas a decir. Puedes cambiarlo cuando quieras en Comandos de voz."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse sanat, joita sanot. Voit vaihtaa ne milloin tahansa Äänikomennoista."
           }
         },
         "fr" : {
@@ -24493,22 +24523,10 @@
             "value" : "Choisis les mots que tu diras. Tu peux changer ça à tout moment dans Commandes vocales."
           }
         },
-        "zh-Hans" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "选择你要说的指令语言，随时可在“语音指令”中更改。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選擇你要說的指令語言，隨時可在「語音指令」中更改。"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escolha as palavras que você vai dizer. Dá para mudar quando quiser em Comandos de voz."
+            "value" : "Pilih kata yang akan Anda ucapkan. Anda bisa mengubahnya kapan saja di Perintah Suara."
           }
         },
         "it" : {
@@ -24517,10 +24535,22 @@
             "value" : "Scegli le parole che dirai. Puoi cambiarle quando vuoi in Comandi vocali."
           }
         },
-        "ru" : {
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Выберите, на каком языке говорить команды. Это можно изменить в любой момент в разделе «Голосовые команды»."
+            "value" : "話す言葉を選んでください。音声コマンドでいつでも変更できます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "말할 단어를 고르세요. 음성 명령에서 언제든 바꿀 수 있어요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg ordene du vil si. Du kan endre dette når som helst under Stemmekommandoer."
           }
         },
         "nl" : {
@@ -24535,10 +24565,16 @@
             "value" : "Wybierz słowa, które będziesz mówić. Możesz to zmienić w każdej chwili w Poleceniach głosowych."
           }
         },
-        "tr" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Söyleyeceğiniz kelimeleri seçin. Bunu istediğiniz zaman Sesli Komutlar’dan değiştirebilirsiniz."
+            "value" : "Escolha as palavras que você vai dizer. Dá para mudar quando quiser em Comandos de voz."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите, на каком языке говорить команды. Это можно изменить в любой момент в разделе «Голосовые команды»."
           }
         },
         "sv" : {
@@ -24547,34 +24583,16 @@
             "value" : "Välj vilka ord du ska säga. Du kan ändra det när som helst under Röstkommandon."
           }
         },
-        "da" : {
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vælg de ord, du vil sige. Du kan altid ændre det under Stemmekommandoer."
+            "value" : "เลือกคำที่คุณจะพูด เปลี่ยนได้ทุกเมื่อในคำสั่งเสียง"
           }
         },
-        "nb" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Velg ordene du vil si. Du kan endre dette når som helst under Stemmekommandoer."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Valitse sanat, joita sanot. Voit vaihtaa ne milloin tahansa Äänikomennoista."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vyberte slova, která budete říkat. Kdykoli to změníte v Hlasových příkazech."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pilih kata yang akan Anda ucapkan. Anda bisa mengubahnya kapan saja di Perintah Suara."
+            "value" : "Söyleyeceğiniz kelimeleri seçin. Bunu istediğiniz zaman Sesli Komutlar’dan değiştirebilirsiniz."
           }
         },
         "vi" : {
@@ -24583,22 +24601,16 @@
             "value" : "Chọn từ bạn sẽ nói. Bạn có thể đổi bất cứ lúc nào trong Lệnh giọng nói."
           }
         },
-        "el" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Διαλέξτε τις λέξεις που θα λέτε. Μπορείτε να το αλλάξετε όποτε θέλετε στις Φωνητικές εντολές."
+            "value" : "选择你要说的指令语言，随时可在“语音指令”中更改。"
           }
         },
-        "th" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "เลือกคำที่คุณจะพูด เปลี่ยนได้ทุกเมื่อในคำสั่งเสียง"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pick the words you’ll say. You can change this anytime in Voice Commands."
+            "value" : "選擇你要說的指令語言，隨時可在「語音指令」中更改。"
           }
         }
       }
@@ -33190,7 +33202,7 @@
       }
     },
     "Say “%@”, “%@”, “%@” or “%@” and keep both hands on your instrument." : {
-      "comment" : "Onboarding page 1 body. The quoted words are English voice commands; keep them in English",
+      "comment" : "Onboarding page 1 body. Each %@ is a voice command in the language the user chose; keep the quotes around them",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -36328,17 +36340,18 @@
       }
     },
     "Speak English or your own language" : {
+      "comment" : "Onboarding page 2 title when the app language has its own voice commands. Name your language itself, e.g. 영어로도, 한국어로도 말할 수 있어요",
       "localizations" : {
-        "ko" : {
+        "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "영어로도, 한국어로도 말할 수 있어요"
+            "value" : "Mluvte anglicky nebo česky"
           }
         },
-        "ja" : {
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "英語でも日本語でも話せます"
+            "value" : "Tal engelsk eller dansk"
           }
         },
         "de" : {
@@ -36347,10 +36360,28 @@
             "value" : "Sprich Englisch oder Deutsch"
           }
         },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μιλήστε αγγλικά ή ελληνικά"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speak English or your own language"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Habla en inglés o en español"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puhu englantia tai suomea"
           }
         },
         "fr" : {
@@ -36359,22 +36390,10 @@
             "value" : "Parle anglais ou français"
           }
         },
-        "zh-Hans" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "说英语或中文都可以"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "說英文或中文都可以"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fale em inglês ou em português"
+            "value" : "Bicara dalam bahasa Inggris atau Indonesia"
           }
         },
         "it" : {
@@ -36383,10 +36402,22 @@
             "value" : "Parla in inglese o in italiano"
           }
         },
-        "ru" : {
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Говорите по-английски или по-русски"
+            "value" : "英語でも日本語でも話せます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "영어로도, 한국어로도 말할 수 있어요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snakk engelsk eller norsk"
           }
         },
         "nl" : {
@@ -36401,10 +36432,16 @@
             "value" : "Mów po angielsku lub po polsku"
           }
         },
-        "tr" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İngilizce ya da Türkçe konuşun"
+            "value" : "Fale em inglês ou em português"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Говорите по-английски или по-русски"
           }
         },
         "sv" : {
@@ -36413,34 +36450,16 @@
             "value" : "Tala engelska eller svenska"
           }
         },
-        "da" : {
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tal engelsk eller dansk"
+            "value" : "พูดภาษาอังกฤษหรือภาษาไทยก็ได้"
           }
         },
-        "nb" : {
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Snakk engelsk eller norsk"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Puhu englantia tai suomea"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mluvte anglicky nebo česky"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bicara dalam bahasa Inggris atau Indonesia"
+            "value" : "İngilizce ya da Türkçe konuşun"
           }
         },
         "vi" : {
@@ -36449,22 +36468,16 @@
             "value" : "Nói tiếng Anh hoặc tiếng Việt"
           }
         },
-        "el" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Μιλήστε αγγλικά ή ελληνικά"
+            "value" : "说英语或中文都可以"
           }
         },
-        "th" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "พูดภาษาอังกฤษหรือภาษาไทยก็ได้"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Speak English or your own language"
+            "value" : "說英文或中文都可以"
           }
         }
       }
@@ -40338,144 +40351,144 @@
         }
       }
     },
-    "Tap Practice timer under the beat, or say “%@”. It counts down while the click plays, then stops and chimes." : {
+    "Tap Practice timer above Start, or say “%@”. It counts down while the click plays, then stops and chimes." : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Klepněte na časovač pod zobrazením dob nebo řekněte „%@“. Odpočítává, dokud hraje klikání, pak se zastaví a zazvoní."
+            "value" : "Klepněte na časovač nad tlačítkem Start nebo řekněte „%@“. Odpočítává, dokud hraje klikání, pak se zastaví a zazvoní."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tryk på timeren under taktslagene, eller sig “%@”. Den tæller ned, mens klikket spiller, og stopper så med en lyd."
+            "value" : "Tryk på timeren over Start, eller sig “%@”. Den tæller ned, mens klikket spiller, og stopper så med en lyd."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tippe auf den Timer unter den Schlägen oder sag „%@“. Er läuft, solange der Klick spielt, und stoppt dann mit einem Gong."
+            "value" : "Tippe auf den Timer über Start oder sag „%@“. Er läuft, solange der Klick spielt, und stoppt dann mit einem Gong."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Πατήστε το χρονόμετρο κάτω από τους χτύπους ή πείτε «%@». Μετρά αντίστροφα όσο παίζει το κλικ και μετά σταματά και ηχεί."
+            "value" : "Πατήστε το χρονόμετρο πάνω από την Έναρξη ή πείτε «%@». Μετρά αντίστροφα όσο παίζει το κλικ και μετά σταματά και ηχεί."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tap Practice timer under the beat, or say “%@”. It counts down while the click plays, then stops and chimes."
+            "value" : "Tap Practice timer above Start, or say “%@”. It counts down while the click plays, then stops and chimes."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Toca el temporizador debajo de los pulsos o di “%@”. Cuenta atrás mientras suena el clic y luego se detiene con un aviso sonoro."
+            "value" : "Toca el temporizador encima de Iniciar o di “%@”. Cuenta atrás mientras suena el clic y luego se detiene con un aviso sonoro."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Napauta iskujen alla olevaa ajastinta tai sano ”%@”. Se laskee alaspäin naksahduksen soidessa, pysähtyy ja kilahtaa."
+            "value" : "Napauta Aloita-painikkeen yllä olevaa ajastinta tai sano ”%@”. Se laskee alaspäin naksahduksen soidessa, pysähtyy ja kilahtaa."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Touchez le minuteur sous les temps ou dites « %@ ». Il décompte pendant que le clic joue, puis s’arrête avec un carillon."
+            "value" : "Touchez le minuteur au-dessus de Démarrer ou dites « %@ ». Il décompte pendant que le clic joue, puis s’arrête avec un carillon."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ketuk timer di bawah ketukan, atau ucapkan “%@”. Timer menghitung mundur selama klik berbunyi, lalu berhenti dan berdenting."
+            "value" : "Ketuk timer di atas tombol Mulai, atau ucapkan “%@”. Timer menghitung mundur selama klik berbunyi, lalu berhenti dan berdenting."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tocca il timer sotto i battiti, oppure dì “%@”. Il conto alla rovescia procede mentre suona il click, poi si ferma con un suono."
+            "value" : "Tocca il timer sopra Avvia, oppure dì “%@”. Il conto alla rovescia procede mentre suona il click, poi si ferma con un suono."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "拍の下のタイマーをタップするか、“%@”と言います。クリックが鳴っている間だけカウントダウンし、終わると止まってチャイムが鳴ります。"
+            "value" : "スタートの上のタイマーをタップするか、“%@”と言います。クリックが鳴っている間だけカウントダウンし、終わると止まってチャイムが鳴ります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "박자 아래의 타이머를 탭하거나 “%@”라고 말하세요. 클릭이 울리는 동안 카운트다운하고, 끝나면 멈추고 알림음이 울려요."
+            "value" : "시작 버튼 위의 타이머를 탭하거나 “%@”라고 말하세요. 클릭이 울리는 동안 카운트다운하고, 끝나면 멈추고 알림음이 울려요."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trykk på timeren under taktslagene, eller si «%@». Den teller ned mens klikket spilles, og stopper deretter med et lydsignal."
+            "value" : "Trykk på timeren over Start, eller si «%@». Den teller ned mens klikket spilles, og stopper deretter med et lydsignal."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tik op de timer onder de tellen of zeg “%@”. Hij telt af terwijl de klik speelt, stopt daarna en laat een geluidje horen."
+            "value" : "Tik op de timer boven Start of zeg “%@”. Hij telt af terwijl de klik speelt, stopt daarna en laat een geluidje horen."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dotknij minutnika pod uderzeniami albo powiedz „%@”. Odlicza, gdy gra klik, po czym zatrzymuje się i dzwoni."
+            "value" : "Dotknij minutnika nad przyciskiem Start albo powiedz „%@”. Odlicza, gdy gra klik, po czym zatrzymuje się i dzwoni."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Toque no timer abaixo das batidas ou diga “%@”. Ele conta enquanto o clique toca e depois para com um aviso sonoro."
+            "value" : "Toque no timer acima de Iniciar ou diga “%@”. Ele conta enquanto o clique toca e depois para com um aviso sonoro."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Нажмите таймер под долями или скажите «%@». Отсчёт идёт, пока звучит клик, затем метроном останавливается и звенит."
+            "value" : "Нажмите таймер над кнопкой «Старт» или скажите «%@». Отсчёт идёт, пока звучит клик, затем метроном останавливается и звенит."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tryck på timern under taktslagen eller säg ”%@”. Den räknar ner medan klicket spelas och stoppar sedan med en ljudsignal."
+            "value" : "Tryck på timern ovanför Starta eller säg ”%@”. Den räknar ner medan klicket spelas och stoppar sedan med en ljudsignal."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "แตะตัวตั้งเวลาใต้จังหวะ หรือพูดว่า “%@” ตัวตั้งเวลาจะนับถอยหลังขณะเสียงคลิกเล่น แล้วหยุดพร้อมส่งเสียงเตือน"
+            "value" : "แตะตัวตั้งเวลาเหนือปุ่มเริ่ม หรือพูดว่า “%@” ตัวตั้งเวลาจะนับถอยหลังขณะเสียงคลิกเล่น แล้วหยุดพร้อมส่งเสียงเตือน"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vuruşların altındaki zamanlayıcıya dokunun veya “%@” deyin. Tık çalarken geri sayar, sonra durur ve zil çalar."
+            "value" : "Başlat düğmesinin üstündeki zamanlayıcıya dokunun veya “%@” deyin. Tık çalarken geri sayar, sonra durur ve zil çalar."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chạm hẹn giờ bên dưới nhịp, hoặc nói “%@”. Bộ đếm lùi khi tiếng gõ phát, rồi dừng và reo chuông."
+            "value" : "Chạm hẹn giờ phía trên nút Bắt đầu, hoặc nói “%@”. Bộ đếm lùi khi tiếng gõ phát, rồi dừng và reo chuông."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "轻点节拍下方的计时器，或说“%@”。节拍播放时倒计时，结束后停止并响起提示音。"
+            "value" : "轻点开始按钮上方的计时器，或说“%@”。节拍播放时倒计时，结束后停止并响起提示音。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "點選節拍下方的計時器，或說「%@」。點擊聲播放時會倒數，時間到會停止並響起提示音。"
+            "value" : "點選開始按鈕上方的計時器，或說「%@」。點擊聲播放時會倒數，時間到會停止並響起提示音。"
           }
         }
       }
@@ -50826,143 +50839,150 @@
       }
     },
     "privacy-policy-url" : {
+      "extractionState" : "extracted_with_value",
       "localizations" : {
-        "ja" : {
+        "cs" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/ja/privacy.html"
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/cs/privacy.html"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/da/privacy.html"
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/de/privacy.html"
           }
         },
-        "es" : {
+        "el" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/es/privacy.html"
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/el/privacy.html"
           }
         },
-        "zh-Hans" : {
+        "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hans/privacy.html"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/pt-BR/privacy.html"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/fr/privacy.html"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/ko/privacy.html"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hant/privacy.html"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/it/privacy.html"
+            "state" : "new",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/privacy.html"
           }
         },
         "en-GB" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "privacy-policy-url"
           }
         },
-        "ru" : {
+        "es" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/ru/privacy.html"
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/es/privacy.html"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/fi/privacy.html"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/fr/privacy.html"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/id/privacy.html"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/it/privacy.html"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/ja/privacy.html"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/ko/privacy.html"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/nb/privacy.html"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/nl/privacy.html"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/pl/privacy.html"
           }
         },
-        "tr" : {
+        "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/tr/privacy.html"
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/pt-BR/privacy.html"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/ru/privacy.html"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/sv/privacy.html"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/da/privacy.html"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/nb/privacy.html"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/fi/privacy.html"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/cs/privacy.html"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/id/privacy.html"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/vi/privacy.html"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "https://m1zz.github.io/HandsFreeMetronome/el/privacy.html"
           }
         },
         "th" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "https://m1zz.github.io/HandsFreeMetronome/th/privacy.html"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/tr/privacy.html"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/vi/privacy.html"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hans/privacy.html"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "https://m1zz.github.io/HandsFreeMetronome/zh-Hant/privacy.html"
           }
         }
       }
