@@ -453,6 +453,10 @@ struct ContentView: View {
     /// Listen by default — UNLESS the user relies on iOS Voice Control, in
     /// which case our own mic would fight the system recognizer.
     private func startListeningIfAppropriate() {
+        #if DEBUG
+        // -nolisten: screens checked on a simulator without the permission alert on top.
+        if ProcessInfo.processInfo.arguments.contains("-nolisten") { return }
+        #endif
         if !usesVoiceControl && !voice.isListening { voice.toggle() }
     }
 
@@ -2507,6 +2511,7 @@ struct ContentView: View {
             case "voice": showHelp()
             case "commands": showCommands = true
             case "settings": showSettings = true
+            case "paywall": paywallFeature = .tuner
             case "accents":
                 metronome.setLevelsForScreenshot([2, 1, 2, 1,  2, 0, 1, 1,  2, 1, 2, 1,  2, 0, 1, 2])
                 // Show saved presets, not the empty state — genre names read the
