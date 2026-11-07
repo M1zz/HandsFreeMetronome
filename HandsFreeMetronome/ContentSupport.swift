@@ -330,7 +330,7 @@ struct GiftRow: View {
     }
 }
 
-/// 선물 화면: Pro 선물 보내기, 그 아래 받은 코드 넣기(아직 Pro 가 아닌 사람만).
+/// 선물 화면: 누르면 바로 Pro 선물을 사는 화면. 받은 코드 넣기는 맨 아래 링크(아직 Pro 가 아닌 사람만).
 struct GiftPage: View {
     @ObservedObject var gift: LeeoGiftStore
     let isPro: Bool
@@ -348,26 +348,14 @@ struct GiftPage: View {
     }
 
     var body: some View {
-        List {
+        // 클립키보드처럼 가운데 목록 없이 바로 선물 화면으로. 받은 코드 넣기는 그 화면 맨 아래 링크로.
+        Group {
             if Self.sends(gift) {
-                Section {
-                    NavigationLink {
-                        LeeoGiftView<HandsFreeMetronomeSpec>(gift: gift, showsRedeemLink: false,
-                                                             onContactSupport: { showSupport = true })
-                    } label: {
-                        Label(LeeoGiftText.sendEntry, systemImage: "gift.fill")
-                    }
-                }
-            }
-            if Self.receives(gift, isPro: isPro) {
-                Section {
-                    NavigationLink {
-                        LeeoGiftRedeemView<HandsFreeMetronomeSpec>(gift: gift,
-                                                                   onContactSupport: { showSupport = true })
-                    } label: {
-                        Label(LeeoGiftText.redeemEntry, systemImage: "giftcard")
-                    }
-                }
+                LeeoGiftView<HandsFreeMetronomeSpec>(gift: gift, showsRedeemLink: Self.receives(gift, isPro: isPro),
+                                                     onContactSupport: { showSupport = true })
+            } else {
+                // 보낼 선물은 없고 받을 코드만 넣을 수 있을 때
+                LeeoGiftRedeemView<HandsFreeMetronomeSpec>(gift: gift, onContactSupport: { showSupport = true })
             }
         }
         .navigationTitle(LeeoGiftText.sendEntry)
