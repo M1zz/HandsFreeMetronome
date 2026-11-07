@@ -13,14 +13,7 @@ extension ContentView {
         NavigationStack {
             ScrollViewReader { proxy in
                 List {
-                    // The words to say — only when the app's language has its own.
-                    if VoiceVocabulary.native != nil {
-                        Section {
-                            VoiceLanguagePicker()
-                        } header: {
-                            Text("Command language")
-                        }
-                    }
+                    commandLanguageSection
                     Section {
                         usageRow("circle.grid.3x3", "Set beats", "Tap the dots to choose the time signature.")
                         usageRow("hand.tap", "Tap tempo", "Tap the big BPM number in rhythm to set the tempo.")
@@ -214,6 +207,8 @@ extension ContentView {
                 if let gift = pro.gift {
                     GiftRows(gift: gift, isPro: pro.isPro)
                 }
+                // 영어 명령이 더 익숙한 사람도 있어서, 설정에서도 고른다.
+                commandLanguageSection
                 Section {
                     Toggle(isOn: $usesVoiceControl) {
                         VStack(alignment: .leading, spacing: 2) {
@@ -255,6 +250,19 @@ extension ContentView {
                 ToolbarItem(placement: .confirmationAction) {
                     Button { panel = nil } label: { Label("Done", systemImage: "checkmark") }
                 }
+            }
+        }
+    }
+
+    /// English or the app language's own command words — only when that language
+    /// has its own. Shown in Settings and at the top of Voice Commands.
+    @ViewBuilder
+    var commandLanguageSection: some View {
+        if VoiceVocabulary.native != nil {
+            Section {
+                VoiceLanguagePicker()
+            } header: {
+                Text("Command language")
             }
         }
     }

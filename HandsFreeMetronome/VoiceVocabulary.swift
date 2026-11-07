@@ -8,7 +8,7 @@ import SwiftUI
 /// or the words of the language the app is shown in.
 ///
 /// ⚠️ English stays the default — people who already learned the commands keep them.
-///    The switch is in Voice Commands, and only appears when the app's language has
+///    The switch is in Settings and Voice Commands, and only appears when the app's language has
 ///    its own words here (`VoiceVocabulary.native`).
 enum VoiceLanguage: String {
     case english, native
