@@ -25,6 +25,11 @@
 		92D950BE619702133C37BF0D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5DD1EC696EC91EC82B800B96 /* Localizable.xcstrings */; };
 		A1000011 /* HandsFreeMetronomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001 /* HandsFreeMetronomeApp.swift */; };
 		A1000012 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002 /* ContentView.swift */; };
+		8C45FDD96EF3E2CF7DF9562C /* ContentView+Beat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F83166C2731FEC9975B2CA /* ContentView+Beat.swift */; };
+		C75A6DBFF3F696A64181E398 /* ContentView+Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA087AD80A8E124D8216F08 /* ContentView+Controls.swift */; };
+		87F5DFE7ED81A130240224AD /* ContentView+Sheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BBABD24CA0EAA31608F24 /* ContentView+Sheets.swift */; };
+		A1C009C7AE9807C35172A681 /* ContentView+Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82A2F5B883C578E54F37DC /* ContentView+Logic.swift */; };
+		50B92F0AED0611D4CCCE408C /* ContentSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C0D9016FF19F49D9147EF8 /* ContentSupport.swift */; };
 		A1000013 /* MetronomeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000003 /* MetronomeEngine.swift */; };
 		A1000014 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004 /* VoiceController.swift */; };
 		A1000015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000005 /* Assets.xcassets */; };
@@ -133,6 +138,11 @@
 		A04C8D5D5269C68D20C4B1A1 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		A1000001 /* HandsFreeMetronomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsFreeMetronomeApp.swift; sourceTree = "<group>"; };
 		A1000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E9F83166C2731FEC9975B2CA /* ContentView+Beat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Beat.swift"; sourceTree = "<group>"; };
+		EAA087AD80A8E124D8216F08 /* ContentView+Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Controls.swift"; sourceTree = "<group>"; };
+		629BBABD24CA0EAA31608F24 /* ContentView+Sheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Sheets.swift"; sourceTree = "<group>"; };
+		5C82A2F5B883C578E54F37DC /* ContentView+Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Logic.swift"; sourceTree = "<group>"; };
+		36C0D9016FF19F49D9147EF8 /* ContentSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentSupport.swift"; sourceTree = "<group>"; };
 		A1000003 /* MetronomeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeEngine.swift; sourceTree = "<group>"; };
 		A1000004 /* VoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceController.swift; sourceTree = "<group>"; };
 		A1000005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -284,6 +294,11 @@
 			children = (
 				A1000001 /* HandsFreeMetronomeApp.swift */,
 				A1000002 /* ContentView.swift */,
+				E9F83166C2731FEC9975B2CA /* ContentView+Beat.swift */,
+				EAA087AD80A8E124D8216F08 /* ContentView+Controls.swift */,
+				629BBABD24CA0EAA31608F24 /* ContentView+Sheets.swift */,
+				5C82A2F5B883C578E54F37DC /* ContentView+Logic.swift */,
+				36C0D9016FF19F49D9147EF8 /* ContentSupport.swift */,
 				A1000003 /* MetronomeEngine.swift */,
 				A1000004 /* VoiceController.swift */,
 				A1000105 /* TunerEngine.swift */,
@@ -581,6 +596,11 @@
 			files = (
 				A1000011 /* HandsFreeMetronomeApp.swift in Sources */,
 				A1000012 /* ContentView.swift in Sources */,
+				8C45FDD96EF3E2CF7DF9562C /* ContentView+Beat.swift in Sources */,
+				C75A6DBFF3F696A64181E398 /* ContentView+Controls.swift in Sources */,
+				87F5DFE7ED81A130240224AD /* ContentView+Sheets.swift in Sources */,
+				A1C009C7AE9807C35172A681 /* ContentView+Logic.swift in Sources */,
+				50B92F0AED0611D4CCCE408C /* ContentSupport.swift in Sources */,
 				A1000013 /* MetronomeEngine.swift in Sources */,
 				A1000014 /* VoiceController.swift in Sources */,
 				A1000104 /* TunerEngine.swift in Sources */,
@@ -822,6 +842,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=watchsimulator*]" = x86_64;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
