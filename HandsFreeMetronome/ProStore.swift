@@ -57,6 +57,7 @@ enum ProFeature: String, Identifiable, CaseIterable {
 final class ProStore: ObservableObject {
     nonisolated static let yearlyID = "com.leeo.HandsFreeMetronome.pro.yearly"
     nonisolated static let lifetimeID = "com.leeo.HandsFreeMetronome.pro.lifetime"
+    /// Everything that grants Pro — the one list the Spec's paywall reads.
     nonisolated static let allProductIDs = [yearlyID, lifetimeID]
     /// Pro 선물(소모성). 받는 사람은 `lifetimeID` 를 산 것과 같아진다.
     /// ⚠️ `allProductIDs` 에 넣지 않는다. 넣으면 선물을 산 사람 자신이 Pro 가 된다.

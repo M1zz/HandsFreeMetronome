@@ -19,16 +19,13 @@ struct ContentView: View {
 
     @State var beatScale: CGFloat = 1.0
     @State var currentBeat = -1   // which beat (0-based) is sounding now
-    @State var showCommands = false
-    @State var showSettings = false   // accessibility · Pro · support (→ settingsSheet)
-    @State var showTuner = false
-    @State var showTrainer = false   // practice-mode modal
-    @State var showTimer = false     // practice-timer modal
-    @State var showAccents = false   // accent-pattern grid modal
+    /// The one panel covering the main screen, if any (→ `Panel`, `present(_:)`).
+    @State var panel: Panel?
     @State var showSavePreset = false     // name prompt for a new accent preset
     @State var presetNameDraft = ""       // text field backing the prompt
     @State var showHelpMarks = false   // "help" → quick "what can I say" list
     @State var hintDismissed = false   // hide "tap dots" after first tap/start
+    @State var didLaunch = false       // launch-only work in onAppear has run
     @State var didAutoStart = false    // auto-enable listening once on launch
     @State var muteProgress: CGFloat = 1   // Listen-button countdown ring (1→0)
     @State var lastCommandText = ""     // last recognized voice command
@@ -202,10 +199,11 @@ struct ContentView: View {
         // Support Dynamic Type, but cap growth so the single-screen layout holds.
         .dynamicTypeSize(...DynamicTypeSize.accessibility2)
         // Bluetooth page-turn pedal or keyboard: tempo and start/stop (→ PedalKeys.swift).
-        .pedalKeys(enabled: !showOnboarding && !showWhatsNew && paywallFeature == nil && !showTuner && !showCommands && !showSettings,
+        .pedalKeys(enabled: !showOnboarding && !showWhatsNew && paywallFeature == nil
+                    && panel != .tuner && panel != .commands && panel != .settings,
                    nudge: { metronome.nudge($0) }, toggle: { metronome.toggle() })
-        .fullScreenCover(isPresented: $showCommands) { commandsSheet.foldConfined() }
-        .sheet(isPresented: $showSettings) { settingsSheet.foldConfined() }
+        .fullScreenCover(isPresented: isOpen(.commands)) { commandsSheet.foldConfined() }
+        .sheet(isPresented: isOpen(.settings)) { settingsSheet.foldConfined() }
         // The tuner engine follows the page's visibility (it used to be the
         // sheet's onDismiss) — stopped on ANY path that closes it.
         .onChange(of: voiceLanguage) { _, raw in
@@ -218,9 +216,10 @@ struct ContentView: View {
                 if usesVoiceControl && voice.isListening { voice.stop() }
             }
             noteSignal.setSuspended(open)   // tuning a string must not fire the signal
+            voice.holdsOpen = open          // quiet tuning must not auto-mute the mic
         }
-        .sheet(isPresented: $showTrainer) { trainerSheet }
-        .sheet(isPresented: $showTimer) { timerSheet }
+        .sheet(isPresented: isOpen(.trainer)) { trainerSheet }
+        .sheet(isPresented: isOpen(.timer)) { timerSheet }
         // Practice timer ran out (the engine already stopped and chimed): a firm
         // haptic for players who can't hear the chime over their instrument, and
         // a spoken cue for VoiceOver.
@@ -232,7 +231,7 @@ struct ContentView: View {
             LeeoEngagement.shared.registerSignificantEvent()
             askForReviewAfterPractice()
         }
-        .sheet(isPresented: $showAccents) { accentsSheet }
+        .sheet(isPresented: isOpen(.accents)) { accentsSheet }
         .leeoReviewGate(HandsFreeMetronomeSpec.self, isPresented: $showReviewGate)
         .onChange(of: metronome.isPlaying) { _, playing in
             if playing {
@@ -262,12 +261,16 @@ struct ContentView: View {
             // can't see (or that pauses when the display sleeps) is useless.
             UIApplication.shared.isIdleTimerDisabled = playing
         }
-        .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
         .onChange(of: voice.activityToken) { restartMuteCountdown() }
         .onChange(of: voice.isListening) { _, listening in
             if !listening { muteProgress = 1 }
         }
         .onAppear {
+            // Once per launch. A full-screen cover (Voice commands) makes this view
+            // disappear and appear again; re-running would rewire the mic callback
+            // while the audio thread reads it, and redo launch-only work.
+            guard !didLaunch else { return }
+            didLaunch = true
             wireUp()
             syncTipState()
             greetIfNeeded()
@@ -285,7 +288,7 @@ struct ContentView: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     if uitestArgs.contains("-uitest-tuner") {
                         tuner.start()
-                        withAnimation(tunerPageAnimation) { showTuner = true }
+                        present(.tuner)
                     } else {
                         openTuner()
                     }
@@ -391,7 +394,7 @@ struct ContentView: View {
         Task { @MainActor in
             try? await Task.sleep(for: .seconds(1.5))
             let busy = metronome.isPlaying || paywallFeature != nil || showOnboarding || showWhatsNew
-                || showCommands || showSettings || showTuner || showTrainer || showTimer || showAccents || showSavePreset
+                || panel != nil || showSavePreset
                 || showReviewGate
             // Both a timer run-out and the stop it causes land here; the first one asks.
             guard !busy, LeeoReviewRequest.shouldRequest() else { return }
@@ -462,15 +465,13 @@ struct ContentView: View {
 
     /// Replay from the help sheet.
     func replayOnboarding() {
-        showCommands = false
-        showSettings = false
+        panel = nil
         AppTips.snoozed = true
         withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.3)) { showOnboarding = true }
     }
 
     func reopenWhatsNew() {
-        showCommands = false
-        showSettings = false
+        panel = nil
         AppTips.snoozed = true
         withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.3)) { showWhatsNew = true }
     }

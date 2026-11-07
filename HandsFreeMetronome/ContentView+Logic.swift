@@ -73,7 +73,7 @@ extension ContentView {
         case .idle: return String(localized: "Tap Listen to control by voice")
         case .listening:
             return voice.lastHeard.isEmpty
-                ? String(localized: "Say \"start\", \"faster\", or \"help\"")
+                ? String(localized: "Say \u{201C}\(voiceWord(.start))\u{201D}, \u{201C}\(voiceWord(.faster))\u{201D}, or \u{201C}\(voiceWord(.help))\u{201D}")
                 : String(localized: "Heard: \(voice.lastHeard)")
         case .denied: return String(localized: "Mic/Speech blocked — enable in Settings")
         case .unavailable: return String(localized: "Speech recognition unavailable here")
@@ -121,8 +121,8 @@ extension ContentView {
             case "playing", "orbit", "count": metronome.start()
             case "timer": metronome.setPracticeTimer(minutes: 15); metronome.start()
             case "voice": showHelp()
-            case "commands": showCommands = true
-            case "settings": showSettings = true
+            case "commands": present(.commands)
+            case "settings": present(.settings)
             case "paywall": paywallFeature = .tuner
             case "accents":
                 metronome.setLevelsForScreenshot([2, 1, 2, 1,  2, 0, 1, 1,  2, 1, 2, 1,  2, 0, 1, 2])
@@ -132,7 +132,7 @@ extension ContentView {
                     metronome.saveAccentPreset(named: "Bossa Nova")
                     metronome.saveAccentPreset(named: "Samba")
                 }
-                showAccents = true
+                present(.accents)
             default: break
             }
         }
@@ -143,11 +143,8 @@ extension ContentView {
         guard requirePro(.tuner) else { return }
         metronome.stop()        // clicks would corrupt pitch detection
         if !voice.isListening { voice.toggle() }   // the tuner hears through the app's mic
-        showCommands = false
-        showSettings = false
-        showAccents = false
         tuner.start()
-        withAnimation(tunerPageAnimation) { showTuner = true }
+        present(.tuner)
         TunerTip().invalidate(reason: .actionPerformed)
     }
 
@@ -178,12 +175,7 @@ extension ContentView {
     }
 
     func closePanels() {
-        showCommands = false
-        showSettings = false
-        closeTuner()            // slides the page out; onChange stops the engine
-        showTrainer = false
-        showTimer = false
-        showAccents = false
+        present(nil)            // the tuner slides out; onChange stops its engine
         // "close" backs out of the paywall and the What's-new card too
         withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = nil }
         if showWhatsNew { closeWhatsNew() }
@@ -256,41 +248,26 @@ extension ContentView {
 
     /// The practice timer is part of the free core — no Pro gate.
     func openTimer() {
-        showCommands = false
-        showSettings = false
-        withAnimation(tunerPageAnimation) { showTuner = false }
-        showTrainer = false
-        showAccents = false
-        showTimer = true
+        present(.timer)
     }
 
     func openPractice() {
         guard requirePro(.practice) else { return }
-        showCommands = false
-        showSettings = false
-        withAnimation(tunerPageAnimation) { showTuner = false }
-        showAccents = false
-        showTimer = false
-        showTrainer = true
+        present(.trainer)
         PracticeTip().invalidate(reason: .actionPerformed)
     }
 
     func openAccents() {
         guard requirePro(.accents) else { return }
-        showCommands = false
-        showSettings = false
-        withAnimation(tunerPageAnimation) { showTuner = false }
-        showTrainer = false
-        showTimer = false
-        showAccents = true
+        present(.accents)
         AccentGridTip().invalidate(reason: .actionPerformed)
     }
 
     /// "help" pops up the list of commands you can say right now.
     func showHelp() {
-        withAnimation(tunerPageAnimation) { showTuner = false }
-        showTrainer = false
-        showTimer = false
+        // The marks point at the main screen: anything covering it closes. The
+        // commands, settings and accent sheets stay — help is asked from them too.
+        if [.tuner, .trainer, .timer].contains(panel) { present(nil) }
         withAnimation(.easeOut(duration: 0.2)) { showHelpMarks = true }
         HelpVoiceTip().invalidate(reason: .actionPerformed)
     }

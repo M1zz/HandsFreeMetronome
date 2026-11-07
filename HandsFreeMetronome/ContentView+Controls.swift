@@ -180,7 +180,7 @@ extension ContentView {
                         .accessibilityHint("Restores the default pattern for this meter")
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button { showAccents = false } label: { Label("Done", systemImage: "checkmark") }
+                    Button { panel = nil } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
             .alert("Save preset", isPresented: $showSavePreset) {
@@ -354,7 +354,7 @@ extension ContentView {
             .accessibilityLabel("Help")
             .accessibilityInputLabels(["Help", "Tips", "Voice commands"])
             .popoverTip(HelpVoiceTip())
-            Button { showSettings = true } label: {
+            Button { present(.settings) } label: {
                 Image(systemName: "gearshape.fill")
                     .font(.title3)
                     .foregroundStyle(.secondary)
@@ -559,7 +559,7 @@ extension ContentView {
                         .font(.footnote.weight(.medium)).foregroundStyle(.white)
                         .lineLimit(2).minimumScaleFactor(0.8)
                     Spacer(minLength: 8)
-                    Button { dismissHelpMarks(); showCommands = true } label: {
+                    Button { dismissHelpMarks(); present(.commands) } label: {
                         Text("All commands")
                             .font(.footnote.weight(.bold))
                             .foregroundStyle(Color.onCue)

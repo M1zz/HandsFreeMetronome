@@ -208,6 +208,13 @@ final class MetronomeEngine: ObservableObject {
         ) { [weak self] _ in
             self?.resumeAfterRouteChange()
         }
+        // The media server restarted: the engine is void. Stop, so the screen
+        // never claims to play in silence; Start tries again on the new server.
+        NotificationCenter.default.addObserver(
+            forName: AVAudioSession.mediaServicesWereResetNotification, object: nil, queue: .main
+        ) { [weak self] _ in
+            self?.stop()
+        }
         // Last, once the graph above is built: the session is set up on its own queue,
         // and doing that while the graph is still being wired can stall the audio
         // server long enough to abort the app.
@@ -217,14 +224,19 @@ final class MetronomeEngine: ObservableObject {
     /// Bring the click back on the new output, or stop cleanly if it can't.
     private func resumeAfterRouteChange() {
         guard isPlaying else { return }
-        timerQueue.sync {}   // no scheduleBuffer in flight while the graph restarts
-        do { try engine.start() } catch {
-            engineLog.error("Audio engine restart failed: \(error.localizedDescription, privacy: .public)")
-            stop()
-            return
+        AudioSession.waitUntilSettled()
+        // On the click's own queue: the beat timer keeps firing, and no
+        // scheduleBuffer may land while the graph restarts.
+        let resumed: Bool = timerQueue.sync {
+            do { try engine.start() } catch {
+                engineLog.error("Audio engine restart failed: \(error.localizedDescription, privacy: .public)")
+                return false
+            }
+            guard engine.isRunning else { return false }
+            player.play()
+            return true
         }
-        guard engine.isRunning else { stop(); return }
-        player.play()
+        if !resumed { stop() }
     }
 
     /// A loud pitched click: a sine with a smooth attack and a decay that fully
@@ -268,6 +280,7 @@ final class MetronomeEngine: ObservableObject {
         let state = Perf.signposter.beginInterval("Metronome start")
         defer { Perf.signposter.endInterval("Metronome start", state) }
         if !engine.isRunning {
+            AudioSession.waitUntilSettled()
             do {
                 try engine.start()
             } catch {
@@ -397,7 +410,6 @@ final class MetronomeEngine: ObservableObject {
         speedTrainerOn = on
         timerQueue.async { [weak self] in self?.measuresSinceStep = 0 }
     }
-    func toggleSpeedTrainer() { setSpeedTrainer(!speedTrainerOn) }
 
     // MARK: Practice timer
 
@@ -710,5 +722,12 @@ enum AudioSession {
             }
             if let then { DispatchQueue.main.async { then() } }
         }
+    }
+
+    /// Wait for a setup still in flight. Starting an engine while the session is
+    /// being configured can stall the audio server until it aborts the app — e.g.
+    /// Start (or a Siri tempo) right after launch. Usually returns at once.
+    static func waitUntilSettled() {
+        queue.sync {}
     }
 }

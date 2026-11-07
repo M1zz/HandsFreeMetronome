@@ -67,6 +67,17 @@ final class VoiceController: ObservableObject {
     private var smoothedLevel: Float = 0
     private var lastPublishedLevel: Float = -1
     private var levelTick = 0
+    /// Bumped by every start() and stop(), so a start still waiting for the audio
+    /// session can tell it was cancelled (→ `start()`).
+    private var startGeneration = 0
+    /// Listening that a call / Siri cut off, to come back when it ends.
+    private var resumeAfterInterruption = false
+
+    /// While true, listening never auto-mutes — the tuner is using the mic and
+    /// tuning a string is quiet work with no spoken commands.
+    var holdsOpen = false {
+        didSet { if !holdsOpen { keepAlive() } }   // the 3-minute window starts now
+    }
 
     var isListening: Bool { status == .listening }
 
@@ -81,6 +92,32 @@ final class VoiceController: ObservableObject {
             guard let self, self.status == .listening else { return }
             self.stop()
             self.start()
+        }
+        // A call or Siri takes the mic and stops the engine — usually with no
+        // configuration change. Without this the screen kept saying "Listening"
+        // to a dead mic. Listening comes back by itself when the call ends.
+        NotificationCenter.default.addObserver(
+            forName: AVAudioSession.interruptionNotification, object: nil, queue: .main
+        ) { [weak self] note in
+            guard let self,
+                  let raw = note.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt,
+                  let type = AVAudioSession.InterruptionType(rawValue: raw) else { return }
+            switch type {
+            case .began:
+                self.resumeAfterInterruption = self.isListening
+                if self.isListening { self.stop() }
+            case .ended:
+                if self.resumeAfterInterruption { self.start() }
+                self.resumeAfterInterruption = false
+            @unknown default: break
+            }
+        }
+        // The media server restarted: every audio object is void. Stop cleanly;
+        // tapping Listen builds listening again on the new server.
+        NotificationCenter.default.addObserver(
+            forName: AVAudioSession.mediaServicesWereResetNotification, object: nil, queue: .main
+        ) { [weak self] _ in
+            self?.stop()
         }
     }
 
@@ -134,12 +171,18 @@ final class VoiceController: ObservableObject {
         // Re-assert a record-capable session HERE, not only at metronome-engine
         // init: on a first launch that init runs before the mic permission exists,
         // and its early activation can fail — leaving recording illegal even after
-        // the user grants both permissions. The mic starts once the session is ready.
-        AudioSession.activate { [weak self] in self?.startListening() }
+        // the user grants both permissions. The mic starts once the session is ready —
+        // unless stop() (or a newer start) came first while it was waiting.
+        startGeneration += 1
+        let generation = startGeneration
+        AudioSession.activate { [weak self] in
+            guard let self, generation == self.startGeneration else { return }
+            self.startListening()
+        }
     }
 
     private func startListening() {
-        guard status != .listening else { return }   // a second start raced this one
+        guard status != .listening else { return }
         // Set up the mic + tap ONCE and keep them running for the whole listening
         // session. Only the lightweight recognition request/task is recycled after
         // this (see refresh). Repeatedly stopping/starting the audio engine while
@@ -161,6 +204,7 @@ final class VoiceController: ObservableObject {
             self?.updateLevel(buffer)
         }
         audioEngine.prepare()
+        AudioSession.waitUntilSettled()   // the click may have queued a setup meanwhile
         do { try audioEngine.start() } catch {
             status = .unavailable
             return
@@ -186,7 +230,8 @@ final class VoiceController: ObservableObject {
             self.activityToken += 1
             let generation = self.inactivityGeneration
             DispatchQueue.main.asyncAfter(deadline: .now() + self.autoMuteAfter) { [weak self] in
-                guard let self, self.status == .listening, self.inactivityGeneration == generation else { return }
+                guard let self, self.status == .listening, !self.holdsOpen,
+                      self.inactivityGeneration == generation else { return }
                 self.stop()
             }
         }
@@ -246,10 +291,11 @@ final class VoiceController: ObservableObject {
     }
 
     func stop() {
-        if audioEngine.isRunning {
-            audioEngine.stop()
-            audioEngine.inputNode.removeTap(onBus: 0)
-        }
+        startGeneration += 1   // a start still waiting for the session is cancelled
+        if audioEngine.isRunning { audioEngine.stop() }
+        // Always, even when the system already stopped the engine (a call, a
+        // route change): a tap left behind with an old format breaks the next start.
+        audioEngine.inputNode.removeTap(onBus: 0)
         currentRequest?.endAudio()
         task?.cancel()
         task = nil

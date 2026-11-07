@@ -22,7 +22,7 @@ enum HandsFreeMetronomeSpec: LeeoAppSpec {
     // 대표 상품으로 노출한다. entitlementIDs 는 기본값(productIDs 전체) — 둘 다 Pro 권한을 준다.
     static let monetization = LeeoMonetization.freemiumSubscription(
         LeeoSubscriptionConfig(
-            productIDs: [ProStore.yearlyID, ProStore.lifetimeID],
+            productIDs: ProStore.allProductIDs,
             termsURL: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!,
             // What a free user can't open without Pro — the three practice
             // tools. Everything else (the metronome, voice control, timer)

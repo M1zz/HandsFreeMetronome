@@ -431,3 +431,36 @@ struct VoiceWaveform: View {
         .accessibilityHidden(true)   // purely decorative level meter
     }
 }
+
+// MARK: - Panels
+
+/// What can cover the main screen. Only one is ever open — opening one closes
+/// whatever was there, so no path can leave two sheets fighting for the screen.
+enum Panel: Hashable {
+    case commands   // voice commands & help (full screen)
+    case settings   // accessibility · Pro · support
+    case tuner      // the page that slides in from the right
+    case trainer    // practice mode (speed trainer)
+    case timer      // practice timer
+    case accents    // accent grid
+}
+
+extension ContentView {
+    var showTuner: Bool { panel == .tuner }
+
+    /// Open `next` (or close everything with nil). The tuner is a page, not a
+    /// sheet: any change that brings it in or takes it out slides it.
+    func present(_ next: Panel?) {
+        guard next != panel else { return }
+        let slides = panel == .tuner || next == .tuner
+        withAnimation(slides ? tunerPageAnimation : nil) { panel = next }
+    }
+
+    /// A sheet's `isPresented` for one panel: swiping it away closes only that one.
+    func isOpen(_ p: Panel) -> Binding<Bool> {
+        Binding(get: { panel == p },
+                set: { open in
+                    if open { present(p) } else if panel == p { panel = nil }
+                })
+    }
+}

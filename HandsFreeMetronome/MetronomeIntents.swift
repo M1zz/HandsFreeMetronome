@@ -34,15 +34,15 @@ struct SetTempoIntent: AppIntent {
     static let openAppWhenRun = true
 
     @Parameter(title: LocalizedStringResource("BPM", comment: "Siri: beats per minute parameter"),
-               description: LocalizedStringResource("The tempo in beats per minute, from 20 to 300.", comment: "Siri: BPM parameter description"),
-               inclusiveRange: (20, 300),
+               description: LocalizedStringResource("The tempo in beats per minute, from 30 to 260.", comment: "Siri: BPM parameter description"),
+               inclusiveRange: (30, 260),
                requestValueDialog: IntentDialog(LocalizedStringResource("What tempo?", comment: "Siri: ask for the BPM")))
     var bpm: Int
 
     @MainActor
     func perform() async throws -> some IntentResult {
         let engine = MetronomeEngine.shared
-        engine.bpm = bpm
+        engine.setTempo(bpm)   // clamps to 30…260 like every other way in
         if !engine.isPlaying { engine.start() }
         return .result()
     }

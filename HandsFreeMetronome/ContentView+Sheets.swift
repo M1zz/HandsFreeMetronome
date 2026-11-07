@@ -131,7 +131,7 @@ extension ContentView {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button { showCommands = false } label: { Label("Done", systemImage: "checkmark") }
+                    Button { panel = nil } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
         }
@@ -157,7 +157,7 @@ extension ContentView {
                         .accessibilityElement(children: .combine)
                     } else {
                         Button {
-                            showSettings = false
+                            panel = nil
                             withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = .practice }
                         } label: {
                             HStack(spacing: 12) {
@@ -253,7 +253,7 @@ extension ContentView {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button { showSettings = false } label: { Label("Done", systemImage: "checkmark") }
+                    Button { panel = nil } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
         }
@@ -364,7 +364,7 @@ extension ContentView {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button { showTrainer = false } label: { Label("Done", systemImage: "checkmark") }
+                    Button { panel = nil } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
         }
@@ -417,7 +417,7 @@ extension ContentView {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button { showTimer = false } label: { Label("Done", systemImage: "checkmark") }
+                    Button { panel = nil } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
         }
@@ -496,7 +496,7 @@ extension ContentView {
                     .monospacedDigit()
                 referenceControl
                 Spacer()
-                Text("Say \"close\" to exit")
+                Text("Say \u{201C}\(voiceWord(.close))\u{201D} to exit")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
@@ -545,7 +545,7 @@ extension ContentView {
 
     /// Slide the tuner page back out to the right (the inverse of its entry).
     func closeTuner() {
-        withAnimation(tunerPageAnimation) { showTuner = false }
+        if panel == .tuner { present(nil) }
     }
 
     /// "440.0 Hz" / "440,0 Hz" — the decimal mark follows the user's region.
