@@ -2,15 +2,16 @@ import SwiftUI
 import StoreKit
 import LeeoKit
 
-/// The Pro paywall, in the same template as ClipKeyboard's:
+/// The Pro paywall, in the same template as Goldweek's and ClipKeyboard's (LeeoKit `LeeoShowcasePaywall`):
 ///
-///     header            title + the one line about what the user just reached for
-///     benefits          what Pro adds (three tools), the one reached for in the accent colour
+///     showcase          a picture of each Pro tool in use, swiped sideways; the one reached for comes first
 ///     yearly · lifetime a vertical list; each row shows the full price and what it bills
-///     compare           the Free vs Pro table, folded
-///     fine print        renewal terms, restore · redeem code · privacy · terms
+///     ─── scroll ───
+///     compare · fine print  the Free vs Pro table, renewal terms, restore · redeem code · privacy · terms
 ///     ─── pinned ───
 ///     one buy button    for the row chosen above
+///
+/// No header: no app name, no slogan. The user knows where they are.
 ///
 /// **What is free comes first** in the table: the whole metronome and voice control stay free.
 struct PaywallView: View {
@@ -36,22 +37,19 @@ struct PaywallView: View {
         // bar renders on the transition's very first frame.
         VStack(spacing: 0) {
             topBar
-            ScrollView {
+            // One buy button, always in reach, for the row chosen above.
+            LeeoShowcasePaywall(showcases: showcases) {
+                EmptyView()
+            } plans: {
+                options
+            } button: {
+                purchaseBar
+            } details: {
                 VStack(alignment: .leading, spacing: 24) {
-                    header
-                    benefits
-                    options
                     comparison
                     fineprint
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 24)
-                .frame(maxWidth: 640)
-                .frame(maxWidth: .infinity)
             }
-            .scrollBounceBehavior(.basedOnSize)
-            // One buy button, always in reach, for the row chosen above.
-            .safeAreaInset(edge: .bottom, spacing: 0) { purchaseBar }
         }
         .background(Color(.systemGroupedBackground).ignoresSafeArea())
         // LeeoKit parts here (the lifetime price notice) draw in the app's colours.
@@ -101,44 +99,15 @@ struct PaywallView: View {
         .padding(.horizontal, 8)
     }
 
-    // MARK: Header
+    // MARK: Showcase
 
-    /// Title, then the one line about what the user just reached for.
-    private var header: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(verbatim: "Not My Tempo Pro")
-                .font(.largeTitle.bold())
-            Text(feature.detail)
-                .font(.body)
-                .foregroundStyle(.secondary)
-                .fixedSize(horizontal: false, vertical: true)
+    /// One page per Pro tool, the one the user reached for first.
+    private var showcases: [LeeoShowcase] {
+        var tools = ProFeature.allCases.filter { $0 != feature }
+        tools.insert(feature, at: 0)
+        return tools.map { f in
+            LeeoShowcase(id: f.rawValue, title: f.title, detail: f.detail) { ProToolArt(feature: f, cue: cue) }
         }
-        .accessibilityElement(children: .combine)
-        .accessibilityAddTraits(.isHeader)
-    }
-
-    // MARK: Benefits
-
-    /// What Pro adds — only the three tools; the free metronome is in the table below.
-    private var benefits: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("The whole metronome stays free. Pro adds three practice tools. Choose yearly or lifetime.")
-                .font(.headline)
-                .fixedSize(horizontal: false, vertical: true)
-            ForEach(ProFeature.allCases) { f in
-                Label {
-                    Text(f.title).fixedSize(horizontal: false, vertical: true)
-                } icon: {
-                    Image(systemName: "checkmark")
-                        .font(.callout.weight(.bold))
-                        .foregroundStyle(cue)
-                }
-                .font(.body.weight(f == feature ? .semibold : .regular))
-                .foregroundStyle(f == feature ? cue : .primary)
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .accessibilityElement(children: .combine)
     }
 
     // MARK: Free vs Pro
@@ -300,12 +269,6 @@ struct PaywallView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
-        .padding(.horizontal, 20)
-        .padding(.top, 12)
-        .padding(.bottom, 8)
-        .frame(maxWidth: 640)
-        .frame(maxWidth: .infinity)
-        .background(.bar)
     }
 
     private var buyButton: some View {
@@ -431,5 +394,103 @@ struct PaywallView: View {
         .font(.subheadline)
         .tint(cue)
         .padding(.bottom, 6)
+    }
+}
+
+// MARK: - Showcase art
+
+/// A small picture of each Pro tool in use, drawn in SwiftUI (no screenshots: it follows
+/// the language, Dark Mode and the cue colour, and costs no app size). Numbers and symbols only.
+private struct ProToolArt: View {
+    let feature: ProFeature
+    let cue: Color
+
+    var body: some View {
+        switch feature {
+        case .practice: practice
+        case .accents:  accents
+        case .tuner:    tuner
+        }
+    }
+
+    /// Speed trainer: the tempo climbs step by step, bar after bar.
+    private var practice: some View {
+        let steps: [Int] = [80, 88, 96, 104, 112, 120]
+        return HStack(alignment: .bottom, spacing: 8) {
+            ForEach(steps.indices, id: \.self) { i in
+                VStack(spacing: 6) {
+                    Text(verbatim: "\(steps[i])")
+                        .font(.caption.weight(.bold).monospacedDigit())
+                        .foregroundStyle(i == steps.count - 1 ? cue : .secondary)
+                    RoundedRectangle(cornerRadius: 6, style: .continuous)
+                        .fill(cue.opacity(0.35 + 0.13 * Double(i)))
+                        .frame(width: 30, height: 40 + CGFloat(i) * 22)
+                }
+            }
+        }
+        .overlay(alignment: .topLeading) {
+            Image(systemName: "chart.line.uptrend.xyaxis").font(.title2.weight(.semibold)).foregroundStyle(cue)
+        }
+        .padding(20)
+    }
+
+    /// Accent editor: every click of the measure is high, low or silent.
+    private var accents: some View {
+        let beats: [CGFloat] = [1, 0.45, 0.7, 0, 1, 0.45, 0.7, 0.45]
+        return VStack(spacing: 14) {
+            HStack(alignment: .bottom, spacing: 8) {
+                ForEach(beats.indices, id: \.self) { i in
+                    RoundedRectangle(cornerRadius: 5, style: .continuous)
+                        .fill(beats[i] == 0 ? Color.secondary.opacity(0.18) : cue.opacity(beats[i] == 1 ? 1 : 0.55))
+                        .frame(width: 24, height: max(10, 110 * beats[i]))
+                        .overlay(alignment: .bottom) {
+                            if beats[i] == 0 {
+                                Image(systemName: "speaker.slash.fill").font(.caption2).foregroundStyle(.secondary).padding(.bottom, 2)
+                            }
+                        }
+                }
+            }
+            .frame(height: 110, alignment: .bottom)
+            HStack(spacing: 8) {
+                ForEach(["music.note", "music.quarternote.3", "music.note.list"], id: \.self) { symbol in
+                    Image(systemName: symbol)
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(cue)
+                        .frame(width: 40, height: 32)
+                        .background(cue.opacity(0.14), in: Capsule())
+                }
+            }
+        }
+        .padding(20)
+    }
+
+    /// Tuner: the note, the needle and the in-tune zone.
+    private var tuner: some View {
+        VStack(spacing: 10) {
+            ZStack(alignment: .bottom) {
+                Circle()
+                    .trim(from: 0.5, to: 1)
+                    .stroke(Color.secondary.opacity(0.2), style: StrokeStyle(lineWidth: 10, lineCap: .round))
+                    .frame(width: 180, height: 180)
+                    .offset(y: 90)
+                Circle()
+                    .trim(from: 0.72, to: 0.78)
+                    .stroke(Color.green, style: StrokeStyle(lineWidth: 10, lineCap: .round))
+                    .frame(width: 180, height: 180)
+                    .offset(y: 90)
+                Capsule()
+                    .fill(cue)
+                    .frame(width: 4, height: 80)
+                    .offset(y: -40)
+                    .rotationEffect(.degrees(6), anchor: .bottom)
+            }
+            .frame(width: 180, height: 90)
+            .clipped()
+            HStack(alignment: .firstTextBaseline, spacing: 4) {
+                Text(verbatim: "A").font(.system(size: 40, weight: .bold, design: .rounded))
+                Text(verbatim: "+3").font(.headline.monospacedDigit()).foregroundStyle(.green)
+            }
+        }
+        .padding(20)
     }
 }
