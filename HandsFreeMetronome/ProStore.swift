@@ -152,11 +152,14 @@ final class ProStore: ObservableObject {
     /// grandfather clause, or the DEBUG dev unlock is active.
     var isPro: Bool { store.hasPro }
 
+    /// 연 구독으로 Pro 인가 — 설정의 '구독 관리 열기' 줄이 선다.
+    var isSubscribed: Bool { store.purchasedProductIDs.contains(Self.yearlyID) }
+
     /// Pro 선물하기 엔진. 상품은 앱이 뜬 뒤에 오고 이 파사드는 그 변화를 알리지 않으므로,
-    /// 화면은 이 객체를 따로 관찰한다(`GiftRows`).
+    /// 화면은 이 객체를 따로 관찰한다(`GiftRow` · `GiftPage`).
     var gift: LeeoGiftStore? { store.gift }
 
-    /// 팁 엔진. 선물처럼 화면이 따로 관찰한다(`LeeoTipJarLink` · `LeeoTipAskSlot`).
+    /// 팁 엔진. 선물처럼 화면이 따로 관찰한다(`TipRow` · `LeeoTipAskSlot`).
     var tipJar: LeeoTipJar? { store.tipJar }
 
     /// Whether `feature` is open right now — the Spec's gate (`proOnly`) read

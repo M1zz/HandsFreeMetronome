@@ -2,12 +2,17 @@ import SwiftUI
 import StoreKit
 import LeeoKit
 
-/// The Pro paywall, in the shared Leeo layout: header, a Free vs Pro table, then
-/// yearly / lifetime (`LeeoTermPicker`) and one buy button, then restore and terms.
+/// The Pro paywall, in the same template as ClipKeyboard's:
 ///
-/// **What is free comes first.** Most rows of the table are ✓ in both columns — the
-/// whole metronome and voice control stay free; Pro only adds three practice tools.
-/// The feature the user just reached for is highlighted in the table.
+///     header            title + the one line about what the user just reached for
+///     benefits          what Pro adds (three tools), the one reached for in the accent colour
+///     yearly · lifetime a vertical list; each row shows the full price and what it bills
+///     compare           the Free vs Pro table, folded
+///     fine print        renewal terms, restore · redeem code · privacy · terms
+///     ─── pinned ───
+///     one buy button    for the row chosen above
+///
+/// **What is free comes first** in the table: the whole metronome and voice control stay free.
 struct PaywallView: View {
     @ObservedObject var store: ProStore
     /// The feature whose gate the user hit — highlighted in the table.
@@ -19,6 +24,9 @@ struct PaywallView: View {
     private let cue = Color.cue   // see Palette.swift
     @State private var term: LeeoPlanTerm = .yearly
     @State private var showOfferCode = false
+    @State private var showsComparison = false
+    /// Only someone who never had the yearly plan gets its intro offer — don't promise it to others.
+    @State private var introEligible = false
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
@@ -31,18 +39,22 @@ struct PaywallView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     header
+                    benefits
+                    options
                     comparison
-                    plans
-                    footerLinks
+                    fineprint
                 }
-                .padding(20)
+                .padding(.horizontal, 20)
+                .padding(.bottom, 24)
                 .frame(maxWidth: 640)
                 .frame(maxWidth: .infinity)
             }
             .scrollBounceBehavior(.basedOnSize)
+            // One buy button, always in reach, for the row chosen above.
+            .safeAreaInset(edge: .bottom, spacing: 0) { purchaseBar }
         }
         .background(Color(.systemGroupedBackground).ignoresSafeArea())
-        // The yearly / lifetime picker draws in the app's colours.
+        // LeeoKit parts here (the lifetime price notice) draw in the app's colours.
         .leeoStyle(LeeoStyle(accent: cue,
                              bg: Color(.systemGroupedBackground),
                              surface: Color(.secondarySystemGroupedBackground),
@@ -54,6 +66,9 @@ struct PaywallView: View {
         .onAppear {
             store.lastError = nil
             Task { await store.loadProducts() }   // no-op once the set is complete
+        }
+        .task(id: yearly?.id) {
+            introEligible = await yearly?.subscription?.isEligibleForIntroOffer ?? false
         }
         // A successful purchase (or restore) closes the paywall by itself,
         // dropping the user straight into the feature they reached for.
@@ -88,27 +103,58 @@ struct PaywallView: View {
 
     // MARK: Header
 
+    /// Title, then the one line about what the user just reached for.
     private var header: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Image(systemName: feature.icon)
-                .font(.system(size: 34, weight: .semibold))
-                .foregroundStyle(cue)
-                .frame(width: 72, height: 72)
-                .background(Circle().fill(cue.opacity(0.14)))
-                .accessibilityHidden(true)
+        VStack(alignment: .leading, spacing: 10) {
             Text(verbatim: "Not My Tempo Pro")
                 .font(.largeTitle.bold())
-                .accessibilityAddTraits(.isHeader)
-            Text("The whole metronome stays free. Pro adds three practice tools. Choose yearly or lifetime.")
+            Text(feature.detail)
                 .font(.body)
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
         }
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isHeader)
+    }
+
+    // MARK: Benefits
+
+    /// What Pro adds — only the three tools; the free metronome is in the table below.
+    private var benefits: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("The whole metronome stays free. Pro adds three practice tools. Choose yearly or lifetime.")
+                .font(.headline)
+                .fixedSize(horizontal: false, vertical: true)
+            ForEach(ProFeature.allCases) { f in
+                Label {
+                    Text(f.title).fixedSize(horizontal: false, vertical: true)
+                } icon: {
+                    Image(systemName: "checkmark")
+                        .font(.callout.weight(.bold))
+                        .foregroundStyle(cue)
+                }
+                .font(.body.weight(f == feature ? .semibold : .regular))
+                .foregroundStyle(f == feature ? cue : .primary)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: Free vs Pro
 
     private var comparison: some View {
+        DisclosureGroup(isExpanded: $showsComparison) {
+            comparisonTable.padding(.top, 12)
+        } label: {
+            Text("Compare all features")
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(.secondary)
+        }
+        .tint(.secondary)
+    }
+
+    private var comparisonTable: some View {
         Grid(alignment: .leading, horizontalSpacing: 12, verticalSpacing: 12) {
             GridRow {
                 Text("Feature")
@@ -168,28 +214,98 @@ struct PaywallView: View {
     /// The plan the button buys. Falls back to whichever one the store returned.
     private var chosen: Product? { term == .yearly ? (yearly ?? lifetime) : (lifetime ?? yearly) }
 
+    /// The row the buy button buys. Falls back to whichever one the store returned.
+    private var chosenTerm: LeeoPlanTerm { chosen?.id == ProStore.lifetimeID ? .lifetime : .yearly }
+
     @ViewBuilder
-    private var plans: some View {
+    private var options: some View {
         if store.products.isEmpty {
             plansStatus
         } else {
-            VStack(alignment: .leading, spacing: 14) {
-                LeeoTermPicker(term: $term, yearly: yearly, lifetime: lifetime)
-                buyButton
-                if let error = store.lastError {
-                    Text(error)
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                renewalDisclosure
+            VStack(spacing: 10) {
+                optionRow(.yearly, yearly)
+                optionRow(.lifetime, lifetime)
+                if chosenTerm == .lifetime { LeeoLifetimePriceNotice() }
             }
-            // LeeoTermPicker is meant to sit inside a card: its unselected option
-            // is drawn in `surfaceAlt`, which only reads against the card.
-            .padding(16)
+        }
+    }
+
+    /// One plan: a radio mark, its name and a small note, and on the right the full
+    /// price with what it bills — never a per-month figure that blurs the billing.
+    private func optionRow(_ t: LeeoPlanTerm, _ item: Product?) -> some View {
+        let selected = t == chosenTerm
+        return Button {
+            term = t
+        } label: {
+            HStack(spacing: 12) {
+                Image(systemName: selected ? "checkmark.circle.fill" : "circle")
+                    .font(.title3)
+                    .foregroundStyle(selected ? cue : Color(.tertiaryLabel))
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(t == .yearly ? LeeoLadderText.yearly : LeeoLadderText.lifetime)
+                        .font(.body.weight(.semibold))
+                    if let note = caption(t) {
+                        Text(note)
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                Spacer(minLength: 8)
+                Text(item.map { t == .yearly ? String(format: LeeoLadderText.perYearFormat, $0.displayPrice) : $0.displayPrice } ?? " ")
+                    .font(.body.weight(.semibold))
+                    .monospacedDigit()
+                    .multilineTextAlignment(.trailing)
+            }
+            .foregroundStyle(Color.primary)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 14)
+            .frame(maxWidth: .infinity, minHeight: 60)
             .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .fill(Color(.secondarySystemGroupedBackground)))
+            .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .strokeBorder(selected ? cue : .clear, lineWidth: 2))
+            .contentShape(Rectangle())
         }
+        .buttonStyle(.plain)
+        .disabled(item == nil)
+        .opacity(item == nil ? 0.5 : 1)
+        .accessibilityAddTraits(selected ? .isSelected : [])
+    }
+
+    /// Under the name: the yearly intro offer (only for those who can get it), or how
+    /// many years of yearly the lifetime price is worth.
+    private func caption(_ t: LeeoPlanTerm) -> String? {
+        switch t {
+        case .yearly:
+            guard introEligible, let offer = yearly?.subscription?.introductoryOffer else { return nil }
+            if offer.paymentMode == .freeTrial { return trialLabel(offer) }
+            return String(format: LeeoLadderText.introFormat, offer.displayPrice)
+        case .lifetime:
+            guard let yearly, let lifetime, yearly.price > 0 else { return nil }
+            let years = Int(NSDecimalNumber(decimal: lifetime.price / yearly.price).doubleValue.rounded(.down))
+            return years >= 2 ? String(format: LeeoLadderText.lifetimeWorthFormat, years) : nil
+        }
+    }
+
+    // MARK: Pinned buy button
+
+    private var purchaseBar: some View {
+        VStack(spacing: 10) {
+            buyButton
+            if let error = store.lastError {
+                Text(error)
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(.horizontal, 20)
+        .padding(.top, 12)
+        .padding(.bottom, 8)
+        .frame(maxWidth: 640)
+        .frame(maxWidth: .infinity)
+        .background(.bar)
     }
 
     private var buyButton: some View {
@@ -206,7 +322,7 @@ struct PaywallView: View {
             }
             .font(.headline)
             .foregroundStyle(Color.onCue)
-            .frame(maxWidth: .infinity, minHeight: 52)
+            .frame(maxWidth: .infinity, minHeight: 54)
             .background(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(cue))
         }
         .buttonStyle(.plain)
@@ -216,12 +332,7 @@ struct PaywallView: View {
     }
 
     private var buyTitle: String {
-        guard let chosen else { return String(localized: "Subscribe yearly") }
-        if chosen.id == ProStore.lifetimeID { return String(localized: "Buy lifetime") }
-        if let trial = chosen.subscription?.introductoryOffer, trial.paymentMode == .freeTrial {
-            return trialLabel(trial)
-        }
-        return String(localized: "Subscribe yearly")
+        chosen?.id == ProStore.lifetimeID ? String(localized: "Buy lifetime") : String(localized: "Subscribe yearly")
     }
 
     /// Whole sentences per period — a translated unit word can't be spliced
@@ -262,6 +373,14 @@ struct PaywallView: View {
             }
         }
         .font(.body)
+    }
+
+    /// Renewal terms, then restore · redeem · policies — at the bottom of the page.
+    private var fineprint: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            renewalDisclosure
+            footerLinks
+        }
     }
 
     /// App Review 3.1.2: auto-renew terms must be stated next to the price.

@@ -286,27 +286,81 @@ struct UsageStatsSection: View {
 ///    코드를 다시 보거나 문의까지 갈 길이 있어야 한다.
 /// ⚠️ 문구는 LeeoKit 카탈로그에 있다(`LeeoGiftText`) — 24개 언어가 이미 들어 있다.
 /// ⚠️ 엔진(`LeeoGiftStore`)은 따로 관찰한다. 상품은 앱이 뜬 뒤에 오는데 `ProStore` 는 그 변화를 알리지 않는다.
-struct GiftRows: View {
-    @ObservedObject var gift: LeeoGiftStore
-    let isPro: Bool
-    @State private var showSupport = false
+/// 설정의 '개발자 응원하기' 줄 — 클립키보드와 같다: 제목 · 한 줄 설명 · 응원한 사람의 단계 배지.
+/// 누르면 응원 화면(`LeeoTipJarView`, 지금 단계와 다음 단계 카드). 팁 상품이 App Store 에서 와야 선다.
+struct TipRow: View {
+    @ObservedObject var tipJar: LeeoTipJar
 
     var body: some View {
-        let sends = gift.isAvailable || gift.pendingCount > 0 || !gift.sentGifts.isEmpty
-        // 이미 Pro 인 사람은 받을 것이 없다 — 받은 적이 있으면 그 기록을 볼 수 있게만 남긴다.
-        let receives = gift.canRedeem && (!isPro || gift.redeemed != nil)
-        if sends || receives {
-            Section {
-                if sends {
+        if tipJar.isAvailable {
+            NavigationLink {
+                LeeoTipJarView<HandsFreeMetronomeSpec>(tipJar: tipJar)
+            } label: {
+                Label {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(LeeoTipText.entry)
+                        Text(LeeoTipText.entrySubtitle)
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                        LeeoSupporterBadge(tipJar: tipJar)
+                            .padding(.top, 4)
+                    }
+                } icon: {
+                    Image(systemName: "heart.fill")
+                }
+            }
+            .task { await tipJar.syncSupporter(containerIdentifier: HandsFreeMetronomeSpec.feedback.containerIdentifier) }
+        }
+    }
+}
+
+/// 설정의 선물하기 한 줄. 보낼 선물이 있거나 받은 코드를 넣을 수 있을 때만 선다.
+struct GiftRow: View {
+    @ObservedObject var gift: LeeoGiftStore
+    let isPro: Bool
+
+    var body: some View {
+        if GiftPage.sends(gift) || GiftPage.receives(gift, isPro: isPro) {
+            NavigationLink {
+                GiftPage(gift: gift, isPro: isPro)
+            } label: {
+                Label(LeeoGiftText.sendEntry, systemImage: "gift.fill")
+            }
+        }
+    }
+}
+
+/// 선물 화면: Pro 선물 보내기, 그 아래 받은 코드 넣기(아직 Pro 가 아닌 사람만).
+struct GiftPage: View {
+    @ObservedObject var gift: LeeoGiftStore
+    let isPro: Bool
+    /// 선물이 안 될 때의 문의 창(결제 번호 · 코드가 붙는다) — 막힌 사람을 놓치지 않게.
+    @State private var showSupport = false
+
+    /// 상품이 왔거나, 이미 보낸 선물 · 준비 중인 결제가 있으면 늘 선다.
+    static func sends(_ gift: LeeoGiftStore) -> Bool {
+        gift.isAvailable || gift.pendingCount > 0 || !gift.sentGifts.isEmpty
+    }
+
+    /// 이미 Pro 인 사람은 받을 것이 없다 — 받은 적이 있으면 그 기록을 볼 수 있게만 남긴다.
+    static func receives(_ gift: LeeoGiftStore, isPro: Bool) -> Bool {
+        gift.canRedeem && (!isPro || gift.redeemed != nil)
+    }
+
+    var body: some View {
+        List {
+            if Self.sends(gift) {
+                Section {
                     NavigationLink {
-                        // 선물이 안 되면 결제 번호·코드를 붙여 문의하게 한다 — 막힌 사람을 놓치지 않게.
                         LeeoGiftView<HandsFreeMetronomeSpec>(gift: gift, showsRedeemLink: false,
                                                              onContactSupport: { showSupport = true })
                     } label: {
                         Label(LeeoGiftText.sendEntry, systemImage: "gift.fill")
                     }
                 }
-                if receives {
+            }
+            if Self.receives(gift, isPro: isPro) {
+                Section {
                     NavigationLink {
                         LeeoGiftRedeemView<HandsFreeMetronomeSpec>(gift: gift,
                                                                    onContactSupport: { showSupport = true })
@@ -315,16 +369,18 @@ struct GiftRows: View {
                     }
                 }
             }
-            .sheet(isPresented: $showSupport) {
-                NavigationStack {
-                    LeeoFeedbackView<HandsFreeMetronomeSpec>(initialType: .bug, extraInfo: gift.supportLines,
-                                                             initialCategory: .purchase)
-                        .toolbar {
-                            ToolbarItem(placement: .confirmationAction) {
-                                Button { showSupport = false } label: { Label("Done", systemImage: "checkmark") }
-                            }
+        }
+        .navigationTitle(LeeoGiftText.sendEntry)
+        .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $showSupport) {
+            NavigationStack {
+                LeeoFeedbackView<HandsFreeMetronomeSpec>(initialType: .bug, extraInfo: gift.supportLines,
+                                                         initialCategory: .purchase)
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button { showSupport = false } label: { Label("Done", systemImage: "checkmark") }
                         }
-                }
+                    }
             }
         }
     }

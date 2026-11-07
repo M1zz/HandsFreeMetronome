@@ -138,75 +138,7 @@ extension ContentView {
     var settingsSheet: some View {
         NavigationStack {
             List {
-                Section {
-                    if pro.isPro {
-                        HStack(spacing: 12) {
-                            Image(systemName: "checkmark.seal.fill")
-                                .foregroundStyle(cue)
-                                .frame(width: 22)
-                            Text("Pro unlocked — thank you!")
-                                .font(.subheadline.weight(.semibold))
-                        }
-                        .accessibilityElement(children: .combine)
-                    } else {
-                        Button {
-                            panel = nil
-                            withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = .practice }
-                        } label: {
-                            HStack(spacing: 12) {
-                                Image(systemName: "crown.fill")
-                                    .foregroundStyle(cue)
-                                    .frame(width: 22)
-                                VStack(alignment: .leading, spacing: 2) {
-                                    Text("Unlock Pro")
-                                        .font(.subheadline.weight(.semibold))
-                                        .foregroundStyle(.primary)
-                                    Text("Practice mode · accent editor & presets · tuner")
-                                        .font(.footnote).foregroundStyle(.secondary)
-                                }
-                            }
-                        }
-                        .accessibilityInputLabels(["Unlock Pro", "Pro", "Upgrade"])
-                        // 새 기기 · 다시 설치한 사람이 페이월을 거치지 않고도 되찾는 길.
-                        // 되찾으면 이 칸이 "Pro unlocked" 로 바뀌고, 없으면 이유가 아래에 남는다.
-                        Button {
-                            Task { await pro.restore() }
-                        } label: {
-                            HStack(spacing: 12) {
-                                Image(systemName: "arrow.clockwise")
-                                    .foregroundStyle(cue)
-                                    .frame(width: 22)
-                                Text("Restore Purchases")
-                                    .font(.subheadline.weight(.semibold))
-                                    .foregroundStyle(.primary)
-                                Spacer(minLength: 0)
-                                if pro.isRestoring { ProgressView() }
-                            }
-                        }
-                        .disabled(pro.isRestoring)
-                        .accessibilityHint("Restores a previous Pro purchase")
-                        .accessibilityInputLabels(["Restore", "Restore purchases"])
-                        if let error = pro.lastError, !pro.isRestoring {
-                            Text(error)
-                                .font(.footnote)
-                                .foregroundStyle(.secondary)
-                        }
-                    }
-                } header: {
-                    Text("Not My Tempo Pro")
-                }
-                // 개발자 응원하기(팁)는 Pro 바로 아래 제 칸에, 그 아래 선물하기.
-                // 인앱 상품은 모두 설정 맨 위에 모아 둔다(심사 2.1(b): 찾을 수 있어야 한다).
-                // 상품이 App Store 에서 와야 줄이 선다.
-                if let tipJar = pro.tipJar {
-                    Section {
-                        LeeoTipJarLink<HandsFreeMetronomeSpec>(tipJar: tipJar)
-                    }
-                }
-                // Pro 선물 보내기 · App Store 코드 넣기 (→ GiftRows)
-                if let gift = pro.gift {
-                    GiftRows(gift: gift, isPro: pro.isPro)
-                }
+                planSection
                 // 영어 명령이 더 익숙한 사람도 있어서, 설정에서도 고른다.
                 commandLanguageSection
                 Section {
@@ -245,12 +177,94 @@ extension ContentView {
                 DeveloperContactSection(accent: cue)
             }
             .navigationTitle("Settings")
+            .manageSubscriptionsSheet(isPresented: $showManageSubscriptions)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button { panel = nil } label: { Label("Done", systemImage: "checkmark") }
                 }
             }
+        }
+    }
+
+    /// 요금제 · 응원 · 선물을 한 칸에 — 클립키보드 설정과 같은 모양이다. 돈 이야기는 여기 모여 있다.
+    /// 인앱 상품은 모두 설정 맨 위에 둔다(심사 2.1(b): 찾을 수 있어야 한다).
+    var planSection: some View {
+        Section {
+            proRows
+            if let tipJar = pro.tipJar { TipRow(tipJar: tipJar) }
+            // Pro 선물 보내기 · 받은 코드 넣기는 한 줄, 누르면 선물 화면(→ GiftPage)
+            if let gift = pro.gift { GiftRow(gift: gift, isPro: pro.isPro) }
+            // 산 사람은 되돌릴 구매가 없다. 나머지는 칸 끝에 복원을 둔다.
+            if !pro.isPro { restoreRow }
+        } header: {
+            Text("Plan & support")
+        }
+    }
+
+    @ViewBuilder
+    private var proRows: some View {
+        if pro.isPro {
+            HStack(spacing: 12) {
+                Image(systemName: "checkmark.seal.fill")
+                    .font(.title2)
+                    .foregroundStyle(.green)
+                    .accessibilityHidden(true)
+                Text("Pro unlocked — thank you!")
+                    .font(.headline)
+            }
+            .accessibilityElement(children: .combine)
+            // 구독에 묶였다고 느끼는 사람이 늘 나갈 길.
+            if pro.isSubscribed {
+                Button { showManageSubscriptions = true } label: {
+                    Label(LeeoLadderText.manageSubscription, systemImage: "calendar.badge.clock")
+                }
+                .tint(cue)
+            }
+        } else {
+            Button {
+                panel = nil
+                withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = .practice }
+            } label: {
+                HStack(spacing: 12) {
+                    Image(systemName: "sparkles")
+                        .font(.title2)
+                        .foregroundStyle(cue)
+                        .accessibilityHidden(true)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Unlock Pro")
+                            .font(.headline)
+                            .foregroundStyle(.primary)
+                        Text("Practice mode · accent editor & presets · tuner")
+                            .font(.footnote).foregroundStyle(.secondary)
+                    }
+                }
+            }
+            .accessibilityInputLabels(["Unlock Pro", "Pro", "Upgrade"])
+        }
+    }
+
+    /// 새 기기 · 다시 설치한 사람이 페이월을 거치지 않고도 되찾는 길.
+    /// 되찾으면 위 줄이 "Pro unlocked" 로 바뀌고, 없으면 이유가 아래에 남는다.
+    @ViewBuilder
+    private var restoreRow: some View {
+        Button {
+            Task { await pro.restore() }
+        } label: {
+            HStack {
+                Label("Restore Purchases", systemImage: "arrow.clockwise")
+                    .foregroundStyle(.secondary)
+                Spacer(minLength: 0)
+                if pro.isRestoring { ProgressView() }
+            }
+        }
+        .disabled(pro.isRestoring)
+        .accessibilityHint("Restores a previous Pro purchase")
+        .accessibilityInputLabels(["Restore", "Restore purchases"])
+        if let error = pro.lastError, !pro.isRestoring {
+            Text(error)
+                .font(.footnote)
+                .foregroundStyle(.secondary)
         }
     }
 

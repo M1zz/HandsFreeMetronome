@@ -70,6 +70,7 @@ struct ContentView: View {
     @AppStorage(NotMyTempoOnboardingView.hasCompletedOnboardingKey) var hasCompletedOnboarding = false
     @AppStorage("lastSeenWhatsNewVersion") var lastSeenWhatsNewVersion = ""
     @State var showOnboarding = false
+    @State var showManageSubscriptions = false   // 설정 ▸ 구독 관리 열기
     @State var showWhatsNew = false
     @State var playStartedAt: Date?         // a run long enough to count as practice
     @State var showReviewGate = false       // "Enjoying Not My Tempo?" right after practice
