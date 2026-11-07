@@ -1933,21 +1933,6 @@ struct ContentView: View {
         NavigationStack {
             List {
                 Section {
-                    Toggle(isOn: $usesVoiceControl) {
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text("I use iOS Voice Control").font(.subheadline.weight(.semibold))
-                            Text("Turns off this app\u{2019}s mic so the two don\u{2019}t clash. Control it by saying \u{201C}Tap Start\u{201D}, \u{201C}Tap Faster\u{201D}, \u{201C}Tap 3 beats\u{201D}.")
-                                .font(.footnote).foregroundStyle(.secondary)
-                        }
-                    }
-                    .tint(cue)
-                    .accessibilityHint("Turns off the app's own microphone and drives controls by name")
-                } header: {
-                    Text("Accessibility")
-                }
-                // Can be switched off remotely (→ NotMyTempoFlag.instrumentSignal).
-                if NoteSignalDetector.isAvailable { noteSignalSection }
-                Section {
                     if pro.isPro {
                         HStack(spacing: 12) {
                             Image(systemName: "checkmark.seal.fill")
@@ -2001,18 +1986,36 @@ struct ContentView: View {
                                 .foregroundStyle(.secondary)
                         }
                     }
-                    // 개발자 응원하기(팁) — 인앱 상품은 한 칸에 모아 둔다(심사 2.1(b): 찾을 수 있어야 한다).
-                    // 상품이 App Store 에서 와야 줄이 선다.
-                    if let tipJar = pro.tipJar {
-                        LeeoTipJarLink<HandsFreeMetronomeSpec>(tipJar: tipJar)
-                    }
                 } header: {
                     Text("Not My Tempo Pro")
+                }
+                // 개발자 응원하기(팁)는 Pro 바로 아래 제 칸에, 그 아래 선물하기.
+                // 인앱 상품은 모두 설정 맨 위에 모아 둔다(심사 2.1(b): 찾을 수 있어야 한다).
+                // 상품이 App Store 에서 와야 줄이 선다.
+                if let tipJar = pro.tipJar {
+                    Section {
+                        LeeoTipJarLink<HandsFreeMetronomeSpec>(tipJar: tipJar)
+                    }
                 }
                 // Pro 선물 보내기 · App Store 코드 넣기 (→ GiftRows)
                 if let gift = pro.gift {
                     GiftRows(gift: gift, isPro: pro.isPro)
                 }
+                Section {
+                    Toggle(isOn: $usesVoiceControl) {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("I use iOS Voice Control").font(.subheadline.weight(.semibold))
+                            Text("Turns off this app\u{2019}s mic so the two don\u{2019}t clash. Control it by saying \u{201C}Tap Start\u{201D}, \u{201C}Tap Faster\u{201D}, \u{201C}Tap 3 beats\u{201D}.")
+                                .font(.footnote).foregroundStyle(.secondary)
+                        }
+                    }
+                    .tint(cue)
+                    .accessibilityHint("Turns off the app's own microphone and drives controls by name")
+                } header: {
+                    Text("Accessibility")
+                }
+                // Can be switched off remotely (→ NotMyTempoFlag.instrumentSignal).
+                if NoteSignalDetector.isAvailable { noteSignalSection }
                 Section {
                     LeeoSupportSection<HandsFreeMetronomeSpec>()
                     // 앞으로 만들 기능 — 원본은 HandsFreeMetronomeRoadmap.swift
