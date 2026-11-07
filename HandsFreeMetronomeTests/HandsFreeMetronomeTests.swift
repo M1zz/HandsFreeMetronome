@@ -297,3 +297,58 @@ final class VectorisedPitchTests: XCTestCase {
         XCTAssertLessThan(new, old)
     }
 }
+
+/// How the practice report reads a run (→ PracticeLog.swift).
+final class PracticeReportTests: XCTestCase {
+    /// A run from (second, bpm) changes, ending at `seconds`.
+    private func run(_ seconds: Double, _ changes: [(Double, Int)]) -> PracticeReport {
+        PracticeSession(date: Date(), seconds: seconds,
+                        points: changes.map { .init(second: $0.0, bpm: $0.1) } + [.init(second: seconds, bpm: changes.last!.1)])
+            .report
+    }
+
+    func testEvenClimbHasNoWallsAndStartsHalfwayNextTime() {
+        // 50 → 120 in steps of 10, one minute each, then 120 to the end.
+        let r = run(600, (0..<8).map { (Double($0) * 60, 50 + $0 * 10) })
+        XCTAssertEqual(r.startBPM, 50)
+        XCTAssertEqual(r.peakBPM, 120)
+        XCTAssertEqual(r.peakSeconds, 180)
+        XCTAssertTrue(r.walls.isEmpty)
+        XCTAssertEqual(r.advice, .halfway)
+        XCTAssertEqual(r.nextStart, 85)
+    }
+
+    func testLongHoldBelowTheTopIsStuck() {
+        // One minute each, except four minutes at 90.
+        let r = run(540, [(0, 70), (60, 80), (120, 90), (360, 100), (420, 110)])
+        XCTAssertEqual(r.walls.map(\.kind), [.stuck])
+        XCTAssertEqual(r.walls.first?.hold.bpm, 90)
+        XCTAssertEqual(r.walls.first?.hold.seconds, 240)
+        XCTAssertEqual(r.advice, .warmUpToWall)
+        XCTAssertEqual(r.nextStart, 80)
+    }
+
+    func testDroppingBackIsAWall() {
+        let r = run(300, [(0, 100), (60, 110), (120, 120), (180, 110)])
+        XCTAssertEqual(r.walls.map(\.kind), [.backedOff])
+        XCTAssertEqual(r.walls.first?.hold.bpm, 120)
+        XCTAssertEqual(r.endBPM, 110)
+        XCTAssertEqual(r.nextStart, 110)
+    }
+
+    func testOneSteadyTempoSuggestsOneStepFaster() {
+        let r = run(300, [(0, 92)])
+        XCTAssertTrue(r.walls.isEmpty)
+        XCTAssertEqual(r.peakSeconds, 300)
+        XCTAssertEqual(r.advice, .stepUp)
+        XCTAssertEqual(r.nextStart, 95)
+    }
+
+    func testTemposPassedWhileDraggingDoNotCount() {
+        // A drag through 61…69 within a second, then 70 for the rest.
+        let r = run(120, [(0, 60), (30, 63), (30.5, 67), (31, 70)])
+        XCTAssertEqual(r.startBPM, 60)
+        XCTAssertEqual(r.peakBPM, 70)
+        XCTAssertTrue(r.walls.isEmpty)
+    }
+}

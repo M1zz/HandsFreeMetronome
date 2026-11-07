@@ -120,6 +120,7 @@ extension ContentView {
             switch scene {
             case "playing", "orbit", "count": metronome.start()
             case "timer": metronome.setPracticeTimer(minutes: 15); metronome.start()
+            case "report": metronome.showSampleRun(); present(.report)
             case "voice": showHelp()
             case "commands": present(.commands)
             case "settings": present(.settings)

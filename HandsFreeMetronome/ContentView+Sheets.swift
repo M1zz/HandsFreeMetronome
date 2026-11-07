@@ -420,6 +420,23 @@ extension ContentView {
                             .disabled(metronome.practiceTimerRemaining == metronome.practiceTimerMinutes * 60)
                     }
                 }
+                Section {
+                    if let run = metronome.finishedRun {
+                        NavigationLink {
+                            PracticeReportView(session: run, onUseTempo: useTempo)
+                                .navigationTitle("Last practice")
+                        } label: {
+                            Label("Last practice", systemImage: "chart.xyaxis.line")
+                        }
+                    }
+                    NavigationLink {
+                        PracticeLogView(onUseTempo: useTempo)
+                    } label: {
+                        Label("Saved practice", systemImage: "tray.full")
+                    }
+                } footer: {
+                    Text("When the timer ends, you see how your tempo climbed and where to start next time.")
+                }
             }
             .navigationTitle("Practice timer")
             .navigationBarTitleDisplayMode(.inline)
@@ -430,6 +447,31 @@ extension ContentView {
             }
         }
         .presentationDetents([.medium, .large])
+    }
+
+    // MARK: Practice report
+
+    /// Shown when a timer run ends (→ PracticeReportView.swift).
+    var reportSheet: some View {
+        NavigationStack {
+            if let run = metronome.finishedRun {
+                PracticeReportView(session: run, onUseTempo: useTempo)
+                    .navigationTitle("Today’s practice")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button { panel = nil } label: { Label("Done", systemImage: "checkmark") }
+                        }
+                    }
+            }
+        }
+    }
+
+    /// "Set this tempo": back to the main screen at the suggested tempo.
+    func useTempo(_ bpm: Int) {
+        metronome.setTempo(bpm)
+        haptic.impactOccurred(intensity: 0.5)
+        present(nil)
     }
 
     /// Quick-pick minute buttons for the practice timer.

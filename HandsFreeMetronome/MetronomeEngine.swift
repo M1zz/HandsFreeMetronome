@@ -19,6 +19,7 @@ final class MetronomeEngine: ObservableObject {
         didSet {
             UserDefaults.standard.set(bpm, forKey: Self.bpmKey)
             if isPlaying { reschedule(realign: false) }
+            logTempo()
         }
     }
 
@@ -100,6 +101,10 @@ final class MetronomeEngine: ObservableObject {
     static let practiceTimerRange = 1...120
     private var countdown: Timer?
     private var countdownEnd = Date()
+    /// The tempo over the current run, and the last run that went the distance —
+    /// what the practice report reads (→ PracticeLog.swift).
+    private var runPoints: [PracticeSession.Point] = []
+    @Published private(set) var finishedRun: PracticeSession?
 
     private static let bpmKey = "metronome.bpm"
     private static let subdivisionKey = "metronome.subdivision"
@@ -433,12 +438,14 @@ final class MetronomeEngine: ObservableObject {
         countdown?.invalidate()
         countdown = nil
         practiceTimerRemaining = practiceTimerMinutes * 60
+        runPoints = []
         if isPlaying { startCountdown() }
     }
 
     private func startCountdown() {
         guard practiceTimerOn, countdown == nil else { return }
         if practiceTimerRemaining <= 0 { practiceTimerRemaining = practiceTimerMinutes * 60 }
+        if practiceTimerRemaining == practiceTimerMinutes * 60 { runPoints = [] }   // a fresh run
         // Count against a deadline rather than decrementing per tick, so a late
         // timer firing (busy main thread) never stretches the practice run.
         countdownEnd = Date().addingTimeInterval(TimeInterval(practiceTimerRemaining))
@@ -448,11 +455,16 @@ final class MetronomeEngine: ObservableObject {
         // .common so it keeps running while a slider or scroll view is tracking.
         RunLoop.main.add(timer, forMode: .common)
         countdown = timer
+        logTempo()
     }
 
     private func countdownTick() {
         let left = Int(countdownEnd.timeIntervalSinceNow.rounded(.up))
         if left <= 0 {
+            let total = Double(practiceTimerMinutes * 60)
+            runPoints.append(.init(second: total, bpm: bpm))
+            finishedRun = PracticeSession(date: Date(), seconds: total, points: runPoints)
+            runPoints = []
             stop()
             practiceTimerRemaining = practiceTimerMinutes * 60   // ready for the next run
             practiceTimerFinished += 1
@@ -468,6 +480,28 @@ final class MetronomeEngine: ObservableObject {
         timer.invalidate()
         countdown = nil
         practiceTimerRemaining = max(0, Int(countdownEnd.timeIntervalSinceNow.rounded(.up)))
+    }
+
+    #if DEBUG
+    /// Screenshots: a 15-minute climb from 60 that got stuck at 90.
+    func showSampleRun() {
+        let changes: [(Double, Int)] = [(0, 60), (60, 65), (120, 70), (180, 75), (240, 80), (300, 85),
+                                        (360, 90), (600, 95), (660, 100), (720, 105), (780, 110)]
+        finishedRun = PracticeSession(date: Date(), seconds: 900,
+                                      points: changes.map { .init(second: $0.0, bpm: $0.1) } + [.init(second: 900, bpm: 110)])
+    }
+    #endif
+
+    /// Note the tempo at this moment of the run. Slider drags change the tempo many
+    /// times a second, so changes within a second of each other are one change.
+    private func logTempo() {
+        guard countdown != nil else { return }
+        let second = max(0, Double(practiceTimerMinutes * 60) - countdownEnd.timeIntervalSinceNow)
+        if let last = runPoints.last, second - last.second < 1 {
+            runPoints[runPoints.count - 1].bpm = bpm
+        } else if runPoints.last?.bpm != bpm {
+            runPoints.append(.init(second: second, bpm: bpm))
+        }
     }
 
     private static func clampTimerMinutes(_ value: Int) -> Int {

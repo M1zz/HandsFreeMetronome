@@ -30,6 +30,8 @@
 		87F5DFE7ED81A130240224AD /* ContentView+Sheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BBABD24CA0EAA31608F24 /* ContentView+Sheets.swift */; };
 		A1C009C7AE9807C35172A681 /* ContentView+Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82A2F5B883C578E54F37DC /* ContentView+Logic.swift */; };
 		50B92F0AED0611D4CCCE408C /* ContentSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C0D9016FF19F49D9147EF8 /* ContentSupport.swift */; };
+		AA84FF01E76EE59D0AB74AFA /* PracticeReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FD8A04532120663C0DB9D7 /* PracticeReportView.swift */; };
+		0CA3A8AF5FE1106ECDB34459 /* PracticeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43789AB9DF21888514A4B2 /* PracticeLog.swift */; };
 		A1000013 /* MetronomeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000003 /* MetronomeEngine.swift */; };
 		A1000014 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004 /* VoiceController.swift */; };
 		A1000015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000005 /* Assets.xcassets */; };
@@ -143,6 +145,8 @@
 		629BBABD24CA0EAA31608F24 /* ContentView+Sheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Sheets.swift"; sourceTree = "<group>"; };
 		5C82A2F5B883C578E54F37DC /* ContentView+Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Logic.swift"; sourceTree = "<group>"; };
 		36C0D9016FF19F49D9147EF8 /* ContentSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentSupport.swift"; sourceTree = "<group>"; };
+		49FD8A04532120663C0DB9D7 /* PracticeReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeReportView.swift"; sourceTree = "<group>"; };
+		4E43789AB9DF21888514A4B2 /* PracticeLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeLog.swift"; sourceTree = "<group>"; };
 		A1000003 /* MetronomeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeEngine.swift; sourceTree = "<group>"; };
 		A1000004 /* VoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceController.swift; sourceTree = "<group>"; };
 		A1000005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 				629BBABD24CA0EAA31608F24 /* ContentView+Sheets.swift */,
 				5C82A2F5B883C578E54F37DC /* ContentView+Logic.swift */,
 				36C0D9016FF19F49D9147EF8 /* ContentSupport.swift */,
+				49FD8A04532120663C0DB9D7 /* PracticeReportView.swift */,
+				4E43789AB9DF21888514A4B2 /* PracticeLog.swift */,
 				A1000003 /* MetronomeEngine.swift */,
 				A1000004 /* VoiceController.swift */,
 				A1000105 /* TunerEngine.swift */,
@@ -601,6 +607,8 @@
 				87F5DFE7ED81A130240224AD /* ContentView+Sheets.swift in Sources */,
 				A1C009C7AE9807C35172A681 /* ContentView+Logic.swift in Sources */,
 				50B92F0AED0611D4CCCE408C /* ContentSupport.swift in Sources */,
+				AA84FF01E76EE59D0AB74AFA /* PracticeReportView.swift in Sources */,
+				0CA3A8AF5FE1106ECDB34459 /* PracticeLog.swift in Sources */,
 				A1000013 /* MetronomeEngine.swift in Sources */,
 				A1000014 /* VoiceController.swift in Sources */,
 				A1000104 /* TunerEngine.swift in Sources */,

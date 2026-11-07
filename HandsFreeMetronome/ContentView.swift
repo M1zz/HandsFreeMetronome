@@ -220,6 +220,8 @@ struct ContentView: View {
         }
         .sheet(isPresented: isOpen(.trainer)) { trainerSheet }
         .sheet(isPresented: isOpen(.timer)) { timerSheet }
+        // The review prompt waits for the report to close (it skips while a panel is up).
+        .sheet(isPresented: isOpen(.report), onDismiss: askForReviewAfterPractice) { reportSheet }
         // Practice timer ran out (the engine already stopped and chimed): a firm
         // haptic for players who can't hear the chime over their instrument, and
         // a spoken cue for VoiceOver.
@@ -227,6 +229,8 @@ struct ContentView: View {
             UINotificationFeedbackGenerator().notificationOccurred(.success)
             UIAccessibility.post(notification: .announcement,
                                  argument: String(localized: "Practice time is up"))
+            // How the run went. Not over another sheet — the timer sheet links to it.
+            if panel == nil, metronome.finishedRun != nil { present(.report) }
             // A finished timed session is the clearest "this app did its job" moment.
             LeeoEngagement.shared.registerSignificantEvent()
             askForReviewAfterPractice()

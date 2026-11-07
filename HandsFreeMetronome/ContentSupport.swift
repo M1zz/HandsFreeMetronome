@@ -443,6 +443,7 @@ enum Panel: Hashable {
     case trainer    // practice mode (speed trainer)
     case timer      // practice timer
     case accents    // accent grid
+    case report     // how the practice-timer run went
 }
 
 extension ContentView {
