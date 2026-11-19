@@ -88,7 +88,7 @@ Change the beat, hands-free
 
 ### 키워드
 
-saxophone,violin,trumpet,flute,choir,cello,accent,bpm,timing,practice,drum,ukulele,guitar,piano,band
+count in,speed trainer,time signature,polyrhythm,voice control,tap tempo,subdivision,click track,bpm
 
 ### 프로모션 텍스트
 
@@ -160,7 +160,7 @@ Not My Tempo: 声で操作するメトロノーム
 
 ### 키워드
 
-BPM,リズム,練習,ドラム,ギター,ピアノ,ベース,チューナー,クリック,拍子,音声認識,ハンズフリー,アクセント,吹奏楽,バイオリン,チェロ,ウクレレ,バンド,合奏,レッスン,タイミング,カウント
+音声操作,リズムマシン,リズム練習,楽器練習,タップテンポ,ギター練習,ドラム練習,クリック音,チェロ,ハンズフリー,バイオリン,吹奏楽,合奏,音声認識,BPM,ウクレレ,カウント,アクセント,ベース
 
 ### 프로모션 텍스트
 
@@ -543,7 +543,7 @@ Not My Tempo: 语音节拍器
 
 ### 키워드
 
-数拍子,练琴,调音器,BPM,打拍子,速度,吉他,钢琴,架子鼓,贝斯,小提琴,大提琴,尤克里里,重音,节奏,声控,免提,拍号,乐队,校音,古筝,二胡,萨克斯,电子琴,长笛,单簧管,口琴,琵琶
+数拍子,打拍子,免提,二胡,单簧管,竹笛,手鼓,打击乐,节奏练习,鼓,古典吉他,练琴神器,练习,口琴,BPM,萨克斯,长笛,琵琶,大提琴,重音,古筝,练琴,贝斯,电子琴,小提琴,速度,校音,拍号,吉他
 
 ### 프로모션 텍스트
 
