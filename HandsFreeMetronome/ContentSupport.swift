@@ -57,6 +57,7 @@ enum NotMyTempoTipMoments {
         return hours.filter { h >= $0 }.map { threshold in
             LeeoTipMoment(id: "hours.\(threshold)",
                           message: String(localized: "\(h) hours practiced with the click so far",
+                                          locale: .app,
                                           comment: "Tip ask card: total hours practiced with the metronome running"))
         }
     }
@@ -509,5 +510,19 @@ extension ContentView {
                 set: { open in
                     if open { present(p) } else if panel == p { panel = nil }
                 })
+    }
+}
+
+// MARK: - Numbers in Arabic
+
+extension Locale {
+    /// The locale numbers are written in. Arabic keeps 0-9: the app's own strings carry digits
+    /// that can't follow the device ("4/4", "A4", "tempo 120", "±5 BPM"), and a Saudi device's
+    /// default ١٢٣ next to them reads as two scripts. Every other language is the device's own locale.
+    static var app: Locale {
+        guard Bundle.main.preferredLocalizations.first?.hasPrefix("ar") == true else { return .current }
+        var components = Locale.Components(locale: .current)
+        components.numberingSystem = "latn"
+        return Locale(components: components)
     }
 }

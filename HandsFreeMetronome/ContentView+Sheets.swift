@@ -616,7 +616,7 @@ extension ContentView {
 
     /// "440.0 Hz" / "440,0 Hz" — the decimal mark follows the user's region.
     func frequencyText(_ hz: Double) -> String {
-        "\(hz.formatted(.number.precision(.fractionLength(1)).grouping(.never))) Hz"
+        "\(hz.formatted(.number.precision(.fractionLength(1)).grouping(.never).locale(.app))) Hz"
     }
 
     var inTune: Bool { tuner.frequency > 0 && abs(tuner.cents) <= tuneTolerance }
@@ -627,8 +627,8 @@ extension ContentView {
         if inTune { return String(localized: "\(tuner.noteName), in tune") }
         let cents = Int(tuner.cents.rounded())
         return cents > 0
-            ? String(localized: "\(tuner.noteName), \(abs(cents)) cents sharp")
-            : String(localized: "\(tuner.noteName), \(abs(cents)) cents flat")
+            ? String(localized: "\(tuner.noteName), \(abs(cents)) cents sharp", locale: .app)
+            : String(localized: "\(tuner.noteName), \(abs(cents)) cents flat", locale: .app)
     }
 
     var centsMeter: some View {

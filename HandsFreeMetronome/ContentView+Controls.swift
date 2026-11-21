@@ -13,7 +13,7 @@ extension ContentView {
         VStack(spacing: 10) {
             // The big display shows the Italian tempo term (Largo, Moderato…) by
             // default; tap to flip it to the raw BPM number and back.
-            Text(tempoAsNumber ? metronome.bpm.formatted() : MetronomeEngine.tempoName(for: metronome.bpm))
+            Text(tempoAsNumber ? "\(metronome.bpm)" : MetronomeEngine.tempoName(for: metronome.bpm))
                 .font(.system(size: isStand ? standTempoSize : bpmFontSize, weight: .bold, design: .rounded))
                 .lineLimit(1)
                 .allowsTightening(true)   // "Prestissimo" tightens before it shrinks
@@ -61,13 +61,13 @@ extension ContentView {
     var tempoSubtitle: String {
         // Trainer status takes over the subtitle when it's running.
         if metronome.speedTrainerOn {
-            return String(localized: "Speed trainer · +\(metronome.trainerStep) every \(metronome.trainerBars) bars → \(metronome.trainerTarget)")
+            return String(localized: "Speed trainer · +\(metronome.trainerStep) every \(metronome.trainerBars) bars → \(metronome.trainerTarget)", locale: .app)
         }
         // Show whichever representation the big display isn't showing, so the BPM
         // number is always visible somewhere.
         return tempoAsNumber
             ? MetronomeEngine.tempoName(for: metronome.bpm)
-            : String(localized: "\(metronome.bpm) BPM")
+            : String(localized: "\(metronome.bpm) BPM", locale: .app)
     }
 
     // MARK: Subdivision — tap a ring that shows how the beat is divided
@@ -474,15 +474,15 @@ extension ContentView {
         .coachAnchor("timer")
     }
 
-    /// "4:05" — minutes are not padded, so up to 120:00 stays compact. Digits follow the
-    /// device's number setting, like every other number on screen (٤:٠٥ in Arabic digits).
+    /// "4:05" — minutes are not padded, so up to 120:00 stays compact.
     func timerText(_ seconds: Int) -> String {
-        Duration.seconds(max(0, seconds)).formatted(.time(pattern: .minuteSecond(padMinuteToLength: 1)))
+        let s = max(0, seconds)
+        return String(format: "%d:%02d", s / 60, s % 60)
     }
 
     var timerSpokenValue: String {
         let left = Duration.seconds(metronome.practiceTimerRemaining)
-        return String(localized: "\(left.formatted(.units(allowed: [.minutes, .seconds], width: .wide))) left")
+        return String(localized: "\(left.formatted(.units(allowed: [.minutes, .seconds], width: .wide).locale(.app))) left", locale: .app)
     }
 
     /// Button outlines: soft by default, solid enough to see with Increase Contrast.

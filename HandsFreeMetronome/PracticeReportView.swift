@@ -28,11 +28,11 @@ struct PracticeReportView: View {
             Section {
                 row("Tempo", value: "\(report.startBPM) → \(report.endBPM) BPM")
                 row("Top speed", value: "\(report.peakBPM) BPM",
-                    detail: String(localized: "Held for \(duration(report.peakSeconds))"))
+                    detail: String(localized: "Held for \(duration(report.peakSeconds))", locale: .app))
                 flow
             }
             Section {
-                row("Next time", value: String(localized: "Start at \(report.nextStart) BPM"),
+                row("Next time", value: String(localized: "Start at \(report.nextStart) BPM", locale: .app),
                     detail: adviceText)
                 Button {
                     onUseTempo(report.nextStart)
@@ -93,7 +93,7 @@ struct PracticeReportView: View {
             AxisMarks { value in
                 AxisGridLine()
                 AxisValueLabel {
-                    if let minutes = value.as(Double.self) { Text(verbatim: "\(Int(minutes).formatted())′") }
+                    if let minutes = value.as(Double.self) { Text(verbatim: "\(Int(minutes))′") }
                 }
             }
         }
@@ -116,8 +116,8 @@ struct PracticeReportView: View {
 
     private func wallText(_ wall: PracticeReport.Wall) -> String {
         switch wall.kind {
-        case .stuck: return String(localized: "Stuck at \(wall.hold.bpm) BPM for \(duration(wall.hold.seconds))")
-        case .backedOff: return String(localized: "Backed off from \(wall.hold.bpm) BPM")
+        case .stuck: return String(localized: "Stuck at \(wall.hold.bpm) BPM for \(duration(wall.hold.seconds))", locale: .app)
+        case .backedOff: return String(localized: "Backed off from \(wall.hold.bpm) BPM", locale: .app)
         }
     }
 
@@ -146,7 +146,7 @@ struct PracticeReportView: View {
 
     private func duration(_ seconds: Double) -> String {
         Duration.seconds(seconds.rounded())
-            .formatted(.units(allowed: [.minutes, .seconds], width: .abbreviated))
+            .formatted(.units(allowed: [.minutes, .seconds], width: .abbreviated).locale(.app))
     }
 }
 
@@ -181,7 +181,7 @@ struct PracticeLogView: View {
 }
 
 /// "80 → 120 BPM" kept as one left-to-right run (isolated), so the arrow still points from
-/// the start to the peak inside right-to-left (Arabic) text. Digits follow the device setting.
+/// the start to the peak inside right-to-left (Arabic) text.
 func bpmRange(_ from: Int, _ to: Int) -> String {
-    "\u{2066}\(from.formatted()) → \(to.formatted()) BPM\u{2069}"
+    "\u{2066}\(from) → \(to) BPM\u{2069}"
 }

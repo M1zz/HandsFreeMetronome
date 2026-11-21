@@ -75,6 +75,7 @@ struct TempoComplication: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: "LastTempo", provider: TempoProvider()) { entry in
             TempoComplicationView(entry: entry)
+                .environment(\.locale, .app)   // Arabic writes numbers 0-9 (Locale.app)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
         .configurationDisplayName("Last Tempo")

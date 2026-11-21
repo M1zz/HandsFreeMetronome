@@ -16,6 +16,7 @@ struct NotMyTempoWatchApp: App {
     var body: some Scene {
         WindowGroup {
             WristMetronomeView(metronome: .shared)
+                .environment(\.locale, .app)   // Arabic writes numbers 0-9 (Locale.app)
                 // 컴플리케이션을 누르면 바로 시작
                 .onOpenURL { url in
                     if url == WristTempo.startURL { WristMetronome.shared.start() }

@@ -304,10 +304,10 @@ struct PaywallView: View {
         let n = offer.period.value
         switch offer.period.unit {
         case .day where n == 7, .week where n == 1: return String(localized: "Try free for a week")
-        case .day: return String(localized: "Try free for \(n) days")
-        case .week: return String(localized: "Try free for \(n) weeks")
+        case .day: return String(localized: "Try free for \(n) days", locale: .app)
+        case .week: return String(localized: "Try free for \(n) weeks", locale: .app)
         case .month where n == 1: return String(localized: "Try free for a month")
-        case .month: return String(localized: "Try free for \(n) months")
+        case .month: return String(localized: "Try free for \(n) months", locale: .app)
         case .year: return String(localized: "Try free for a year")
         @unknown default: return String(localized: "Free trial")
         }
@@ -419,7 +419,7 @@ private struct ProToolArt: View {
         return HStack(alignment: .bottom, spacing: 8) {
             ForEach(steps.indices, id: \.self) { i in
                 VStack(spacing: 6) {
-                    Text(verbatim: steps[i].formatted())
+                    Text(verbatim: "\(steps[i])")
                         .font(.caption.weight(.bold).monospacedDigit())
                         .foregroundStyle(i == steps.count - 1 ? cue : .secondary)
                     RoundedRectangle(cornerRadius: 6, style: .continuous)
@@ -492,7 +492,7 @@ private struct ProToolArt: View {
             .environment(\.layoutDirection, .leftToRight)
             HStack(alignment: .firstTextBaseline, spacing: 4) {
                 Text(verbatim: "A").font(.system(size: 40, weight: .bold, design: .rounded))
-                Text(verbatim: "+" + 3.formatted()).font(.headline.monospacedDigit()).foregroundStyle(.green)
+                Text(verbatim: "+3").font(.headline.monospacedDigit()).foregroundStyle(.green)
             }
         }
         .padding(20)
