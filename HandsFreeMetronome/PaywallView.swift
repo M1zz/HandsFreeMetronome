@@ -419,7 +419,7 @@ private struct ProToolArt: View {
         return HStack(alignment: .bottom, spacing: 8) {
             ForEach(steps.indices, id: \.self) { i in
                 VStack(spacing: 6) {
-                    Text(verbatim: "\(steps[i])")
+                    Text(verbatim: steps[i].formatted())
                         .font(.caption.weight(.bold).monospacedDigit())
                         .foregroundStyle(i == steps.count - 1 ? cue : .secondary)
                     RoundedRectangle(cornerRadius: 6, style: .continuous)
@@ -431,6 +431,8 @@ private struct ProToolArt: View {
         .overlay(alignment: .topLeading) {
             Image(systemName: "chart.line.uptrend.xyaxis").font(.title2.weight(.semibold)).foregroundStyle(cue)
         }
+        // A tempo axis climbs left to right in every language, like the trend icon.
+        .environment(\.layoutDirection, .leftToRight)
         .padding(20)
     }
 
@@ -486,9 +488,11 @@ private struct ProToolArt: View {
             }
             .frame(width: 180, height: 90)
             .clipped()
+            // A gauge: the needle leans sharp (right) in every language, matching "+3".
+            .environment(\.layoutDirection, .leftToRight)
             HStack(alignment: .firstTextBaseline, spacing: 4) {
                 Text(verbatim: "A").font(.system(size: 40, weight: .bold, design: .rounded))
-                Text(verbatim: "+3").font(.headline.monospacedDigit()).foregroundStyle(.green)
+                Text(verbatim: "+" + 3.formatted()).font(.headline.monospacedDigit()).foregroundStyle(.green)
             }
         }
         .padding(20)

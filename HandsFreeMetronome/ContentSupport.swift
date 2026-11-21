@@ -254,6 +254,8 @@ struct SegmentedRing: View {
             }
         }
         .padding(2)
+        // Equal arcs with their gaps where every language has them: right-to-left mirrors the rotation.
+        .environment(\.layoutDirection, .leftToRight)
     }
 }
 

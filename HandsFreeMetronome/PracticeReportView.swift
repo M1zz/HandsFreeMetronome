@@ -93,11 +93,13 @@ struct PracticeReportView: View {
             AxisMarks { value in
                 AxisGridLine()
                 AxisValueLabel {
-                    if let minutes = value.as(Double.self) { Text(verbatim: "\(Int(minutes))′") }
+                    if let minutes = value.as(Double.self) { Text(verbatim: "\(Int(minutes).formatted())′") }
                 }
             }
         }
-        .accessibilityLabel(Text(verbatim: "\(report.startBPM) → \(report.endBPM) BPM"))
+        // Time runs left to right in every language; mirrored, the labels and the line misalign.
+        .environment(\.layoutDirection, .leftToRight)
+        .accessibilityLabel(Text(verbatim: bpmRange(report.startBPM, report.endBPM)))
     }
 
     // MARK: Rows
@@ -167,7 +169,7 @@ struct PracticeLogView: View {
                     let r = session.report
                     VStack(alignment: .leading, spacing: 2) {
                         Text(session.date.formatted(date: .abbreviated, time: .shortened))
-                        Text(verbatim: "\(r.startBPM) → \(r.peakBPM) BPM")
+                        Text(verbatim: bpmRange(r.startBPM, r.peakBPM))
                             .font(.footnote).foregroundStyle(.secondary).monospacedDigit()
                     }
                 }
@@ -176,4 +178,10 @@ struct PracticeLogView: View {
         }
         .navigationTitle("Saved practice")
     }
+}
+
+/// "80 → 120 BPM" kept as one left-to-right run (isolated), so the arrow still points from
+/// the start to the peak inside right-to-left (Arabic) text. Digits follow the device setting.
+func bpmRange(_ from: Int, _ to: Int) -> String {
+    "\u{2066}\(from.formatted()) → \(to.formatted()) BPM\u{2069}"
 }

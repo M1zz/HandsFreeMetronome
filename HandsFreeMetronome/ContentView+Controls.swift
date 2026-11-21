@@ -13,7 +13,7 @@ extension ContentView {
         VStack(spacing: 10) {
             // The big display shows the Italian tempo term (Largo, Moderato…) by
             // default; tap to flip it to the raw BPM number and back.
-            Text(tempoAsNumber ? "\(metronome.bpm)" : MetronomeEngine.tempoName(for: metronome.bpm))
+            Text(tempoAsNumber ? metronome.bpm.formatted() : MetronomeEngine.tempoName(for: metronome.bpm))
                 .font(.system(size: isStand ? standTempoSize : bpmFontSize, weight: .bold, design: .rounded))
                 .lineLimit(1)
                 .allowsTightening(true)   // "Prestissimo" tightens before it shrinks
@@ -452,7 +452,7 @@ extension ContentView {
                     .contentTransition(.numericText(countsDown: true))
                     .foregroundStyle(on ? cue : Color(.label).opacity(0.7))
                     .minimumScaleFactor(0.6)
-                Image(systemName: "chevron.right")
+                Image(systemName: "chevron.forward")
                     .font(.body.weight(.semibold))
                     .foregroundStyle(.tertiary)
                     .accessibilityHidden(true)
@@ -474,10 +474,10 @@ extension ContentView {
         .coachAnchor("timer")
     }
 
-    /// "4:05" — minutes are not padded, so up to 120:00 stays compact.
+    /// "4:05" — minutes are not padded, so up to 120:00 stays compact. Digits follow the
+    /// device's number setting, like every other number on screen (٤:٠٥ in Arabic digits).
     func timerText(_ seconds: Int) -> String {
-        let s = max(0, seconds)
-        return String(format: "%d:%02d", s / 60, s % 60)
+        Duration.seconds(max(0, seconds)).formatted(.time(pattern: .minuteSecond(padMinuteToLength: 1)))
     }
 
     var timerSpokenValue: String {

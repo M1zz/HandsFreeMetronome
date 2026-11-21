@@ -140,6 +140,12 @@
             "state" : "translated",
             "value" : "เริ่ม"
           }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشغيل"
+          }
         }
       }
     },
@@ -281,6 +287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "หยุด"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إيقاف"
           }
         }
       }
@@ -424,6 +436,12 @@
             "state" : "translated",
             "value" : "ความเร็ว"
           }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإيقاع"
+          }
         }
       }
     },
@@ -562,6 +580,12 @@
           }
         },
         "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld BPM"
+          }
+        },
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld BPM"
@@ -708,6 +732,12 @@
             "state" : "translated",
             "value" : "BPM"
           }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BPM"
+          }
         }
       }
     },
@@ -849,6 +879,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ข้อมือสั่นได้ถึง %lld BPM"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نقرات المعصم حتى %lld BPM"
           }
         }
       }
@@ -992,6 +1028,48 @@
             "state" : "translated",
             "value" : "%lld จังหวะต่อห้อง"
           }
+        },
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld نبضة في المازورة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "نبضة واحدة في المازورة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "نبضتان في المازورة"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld نبضات في المازورة"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld نبضة في المازورة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld نبضة في المازورة"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -1133,6 +1211,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "เปลี่ยนจำนวนจังหวะ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يغيّر عدد النبضات"
           }
         }
       }
@@ -1276,6 +1360,12 @@
             "state" : "translated",
             "value" : "แตะเพื่อเริ่มที่ข้อมือ"
           }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط لتبدأ على معصمك"
+          }
         }
       }
     },
@@ -1417,6 +1507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ความเร็วล่าสุด"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آخر إيقاع"
           }
         }
       }
@@ -1560,6 +1656,12 @@
             "state" : "translated",
             "value" : "แสดงความเร็วล่าสุด แตะเพื่อเริ่มการสั่นที่ข้อมือ"
           }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يعرض آخر إيقاع استخدمته. اضغط لتبدأ نقرات المعصم."
+          }
         }
       }
     },
@@ -1698,6 +1800,12 @@
           }
         },
         "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not My Tempo"
+          }
+        },
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not My Tempo"

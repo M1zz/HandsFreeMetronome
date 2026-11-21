@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "Not My Tempo";
+"CFBundleName" = "Not My Tempo";
+"NSMicrophoneUsageDescription" = "يستخدم التطبيق الميكروفون ليسمع أوامرك الصوتية (مثل “start” و“faster”) فتتحكم فيه دون لمس الشاشة، وليلتقط إيقاع الموسيقى التي تُعزف بالقرب منك.";
+"NSSpeechRecognitionUsageDescription" = "يستخدم التطبيق التعرف على الكلام ليفهم أوامرك الصوتية دون استخدام اليدين.";

@@ -210,7 +210,7 @@ final class VoiceVocabularyTests: XCTestCase {
     func testEveryAppLanguageHasItsOwnWords() {
         let tables = Set(VoiceVocabulary.all.map(\.id))
         for language in ["ko", "ja", "de", "es", "fr", "zh-Hans", "zh-Hant", "pt-BR", "it", "ru", "nl",
-                         "pl", "tr", "sv", "da", "nb", "fi", "cs", "id", "vi", "el", "th"] {
+                         "pl", "tr", "sv", "da", "nb", "fi", "cs", "id", "vi", "el", "th", "ar"] {
             XCTAssertTrue(tables.contains(language), "\(language) has no voice words")
         }
     }
@@ -224,6 +224,16 @@ final class VoiceVocabularyTests: XCTestCase {
         XCTAssertEqual(parser.command(in: "volume up"), .volumeUp)
         XCTAssertEqual(parser.command(in: "4 beats"), .setBeats(4))
         XCTAssertEqual(parser.command(in: "beat 120"), .setTempo(120))
+    }
+
+    /// An Arabic recognizer may write Arabic-Indic digits.
+    func testArabicReadsArabicIndicDigits() {
+        let parser = VoiceCommandParser(vocabulary: .arabic)
+        XCTAssertEqual(parser.command(in: "الإيقاع ١٢٠"), .setTempo(120))
+        XCTAssertEqual(parser.command(in: "الصوت ٦٠"), .setVolume(60))
+        XCTAssertEqual(parser.command(in: "مؤقت ١٥ دقيقة"), .setTimer(15))
+        XCTAssertEqual(parser.command(in: "٤ نبضات"), .setBeats(4))
+        XCTAssertEqual(parser.command(in: "مؤقت نصف ساعة"), .setTimer(30))
     }
 }
 

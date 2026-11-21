@@ -304,7 +304,9 @@ extension ContentView {
                     Text(noteSignal.recorded.isEmpty
                          ? String(localized: "Play 2–5 notes, about half a second each.")
                          : NoteSignalDetector.phrase(noteSignal.recorded))
-                        .font(.footnote.monospaced())
+                        // Only the note names are monospaced: the hint is prose, and a
+                        // monospaced face has no Arabic letters (they fall apart).
+                        .font(noteSignal.recorded.isEmpty ? .footnote : .footnote.monospaced())
                         .foregroundStyle(.secondary)
                     HStack {
                         Button("Cancel", role: .cancel) { noteSignal.cancelRecording() }
@@ -523,7 +525,7 @@ extension ContentView {
                     .accessibilityAddTraits(.isHeader)
                 HStack {
                     Button { closeTuner() } label: {
-                        Label("Back", systemImage: "chevron.left")
+                        Label("Back", systemImage: "chevron.backward")
                             .font(.body.weight(.semibold))
                             .labelStyle(.titleAndIcon)
                     }
@@ -662,6 +664,8 @@ extension ContentView {
         }
         .frame(height: 28)
         .padding(.horizontal, 36)
+        // A gauge, not reading order: flat on the left, sharp on the right in every language.
+        .environment(\.layoutDirection, .leftToRight)
     }
 
     /// `phrase` is what the user says to the app's English recognizer, so it is

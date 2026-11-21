@@ -115,7 +115,7 @@ struct VoiceCommandParser {
     /// Match a command anywhere in the transcription. Longer/compound phrases
     /// ("speed up") are checked before short ones ("up").
     func command(in raw: String) -> Command? {
-        let text = raw.lowercased(with: Locale(identifier: vocabulary.defaultLocale))
+        let text = Self.westernDigits(raw.lowercased(with: Locale(identifier: vocabulary.defaultLocale)))
         func has(_ slot: VoiceVocabulary.Slot) -> Bool {
             vocabulary.words(slot).contains { text.contains($0) }
         }
@@ -194,6 +194,17 @@ struct VoiceCommandParser {
         return nil
     }
 
+    /// Arabic recognizers write "١٢٠"; the number readers below (and `Int`) only know 0-9.
+    static func westernDigits(_ text: String) -> String {
+        String(String.UnicodeScalarView(text.unicodeScalars.map { scalar in
+            switch scalar.value {
+            case 0x0660...0x0669: return Unicode.Scalar(scalar.value - 0x0660 + 0x30)!   // ٠-٩
+            case 0x06F0...0x06F9: return Unicode.Scalar(scalar.value - 0x06F0 + 0x30)!   // ۰-۹
+            default: return scalar
+            }
+        }))
+    }
+
     private func firstNumber(in text: String) -> Int? {
         guard let range = text.range(of: "\\d{2,3}", options: .regularExpression) else { return nil }
         return Int(text[range])
@@ -207,7 +218,7 @@ extension VoiceVocabulary {
     static let all: [VoiceVocabulary] = [
         english, korean, japanese, german, spanish, french, chineseSimplified, chineseTraditional,
         portuguese, italian, russian, dutch, polish, turkish, swedish, danish, norwegian,
-        finnish, czech, indonesian, vietnamese, greek, thai,
+        finnish, czech, indonesian, vietnamese, greek, thai, arabic,
     ]
 
     static let english = VoiceVocabulary(
@@ -959,6 +970,46 @@ extension VoiceVocabulary {
             .timer5: "จับเวลา 5 นาที", .timerOff: "ปิดจับเวลา", .bounce: "เด้ง", .orbit: "วงโคจร",
             .up: "ขึ้น", .down: "ลง", .double: "สองเท่า", .half: "ครึ่ง", .threeBeats: "3 จังหวะ",
             .quarter: "ตัวดำ", .eighth: "เขบ็ตหนึ่งชั้น", .triplet: "ทริปเล็ต", .sixteenth: "เขบ็ตสองชั้น",
+        ])
+
+    // ⚠️ Arabic: no bare "تم" (done) — it hides inside "تمرين" (practice) and "تمهل" (slow down).
+    //    No bare "قف" (stop) either. The tempo word is "الإيقاع": "السرعة" would read as faster ("سرع").
+    static let arabic = VoiceVocabulary(
+        id: "ar", defaultLocale: "ar-SA",
+        words: [
+            .help: ["مساعدة", "ساعدني", "الأوامر"], .tuner: ["موالف", "دوزان", "دوزنة"],
+            .timer: ["مؤقت"], .minute: ["دقيقة", "دقائق", "دقايق"],
+            .timerOff: ["إلغاء", "الغاء", "ألغ", "أوقف", "اوقف", "إيقاف", "ايقاف", "أطفئ", "اطفئ"],
+            .practice: ["تمرين", "تدريب", "مدرب"],
+            .orbit: ["مدار", "دائرة", "دائري"], .bounce: ["ارتداد", "كرة", "قفز"],
+            .view: ["تغيير العرض", "غير العرض", "طريقة العرض"],
+            .mute: ["كتم", "اصمت", "صامت"],
+            .volume: ["الصوت"],
+            .louder: ["ارفع الصوت", "أعلى صوت", "صوت أعلى"],
+            .quieter: ["اخفض الصوت", "أخفض الصوت", "خفض الصوت", "صوت أخفض", "وطي الصوت"],
+            .beat: ["نبض"], .scroll: ["مرر", "تمرير"],
+            .close: ["أغلق", "اغلق", "إغلاق", "اغلاق", "انتهيت", "خلاص"],
+            .sixteenth: ["سادسة عشرية", "سداسية عشرية"], .triplet: ["ثلاثية", "ثلاثيات", "تريوليه"],
+            .eighth: ["ثمنية", "ثُمنية"], .quarter: ["ربعية", "رباعية"],
+            .double: ["ضعف"], .half: ["نصف"],
+            .faster: ["أسرع", "اسرع", "سرع"], .slower: ["أبطأ", "ابطأ", "أبطئ", "ابطئ", "تمهل"],
+            .start: ["ابدأ", "إبدأ", "ابدا", "شغل", "تشغيل"],
+            .stop: ["توقف", "أوقف", "اوقف", "إيقاف", "ايقاف"],
+            .up: ["ارفع", "أعلى", "اعلى"], .down: ["اخفض", "أخفض", "خفض", "أسفل", "اسفل", "انزل"],
+            .hour: ["ساعة"], .halfHour: ["نصف ساعة"],
+        ],
+        numbers: ["واحد": 1, "واحدة": 1, "اثنين": 2, "اثنان": 2, "اثنتين": 2, "ثلاث": 3, "ثلاثة": 3,
+                  "أربع": 4, "اربع": 4, "أربعة": 4, "اربعة": 4, "خمس": 5, "خمسة": 5, "ست": 6, "ستة": 6,
+                  "سبع": 7, "سبعة": 7, "ثمان": 8, "ثماني": 8, "ثمانية": 8, "عشر": 10, "عشرة": 10],
+        tens: ["عشرين": 20, "ثلاثين": 30, "أربعين": 40, "اربعين": 40, "خمسين": 50, "ستين": 60],
+        phrases: [
+            .help: "مساعدة", .close: "أغلق", .done: "انتهيت", .practice: "تمرين",
+            .louder: "ارفع الصوت", .quieter: "اخفض الصوت", .mute: "كتم الصوت", .volume60: "الصوت 60",
+            .scrollDown: "مرر للأسفل", .scrollUp: "مرر للأعلى", .start: "ابدأ", .stop: "توقف",
+            .faster: "أسرع", .slower: "أبطأ", .tempo120: "الإيقاع 120", .tune: "الموالف",
+            .timer5: "مؤقت 5 دقائق", .timerOff: "إلغاء المؤقت", .bounce: "ارتداد", .orbit: "مدار",
+            .up: "ارفع", .down: "اخفض", .double: "الضعف", .half: "النصف", .threeBeats: "ثلاث نبضات",
+            .quarter: "نوتات ربعية", .eighth: "نوتات ثمنية", .triplet: "ثلاثيات", .sixteenth: "نوتات سادسة عشرية",
         ])
 }
 

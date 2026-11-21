@@ -301,6 +301,9 @@ extension ContentView {
                                                  radius: radius, center: center))
                     }
                 }
+                // The orbit is a clock face in every language: beat 1 at 12 o'clock, then
+                // clockwise. Right-to-left (Arabic) would mirror the positions and run it backwards.
+                .environment(\.layoutDirection, .leftToRight)
             }
         }
         .contentShape(Rectangle())
@@ -431,6 +434,9 @@ extension ContentView {
                         .contentTransition(.numericText())
                         .position(center)
                 }
+                // A clock face in every language: the sweep fills clockwise from 12 o'clock.
+                // Right-to-left (Arabic) mirrors the rotation and it started elsewhere.
+                .environment(\.layoutDirection, .leftToRight)
             }
         }
         .accessibilityElement()
