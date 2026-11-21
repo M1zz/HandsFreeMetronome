@@ -1,5 +1,163 @@
 # Release Notes — Not My Tempo
 
+## 1.0.13
+
+### 앱스토어 (한국어)
+
+이제 아랍어로도 쓸 수 있어요
+음성 명령을 아랍어 낱말로도 말할 수 있어요
+작은 화면 문제를 고쳤어요
+
+### App Store (English)
+
+Not My Tempo now speaks Arabic
+Give voice commands in Arabic too
+Fixed a few small display issues
+
+### 앱스토어 (ja)
+
+アラビア語に対応しました
+音声コマンドをアラビア語でも話せます
+画面の細かな不具合を直しました
+
+### 앱스토어 (de-DE)
+
+Jetzt auch auf Arabisch
+Sprachbefehle auch auf Arabisch
+Kleine Anzeigefehler behoben
+
+### 앱스토어 (es-ES)
+
+Ahora también en árabe
+Da órdenes de voz también en árabe
+Corregimos pequeños fallos visuales
+
+### 앱스토어 (es-MX)
+
+Ahora también en árabe
+Usa comandos de voz también en árabe
+Corregimos detalles menores en pantalla
+
+### 앱스토어 (fr-FR)
+
+L'app parle désormais arabe
+Commandes vocales aussi en arabe
+Petits défauts d'affichage corrigés
+
+### 앱스토어 (zh-Hans)
+
+现已支持阿拉伯语
+语音指令也可以用阿拉伯语说
+修复了一些显示小问题
+
+### 앱스토어 (pt-BR)
+
+Agora também em árabe
+Dê comandos de voz em árabe também
+Corrigimos pequenos problemas na tela
+
+### 앱스토어 (zh-Hant)
+
+現已支援阿拉伯文
+語音指令也能用阿拉伯語說
+修正了一些顯示小問題
+
+### 앱스토어 (이탈리아어)
+
+Ora anche in arabo
+Comandi vocali anche in arabo
+Corretti piccoli difetti grafici
+
+### App Store (en-GB)
+
+Not My Tempo now speaks Arabic
+Give voice commands in Arabic too
+Fixed a few small display issues
+
+### 앱스토어 (러시아어)
+
+Теперь и на арабском
+Голосовые команды и на арабском
+Исправлены мелкие ошибки экрана
+
+### 앱스토어 (네덜란드어)
+
+Nu ook in het Arabisch
+Spraakopdrachten ook in het Arabisch
+Kleine weergavefouten opgelost
+
+### 앱스토어 (폴란드어)
+
+Teraz także po arabsku
+Polecenia głosowe także po arabsku
+Poprawiono drobne błędy wyświetlania
+
+### 앱스토어 (튀르키예어)
+
+Artık Arapça da var
+Sesli komutlar artık Arapça da
+Küçük görüntü sorunları düzeltildi
+
+### 앱스토어 (스웨덴어)
+
+Nu även på arabiska
+Röstkommandon även på arabiska
+Små visningsfel har rättats
+
+### 앱스토어 (덴마크어)
+
+Nu også på arabisk
+Stemmekommandoer også på arabisk
+Små visningsfejl er rettet
+
+### 앱스토어 (노르웨이어(보크말))
+
+Nå også på arabisk
+Talekommandoer også på arabisk
+Små visningsfeil er rettet
+
+### 앱스토어 (핀란드어)
+
+Nyt myös arabiaksi
+Äänikomennot myös arabiaksi
+Pieniä näyttövirheitä korjattu
+
+### 앱스토어 (체코어)
+
+Nově také v arabštině
+Hlasové příkazy i v arabštině
+Opravili jsme drobné chyby zobrazení
+
+### 앱스토어 (인도네시아어)
+
+Kini tersedia dalam bahasa Arab
+Perintah suara bisa dalam bahasa Arab
+Memperbaiki masalah kecil tampilan
+
+### 앱스토어 (베트남어)
+
+Giờ đã có tiếng Ả Rập
+Ra lệnh bằng giọng nói tiếng Ả Rập
+Sửa vài lỗi hiển thị nhỏ
+
+### 앱스토어 (그리스어)
+
+Τώρα και στα αραβικά
+Φωνητικές εντολές και στα αραβικά
+Διορθώσαμε μικρά θέματα εμφάνισης
+
+### 앱스토어 (태국어)
+
+รองรับภาษาอาหรับแล้ว
+สั่งงานด้วยเสียงเป็นภาษาอาหรับได้ด้วย
+แก้ปัญหาการแสดงผลเล็กน้อย
+
+### 앱스토어 (아랍어)
+
+Not My Tempo يتحدث العربية الآن
+قل الأوامر الصوتية بالعربية أيضًا
+أصلحنا بعض مشكلات العرض الصغيرة
+
 ## 1.0.12
 
 ### 앱스토어 (한국어)
