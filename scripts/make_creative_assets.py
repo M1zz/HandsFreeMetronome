@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """App Store 크리에이티브 자산(제품 페이지 헤더 · 검색 결과) 생성: HTML → 헤드리스 Chrome.
 
 사용법: python3 scripts/make_creative_assets.py [언어 ...]     (없으면 전부)
@@ -28,7 +29,8 @@ STORE = {"en": "en-US", "de": "de-DE", "es": "es-ES", "es-MX": "es-MX", "fr": "f
 # 문구 언어 → 기기 화면 캡처 폴더
 SCREEN = {"ko": "ko", "en": "en", "ja": "ja", "de": "de", "es": "es", "es-MX": "es",
           "fr": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it", "en-GB": "en-GB",
-          "ru": "ru", "nl": "nl", "pl": "pl", "tr": "tr", "sv": "sv", "da": "da", "nb": "nb", "fi": "fi", "cs": "cs", "el": "el", "th": "th", "vi": "vi", "id": "id"}
+          "ru": "ru", "nl": "nl", "pl": "pl", "tr": "tr", "sv": "sv", "da": "da", "nb": "nb", "fi": "fi", "cs": "cs", "el": "el", "th": "th", "vi": "vi", "id": "id", "ar": "ar"}
+RTL = {"ar"}   # 오른쪽에서 왼쪽으로 쓰는 언어: 구도를 거울처럼 뒤집는다
 
 # (가로, 세로, 안전 영역 left, top, right, bottom)
 SPEC = {
@@ -61,6 +63,7 @@ SEARCH = {
     "cs": ("Metronom", "Měňte tempo<br>hlasem", "Řekněte „start“ nebo „faster“ za hraní"),
     "el": ("Μετρονόμος", "Αλλάξτε ταχύτητα<br>με τη φωνή σας", "Πείτε «start» ή «faster» ενώ παίζετε"),
     "th": ("เมโทรนอม", "เปลี่ยนความเร็ว<br>ด้วยเสียง", "พูดว่า “start” หรือ “faster” ขณะเล่น"),
+    "ar": ("مترونوم", "غيّر السرعة<br>بصوتك", "قل «start» أو «faster» وأنت تعزف"),
     "vi": ("Máy gõ nhịp", "Đổi tốc độ<br>bằng giọng nói", "Nói “start” hoặc “faster” khi đang chơi"),
     "id": ("Metronom", "Ubah tempo<br>dengan suara", "Ucapkan “start” atau “faster” saat bermain"),
     "en-GB": ("Metronome", "Change tempo<br>with your voice", "Say “start” or “faster” as you play"),
@@ -90,6 +93,7 @@ HEADER = {
     "cs": ("Metronom bez rukou", "Obě ruce při hře.<br>Stačí říct „faster“."),
     "el": ("Μετρονόμος χωρίς χέρια", "Και τα δύο χέρια στο παίξιμο.<br>Πείτε απλώς «faster»."),
     "th": ("เมโทรนอมแบบไม่ใช้มือ", "มือทั้งสองข้างอยู่กับการเล่น<br>แค่พูดว่า “faster”"),
+    "ar": ("مترونوم دون استخدام اليدين", "يداك على آلتك،<br>والسرعة بصوتك"),
     "vi": ("Máy gõ nhịp rảnh tay", "Hai tay cứ chơi nhạc.<br>Chỉ cần nói “faster”."),
     "id": ("Metronom bebas tangan", "Kedua tangan tetap bermain.<br>Cukup ucapkan “faster”."),
     "en-GB": ("Hands-free metronome", "Keep both hands playing.<br>Just say “faster.”"),
@@ -109,6 +113,9 @@ body { background:#0a0d0f; position:relative;
 .sub { font-weight:500; color:#93a0a6; letter-spacing:-0.01em; line-height:1.35; text-wrap:balance; }
 /* 한국어는 낱말 중간에서 끊지 않는다. */
 :lang(ko) .headline, :lang(ko) .sub, :lang(ko) .eyebrow { word-break:keep-all; }
+/* 아랍어는 글자가 이어지는 글씨라 자간을 벌리거나 좁히지 않는다(붙은 글자가 떨어진다). */
+:lang(ar) body { font-family:"SF Arabic", "Geeza Pro", -apple-system, sans-serif; }
+:lang(ar) .headline, :lang(ar) .sub, :lang(ar) .eyebrow { letter-spacing:0; }
 .phone { position:absolute; background:#17171a; border:6px solid #3a3a3e; padding:40px; border-radius:190px;
   box-shadow: 0 60px 160px rgba(0,0,0,.6), 0 0 0 2px #232327 inset; }
 .phone img { width:100%%; display:block; border-radius:152px; }
@@ -149,11 +156,11 @@ def phone(img, left, top, width, rotate=0):
             f'transform:rotate({rotate}deg)"><img src="{img}"></div>')
 
 
-def beat_dots(x, y, size, gap, n, opacity):
-    """앱의 박자 점(첫 박 빨강 + 청록 cue)을 장식으로. 안전 영역 바깥에만 둔다."""
+def beat_dots(x, y, size, gap, n, opacity, rtl=False):
+    """앱의 박자 점(첫 박 빨강 + 청록 cue)을 장식으로. 안전 영역 바깥에만 둔다. rtl 이면 첫 박이 오른쪽 끝."""
     out = []
     for i in range(n):
-        color = "#E63833" if i == 0 else "#22D3EE"
+        color = "#E63833" if i == (n - 1 if rtl else 0) else "#22D3EE"
         out.append(f'<div class="dot" style="left:{x + i * (size + gap)}px;top:{y}px;width:{size}px;'
                    f'height:{size}px;background:{color};opacity:{opacity}"></div>')
     return "".join(out)
@@ -170,11 +177,14 @@ def search_html(lang):
     col = int(sw * 0.56)
     ph_w = 1040
     ph_left = l + col + int(sw * 0.04)
+    text_left = l
+    if lang in RTL:   # 글은 오른쪽(읽기 시작하는 쪽), 기기는 왼쪽. 안전 영역이 좌우 대칭이라 그대로 뒤집는다.
+        ph_left, text_left = W - ph_left - ph_w, W - l - col
     return f"""
 <div class="glow" style="left:{ph_left - 300}px;top:500px;width:1700px;height:1700px;background:rgba(34,211,238,.20)"></div>
 <div class="glow" style="left:{l - 700}px;top:{t - 500}px;width:1400px;height:1000px;background:rgba(34,211,238,.07)"></div>
 {phone(shot(lang, "01-main.png"), ph_left, t - 360, ph_w, 0)}
-<div class="text" style="left:{l}px;top:{t}px;width:{col}px;height:{sh}px">
+<div class="text" style="left:{text_left}px;top:{t}px;width:{col}px;height:{sh}px">
   <div class="eyebrow" style="font-size:96px">{eyebrow}</div>
   <div class="headline" data-max="250" data-min="140" style="margin-top:36px">{headline}</div>
   <div class="sub" style="font-size:84px;margin-top:52px">{sub}</div>
@@ -186,11 +196,16 @@ def header_html(lang):
     eyebrow, headline = HEADER[lang]
     sw, sh = r - l, b - t
     dots = (beat_dots(1180, 250, 70, 46, 4, .55) + beat_dots(2330, 1330, 70, 46, 4, .35))
+    number_x, main_x, tilt = 300, 2900, 9
+    if lang in RTL:   # 거울처럼: 기기 둘은 자리를 바꾸고, 박자 점은 첫 박(빨강)이 오른쪽에서 시작한다.
+        number_x, main_x, tilt = W - 300 - 640, W - 2900 - 640, -9
+        dots = (beat_dots(W - 1180 - 4 * 70 - 3 * 46, 250, 70, 46, 4, .55, rtl=True)
+                + beat_dots(W - 2330 - 4 * 70 - 3 * 46, 1330, 70, 46, 4, .35, rtl=True))
     return f"""
 <div class="glow" style="left:{l - 200}px;top:{t - 400}px;width:{sw + 400}px;height:{sh + 800}px;background:rgba(34,211,238,.15)"></div>
 {dots}
-{phone(shot(lang, "02-number.png"), 300, 360, 640, -9)}
-{phone(shot(lang, "01-main.png"), 2900, 360, 640, 9)}
+{phone(shot(lang, "02-number.png"), number_x, 360, 640, -tilt)}
+{phone(shot(lang, "01-main.png"), main_x, 360, 640, tilt)}
 <div class="text" style="left:{l}px;top:{t}px;width:{sw}px;height:{sh}px;align-items:center;text-align:center">
   <div class="eyebrow" style="font-size:76px">{eyebrow}</div>
   <div class="headline" data-max="210" data-min="110" style="margin-top:22px">{headline}</div>
@@ -200,7 +215,7 @@ def header_html(lang):
 def render(lang, kind):
     W, H, _ = SPEC[kind]
     body = search_html(lang) if kind == "search" else header_html(lang)
-    page = (f'<!doctype html><html lang="{lang.split("-")[0] if lang == "es-MX" else lang}"><head><meta charset="utf-8"><style>'
+    page = (f'<!doctype html><html lang="{lang.split("-")[0] if lang == "es-MX" else lang}" dir="{"rtl" if lang in RTL else "ltr"}"><head><meta charset="utf-8"><style>'
             f'{BASE_CSS % {"W": W, "H": H}}</style></head><body>{body}{FIT_JS}</body></html>')
     html_path = pathlib.Path(tempfile.gettempdir()) / f"notmytempo-creative-{lang}-{kind}.html"
     html_path.write_text(page, encoding="utf-8")

@@ -13,7 +13,7 @@
 #       워치는 아이폰 시뮬레이터와 짝지어 둔다(안 그러면 상태 막대에 '연결 끊김' 표시가 찍힌다).
 set -euo pipefail
 KIND="$1"; U="$2"; APP="$3"; shift 3
-LOCS=("$@"); [ ${#LOCS[@]} -eq 0 ] && LOCS=(ko en-US en-GB ja de-DE es-ES es-MX fr-FR zh-Hans zh-Hant pt-BR it ru nl pl tr sv da nb fi cs el th vi id)
+LOCS=("$@"); [ ${#LOCS[@]} -eq 0 ] && LOCS=(ko en-US en-GB ja de-DE es-ES es-MX fr-FR zh-Hans zh-Hant pt-BR it ru nl pl tr sv da nb fi cs el th vi id ar)
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 lang_of() { case "$1" in en-US) echo en;; de-DE) echo de;; es-ES|es-MX) echo es;; fr-FR) echo fr;; *) echo "$1";; esac; }
@@ -21,7 +21,7 @@ region_of() { case "$1" in
     en-US) echo en_US;; en-GB) echo en_GB;; ko) echo ko_KR;; ja) echo ja_JP;; de-DE) echo de_DE;; es-ES) echo es_ES;; es-MX) echo es_MX;;
     fr-FR) echo fr_FR;; zh-Hans) echo zh_CN;; zh-Hant) echo zh_TW;; pt-BR) echo pt_BR;; it) echo it_IT;; ru) echo ru_RU;; nl) echo nl_NL;;
     pl) echo pl_PL;; tr) echo tr_TR;; sv) echo sv_SE;; da) echo da_DK;; nb) echo nb_NO;; fi) echo fi_FI;; cs) echo cs_CZ;; el) echo el_GR;;
-    th) echo th_TH;; vi) echo vi_VN;; id) echo id_ID;; *) echo en_US;; esac; }
+    th) echo th_TH;; vi) echo vi_VN;; id) echo id_ID;; ar) echo ar_SA;; *) echo en_US;; esac; }
 
 if [ "$KIND" = ipad ]; then
     BUNDLE=com.leeo.HandsFreeMetronome

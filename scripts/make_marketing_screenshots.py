@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """App Store 마케팅 스크린샷: HTML → 헤드리스 Chrome (appstore-assets 스킬의 스크립트를 이 앱에 맞춘 것).
 
 사용법: python3 scripts/make_marketing_screenshots.py [스토어로케일 ...]   (없으면 전부)
@@ -16,11 +17,12 @@ RAW = ROOT / "docs" / "screenshots" / "raw"
 # 스페인어 한 벌이 es-ES · es-MX 두 페이지를 맡는다.
 SCREEN = {"en-US": "en", "ko": "ko", "ja": "ja", "de-DE": "de", "es-ES": "es", "es-MX": "es",
           "fr-FR": "fr", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "pt-BR": "pt-BR", "it": "it", "en-GB": "en-GB",
-          "ru": "ru", "nl": "nl", "pl": "pl", "tr": "tr", "sv": "sv", "da": "da", "nb": "nb", "fi": "fi", "cs": "cs", "el": "el", "th": "th", "vi": "vi", "id": "id"}
+          "ru": "ru", "nl": "nl", "pl": "pl", "tr": "tr", "sv": "sv", "da": "da", "nb": "nb", "fi": "fi", "cs": "cs", "el": "el", "th": "th", "vi": "vi", "id": "id", "ar": "ar"}
 OUT = ROOT / "docs" / "screenshots" / "marketing"
 WORK = pathlib.Path("/tmp") / "nmt-marketing"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 W, H = 1242, 2688
+RTL = {"ar"}   # 오른쪽에서 왼쪽으로 쓰는 언어
 
 # (파일, 레이아웃, 헤드라인, 서브카피) — 언어마다 따로 쓴다.
 SHOTS = {
@@ -199,6 +201,13 @@ SHOTS = {
         ("04-voice.png", "hero", "Forgot a command?<br>Just say “help”", "Every word you can say, right on screen"),
         ("05-accents.png", "bottom", "Make every<br>click your own", "Accent grid and per-song presets with Pro"),
     ],
+    "ar": [
+        ("01-playing.png", "hero", "يداك على آلتك،<br>والسرعة بصوتك", "قل «start» أو «faster» دون أي لمس"),
+        ("02-orbit.png", "left", "شاهد كل نبضة<br>وهي تدور", "عرض المدار والكرة المرتدة والحلقة"),
+        ("03-count.png", "right", "اعرف موضعك<br>في المازورة بنظرة", "أرقام كبيرة تُقرأ من خلف حامل النوتة"),
+        ("04-voice.png", "hero", "نسيت أمرًا؟<br>قل «help»", "كل ما يمكنك قوله يظهر على الشاشة"),
+        ("05-accents.png", "bottom", "كل نقرة<br>كما تريدها", "شبكة النبرات وإعدادات لكل أغنية مع Pro"),
+    ],
 }
 
 BASE_CSS = f"""
@@ -211,6 +220,9 @@ body {{ background:#0a0d0f; position:relative;
 .headline {{ font-size:104px; font-weight:800; color:#eef3f5; letter-spacing:-3px; line-height:1.14; }}
 .sub {{ font-size:50px; font-weight:500; color:#9aa6ac; letter-spacing:-1px; line-height:1.3; }}
 :lang(ko) .headline, :lang(ko) .sub {{ word-break:keep-all; }}
+/* 아랍어: 글자가 이어지는 글씨라 자간을 벌리지 않는다(붙은 글자가 떨어진다). */
+:lang(ar) body {{ font-family:"SF Arabic", "Geeza Pro", -apple-system, sans-serif; }}
+:lang(ar) .headline, :lang(ar) .sub {{ letter-spacing:0; }}
 .phone {{ position:absolute; background:#17171a; border-radius:112px; border:4px solid #3a3a3e; padding:24px;
   box-shadow: 0 60px 140px rgba(0,0,0,.6); }}
 .phone img {{ width:100%; display:block; border-radius:90px; }}
@@ -244,7 +256,7 @@ LAYOUTS = {
 """,
 }
 
-HTML = """<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><style>{css}</style></head>
+HTML = """<!doctype html><html lang="{lang}" dir="{dir}"><head><meta charset="utf-8"><style>{css}</style></head>
 <body><div class="glow"></div><div class="phone"><img src="{img}"></div>
 <div class="t"><div class="headline">{headline}</div><div class="sub">{sub}</div></div></body></html>"""
 
@@ -254,9 +266,14 @@ def main(only):
         if only and loc not in only:
             continue
         (OUT / loc).mkdir(parents=True, exist_ok=True)
+        rtl = loc in RTL
         for fname, layout, headline, sub in shots:
             html = WORK / f"{loc}-{fname}.html"
-            html.write_text(HTML.format(lang=loc if loc in ("zh-Hans", "zh-Hant") else loc.split("-")[0], css=BASE_CSS + LAYOUTS[layout],
+            # 오른쪽에서 왼쪽으로 읽는 언어는 구도를 거울처럼 뒤집는다: 글은 오른쪽(읽기 시작하는 쪽)에, 폰은 반대편에.
+            if rtl:
+                layout = {"left": "right", "right": "left"}.get(layout, layout)
+            html.write_text(HTML.format(lang=loc if loc in ("zh-Hans", "zh-Hant") else loc.split("-")[0],
+                                        dir="rtl" if rtl else "ltr", css=BASE_CSS + LAYOUTS[layout],
                                         img=(RAW / SCREEN[loc] / fname).as_uri(), headline=headline, sub=sub), encoding="utf-8")
             out = OUT / loc / fname
             # 다른 세션의 Chrome 과 겹치면 가끔 실패한다 — 새 프로필로 몇 번 다시 시도한다.

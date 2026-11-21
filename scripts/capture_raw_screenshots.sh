@@ -15,7 +15,7 @@
 set -euo pipefail
 
 UDID="$1"; APP="$2"; shift 2
-LANGS=("$@"); [ ${#LANGS[@]} -eq 0 ] && LANGS=(en en-GB ko ja de es fr zh-Hans zh-Hant pt-BR it ru nl pl tr sv da nb fi cs el th vi id)
+LANGS=("$@"); [ ${#LANGS[@]} -eq 0 ] && LANGS=(en en-GB ko ja de es fr zh-Hans zh-Hant pt-BR it ru nl pl tr sv da nb fi cs el th vi id ar)
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 BUNDLE=com.leeo.HandsFreeMetronome
 
@@ -34,7 +34,7 @@ shoot() {   # <앱언어> <장면> <파일>
     local region; case "$lang" in
         en) region=en_US;; ja) region=ja_JP;; de) region=de_DE;; es) region=es_ES;;
         fr) region=fr_FR;; zh-Hans) region=zh_CN;; zh-Hant) region=zh_TW;; it) region=it_IT;; pt-BR) region=pt_BR;;
-        ru) region=ru_RU;; nl) region=nl_NL;; pl) region=pl_PL;; tr) region=tr_TR;; sv) region=sv_SE;; da) region=da_DK;; nb) region=nb_NO;; fi) region=fi_FI;; cs) region=cs_CZ;; el) region=el_GR;; th) region=th_TH;; vi) region=vi_VN;; id) region=id_ID;; ko) region=ko_KR;; en-GB) region=en_GB;; *) region=en_US;;
+        ru) region=ru_RU;; nl) region=nl_NL;; pl) region=pl_PL;; tr) region=tr_TR;; sv) region=sv_SE;; da) region=da_DK;; nb) region=nb_NO;; fi) region=fi_FI;; cs) region=cs_CZ;; el) region=el_GR;; th) region=th_TH;; vi) region=vi_VN;; id) region=id_ID;; ko) region=ko_KR;; en-GB) region=en_GB;; ar) region=ar_SA;; *) region=en_US;;
     esac
     xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
     xcrun simctl launch "$UDID" "$BUNDLE" -AppleLanguages "($lang)" -AppleLocale "$region" \
