@@ -16,7 +16,7 @@ DeployBar 가 이 파일을 읽어 App Store Connect 의 스토어 페이지를 
 
 ### 키워드
 
-음성메트로놈,악센트,악기,박자연습,박자맞추기,접근성,드럼연습,리듬연습,밴드연습,템포조절,박자감,피아노연습,리듬감,리듬,비트,metronome,피아노메트로놈
+음성메트로놈,악센트,악기,박자연습,박자맞추기,접근성,박자감,템포조절,밴드연습,워치메트로놈,탭템포,리듬연습,크로매틱튜너,진동메트로놈,박자표,셋잇단,보면대,스피드트레이너,연습타이머
 
 ### 프로모션 텍스트
 
@@ -88,7 +88,7 @@ Change the beat, hands-free
 
 ### 키워드
 
-count in,speed trainer,time signature,polyrhythm,voice control,tap tempo,subdivision,click track,bpm
+speed trainer,time signature,subdivision,click track,bpm,tap,control,tuner,chromatic,accent,triplet
 
 ### 프로모션 텍스트
 
