@@ -30,6 +30,7 @@
     {"code": "id", "path": "id/", "name": "Bahasa Indonesia"},
     {"code": "vi", "path": "vi/", "name": "Tiếng Việt"},
     {"code": "el", "path": "el/", "name": "Ελληνικά"},
-    {"code": "th", "path": "th/", "name": "ไทย"}
+    {"code": "th", "path": "th/", "name": "ไทย"},
+    {"code": "ar", "path": "ar/", "name": "العربية"}
   ]
 }
