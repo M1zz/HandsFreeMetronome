@@ -200,6 +200,11 @@ struct ContentView: View {
         // Support Dynamic Type, but cap growth so the single-screen layout holds.
         .dynamicTypeSize(...DynamicTypeSize.accessibility2)
         // Bluetooth page-turn pedal or keyboard: tempo and start/stop (→ PedalKeys.swift).
+        // App Store 이벤트 링크(<번들 ID>://paywall)로 열리면 요금제를 띄운다 (LeeoKit).
+        .onOpenURL { url in
+            guard LeeoPaywallLink.opensPaywall(url), paywallFeature == nil else { return }
+            withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = ProFeature.allCases.first }
+        }
         .pedalKeys(enabled: !showOnboarding && !showWhatsNew && paywallFeature == nil
                     && panel != .tuner && panel != .commands && panel != .settings,
                    nudge: { metronome.nudge($0) }, toggle: { metronome.toggle() })

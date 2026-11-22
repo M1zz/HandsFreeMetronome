@@ -2,18 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.leeo.handsfreemetronome</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.leeo.handsfreemetronome</string>
+			</array>
+		</dict>
+	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict/>
-	<!-- Assistive Access: fill the whole screen instead of the default reduced
-	     frame. Our UI uses adaptive SwiftUI containers (VStack/HStack/Spacer),
-	     so it expands to use all available space at any size. -->
 	<key>UISupportsFullScreenInAssistiveAccess</key>
 	<true/>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
 </dict>
 </plist>

@@ -4,60 +4,70 @@
 
 ### 앱스토어 (한국어)
 
+App Store 세일 소식에서 바로 요금제가 열려요
 이제 아랍어로도 쓸 수 있어요
 음성 명령을 아랍어 낱말로도 말할 수 있어요
 작은 화면 문제를 고쳤어요
 
 ### App Store (English)
 
+App Store sales open your plans directly
 Not My Tempo now speaks Arabic
 Give voice commands in Arabic too
 Fixed a few small display issues
 
 ### 앱스토어 (ja)
 
+App Storeのセールから料金プランをすぐ開けます
 アラビア語に対応しました
 音声コマンドをアラビア語でも話せます
 画面の細かな不具合を直しました
 
 ### 앱스토어 (de-DE)
 
+App-Store-Angebote öffnen die Tarife
 Jetzt auch auf Arabisch
 Sprachbefehle auch auf Arabisch
 Kleine Anzeigefehler behoben
 
 ### 앱스토어 (es-ES)
 
+Las ofertas de App Store abren tu plan
 Ahora también en árabe
 Da órdenes de voz también en árabe
 Corregimos pequeños fallos visuales
 
 ### 앱스토어 (es-MX)
 
+Las ofertas de App Store abren tu plan
 Ahora también en árabe
 Usa comandos de voz también en árabe
 Corregimos detalles menores en pantalla
 
 ### 앱스토어 (fr-FR)
 
+Les offres App Store ouvrent les forfaits
 L'app parle désormais arabe
 Commandes vocales aussi en arabe
 Petits défauts d'affichage corrigés
 
 ### 앱스토어 (zh-Hans)
 
+点按 App Store 优惠可直接打开订阅方案
 现已支持阿拉伯语
 语音指令也可以用阿拉伯语说
 修复了一些显示小问题
 
 ### 앱스토어 (pt-BR)
 
+Ofertas da App Store abrem os planos
 Agora também em árabe
 Dê comandos de voz em árabe também
 Corrigimos pequenos problemas na tela
 
 ### 앱스토어 (zh-Hant)
 
+點按 App Store 優惠可直接打開訂閱方案
 現已支援阿拉伯文
 語音指令也能用阿拉伯語說
 修正了一些顯示小問題
@@ -70,6 +80,7 @@ Corretti piccoli difetti grafici
 
 ### App Store (en-GB)
 
+App Store sales open your plans directly
 Not My Tempo now speaks Arabic
 Give voice commands in Arabic too
 Fixed a few small display issues
