@@ -187,6 +187,11 @@ final class VoiceController: ObservableObject {
         // session. Only the lightweight recognition request/task is recycled after
         // this (see refresh). Repeatedly stopping/starting the audio engine while
         // the metronome's engine also runs is what made recognition die over time.
+        // Let any session setup the click queued finish FIRST. Reading the input
+        // format and then settling let the session switch underneath us: the tap
+        // went in with a stale format and installTap raised (1.0.12 crash,
+        // VoiceController.startListening inside AVFAudio).
+        AudioSession.waitUntilSettled()
         let input = audioEngine.inputNode
         let format = input.outputFormat(forBus: 0)
         // A dead input reports 0 Hz / 0 channels, and installTap raises an
@@ -204,7 +209,6 @@ final class VoiceController: ObservableObject {
             self?.updateLevel(buffer)
         }
         audioEngine.prepare()
-        AudioSession.waitUntilSettled()   // the click may have queued a setup meanwhile
         do { try audioEngine.start() } catch {
             status = .unavailable
             return
