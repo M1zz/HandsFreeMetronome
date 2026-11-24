@@ -205,6 +205,11 @@ struct ContentView: View {
             guard LeeoPaywallLink.opensPaywall(url), paywallFeature == nil else { return }
             withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = ProFeature.allCases.first }
         }
+        // 할인 기간이면 앱을 연 뒤 한 번 할인 배너를 띄운다. 단추는 같은 요금제를 연다 (LeeoKit).
+        .leeoSaleBanner {
+            guard paywallFeature == nil else { return }
+            withAnimation(.easeInOut(duration: 0.3)) { paywallFeature = ProFeature.allCases.first }
+        }
         .pedalKeys(enabled: !showOnboarding && !showWhatsNew && paywallFeature == nil
                     && panel != .tuner && panel != .commands && panel != .settings,
                    nudge: { metronome.nudge($0) }, toggle: { metronome.toggle() })
