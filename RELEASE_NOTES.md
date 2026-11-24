@@ -1,5 +1,163 @@
 # Release Notes — Not My Tempo
 
+## 1.0.14
+
+### App Store (en, en)
+
+The app now tells you when a sale is on
+New subscribers start at a lower price
+You can hide the sale notice for 3 days
+
+### App Store (ja, ja)
+
+セール期間中はアプリを開くとお知らせします
+初めての登録なら割引価格で始められます
+お知らせは3日間非表示にできます
+
+### App Store (de-DE, de-DE)
+
+Die App zeigt dir laufende Angebote
+Neue Abos starten zum reduzierten Preis
+Du kannst den Hinweis 3 Tage ausblenden
+
+### App Store (es-ES, es-ES)
+
+La app te avisa cuando hay ofertas
+Tu primera suscripción tiene descuento
+Puedes ocultar el aviso durante 3 días
+
+### App Store (es-MX, es-MX)
+
+La app te avisa cuando hay ofertas
+Tu primera suscripción tiene descuento
+Puedes ocultar el aviso durante 3 días
+
+### App Store (fr-FR, fr-FR)
+
+L’app vous prévient pendant les promos
+Premier abonnement à prix réduit
+Vous pouvez masquer l’annonce 3 jours
+
+### App Store (zh-Hans, zh-Hans)
+
+优惠期间打开应用时会通知你
+首次订阅可以优惠价开始
+也可以选择3天内不再显示
+
+### App Store (pt-BR, pt-BR)
+
+O app avisa quando há promoção
+A primeira assinatura tem desconto
+Você pode ocultar o aviso por 3 dias
+
+### 앱스토어 (한국어, ko)
+
+할인 기간에는 앱을 열 때 소식을 알려 드려요
+처음 구독하면 할인된 값으로 시작할 수 있어요
+원하지 않으면 3일 동안 보지 않을 수 있어요
+
+### App Store (zh-Hant, zh-Hant)
+
+優惠期間開啟 App 時會通知你
+首次訂閱可用優惠價開始
+也可以選擇3天內不再顯示
+
+### App Store (it, it)
+
+L’app ti avvisa quando c’è un’offerta
+Con il primo abbonamento parti scontato
+Puoi nascondere l’avviso per 3 giorni
+
+### App Store (en-GB, en-GB)
+
+The app now tells you when a sale is on
+New subscribers start at a lower price
+You can hide the sale notice for 3 days
+
+### App Store (ru, ru)
+
+Приложение сообщит о скидках при запуске
+Новая подписка по сниженной цене
+Уведомление можно скрыть на 3 дня
+
+### App Store (nl, nl)
+
+De app laat weten wanneer er korting is
+Nieuwe abonnees beginnen met korting
+Je kunt de melding 3 dagen verbergen
+
+### App Store (pl, pl)
+
+Aplikacja powie Ci o promocjach
+Nowi subskrybenci zaczną w niższej cenie
+Powiadomienie możesz ukryć na 3 dni
+
+### App Store (tr, tr)
+
+Uygulama indirimleri size haber verir
+Yeni aboneler indirimli başlayabilir
+Bildirimi 3 gün gizleyebilirsiniz
+
+### App Store (sv, sv)
+
+Appen berättar nu när det är rea
+Nya prenumeranter börjar till lägre pris
+Du kan dölja meddelandet i 3 dagar
+
+### App Store (da, da)
+
+Appen fortæller dig, når der er udsalg
+Nye abonnenter starter til nedsat pris
+Du kan skjule beskeden i 3 dage
+
+### App Store (nb, nb)
+
+Appen sier fra når det er salg
+Nye abonnenter starter til redusert pris
+Du kan skjule meldingen i 3 dager
+
+### App Store (fi, fi)
+
+Alennuksista kerrotaan, kun avaat apin
+Uudet tilaajat aloittavat alennushintaan
+Ilmoituksen voi piilottaa 3 päiväksi
+
+### App Store (cs, cs)
+
+Během slev vám dáme vědět po otevření
+Noví předplatitelé začnou se slevou
+Oznámení můžete na 3 dny skrýt
+
+### App Store (id, id)
+
+App memberi tahu saat ada diskon
+Pelanggan baru mulai dengan harga diskon
+Pemberitahuan bisa disembunyikan 3 hari
+
+### App Store (vi, vi)
+
+Khi có ưu đãi, ứng dụng sẽ báo cho bạn
+Lần đăng ký đầu tiên có giá ưu đãi
+Bạn có thể ẩn thông báo trong 3 ngày
+
+### App Store (el, el)
+
+Η εφαρμογή σας ενημερώνει για προσφορές
+Οι νέοι συνδρομητές ξεκινούν με έκπτωση
+Μπορείτε να την κρύψετε για 3 μέρες
+
+### App Store (th, th)
+
+ช่วงลดราคา เราจะแจ้งเมื่อคุณเปิดแอป
+สมัครครั้งแรกเริ่มได้ในราคาพิเศษ
+ซ่อนการแจ้งเตือนได้ 3 วัน
+
+### App Store (ar, ar)
+
+نخبرك بالعروض عند فتح التطبيق
+المشتركون الجدد يبدؤون بسعر مخفّض
+يمكنك إخفاء التنبيه لمدة 3 أيام
+
 ## 1.0.13
 
 ### 앱스토어 (한국어)
