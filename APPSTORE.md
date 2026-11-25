@@ -12,15 +12,15 @@ DeployBar 가 이 파일을 읽어 App Store Connect 의 스토어 페이지를 
 
 ### 부제
 
-연주하면서 말로 바꾸는 박자
+연주 중에 말로 템포 조절
 
 ### 키워드
 
-음성메트로놈,악센트,악기,박자연습,박자맞추기,접근성,박자감,템포조절,밴드연습,워치메트로놈,탭템포,리듬연습,크로매틱튜너,진동메트로놈,박자표,셋잇단,보면대,스피드트레이너,연습타이머
+음성메트로놈,악센트,악기,박자연습,박자맞추기,접근성,박자감,음성인식,밴드연습,워치메트로놈,탭템포,리듬연습,크로매틱튜너,진동메트로놈,박자표,셋잇단,보면대,스피드트레이너,연습타이머
 
 ### 프로모션 텍스트
 
-악기에서 손을 떼지 마세요. start, faster, tempo 120처럼 말하면 메트로놈이 따라옵니다. 메트로놈의 모든 기본 기능과 음성 제어는 무료입니다.
+말로 조종하는 메트로놈입니다. 연주하면서 start, faster, tempo 120처럼 말하면 클릭이 따라옵니다. 메트로놈의 모든 기본 기능과 음성 제어는 무료입니다.
 
 ### 설명
 
@@ -84,15 +84,15 @@ Not My Tempo: Voice Metronome
 
 ### 부제
 
-Change the beat, hands-free
+Hands-free click as you play
 
 ### 키워드
 
-speed trainer,time signature,subdivision,click track,bpm,tap,control,tuner,chromatic,accent,triplet
+speed trainer,time signature,subdivision,track,bpm,tap,control,tuner,chromatic,accent,triplet,drum
 
 ### 프로모션 텍스트
 
-Keep both hands on your instrument. Say "start," "faster," or "tempo 120" and the click follows. The full metronome and voice control are free.
+A metronome you control by voice. Say "start," "faster," or "tempo 120" while you play and the click follows. The full metronome and voice control are free.
 
 ### 설명
 
@@ -764,7 +764,7 @@ Not My Tempo: Voice Metronome
 
 ### 부제
 
-Change the beat, hands-free
+Hands-free click as you play
 
 ### 키워드
 
@@ -772,7 +772,7 @@ saxophone,violin,trumpet,flute,choir,cello,accent,bpm,timing,practice,drum,ukule
 
 ### 프로모션 텍스트
 
-Keep both hands on your instrument. Say "start," "faster," or "tempo 120" and the click follows. The full metronome and voice control are free.
+A metronome you control by voice. Say "start," "faster," or "tempo 120" while you play and the click follows. The full metronome and voice control are free.
 
 ### 설명
 
