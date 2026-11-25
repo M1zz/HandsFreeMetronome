@@ -27,14 +27,14 @@ RTL = {"ar"}   # 오른쪽에서 왼쪽으로 쓰는 언어
 # (파일, 레이아웃, 헤드라인, 서브카피) — 언어마다 따로 쓴다.
 SHOTS = {
     "en-US": [
-        ("01-playing.png", "hero",  "Keep both hands<br>on your instrument", "Say “start” or “faster” — no tapping"),
+        ("01-playing.png", "hero",  "A metronome you<br>control by voice", "Say “start” or “faster” as you play"),
         ("02-orbit.png",   "left",  "See every beat<br>go around", "Orbit, bounce and ring views"),
         ("03-count.png",   "right", "Count the bar<br>at a glance", "Big numbers you can read from the stand"),
         ("04-voice.png",   "hero",  "Forgot a command?<br>Just say “help”", "Every word you can say, right on screen"),
         ("05-accents.png", "bottom","Make every<br>click your own", "Accent grid and per-song presets with Pro"),
     ],
     "ko": [
-        ("01-playing.png", "hero",  "두 손은 악기에,<br>템포는 말로", "영어로 “start”, “faster” 한마디면 돼요"),
+        ("01-playing.png", "hero",  "말로 조종하는<br>메트로놈", "연주하면서 영어로 “faster” 한마디면 돼요"),
         ("02-orbit.png",   "left",  "박이 도는 게<br>눈에 보여요", "원 궤도, 튀는 공, 링 세 가지 화면"),
         ("03-count.png",   "right", "지금 몇 박인지<br>한눈에", "보면대 너머에서도 읽히는 큰 숫자"),
         ("04-voice.png",   "hero",  "명령이 생각 안 나면<br>“help”", "말할 수 있는 말을 화면에 바로 띄워 줘요"),
@@ -195,7 +195,7 @@ SHOTS = {
         ("05-accents.png", "bottom", "Setiap klik<br>sesuai gayamu", "Kisi aksen dan preset per lagu dengan Pro"),
     ],
     "en-GB": [
-        ("01-playing.png", "hero", "Keep both hands<br>on your instrument", "Say “start” or “faster” — no tapping"),
+        ("01-playing.png", "hero", "A metronome you<br>control by voice", "Say “start” or “faster” as you play"),
         ("02-orbit.png", "left", "See every beat<br>go around", "Orbit, bounce and ring views"),
         ("03-count.png", "right", "Count the bar<br>at a glance", "Big numbers you can read from the stand"),
         ("04-voice.png", "hero", "Forgot a command?<br>Just say “help”", "Every word you can say, right on screen"),
@@ -256,9 +256,25 @@ LAYOUTS = {
 """,
 }
 
+# 첫 장: 폰 옆에 말풍선 — 검색 목록에서 "말로 조종한다" 가 그림으로 보이게.
+# 음성 명령은 모든 언어에서 영어 단어라(VoiceController 의 en-US 인식기) 말풍선 글은 언어와 상관없이 같다.
+BUBBLE_CSS = """
+.bubble { position:absolute; top:1880px; display:flex; align-items:center; gap:26px; padding:34px 54px 34px 40px;
+  background:#22d3ee; color:#05232a; border-radius:70px; font-size:84px; font-weight:800; letter-spacing:-2px;
+  box-shadow:0 40px 100px rgba(0,0,0,.55); z-index:5; direction:ltr; }
+.bubble svg { width:76px; height:76px; flex:none; }
+.bubble::after { content:""; position:absolute; top:-34px; width:0; height:0;
+  border-left:30px solid transparent; border-right:30px solid transparent; border-bottom:40px solid #22d3ee; }
+.bubble.ltr { right:40px; } .bubble.ltr::after { right:90px; }
+.bubble.rtl { left:40px; } .bubble.rtl::after { left:90px; }
+"""
+BUBBLE = ('<div class="bubble {side}"><svg viewBox="0 0 24 24" fill="none" stroke="#05232a" stroke-width="2.4" '
+          'stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/>'
+          '<path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>“faster”</div>')
+
 HTML = """<!doctype html><html lang="{lang}" dir="{dir}"><head><meta charset="utf-8"><style>{css}</style></head>
 <body><div class="glow"></div><div class="phone"><img src="{img}"></div>
-<div class="t"><div class="headline">{headline}</div><div class="sub">{sub}</div></div></body></html>"""
+<div class="t"><div class="headline">{headline}</div><div class="sub">{sub}</div></div>{extra}</body></html>"""
 
 def main(only):
     WORK.mkdir(exist_ok=True)
@@ -274,7 +290,9 @@ def main(only):
                 layout = {"left": "right", "right": "left"}.get(layout, layout)
             html.write_text(HTML.format(lang=loc if loc in ("zh-Hans", "zh-Hant") else loc.split("-")[0],
                                         dir="rtl" if rtl else "ltr", css=BASE_CSS + LAYOUTS[layout],
-                                        img=(RAW / SCREEN[loc] / fname).as_uri(), headline=headline, sub=sub), encoding="utf-8")
+                                        img=(RAW / SCREEN[loc] / fname).as_uri(), headline=headline, sub=sub,
+                                        extra=(f"<style>{BUBBLE_CSS}</style>" + BUBBLE.format(side="rtl" if rtl else "ltr"))
+                                        if fname == "01-playing.png" else ""), encoding="utf-8")
             out = OUT / loc / fname
             # 다른 세션의 Chrome 과 겹치면 가끔 실패한다 — 새 프로필로 몇 번 다시 시도한다.
             for attempt in range(4):
