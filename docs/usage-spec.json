@@ -1,0 +1,21 @@
+{
+  "$comment": [
+    "FeedbackHubViewer 가 이 앱의 통계를 읽는 스펙. 원본은 이 파일이고, 허브는 scripts/sync-stats-specs.sh 로 복사해 간다.",
+    "release.coreAction 은 품질 탭의 '핵심 기능' 칸과 릴리즈 건강 카드가 읽는다. 이벤트 이름을 바꾸면 여기도 같이 바꿀 것."
+  ],
+  "specVersion": 1,
+  "appId": "com.leeo.HandsFreeMetronome",
+  "appName": "낫마템포",
+  "eventLabels": {
+    "metronome_started": "메트로놈 시작",
+    "onboarding_completed": "온보딩 마침",
+    "onboarding_skipped": "온보딩 건너뜀"
+  },
+  "release": {
+    "coreAction": {
+      "label": "메트로놈을 켜고 연습을 시작한 사람",
+      "events": ["metronome_started"],
+      "note": "말이나 버튼, 악기 소리로 박자를 켜는 순간이 손을 쓰지 않고 연습하게 해 주는 이 앱의 가치가 닿는 때다."
+    }
+  }
+}

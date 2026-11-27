@@ -1,6 +1,7 @@
 import Foundation
 import AVFoundation
 import os
+import LeeoKit
 
 private let engineLog = Logger(subsystem: "com.handsfree.metronome", category: "engine")
 
@@ -306,6 +307,7 @@ final class MetronomeEngine: ObservableObject {
         tick = 0
         startTimer()
         startCountdown()
+        LeeoAnalyticsCenter.track(.custom(name: "metronome_started", parameters: [:]))
     }
 
     func stop() {

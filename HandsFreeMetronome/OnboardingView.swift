@@ -16,7 +16,8 @@ struct NotMyTempoOnboardingView: View {
     /// The user relies on iOS Voice Control — our own mic stays off, so the
     /// last page talks about "Tap …" names instead of asking for the mic.
     let usesVoiceControl: Bool
-    let onFinish: () -> Void
+    /// `true` when the person tapped Skip instead of reaching the last page.
+    let onFinish: (_ skipped: Bool) -> Void
 
     @State private var page = 0
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -65,7 +66,7 @@ struct NotMyTempoOnboardingView: View {
             HStack {
                 Spacer()
                 if !isLast {
-                    Button("Skip") { onFinish() }
+                    Button("Skip") { onFinish(true) }
                         .font(.body.weight(.semibold))
                         .foregroundStyle(.secondary)
                         .accessibilityInputLabels(["Skip", "Skip introduction"])
@@ -84,7 +85,7 @@ struct NotMyTempoOnboardingView: View {
 
             Button {
                 if isLast {
-                    onFinish()
+                    onFinish(false)
                 } else if reduceMotion {
                     page += 1
                 } else {

@@ -183,7 +183,7 @@ struct ContentView: View {
             }
 
             if showOnboarding {
-                NotMyTempoOnboardingView(usesVoiceControl: usesVoiceControl) { finishOnboarding() }
+                NotMyTempoOnboardingView(usesVoiceControl: usesVoiceControl) { finishOnboarding(skipped: $0) }
                     .foldConfined()
                     .transition(.opacity)
                     .zIndex(5)
@@ -452,7 +452,11 @@ struct ContentView: View {
         }
     }
 
-    func finishOnboarding() {
+    func finishOnboarding(skipped: Bool) {
+        // A replay from Settings is not a first introduction — count it once.
+        if !hasCompletedOnboarding {
+            LeeoAnalyticsCenter.track(.custom(name: skipped ? "onboarding_skipped" : "onboarding_completed", parameters: [:]))
+        }
         hasCompletedOnboarding = true
         withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.3)) { showOnboarding = false }
         AppTips.snoozed = false
